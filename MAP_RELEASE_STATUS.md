@@ -1,9 +1,15 @@
 # Map release status
 
-Status: VALIDATING_V3
-Scope: latest user request in this conversation — universal map engine, selectable corridors, context adapter with world catalogue and year policy inside the prompt, 10-tag ceiling, configurable quest slots/main, faction stripes, local forward-loop animation, subtle background decoration, stable layout and unknown-AU fallback.
+Status: COMPLETE
+Release: Universal Map Engine 3.0.0
+Engine commit: 7816657b0bba3eeeda62ead682ef9158ebbd3975
 
-Completed locally: engine v3, complete prompt adapter, seven demo views, DOM/security/state tests, initial desktop Chromium rendering.
-Remaining: final browser checks including actual corridor click, motion direction/idle anchors, mobile layout; push verified release to Ngoc1804/wzw-hogwarts-map; pin prompt to exact release commit; verify remote bytes; mark COMPLETE and pause hourly task.
+Completed: selectable corridors with independent player/NPC anchors; generic IDs and unknown-AU fallback; prompt-owned world catalogue/year overlays; unchanged original header/sidebar/footstep/ribbon geometry with the requested map title and faction palette; ten-tag ceiling; five default quest slots with optional off/extra/replace main; seeded eligible selection; forward wrapping/closed local motion; subtle textures; stable slots and responsive local view.
 
-Do not spawn duplicate development work while this conversation is actively finishing the release. Do not rework completed features or invent additional scope.
+Validation: seven demo views passed DOM and Chromium checks; actual corridor mouse click; forward-only SMIL motion and stationary idle anchor; visibility/security filters; arbitrary IDs; stable reordered layout; 45 walking actors / 10 tags / no tag-body overlap; mobile 390x844 with local zoom and no horizontal overflow; no JavaScript errors. Remote engine bytes are verified separately during handoff.
+
+Deliverables: index.html, MAP_COMMAND_COMPLETE.md, matching R14.6_FINAL.md, MAP_PALETTE.md, MAP_QA.md and README.md. The v2 prompt archive and original wzw-test.js remain available.
+
+Boundary: engine does not itself read chat/context. The AI follows the per-prompt adapter and emits PLAYER_SAFE data. This release has not been opened inside the user's own Google AI Studio session; local browser verification is complete. This does not leave autonomous development work pending.
+
+Hourly continuation: stop. Pause the requested hourly automation once handoff succeeds. Do not reopen or expand completed work without a new user request.
