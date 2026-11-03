@@ -19,7 +19,7 @@ Passed for seven views: grounds, dungeon/corridor, tower, street, furnished hall
 
 ## Chromium checks
 
-Tested seven demo views, zoom/reset, actual mouse selection from a room into the corridor, player anchor retention and no JavaScript errors. SMIL sampling confirms a walking segment advances in one direction while an idle sprite retains its anchor. Mobile width was checked at 390×844; map and sidebar stay within the viewport. Final mobile view opens nearer the current location; reset returns to overview.
+Tested seven demo views, zoom/reset, actual mouse selection from a room into the corridor, player anchor retention and no JavaScript errors. SMIL sampling confirms a walking segment advances in one direction while an idle sprite retains its anchor. A final stress scene with 45 walking actors showed exactly 10 tags with no tag-body overlap. Mobile width was checked at 390×844; map and sidebar stay within the viewport. Final mobile view opens nearer the current location; reset returns to overview.
 
 External Google Fonts were disabled for these checks to verify local fallback rendering. Architectural SVGs were also rendered and visually inspected. No raster illustration dependency was added.
 
