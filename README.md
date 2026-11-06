@@ -1,9 +1,9 @@
-# WIZAMAP · Hogwarts–Hogsmeade V7
+# WIZAMAP · Hogwarts–Hogsmeade V8
 
-Bản demo ngoại cảnh độc lập. Mở `index.html` trong trình duyệt hoặc qua GitHub Pages để xem. HTML chứa sẵn SVG, CSS, JavaScript và các thư viện cần thiết.
+Mở `index.html` để xem bản demo ngoại cảnh độc lập. HTML tự chứa SVG, CSS, JavaScript và thư viện cần thiết.
 
-V7 gom cụm nhà Hogsmeade quanh đường chính, giữ lối vào Hogwarts ở phía đông, thêm cầu treo, nhà thuyền và cây ven hồ. Có zoom/pan, các địa điểm bấm được, animation tự chạy và bố cục thích ứng khung Preview của Google AI Studio.
+V8 gom nhà Hogsmeade hai bên lối đi, đưa Lều Hú ra xa làng, dùng lại nền giấy V4 với mảng cỏ/gạch mờ và đường bao tự nhiên, mở Hồ Đen về phía đông bắc và chỉnh cầu treo, nhà thuyền, cây ven hồ. Các địa điểm có thể bấm, zoom/pan và animation tự chạy. Bố cục phù hợp khung Preview co giãn của Google AI Studio.
 
-Nhánh `demo-1` được thay bằng đúng bản V7 này; mã ứng dụng chính trên `main` không bị thay đổi. Nội dung này là demo giao diện, chưa phải dữ liệu RP từ WzW Runtime.
+Đây là demo giao diện; dữ liệu RP động sẽ do WzW Runtime cung cấp sau. Mã ứng dụng trên nhánh `main` không thay đổi.
 
-Thư viện nguồn mở dùng trong HTML: SVG.js, svg.panzoom.js (MIT), Anime.js (MIT), Lucide (ISC); thông tin giấy phép và tác giả nằm trong HTML tại mục “Nguồn & giấy phép”.
+Nguồn mở dùng trong HTML: SVG.js, svg.panzoom.js (MIT), Anime.js (MIT), Lucide (ISC). Thông tin nguồn và giấy phép có trong giao diện.
