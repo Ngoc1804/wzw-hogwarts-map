@@ -1,1 +1,315 @@
-<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP · Atlas</title><body><div id="wzw-map-root"></div><script>window.WIZAMAP_DEMO=true</script><script src="./wzw-engine.js"></script></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#37271e">
+<title>WIZAMAP · Demo 1 — Parchment UI Shell</title>
+<!-- Demo 1: UI shell only. No map graphics or game-logic engine loaded. -->
+<!-- Typefaces: Google Fonts OFL, sourced only from the public google/fonts GitHub repository. -->
+<!-- Icons: Lucide (ISC), https://github.com/lucide-icons/lucide -->
+<style>
+@font-face{font-family:"Cormorant";src:url("https://raw.githubusercontent.com/google/fonts/main/ofl/cormorantgaramond/CormorantGaramond%5Bwght%5D.ttf") format("truetype");font-style:normal;font-weight:300 700;font-display:swap}
+@font-face{font-family:"EB Garamond";src:url("https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf") format("truetype");font-style:normal;font-weight:400 800;font-display:swap}
+@font-face{font-family:"EB Garamond";src:url("https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond-Italic%5Bwght%5D.ttf") format("truetype");font-style:italic;font-weight:400 800;font-display:swap}
+@font-face{font-family:"Spectral";src:url("https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-SemiBold.ttf") format("truetype");font-style:normal;font-weight:600;font-display:swap}
+:root{
+  color-scheme:light;
+  --paper-light:#F4EAD3;
+  --paper-base:#E8D8B2;
+  --paper-shadow:#D2BD97;
+  --ink:#5B4030;
+  --brown:#7A5D44;
+  --burgundy:#742D36;
+  --burgundy-dark:#602530;
+  --sage:#7D8868;
+  --mist:#A9B6B1;
+  --hair:rgba(113,75,46,.29);
+  --hair-soft:rgba(113,75,46,.15);
+  --font-display:"Cormorant",Georgia,"Times New Roman",serif;
+  --font-body:"EB Garamond",Georgia,"Times New Roman",serif;
+  --font-label:"Spectral",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{min-width:320px;height:100%}
+body{min-width:320px;min-height:100%;margin:0;color:var(--ink);background:#2c211b;font:16px/1.35 var(--font-body);-webkit-font-smoothing:antialiased}
+button{font:inherit}
+button:focus-visible,a:focus-visible{outline:2px solid var(--burgundy);outline-offset:3px}
+button:disabled{cursor:not-allowed}
+.icon{width:17px;height:17px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.icon-sprite{position:absolute;width:0;height:0;overflow:hidden}
+.parchment{
+  background-color:var(--paper-base);
+  background-image:
+    radial-gradient(ellipse 72% 85% at 50% 43%,rgba(255,251,234,.62),transparent 87%),
+    radial-gradient(ellipse 28% 44% at 0% 94%,rgba(148,91,45,.13),transparent 92%),
+    radial-gradient(ellipse 28% 45% at 99% 0%,rgba(143,91,45,.12),transparent 95%),
+    repeating-linear-gradient(96deg,rgba(120,85,47,.019) 0px,transparent 1px,transparent 7px,rgba(250,239,207,.025) 8px);
+}
+.app-shell{
+  position:relative;isolation:isolate;margin:8px auto;width:calc(100% - 16px);max-width:1920px;
+  height:calc(100dvh - 16px);min-height:585px;display:flex;flex-direction:column;
+  border:1px solid #a9835e;box-shadow:0 0 0 8px #32261e,0 22px 75px rgba(0,0,0,.46);
+  overflow:hidden;
+}
+.app-shell:before{content:"";position:absolute;inset:7px;z-index:10;border:1px solid rgba(127,85,48,.39);pointer-events:none}
+.app-shell:after{content:"";position:absolute;inset:0;z-index:11;pointer-events:none;box-shadow:inset 0 0 19px rgba(121,73,42,.20),inset 0 0 54px rgba(138,86,41,.12)}
+.frame-corner{position:absolute;z-index:12;pointer-events:none;width:18px;height:18px;border-color:rgba(107,63,38,.72);border-style:solid}
+.frame-corner.tl{left:9px;top:9px;border-width:2px 0 0 2px}
+.frame-corner.tr{right:9px;top:9px;border-width:2px 2px 0 0}
+.frame-corner.bl{left:9px;bottom:9px;border-width:0 0 2px 2px}
+.frame-corner.br{right:9px;bottom:9px;border-width:0 2px 2px 0}
+.masthead{flex:none;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 31px 12px;border-bottom:1px solid rgba(129,89,56,.47);background:rgba(226,200,157,.22)}
+.brand-lockup{display:flex;align-items:center;gap:18px;min-width:0}
+.brand-seal{width:61px;height:61px;border:1px solid #9c684a;border-radius:50%;flex:none;display:grid;place-items:center;box-shadow:inset 0 0 0 4px rgba(248,228,192,.7),inset 0 0 0 5px rgba(110,61,37,.32)}
+.brand-seal .icon{width:39px;height:39px;color:var(--burgundy);stroke-width:1.2}
+.brand-caption{font:italic 15px/1 var(--font-body);letter-spacing:.12em;color:#8b6950}
+.brand h1{margin:0;color:#412d25;letter-spacing:.06em;font:700 clamp(35px,3.6vw,52px)/.87 var(--font-display)}
+.brand-quote{margin-top:6px;font:italic 16px/1.06 var(--font-body);color:#6e4b37}
+.time-block{text-align:right;white-space:nowrap;align-self:center;padding-right:2px}
+.time-block .region{font:600 clamp(14px,1.4vw,19px)/1.18 var(--font-display);letter-spacing:.027em;color:#863e3c}
+.time-block .clock{margin-top:4px;display:flex;align-items:baseline;justify-content:flex-end;gap:10px;color:#473126}
+.time-block strong{font:600 20px/1 var(--font-display)}
+.time-block time{font:italic 15px/1 var(--font-body);color:#7d6049}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) clamp(318px,25vw,372px);flex:1;min-height:0}
+.map-stage{position:relative;min-width:0;min-height:0;overflow:hidden;border-right:1px solid #9e7952}
+.map-stage:after{content:"";position:absolute;inset:15px;pointer-events:none;border:1px solid rgba(144,99,60,.42)}
+.map-stage:before{content:"";position:absolute;inset:19px;pointer-events:none;border:1px solid rgba(172,127,78,.24)}
+.stage-label{position:absolute;top:26px;left:85px;right:145px;z-index:2;margin:0;color:#8b674a;letter-spacing:.155em;font:600 11px/1.5 var(--font-label);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stage-label:after{content:"";display:block;max-width:500px;border-top:1px solid rgba(148,100,63,.25);margin-top:5px}
+.tools{position:absolute;top:22px;left:24px;z-index:3;display:grid;gap:5px}
+.tool{display:grid;place-items:center;width:40px;height:40px;padding:0;border:1px solid #a68460;color:#6d4c33;background:rgba(246,232,203,.62);box-shadow:0 1px 1px rgba(83,48,28,.12);font:400 27px/.9 Georgia,serif}
+.tool .icon{width:22px;height:22px}
+.tool:disabled{opacity:.83}
+.tool:disabled:hover{background:rgba(246,232,203,.62)}
+.stage-compass{position:absolute;top:31px;right:31px;width:93px;height:93px;z-index:2;border:1px solid rgba(137,95,57,.63);border-radius:50%;display:grid;place-items:center;color:#976546;background:radial-gradient(circle,rgba(252,239,208,.44),rgba(230,208,164,.12))}
+.stage-compass:before{content:"";position:absolute;inset:7px;border:1px solid rgba(147,100,60,.4);border-radius:50%}
+.stage-compass:after{content:"N";position:absolute;top:-16px;font:600 12px var(--font-display);color:#80563c}
+.stage-compass .icon{width:63px;height:63px;stroke-width:1.25}
+.stage-compass .compass-point{position:absolute;width:6px;height:6px;background:var(--burgundy);transform:rotate(45deg);top:37px;left:43px}
+.map-placeholder{
+  position:absolute;inset:125px 45px 95px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;pointer-events:none;color:rgba(96,65,44,.56)
+}
+.map-placeholder .ornament{display:flex;align-items:center;gap:13px;width:min(310px,90%);font-size:24px;color:rgba(116,45,54,.50)}
+.map-placeholder .ornament:before,.map-placeholder .ornament:after{content:"";height:1px;flex:1;background:rgba(121,85,51,.3)}
+.map-placeholder .placeholder-title{margin:12px 0 0;font:600 clamp(20px,2.3vw,31px)/1.1 var(--font-display);letter-spacing:.09em}
+.map-placeholder p{margin:8px 0 0;font:italic 15px/1.25 var(--font-body);max-width:340px}
+.map-placeholder small{margin-top:14px;font:600 9px/1 var(--font-label);letter-spacing:.17em;color:#9e8368}
+.legend{position:absolute;z-index:3;left:27px;bottom:29px;max-width:calc(100% - 315px);display:flex;align-items:center;gap:11px;flex-wrap:wrap;background:rgba(244,225,193,.84);border:1px solid #b89670;padding:9px 13px;box-shadow:0 2px 8px rgba(102,65,35,.10);font:500 12px/1.15 var(--font-body);color:#73513d}
+.legend-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.legend-item .symbol{font-size:15px;color:var(--burgundy)}
+.legend-item:nth-child(2) .symbol{color:#806d53}
+.legend-item:nth-child(4) .symbol{letter-spacing:2px}
+.foot-sampler{position:absolute;z-index:3;bottom:25px;right:28px;width:249px;border:1px solid #ad8864;background:rgba(241,223,190,.87);box-shadow:0 2px 8px rgba(102,65,35,.11);padding:8px 11px 9px;color:var(--burgundy)}
+.foot-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;font:600 10px/1 var(--font-label);letter-spacing:.10em}
+.foot-heading button{cursor:pointer;padding:1px 3px 2px;border:0;border-bottom:1px solid #ae7168;background:transparent;color:var(--burgundy);font:italic 12px/1 var(--font-body);letter-spacing:0}
+.foot-line{display:flex;align-items:center;justify-content:space-between;height:30px;padding:0 5px}
+.print{width:20px;height:20px;opacity:0;color:var(--burgundy);transform:rotate(65deg)}
+.foot-sampler[data-mode="walk"] .print{animation:foot-walk 5.2s linear infinite;animation-delay:calc(var(--step)*.55s)}
+.foot-sampler[data-mode="idle"] .print{animation:foot-idle 2.4s ease-in-out infinite}
+.foot-sampler[data-mode="idle"] .print:nth-child(n+3){display:none}
+.foot-sampler[data-mode="idle"] .print:nth-child(2){animation-delay:-1.2s}
+@keyframes foot-walk{0%,2%,14.8%,100%{opacity:0}3.2%,12.6%{opacity:.92}}
+@keyframes foot-idle{0%,100%{opacity:.15}50%{opacity:.88}}
+.sidebar{min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;background:rgba(244,225,193,.34);scrollbar-color:#ad8e69 transparent;scrollbar-width:thin;padding:27px 27px 26px 26px}
+.location-cap,.section-cap{display:flex;align-items:center;gap:9px;color:#8d3a3b;font:600 11.5px/1.25 var(--font-label);letter-spacing:.13em;text-transform:uppercase}
+.location-cap .icon,.section-cap .icon{width:18px;height:18px;stroke-width:1.9}
+.sidebar h2{font:700 clamp(31px,2.65vw,39px)/.99 var(--font-display);letter-spacing:.005em;color:#443027;margin:12px 0 6px}
+.location-sub{color:#755840;font:italic 17px/1.17 var(--font-body);margin:0}
+.flourish-rule{display:flex;align-items:center;gap:12px;color:#996b4b;font-size:18px;margin:19px 0 22px}
+.flourish-rule:before,.flourish-rule:after{content:"";flex:1;border-top:1px solid rgba(142,99,61,.46)}
+.info-section{margin-top:19px}
+.info-section:first-of-type{margin-top:0}
+.info-section p{margin:7px 0 0;color:#5c4534;font:500 16px/1.3 var(--font-body)}
+.person-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.person{display:inline-flex;align-items:center;padding:5px 9px 4px;min-height:30px;border:1px solid rgba(143,104,66,.58);background:rgba(234,211,173,.49);color:#533a2c;font:600 14px/1.06 var(--font-body)}
+.person.player{color:var(--burgundy);border-color:#a3665c;background:#edcfac}
+.person.player:before{content:"◆";font-size:11px;margin-right:6px}
+.hints{border-top:1px solid rgba(136,96,59,.41);padding-top:18px;margin-top:23px}
+.hints-top{display:flex;align-items:center;justify-content:space-between;gap:9px}
+.hints-top .section-cap{min-width:0;letter-spacing:.075em}
+.hints-count{white-space:nowrap;color:#805d43;font:italic 15px/1 var(--font-body)}
+.hint-list{list-style:none;margin:12px 0 0;padding:0}
+.hint-list li{padding:9px 1px 10px;border-top:1px solid rgba(134,93,60,.22);display:flex;align-items:flex-start;gap:10px}
+.hint-mark{margin-top:2px;color:var(--burgundy);font-size:17px;line-height:1}
+.hint-title{color:#51382c;font:600 16px/1.18 var(--font-body)}
+.hint-place{font:italic 13px/1.2 var(--font-body);color:#8e6a4a;margin-top:3px}
+.side-note{font:italic 13px/1.25 var(--font-body);color:#92765d;margin-top:17px;padding-top:11px;border-top:1px solid var(--hair-soft)}
+.demo-label{position:absolute;right:29px;top:15px;z-index:3;color:#ab8462;font:600 10px var(--font-label);letter-spacing:.10em}
+@media (max-width:1020px){.workspace{grid-template-columns:minmax(0,1fr) 318px}.masthead{padding:13px 22px}.sidebar{padding:23px 20px}.legend{max-width:calc(100% - 290px)}.foot-sampler{width:245px}}
+@media (max-width:790px){
+  body{background:var(--paper-base)}
+  .app-shell{min-height:100dvh;height:auto;overflow:visible;width:100%;margin:0;border:0;box-shadow:none}
+  .masthead{min-height:90px;padding:13px 18px}
+  .brand-seal{width:49px;height:49px}.brand-seal .icon{width:30px;height:30px}
+  .brand-lockup{gap:10px}.brand-caption{font-size:12px}.brand h1{font-size:39px}.brand-quote{font-size:13px}
+  .time-block .region{font-size:13px}.time-block strong{font-size:16px}.time-block time{font-size:12px}
+  .workspace{display:flex;flex-direction:column;overflow:visible}
+  .map-stage{height:min(63vh,570px);min-height:385px;flex:none;border-right:0;border-bottom:1px solid #a1805f}
+  .sidebar{overflow:visible;border:0;min-height:0;padding:27px 25px 30px}
+  .legend{max-width:calc(100% - 320px)}.foot-sampler{right:25px}
+}
+@media (max-width:590px){
+  .masthead{align-items:flex-start;min-height:83px;gap:8px;padding:15px 16px 12px}
+  .brand-caption{letter-spacing:0;font-size:11px}.brand h1{font-size:35px}.brand-quote{font-size:12px}
+  .time-block .region{max-width:120px;white-space:normal;margin-left:auto;line-height:1.08}
+  .time-block .clock{display:block}.time-block strong{display:block;font-size:15px;margin-bottom:2px}.time-block time{font-size:11px}
+  .brand-seal{display:none}
+  .map-stage{height:475px;min-height:475px}
+  .stage-label{top:26px;left:75px;right:91px;letter-spacing:.06em;font-size:9px}
+  .stage-compass{width:64px;height:64px;top:70px;right:27px}.stage-compass .icon{width:42px;height:42px}.stage-compass .compass-point{top:25px;left:29px}
+  .tools{left:21px;top:21px}.tool{width:34px;height:34px}
+  .map-placeholder{inset:120px 26px 115px}.map-placeholder .placeholder-title{font-size:23px}.map-placeholder p{font-size:14px}
+  .legend{bottom:77px;left:24px;right:24px;max-width:none;padding:7px 10px;gap:7px;font-size:11px}
+  .foot-sampler{left:24px;right:auto;bottom:26px;width:calc(100% - 48px);padding:6px 11px}.foot-line{height:23px}
+  .demo-label{top:13px;right:25px}
+  .sidebar{padding:24px 23px 32px}
+}
+@media(prefers-reduced-motion:reduce){.foot-sampler .print{animation:none!important;opacity:.8!important}}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true">
+<symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20"/><path d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13"/></symbol>
+<symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></symbol>
+<symbol id="i-scroll" viewBox="0 0 24 24"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></symbol>
+<symbol id="i-footprints" viewBox="0 0 24 24"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></symbol>
+<symbol id="i-locate" viewBox="0 0 24 24"><line x1="2" x2="5" y1="12" y2="12"/><line x1="19" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="5"/><line x1="12" x2="12" y1="19" y2="22"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/></symbol>
+</svg>
+<main class="app-shell parchment" aria-label="WIZAMAP Demo 1 — khung giao diện">
+ <i class="frame-corner tl"></i><i class="frame-corner tr"></i><i class="frame-corner bl"></i><i class="frame-corner br"></i>
+ <header class="masthead">
+   <div class="brand-lockup">
+     <div class="brand-seal" aria-hidden="true"><svg class="icon"><use href="#i-compass"></use></svg></div>
+     <div class="brand">
+       <div class="brand-caption">Địa bàn của mớ Phù thủy mộng mơ</div>
+       <h1>WIZAMAP</h1>
+       <div class="brand-quote" id="wzw-quote">Đi lạc có chiến lược vẫn tính là đi lạc.</div>
+     </div>
+   </div>
+   <div class="time-block" aria-label="Ngày giờ trong thế giới nhập vai">
+     <div class="region" id="wzw-region">Khuôn Viên Lâu Đài Hogwarts</div>
+     <div class="clock"><strong id="wzw-time">10:25 Sáng</strong><time id="wzw-date">11/09/1992</time></div>
+   </div>
+ </header>
+ <div class="workspace">
+  <section class="map-stage" aria-label="Vùng bản đồ chưa triển khai">
+    <div class="demo-label">DEMO 1 · UI SHELL</div>
+    <nav class="tools" aria-label="Điều khiển bản đồ, sẽ kích hoạt sau">
+      <button class="tool" type="button" title="Phóng to — chưa có bản đồ" disabled aria-label="Phóng to chưa khả dụng">+</button>
+      <button class="tool" type="button" title="Thu nhỏ — chưa có bản đồ" disabled aria-label="Thu nhỏ chưa khả dụng">−</button>
+      <button class="tool" type="button" title="Định vị — chưa có bản đồ" disabled aria-label="Định vị chưa khả dụng"><svg class="icon"><use href="#i-locate"></use></svg></button>
+    </nav>
+    <div class="stage-label">KHUÔN VIÊN HOGWARTS · KHUNG BẢN ĐỒ CHỜ KẾT NỐI</div>
+    <div class="stage-compass" role="img" aria-label="La bàn Bắc"><svg class="icon"><use href="#i-compass"></use></svg><span class="compass-point"></span></div>
+    <div class="map-placeholder">
+      <div class="ornament" aria-hidden="true">✣</div>
+      <p class="placeholder-title">Không gian bản đồ</p>
+      <p>Chưa đưa địa hình, kiến trúc hay tuyến đường vào bản Demo 1.</p>
+      <small>MAP DATA / SVG RENDERER · SẼ TÍCH HỢP SAU KHI DUYỆT</small>
+    </div>
+    <div class="legend" aria-label="Chú giải biểu tượng">
+       <span class="legend-item"><span class="symbol">◆</span> Vị trí của bạn</span>
+       <span class="legend-item"><span class="symbol">♧</span> Nhân vật đã biết</span>
+       <span class="legend-item"><span class="symbol">✧</span> Dấu hiệu &amp; Quest</span>
+       <span class="legend-item"><span class="symbol">···</span> Lối hạn chế</span>
+    </div>
+    <div class="foot-sampler" id="foot-sampler" data-mode="walk" aria-label="Thử hiệu ứng dấu chân màu đỏ burgundy">
+       <div class="foot-heading"><span>DẤU CHÂN · BURGUNDY</span><button type="button" id="foot-toggle" aria-pressed="false" title="Đổi giữa di chuyển và đứng yên">Di chuyển ↔ Đứng yên</button></div>
+       <div class="foot-line" aria-hidden="true">
+         <svg class="icon print" style="--step:0"><use href="#i-footprints"></use></svg>
+         <svg class="icon print" style="--step:1"><use href="#i-footprints"></use></svg>
+         <svg class="icon print" style="--step:2"><use href="#i-footprints"></use></svg>
+         <svg class="icon print" style="--step:3"><use href="#i-footprints"></use></svg>
+         <svg class="icon print" style="--step:4"><use href="#i-footprints"></use></svg>
+       </div>
+    </div>
+  </section>
+  <aside class="sidebar" aria-label="Thông tin địa điểm">
+    <div class="location-cap"><svg class="icon"><use href="#i-map-pin"></use></svg> VỊ TRÍ CỦA BẠN</div>
+    <h2 id="wzw-location">Nhà Kính Thảo Dược</h2>
+    <p class="location-sub" id="wzw-zone">Khuôn viên phía Đông Bắc</p>
+    <div class="flourish-rule" aria-hidden="true">❧</div>
+    <section class="info-section">
+      <div class="section-cap"><svg class="icon"><use href="#i-leaf"></use></svg> HOẠT ĐỘNG</div>
+      <p id="wzw-activity">Tiết Thảo dược học năm hai đang diễn ra quanh các chậu Mandrake non.</p>
+    </section>
+    <section class="info-section">
+      <div class="section-cap"><svg class="icon"><use href="#i-mountain"></use></svg> DẤU VẾT &amp; CẢNH QUAN</div>
+      <p id="wzw-observation">Hệ mái vòm kính khung sắt rỉ nhẹ, luống đất phân tầng và nhà kho dụng cụ.</p>
+    </section>
+    <section class="info-section">
+      <div class="section-cap"><svg class="icon"><use href="#i-users"></use></svg> NHÂN VẬT TẠI ĐÂY</div>
+      <div class="person-chips" id="wzw-actors" aria-label="Nhân vật tại địa điểm">
+        <span class="person player">BẠN</span><span class="person">Giáo sư Sprout</span><span class="person">Neville Longbottom</span><span class="person">Harry, Ron &amp; Hermione</span>
+      </div>
+    </section>
+    <section class="hints" aria-label="Tin tức và gợi ý hiện tại">
+      <div class="hints-top"><div class="section-cap"><svg class="icon"><use href="#i-scroll"></use></svg> HÓNG HỚT TÁM PHƯƠNG</div><span class="hints-count" id="wzw-hints-count">5 / 5</span></div>
+      <ul class="hint-list" id="wzw-hints">
+       <li><span class="hint-mark">✧</span><div><div class="hint-title">Chụp tai bảo hộ ở Nhà kính</div><div class="hint-place">Nhà Kính Thảo Dược</div></div></li>
+       <li><span class="hint-mark">✧</span><div><div class="hint-title">Ghi chép lịch chăm sóc Mandrake non</div><div class="hint-place">Nhà Kính Thảo Dược</div></div></li>
+       <li><span class="hint-mark">✧</span><div><div class="hint-title">Dây mây ánh bị sờn trên lối đi</div><div class="hint-place">Nhà Kính Thảo Dược</div></div></li>
+       <li><span class="hint-mark">✧</span><div><div class="hint-title">Dấu vết gần bờ hồ</div><div class="hint-place">Hồ Đen</div></div></li>
+       <li><span class="hint-mark">✧</span><div><div class="hint-title">Mảnh giấy bên nhà kính</div><div class="hint-place">Nhà kính</div></div></li>
+      </ul>
+      <div class="side-note">Thông tin demo để duyệt khung giao diện. Dữ liệu RP và bản đồ sẽ do Runtime cấp sau.</div>
+    </section>
+  </aside>
+ </div>
+</main>
+<script>
+(function(){
+  "use strict";
+  var sampler=document.getElementById("foot-sampler");
+  var toggle=document.getElementById("foot-toggle");
+  toggle.addEventListener("click",function(){
+    var idle=sampler.getAttribute("data-mode")!=="idle";
+    sampler.setAttribute("data-mode",idle?"idle":"walk");
+    toggle.setAttribute("aria-pressed",idle?"true":"false");
+    toggle.textContent=idle?"Đứng yên ↔ Di chuyển":"Di chuyển ↔ Đứng yên";
+  });
+  // Only shell fields. Demo 1 intentionally does not render map or expose world data.
+  // Production integration may call WIZAMAP_DEMO1.render(data) with runtime-approved fields.
+  function setText(id,value){if(typeof value==="string"){var el=document.getElementById(id);if(el)el.textContent=value;}}
+  function render(data){
+    if(!data||typeof data!=="object")return;
+    if(data.meta){
+      setText("wzw-time",data.meta.time);setText("wzw-date",data.meta.date);
+      setText("wzw-quote",data.meta.quote);setText("wzw-region",data.meta.region);
+    }
+    if(data.focus){setText("wzw-location",data.focus.place);}
+    if(data.shell){
+      setText("wzw-zone",data.shell.zone);setText("wzw-activity",data.shell.activity);
+      setText("wzw-observation",data.shell.observation);
+    }
+    if(Array.isArray(data.actors)){
+      var holder=document.getElementById("wzw-actors");holder.replaceChildren();
+      var player=document.createElement("span");player.className="person player";player.textContent="BẠN";holder.appendChild(player);
+      data.actors.filter(function(a){return a&&typeof a.name==="string";}).forEach(function(a){
+        var item=document.createElement("span");item.className="person";item.textContent=a.name;holder.appendChild(item);
+      });
+    }
+    if(Array.isArray(data.hints)){
+      var list=document.getElementById("wzw-hints");list.replaceChildren();
+      data.hints.filter(function(h){return h&&typeof h.name==="string";}).forEach(function(h){
+        var li=document.createElement("li"),mark=document.createElement("span"),box=document.createElement("div"),title=document.createElement("div"),place=document.createElement("div");
+        mark.className="hint-mark";mark.textContent="✧";
+        title.className="hint-title";title.textContent=h.name;
+        place.className="hint-place";place.textContent=typeof h.place==="string"?h.place:"";
+        box.append(title,place);li.append(mark,box);list.appendChild(li);
+      });
+      document.getElementById("wzw-hints-count").textContent=data.hints.length+" / "+data.hints.length;
+    }
+  }
+  window.WIZAMAP_DEMO1={render:render};
+  if(window.MAP_DATA)render(window.MAP_DATA);
+})();
+</script>
+</body>
+</html>
