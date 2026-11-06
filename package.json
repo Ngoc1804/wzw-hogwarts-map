@@ -1,6 +1,0 @@
-{
-  "private": true,
-  "dependencies": {
-    "@svgdotjs/svg.js": "3.2.8"
-  }
-}
