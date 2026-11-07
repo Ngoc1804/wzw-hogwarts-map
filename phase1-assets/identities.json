@@ -1,0 +1,47 @@
+{
+  "houses": [
+    {
+      "id": "gryffindor",
+      "name": "Gryffindor",
+      "bg": "#813e37",
+      "trim": "#b69a57"
+    },
+    {
+      "id": "ravenclaw",
+      "name": "Ravenclaw",
+      "bg": "#3e6077",
+      "trim": "#ad8652"
+    },
+    {
+      "id": "hufflepuff",
+      "name": "Hufflepuff",
+      "bg": "#c3a554",
+      "trim": "#493e31"
+    },
+    {
+      "id": "slytherin",
+      "name": "Slytherin",
+      "bg": "#3b6554",
+      "trim": "#bac9c4"
+    },
+    {
+      "id": "beauxbatons",
+      "name": "Beauxbatons",
+      "bg": "#789fb3",
+      "trim": "#b69a57"
+    },
+    {
+      "id": "durmstrang",
+      "name": "Durmstrang",
+      "bg": "#74433a",
+      "trim": "#b69a57"
+    }
+  ],
+  "bannerFormats": [
+    "vertical",
+    "forked",
+    "pole",
+    "plaque",
+    "tapestry"
+  ]
+}

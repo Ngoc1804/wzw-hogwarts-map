@@ -1,0 +1,4 @@
+lxml
+svgpathtools
+numpy
+Pillow
