@@ -2,6 +2,8 @@
 
 ## Bắt đầu
 
+Bản đã chốt duy nhất là `index.html` theo SHA-256 trong `docs/release.json`. Mọi chỉnh sửa tiếp theo bắt đầu từ bản này. Không khôi phục generator/catalog/HTML của các đợt cũ vào nhánh.
+
 - Đọc README.md, maps/catalog.json và docs/PROJECT_MAP.md để chọn đúng file/map.
 - `index.html` là atlas duy nhất được phát hành. SVG gốc nằm trong payload gzip `#map-data`; không sửa base64 bằng tay và không dựng lại từ cache/phiên bản cũ.
 - Dùng `python tools/atlas.py extract <id>` để lấy SVG vào `.atlas-work/`, `apply` để chèn lại và `validate` để kiểm tra. Bản `--standalone` có defs chèn thêm chỉ dùng xem trước.
@@ -18,7 +20,6 @@
 ## Thư viện và kiểm tra
 
 - `cd elements && npm run build` đóng gói lại gallery từ các SVG/catalog hiện có rồi kiểm tra. Không sinh lại hình.
-- `npm run generate:base` là bộ sinh thư viện cơ sở; nó có thể ghi đè catalog/asset. Chỉ dùng khi tác vụ yêu cầu tái tạo bộ cơ sở. Không dùng cho chỉnh map hoặc build thông thường.
 - Kiểm tra phù hợp thay đổi: `python tools/atlas.py validate`, `python tools/test_atlas.py`; với gallery thêm `cd elements && npm test` sau `npm ci`.
 - Với thay đổi hình, kiểm tra bằng trình duyệt ở toàn cảnh và khi zoom; H1 phải còn animation, pause/resume và tải HTML rồi mở lại được.
 - Chạy `python tools/atlas.py refresh` để cập nhật danh mục và mã SHA-256; cập nhật docs/validation.json đúng các kiểm tra đã làm.
@@ -26,3 +27,4 @@
 ## Giữ repo gọn
 
 Không commit `.atlas-work/`, node_modules, file cache, ZIP, HTML dự phòng, ảnh kiểm thử hay payload giải nén cũ. Dùng lịch sử Git để phục hồi. Giữ giấy phép và nguồn asset. Chỉ commit/push lên GitHub khi yêu cầu người dùng cho phép; không tự merge vào main.
+

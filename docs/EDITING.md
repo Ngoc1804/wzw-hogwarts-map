@@ -13,8 +13,9 @@
 
 ## Thư viện element
 
-`elements/assets/` và `elements/catalog.json` là nguồn của gallery. Sau khi sửa framework, chạy `cd elements && npm run build` rồi `npm test` (cài dependency bằng `npm ci` khi cần). Build không chạy generator cơ sở. Các file nguồn/license/attribution luôn đi cùng thư viện.
+`elements/assets/` và `elements/catalog.json` là nguồn của gallery. Sau khi sửa framework, chạy `cd elements && npm run build` rồi `npm test` (cài dependency bằng `npm ci` khi cần). Build chỉ đóng gói và kiểm tra các asset hiện hành. Các file nguồn/license/attribution luôn đi cùng thư viện.
 
 ## Phát hành
 
 Chỉ commit bản atlas `index.html`, template, catalog, công cụ và tài liệu hiện tại. Bản nén tải xuống được tạo ngoài repo; không thêm HTML/ZIP theo ngày hoặc bản v1/v2 vào nhánh. Lịch sử thay đổi đã có trong Git. Khi push, kiểm tra head nhánh trước và dùng cập nhật fast-forward để giữ các commit mới của người khác.
+

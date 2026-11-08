@@ -9,7 +9,7 @@
   "removed_legacy_nodes": 39,
   "removed_unused_definitions": 5,
   "removed_unused_shared_shapes": 1,
-  "h1_svg_nodes": 12487,
+  "h1_svg_nodes": 12308,
   "other_maps_unchanged": true,
   "animation_script_unchanged": true,
   "html_bytes": 822836,
@@ -52,5 +52,21 @@
   "duplicateCleanupVisualComparison": "pixel-identical at 1700x1100 with animation paused",
   "organizedPreview": "current atlas loads locally without external requests",
   "atlasToolTests": "4 passed: isolated update, invalid reference rejection, preview guard, unknown map rejection",
-  "elementLibraryChecks": "305 XML/reference checks; current gallery DOM tests passed"
+  "elementLibraryChecks": "305 XML/reference checks; current gallery DOM tests passed",
+  "canonicalAtlas": "index.html",
+  "releasePolicy": "Use the current atlas only; obsolete generators, comparison snapshots and catalog-v2 helper scripts removed.",
+  "legacyCleanup": {
+    "filesRemoved": 10,
+    "unusedNodeDependenciesRemoved": [
+      "@svgdotjs/svg.js",
+      "paper",
+      "roughjs",
+      "svgo"
+    ],
+    "unusedPythonDependenciesRemoved": [
+      "svgpathtools",
+      "numpy",
+      "Pillow"
+    ]
+  }
 }

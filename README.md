@@ -1,6 +1,6 @@
 # WIZAMAP · demo-1
 
-Bản atlas hiện tại nằm duy nhất ở **[index.html](index.html)**: 11 map, H1 có animation và shading địa hình/kiến trúc. Mở trực tiếp file HTML; không cần server hay CDN. Dùng nút **Tải HTML** để lưu bản đầy đủ.
+**Bản đã chốt:** atlas hiện tại nằm duy nhất ở **[index.html](index.html)**: 11 map, H1 có animation và shading địa hình/kiến trúc. Mở trực tiếp file HTML; không cần server hay CDN. Dùng nút **Tải HTML** để lưu bản đầy đủ.
 
 ## Tìm nhanh
 
@@ -45,4 +45,5 @@ H1 giữ đủ 10 tiệm Hogsmeade ở vị trí đã duyệt; nhà Hagrid lục
 
 Express, các map phòng chung/phòng ngủ, Hogsmeade, Quidditch và Diagon/Knockturn đều nằm trong atlas. Xem danh mục để lấy đúng ID. Demo giao diện/asset này chưa thay thế tích hợp MAP_DATA của WzW Runtime.
 
-Các file cũ được theo dõi bằng lịch sử Git. Không lưu thêm index-v*.html, bản ZIP, cache hay snapshot cạnh bản chính. Thư viện trước đây ở `phase1-assets/` đã chuyển vào `elements/`; trang thử V12 cố định được thay bằng preview dùng atlas hiện tại.
+Nhánh chỉ giữ bản hiện hành. Không lưu thêm index-v*.html, bản ZIP, cache, snapshot hoặc bộ sinh catalog cũ cạnh bản chính. Lấy đúng bản theo mã SHA-256 trong `docs/release.json`; mọi chỉnh sửa tiếp theo bắt đầu từ bản này.
+

@@ -9,7 +9,7 @@
 7. Ports chỉ có nghĩa ở element đã khai báo. Tường thẳng dùng a/b; cầu thang dùng bottom/top; nhà entry chỉ là điểm đặt cửa minh họa. Không tự coi các điểm này đã khớp qua mọi phép biến đổi; phải chuyển về tọa độ scene.
 8. Layer: nền → mặt nước/đường → kết cấu → nội thất → đồ nhỏ → cây/nhà theo độ sâu → UI tương tác. Nhãn và vùng click là lớp UI riêng, không thêm vào SVG asset.
 9. Cây trùng ID được phép lặp trong scene; không sinh thêm asset chỉ vì thay kích thước hoặc màu. Seed dùng cho bố cục, không thay hình mỗi lần render.
-10. Các nhà khối là preset minh họa. Roof/awning/chimney/balcony có element riêng để ghép thêm; muốn sửa cấu trúc sâu thì dùng generator house() trong generate-base.mjs. Không gọi preset đã có cửa là khối nhà trống.
+10. Các nhà khối là preset minh họa. Roof/awning/chimney/balcony có element riêng để ghép thêm; muốn sửa cấu trúc sâu thì dùng generator house(kind) trong scripts/new_house_assets.py. Không gọi preset đã có cửa là khối nhà trống.
 
 Ví dụ:
 
@@ -24,5 +24,6 @@ Ví dụ:
 
 Thiết kế sử dụng bộ nét và palette chung; không dùng filter hoặc marker vòng tròn để báo hover. Việc tô chọn nên tác động lớp UI hoặc border của inspector.
 
-`npm run build` chỉ đóng gói lại gallery từ catalog và asset hiện có. `generate:base` là bộ sinh mẫu cơ sở, không dùng để xuất atlas hoặc ghi đè thư viện đã duyệt khi chưa có yêu cầu tái tạo hình.
+`npm run build` chỉ đóng gói lại gallery từ catalog và asset hiện có. Atlas dùng duy nhất `../index.html`; không đưa lại catalog hoặc hình từ các bản cũ.
+
 

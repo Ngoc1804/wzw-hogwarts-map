@@ -1,4 +1,4 @@
-# Six flags redesign V3
+# Current flags and heraldry attribution
 
 GitHub research/download: https://github.com/game-icons/icons
 - Lion and eagle-emblem and snake: Lorc, http://lorcblog.blogspot.com
@@ -8,7 +8,7 @@ Original vectors are kept in references/heraldry, with upstream license.txt. Mod
 
 Canon research: https://www.harrypotter.com/features/the-macusa-seal-and-other-emblems-of-the-wizarding-world ; https://www.hp-lexicon.org/place/europe/france/beauxbatons-academy-of-magic/ . Ravenclaw is the book eagle and blue/bronze. Beauxbatons has crossed wands and 3 stars per wand. Durmstrang uses film-inspired double eagle; not an exact official-crest reproduction.
 
-The four animal motifs retain their actual curved vector outlines from the attributed sources. Paper.js/SVG.js/SVGO pipeline from V2 is retained; this targeted patch preserves SVG data, replaces six crest objects, adds six complete flags, and enlarges the flags display. Six new flags rendered with librsvg; all 6 banner identity interactions passed jsdom. No real-browser visual QA.
+The four animal motifs retain their curved vector outlines from the attributed sources. Current flags and crests are available in catalog.json and index.html; see docs/FLAGS.md for the current design notes.
 
-245 total assets: 232 main and 13 internal. All non-heraldic assets remain the V2 designs. Open index.html for the complete library or flags.html for a six-flag review sheet.
+
 
