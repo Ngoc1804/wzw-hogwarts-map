@@ -1,20 +1,9 @@
-# WIZAMAP · Phase 1 FINAL
+# WIZAMAP · Element frameworks
 
-Bản chốt: 245 asset, có sáu cờ V3. Mở index.html trực tiếp để xem toàn bộ thư viện. Không có thử nghiệm 2.5D trong bản này.
+Mở `index.html` để tìm và xem element, đổi chế độ Khung / Trung tính, tải SVG hoặc sao chép mã. Các SVG độc lập nằm trong `assets/`.
 
-- assets/: 245 SVG độc lập.
-- catalog.json và identities.json: metadata cho AI ghép map và đổi nhận diện cờ.
-- scripts/: source dựng và kiểm tra đã dùng. HTML bàn giao là snapshot đã chốt; không chạy generator để thay thế bản chốt khi chưa đối chiếu.
-- references/heraldry và docs/licenses: nguồn vector và giấy phép. Xem docs/FLAGS-V3.md cho attribution CC BY 3.0.
+Đây là bộ khung để ghép map: tách structure, roof, openings và decor khi có. Mẫu nhà dùng các biến CSS `--wall`, `--wood`, `--roof`, `--roof-line`, `--glass`; các mẫu khác có `--surface`, `--foliage` và `--ink`. Chỉ đổ màu và thêm decor khi dùng. ID gốc được giữ để đồng bộ catalog.
 
-Đã kiểm tra render SVG và các luồng bằng mô phỏng DOM; chưa có xác nhận browser thật. Bộ này chưa nối runtime và chưa tái dựng 18 template.
+14 house.* của Demo 1 được thay bằng mẫu mới. Nhà Hagrid lục giác có ID house.hagrid-hex. Mẫu đặc thù đã dùng trên map và các mặt tiền London được bổ sung, không thay các nhà ga/nhà kính thành nhà dân.
 
-## Các phase tiếp theo
-
-2. Tái dựng 18 template bằng element: giữ bố cục nguồn, thêm chọn phòng/đồ vật, điểm nối, chuyển map/tầng; dùng dữ liệu mẫu. Duyệt Đại Sảnh, Bộ 1–7 và Express trước khi nhân rộng.
-3. Bộ sinh linh hoạt: hành lang ngang/dọc/L/T/ngã tư, phòng theo ràng buộc, seed theo địa điểm, lưu bố cục và vùng dự trữ. Bốn phòng sinh hoạt vẫn cố định.
-4. Chuẩn hóa dữ liệu/repo: location ID, graph kết nối, canon/ước lượng/AU, version schema, contract runtime và kiểm tra CI.
-5. Kết nối vận hành: /MAP, vị trí hiện tại, tiến trình, điều kiện truy cập, tuyến di chuyển, lưu/tải bố cục và trạng thái.
-6. Test tổng thể: đường đi, liên kết tầng/map, seed, bí mật, lưu/tải, desktop/mobile và hiệu năng browser thật; sửa lỗi và nghiệm thu.
-
-Giao diện và template làm trước, kết nối vận hành làm sau. Chưa thực hiện các phase 2–6 trong lần đẩy này.
+Tham chiếu nguồn: https://github.com/Ngoc1804/wzw-hogwarts-map/tree/demo-1/phase1-assets . Giữ giấy phép và attribution trong docs của bộ nguồn, nhất là các huy hiệu/cờ dựa trên hình CC BY 3.0. Bộ này không chuyển quyền sở hữu nhận diện hư cấu.

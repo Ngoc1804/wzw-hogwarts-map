@@ -1,8 +1,11 @@
-# Validation V2
+# Browser validation · 2026-11-09
 
-PASS 239 unique geometry fingerprints, positive bounds inside viewBox, XML valid.
-PASS 239 SVGs rendered with librsvg/cairo, no blank image; contact sheet inspected for 61 wizard/crest/banner items.
-PASS DOM: 239 cards, 226 main, scope/search, select via SVG.js, recolor, six banner identities, SVG/JSON/catalog download handlers, five self-contained example scenes, no JavaScript errors in tested flows.
-PASS memory/flame layer attributes in Pensieve/Goblet; original 177 source remains unchanged in prior project.
+- Chromium: all 11 maps load; H2 excluded from the HTML export.
+- H1 keeps ten village-house IDs, original centers and ground baselines (measured delta below 0.001 map unit).
+- Hagrid: six-sided roof; station train aligned to the actual rail tangent.
+- Boat and flags change over time; motion toggle pauses and resumes.
+- Switching maps disposes the previous H1 animation clock; downloaded HTML opens with motion.
+- Element gallery: 305 entries; category/search, neutral view and SVG download checked.
+- SVG files parsed and local references checked.
 
-Not real-browser visual QA. Does not assert every scene is physically walkable or canon floor geometry. Clearance/ports need scene validation in later template phase.
+The H1 motion layer uses the effect roles retained in Demo 1 V12, with a single controlled clock and per-instance animation targets. Shared framework definitions remain immutable.

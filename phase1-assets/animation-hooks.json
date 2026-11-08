@@ -1,0 +1,15 @@
+{
+  "runtime": "h1-motion.js",
+  "hooks": [
+    "data-emitter=chimney",
+    "data-window",
+    "data-layer=roof",
+    "data-port=entry",
+    ".cloth",
+    ".ancient-canopy",
+    "data-willow-strand",
+    "data-effect=red-train",
+    "data-live-effect=boat"
+  ],
+  "principle": "Animate instance groups only. Never mutate shared framework definitions."
+}
