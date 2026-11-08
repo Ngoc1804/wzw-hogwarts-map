@@ -1,0 +1,7 @@
+node_modules/
+.atlas-work/
+__pycache__/
+*.pyc
+*.tmp
+.DS_Store
+*.zip

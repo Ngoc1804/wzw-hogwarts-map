@@ -1,0 +1,56 @@
+{
+  "before_bytes": 831644,
+  "after_bytes": 822836,
+  "maps": 11,
+  "background_washes": 31,
+  "ground_shadow_shapes": 88,
+  "shop_wall_surfaces": 8,
+  "roof_contact_shadows": 9,
+  "removed_legacy_nodes": 39,
+  "removed_unused_definitions": 5,
+  "removed_unused_shared_shapes": 1,
+  "h1_svg_nodes": 12487,
+  "other_maps_unchanged": true,
+  "animation_script_unchanged": true,
+  "html_bytes": 822836,
+  "html_increase_bytes": -8808,
+  "html_increase_percent": -1.059,
+  "no_missing_svg_references": true,
+  "no_unused_shared_vectors": true,
+  "maps_tested": 11,
+  "motion_pause_resume": "passed",
+  "html_download_and_reopen": "passed",
+  "mobile_controls": "passed",
+  "template_render": "passed",
+  "landmark_geometry": {
+    "landmarks": 48,
+    "maxGeometryDelta": 0,
+    "backgroundWashes": 31,
+    "shoreMask": "present",
+    "template": "renders",
+    "browserErrors": [],
+    "headlessBenchmark": {
+      "baseline": {
+        "frames": 99,
+        "medianFrameMs": 66.70000000000005,
+        "p95FrameMs": 116.59999999999991
+      },
+      "shaded": {
+        "frames": 99,
+        "medianFrameMs": 50.100000000000364,
+        "p95FrameMs": 116.69999999999982
+      },
+      "note": "Local headless Chromium sample; not a device performance guarantee."
+    }
+  },
+  "organization": "demo-1 current atlas; elements library; H1 templates; tools; docs",
+  "additional_cleanup": {
+    "duplicateClipPathsRemoved": 30,
+    "duplicateSharedDefinitionsRemoved": 80
+  },
+  "sourceHtmlSha256": "43d2dda5ee3752b98984668f5c55346e451a1cfb3350b8332ac98bd6891e252b",
+  "duplicateCleanupVisualComparison": "pixel-identical at 1700x1100 with animation paused",
+  "organizedPreview": "current atlas loads locally without external requests",
+  "atlasToolTests": "4 passed: isolated update, invalid reference rejection, preview guard, unknown map rejection",
+  "elementLibraryChecks": "305 XML/reference checks; current gallery DOM tests passed"
+}
