@@ -18,12 +18,25 @@ const dom=new JSDOM(html,{runScripts:'dangerously',virtualConsole:vc,beforeParse
 }});
 try{
   const w=dom.window,d=w.document,get=id=>d.getElementById(id);
+  const checkInstanceIds=()=>{
+    const ids=[...d.querySelectorAll('[id]')].map(e=>e.id);
+    assert.equal(ids.length,new Set(ids).size,'Gallery SVG instances must have unique IDs');
+    for(const svg of d.querySelectorAll('figure>svg')){
+      const own=new Set([svg,...svg.querySelectorAll('[id]')].map(e=>e.id).filter(Boolean));
+      for(const node of [svg,...svg.querySelectorAll('*')])for(const a of node.attributes){
+        for(const match of a.value.matchAll(/url\(\s*["']?#([^\s)"']+)/g))assert(own.has(match[1]),'Cross-card URL reference: '+match[1]);
+        if(a.localName==='href'&&a.value.startsWith('#'))assert(own.has(a.value.slice(1)),'Cross-card href: '+a.value);
+      }
+    }
+  };
   const until=Date.now()+5000;while(!d.querySelector('article')&&Date.now()<until)await new Promise(r=>setTimeout(r,20));
   assert(d.querySelector('article'),'Gallery did not render');
+  checkInstanceIds();
   assert(get('count').textContent.includes('/ '+catalog.elements.length+' element'));
   get('category').value='';get('category').dispatchEvent(new w.Event('change'));
   assert.equal(d.querySelectorAll('article').length,24);
   const first=d.querySelector('article small').textContent;get('next').click();assert.notEqual(d.querySelector('article small').textContent,first);
+  checkInstanceIds();
   get('search').value='hagrid';get('search').dispatchEvent(new w.Event('input'));
   assert.equal(d.querySelectorAll('article').length,1);
   d.querySelector('article button').click();assert.equal(w.lastDownload,'house.hagrid-hex.svg');

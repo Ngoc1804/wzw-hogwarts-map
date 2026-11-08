@@ -76,8 +76,11 @@ for k in types:Path(OUT/f'house.{k}.svg').write_text(E.tostring(house(k),encodin
 Path(OUT/'house.hagrid-hex.svg').write_text(E.tostring(hagrid(),encoding='unicode'))
 for path in OUT.glob('house.*.svg'):
  r=E.fromstring(path.read_bytes())
+ r.set('id',path.stem.replace('.','-'))
  for e in r.iter():
+  if e.get('stroke') not in (None,'none'):e.set('stroke','var(--ink,#75684f)')
   f=e.get('fill','')
   if f.startswith('var('):e.set('fill',re.sub(r'var\((--[\w-]+),[^)]*\)',r'var(\1,none)',f))
+  elif f.startswith('#'):e.set('fill','var(--surface,none)')
  path.write_text(E.tostring(r,encoding='unicode'))
 print('15 editable house frameworks rebuilt')

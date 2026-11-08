@@ -68,5 +68,38 @@
       "numpy",
       "Pillow"
     ]
+  },
+  "branchAudit": {
+    "baseCommit": "b71ecb3c0fa3a220241af8ac9573f070b9c8c898",
+    "checkedAtUtc": "2026-11-08T21:28:14.366768+00:00",
+    "snapshotFilesHashVerified": 352,
+    "npmCi": "passed",
+    "atlasStructuralValidation": "passed",
+    "atlasToolTests": 4,
+    "elementXmlChecks": 305,
+    "galleryCategoriesChecked": 30,
+    "galleryPagesChecked": 13,
+    "galleryCardsChecked": 305,
+    "findingsFixed": [
+      {
+        "issue": "Shared roof-clip IDs between gallery cards",
+        "fix": "Namespace SVG IDs and local references per visible instance; keep downloaded source unchanged"
+      },
+      {
+        "issue": "House generator dropped approved root IDs and ink/surface color slots",
+        "fix": "Normalize exported frameworks; verify byte-identical regeneration of all 15 approved houses"
+      }
+    ],
+    "browserJavaScriptErrors": 0,
+    "browserHttpErrors": 0,
+    "externalRequests": 0,
+    "brokenDocumentationLinks": 0,
+    "mobileViewport": {
+      "width": 390,
+      "horizontalOverflow": false
+    },
+    "atlasHtmlUnchanged": true,
+    "frameworkSvgsUnchanged": true,
+    "galleryHtmlSha256": "5d2242d9e1ea7639830aff5b94219c8db491392093506e8093e6f6cd4a1b0e9d"
   }
 }
