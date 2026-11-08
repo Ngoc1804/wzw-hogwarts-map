@@ -14,6 +14,7 @@ function mountH1Motion(svg,enabled){
   callbacks.push(t=>{const a=Math.sin(t*3.4+i*.5)*4;e.setAttribute('d',`M${x} ${y}C${x+w*.4} ${y+a} ${x+w*.6} ${y-a} ${x+w} ${y+2}L${x+w} ${y+10}C${x+w*.6} ${y+8-a} ${x+w*.4} ${y+8+a} ${x} ${y+8}Z`)})
  }
  for(const [i,e]of [...svg.querySelectorAll('.window-light-wash')].entries()){e.style.removeProperty('opacity');callbacks.push(t=>e.setAttribute('opacity',.09+.14*(.5+.5*Math.sin(t/(2.5+i%4)*Math.PI+i))))}
+ for(const [i,e]of [...svg.querySelectorAll('.lamp-glow')].entries()){e.style.removeProperty('opacity');callbacks.push(t=>e.setAttribute('opacity',.88+.12*Math.sin(t*.8+i)))}
  for(const [i,e]of [...svg.querySelectorAll('[data-window]')].entries()){
   const glow=e.cloneNode(false);glow.removeAttribute('id');glow.removeAttribute('data-window');glow.setAttribute('fill','#e8ce8f');glow.setAttribute('pointer-events','none');e.after(glow);created.push(glow);callbacks.push(t=>glow.setAttribute('opacity',.10+.13*(.5+.5*Math.sin(t*1.1+i))))
  }
@@ -33,6 +34,8 @@ function mountH1Motion(svg,enabled){
  }
  for(const [i,e]of [...svg.querySelectorAll('.boat-rock')].entries())rotate(e,.6,7+i);
  const owl=svg.querySelector('[data-effect="owl"]');if(owl){owl.style.removeProperty('transform');callbacks.push(t=>{const a=cycle(t,35)*Math.PI*2;owl.setAttribute('transform',`translate(${130+Math.cos(a)*90} ${100+Math.sin(a)*30}) scale(.7)`);owl.setAttribute('opacity',cycle(t,35)<.5?.8:0)})}
+ const peek=svg.querySelector('[data-effect="owl-post-head"]');if(peek){peek.style.removeProperty('opacity');callbacks.push(t=>{const f=cycle(t,28);peek.setAttribute('opacity',f>.3&&f<.58?Math.min(1,(f-.3)*15,(.58-f)*15):0)})}
+ for(const [id,count]of [['lakeside-tree',3],['region-6',2]]){const root=svg.querySelector(`[data-id="${id}"]`);if(!root)continue;const b=root.getBBox(),m=cam.getCTM().inverse().multiply(root.getCTM()),origin=new DOMPoint(b.x+b.width*.6,b.y+b.height*.3).matrixTransform(m);for(let i=0;i<count;i++){const leaf=G(cam,{'pointer-events':'none','data-live-effect':'leaf-drift'});P(leaf,'M-2 0Q1-5 5 0Q1 4-2 0Z',{fill:'#a4a17a',stroke:'#888c66','stroke-width':.4});created.push(leaf);callbacks.push(t=>{const f=cycle(t,18+i*2,i*5);leaf.setAttribute('transform',`translate(${origin.x+f*45} ${origin.y+f*45+Math.sin(f*Math.PI*3+i)*5}) rotate(${f*140})`);leaf.setAttribute('opacity',Math.sin(f*Math.PI)*.5)})}}
  for(const e of svg.querySelectorAll('[data-layer="decor"][data-optional="sign"]'))rotate(e,.7,8);
  const greenhouse=svg.querySelector('[data-element="h1.greenhouses"]');for(const [i,e]of [...(greenhouse?.querySelectorAll('[data-color-fill="foliage"]')||[])].slice(0,3).entries())rotate(e,1.8,6+i);
  for(const i of [0,1,5]){const art=svg.querySelector(`[data-id="village-house-${i}"] [data-element]`),board=[...(art?.querySelectorAll('rect')||[])].find(e=>e.getAttribute('width')==='48'&&e.getAttribute('height')==='27');if(board){const g=G(board.parentNode,{'data-live-effect':'shop-sign'}),b=board.getBBox();g.append(board);rotate(g,.8,8+i,[b.x+b.width/2,b.y])}}
