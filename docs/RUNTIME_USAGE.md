@@ -1,5 +1,16 @@
 # Hướng dẫn /MAP cho Preview
 
+## Atlas canonical & scope build policy (2026-11-10)
+
+Authoritative atlas: `maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json` (747 source IDs → 726 physical places, 21 aliases in `sourceIds`). Runtime index: `runtime/atlas-index.json`; `runtime/atlas-scene.mjs` resolves old IDs to canonical IDs and verified technical SVG bindings, never fuzzy-matches names. Missing bindings fall back to current-scene Stage 2 generated indoor layout only where generation is allowed.
+
+Generated corridor layout comes from the current floor/cluster's flexible `corridorPreset`. An explicit `view.indoor` layout takes precedence. A single room is allowed to fill the entire preview without a fabricated corridor or stair; short one-floor scenes are flexible. Never build a complete Hogwarts floor or multiple wings. No added corridor preset for Ministry or exterior/courtyard maps already covered by H1/H2 or other fixed templates.
+
+AU gate: build **only CCC 07.18 main room**, **Nhà PC · London**, **Liad’s Attic**. Five other AU maps remain indexed as archival lookup data but are **blocked from Preview rendering/generation**; CCC subsidiary rooms remain indexed but not buildable. This is a runtime policy, not just documentation.
+
+Exterior actor position/occlusion still require verified `view.spatial` polygons per scene. This release does not claim complete walkable polygons for every H1/H2/village/Diagon artwork. Always exclude secret places before MAP_DATA is sent to Preview; fog is not a security boundary.
+
+
 Gemini đọc diễn biến RP/correction, ngày giờ RP, vị trí PC, NPC và quest pack đúng tháng. Tra ID địa điểm trong atlas đã cấp trong context; dùng binding template thực có hoặc cung cấp generation recipe. Không tự vẽ lại CSS/SVG mỗi lượt.
 
 Xuất một codeblock HTML dựa trên shell bên dưới. Thay {} trong rp-map-data bằng dữ liệu RP theo schema 2.0.0. Escape ký tự < trong JSON thành \u003c. Một entry URL runtime đã ghim commit nằm sẵn trong shell; bundle tự tải atlas và asset cần thiết ở commit riêng đã ghim. Preview không ghi ngược GitHub, không có seed hay storage.
@@ -12,7 +23,7 @@ Crop bật mặc định, fit các nơi được gửi; crop=false để toàn c
 
 ```html
 <!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><body><p id="status">Đang tải WIZAMAP…</p><iframe title="Bản đồ RP" sandbox="allow-scripts allow-downloads" style="width:100%;height:90dvh;border:0"></iframe><script type="application/json" id="rp-map-data">{}</script><script>
-(async()=>{try{const data=JSON.parse(document.querySelector('#rp-map-data').textContent);const r=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@f5801f36a9b31446d2516b02b4ead2c23e3758df/runtime/bundle.js');if(!r.ok)throw Error('Runtime HTTP '+r.status);const code=await r.text();const safe=JSON.stringify(data).replace(/</g,'\\u003c');document.querySelector('iframe').srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+safe+'<\/script><script>'+code.replace(/<\/script/gi,'<\\/script')+'<\/script>';document.querySelector('#status').textContent='Runtime đã tải; trạng thái dữ liệu hiển thị bên trong bản đồ.'}catch(e){document.querySelector('#status').textContent='Không mở được bản đồ: '+e.message}})();
+(async()=>{try{const data=JSON.parse(document.querySelector('#rp-map-data').textContent);const r=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@308705107c240dff20decb1d4bf08c7337186217/runtime/bundle.js');if(!r.ok)throw Error('Runtime HTTP '+r.status);const code=await r.text();const safe=JSON.stringify(data).replace(/</g,'\\u003c');document.querySelector('iframe').srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+safe+'<\/script><script>'+code.replace(/<\/script/gi,'<\\/script')+'<\/script>';document.querySelector('#status').textContent='Runtime đã tải; trạng thái dữ liệu hiển thị bên trong bản đồ.'}catch(e){document.querySelector('#status').textContent='Không mở được bản đồ: '+e.message}})();
 </script></body></html>
 
 ```
