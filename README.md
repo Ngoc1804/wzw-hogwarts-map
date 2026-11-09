@@ -77,3 +77,7 @@ Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phi�
 
 ## Runtime mới
 Xem [runtime/README.md](runtime/README.md), [quyết định atlas](docs/ATLAS_DECISIONS.md) và [luồng hiện hành](docs/MAP_FLOW.md). MAP_DATA 2.0.0 thay thế hợp đồng cũ có storage/locality.
+
+## Bộ element kiến trúc đã duyệt — chặng 1
+
+Nguồn cấu kiện và vật liệu: [elements/architecture](elements/architecture/README.md). Có 10 bố cục review, build HTML nén tự chứa; xem [phạm vi, cách build và trạng thái kiểm tra](docs/ARCHITECTURE_STAGE1.md). Bộ này chưa thay renderer MAP_DATA; chặng 2 chờ duyệt.

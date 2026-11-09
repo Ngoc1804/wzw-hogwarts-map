@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "status": "approved artwork extracted; general placement pending stage 2",
+  "units": "design-unit",
+  "projection": {"wallHeight": 36, "wallThickness": 16, "sideOffsetPerHeight": 0.35},
+  "elements": [
+    {"id":"architecture.floor","module":"elements.mjs","export":"path","geometry":"closed plan polygon","ports":"declared by recipe"},
+    {"id":"architecture.wall-horizontal","module":"elements.mjs","export":"hwall","parameters":["x1","x2","y","z","t"],"ports":["start","end"],"footprint":"describeWall"},
+    {"id":"architecture.wall-vertical","module":"elements.mjs","export":"vwall","parameters":["x","y1","y2","z","t"],"ports":["start","end"],"footprint":"describeWall"},
+    {"id":"architecture.wall-angled","module":"elements.mjs","export":"angledWall","parameters":["a","b","z"],"ports":["start","end"],"footprint":"describeWall","note":"Curves are tessellated into angled segments by recipes."},
+    {"id":"architecture.door-arch","module":"elements.mjs","export":"arch","parameters":["x","y","z"],"clearOpeningWidth":38,"recipeWallGapWidth":50},
+    {"id":"architecture.door-threshold","module":"elements.mjs","export":"lowdoor","parameters":["x","y","z"],"clearOpeningWidth":38},
+    {"id":"architecture.window-lancet","module":"elements.mjs","export":"lancet","parameters":["x","y","z"],"placement":"wall with verified outside/courtyard exposure"},
+    {"id":"architecture.sconce","module":"elements.mjs","export":"sconce","parameters":["x","y"],"collision":false},
+    {"id":"architecture.portrait","module":"elements.mjs","export":"portrait","parameters":["x","y","w","h"],"collision":false}
+  ],
+  "recipes": ["horizontal","vertical","ell","tee","cross","court","cloister","windows","curved","tower"],
+  "selectionPolicy": {"priority":["explicitAtlasStructure","AIChoiceWithinConstraints","explicitlyAllowedRandom"],"implemented":false,"note":"Stage 1 records the policy only; no atlas mutation or random selection is performed."}
+}
