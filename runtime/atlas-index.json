@@ -1,0 +1,2047 @@
+{
+  "schemaVersion": "scene-atlas-index-1",
+  "atlasVersion": "atlas-optimized-1.0",
+  "statistics": {
+    "sourceEntries": 747,
+    "places": 726,
+    "mergedOccurrences": 21
+  },
+  "aliases": {
+    "P-5e20349a56bd1b": "HOG-TNG1-S-06",
+    "P-bd27aa15491ba5": "HOG-TNG1-S-02",
+    "HOG-TNG1-S-04": "P-ce57067fcd107f",
+    "P-7dbd9dfca98ac3": "HOG-TNG8-W-01",
+    "HOG-TNG8-S-02": "P-441745282e9e54",
+    "HOG-TNGBP-E-01": "P-1795bc600c2b41",
+    "TWR-02-01-01": "P-4bde45f1a1cb07",
+    "HOG-HMNGC-E-01": "P-80ce1ea13c2632",
+    "P-4830d8d84c0a5a": "HOG-TNG8-W-03",
+    "P-ae81c478038c2b": "HOG-TNG8-W-04",
+    "P-eb17a00f2392a6": "HOG-TNG8-W-02",
+    "TWR-01-02-01": "P-a63fc4014d765b",
+    "HOG-TNGBP-E-02": "P-ebceb992eb9255",
+    "TWR-02-02-01": "P-439400ea5f0cd4",
+    "HOG-HMNGC-E-02": "P-6b050b321ff558",
+    "TWR-01-02-02": "P-468097e3d74bf1",
+    "HOG-TNGBP-E-03": "P-b4314de4234c88",
+    "TWR-02-02-02": "P-7d130cc86d97eb",
+    "HOG-HMNGC-E-03": "P-a6425ebd843fab",
+    "P-8dc648ce85a4fe": "HOG-TNG8-W-05",
+    "HOG-TNG1-W-01": "P-5fc25ea9745ef9"
+  },
+  "bindings": {
+    "HOG-TNG1-S-06": {
+      "hall": "filch-office"
+    },
+    "P-5fc25ea9745ef9": {
+      "hall": "classroom-11"
+    },
+    "HOG-TNG1-S-01": {
+      "hall": "entrance-hall"
+    },
+    "P-86e7455d5f7d47": {
+      "hall": "staff-room"
+    },
+    "HOG-TNG1-S-05": {
+      "hall": "staff-room"
+    },
+    "HOG-TNG1-W-02": {
+      "hall": "broom-cupboard"
+    },
+    "P-441745282e9e54": {
+      "gryffindor-common": "gryffindor-common-room"
+    },
+    "P-4bde45f1a1cb07": {
+      "ravenclaw-common": "ravenclaw-common-room"
+    },
+    "P-1795bc600c2b41": {
+      "hufflepuff-common": "hufflepuff-common-room"
+    },
+    "P-80ce1ea13c2632": {
+      "slytherin-common": "slytherin-common-room"
+    },
+    "P-a63fc4014d765b": {
+      "gryffindor-common": "gryffindor-dormitories"
+    },
+    "P-468097e3d74bf1": {
+      "gryffindor-common": "gryffindor-dormitories"
+    },
+    "P-439400ea5f0cd4": {
+      "ravenclaw-common": "ravenclaw-dormitories"
+    },
+    "P-7d130cc86d97eb": {
+      "ravenclaw-common": "ravenclaw-dormitories"
+    },
+    "P-ebceb992eb9255": {
+      "hufflepuff-common": "hufflepuff-dormitories"
+    },
+    "P-b4314de4234c88": {
+      "hufflepuff-common": "hufflepuff-dormitories"
+    },
+    "P-6b050b321ff558": {
+      "slytherin-common": "slytherin-dormitories"
+    },
+    "P-a6425ebd843fab": {
+      "slytherin-common": "slytherin-dormitories"
+    },
+    "P-30cf89999f5e15": {
+      "h1": "lake"
+    },
+    "P-9fffb1aaa57eea": {
+      "h1": "willow"
+    },
+    "P-9f810bb6686c6d": {
+      "h1": "ancient-tree"
+    },
+    "P-e7ebf6e1f0fcb9": {
+      "h1": "flying-lawn"
+    },
+    "P-f322d7e98b6a02": {
+      "h1": "owlery"
+    },
+    "TWR-11-02-01": {
+      "h1": "owlery"
+    },
+    "P-94a7036730f10e": {
+      "express": "hogsmeade-station",
+      "h1": "hogsmeade-station"
+    },
+    "P-7abe41594af2ff": {
+      "pitch-static": "quidditch-pitch",
+      "h1": "quidditch-pitch"
+    }
+  },
+  "groups": [
+    {
+      "key": "hogwarts/f0/0",
+      "kind": "castle",
+      "name": "HẦM NGẦM · Bắc · Đường dẫn hầm kỹ thuật",
+      "placeIds": [
+        "HOG-HMNGM-N-01",
+        "HOG-HMNGM-N-02",
+        "HOG-HMNGM-N-03",
+        "HOG-HMNGM-N-04"
+      ],
+      "preset": {
+        "layout": "vertical",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-HMNGM-N-01"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f0/1",
+      "kind": "castle",
+      "name": "HẦM NGẦM · Đông · Hầm di tích và cửa sâu",
+      "placeIds": [
+        "HOG-HMNGM-E-01",
+        "HOG-HMNGM-E-02",
+        "HOG-HMNGM-E-03",
+        "HOG-HMNGM-E-04"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-HMNGM-E-04"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f0/2",
+      "kind": "castle",
+      "name": "HẦM NGẦM · Nam · Cụm hầm đá bảo vệ cũ",
+      "placeIds": [
+        "HOG-HMNGM-S-01",
+        "HOG-HMNGM-S-02",
+        "HOG-HMNGM-S-03",
+        "HOG-HMNGM-S-04",
+        "HOG-HMNGM-S-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "hogwarts/f0/3",
+      "kind": "castle",
+      "name": "HẦM NGẦM · Tây · Hầm đá xưa và phòng nghiên cứu",
+      "placeIds": [
+        "HOG-HMNGM-W-01",
+        "HOG-HMNGM-W-02",
+        "HOG-HMNGM-W-03",
+        "HOG-HMNGM-W-04"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "hogwarts/f1/0",
+      "kind": "castle",
+      "name": "HẦM NGỤC · Bắc · Cụm Độc dược và gian chuẩn bị",
+      "placeIds": [
+        "HOG-HMNGC-N-01",
+        "HOG-HMNGC-N-02",
+        "HOG-HMNGC-N-03",
+        "HOG-HMNGC-N-04",
+        "HOG-HMNGC-N-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "hogwarts/f1/1",
+      "kind": "castle",
+      "name": "HẦM NGỤC · Đông · Lối Slytherin dưới mặt hồ",
+      "placeIds": [
+        "P-80ce1ea13c2632",
+        "P-6b050b321ff558",
+        "P-a6425ebd843fab",
+        "HOG-HMNGC-E-04",
+        "HOG-HMNGC-E-05"
+      ],
+      "preset": {
+        "layout": "vertical",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-HMNGC-E-04"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f1/2",
+      "kind": "castle",
+      "name": "HẦM NGỤC · Nam · Kho và tuyến phục vụ dưới Đại Sảnh",
+      "placeIds": [
+        "HOG-HMNGC-S-01",
+        "HOG-HMNGC-S-02",
+        "HOG-HMNGC-S-03",
+        "HOG-HMNGC-S-04",
+        "HOG-HMNGC-S-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-HMNGC-S-03"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f1/3",
+      "kind": "castle",
+      "name": "HẦM NGỤC · Tây · Cụm lớp học ngầm và hầm cũ",
+      "placeIds": [
+        "HOG-HMNGC-W-01",
+        "HOG-HMNGC-W-02",
+        "HOG-HMNGC-W-03",
+        "HOG-HMNGC-W-04",
+        "HOG-HMNGC-W-05"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-HMNGC-W-01"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f2/0",
+      "kind": "castle",
+      "name": "TẦNG BẾP · Bắc · Bếp và lối phục vụ",
+      "placeIds": [
+        "HOG-TNGBP-N-01",
+        "HOG-TNGBP-N-02",
+        "HOG-TNGBP-N-03",
+        "HOG-TNGBP-N-04",
+        "HOG-TNGBP-N-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNGBP-N-05"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f2/1",
+      "kind": "castle",
+      "name": "TẦNG BẾP · Đông · Cụm Hufflepuff",
+      "placeIds": [
+        "P-1795bc600c2b41",
+        "P-ebceb992eb9255",
+        "P-b4314de4234c88",
+        "HOG-TNGBP-E-04",
+        "HOG-TNGBP-E-05"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNGBP-E-04"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f2/2",
+      "kind": "castle",
+      "name": "TẦNG BẾP · Nam · Giặt là và kho phục vụ",
+      "placeIds": [
+        "HOG-TNGBP-S-01",
+        "HOG-TNGBP-S-02",
+        "HOG-TNGBP-S-03",
+        "HOG-TNGBP-S-04",
+        "HOG-TNGBP-S-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNGBP-S-05"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f2/3",
+      "kind": "castle",
+      "name": "TẦNG BẾP · Tây · Khu công vụ và hầm thực phẩm",
+      "placeIds": [
+        "HOG-TNGBP-W-01",
+        "HOG-TNGBP-W-02",
+        "HOG-TNGBP-W-03",
+        "HOG-TNGBP-W-04",
+        "HOG-TNGBP-W-05"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNGBP-W-05"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f3/0",
+      "kind": "castle",
+      "name": "TẦNG 1 · Bắc · North Hall – Bell Tower",
+      "placeIds": [
+        "HOG-TNG1-N-01",
+        "HOG-TNG1-N-02",
+        "HOG-TNG1-N-03",
+        "HOG-TNG1-N-04",
+        "HOG-TNG1-N-05",
+        "HOG-TNG1-N-06"
+      ],
+      "preset": {
+        "layout": "tee",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG1-N-01",
+          "HOG-TNG1-N-02",
+          "HOG-TNG1-N-03"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f3/1",
+      "kind": "castle",
+      "name": "TẦNG 1 · Đông · Library Annex – Viaduct",
+      "placeIds": [
+        "HOG-TNG1-E-01",
+        "HOG-TNG1-E-02",
+        "HOG-TNG1-E-03",
+        "HOG-TNG1-E-04",
+        "HOG-TNG1-E-05",
+        "HOG-TNG1-E-06"
+      ],
+      "preset": {
+        "layout": "cross",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG1-E-01",
+          "HOG-TNG1-E-02",
+          "HOG-TNG1-E-03",
+          "HOG-TNG1-E-05"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f3/2",
+      "kind": "castle",
+      "name": "TẦNG 1 · Nam · Entrance Hall – Great Hall",
+      "placeIds": [
+        "HOG-TNG1-S-01",
+        "HOG-TNG1-S-02",
+        "HOG-TNG1-S-03",
+        "P-ce57067fcd107f",
+        "HOG-TNG1-S-05",
+        "HOG-TNG1-S-06",
+        "HOG-TNG1-S-07"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG1-S-01",
+          "HOG-TNG1-S-02",
+          "P-ce57067fcd107f"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f3/3",
+      "kind": "castle",
+      "name": "TẦNG 1 · Tây · Transfiguration Courtyard approach",
+      "placeIds": [
+        "P-5fc25ea9745ef9",
+        "HOG-TNG1-W-02",
+        "HOG-TNG1-W-03",
+        "HOG-TNG1-W-04",
+        "HOG-TNG1-W-05",
+        "HOG-TNG1-W-06"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG1-W-03",
+          "HOG-TNG1-W-04"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f4/0",
+      "kind": "castle",
+      "name": "TẦNG 2 · Bắc · History & Transfiguration corridor",
+      "placeIds": [
+        "HOG-TNG2-N-01",
+        "HOG-TNG2-N-02",
+        "HOG-TNG2-N-03",
+        "HOG-TNG2-N-04",
+        "HOG-TNG2-N-05",
+        "HOG-TNG2-N-06"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "hogwarts/f4/1",
+      "kind": "castle",
+      "name": "TẦNG 2 · Đông · Scholars / North Hall upper walk",
+      "placeIds": [
+        "HOG-TNG2-W-01",
+        "HOG-TNG2-W-02",
+        "HOG-TNG2-W-03",
+        "HOG-TNG2-W-04",
+        "HOG-TNG2-W-05",
+        "HOG-TNG2-W-06"
+      ],
+      "preset": {
+        "layout": "windows",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG2-W-03"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f4/2",
+      "kind": "castle",
+      "name": "TẦNG 2 · Nam · Hospital & Faculty Tower access",
+      "placeIds": [
+        "HOG-TNG2-S-01",
+        "HOG-TNG2-S-02",
+        "HOG-TNG2-S-03",
+        "HOG-TNG2-S-04",
+        "HOG-TNG2-S-05",
+        "HOG-TNG2-S-06"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG2-S-03"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f4/3",
+      "kind": "castle",
+      "name": "TẦNG 2 · Tây · DADA teaching cluster",
+      "placeIds": [
+        "HOG-TNG2-E-01",
+        "HOG-TNG2-E-02",
+        "HOG-TNG2-E-03",
+        "HOG-TNG2-E-04",
+        "HOG-TNG2-E-05",
+        "HOG-TNG2-E-06"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG2-E-02"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f5/0",
+      "kind": "castle",
+      "name": "TẦNG 3 · Bắc · Phòng vệ sinh Myrtle và dãy hành lang",
+      "placeIds": [
+        "HOG-TNG3-N-01",
+        "HOG-TNG3-N-02",
+        "HOG-TNG3-N-03",
+        "HOG-TNG3-N-04",
+        "HOG-TNG3-N-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG3-N-02",
+          "HOG-TNG3-N-05"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f5/1",
+      "kind": "castle",
+      "name": "TẦNG 3 · Đông · Cầu thang tắt và hành lang lâu đài",
+      "placeIds": [
+        "HOG-TNG3-W-02",
+        "HOG-TNG3-W-03",
+        "HOG-TNG3-W-04",
+        "HOG-TNG3-W-05"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG3-W-02",
+          "HOG-TNG3-W-03"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f5/2",
+      "kind": "castle",
+      "name": "TẦNG 3 · Nam · Phòng học bổ trợ",
+      "placeIds": [
+        "HOG-TNG3-S-01",
+        "HOG-TNG3-S-02",
+        "HOG-TNG3-S-03",
+        "HOG-TNG3-S-04",
+        "HOG-TNG3-S-05"
+      ],
+      "preset": {
+        "layout": "tee",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "hogwarts/f5/3",
+      "kind": "castle",
+      "name": "TẦNG 3 · Tây · Văn phòng DADA – lối kín",
+      "placeIds": [
+        "HOG-TNG3-E-01",
+        "HOG-TNG3-E-02",
+        "HOG-TNG3-E-03",
+        "HOG-TNG3-E-04",
+        "HOG-TNG3-E-05"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG3-E-02"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f6/0",
+      "kind": "castle",
+      "name": "TẦNG 4 · Bắc · Trophy – Armour Gallery",
+      "placeIds": [
+        "HOG-TNG4-N-01",
+        "HOG-TNG4-N-02",
+        "HOG-TNG4-N-03",
+        "HOG-TNG4-N-04",
+        "HOG-TNG4-N-05",
+        "HOG-TNG4-N-06"
+      ],
+      "preset": {
+        "layout": "windows",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG4-N-02"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f6/1",
+      "kind": "castle",
+      "name": "TẦNG 4 · Đông · Gallery – North Hall upper route",
+      "placeIds": [
+        "HOG-TNG4-W-01",
+        "HOG-TNG4-W-02",
+        "HOG-TNG4-W-03",
+        "HOG-TNG4-W-04",
+        "HOG-TNG4-W-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG4-W-01"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f6/2",
+      "kind": "castle",
+      "name": "TẦNG 4 · Nam · Câu lạc bộ và hoạt động nhóm",
+      "placeIds": [
+        "HOG-TNG4-S-01",
+        "HOG-TNG4-S-02",
+        "HOG-TNG4-S-03",
+        "HOG-TNG4-S-04",
+        "HOG-TNG4-S-05"
+      ],
+      "preset": {
+        "layout": "tee",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "hogwarts/f6/3",
+      "kind": "castle",
+      "name": "TẦNG 4 · Tây · Charms – hành lang cấm cũ",
+      "placeIds": [
+        "HOG-TNG4-E-01",
+        "HOG-TNG4-E-02",
+        "HOG-TNG4-E-03",
+        "HOG-TNG4-E-04",
+        "HOG-TNG4-E-05",
+        "HOG-TNG4-E-06"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG4-E-02",
+          "HOG-TNG4-E-03"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f7/0",
+      "kind": "castle",
+      "name": "TẦNG 5 · Bắc · Library – Restricted Section",
+      "placeIds": [
+        "HOG-TNG5-N-01",
+        "HOG-TNG5-N-02",
+        "HOG-TNG5-N-03",
+        "HOG-TNG5-N-04",
+        "HOG-TNG5-N-05",
+        "HOG-TNG5-N-06"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "hogwarts/f7/1",
+      "kind": "castle",
+      "name": "TẦNG 5 · Đông · Long Gallery – chuyên môn",
+      "placeIds": [
+        "HOG-TNG5-E-01",
+        "HOG-TNG5-E-02",
+        "HOG-TNG5-E-03",
+        "HOG-TNG5-E-04",
+        "HOG-TNG5-E-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG5-E-01"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f7/2",
+      "kind": "castle",
+      "name": "TẦNG 5 · Nam · Lối đi tầng bốn và gian trống",
+      "placeIds": [
+        "HOG-TNG5-S-01",
+        "HOG-TNG5-S-02",
+        "HOG-TNG5-S-03",
+        "HOG-TNG5-S-04",
+        "HOG-TNG5-S-05",
+        "HOG-TNG3-W-01"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG5-S-02",
+          "HOG-TNG5-S-05",
+          "HOG-TNG3-W-01"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f7/3",
+      "kind": "castle",
+      "name": "TẦNG 5 · Tây · Cổ ngữ – học thuật",
+      "placeIds": [
+        "HOG-TNG5-W-01",
+        "HOG-TNG5-W-02",
+        "HOG-TNG5-W-03",
+        "HOG-TNG5-W-04",
+        "HOG-TNG5-W-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "hogwarts/f8/0",
+      "kind": "castle",
+      "name": "TẦNG 6 · Bắc · Prefects corridor – Faculty route",
+      "placeIds": [
+        "HOG-TNG6-N-01",
+        "HOG-TNG6-N-02",
+        "HOG-TNG6-N-03",
+        "HOG-TNG6-N-04",
+        "HOG-TNG6-N-05",
+        "HOG-TNG6-N-06"
+      ],
+      "preset": {
+        "layout": "tee",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG6-N-02",
+          "HOG-TNG6-N-03"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f8/1",
+      "kind": "castle",
+      "name": "TẦNG 6 · Đông · Phòng học trung cấp",
+      "placeIds": [
+        "HOG-TNG6-E-01",
+        "HOG-TNG6-E-02",
+        "HOG-TNG6-E-03",
+        "HOG-TNG6-E-04",
+        "HOG-TNG6-E-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG6-E-02"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f8/2",
+      "kind": "castle",
+      "name": "TẦNG 6 · Nam · Lối lên Tháp Đồng hồ",
+      "placeIds": [
+        "HOG-TNG6-S-01",
+        "HOG-TNG6-S-02",
+        "HOG-TNG6-S-03",
+        "HOG-TNG6-S-04",
+        "HOG-TNG6-S-05"
+      ],
+      "preset": {
+        "layout": "tower",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG6-S-01"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f8/3",
+      "kind": "castle",
+      "name": "TẦNG 6 · Tây · Hành lang cửa sổ cao",
+      "placeIds": [
+        "HOG-TNG6-W-01",
+        "HOG-TNG6-W-02",
+        "HOG-TNG6-W-03",
+        "HOG-TNG6-W-04",
+        "HOG-TNG6-W-05"
+      ],
+      "preset": {
+        "layout": "windows",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG6-W-01"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f9/0",
+      "kind": "castle",
+      "name": "TẦNG 7 · Bắc · Upper stair – tower access",
+      "placeIds": [
+        "HOG-TNG7-N-01",
+        "HOG-TNG7-N-02",
+        "HOG-TNG7-N-03",
+        "HOG-TNG7-N-04",
+        "HOG-TNG7-N-05"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG7-N-05"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f9/1",
+      "kind": "castle",
+      "name": "TẦNG 7 · Đông · Seminar & advanced teaching",
+      "placeIds": [
+        "HOG-TNG7-E-01",
+        "HOG-TNG7-E-02",
+        "HOG-TNG7-E-03",
+        "HOG-TNG7-E-04",
+        "HOG-TNG7-E-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "hogwarts/f9/2",
+      "kind": "castle",
+      "name": "TẦNG 7 · Nam · Đường nối Faculty/Clock tower",
+      "placeIds": [
+        "HOG-TNG7-S-01",
+        "HOG-TNG7-S-02",
+        "HOG-TNG7-S-03",
+        "HOG-TNG7-S-04",
+        "HOG-TNG7-S-05"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG7-S-01"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f9/3",
+      "kind": "castle",
+      "name": "TẦNG 7 · Tây · Cụm sinh hoạt và trò chơi",
+      "placeIds": [
+        "HOG-TNG7-W-01",
+        "HOG-TNG7-W-02",
+        "HOG-TNG7-W-03",
+        "HOG-TNG7-W-04",
+        "HOG-TNG7-W-05"
+      ],
+      "preset": {
+        "layout": "windows",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG7-W-05"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f10/0",
+      "kind": "castle",
+      "name": "TẦNG 8 · Bắc · Upper Grand Staircase / Headmaster",
+      "placeIds": [
+        "HOG-TNG8-N-01",
+        "HOG-TNG8-N-02",
+        "HOG-TNG8-N-03",
+        "HOG-TNG8-N-04",
+        "HOG-TNG8-N-05"
+      ],
+      "preset": {
+        "layout": "tower",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG8-N-01",
+          "HOG-TNG8-N-02",
+          "HOG-TNG8-N-03"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f10/1",
+      "kind": "castle",
+      "name": "TẦNG 8 · Đông · Room of Requirement",
+      "placeIds": [
+        "HOG-TNG8-E-01",
+        "HOG-TNG8-E-02",
+        "HOG-TNG8-E-03",
+        "HOG-TNG8-E-04",
+        "HOG-TNG8-E-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG8-E-01"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f10/2",
+      "kind": "castle",
+      "name": "TẦNG 8 · Nam · Gryffindor entrance – common route",
+      "placeIds": [
+        "HOG-TNG8-S-01",
+        "P-441745282e9e54",
+        "HOG-TNG8-S-03",
+        "HOG-TNG8-S-04",
+        "HOG-TNG8-S-05"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "HOG-TNG8-S-01",
+          "HOG-TNG8-S-03",
+          "HOG-TNG8-S-05"
+        ]
+      }
+    },
+    {
+      "key": "hogwarts/f10/3",
+      "kind": "castle",
+      "name": "TẦNG 8 · Tây · CCC / senior clubs (AU)",
+      "placeIds": [
+        "HOG-TNG8-W-01",
+        "HOG-TNG8-W-02",
+        "HOG-TNG8-W-03",
+        "HOG-TNG8-W-04",
+        "HOG-TNG8-W-05",
+        "HOG-TNG8-W-06",
+        "HOG-TNG8-W-07"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/0/0",
+      "kind": "tower",
+      "name": "Tháp Gryffindor · Lối vào (Tầng 8)",
+      "placeIds": [
+        "TWR-01-01-02",
+        "TWR-01-01-03"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-01-01-02",
+          "TWR-01-01-03"
+        ]
+      }
+    },
+    {
+      "key": "tower/0/1",
+      "kind": "tower",
+      "name": "Tháp Gryffindor · Tầng tháp trên",
+      "placeIds": [
+        "P-a63fc4014d765b",
+        "P-468097e3d74bf1",
+        "TWR-01-02-03"
+      ],
+      "preset": {
+        "layout": "vertical",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-01-02-03"
+        ]
+      }
+    },
+    {
+      "key": "tower/1/0",
+      "kind": "tower",
+      "name": "Tháp Ravenclaw · Lối vào tháp cao",
+      "placeIds": [
+        "P-4bde45f1a1cb07",
+        "TWR-02-01-02",
+        "TWR-02-01-03"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-02-01-02"
+        ]
+      }
+    },
+    {
+      "key": "tower/1/1",
+      "kind": "tower",
+      "name": "Tháp Ravenclaw · Khu phòng ngủ",
+      "placeIds": [
+        "P-439400ea5f0cd4",
+        "P-7d130cc86d97eb",
+        "TWR-02-02-03"
+      ],
+      "preset": {
+        "layout": "tee",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/2/0",
+      "kind": "tower",
+      "name": "Tháp Bắc (Tiên tri) · Tầng tiếp cận",
+      "placeIds": [
+        "TWR-03-01-01",
+        "TWR-03-01-02"
+      ],
+      "preset": {
+        "layout": "tower",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-03-01-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/2/1",
+      "kind": "tower",
+      "name": "Tháp Bắc (Tiên tri) · Đỉnh tháp",
+      "placeIds": [
+        "TWR-03-02-01",
+        "TWR-03-02-02"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/3/0",
+      "kind": "tower",
+      "name": "Tháp Thiên văn · Tầng chân tháp",
+      "placeIds": [
+        "TWR-04-01-01",
+        "TWR-04-01-02"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-04-01-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/3/1",
+      "kind": "tower",
+      "name": "Tháp Thiên văn · Tầng giữa",
+      "placeIds": [
+        "TWR-04-02-01",
+        "TWR-04-02-02"
+      ],
+      "preset": {
+        "layout": "vertical",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/3/2",
+      "kind": "tower",
+      "name": "Tháp Thiên văn · Đỉnh tháp",
+      "placeIds": [
+        "TWR-04-03-01",
+        "TWR-04-03-02"
+      ],
+      "preset": {
+        "layout": "tower",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/4/0",
+      "kind": "tower",
+      "name": "Tháp Hiệu trưởng · Tầng cửa vào",
+      "placeIds": [
+        "TWR-05-01-01",
+        "TWR-05-01-02"
+      ],
+      "preset": {
+        "layout": "tower",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-05-01-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/4/1",
+      "kind": "tower",
+      "name": "Tháp Hiệu trưởng · Đỉnh tháp",
+      "placeIds": [
+        "TWR-05-02-01",
+        "TWR-05-02-02",
+        "TWR-05-02-03"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/5/0",
+      "kind": "tower",
+      "name": "Tháp Đồng hồ · Chân tháp",
+      "placeIds": [
+        "TWR-06-01-01",
+        "TWR-06-01-02"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-06-01-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/5/1",
+      "kind": "tower",
+      "name": "Tháp Đồng hồ · Giữa tháp",
+      "placeIds": [
+        "TWR-06-02-01",
+        "TWR-06-02-02"
+      ],
+      "preset": {
+        "layout": "tower",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/5/2",
+      "kind": "tower",
+      "name": "Tháp Đồng hồ · Đỉnh tháp",
+      "placeIds": [
+        "TWR-06-03-01",
+        "TWR-06-03-02"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/6/0",
+      "kind": "tower",
+      "name": "Tháp Chuông · Chân tháp",
+      "placeIds": [
+        "TWR-07-01-02"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/6/1",
+      "kind": "tower",
+      "name": "Tháp Chuông · Đỉnh tháp",
+      "placeIds": [
+        "TWR-07-02-01",
+        "TWR-07-02-02"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/7/0",
+      "kind": "tower",
+      "name": "Tháp Giáo viên (Faculty Tower) · Tầng tiếp cận",
+      "placeIds": [
+        "TWR-08-01-01",
+        "TWR-08-01-02"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-08-01-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/7/1",
+      "kind": "tower",
+      "name": "Tháp Giáo viên (Faculty Tower) · Tầng giữa",
+      "placeIds": [
+        "TWR-08-02-01",
+        "TWR-08-02-02"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-08-02-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/7/2",
+      "kind": "tower",
+      "name": "Tháp Giáo viên (Faculty Tower) · Tầng trên",
+      "placeIds": [
+        "TWR-08-03-01",
+        "TWR-08-03-02"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-08-03-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/8/0",
+      "kind": "tower",
+      "name": "Tháp DADA · Chân tháp",
+      "placeIds": [
+        "TWR-09-01-01",
+        "TWR-09-01-02"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-09-01-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/8/1",
+      "kind": "tower",
+      "name": "Tháp DADA · Tầng giảng dạy",
+      "placeIds": [
+        "TWR-09-02-01",
+        "TWR-09-02-02"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "tower/8/2",
+      "kind": "tower",
+      "name": "Tháp DADA · Tầng trên",
+      "placeIds": [
+        "TWR-09-03-01",
+        "TWR-09-03-02"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-09-03-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/9/0",
+      "kind": "tower",
+      "name": "Tháp Cầu thang Lớn · Chân tháp",
+      "placeIds": [
+        "TWR-10-01-01",
+        "TWR-10-01-02"
+      ],
+      "preset": {
+        "layout": "tower",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-10-01-01",
+          "TWR-10-01-02"
+        ]
+      }
+    },
+    {
+      "key": "tower/9/1",
+      "kind": "tower",
+      "name": "Tháp Cầu thang Lớn · Lưng chừng",
+      "placeIds": [
+        "TWR-10-02-01",
+        "TWR-10-02-02"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-10-02-01",
+          "TWR-10-02-02"
+        ]
+      }
+    },
+    {
+      "key": "tower/9/2",
+      "kind": "tower",
+      "name": "Tháp Cầu thang Lớn · Đỉnh tháp",
+      "placeIds": [
+        "TWR-10-03-01",
+        "TWR-10-03-02"
+      ],
+      "preset": {
+        "layout": "tee",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-10-03-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/10/0",
+      "kind": "tower",
+      "name": "Tháp Tây (Nhà cú) · Lối lên",
+      "placeIds": [
+        "TWR-11-01-01",
+        "TWR-11-01-02"
+      ],
+      "preset": {
+        "layout": "vertical",
+        "flexible": true,
+        "source": "illustrative",
+        "corridorPlaceIds": [
+          "TWR-11-01-01"
+        ]
+      }
+    },
+    {
+      "key": "tower/10/1",
+      "kind": "tower",
+      "name": "Tháp Tây (Nhà cú) · Tầng chuồng cú",
+      "placeIds": [
+        "TWR-11-02-01",
+        "TWR-11-02-02"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "au/0/0",
+      "kind": "au",
+      "name": "7 Rowan Mews · London · Bán hầm",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-c986bd14a65aff",
+        "P-f63320e3ce02f8",
+        "P-05cf8a6d391ae0",
+        "P-6101b5e9235dbd"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/0/1",
+      "kind": "au",
+      "name": "7 Rowan Mews · London · Tầng 1 (trệt)",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-d5c52789ba1582",
+        "P-a40a9139e15cdf",
+        "P-1d43d774de1087",
+        "P-36a9268e0e2288",
+        "P-1802311f93c216",
+        "P-3c919f6f95c429"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/0/2",
+      "kind": "au",
+      "name": "7 Rowan Mews · London · Tầng 2",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-3bf90655eabf0a",
+        "P-ad5ac899e9989d",
+        "P-2e95be7ac27f5e",
+        "P-86f19e61932103"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/0/3",
+      "kind": "au",
+      "name": "7 Rowan Mews · London · Tầng 3",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-e51ad92343c8de",
+        "P-558513338bec03",
+        "P-4ccd67d1317f71",
+        "P-572439c7221fb9"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/0/4",
+      "kind": "au",
+      "name": "7 Rowan Mews · London · Áp mái",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-2ae3745c48f04a"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/1/0",
+      "kind": "au",
+      "name": "WzW House · 18 Ganton Street · Soho · Tầng hầm",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-836c31b9c17543",
+        "P-579062ef9135bd",
+        "P-47e13519fc6e78",
+        "P-c48031b40aa4a6"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/1/1",
+      "kind": "au",
+      "name": "WzW House · 18 Ganton Street · Soho · Tầng 1 (trệt)",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-0f0f21af1613e3",
+        "P-2e483807e1273e",
+        "P-cbf1bbfe09504a",
+        "P-f1273cfbd8dcc9"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/1/2",
+      "kind": "au",
+      "name": "WzW House · 18 Ganton Street · Soho · Tầng 2",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-c6d06746fedb75",
+        "P-cc6eda155ffa84",
+        "P-35150c109c52c8"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/1/3",
+      "kind": "au",
+      "name": "WzW House · 18 Ganton Street · Soho · Tầng 3",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-056435e23f0696",
+        "P-eeef4f392301fb",
+        "P-7146cc78e7b6bb",
+        "P-ceed22a8b82bc0"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/1/4",
+      "kind": "au",
+      "name": "WzW House · 18 Ganton Street · Soho · Tầng 4",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-e7944584d870f6",
+        "P-b61993cdbfa4f0"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/1/5",
+      "kind": "au",
+      "name": "WzW House · 18 Ganton Street · Soho · Tầng mái",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-f76c14a8f564e2",
+        "P-f11d32df681cb8",
+        "P-45ca006de2e29d"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/2/0",
+      "kind": "au",
+      "name": "Loft 5A · 21 Great Titchfield Street · Fitzrovia · Sảnh chung",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-d1e5c9e5641c72"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/2/1",
+      "kind": "au",
+      "name": "Loft 5A · 21 Great Titchfield Street · Fitzrovia · Loft 5A",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-d62f3f91b273a7",
+        "P-2943e215e1b645",
+        "P-7fab1a6c46fde1",
+        "P-85d4eac574abfb",
+        "P-6748bf2a512b32"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/3/0",
+      "kind": "au",
+      "name": "Whitecap Estate · Isle of Wight · Khuôn viên",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-6622d43a61e262",
+        "P-dfec655aa06ffb",
+        "P-91e1d4b9d90ce6",
+        "P-fb05960b29389c",
+        "P-35450f7ad71727",
+        "P-fafa275e3442de"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/3/1",
+      "kind": "au",
+      "name": "Whitecap Estate · Isle of Wight · Tầng 1 (trệt)",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-704560d7aaa0f1",
+        "P-4f927c3f8e69d3",
+        "P-052c1a401bbcfe",
+        "P-79d20dbdcafbc7",
+        "P-62939be1327ef1",
+        "P-17b225b47b5160",
+        "P-ca5dbc8d9268d5",
+        "P-819514c84e1a30"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/3/2",
+      "kind": "au",
+      "name": "Whitecap Estate · Isle of Wight · Tầng 2",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-838b8e1603bb66",
+        "P-51deeb2c56d244",
+        "P-c2ae860eb1abb4",
+        "P-e320c112ea6a38"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/3/3",
+      "kind": "au",
+      "name": "Whitecap Estate · Isle of Wight · Áp mái",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-04c058ca77c028",
+        "P-cd916ab4eeb2b0",
+        "P-c2b0b9eb3b7897"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/3/4",
+      "kind": "au",
+      "name": "Whitecap Estate · Isle of Wight · Bờ biển Whitecap",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-6f010e23dbcf13"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/4/0",
+      "kind": "au",
+      "name": "Grayhaven Estate · California · Khuôn viên",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-28f1e32ca3f09f",
+        "P-aae6653add136e",
+        "P-fbcb3e25adb914",
+        "P-f5b0d79a9fcc91",
+        "P-18b19a8c7825cf"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/4/1",
+      "kind": "au",
+      "name": "Grayhaven Estate · California · Tầng 1 (trệt)",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-fd29682932d8c0",
+        "P-f257da4f8369a2",
+        "P-26295c3fd155a4",
+        "P-0afb8b38025951",
+        "P-0cf87e2f9d3027",
+        "P-8547e7b53ee0e6",
+        "P-38afa9168985ae"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/4/2",
+      "kind": "au",
+      "name": "Grayhaven Estate · California · Tầng 2",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-fb55d3d6b976e4",
+        "P-120f81b5d30c37",
+        "P-cad4970480cc75"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/4/3",
+      "kind": "au",
+      "name": "Grayhaven Estate · California · Nhà khách",
+      "buildEnabled": false,
+      "placeIds": [
+        "P-aff4fe8ba8b10c",
+        "P-239cfed7a31957",
+        "P-9ce0d6987c6167",
+        "P-aae0e4c8ac4172"
+      ],
+      "preset": null,
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/5/0",
+      "kind": "au",
+      "name": "Nhà PC · London · Bán hầm",
+      "buildEnabled": true,
+      "placeIds": [
+        "P-84e3b35dd330b5",
+        "P-b64b4fd825a7ea",
+        "P-5e88541888baad",
+        "P-ad08891d59bb8b"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative"
+      },
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/5/1",
+      "kind": "au",
+      "name": "Nhà PC · London · Tầng 1 (trệt)",
+      "buildEnabled": true,
+      "placeIds": [
+        "P-b2554d6b1381cd",
+        "P-8f34772df41a97",
+        "P-7210700596d5ae",
+        "P-78ec748eb7b9ce",
+        "P-176df525d65b31",
+        "P-6acb59a2cd0cf1"
+      ],
+      "preset": {
+        "layout": "tee",
+        "flexible": true,
+        "source": "illustrative"
+      },
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/5/2",
+      "kind": "au",
+      "name": "Nhà PC · London · Tầng 2",
+      "buildEnabled": true,
+      "placeIds": [
+        "P-cadd273181369d",
+        "P-56dbab3b62a960",
+        "P-866203855d3998"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative"
+      },
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/5/3",
+      "kind": "au",
+      "name": "Nhà PC · London · Tầng 3",
+      "buildEnabled": true,
+      "placeIds": [
+        "P-7a95ade5b09943",
+        "P-f67fdab0b798c6"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      },
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/5/4",
+      "kind": "au",
+      "name": "Nhà PC · London · Áp mái",
+      "buildEnabled": true,
+      "placeIds": [
+        "P-9d66d64ae1eced",
+        "P-aafb6b5cc0a4c6"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative"
+      },
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "au/6/0",
+      "kind": "au",
+      "name": "CCC 07.18 · Hogwarts · Tầng 8 · cánh Tây",
+      "buildEnabled": true,
+      "placeIds": [
+        "HOG-TNG8-W-01",
+        "HOG-TNG8-W-02",
+        "HOG-TNG8-W-03",
+        "HOG-TNG8-W-04",
+        "HOG-TNG8-W-05"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      },
+      "buildablePlaceIds": [
+        "HOG-TNG8-W-01"
+      ]
+    },
+    {
+      "key": "au/7/0",
+      "kind": "au",
+      "name": "Liad’s Attic · Hogwarts · Áp mái",
+      "buildEnabled": true,
+      "placeIds": [
+        "P-0b2a64c33ccc84"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      },
+      "buildablePlaceIds": null
+    },
+    {
+      "key": "world/7",
+      "kind": "world",
+      "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 1",
+      "placeIds": [
+        "P-aec6a126a04246"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "world/8",
+      "kind": "world",
+      "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 2",
+      "placeIds": [
+        "P-9d882410cbff44"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "world/9",
+      "kind": "world",
+      "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 3",
+      "placeIds": [
+        "P-9f4eba8cbc0134"
+      ],
+      "preset": {
+        "layout": "horizontal",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "world/10",
+      "kind": "world",
+      "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 4",
+      "placeIds": [
+        "P-a62b074fca27d7",
+        "P-c7580930f2caac"
+      ],
+      "preset": {
+        "layout": "tee",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "world/11",
+      "kind": "world",
+      "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 5",
+      "placeIds": [
+        "P-fc634b366552e4",
+        "P-98946e3d409a8a"
+      ],
+      "preset": {
+        "layout": "ell",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    },
+    {
+      "key": "world/12",
+      "kind": "world",
+      "name": "Britain / England / London / Bệnh viện St Mungo / Tầng trệt",
+      "placeIds": [
+        "P-a3e9554f74bb7f",
+        "P-1af0a04a59056b"
+      ],
+      "preset": {
+        "layout": "tee",
+        "flexible": true,
+        "source": "illustrative"
+      }
+    }
+  ],
+  "lockedPlaceIds": [
+    "P-04c058ca77c028",
+    "P-052c1a401bbcfe",
+    "P-056435e23f0696",
+    "P-05cf8a6d391ae0",
+    "P-0afb8b38025951",
+    "P-0cf87e2f9d3027",
+    "P-0f0f21af1613e3",
+    "P-120f81b5d30c37",
+    "P-17b225b47b5160",
+    "P-1802311f93c216",
+    "P-18b19a8c7825cf",
+    "P-1d43d774de1087",
+    "P-239cfed7a31957",
+    "P-26295c3fd155a4",
+    "P-28f1e32ca3f09f",
+    "P-2943e215e1b645",
+    "P-2ae3745c48f04a",
+    "P-2e483807e1273e",
+    "P-2e95be7ac27f5e",
+    "P-35150c109c52c8",
+    "P-35450f7ad71727",
+    "P-36a9268e0e2288",
+    "P-38afa9168985ae",
+    "P-3bf90655eabf0a",
+    "P-3c919f6f95c429",
+    "P-45ca006de2e29d",
+    "P-47e13519fc6e78",
+    "P-4ccd67d1317f71",
+    "P-4f927c3f8e69d3",
+    "P-51deeb2c56d244",
+    "P-558513338bec03",
+    "P-572439c7221fb9",
+    "P-579062ef9135bd",
+    "P-6101b5e9235dbd",
+    "P-62939be1327ef1",
+    "P-6622d43a61e262",
+    "P-6748bf2a512b32",
+    "P-6f010e23dbcf13",
+    "P-704560d7aaa0f1",
+    "P-7146cc78e7b6bb",
+    "P-79d20dbdcafbc7",
+    "P-7fab1a6c46fde1",
+    "P-819514c84e1a30",
+    "P-836c31b9c17543",
+    "P-838b8e1603bb66",
+    "P-8547e7b53ee0e6",
+    "P-85d4eac574abfb",
+    "P-86f19e61932103",
+    "P-91e1d4b9d90ce6",
+    "P-9ce0d6987c6167",
+    "P-a40a9139e15cdf",
+    "P-aae0e4c8ac4172",
+    "P-aae6653add136e",
+    "P-ad5ac899e9989d",
+    "P-aff4fe8ba8b10c",
+    "P-b61993cdbfa4f0",
+    "P-c2ae860eb1abb4",
+    "P-c2b0b9eb3b7897",
+    "P-c48031b40aa4a6",
+    "P-c6d06746fedb75",
+    "P-c986bd14a65aff",
+    "P-ca5dbc8d9268d5",
+    "P-cad4970480cc75",
+    "P-cbf1bbfe09504a",
+    "P-cc6eda155ffa84",
+    "P-cd916ab4eeb2b0",
+    "P-ceed22a8b82bc0",
+    "P-d1e5c9e5641c72",
+    "P-d5c52789ba1582",
+    "P-d62f3f91b273a7",
+    "P-dfec655aa06ffb",
+    "P-e320c112ea6a38",
+    "P-e51ad92343c8de",
+    "P-e7944584d870f6",
+    "P-eeef4f392301fb",
+    "P-f11d32df681cb8",
+    "P-f1273cfbd8dcc9",
+    "P-f257da4f8369a2",
+    "P-f5b0d79a9fcc91",
+    "P-f63320e3ce02f8",
+    "P-f76c14a8f564e2",
+    "P-fafa275e3442de",
+    "P-fb05960b29389c",
+    "P-fb55d3d6b976e4",
+    "P-fbcb3e25adb914",
+    "P-fd29682932d8c0"
+  ],
+  "cccNonRoomPlaceIds": [
+    "HOG-TNG8-W-02",
+    "HOG-TNG8-W-03",
+    "HOG-TNG8-W-04",
+    "HOG-TNG8-W-05"
+  ],
+  "templateIds": [
+    "h1",
+    "h2",
+    "hall",
+    "gryffindor-common",
+    "ravenclaw-common",
+    "hufflepuff-common",
+    "slytherin-common",
+    "village-static",
+    "pitch-static",
+    "express",
+    "diagon-knockturn",
+    "ministry2",
+    "ministry-8-10"
+  ]
+}
