@@ -12,6 +12,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: node --test tools/test_map_data.mjs tools/test_ui.mjs tools/test_spatial.mjs tools/test_architecture.mjs tools/test_indoor_scene.mjs
-      - run: python tools/build_runtime.py --out /tmp/wizamap-test --ref $(git rev-parse HEAD) && node --check /tmp/wizamap-test/bundle.js
+      - run: python tools/build_runtime.py --out /tmp/wizamap-test --ref $(git rev-parse HEAD) && node --check /tmp/wizamap-test/bundle.js && node --check runtime/bundle.js
       - run: python tools/atlas.py validate && python tools/test_atlas.py && python tools/test_inventory.py && python tools/test_scenery.py
       - run: npm ci --prefix elements && npm --prefix elements test
