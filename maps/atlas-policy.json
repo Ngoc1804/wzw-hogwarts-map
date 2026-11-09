@@ -1,0 +1,1213 @@
+{
+  "schemaVersion": "2.0.0",
+  "scope": "Chỉ phòng, khu vực, công trình và địa điểm đáng kể trong template đã duyệt. Không phải atlas canon đầy đủ.",
+  "sections": [
+    {
+      "id": "hogwarts-grounds",
+      "name": "Hogwarts / Khuôn viên và địa điểm đặc biệt",
+      "places": [
+        {
+          "id": "castle",
+          "name": "Lâu đài Hogwarts",
+          "views": [
+            "h1/region-0"
+          ]
+        },
+        {
+          "id": "forest",
+          "name": "Rừng Cấm",
+          "views": [
+            "h1/region-4"
+          ]
+        },
+        {
+          "id": "lake",
+          "name": "Hồ Đen",
+          "views": [
+            "h1/region-3",
+            "h2/h2-place-0"
+          ]
+        },
+        {
+          "id": "hagrid",
+          "name": "Nhà Hagrid",
+          "views": [
+            "h1/region:extra:5",
+            "h2/h2-place-56"
+          ]
+        },
+        {
+          "id": "willow",
+          "name": "Cây Liễu Roi",
+          "views": [
+            "h1/region:extra:2",
+            "h2/h2-place-61"
+          ]
+        },
+        {
+          "id": "greenhouses",
+          "name": "Nhà kính và vườn thực vật",
+          "views": [
+            "h1/region:extra:0",
+            "h2/h2-place-54"
+          ]
+        },
+        {
+          "id": "owlery",
+          "name": "Nhà cú",
+          "views": [
+            "h1/region:extra:1",
+            "h2/h2-place-59"
+          ]
+        },
+        {
+          "id": "flying-lawn",
+          "name": "Bãi học bay",
+          "views": [
+            "h1/region:extra:7"
+          ]
+        },
+        {
+          "id": "forecourt",
+          "name": "Sân đón tiếp",
+          "views": [
+            "h1/region:extra:8",
+            "h2/h2-place-5"
+          ]
+        },
+        {
+          "id": "boathouse",
+          "name": "Nhà thuyền ven hồ",
+          "views": [
+            "h1/lakeside-boathouse"
+          ]
+        },
+        {
+          "id": "ancient-tree",
+          "name": "Cây cổ thụ ven hồ",
+          "views": [
+            "h1/lakeside-tree",
+            "h2/h2-place-60"
+          ]
+        },
+        {
+          "id": "herb-garden",
+          "name": "Vườn thảo dược",
+          "views": [
+            "h2/h2-place-55"
+          ]
+        },
+        {
+          "id": "pumpkin-garden",
+          "name": "Vườn bí nhà Hagrid",
+          "views": [
+            "h2/h2-place-57"
+          ]
+        },
+        {
+          "id": "wyvern-court",
+          "name": "Sân Wyvern",
+          "views": [
+            "h2/h2-place-3"
+          ]
+        },
+        {
+          "id": "mistletoe-court",
+          "name": "Sân tầm gửi",
+          "views": [
+            "h2/h2-place-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "castle-architecture",
+      "name": "Hogwarts / Các cánh và tháp trong template H2",
+      "places": [
+        {
+          "id": "castle-6",
+          "name": "Cánh Bắc",
+          "views": [
+            "h2/h2-place-6"
+          ]
+        },
+        {
+          "id": "castle-8",
+          "name": "Thư viện · Cánh Đông Bắc",
+          "views": [
+            "h2/h2-place-8"
+          ]
+        },
+        {
+          "id": "castle-9",
+          "name": "Tháp phía Bắc",
+          "views": [
+            "h2/h2-place-9"
+          ]
+        },
+        {
+          "id": "castle-10",
+          "name": "Tháp tròn Tây Bắc",
+          "views": [
+            "h2/h2-place-10"
+          ]
+        },
+        {
+          "id": "castle-11",
+          "name": "Tháp góc Bắc",
+          "views": [
+            "h2/h2-place-11"
+          ]
+        },
+        {
+          "id": "castle-12",
+          "name": "Tháp Đông Bắc",
+          "views": [
+            "h2/h2-place-12"
+          ]
+        },
+        {
+          "id": "castle-13",
+          "name": "Cánh Tây · Khu học tập",
+          "views": [
+            "h2/h2-place-13"
+          ]
+        },
+        {
+          "id": "castle-14",
+          "name": "Cánh Đông · Khu học tập",
+          "views": [
+            "h2/h2-place-14"
+          ]
+        },
+        {
+          "id": "castle-15",
+          "name": "Dãy nhà Bắc chung hai sân",
+          "views": [
+            "h2/h2-place-15"
+          ]
+        },
+        {
+          "id": "castle-18",
+          "name": "Dãy nhà chung chia hai sân",
+          "views": [
+            "h2/h2-place-18"
+          ]
+        },
+        {
+          "id": "castle-19",
+          "name": "Dãy nhà Nam chung hai sân",
+          "views": [
+            "h2/h2-place-19"
+          ]
+        },
+        {
+          "id": "castle-24",
+          "name": "Tháp Tây Nam",
+          "views": [
+            "h2/h2-place-24"
+          ]
+        },
+        {
+          "id": "castle-25",
+          "name": "Tháp đầu cầu",
+          "views": [
+            "h2/h2-place-25"
+          ]
+        },
+        {
+          "id": "castle-28",
+          "name": "Nhà nguyện · Cánh Tây Nam",
+          "views": [
+            "h2/h2-place-28"
+          ]
+        },
+        {
+          "id": "castle-30",
+          "name": "Tháp sảnh vào · Tây",
+          "views": [
+            "h2/h2-place-30"
+          ]
+        },
+        {
+          "id": "castle-31",
+          "name": "Tháp sảnh vào · Đông",
+          "views": [
+            "h2/h2-place-31"
+          ]
+        },
+        {
+          "id": "castle-35",
+          "name": "Tháp cổng · Tây",
+          "views": [
+            "h2/h2-place-35"
+          ]
+        },
+        {
+          "id": "castle-36",
+          "name": "Tháp cổng · Đông",
+          "views": [
+            "h2/h2-place-36"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ground-floor",
+      "name": "Hogwarts / Tầng trệt",
+      "places": [
+        {
+          "id": "great-hall",
+          "name": "Đại Sảnh",
+          "views": [
+            "h2/h2-place-7"
+          ]
+        },
+        {
+          "id": "entrance-hall",
+          "name": "Tiền sảnh",
+          "views": [
+            "h2/h2-place-29",
+            "hall/gf-entrance"
+          ]
+        },
+        {
+          "id": "courtyard",
+          "name": "Sân trong",
+          "views": [
+            "hall/gf-courtyard"
+          ]
+        },
+        {
+          "id": "staff-room",
+          "name": "Phòng giáo viên",
+          "views": [
+            "hall/gf-staff"
+          ]
+        },
+        {
+          "id": "filch-office",
+          "name": "Văn phòng Filch",
+          "views": [
+            "hall/gf-filch"
+          ]
+        },
+        {
+          "id": "classroom-11",
+          "name": "Lớp học 11 / phòng chưa dùng",
+          "views": [
+            "hall/gf-class11"
+          ]
+        },
+        {
+          "id": "sorting-waiting",
+          "name": "Gian chờ trước Phân loại",
+          "views": [
+            "hall/gf-waiting"
+          ]
+        },
+        {
+          "id": "hall-antechamber",
+          "name": "Phòng nhỏ sau bàn giáo viên",
+          "views": [
+            "hall/gf-antechamber"
+          ]
+        },
+        {
+          "id": "broom-cupboard",
+          "name": "Tủ chổi / gian chứa đồ",
+          "views": [
+            "hall/gf-broom"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gryffindor",
+      "name": "Hogwarts / Khu Gryffindor",
+      "places": [
+        {
+          "id": "gryffindor-common-room",
+          "name": "Phòng sinh hoạt chung",
+          "views": [
+            "gryffindor-common/gryffindor-hearth"
+          ]
+        },
+        {
+          "id": "gryffindor-dormitories",
+          "name": "Khu phòng ngủ mẫu",
+          "views": [
+            "gryffindor-common/gryffindor-sleep-0",
+            "gryffindor-common/gryffindor-sleep-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ravenclaw",
+      "name": "Hogwarts / Khu Ravenclaw",
+      "places": [
+        {
+          "id": "ravenclaw-common-room",
+          "name": "Phòng sinh hoạt chung",
+          "views": [
+            "ravenclaw-common/ravenclaw-hearth"
+          ]
+        },
+        {
+          "id": "ravenclaw-dormitories",
+          "name": "Khu phòng ngủ mẫu",
+          "views": [
+            "ravenclaw-common/ravenclaw-sleep-0",
+            "ravenclaw-common/ravenclaw-sleep-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hufflepuff",
+      "name": "Hogwarts / Khu Hufflepuff",
+      "places": [
+        {
+          "id": "hufflepuff-common-room",
+          "name": "Phòng sinh hoạt chung",
+          "views": [
+            "hufflepuff-common/huff-lounge"
+          ]
+        },
+        {
+          "id": "hufflepuff-dormitories",
+          "name": "Khu phòng ngủ mẫu",
+          "views": [
+            "hufflepuff-common/hufflepuff-bed-0",
+            "hufflepuff-common/hufflepuff-bed-1",
+            "hufflepuff-common/hufflepuff-bed-2",
+            "hufflepuff-common/hufflepuff-bed-3",
+            "hufflepuff-common/hufflepuff-bed-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slytherin",
+      "name": "Hogwarts / Khu Slytherin",
+      "places": [
+        {
+          "id": "slytherin-common-room",
+          "name": "Phòng sinh hoạt chung",
+          "views": [
+            "slytherin-common/sly-lounge"
+          ]
+        },
+        {
+          "id": "slytherin-dormitories",
+          "name": "Khu phòng ngủ mẫu",
+          "views": [
+            "slytherin-common/slytherin-bed-0",
+            "slytherin-common/slytherin-bed-1",
+            "slytherin-common/slytherin-bed-2",
+            "slytherin-common/slytherin-bed-3",
+            "slytherin-common/slytherin-bed-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hogsmeade",
+      "name": "Hogsmeade / Làng, tiệm và địa điểm",
+      "places": [
+        {
+          "id": "hogsmeade",
+          "name": "Làng Hogsmeade",
+          "views": [
+            "h1/region-1"
+          ]
+        },
+        {
+          "id": "shrieking-shack",
+          "name": "Lều Hú / Shrieking Shack",
+          "views": [
+            "h1/region-6",
+            "village-static/v-shack"
+          ]
+        },
+        {
+          "id": "hogsmeade-station",
+          "name": "Ga Hogsmeade",
+          "views": [
+            "h1/region-2",
+            "express/ex-station"
+          ]
+        },
+        {
+          "id": "station-dock",
+          "name": "Bến ga",
+          "views": [
+            "h1/region:station-dock"
+          ]
+        },
+        {
+          "id": "village-square",
+          "name": "Quảng trường",
+          "views": [
+            "village-static/v-square"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-0",
+          "name": "Honeydukes",
+          "views": [
+            "h1/village-house-0",
+            "village-static/v-honeydukes"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-1",
+          "name": "Zonko’s",
+          "views": [
+            "h1/village-house-1",
+            "village-static/v-zonkos"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-2",
+          "name": "Gladrags",
+          "views": [
+            "h1/village-house-2",
+            "village-static/v-gladrags"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-3",
+          "name": "Scrivenshaft’s",
+          "views": [
+            "h1/village-house-3",
+            "village-static/v-quills"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-4",
+          "name": "Owl Post",
+          "views": [
+            "h1/village-house-4",
+            "village-static/v-post"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-5",
+          "name": "Three Broomsticks",
+          "views": [
+            "h1/village-house-5",
+            "village-static/v-broomsticks"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-6",
+          "name": "Dervish & Banges",
+          "views": [
+            "h1/village-house-6",
+            "village-static/v-dervish"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-7",
+          "name": "Hog’s Head",
+          "views": [
+            "h1/village-house-7",
+            "village-static/v-hogshead"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-8",
+          "name": "Madam Puddifoot’s",
+          "views": [
+            "h1/village-house-8",
+            "village-static/v-puddifoot"
+          ]
+        },
+        {
+          "id": "hogsmeade-shop-9",
+          "name": "Apothecary",
+          "views": [
+            "h1/village-house-9"
+          ]
+        },
+        {
+          "id": "hogsmeade-homes",
+          "name": "Khu nhà dân (bố cục AU)",
+          "views": [
+            "village-static/v-home-6",
+            "village-static/v-home-4",
+            "village-static/v-home-7",
+            "village-static/v-home-3",
+            "village-static/v-home-1",
+            "village-static/v-home-0",
+            "village-static/v-home-9",
+            "village-static/v-home-11",
+            "village-static/v-home-12",
+            "village-static/v-home-13",
+            "village-static/v-home-14",
+            "village-static/v-home-16",
+            "village-static/v-home-17",
+            "village-static/v-home-18",
+            "village-static/v-home-21",
+            "village-static/v-home-22",
+            "village-static/v-home-29",
+            "village-static/v-home-28",
+            "village-static/v-home-23",
+            "village-static/v-home-30",
+            "village-static/v-home-27",
+            "village-static/v-home-24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quidditch",
+      "name": "Hogwarts / Sân Quidditch",
+      "places": [
+        {
+          "id": "quidditch-pitch",
+          "name": "Sân Quidditch",
+          "views": [
+            "h1/region:extra:4",
+            "h2/h2-place-50",
+            "pitch-static/q-field"
+          ]
+        },
+        {
+          "id": "stands",
+          "name": "Khu khán đài",
+          "views": [
+            "h2/h2-place-70",
+            "pitch-static/q-stand-0-0",
+            "pitch-static/q-stand-1-0",
+            "pitch-static/q-stand-0-1",
+            "pitch-static/q-stand-1-1",
+            "pitch-static/q-stand-0-2",
+            "pitch-static/q-stand-1-2",
+            "pitch-static/q-stand-0-3",
+            "pitch-static/q-stand-1-3"
+          ]
+        },
+        {
+          "id": "commentary",
+          "name": "Bục bình luận",
+          "views": [
+            "pitch-static/q-commentary"
+          ]
+        },
+        {
+          "id": "pitch-room-0",
+          "name": "Phòng thay đồ đội A",
+          "views": [
+            "pitch-static/q-building-0"
+          ]
+        },
+        {
+          "id": "pitch-room-1",
+          "name": "Phòng thay đồ đội B",
+          "views": [
+            "pitch-static/q-building-1"
+          ]
+        },
+        {
+          "id": "pitch-room-2",
+          "name": "Kho chổi",
+          "views": [
+            "pitch-static/q-building-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "express",
+      "name": "Hogwarts Express / Ga và các toa mẫu",
+      "places": [
+        {
+          "id": "kings-cross",
+          "name": "Ga King’s Cross",
+          "views": [
+            "express/ex-kings"
+          ]
+        },
+        {
+          "id": "hogwarts-express",
+          "name": "Hogwarts Express",
+          "views": [
+            "h1/train-v5"
+          ]
+        },
+        {
+          "id": "standard-coach",
+          "name": "Toa thường",
+          "views": [
+            "express/ex-standard"
+          ]
+        },
+        {
+          "id": "express-coach-0",
+          "name": "Toa mẫu Gryffindor / 5 buồng",
+          "views": [
+            "express/coach-0-room-1",
+            "express/coach-0-room-2",
+            "express/coach-0-room-3",
+            "express/coach-0-room-4",
+            "express/coach-0-room-5"
+          ]
+        },
+        {
+          "id": "express-coach-1",
+          "name": "Toa mẫu Hufflepuff / 5 buồng",
+          "views": [
+            "express/coach-1-room-1",
+            "express/coach-1-room-2",
+            "express/coach-1-room-3",
+            "express/coach-1-room-4",
+            "express/coach-1-room-5"
+          ]
+        },
+        {
+          "id": "express-coach-2",
+          "name": "Toa mẫu Ravenclaw / 5 buồng",
+          "views": [
+            "express/coach-2-room-1",
+            "express/coach-2-room-2",
+            "express/coach-2-room-3",
+            "express/coach-2-room-4",
+            "express/coach-2-room-5"
+          ]
+        },
+        {
+          "id": "express-coach-3",
+          "name": "Toa mẫu Slytherin / 5 buồng",
+          "views": [
+            "express/coach-3-room-1",
+            "express/coach-3-room-2",
+            "express/coach-3-room-3",
+            "express/coach-3-room-4",
+            "express/coach-3-room-5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "da",
+      "name": "Diagon Alley / Tiệm và công trình",
+      "places": [
+        {
+          "id": "da-ollivanders",
+          "name": "OLLIVANDERS",
+          "views": [
+            "diagon-knockturn/da-ollivanders"
+          ]
+        },
+        {
+          "id": "da-scribbulus",
+          "name": "SCRIBBULUS",
+          "views": [
+            "diagon-knockturn/da-scribbulus"
+          ]
+        },
+        {
+          "id": "da-flourish",
+          "name": "FLOURISH & BLOTTS",
+          "views": [
+            "diagon-knockturn/da-flourish"
+          ]
+        },
+        {
+          "id": "da-house-a",
+          "name": "No. 47 · BOOKBINDERY",
+          "views": [
+            "diagon-knockturn/da-house-a"
+          ]
+        },
+        {
+          "id": "da-quidditch",
+          "name": "QUALITY QUIDDITCH SUPPLIES",
+          "views": [
+            "diagon-knockturn/da-quidditch"
+          ]
+        },
+        {
+          "id": "da-menagerie",
+          "name": "MAGICAL MENAGERIE",
+          "views": [
+            "diagon-knockturn/da-menagerie"
+          ]
+        },
+        {
+          "id": "da-gambol",
+          "name": "GAMBOL & JAPES",
+          "views": [
+            "diagon-knockturn/da-gambol"
+          ]
+        },
+        {
+          "id": "da-apothecary",
+          "name": "APOTHECARY",
+          "views": [
+            "diagon-knockturn/da-apothecary"
+          ]
+        },
+        {
+          "id": "da-goods",
+          "name": "SECOND-HAND GOODS",
+          "views": [
+            "diagon-knockturn/da-goods"
+          ]
+        },
+        {
+          "id": "da-print",
+          "name": "PRINTS & PARCHMENT",
+          "views": [
+            "diagon-knockturn/da-print"
+          ]
+        },
+        {
+          "id": "da-weasleys",
+          "name": "WEASLEYS’ WIZARD WHEEZES",
+          "views": [
+            "diagon-knockturn/da-weasleys"
+          ]
+        },
+        {
+          "id": "da-tailor",
+          "name": "TRAVELLING CLOAKS",
+          "views": [
+            "diagon-knockturn/da-tailor"
+          ]
+        },
+        {
+          "id": "da-optics",
+          "name": "TELESCOPES & INSTRUMENTS",
+          "views": [
+            "diagon-knockturn/da-optics"
+          ]
+        },
+        {
+          "id": "da-stationery",
+          "name": "PARCHMENT & QUILL",
+          "views": [
+            "diagon-knockturn/da-stationery"
+          ]
+        },
+        {
+          "id": "da-fortescue",
+          "name": "FLOREAN FORTESCUE’S",
+          "views": [
+            "diagon-knockturn/da-fortescue"
+          ]
+        },
+        {
+          "id": "da-robe-used",
+          "name": "SECOND-HAND ROBES",
+          "views": [
+            "diagon-knockturn/da-robe-used"
+          ]
+        },
+        {
+          "id": "da-remedies",
+          "name": "HERBAL REMEDIES",
+          "views": [
+            "diagon-knockturn/da-remedies"
+          ]
+        },
+        {
+          "id": "da-obscurus",
+          "name": "OBSCURUS BOOKS",
+          "views": [
+            "diagon-knockturn/da-obscurus"
+          ]
+        },
+        {
+          "id": "da-wizardwear",
+          "name": "WIZARDWEAR",
+          "views": [
+            "diagon-knockturn/da-wizardwear"
+          ]
+        },
+        {
+          "id": "da-workshop",
+          "name": "CAULDRON REPAIRS",
+          "views": [
+            "diagon-knockturn/da-workshop"
+          ]
+        },
+        {
+          "id": "da-cafe",
+          "name": "TEA & COFFEE",
+          "views": [
+            "diagon-knockturn/da-cafe"
+          ]
+        },
+        {
+          "id": "da-potage",
+          "name": "POTAGE’S CAULDRONS",
+          "views": [
+            "diagon-knockturn/da-potage"
+          ]
+        },
+        {
+          "id": "da-malkin",
+          "name": "MADAM MALKIN’S",
+          "views": [
+            "diagon-knockturn/da-malkin"
+          ]
+        },
+        {
+          "id": "da-eeylops",
+          "name": "EEYLOPS OWL EMPORIUM",
+          "views": [
+            "diagon-knockturn/da-eeylops"
+          ]
+        },
+        {
+          "id": "da-twilfitt",
+          "name": "TWILFITT & TATTING’S",
+          "views": [
+            "diagon-knockturn/da-twilfitt"
+          ]
+        },
+        {
+          "id": "da-gold",
+          "name": "SILVERSMITH",
+          "views": [
+            "diagon-knockturn/da-gold"
+          ]
+        },
+        {
+          "id": "da-gringotts",
+          "name": "Gringotts Wizarding Bank",
+          "views": [
+            "diagon-knockturn/da-gringotts"
+          ]
+        },
+        {
+          "id": "da-leaky",
+          "name": "THE LEAKY CAULDRON",
+          "views": [
+            "diagon-knockturn/da-leaky"
+          ]
+        },
+        {
+          "id": "da-homes",
+          "name": "Khu nhà dân / phố phụ (AU)",
+          "views": [
+            "diagon-knockturn/da-terrace-7",
+            "diagon-knockturn/da-terrace-11",
+            "diagon-knockturn/da-terrace-13",
+            "diagon-knockturn/da-terrace-17",
+            "diagon-knockturn/da-terrace-20",
+            "diagon-knockturn/da-terrace-8",
+            "diagon-knockturn/da-terrace-9",
+            "diagon-knockturn/da-terrace-10",
+            "diagon-knockturn/da-terrace-12",
+            "diagon-knockturn/da-terrace-14",
+            "diagon-knockturn/da-terrace-15",
+            "diagon-knockturn/da-terrace-16",
+            "diagon-knockturn/da-terrace-18",
+            "diagon-knockturn/da-terrace-19",
+            "diagon-knockturn/da-terrace-21"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ka",
+      "name": "Knockturn Alley / Tiệm và công trình",
+      "places": [
+        {
+          "id": "ka-candles",
+          "name": "CANDLES & CURIOS",
+          "views": [
+            "diagon-knockturn/ka-candles"
+          ]
+        },
+        {
+          "id": "ka-entrance",
+          "name": "No. 2 · OLD CURIOSITIES",
+          "views": [
+            "diagon-knockturn/ka-entrance"
+          ]
+        },
+        {
+          "id": "ka-upper",
+          "name": "OLD PAWN SHOP",
+          "views": [
+            "diagon-knockturn/ka-upper"
+          ]
+        },
+        {
+          "id": "ka-relics",
+          "name": "RELICS & ANTIQUITIES",
+          "views": [
+            "diagon-knockturn/ka-relics"
+          ]
+        },
+        {
+          "id": "ka-borgin",
+          "name": "BORGIN & BURKES",
+          "views": [
+            "diagon-knockturn/ka-borgin"
+          ]
+        },
+        {
+          "id": "ka-corner",
+          "name": "SILVER & CURIOS",
+          "views": [
+            "diagon-knockturn/ka-corner"
+          ]
+        },
+        {
+          "id": "ka-gloom",
+          "name": "SHUTTERED PREMISES",
+          "views": [
+            "diagon-knockturn/ka-gloom"
+          ]
+        },
+        {
+          "id": "ka-dealer",
+          "name": "ANTIQUARIAN",
+          "views": [
+            "diagon-knockturn/ka-dealer"
+          ]
+        },
+        {
+          "id": "ka-bones",
+          "name": "ODDITIES",
+          "views": [
+            "diagon-knockturn/ka-bones"
+          ]
+        },
+        {
+          "id": "ka-end",
+          "name": "LOCKED STORES",
+          "views": [
+            "diagon-knockturn/ka-end"
+          ]
+        },
+        {
+          "id": "ka-homes",
+          "name": "Khu nhà dân / phố phụ (AU)",
+          "views": [
+            "diagon-knockturn/ka-block-0",
+            "diagon-knockturn/ka-block-8",
+            "diagon-knockturn/ka-block-9",
+            "diagon-knockturn/ka-block-10",
+            "diagon-knockturn/ka-block-11",
+            "diagon-knockturn/ka-block-1",
+            "diagon-knockturn/ka-block-13",
+            "diagon-knockturn/ka-block-12",
+            "diagon-knockturn/ka-block-2",
+            "diagon-knockturn/ka-block-14",
+            "diagon-knockturn/ka-block-4",
+            "diagon-knockturn/ka-block-3",
+            "diagon-knockturn/ka-block-15",
+            "diagon-knockturn/ka-block-5",
+            "diagon-knockturn/ka-block-6",
+            "diagon-knockturn/ka-block-7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-1",
+      "name": "Bộ Pháp thuật / Tầng 1",
+      "places": [
+        {
+          "id": "department-1",
+          "name": "Bộ trưởng",
+          "views": [
+            "ministry2/min-level-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-2",
+      "name": "Bộ Pháp thuật / Tầng 2",
+      "places": [
+        {
+          "id": "department-2",
+          "name": "Thi hành Luật Pháp thuật",
+          "views": [
+            "ministry2/min-level-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-3",
+      "name": "Bộ Pháp thuật / Tầng 3",
+      "places": [
+        {
+          "id": "department-3",
+          "name": "Tai nạn & Thảm họa Pháp thuật",
+          "views": [
+            "ministry2/min-level-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-4",
+      "name": "Bộ Pháp thuật / Tầng 4",
+      "places": [
+        {
+          "id": "department-4",
+          "name": "Điều hòa & Kiểm soát Sinh vật",
+          "views": [
+            "ministry2/min-level-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-5",
+      "name": "Bộ Pháp thuật / Tầng 5",
+      "places": [
+        {
+          "id": "department-5",
+          "name": "Hợp tác Pháp thuật Quốc tế",
+          "views": [
+            "ministry2/min-level-5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-6",
+      "name": "Bộ Pháp thuật / Tầng 6",
+      "places": [
+        {
+          "id": "department-6",
+          "name": "Giao thông Pháp thuật",
+          "views": [
+            "ministry2/min-level-6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-7",
+      "name": "Bộ Pháp thuật / Tầng 7",
+      "places": [
+        {
+          "id": "department-7",
+          "name": "Trò chơi & Thể thao Pháp thuật",
+          "views": [
+            "ministry2/min-level-7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-8",
+      "name": "Bộ Pháp thuật / Tầng 8",
+      "places": [
+        {
+          "id": "atrium",
+          "name": "Atrium / Sảnh tiếp đón",
+          "views": []
+        },
+        {
+          "id": "ministry-fountain",
+          "name": "Đài phun Magical Brethren",
+          "views": [
+            "ministry-8-10/mm-fountain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-9",
+      "name": "Bộ Pháp thuật / Tầng 9",
+      "places": [
+        {
+          "id": "ministry-time",
+          "name": "Phòng Thời gian",
+          "views": [
+            "ministry-8-10/mm-time"
+          ]
+        },
+        {
+          "id": "ministry-prophecy",
+          "name": "Sảnh Tiên tri",
+          "views": [
+            "ministry-8-10/mm-prophecy"
+          ]
+        },
+        {
+          "id": "ministry-death",
+          "name": "Phòng Tử thần",
+          "views": [
+            "ministry-8-10/mm-death"
+          ]
+        },
+        {
+          "id": "ministry-brain",
+          "name": "Phòng Não",
+          "views": [
+            "ministry-8-10/mm-brain"
+          ]
+        },
+        {
+          "id": "ministry-space",
+          "name": "Phòng Không gian",
+          "views": [
+            "ministry-8-10/mm-space"
+          ]
+        },
+        {
+          "id": "ministry-love",
+          "name": "Phòng Tình yêu",
+          "views": [
+            "ministry-8-10/mm-love"
+          ]
+        },
+        {
+          "id": "ministry-rotunda",
+          "name": "Sảnh tròn xoay",
+          "views": [
+            "ministry-8-10/mm-rotunda"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ministry-10",
+      "name": "Bộ Pháp thuật / Tầng 10",
+      "places": [
+        {
+          "id": "ministry-court",
+          "name": "Phòng xử án số 10",
+          "views": [
+            "ministry-8-10/mm-court"
+          ]
+        },
+        {
+          "id": "ministry-waiting",
+          "name": "Phòng chờ",
+          "views": [
+            "ministry-8-10/mm-waiting"
+          ]
+        },
+        {
+          "id": "ministry-office",
+          "name": "Khu hỗ trợ",
+          "views": [
+            "ministry-8-10/mm-office"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Các cánh/tháp H2 và phòng ngủ/toa mẫu là bố cục diễn giải; không coi là sơ đồ canon chính xác.",
+    "Tầng Bộ 1–7 hiện chỉ có tên đơn vị, chưa có danh sách phòng chi tiết.",
+    "Chưa xác minh quan hệ phòng–phòng từ sách. Không suy kết nối từ tọa độ SVG.",
+    "ID cửa, tường, đồ nội thất, lối nối và vùng click không được tính là địa điểm độc lập."
+  ]
+}

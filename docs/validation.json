@@ -58,5 +58,30 @@
       "every inline template shape promoted to an asset"
     ],
     "report": "elements/docs/ASSET_GAPS.md"
+  },
+  "semanticAtlasAndFunctionalReview": {
+    "date": "2026-11-09",
+    "rawInteractionIds": 346,
+    "semanticPlaces": 138,
+    "worldAtlasJsonBytes": 9420,
+    "atlasAndReadableDocBytes": 14184,
+    "previousAtlasAndDocBytes": 276631,
+    "allAtlasSourceAndTechnicalIndexBytes": 53856,
+    "assetsUnchanged": true,
+    "atlasHtmlUnchanged": true,
+    "reportOnly": true,
+    "mergeCandidates": 17,
+    "functionalGroups": 11,
+    "confirmedRemovals": 0,
+    "tests": {
+      "inventory": 3,
+      "reviewHtml": "366 cards, 17 merge candidates, ID search and image rendering passed; no page errors"
+    },
+    "notes": [
+      "No SVG assets deleted, rewritten or compressed",
+      "No new SVG created; HTML review shows existing artwork",
+      "Hybrid decor does not require top view",
+      "Published review HTML loads baseline asset images from jsDelivr; Internet required"
+    ]
   }
 }

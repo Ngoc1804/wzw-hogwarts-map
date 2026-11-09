@@ -58,3 +58,5 @@ Chọn Bộ Pháp thuật · Tầng 8–10 trong menu. Atrium, Bảo mật và X
 - [UI khóa từ demo-1](ui/README.md)
 - [Atlas không gian](docs/ATLAS.md) và [dữ liệu](maps/world-atlas.json)
 - [Đối chiếu V3, tách nhà 2.5D và phần thiếu](elements/docs/ASSET_GAPS.md)
+
+[Rà soát công dụng 366 asset và dự kiến dung lượng](elements/docs/FUNCTIONAL_REVIEW.md): chưa áp dụng gộp/bỏ. Atlas đọc được chỉ giữ phòng/địa điểm; ID click kỹ thuật nằm riêng trong `maps/interaction-index.json`.

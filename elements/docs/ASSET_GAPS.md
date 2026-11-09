@@ -16,7 +16,7 @@ Nguồn V3 là file người dùng cung cấp; chỉ đọc JSON asset, không c
 |---|---|
 | Cửa và cửa sổ mặt bằng | Đơn/đôi, khe cửa, hướng mở, ngưỡng; không xoay mặt đứng giả mặt bằng |
 | Cấu kiện nối | Hoàn thiện ports cho tường cong, thang L/xoắn; clearance ngưỡng và landing |
-| Đồ chuyên dụng mặt bằng | Vạc/bàn độc dược, bảng đen, kính thiên văn, thiết bị thiên văn |
+| Đồ chuyên dụng mặt bằng | Không bắt buộc bản top cho vạc/bàn độc dược, bảng đen, kính thiên văn; ưu tiên mẫu bình thường/2.5D sẵn có theo hybrid |
 | Metadata nhà mới | Footprint/ports/surface cho 14 mẫu nhà đổi hình; không dùng dữ liệu V3 cũ |
 | Hình học điều hướng | Bbox chỉ để tránh đè hình, không phải polygon đi lại |
 | Shape chưa có ID asset | Rà các nội thất vẽ inline và named defs H1/H2 trước khi biến thành module; không tách từng nét/vật nhỏ |
@@ -24,3 +24,7 @@ Nguồn V3 là file người dùng cung cấp; chỉ đọc JSON asset, không c
 | Màu instance | Metadata V3 không tự chứng minh mọi shape mới có đủ color slot; cần chuẩn hóa có kiểm hình |
 
 Không tuyên bố kho đã đủ cho mọi loại phòng hoặc kiến trúc Harry Potter. Kiểm kê này hoàn tất ID V3 và các mẫu nhà 2.5D nhận diện được trong hai template phố; phần inline còn lại cần phân loại trước khi tái sử dụng an toàn.
+
+## Điều chỉnh theo yêu cầu hybrid
+
+Nội thất/decor không bắt buộc top view. Chỉ bổ sung hình mới khi mẫu sẵn có không đáp ứng bố cục. Phòng/tường/lối đi vẫn cần kết cấu mặt bằng. Xem FUNCTIONAL_REVIEW.md trước khi đề xuất bỏ mẫu.

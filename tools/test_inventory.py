@@ -14,9 +14,15 @@ class Inventory(unittest.TestCase):
         self.assertNotIn('house.porch',ids);self.assertNotIn('house.garden',ids)
     def test_world_atlas_preserves_every_interactive_id(self):
         world=json.loads((ROOT/'maps/world-atlas.json').read_text());_,payload=atlas.load(ROOT/'index.html')
+        index=json.loads((ROOT/'maps/interaction-index.json').read_text())
         expected={f"{m['id']}/{ident}" for m in atlas.metadata(payload) for ident in m['interactiveIds']}
-        self.assertEqual(expected,{p['id'] for p in world['locations']})
-        self.assertEqual(len(expected),len(world['locations']))
+        self.assertEqual(expected,{mid+'/'+ident for mid,items in index['maps'].items() for ident in items})
+        ids={p['id'] for s in world['sections'] for p in s['places']}
+        self.assertEqual(len(ids),world['placeCount'])
+        for items in index['maps'].values():
+            for entity in items.values():
+                if entity is not None:self.assertIn(entity,ids)
+        self.assertNotIn('h2-place-37',ids)
     def test_uploaded_v3_ids_remain_available(self):
         audit=json.loads((ROOT/'elements/docs/asset-audit.json').read_text())
         self.assertEqual(audit['v3Count'],245);self.assertEqual(audit['v3MissingIds'],[])

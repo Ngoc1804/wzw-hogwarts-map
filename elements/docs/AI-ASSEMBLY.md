@@ -2,7 +2,7 @@
 
 1. Tìm ID trong catalog theo category, tags, view. Kích thước mặc định là canvas thiết kế 256×256, không phải mét. Bounding box là hình học thực tế, chưa có padding nét/bóng.
 2. Chèn SVG dưới dạng SVG con hoặc symbol/use. Instance có ID riêng và `data-element-id` tham chiếu mẫu. Đổi x/y/width/height/rotation ở instance; không sửa file gốc.
-3. Với nội thất mặt bằng, dùng view=top. Không xoay hình mặt đứng để giả thành mặt bằng. Kệ và lò sưởi có bản top riêng. Các view elevation/front/side được ghi rõ.
+3. Dùng hybrid theo mẫu đã duyệt: phòng, tường và lối đi thể hiện dạng mặt bằng; nội thất/decor có thể dùng top, front, elevation hoặc 2.5D phù hợp bố cục. Không bắt buộc tạo bản top cho mọi đồ vật. Giữ khoảng trống và tỷ lệ, không xoay hình mặt đứng để giả là ký hiệu kết cấu mặt bằng.
 4. Dùng surface của bàn để đặt đồ nhỏ bên trong. Không đặt đồ vượt bề mặt. Đồ nhỏ có tag place-on-surface. Surface rỗng nghĩa là chưa có thông tin, không được tự coi là toàn canvas.
 5. Thay thuộc tính fill của node có data-color-fill bằng màu trong palette instance. Không tạo catalog đỏ/xanh/vàng cho cùng shape. Giữ cấu trúc path.
 6. Occupancy geometry-bbox giúp tránh đè hình; thêm khoảng trống và kiểm tra cửa/lối đi khi dựng phòng. collisionReady=false: chưa là polygon điều hướng.
