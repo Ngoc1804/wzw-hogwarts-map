@@ -103,6 +103,9 @@
         },
         "crop": {
           "type": "boolean"
+        },
+        "spatial": {
+          "$ref": "#/$defs/spatial"
         }
       },
       "required": [
@@ -708,6 +711,79 @@
       "required": [
         "x",
         "y"
+      ]
+    },
+    "spatial": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "walkableRegions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/region"
+          }
+        },
+        "blockedRegions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/region"
+          }
+        },
+        "occlusionRegions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "targetId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "points": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "$ref": "#/$defs/point"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "targetId",
+              "points"
+            ]
+          }
+        }
+      },
+      "required": [
+        "walkableRegions",
+        "blockedRegions",
+        "occlusionRegions"
+      ]
+    },
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "points": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "$ref": "#/$defs/point"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "points"
       ]
     }
   }
