@@ -50,7 +50,16 @@ function update(){
  }
 }
 function zoom(f){if(!box)return;box=[box[0]+box[2]*(1-f)/2,box[1]+box[3]*(1-f)/2,box[2]*f,box[3]*f];update()}
-async function render(data){assertMapData(data);plan=resolveMap(data);const id=plan.templateId;
+async function render(data){assertMapData(data);plan=resolveMap(data);
+ // Apply the atlas aliases after validating RP input, never add invisible places.
+ data={...data,places:plan.places,
+  actors:data.actors.map(a=>({...a,placeId:canonicalPlaceId(a.placeId)})),
+  hints:data.hints.map(h=>({...h,placeId:canonicalPlaceId(h.placeId)})),
+  focus:{...data.focus,actualPlaceId:canonicalPlaceId(data.focus.actualPlaceId)},
+  visibility:{...data.visibility,visiblePlaceIds:data.visibility.visiblePlaceIds.map(canonicalPlaceId)},
+  view:{...data.view,centerPlaceId:canonicalPlaceId(data.view.centerPlaceId),routePlaceIds:data.view.routePlaceIds.map(canonicalPlaceId)}
+ };
+ const id=plan.templateId;
  const spatial=data.view.spatial||null,exterior=EXTERIOR_TEMPLATES.has(id);
  if(exterior){for(const a of data.actors){if(a.environment==='outside'&&(!a.position||!surfaceAllowed(a.position,spatial)))throw Error('Actor '+a.id+': outside position requires explicit verified walkable polygon and must avoid blocked regions');}}
 
@@ -58,7 +67,7 @@ async function render(data){assertMapData(data);plan=resolveMap(data);const id=p
  stops.forEach(stop=>stop());stops=[];labels=[];visibleActors=[];error.textContent='';activeData=structuredClone(data);select.value=id;
  geometry=null;
  if(plan.mode==='generated'){
- geometry=buildGeometry(plan,data.view.indoor||{});
+ geometry=buildGeometry(plan,plan.indoor||data.view.indoor||{});
  svg=document.createElementNS(NSVG,'svg');svg.setAttribute('viewBox',geometry.bounds.join(' '));
  drawIndoor(svg,geometry,placeId=>{
   const p=data.places.find(row=>row.id===placeId);
