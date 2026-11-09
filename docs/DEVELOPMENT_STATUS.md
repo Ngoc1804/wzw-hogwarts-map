@@ -1,29 +1,11 @@
-# Indoor Stage 2 runtime integration — 10/11/2026
+# WIZAMAP — Trạng thái triển khai (2026-11-10)
 
-Generated three-column/A* replaced by Stage 2 scene-only formulas. MAP_DATA accepts `view.indoor` and per-room dimensions; current scene only. Generated drawing uses approved 2.5D SVG walls, doors and corridor floors. `buildGeometry` exposes `floorPolygons`, `actorZones`, `exclusionZones` and `suggestedAnchors`, with no fake corridor rooms, no route simulation or layout persistence. 13 fixed artwork templates are unchanged. CI covers formula and standing-zone geometry. Authenticated AI Studio Preview and real mobile devices are not yet tested.
+**Atlas:** 747 nguồn → **726** địa điểm vật lý, gộp 21 tham chiếu trùng; mã cũ giữ ở `sourceIds`. 44 preset Hogwarts (11 tầng × 4 khu), 27 preset tháp, 7 preset thuộc ba AU cho phép, 6 preset St Mungo. Không thêm hành lang Bộ Pháp thuật hoặc ngoài trời/sân trong H1/H2. Tất cả chỉ là công thức minh họa linh hoạt, không phải adjacency canon.
 
-# Trạng thái triển khai
+**Runtime:** có adapter ID atlas → một nhóm target SVG đối chiếu thủ công, fallback Stage 2 chỉ cho cảnh trong nhà hợp lệ. Khóa 5 AU chưa xây; CCC chỉ dựng phòng chính; nhà PC và Liad's Attic được phép. Cảnh một phòng/full tầng không tạo hành lang hoặc thang giả. Không dựng trước tầng, không lưu layout, không pathfinding.
 
-## Actor Positioning · Crop/Fog · Occlusion (10/11/2026)
+**Spatial:** indoor floorPolygons, actorZones, exclusionZones và suggestedAnchors tạo theo scene. Ngoại thất vẫn cần `view.spatial` là polygon đã xác minh, không suy từ bbox artwork. Fade vật che theo binding chính xác, không hoàn tất đánh dấu tọa độ walkable cho mọi template.
 
-Đã bổ sung MAP_DATA view.spatial (polygon walkable/blocked/occlusion), kiểm tra vị trí ngoài trời dựa trên vùng đã xác minh; vị trí NPC mới được tính mỗi /map, không lưu state. Actor/hint trong fog không tạo ribbon/marker/inspector; crop theo cảnh, route và tọa độ nhân vật. Fade công trình che theo occlusionRegion có binding kỹ thuật được xác minh, opacity 0.7 khi hover/chọn; binding chứa nhiều SVG bắt buộc interactiveId chính xác. CI chạy spatial tests + compile bundle và các test atlas. Chưa có dữ liệu polygon được duyệt cho mọi template, nên chưa công bố bao phủ 13 template đối với vị trí ngoài trời hay occlusion. Chưa kiểm AI Studio đăng nhập/điện thoại thật.
+**Kiểm thử:** Node atlas index/scene/formulas/contract, Python atlas + inventory, asset gallery và syntax bundle chạy trong CI. Preview authenticated Google AI Studio và mobile thật **chưa nghiệm thu**. Không merge `main` nếu chưa duyệt.
 
-
-Đã triển khai: bỏ ornament nơ lặp trong asset, gallery; MAP_DATA 2.0.0 không storage/seed/radius; xóa hai ví dụ runtime; không có fixture tự bật; decision atlas 762 nơi và 66 tham chiếu gộp; template resolver; renderer cơ sở phòng và hành lang; crop; fog polygon; UI/actor/hint/inspector; thanh hành động Đang đi; một scheduler footsteps; drawer khung thấp; bundle jsDelivr và shell một entry URL; CI.
-
-Đã kiểm: 14 Node tests (contract/geometry/atlas/UI); 5 atlas tests; 3 inventory tests; 3 scenery tests; gallery 259 SVG; Chromium mount 13 template không page error; desktop 1360×900, mobile 390×420. Kết quả này không chứng minh hiệu năng điện thoại thật hoặc Preview AI Studio có đăng nhập.
-
-Cần phát triển/nghiệm thu tiếp:
-- Walkable polygon, blocked polygon và actor anchors được duyệt cho từng template. Ngoài trời hiện cần position rõ ràng; không giả định tâm artwork là đất hợp lệ.
-- Fade công trình theo binding đã có khi hover/chọn actor ngoài trời. Cần kiểm che khuất theo chiều sâu, hit area mép ribbon và cụm +N.
-- Renderer chia nhóm tầng, sắp thứ tự zone, A* tránh phòng và tăng chi phí đi trùng hành lang. Chưa bảo đảm hướng canon hay biểu diễn cầu vượt ở mọi graph giao cắt.
-- Sáu role nội thất thường dùng được nhúng sẵn; toàn bộ 259 ID asset có thể dùng trực tiếp làm role và tải khi cần. Sức chứa sàn được kiểm; thiếu role báo lỗi.
-- Chuẩn hóa atlas hiện dùng tên khớp chính xác và alias chỉ định, không chứng nhận tất cả 762 mục là canon. Những mục chưa có binding vẫn yêu cầu recipe; cần duyệt các trường hợp gộp theo ngữ nghĩa khác tên.
-- Fog yêu cầu polygon rõ; chưa có region registry sẵn cho toàn atlas. Crop fit bounding box của các target được binding.
-- Touch/pinch đã có code; nghiệm thu gesture thật, benchmark điện thoại thật, soak test memory và Preview AI Studio đăng nhập vẫn cần nghiệm thu.
-
-PR #2 và #3 đóng, không merge. Lịch sử PR được GitHub giữ. Các thay đổi mới nằm trên nhánh riêng để review, không tự merge main.
-
-HTML export đã nạp lại với request mạng bị chặn (setContent); Chrome của môi trường chặn file:// nên chưa xác minh thao tác mở file trực tiếp. Cloud Desktop báo enabled nhưng không có công cụ cua/js hoặc browser được cung cấp cho phiên này; không thể kiểm AI Studio trong Chrome chia sẻ. Environment: ccarenv_b64_Y2NhcmVudl8zNTNkMGRhYTc0ZjA4MTkxYTEzYWUyMzcxZDhlNTlmNg.
-
-Địa chỉ và mặt bằng AU là hư cấu theo xác nhận người dùng và được người dùng cho phép công khai trong repository này.
+**Bản phát hành:** bundle `308705107c240dff20decb1d4bf08c7337186217`. Các tài liệu cũ là lịch sử, không được dùng làm schema mới.
