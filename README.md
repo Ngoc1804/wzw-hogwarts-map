@@ -78,6 +78,6 @@ Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phi�
 ## Runtime mới
 Xem [runtime/README.md](runtime/README.md), [quyết định atlas](docs/ATLAS_DECISIONS.md) và [luồng hiện hành](docs/MAP_FLOW.md). MAP_DATA 2.0.0 thay thế hợp đồng cũ có storage/locality.
 
-## Bộ element kiến trúc đã duyệt — chặng 1
+## Công thức kiến trúc trong nhà — chặng 2
 
-Nguồn cấu kiện và vật liệu: [elements/architecture](elements/architecture/README.md). Có 10 bố cục review, build HTML nén tự chứa; xem [phạm vi, cách build và trạng thái kiểm tra](docs/ARCHITECTURE_STAGE1.md). Bộ này chưa thay renderer MAP_DATA; chặng 2 chờ duyệt.
+10 họ công thức có thể điều chỉnh số phòng, kích thước, hình phòng và bề rộng hành lang; tường cố định, không nội thất. [Source element](elements/architecture/README.md) · [API, cách chọn và giới hạn](docs/INDOOR_STAGE2.md). HTML review nén tự chứa được build từ source. Atlas, ngoài trời và tích hợp viewer MAP_DATA để chặng sau khi được duyệt.

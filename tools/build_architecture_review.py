@@ -4,7 +4,7 @@ from pathlib import Path
 import argparse,base64,gzip,hashlib,json,re,xml.etree.ElementTree as E
 R=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
-files=['elements/architecture/elements.mjs','elements/architecture/furnishing.mjs','runtime/architecture/recipes.mjs','runtime/architecture/review.mjs']
+files=['elements/architecture/elements.mjs','runtime/architecture/recipes.mjs','runtime/architecture/walls.mjs','runtime/architecture/review.mjs']
 code='\n'.join(re.sub(r'^import .*?;\s*','', (R/f).read_text(),flags=re.M) for f in files)
 code=re.sub(r'^export \{.*?\};\s*','',code,flags=re.M).replace('export ','')
 catalog=json.loads((R/'elements/catalog.json').read_text())['elements']
@@ -37,6 +37,6 @@ window.__ARCHITECTURE_HTML__='<!doctype html>'+document.documentElement.outerHTM
 (async()=>{try{const b=Uint8Array.from(atob('PACKED'),c=>c.charCodeAt(0));const text=await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).text();const p=JSON.parse(text);document.querySelector('#scene defs').innerHTML=p.defs;const s=document.createElement('script');s.textContent=p.code;document.body.append(s)}catch(e){document.querySelector('#detail').textContent='Không mở được bản dựng: '+e.message;throw e}})();
 </script>'''.replace('PACKED',encoded)
 shell=(R/'tools/architecture-review-shell.html').read_text().replace('<!-- PACK_DEFS -->','').replace('<!-- PACK_LOADER -->',loader)
-output=a.out/'WIZAMAP_Architecture_Stage1.html';output.write_text(shell)
-report={'stage':1,'purpose':'approved element extraction and review; not a general MAP_DATA geometry engine','sourceFiles':files,'assetIds':used,'assetCount':len(used),'removedUnusedGradientDefs':omitted,'payloadRawBytes':len(payload),'payloadGzipBytes':len(packed),'htmlBytes':output.stat().st_size,'htmlSha256':hashlib.sha256(output.read_bytes()).hexdigest(),'compression':'gzip level 9, deterministic mtime=0; shared SVG symbols; no external requests'}
+output=a.out/'WIZAMAP_Indoor_Stage2.html';output.write_text(shell)
+report={'stage':2,'purpose':'adjustable indoor formulas; outdoor and atlas integration deferred','sourceFiles':files,'assetIds':used,'assetCount':len(used),'removedUnusedGradientDefs':omitted,'payloadRawBytes':len(payload),'payloadGzipBytes':len(packed),'htmlBytes':output.stat().st_size,'htmlSha256':hashlib.sha256(output.read_bytes()).hexdigest(),'compression':'gzip level 9, deterministic mtime=0; shared SVG symbols; no external requests'}
 (a.out/'architecture-build.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False))

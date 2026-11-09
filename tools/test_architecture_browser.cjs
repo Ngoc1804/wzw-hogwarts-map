@@ -1,15 +1,13 @@
-const {chromium}=require('playwright'),assert=require('assert/strict'),fs=require('fs');
-const path=require('path'),os=require('os');const target=process.argv[2];if(!target)throw Error('Usage: node tools/test_architecture_browser.cjs URL');const scratch=fs.mkdtempSync(path.join(os.tmpdir(),'wizamap-architecture-'));
-const types=['horizontal','vertical','ell','tee','cross','court','cloister','windows','curved','tower'];
-(async()=>{const b=await chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox']});const p=await b.newPage({viewport:{width:1600,height:1100},acceptDownloads:true});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(target);await p.waitForSelector('[data-room]');
-
-for(const type of types){await p.selectOption('#layout',type);const count=await p.locator('[data-room]').count();assert.ok(count>=4);assert.equal(await p.locator('[data-door]').count(),count);
-
-await p.locator('[data-room]').first().focus();await p.keyboard.press('Enter');assert.ok(await p.locator('.selection').count());await p.locator('#height').fill('50');await p.locator('#height').dispatchEvent('input');assert.equal(await p.locator('[data-room]').count(),count);await p.locator('#height').fill('36');await p.locator('#height').dispatchEvent('input');
-
-console.log(type,count,'rooms',await p.locator('[data-window]').count(),'windows');}
-
+const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const target=process.argv[2];if(!target)throw Error('URL required');
+(async()=>{const b=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});const p=await b.newPage({viewport:{width:1600,height:1100},acceptDownloads:true});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(target);await p.waitForSelector('[data-room]');assert.equal(await p.locator('#height').count(),0);
+for(const type of ['horizontal','vertical','ell','tee','cross','court','cloister','windows','curved','tower'])for(const n of [4,13]){
+ await p.selectOption('#layout',type);await p.fill('#count',String(n));await p.locator('#count').dispatchEvent('change');assert.equal(await p.locator('#error').textContent(),'');assert.equal(await p.locator('[data-room]').count(),n);assert.equal(await p.locator('[data-door]').count(),n);assert.equal(await p.locator('use,[data-element-id]').count(),0);assert.equal(await p.locator('#drawing [filter]').count(),0);
+ await p.locator('#count').blur();await p.locator('[data-room]').first().focus();await p.keyboard.press('Enter');assert.equal(await p.locator('.selection').count(),1);
+}
+await p.selectOption('#layout','curved');await p.screenshot({path:path.join(os.tmpdir(),'wizamap-stage2-curved.png'),fullPage:true});
+const renders=await p.evaluate(()=>{const result=[];for(let i=0;i<20;i++){const n=document.querySelector('#count');n.value=i%2?8:13;const t=performance.now();n.dispatchEvent(new Event('change'));result.push(performance.now()-t)}return {ms:result,nodes:document.querySelectorAll('#drawing *').length,filters:document.querySelectorAll('#drawing [filter]').length}});console.log('curved benchmark',JSON.stringify(renders));
 await p.click('#plus');assert.equal(await p.locator('#zoom').textContent(),'125%');
-const wait=p.waitForEvent('download');await p.click('#download');await(await wait).saveAs(path.join(scratch,'downloaded.html'));const off=await b.newPage();let requests=0;await off.route('**/*',r=>{requests++;r.abort()});const downloaded=fs.readFileSync(path.join(scratch,'downloaded.html'),'utf8');assert.ok(downloaded.includes("DecompressionStream('gzip')"),'download stays packed');assert.ok(!downloaded.includes('id="a-table.study"'),'no expanded duplicate symbols');await off.setContent(downloaded);await off.waitForSelector('[data-room]');for(const type of types){await off.selectOption('#layout',type);assert.ok(await off.locator('[data-room]').count()>=4)}assert.equal(requests,0);
-await p.setViewportSize({width:390,height:844});for(const type of ['windows','curved','tower']){await p.selectOption('#layout',type);assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
-assert.deepEqual(errors,[]);console.log('All ten layouts, height, keyboard, zoom, offline downloaded HTML and mobile width passed');await b.close();fs.rmSync(scratch,{recursive:true,force:true})})();
+const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'wizamap-stage2-'));const wait=p.waitForEvent('download');await p.click('#download');await(await wait).saveAs(path.join(tmp,'map.html'));const text=fs.readFileSync(path.join(tmp,'map.html'),'utf8');assert.ok(text.includes("DecompressionStream('gzip')"));
+const off=await b.newPage();let requests=0;await off.route('**/*',r=>{requests++;r.abort()});await off.setContent(text);await off.waitForSelector('[data-room]');await off.selectOption('#layout','curved');await off.fill('#count','17');await off.locator('#count').dispatchEvent('change');assert.equal(await off.locator('[data-room]').count(),17);assert.equal(requests,0);
+await p.setViewportSize({width:390,height:844});assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));assert.deepEqual(errors,[]);await b.close();fs.rmSync(tmp,{recursive:true,force:true});console.log('10 parameterized formulas; no furniture; no height control; download/offline/mobile passed');})();

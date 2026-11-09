@@ -1,23 +1,17 @@
-# Approved raised-wall elements — stage 1
+# Indoor architecture elements — stage 2
 
-Source: the ten-layout HTML approved in chat. Uses current repository assets, including the later removal of repeated ornaments. The existing 259-element catalog stays authoritative for furniture; this separate architecture catalog indexes procedural building parts and does not duplicate the SVG library.
+The ten approved layouts are now adjustable formula families, not ten fixed maps. `runtime/architecture/recipes.mjs` exports `selectIndoorFormula(request)` and `buildIndoorLayout(request)`; `walls.mjs` derives wall segments and real doorway gaps. Source geometry and SVG projection are separate.
 
-- `elements.mjs`: SVG factories for floor paths, raised straight/angled wall pieces, arches, thresholds, windows and wall decorations.
-- `materials.svg`: shared floor, masonry, cap, lighting and shadow definitions.
-- `furnishing.mjs`: approved furniture arrangements referencing existing asset IDs.
-- `geometry.mjs`: plan-space wall endpoints and footprint metadata, independent of the raised projection.
-- `catalog.json`: element exports, dimensions and recipe IDs. Curved walls are tessellated angled segments; stairs/courtyards remain recipe assemblies in this stage.
-- `../../runtime/architecture/recipes.mjs`: the ten approved recipe assemblies. Dimensions remain the approved review values; arbitrary sizing/packing is stage 2.
-- `../../runtime/architecture/review.mjs`: isolated review viewer; does not replace the MAP_DATA viewer, alter its UI, write storage, or change the atlas.
+Wall elevation is fixed to the approved screenshot's default: 36 design units, 1.8× on corridor-facing elevations, 1.25× for round chambers. There is no height control. No furniture, props, plants, sconces, portraits or imported furniture symbols are included in this package. The main asset library is untouched.
 
-Build from repository root:
+`elements.mjs` contains reusable walls, thresholds, arches and lancet windows. `materials.svg` contains shared tile/stone/wood materials; Gaussian and drop-shadow filters have been removed. Curved faces/caps render in three compound SVG paths rather than per-segment groups. Adjacent collinear walls are merged. Pan updates are coalesced with requestAnimationFrame; a bounded cache retains model/wall computations only.
+
+Build and test:
 
 ```sh
-python tools/build_architecture_review.py --out /tmp/wizamap-architecture
+python tools/build_architecture_review.py --out /tmp/wizamap-indoor
+node --test tools/test_architecture.mjs
+node tools/test_architecture_browser.cjs http://127.0.0.1:PORT/WIZAMAP_Indoor_Stage2.html
 ```
 
-One self-contained HTML is emitted with deterministic gzip payload, shared symbols, only referenced furniture types and unused gradient definitions removed. Download preserves the original packed document. Requires a browser with DecompressionStream support, as the existing atlas does. Build JSON records byte counts, SHA-256 and asset dependencies.
-
-Selection design for the next stage: explicit atlas structure first, AI choice constrained by known relationships second, random selection only when explicitly permitted. This policy is documented, not wired into MAP_DATA in stage 1. No seed or persistence is added.
-
-The generated HTML/ZIP/screenshots and previous experiment versions must not be checked in. Do not delete other branches' preview/runtime code during this extraction. Stage 2 starts only after stage-1 approval.
+Only one source shell is maintained. Build emits packed HTML and a byte/hash report outside the repository. Download preserves the packed document; no external requests are needed. No atlas or outdoor generation is implemented in this stage. No storage/seed is introduced. This request API is internal geometry input, not a replacement for MAP_DATA. See `docs/INDOOR_STAGE2.md` for parameters, selection precedence and limits.
