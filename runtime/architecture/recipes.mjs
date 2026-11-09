@@ -57,12 +57,12 @@ export function buildIndoorLayout(request={}){
  const entry=(axis,fixed,lo,hi)=>entrance={axis,fixed,lo,hi};
  const length=k=>Math.max(2*maxF,maxD+2*maxF,Math.ceil(N/k)*maxF+maxD);
  if(id==='horizontal'||id==='windows'){
-  const L=(id==='windows'?N:Math.ceil(N/2))*maxF;floor(0,0,L,C);H(0,0,L,'S');if(id==='horizontal')H(0,C,L,'N');
+  const L=Math.max(1,id==='windows'?N:Math.ceil(N/2))*maxF;floor(0,0,L,C);H(0,0,L,'S');if(id==='horizontal')H(0,C,L,'N');
   stair={x:-70,y:10,w:70,h:C-20,orientation:'E'};entry('V',0,10,C-10);
   if(id==='windows'){facades.push({axis:'H',fixed:C,lo:0,hi:L});for(let x=F/2;x<L;x+=F)windows.push({axis:'H',x,y:C});}
  }
  if(id==='vertical'){
-  const L=Math.ceil(N/2)*maxF;floor(0,0,C,L);V(0,0,L,'E');V(C,0,L,'W');stair={x:0,y:L,w:C,h:70,orientation:'N'};entry('H',L,0,C);
+  const L=Math.max(1,Math.ceil(N/2))*maxF;floor(0,0,C,L);V(0,0,L,'E');V(C,0,L,'W');stair={x:0,y:L,w:C,h:70,orientation:'N'};entry('H',L,0,C);
  }
  if(id==='ell'||id==='tee'||id==='cross'){
   const L=length(id==='cross'?8:4);
