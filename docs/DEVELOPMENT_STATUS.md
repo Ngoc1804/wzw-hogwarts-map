@@ -2,7 +2,7 @@
 
 Đã triển khai: bỏ ornament nơ lặp trong asset, gallery; MAP_DATA 2.0.0 không storage/seed/radius; xóa hai ví dụ runtime; không có fixture tự bật; decision atlas 762 nơi và 66 tham chiếu gộp; template resolver; renderer cơ sở phòng và hành lang; crop; fog polygon; UI/actor/hint/inspector; thanh hành động Đang đi; một scheduler footsteps; drawer khung thấp; bundle jsDelivr và shell một entry URL; CI.
 
-Đã kiểm: 10 Node tests (contract/geometry/atlas/UI); 5 atlas tests; 3 inventory tests; 3 scenery tests; gallery 259 SVG; Chromium mount 13 template không page error; desktop 1360×900, mobile 390×420. Kết quả này không chứng minh hiệu năng điện thoại thật hoặc Preview AI Studio có đăng nhập.
+Đã kiểm: 14 Node tests (contract/geometry/atlas/UI); 5 atlas tests; 3 inventory tests; 3 scenery tests; gallery 259 SVG; Chromium mount 13 template không page error; desktop 1360×900, mobile 390×420. Kết quả này không chứng minh hiệu năng điện thoại thật hoặc Preview AI Studio có đăng nhập.
 
 Cần phát triển/nghiệm thu tiếp:
 - Walkable polygon, blocked polygon và actor anchors được duyệt cho từng template. Ngoài trời hiện cần position rõ ràng; không giả định tâm artwork là đất hợp lệ.
@@ -16,3 +16,5 @@ Cần phát triển/nghiệm thu tiếp:
 PR #2 và #3 đóng, không merge. Lịch sử PR được GitHub giữ. Các thay đổi mới nằm trên nhánh riêng để review, không tự merge main.
 
 HTML export đã nạp lại với request mạng bị chặn (setContent); Chrome của môi trường chặn file:// nên chưa xác minh thao tác mở file trực tiếp. Cloud Desktop báo enabled nhưng không có công cụ cua/js hoặc browser được cung cấp cho phiên này; không thể kiểm AI Studio trong Chrome chia sẻ. Environment: ccarenv_b64_Y2NhcmVudl8zNTNkMGRhYTc0ZjA4MTkxYTEzYWUyMzcxZDhlNTlmNg.
+
+Địa chỉ và mặt bằng AU là hư cấu theo xác nhận người dùng và được người dùng cho phép công khai trong repository này.

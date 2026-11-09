@@ -5,7 +5,8 @@
 | h1 | Hogwarts và Hogsmeade tổng quan; animation; địa hình/shading |
 | h2 | Khu Hogwarts chi tiết; 72 địa điểm, Quidditch đầy đủ, cây Liễu Roi tách xa nhà cú |
 | hall | Đại Sảnh |
-| ministry2 | Bộ Pháp Thuật hiện có |
+| ministry2 | Bộ Pháp Thuật tầng 1–7 |
+| ministry-8-10 | Bộ Pháp Thuật tầng 8–10 |
 | express | Tuyến tàu và năm mặt bằng toa |
 | gryffindor-common | Phòng chung và phòng ngủ Gryffindor |
 | ravenclaw-common | Phòng chung và phòng ngủ Ravenclaw |

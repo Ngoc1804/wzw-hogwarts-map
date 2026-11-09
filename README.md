@@ -73,7 +73,7 @@ Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phi�
 - [Hợp đồng, module và trạng thái triển khai](runtime/README.md)
 - [JSON Schema 2.0.0](runtime/map-data.schema.json)
 - Hai file ví dụ đã loại bỏ; runtime yêu cầu MAP_DATA RP, không tự hiển thị dữ liệu mẫu.
-- Kiểm tra: `node --test tools/test_map_data.mjs`. Đây là nền hợp đồng/resolver; UI và renderer vận hành còn cần ghép.
+- Kiểm tra: `node --test tools/test_map_data.mjs`. Runtime Preview hiện hành và giới hạn được ghi trong docs/DEVELOPMENT_STATUS.md.
 
 ## Runtime mới
 Xem [runtime/README.md](runtime/README.md), [quyết định atlas](docs/ATLAS_DECISIONS.md) và [luồng hiện hành](docs/MAP_FLOW.md). MAP_DATA 2.0.0 thay thế hợp đồng cũ có storage/locality.

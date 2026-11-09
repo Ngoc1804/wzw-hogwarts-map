@@ -76,7 +76,7 @@
   "runtimeV2": {
     "schemaVersion": "2.0.0",
     "status": "implemented baseline; detailed limitations in docs/DEVELOPMENT_STATUS.md",
-    "nodeTests": 10,
+    "nodeTests": 14,
     "atlasTests": 5,
     "inventoryTests": 3,
     "sceneryTests": 3,
@@ -90,6 +90,7 @@
     "ornamentPathsRemoved": {
       "library": 29,
       "embeddedAtlas": 5
-    }
+    },
+    "auLocations": "Fictional AU addresses and floor plans, explicitly authorized by user for publication to this repository."
   }
 }

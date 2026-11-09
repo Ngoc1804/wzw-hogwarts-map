@@ -1,0 +1,738 @@
+# Hướng dẫn /MAP cho Preview
+
+Gemini đọc diễn biến RP/correction, ngày giờ RP, vị trí PC, NPC và quest pack đúng tháng. Tra ID địa điểm trong atlas đã cấp trong context; dùng binding template thực có hoặc cung cấp generation recipe. Không tự vẽ lại CSS/SVG mỗi lượt.
+
+Xuất một codeblock HTML dựa trên shell bên dưới. Thay {} trong rp-map-data bằng dữ liệu RP theo schema 2.0.0. Escape ký tự < trong JSON thành \u003c. Một entry URL runtime đã ghim commit nằm sẵn trong shell; bundle tự tải atlas và asset cần thiết ở commit riêng đã ghim. Preview không ghi ngược GitHub, không có seed hay storage.
+
+PC + tối đa 10 tag NPC/nhóm, tối đa 6 hint đúng tháng/pack. stance=walk làm thanh hành động ghi Đang đi; RP quyết định di chuyển. Nhân vật ở trong công trình ngoài trời: environment=inside, ribbon trên công trình, không có dấu chân giả ngoài cửa. Ngoài trời: environment=outside và position SVG phải hợp lệ. Nếu chưa có điểm đứng được xác minh thì không đoán tọa độ.
+
+Crop bật mặc định, fit các nơi được gửi; crop=false để toàn cảnh. Fog cần polygon fogRegions và fogRegionIds trùng ID; không gửi thông tin RP bí mật rồi chỉ giấu bằng fog. Template candidate không có binding chưa được coi là mặt bằng đã có.
+
+## Shell
+
+```html
+<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><body><p id="status">Đang tải WIZAMAP…</p><iframe title="Bản đồ RP" sandbox="allow-scripts allow-downloads" style="width:100%;height:90dvh;border:0"></iframe><script type="application/json" id="rp-map-data">{}</script><script>
+(async()=>{try{const data=JSON.parse(document.querySelector('#rp-map-data').textContent);const r=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@ee3160e0b3be23c6bdb662e90ebdaa01b403569f/runtime/bundle.js');if(!r.ok)throw Error('Runtime HTTP '+r.status);const code=await r.text();const safe=JSON.stringify(data).replace(/</g,'\\u003c');document.querySelector('iframe').srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+safe+'<\/script><script>'+code.replace(/<\/script/gi,'<\\/script')+'<\/script>';document.querySelector('#status').textContent='Runtime đã tải; trạng thái dữ liệu hiển thị bên trong bản đồ.'}catch(e){document.querySelector('#status').textContent='Không mở được bản đồ: '+e.message}})();
+</script></body></html>
+
+```
+
+## Hợp đồng dữ liệu
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wizawi:wizamap:map-data:2.0.0",
+  "title": "WIZAMAP MAP_DATA 2.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "campaignId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+    },
+    "worldId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+    },
+    "snapshotId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+    },
+    "atlasVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "time": {
+          "type": "string",
+          "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+        },
+        "areaName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 180
+        }
+      },
+      "required": [
+        "date",
+        "time",
+        "areaName",
+        "quote"
+      ]
+    },
+    "view": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scopeId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "spaceKind": {
+          "type": "string",
+          "enum": [
+            "world",
+            "region",
+            "grounds",
+            "street",
+            "floor",
+            "interior",
+            "tower",
+            "train"
+          ]
+        },
+        "preferredMode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "template",
+            "generated"
+          ]
+        },
+        "templateId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "centerPlaceId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "routePlaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          },
+          "uniqueItems": true
+        },
+        "crop": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "scopeId",
+        "spaceKind",
+        "preferredMode",
+        "templateId",
+        "centerPlaceId",
+        "routePlaceIds"
+      ]
+    },
+    "focus": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pcActorId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "actualPlaceId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "selectedId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        }
+      },
+      "required": [
+        "pcActorId",
+        "actualPlaceId",
+        "selectedId"
+      ]
+    },
+    "places": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/place"
+      },
+      "minItems": 1
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          },
+          "from": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          },
+          "to": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "doorway",
+              "corridor",
+              "stairs",
+              "lift",
+              "path",
+              "passage",
+              "transport"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "open",
+              "restricted",
+              "blocked"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "from",
+          "to",
+          "kind",
+          "state"
+        ]
+      },
+      "maxItems": 60
+    },
+    "actors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/actor"
+      },
+      "minItems": 1,
+      "maxItems": 11
+    },
+    "hints": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hint"
+      },
+      "maxItems": 6
+    },
+    "visibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "visiblePlaceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          },
+          "uniqueItems": true
+        },
+        "fogRegionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 30
+        },
+        "fogRegions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "points": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "$ref": "#/$defs/point"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "points"
+            ]
+          }
+        }
+      },
+      "required": [
+        "visiblePlaceIds",
+        "fogRegionIds"
+      ]
+    },
+    "questPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "month": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}$"
+        },
+        "packId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "limits": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "main": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 6
+            },
+            "side": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 6
+            },
+            "pool": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 6
+            },
+            "life": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 6
+            }
+          },
+          "required": [
+            "main",
+            "side",
+            "pool",
+            "life"
+          ]
+        }
+      },
+      "required": [
+        "month",
+        "packId",
+        "limits"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "campaignId",
+    "worldId",
+    "snapshotId",
+    "atlasVersion",
+    "meta",
+    "view",
+    "focus",
+    "places",
+    "connections",
+    "actors",
+    "hints",
+    "visibility",
+    "questPolicy"
+  ],
+  "$defs": {
+    "place": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "atlasRef": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "room",
+            "corridor",
+            "hall",
+            "tower",
+            "house",
+            "shop",
+            "pub",
+            "greenhouse",
+            "grounds",
+            "street",
+            "region",
+            "train",
+            "special"
+          ]
+        },
+        "parentId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "floor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "zone": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "north",
+            "east",
+            "south",
+            "west",
+            "core",
+            "tower"
+          ]
+        },
+        "inspector": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "overhear": {
+              "type": "string",
+              "maxLength": 700
+            },
+            "observation": {
+              "type": "string",
+              "maxLength": 1000
+            }
+          },
+          "required": [
+            "overhear",
+            "observation"
+          ]
+        },
+        "generation": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "function": {
+              "type": "string",
+              "minLength": 1
+            },
+            "shape": {
+              "type": "string",
+              "enum": [
+                "rectangle",
+                "L",
+                "T",
+                "U",
+                "round",
+                "polygon",
+                "straight",
+                "curved"
+              ]
+            },
+            "furnishings": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "role": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "count": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 50
+                  }
+                },
+                "required": [
+                  "role",
+                  "count"
+                ]
+              },
+              "maxItems": 30
+            }
+          },
+          "required": [
+            "function",
+            "shape",
+            "furnishings"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "atlasRef",
+        "kind",
+        "parentId",
+        "floor",
+        "zone",
+        "inspector",
+        "generation"
+      ]
+    },
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "isPC": {
+          "type": "boolean"
+        },
+        "entityType": {
+          "type": "string",
+          "enum": [
+            "person",
+            "group",
+            "community",
+            "creature"
+          ]
+        },
+        "placeId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "tagType": {
+          "type": "string",
+          "enum": [
+            "gryffindor",
+            "slytherin",
+            "ravenclaw",
+            "hufflepuff",
+            "beauxbatons",
+            "durmstrang",
+            "teacher",
+            "adult",
+            "patrol",
+            "animal",
+            "monster",
+            "ghost",
+            "unknown",
+            "crowd"
+          ]
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "onPatrol": {
+          "type": "boolean"
+        },
+        "stance": {
+          "type": "string",
+          "enum": [
+            "idle",
+            "walk"
+          ]
+        },
+        "activity": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "positionMode": {
+          "type": "string",
+          "enum": [
+            "normal",
+            "ghost",
+            "concealed-passage",
+            "animagus",
+            "inside-container"
+          ]
+        },
+        "positionReason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "presenceBasis": {
+          "type": "string",
+          "enum": [
+            "scene",
+            "status",
+            "simulation"
+          ]
+        },
+        "inspector": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "overhear": {
+              "type": "string",
+              "maxLength": 700
+            },
+            "observation": {
+              "type": "string",
+              "maxLength": 1000
+            }
+          },
+          "required": [
+            "overhear",
+            "observation"
+          ]
+        },
+        "environment": {
+          "type": "string",
+          "enum": [
+            "inside",
+            "outside"
+          ]
+        },
+        "position": {
+          "$ref": "#/$defs/point"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "isPC",
+        "entityType",
+        "placeId",
+        "tagType",
+        "role",
+        "onPatrol",
+        "stance",
+        "activity",
+        "priority",
+        "positionMode",
+        "positionReason",
+        "presenceBasis",
+        "inspector"
+      ]
+    },
+    "hint": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "packId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "sourceQuestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "placeId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "main",
+            "side",
+            "pool",
+            "life"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "inspector": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "overhear": {
+              "type": "string",
+              "maxLength": 700
+            },
+            "observation": {
+              "type": "string",
+              "maxLength": 1000
+            }
+          },
+          "required": [
+            "overhear",
+            "observation"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "packId",
+        "sourceQuestId",
+        "placeId",
+        "type",
+        "title",
+        "priority",
+        "inspector"
+      ]
+    },
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    }
+  }
+}
+
+```
