@@ -20,7 +20,7 @@ test('optimized user atlas preserves 747 references / 726 places and valid neste
  assert.equal(a.schemaVersion,'atlas-optimized-1.0');
  assert.deepEqual(a.statistics,{sourceEntries:747,places:726,mergedOccurrences:21});
  assert.equal(a.places.length,726);
- const ids=new Set(a.places.map(p=>p.id));assert.equal(ids.size,733);
+ const ids=new Set(a.places.map(p=>p.id));assert.equal(ids.size,726);
  assert.equal(a.places.reduce((n,p)=>n+(p.sourceIds||[]).length,0),21);
  let refs=0;const check=rows=>{for(const id of rows){assert.ok(ids.has(id),'unknown placeId: '+id);refs++}};
  for(const template of a.templates)check(template.placeIds);
