@@ -1,26 +1,113 @@
-// Ephemeral layout, created only for this Preview. No storage or network writes.
-export function buildGeometry(plan){
- const rooms={},floors=[...new Set(plan.places.map(p=>p.floor||''))];
- let floorY=80;
- for(const floor of floors){const list=plan.places.filter(p=>(p.floor||'')===floor);const order={north:0,west:1,core:2,east:3,south:4,tower:5};list.sort((a,b)=>(order[a.zone]??2)-(order[b.zone]??2));list.forEach((p,i)=>{rooms[p.id]={id:p.id,x:80+(i%3)*340,y:floorY+Math.floor(i/3)*300,w:240,h:['straight','curved'].includes(p.generation.shape)?80:200,shape:p.generation.shape,recipe:p.generation}});floorY+=Math.ceil(list.length/3)*300+100;}
- const bounds=[0,0,Math.max(440,Math.min(3,plan.places.length)*340+140),floorY+140];
- const occupied=new Set();const cell=20,key=(x,y)=>x+','+y;
- const blocked=(x,y)=>Object.values(rooms).some(r=>x>r.x-18&&x<r.x+r.w+18&&y>r.y-18&&y<r.y+r.h+18);
- function route(a,b){const start=[a.x+a.w/2,a.y+a.h+40],goal=[b.x+b.w/2,b.y+b.h+40];const queue=[{p:start,g:0,f:0}],best=new Map([[key(...start),0]]),prev=new Map();let found=false;
- while(queue.length){queue.sort((a,b)=>a.f-b.f);const current=queue.shift(),[x,y]=current.p,k=key(x,y);if(current.g!==best.get(k))continue;if(x===goal[0]&&y===goal[1]){found=true;break}for(const [dx,dy]of [[20,0],[-20,0],[0,20],[0,-20]]){const nx=x+dx,ny=y+dy,nk=key(nx,ny);if(nx<20||ny<20||nx>bounds[2]-20||ny>bounds[3]-20||blocked(nx,ny))continue;const g=current.g+1+(occupied.has(nk)?3:0);if(g<(best.get(nk)??Infinity)){best.set(nk,g);prev.set(nk,[x,y]);queue.push({p:[nx,ny],g,f:g+(Math.abs(nx-goal[0])+Math.abs(ny-goal[1]))/cell})}}}
- if(!found)throw Error('Không tìm được hành lang nối phòng; hãy giảm phòng hoặc tách tầng');let at=goal,ps=[goal];while(key(...at)!==key(...start)){at=prev.get(key(...at));ps.push(at)}ps.reverse();ps.forEach(p=>occupied.add(key(...p)));return [[start[0],a.y+a.h],...ps,[goal[0],b.y+b.h]];
+// Transient MAP_DATA scene geometry using the approved indoor Stage 2 formulas.
+// No storage, pathfinding, mult-wing assembly or hidden-floor generation.
+import {buildIndoorLayout,rectangle,ppath} from './architecture/recipes.mjs';
+import {buildIndoorWalls,insidePolygon} from './architecture/walls.mjs';
+
+const shapeFor=(p)=>{
+ const shape=p.generation?.shape||'rectangle';
+ if(shape==='straight'&&p.kind==='corridor')return 'rectangle';
+ if(!['rectangle','L','U','T','cross','round'].includes(shape))
+  throw Error('Unsupported indoor room shape for '+p.id+': '+shape);
+ return shape;
+};
+const point=(x,y)=>({x,y});
+const distanceToSegment=(p,a,b)=>{
+ const dx=b[0]-a[0],dy=b[1]-a[1],len=dx*dx+dy*dy;
+ const t=Math.max(0,Math.min(1,len?((p.x-a[0])*dx+(p.y-a[1])*dy)/len:0));
+ return Math.hypot(p.x-a[0]-t*dx,p.y-a[1]-t*dy);
+};
+const boundaryDistance=(p,poly)=>Math.min(...poly.map((a,i)=>distanceToSegment(p,a,poly[(i+1)%poly.length])));
+const hit=(p,poly)=>insidePolygon(p.x,p.y,poly);
+const asRegion=(id,poly)=>({id,points:poly.map(([x,y])=>point(x,y))});
+function safePoint(p,polygon,exclusions,clearance){
+ return hit(p,polygon)&&boundaryDistance(p,polygon)>clearance&&
+  !exclusions.some(r=>hit(p,r.poly)||boundaryDistance(p,r.poly)<clearance);
+}
+// Conservative rectangular cells, fully inside actual floor polygon, away from edges and reserved space.
+// No routing: these are illustrative positioning surfaces only.
+function positions(id,polygon,exclusions,margin=13){
+ const xs=polygon.map(p=>p[0]),ys=polygon.map(p=>p[1]);
+ const lowX=Math.min(...xs),highX=Math.max(...xs),lowY=Math.min(...ys),highY=Math.max(...ys);
+ const step=26,half=9,runs=[],anchors=[];
+ for(let y=lowY+step/2;y<highY;y+=step){
+  let run=null;
+  for(let x=lowX+step/2;x<highX;x+=step){
+   const corners=[point(x-half,y-half),point(x+half,y-half),point(x+half,y+half),point(x-half,y+half)];
+   const valid=corners.every(p=>safePoint(p,polygon,exclusions,margin));
+   if(valid){
+    if(!run)run=[x-half,y-half,x+half,y+half];
+    else run[2]=x+half;
+    if(anchors.length<4&&(!anchors.length||Math.hypot(x-anchors.at(-1).x,y-anchors.at(-1).y)>65))anchors.push(point(x,y));
+   }else if(run){runs.push(run);run=null}
+  }
+  if(run)runs.push(run);
  }
- const routes=plan.connections.map(c=>({...c,points:route(rooms[c.from],rooms[c.to])}));return {rooms,routes,bounds};
+ if(!runs.length)throw Error('No safe actor surface for '+id+'; check room size/doors');
+ const regions=runs.map(([x1,y1,x2,y2],i)=>asRegion(id+':zone:'+i,rectangle(x1,y1,x2-x1,y2-y1)));
+ return {regions,anchors};
 }
-export function roomPath(r){
- const {x,y,w,h,shape}=r;
- if(shape==='curved')return `M${x+30} ${y}H${x+w-30}Q${x+w} ${y} ${x+w} ${y+30}V${y+h-30}Q${x+w} ${y+h} ${x+w-30} ${y+h}H${x+30}Q${x} ${y+h} ${x} ${y+h-30}V${y+30}Q${x} ${y} ${x+30} ${y}Z`;
- if(shape==='round')return `M${x} ${y+h/2}a${w/2} ${h/2} 0 1 0 ${w} 0a${w/2} ${h/2} 0 1 0 -${w} 0`;
- const shapes={L:[[0,0],[.6,0],[.6,.4],[1,.4],[1,1],[0,1]],T:[[0,0],[1,0],[1,.45],[.65,.45],[.65,1],[.35,1],[.35,.45],[0,.45]],U:[[0,0],[.3,0],[.3,.6],[.7,.6],[.7,0],[1,0],[1,1],[0,1]],polygon:[[.2,0],[.8,0],[1,.3],[1,.7],[.8,1],[.2,1],[0,.7],[0,.3]]};
- return (shapes[shape]||[[0,0],[1,0],[1,1],[0,1]]).map(([a,b],i)=>`${i?'L':'M'}${x+a*w} ${y+b*h}`).join(' ')+'Z';
+function exclusionsFor(model){
+ const zones=[];
+ for(const v of model.voids)zones.push({id:'void:'+v.name,kind:'void',poly:v.poly});
+ for(const [i,t] of model.thresholds.entries())zones.push({id:'threshold:'+i,kind:'door',poly:t.poly});
+ if(model.stair){const s=model.stair;zones.push({id:'stair',kind:'stairs',poly:rectangle(s.x-10,s.y-10,s.w+20,s.h+20)})}
+ for(const r of model.rooms){
+  const d=r.doorPoint,wide=40;
+  zones.push({id:'door:'+r.id,kind:'door',poly:rectangle(d.x-wide,d.y-wide,wide*2,wide*2)});
+ }
+ return zones;
 }
-export function furnitureSlots(r){
- const shape=r.shape,polys={L:[[0,0],[.6,0],[.6,.4],[1,.4],[1,1],[0,1]],T:[[0,0],[1,0],[1,.45],[.65,.45],[.65,1],[.35,1],[.35,.45],[0,.45]],U:[[0,0],[.3,0],[.3,.6],[.7,.6],[.7,0],[1,0],[1,1],[0,1]],polygon:[[.2,0],[.8,0],[1,.3],[1,.7],[.8,1],[.2,1],[0,.7],[0,.3]]};
- const inside=(x,y)=>{if(shape==='round')return ((x-.5)/.5)**2+((y-.5)/.5)**2<.9;const ps=polys[shape];if(!ps)return true;let ok=false;for(let i=0,j=ps.length-1;i<ps.length;j=i++){const [a,b]=ps[i],[c,d]=ps[j];if((b>y)!==(d>y)&&x<(c-a)*(y-b)/(d-b)+a)ok=!ok}return ok};
- const slots=[];for(let y=12;y<r.h-65;y+=54)for(let x=12;x<r.w-48;x+=54)if([[x,y],[x+48,y],[x,y+48],[x+48,y+48]].every(([a,b])=>inside(a/r.w,b/r.h)))slots.push([r.x+x,r.y+y]);return slots;
+export function buildGeometry(plan,indoor={}){
+ if(plan.mode!=='generated')throw Error('Indoor build requires generated scene');
+ const places=plan.places;
+ if(!places.length)throw Error('Indoor scene requires at least one visible room');
+ if(new Set(places.map(p=>p.floor||'')).size>1)throw Error('Only the current indoor floor/scene may be built; provide one floor per /map');
+ const records=places.map(p=>({
+  id:p.id,name:p.name,shape:shapeFor(p),
+  ...(p.generation?.width?{width:p.generation.width}:{}),
+  ...(p.generation?.depth?{depth:p.generation.depth}:{})
+ }));
+ const request={...indoor,rooms:records};
+ // The current MAP_DATA place list defines the scene. Ignore any external roomCount.
+ delete request.roomCount;
+ const model=buildIndoorLayout(request),walls=buildIndoorWalls(model);
+ const exclusions=exclusionsFor(model);
+ const rooms=Object.fromEntries(model.rooms.map(r=>[r.id,{...r,h:r.bottom-r.y,shape:r.shape,poly:r.poly||rectangle(r.x,r.y,r.w,r.bottom-r.y)}]));
+ const floorPolygons=[
+  ...model.rooms.map(r=>asRegion('room:'+r.id,rooms[r.id].poly)),
+  ...model.floors.map((poly,i)=>asRegion('corridor:'+i,poly)),
+  ...model.thresholds.map((v,i)=>asRegion('threshold-floor:'+i,v.poly))
+ ];
+ const exclusionZones=exclusions.map(z=>({...asRegion(z.id,z.poly),kind:z.kind}));
+ const actorZones=[],suggestedAnchors={},safeAreas={};
+ for(const r of model.rooms){
+  const v=positions(r.id,rooms[r.id].poly,exclusions,12);
+  actorZones.push(...v.regions);suggestedAnchors[r.id]=v.anchors;
+  safeAreas[r.id]=v.regions;
+ }
+ const corridorZones=[],corridorAnchors=[];
+ for(let i=0;i<model.floors.length;i++){
+  const p=model.floors[i];
+  // Exclude overlapping rooms and void areas from corridor actor zones.
+  const blockers=[...exclusions,...model.rooms.map(r=>({poly:rooms[r.id].poly}))];
+  try{const v=positions('corridor:'+i,p,blockers,12);corridorZones.push(...v.regions);corridorAnchors.push(...v.anchors)}catch(e){
+   // A short connector can have no safe standing area; never manufacture one.
+   if(!e.message.startsWith('No safe actor surface'))throw e;
+  }
+ }
+ actorZones.push(...corridorZones);
+ for(const p of places)if(!suggestedAnchors[p.id]?.length)throw Error('Missing safe indoor anchor for '+p.id);
+ return {rooms,model,walls,bounds:model.bounds,floorPolygons,actorZones,exclusionZones,suggestedAnchors,corridorAnchors,safeAreas,routes:[]};
+}
+export function indoorActorPoint(geometry,placeId,position){
+ const zones=geometry.safeAreas[placeId];
+ if(!zones)throw Error('Actor references room outside generated scene: '+placeId);
+ if(position){
+  if(!zones.some(r=>insidePolygon(position.x,position.y,r.points.map(p=>[p.x,p.y]))))
+   throw Error('Indoor actor position outside verified safe floor: '+placeId);
+  return position;
+ }
+ const anchor=geometry.suggestedAnchors[placeId]?.[0];
+ if(!anchor)throw Error('No safe NPC anchor in room: '+placeId);
+ return anchor;
 }
