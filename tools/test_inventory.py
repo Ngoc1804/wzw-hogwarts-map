@@ -25,8 +25,10 @@ class Inventory(unittest.TestCase):
             for entity in items.values():
                 if entity is not None:self.assertIn(entity,ids)
         self.assertNotIn('h2-place-37',ids)
-    def test_uploaded_v3_ids_remain_available(self):
-        audit=json.loads((ROOT/'elements/docs/asset-audit.json').read_text())
-        self.assertEqual(audit['v3Count'],245);self.assertEqual(audit['v3MissingIds'],[])
-        self.assertEqual(audit['finalCount'],366)
+    def test_catalog_is_the_only_asset_inventory(self):
+        catalog=json.loads((ROOT/'elements/catalog.json').read_text())
+        expected={e['file'] for e in catalog['elements']}
+        actual={'assets/'+p.name for p in (ROOT/'elements/assets').glob('*.svg')}
+        self.assertEqual(expected,actual)
+        self.assertEqual(len(expected),len(catalog['elements']))
 if __name__=='__main__':unittest.main()

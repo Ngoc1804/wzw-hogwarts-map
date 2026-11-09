@@ -1,150 +1,44 @@
 {
-  "baseCommit": "58cf5917d85fbbfefa5fcfa1d1190558b8699700",
-  "canonicalAtlas": "index.html",
-  "maps": 13,
-  "onlyNewMap": "ministry-8-10",
-  "unapprovedMapsIncluded": false,
-  "previous12MapRecordsIdentical": true,
-  "sharedVectorsUnchanged": true,
-  "htmlBytes": 949511,
-  "htmlSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17",
-  "tests": {
-    "atlas": 5,
-    "ministry": 2
+  "date": "2026-11-09",
+  "assetBaselineCommit": "9b1562a",
+  "assetCount": 259,
+  "houseMasters": 18,
+  "treeMasters": 12,
+  "specialTrees": 2,
+  "assetFilesUnchanged": true,
+  "assetOrphans": 0,
+  "atlasOwnedByOtherSession": "untouched",
+  "atlasHtmlUnchanged": true,
+  "checks": {
+    "atlasStructure": "13 maps, references valid",
+    "atlasTests": 5,
+    "ministryTests": 2,
+    "inventoryTests": 3,
+    "sceneryTests": 3,
+    "uiTests": 3,
+    "gallery": "passed"
   },
-  "browser": {
-    "engine": "Chromium",
-    "errors": [],
-    "targetsChecked": 32,
-    "liftFocus": true,
-    "floor10ScrollTop": 947,
-    "h1PauseResume": true,
-    "exportReopened": true,
-    "mobile": {
-      "width": 390,
-      "noHorizontalOverflow": true,
-      "tapInspector": true
-    }
-  },
-  "assetUiAtlasAudit": {
-    "baseline": "a73be27",
-    "date": "2026-11-09",
-    "canonicalHtmlUnchanged": true,
-    "assetCount": 366,
-    "v3Count": 245,
-    "metadataRestored": 231,
-    "metadataNotTransferred": 14,
-    "newTemplateAssets": 63,
-    "removedDuplicateFiles": 2,
-    "worldAtlasLocations": 346,
-    "tests": {
-      "atlas": 5,
-      "ministry": 2,
-      "ui": 3,
-      "gallery": "passed",
-      "houseRegeneration": "13 canonical assets passed",
-      "svgValidation": "366 passed"
-    },
-    "browser": {
-      "newAssetGeometryChecked": 63,
-      "uiShell": true,
-      "patrolAndCrowdTags": true,
-      "reducedMotionTwoFeet": true,
-      "pageErrors": []
-    },
-    "notComplete": [
-      "live MAP_DATA integration",
-      "full canon spatial graph",
-      "every inline template shape promoted to an asset"
+  "browser": "not rerun: no changes to HTML, CSS, SVG, palettes, or viewer scripts; visual baseline remains 9b1562a",
+  "cleanup": {
+    "removedFiles": [
+      "tools/asset-review.html",
+      "tools/report_asset_review.py",
+      "tools/audit_assets.py",
+      "elements/docs/functional-review.json",
+      "elements/docs/FUNCTIONAL_REVIEW.md",
+      "elements/docs/asset-audit.json",
+      "elements/docs/scenery-consolidation.json",
+      "elements/scripts/svgkit.py",
+      "elements/requirements.txt",
+      "docs/STEPS_1_3.md"
     ],
-    "report": "elements/docs/ASSET_GAPS.md"
-  },
-  "semanticAtlasAndFunctionalReview": {
-    "date": "2026-11-09",
-    "rawInteractionIds": 346,
-    "semanticPlaces": 138,
-    "worldAtlasJsonBytes": 9420,
-    "atlasAndReadableDocBytes": 14184,
-    "previousAtlasAndDocBytes": 276631,
-    "allAtlasSourceAndTechnicalIndexBytes": 53856,
-    "assetsUnchanged": true,
-    "atlasHtmlUnchanged": true,
-    "reportOnly": true,
-    "mergeCandidates": 17,
-    "functionalGroups": 11,
-    "confirmedRemovals": 0,
-    "tests": {
-      "inventory": 3,
-      "reviewHtml": "366 cards, 17 merge candidates, ID search and image rendering passed; no page errors"
-    },
-    "notes": [
-      "No SVG assets deleted, rewritten or compressed",
-      "No new SVG created; HTML review shows existing artwork",
-      "Hybrid decor does not require top view",
-      "Published review HTML loads baseline asset images from jsDelivr; Internet required"
-    ]
-  },
-  "sceneryConsolidation": {
-    "baseline": "5bae4f7",
-    "date": "2026-11-09",
-    "oldAssetCount": 366,
-    "newAssetCount": 247,
-    "houseBases": 9,
-    "treeBases": 11,
-    "woodMasonryBasic": [
-      3,
-      3,
-      3
+    "removedBytes": 2093199,
+    "closedPrs": [
+      1,
+      2
     ],
-    "fixedDiagonRoofWallJoins": 68,
-    "fixedChimneyJoins": 36,
-    "other12MapsUnchanged": true,
-    "interactiveIdsUnchanged": true,
-    "tests": {
-      "atlas": 5,
-      "ministry": 2,
-      "inventory": 3,
-      "gallery": "passed",
-      "svgValidation": "247 passed"
-    },
-    "browser": {
-      "sceneryAssets": 20,
-      "mapCount": 13,
-      "h1PauseResume": true,
-      "pageErrors": []
-    },
-    "canonResearchStatus": "research/design brief with sources; full book-canon registry still incomplete"
-  },
-  "neutralSceneryRedesign": {
-    "date": "2026-11-09",
-    "baseline": "54ce01a",
-    "assets": 259,
-    "houseMasters": 18,
-    "treeMasters": 12,
-    "specialTrees": 2,
-    "colorPalettesSeparate": true,
-    "diagonRoofFacesRebuilt": 69,
-    "chimneyGapExtensions": 27,
-    "tests": {
-      "scenery": 3,
-      "inventory": 3,
-      "atlas": 5,
-      "ministry": 2,
-      "gallery": "passed",
-      "svg": "259 passed"
-    },
-    "browser": {
-      "neutralModels": 32,
-      "paletteSwitchChangesPaintNotGeometry": true,
-      "treeFilter": 14,
-      "woodFilter": 6,
-      "h1PauseResume": true,
-      "pageErrors": []
-    },
-    "visualChecks": [
-      "full neutral contact sheet",
-      "warm tree contact sheet",
-      "Diagon overview after restoring original facade uses and repairing roof geometry"
-    ]
+    "deletedObsoleteBranches": 5,
+    "defaultBranchChange": "blocked: GitHub API 403 Resource not accessible by integration",
+    "remainingBranches": "demo-1 and main, synchronized by fast-forward; main remains default until settings changed"
   }
 }

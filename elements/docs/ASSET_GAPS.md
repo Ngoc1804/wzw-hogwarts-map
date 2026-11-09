@@ -10,6 +10,6 @@ Kho hiện 259 mẫu. Nhà: 6 gỗ, 6 gạch/tường, 6 basic; cây: 12 hình k
 | Canon atlas | Research độc lập toàn cõi, không giới hạn vào 13 template; xem docs/research/ATLAS_DESIGN.md |
 | Phòng chưa có template | Bộ dựng hybrid phải dùng base/asset; không đòi mọi decor có bản top |
 
-V3 đã đối chiếu ở đợt trước. Không phục hồi 366 mẫu hoặc generator nhà đời cũ. Nhà/cây vừa lọc theo yêu cầu người dùng hiện tại; 17 ứng viên nội thất trong FUNCTIONAL_REVIEW.md vẫn chờ duyệt.
+V3 đã đối chiếu ở đợt trước. Không phục hồi 366 mẫu hoặc generator nhà đời cũ. Nhà/cây vừa lọc theo yêu cầu người dùng hiện tại; Các đề xuất nội thất cũ không được tự áp dụng: giữ nguyên bộ 259 asset hiện hành.
 
 Các master nhà/cây mới dùng CSS custom properties; palette nằm riêng ở palettes.json. So sánh hình trung tính trước khi thay màu. Không sinh ID mới vì đổi màu/xoay tán.

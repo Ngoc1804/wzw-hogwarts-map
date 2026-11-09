@@ -53,10 +53,16 @@ Nhánh chỉ giữ bản hiện hành. Không lưu thêm index-v*.html, bản ZI
 
 Chọn Bộ Pháp thuật · Tầng 8–10 trong menu. Atrium, Bảo mật và Xét xử xếp dọc, nối bằng lift 8↔9 và cầu thang 9↔10. Xem `docs/MINISTRY_8_10.md` và source `tools/build_ministry.py`.
 
-## UI, atlas tra cứu và audit asset
+## Bộ hiện hành và bước tiếp theo
 
-- [UI khóa từ demo-1](ui/README.md)
-- [Atlas không gian](docs/ATLAS.md) và [dữ liệu](maps/world-atlas.json)
-- [Đối chiếu V3, tách nhà 2.5D và phần thiếu](elements/docs/ASSET_GAPS.md)
+- **259 asset** trong `elements/catalog.json` và `elements/assets/`; không có file SVG mồ côi.
+- **18 base nhà** (6 gỗ, 6 tường, 6 basic), **12 cây hình khối riêng + 2 cây đặc biệt**.
+- Hình gốc trung tính; màu là instance/palette tại `elements/palettes.json`.
+- Gallery đầy đủ: `elements/index.html`. Bản duyệt nhà/cây offline duy nhất: `tools/scenery-review.html`.
+- Nguồn sinh mẫu hiện hành: `elements/scripts/redesign_scenery.py`; dựng bản duyệt: `python tools/build_scenery_review.py`.
+- UI/nhãn/footsteps đã khóa nằm trong `ui/`, chưa nối thành engine MAP_DATA.
+- Phần atlas canon do phiên khác phụ trách; không lấy danh mục template hiện tại làm giới hạn toàn thế giới.
 
-[Rà soát công dụng 259 asset và dự kiến dung lượng](elements/docs/FUNCTIONAL_REVIEW.md): chưa áp dụng gộp/bỏ. Atlas đọc được chỉ giữ phòng/địa điểm; ID click kỹ thuật nằm riêng trong `maps/interaction-index.json`.
+Sau khi nhận atlas: chốt schema MAP_DATA và bridge engine → ghép UI cố định → renderer template/hybrid có seed và lưu bố cục → actor/hint/fog → kiểm thử HTML shell trong Google AI Studio qua jsDelivr ghim commit. Không đưa NPC/quest/state RP vào GitHub.
+
+Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phiên bản; bản cũ tra trong lịch sử Git.
