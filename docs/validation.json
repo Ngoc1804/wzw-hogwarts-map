@@ -85,5 +85,18 @@
       "390x844"
     ],
     "aiStudio": "HTML shell prepared; actual AI Studio session not yet verified"
+  },
+  "templatePlacementFix": {
+    "date": "2026-11-09",
+    "outdoorMappingCases": 12,
+    "actorsPerCase": 4,
+    "checks": [
+      "footprint origin below artwork",
+      "footprint screen scale stable across zoom and mobile",
+      "13 templates mount",
+      "offline export reload",
+      "18 Node contract/UI tests"
+    ],
+    "limitations": "bounding-box heuristic, not authored door/floor anchors or collision avoidance"
   }
 }
