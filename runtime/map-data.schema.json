@@ -450,7 +450,9 @@
                 "round",
                 "polygon",
                 "straight",
-                "curved"
+                "curved",
+                "cross",
+                "loop"
               ]
             },
             "furnishings": {

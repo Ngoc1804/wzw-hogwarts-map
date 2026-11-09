@@ -51,5 +51,22 @@
     "approvedArtworkAndUiUnchanged": true,
     "atlasFilesUnchanged": true,
     "implementation": "schema, validation, planning and persistence adapter; no complete geometry renderer or AI Studio integration"
+  },
+  "corridorGeometryDemo": {
+    "types": [
+      "straight",
+      "L",
+      "T",
+      "cross",
+      "U",
+      "curved",
+      "loop"
+    ],
+    "rooms": 16,
+    "geometryTests": 3,
+    "browser": "highlights, room click, zoom, no duplicate/missing IDs, offline HTML download and reopen",
+    "canonicalAtlasUnchanged": true,
+    "assetLibraryUnchanged": true,
+    "status": "prototype geometry, not full MAP_DATA renderer"
   }
 }

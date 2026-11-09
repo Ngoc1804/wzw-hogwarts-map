@@ -31,3 +31,7 @@ Node 24+ dùng được các module này; trình duyệt hiện đại cần JSO
 Kiểm tra: `node --test tools/test_map_data.mjs` từ root repo.
 
 Khi index atlas thay đổi, chạy `python tools/sync_template_registry.py` để cập nhật adapter; lệnh này không sửa maps/*.
+
+## Prototype hình học hành lang
+
+`corridors.mjs` có 7 loại: straight, L, T, cross, U, curved, loop; trả path/ports theo kích thước đầu vào. `tools/corridor-demo.html` là một mạng mẫu nối 16 phòng với asset hiện hành. Dựng lại bằng `python tools/build_corridor_demo.py`. Đây là test hình học, chưa tự bố trí từ mọi MAP_DATA, chưa nối UI/gameplay. Không có persistence bắt buộc giữa các Preview độc lập.
