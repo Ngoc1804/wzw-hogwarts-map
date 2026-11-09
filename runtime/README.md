@@ -35,3 +35,7 @@ Khi index atlas thay đổi, chạy `python tools/sync_template_registry.py` đ�
 ## Trạng thái hành lang
 
 Demo và bộ dựng hình hành lang cũ đã bị loại bỏ khỏi source hiện hành theo yêu cầu người dùng. Renderer thay thế chưa triển khai. Kế hoạch phát triển chưa được người dùng duyệt và phải được thảo luận trong chat trước khi đưa lên GitHub.
+
+## Viewer test template
+
+`template-viewer.mjs` và bundle phát hành `template-bundle.js` nối validator/UI vào atlas tĩnh. Mở `../ui/template-preview.html`; xem `../docs/TEMPLATE_TEST.md`. Viewer này không gọi resolver/prepareMap của nhánh generated, không yêu cầu crop và không dùng seed/storage. Đây là chế độ QA toàn cảnh công khai; không thay đổi hợp đồng /MAP cục bộ hiện hành.

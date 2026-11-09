@@ -74,3 +74,7 @@ Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phi�
 - [JSON Schema 1.0.0](runtime/map-data.schema.json)
 - [Ví dụ template](runtime/examples/local-template.json), [ví dụ hybrid](runtime/examples/local-generated.json)
 - Kiểm tra: `node --test tools/test_map_data.mjs`. Đây là nền hợp đồng/resolver; UI và renderer vận hành còn cần ghép.
+
+## Test template có UI
+
+Bản test tách biệt: [HTML shell ghim commit](ui/template-preview.html), [hướng dẫn và giới hạn](docs/TEMPLATE_TEST.md). Đã nối MAP_DATA validator → template SVG → UI/ribbon/footsteps/inspector. Chỉ xem template công khai; không chạy generated/hành lang, crop, fog hoặc storage. AI Studio thật chưa được nghiệm thu.
