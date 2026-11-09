@@ -75,3 +75,7 @@ Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phi�
 - [Ví dụ template](runtime/examples/local-template.json), [ví dụ hybrid](runtime/examples/local-generated.json)
 - Kiểm tra: `node --test tools/test_map_data.mjs`. Đây là nền hợp đồng/resolver; UI và renderer vận hành còn cần ghép.
 
+
+## Xây lại mặt bằng trong nhà
+
+Demo corridor và cơ chế dựng hình cũ đã gỡ. [Kế hoạch thay thế theo QA V2](docs/INDOOR_LAYOUT_PLAN.md): hành lang thành vùng sàn liên tục, phòng bám sát, cửa thông trực tiếp, kiểm tra hình học và lưu layout ổn định. Renderer mới chưa triển khai.

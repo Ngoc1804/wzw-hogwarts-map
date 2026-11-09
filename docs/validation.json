@@ -52,21 +52,26 @@
     "atlasFilesUnchanged": true,
     "implementation": "schema, validation, planning and persistence adapter; no complete geometry renderer or AI Studio integration"
   },
-  "corridorGeometryDemo": {
-    "types": [
-      "straight",
-      "L",
-      "T",
-      "cross",
-      "U",
-      "curved",
-      "loop"
+  "indoorLayoutRebuild": {
+    "date": "2026-11-09",
+    "status": "rejected demo and geometry removed; replacement planned, not implemented",
+    "reference": "WIZAMAP_QA_V2_Interactive (1).html",
+    "referenceSha256": "26d6073fbcc9c3fb5957e56f8925dfc8db8530e4f16268114966c57d48c9ca33",
+    "plan": "docs/INDOOR_LAYOUT_PLAN.md",
+    "removedGeometryFiles": [
+      "runtime/corridors.mjs",
+      "tools/test_corridors.mjs"
     ],
-    "rooms": 16,
-    "geometryTests": 3,
-    "browser": "highlights, room click, zoom, no duplicate/missing IDs, offline HTML download and reopen",
-    "canonicalAtlasUnchanged": true,
-    "assetLibraryUnchanged": true,
-    "status": "prototype geometry, not full MAP_DATA renderer"
+    "removedEarlier": [
+      "tools/corridor-demo.html",
+      "tools/build_corridor_demo.py"
+    ],
+    "checks": {
+      "mapDataTests": 15,
+      "atlasTests": 5,
+      "atlasValidation": "13 maps, references valid",
+      "diffCheck": "passed",
+      "browser": "not rerun: no rendering changes; replacement renderer not implemented"
+    }
   }
 }

@@ -32,6 +32,8 @@ Kiểm tra: `node --test tools/test_map_data.mjs` từ root repo.
 
 Khi index atlas thay đổi, chạy `python tools/sync_template_registry.py` để cập nhật adapter; lệnh này không sửa maps/*.
 
-## Prototype hình học hành lang
+## Xây lại mặt bằng trong nhà
 
-`corridors.mjs` có 7 loại: straight, L, T, cross, U, curved, loop; trả path/ports theo kích thước đầu vào. Bản thử các phòng rời nối bằng nhánh dài đã bị người dùng loại bỏ; không tái tạo hoặc dùng làm mẫu. Chuẩn mới là cụm phòng sát hành lang theo QA V2. Đây là test hình học, chưa tự bố trí từ mọi MAP_DATA, chưa nối UI/gameplay. Không có persistence bắt buộc giữa các Preview độc lập.
+Demo và bộ dựng hình hành lang cũ đã bị loại bỏ hoàn toàn khỏi cây source hiện hành. Không dùng lại cơ chế vẽ các path rồi nối phòng rời bằng nhánh dài.
+
+[Kế hoạch xây lại theo QA V2](../docs/INDOOR_LAYOUT_PLAN.md) mô tả nền hình học, các giai đoạn, tiêu chí nghiệm thu và tích hợp MAP_DATA. Đây là kế hoạch; renderer mới chưa được triển khai. Các khai báo loại phòng/hình dạng trong schema không phải bộ dựng hình.
