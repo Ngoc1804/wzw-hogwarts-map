@@ -109,6 +109,231 @@
     "P-7abe41594af2ff": {
       "pitch-static": "quidditch-pitch",
       "h1": "quidditch-pitch"
+    },
+    "P-143a2447e31c2c": {
+      "h1": "hagrid"
+    },
+    "P-96d14a7a982d4e": {
+      "h1": "greenhouses"
+    },
+    "P-9bf6e71ff3108b": {
+      "h1": "boathouse"
+    },
+    "P-7f18ace1f8b2d7": {
+      "h1": "boathouse"
+    },
+    "P-7904b8045f6614": {
+      "h1": "forest"
+    },
+    "P-7debd31a87a61e": {
+      "h1": "hagrid"
+    },
+    "P-585c0776dc54a3": {
+      "h2": "wyvern-court"
+    },
+    "P-442f7275b6c832": {
+      "h2": "mistletoe-court"
+    },
+    "P-399f2c035627f1": {
+      "h2": "forecourt"
+    },
+    "P-6e4b06065f0997": {
+      "hall": "sorting-waiting"
+    },
+    "P-14c5870146b747": {
+      "hall": "broom-cupboard"
+    },
+    "P-ba63b94f595caf": {
+      "hall": "courtyard"
+    },
+    "P-ce57067fcd107f": {
+      "hall": "hall-antechamber"
+    },
+    "P-d2a51c4e5a9cd6": {
+      "village-static": "village-square"
+    },
+    "P-81c7ab0cff5ac4": {
+      "village-static": "hogsmeade-homes"
+    },
+    "P-197b2052678b9d": {
+      "village-static": "hogsmeade-homes"
+    },
+    "P-ce64687addd09a": {
+      "village-static": "hogsmeade-shop-0"
+    },
+    "P-633d0bcb4ab87e": {
+      "village-static": "hogsmeade-shop-1"
+    },
+    "P-8bd319c866a655": {
+      "village-static": "hogsmeade-shop-2"
+    },
+    "P-eb74631b825f74": {
+      "village-static": "hogsmeade-shop-3"
+    },
+    "P-f29f8a2656ded8": {
+      "village-static": "hogsmeade-shop-4"
+    },
+    "P-561ef194a3cfad": {
+      "village-static": "hogsmeade-shop-5"
+    },
+    "P-8de3a27d58bad8": {
+      "village-static": "hogsmeade-shop-6"
+    },
+    "P-81a969eb658163": {
+      "village-static": "hogsmeade-shop-7"
+    },
+    "P-28dd4f052c2855": {
+      "village-static": "hogsmeade-shop-8"
+    },
+    "P-79710fe4d4bcfa": {
+      "village-static": "shrieking-shack"
+    },
+    "P-6575df3a62913f": {
+      "pitch-static": "quidditch-pitch"
+    },
+    "P-5a4fefc72d7d57": {
+      "pitch-static": "stands"
+    },
+    "P-09b9d228df78c4": {
+      "pitch-static": "commentary"
+    },
+    "P-638d3d8f890b97": {
+      "pitch-static": "pitch-room-0"
+    },
+    "P-12d570650689e2": {
+      "pitch-static": "pitch-room-1"
+    },
+    "P-a8f847e818afa1": {
+      "express": "kings-cross"
+    },
+    "P-3a9add588aa69a": {
+      "express": "kings-cross"
+    },
+    "P-47576b791ebc5b": {
+      "express": "hogsmeade-station"
+    },
+    "P-b879bbed8fdc49": {
+      "express": "hogsmeade-station"
+    },
+    "P-5889d83ab64879": {
+      "express": "standard-coach"
+    },
+    "P-38988e75264a65": {
+      "express": "express-coach-0"
+    },
+    "P-aab0be0508401d": {
+      "express": "express-coach-1"
+    },
+    "P-e1641c684d1741": {
+      "express": "express-coach-2"
+    },
+    "P-c901ae9bd25828": {
+      "express": "express-coach-3"
+    },
+    "P-c7788eabe9f16a": {
+      "diagon-knockturn": "da-leaky"
+    },
+    "P-4cb1d44097aaf0": {
+      "diagon-knockturn": "da-gringotts"
+    },
+    "P-04180946d36a33": {
+      "diagon-knockturn": "da-ollivanders"
+    },
+    "P-b652531fad15ad": {
+      "diagon-knockturn": "da-flourish"
+    },
+    "P-c342fdc0ef620b": {
+      "diagon-knockturn": "da-malkin"
+    },
+    "P-c97880d2883d88": {
+      "diagon-knockturn": "da-quidditch"
+    },
+    "P-83b46b70fcdcc6": {
+      "diagon-knockturn": "da-eeylops"
+    },
+    "P-c2473d02e0de42": {
+      "diagon-knockturn": "da-menagerie"
+    },
+    "P-bdd56dfa509b7c": {
+      "diagon-knockturn": "da-potage"
+    },
+    "P-065a853b8d7608": {
+      "diagon-knockturn": "da-fortescue"
+    },
+    "P-f4ef10f0794466": {
+      "diagon-knockturn": "da-gambol"
+    },
+    "P-5a0ec074efb106": {
+      "diagon-knockturn": "da-weasleys"
+    },
+    "P-58bb45e6da0252": {
+      "diagon-knockturn": "da-twilfitt"
+    },
+    "P-57a63e2aaa9159": {
+      "diagon-knockturn": "da-scribbulus"
+    },
+    "P-ece8b34b0783e7": {
+      "diagon-knockturn": "da-apothecary"
+    },
+    "P-9253053d400539": {
+      "diagon-knockturn": "da-robe-used"
+    },
+    "P-2b888eaec42438": {
+      "diagon-knockturn": "da-stationery"
+    },
+    "P-b08a347b7ef127": {
+      "diagon-knockturn": "ka-borgin"
+    },
+    "P-10ca277b3be7f2": {
+      "ministry2": "department-1"
+    },
+    "P-adc8756e94687f": {
+      "ministry2": "department-2"
+    },
+    "P-8372c04e802fdc": {
+      "ministry2": "department-3"
+    },
+    "P-4d4b012a451ee2": {
+      "ministry2": "department-4"
+    },
+    "P-3d600b63857ca0": {
+      "ministry2": "department-5"
+    },
+    "P-4247829f4f87d7": {
+      "ministry2": "department-6"
+    },
+    "P-8f8a0811461a67": {
+      "ministry2": "department-7"
+    },
+    "P-5b000833260ab3": {
+      "ministry-8-10": "ministry-fountain"
+    },
+    "P-44a4a4856bc09b": {
+      "ministry-8-10": "ministry-rotunda"
+    },
+    "P-86cd9a8defbb03": {
+      "ministry-8-10": "ministry-time"
+    },
+    "P-c089c78b883a86": {
+      "ministry-8-10": "ministry-prophecy"
+    },
+    "P-bd4a42764da881": {
+      "ministry-8-10": "ministry-death"
+    },
+    "P-fd24a44f33135c": {
+      "ministry-8-10": "ministry-brain"
+    },
+    "P-f6ff23e797445d": {
+      "ministry-8-10": "ministry-space"
+    },
+    "P-2c9c4c00c1d80b": {
+      "ministry-8-10": "ministry-love"
+    },
+    "P-9805ab2f38804f": {
+      "ministry-8-10": "ministry-court"
+    },
+    "P-bf3c24a146fb6a": {
+      "ministry-8-10": "ministry-waiting"
     }
   },
   "groups": [
@@ -2903,5 +3128,6 @@
     "P-f9c67c9c540345",
     "P-fd24a44f33135c",
     "P-ff62bf19892de9"
-  ]
+  ],
+  "bindingPolicy": "Explicitly checked against atlas template membership and runtime/templates.json technical keys; no fuzzy cross-map name guesses. Artwork group bindings may represent a region rather than a specific interior room."
 }
