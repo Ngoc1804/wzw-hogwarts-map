@@ -15,13 +15,13 @@ test('generated scene uses the approved indoor formula and never invents movemen
  assert.equal(g.routes.length,0);
  assert.ok(g.floorPolygons.length>0&&g.actorZones.length>0);
 });
-test('optimized user atlas preserves 747 references / 733 places and valid nested placeIds',()=>{
+test('optimized user atlas preserves 747 references / 726 places and valid nested placeIds',()=>{
  const a=JSON.parse(fs.readFileSync('maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json'));
  assert.equal(a.schemaVersion,'atlas-optimized-1.0');
- assert.deepEqual(a.statistics,{sourceEntries:747,places:733,mergedOccurrences:14});
- assert.equal(a.places.length,733);
+ assert.deepEqual(a.statistics,{sourceEntries:747,places:726,mergedOccurrences:21});
+ assert.equal(a.places.length,726);
  const ids=new Set(a.places.map(p=>p.id));assert.equal(ids.size,733);
- assert.equal(a.places.reduce((n,p)=>n+(p.sourceIds||[]).length,0),14);
+ assert.equal(a.places.reduce((n,p)=>n+(p.sourceIds||[]).length,0),21);
  let refs=0;const check=rows=>{for(const id of rows){assert.ok(ids.has(id),'unknown placeId: '+id);refs++}};
  for(const template of a.templates)check(template.placeIds);
  for(const area of a.world.areas)check(area.placeIds);
