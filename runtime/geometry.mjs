@@ -73,7 +73,16 @@ export function buildGeometry(plan,indoor={}){
  const request={...indoor,rooms:records,allowEmptyRooms:!records.length};
  // The current MAP_DATA place list defines the scene. Ignore any external roomCount.
  delete request.roomCount;
- const model=buildIndoorLayout(request),walls=buildIndoorWalls(model);
+ const model=buildIndoorLayout(request);
+ // One-room scenes occupy the whole scene without fabricating hallways or stairs.
+ if(roomPlaces.length===1&&!corridorPlaces.length){
+   model.floors=[];model.voids=[];model.thresholds=[];model.stair=null;
+   model.entrance=null;model.facades=[];model.windows=[];
+   const r=model.rooms[0],poly=r.poly||rectangle(r.x,r.y,r.w,r.bottom-r.y);
+   const xs=poly.map(p=>p[0]),ys=poly.map(p=>p[1]);
+   model.bounds=[Math.min(...xs)-55,Math.min(...ys)-85,Math.max(...xs)-Math.min(...xs)+110,Math.max(...ys)-Math.min(...ys)+150];
+ }
+ const walls=buildIndoorWalls(model);
  const exclusions=exclusionsFor(model);
  const rooms=Object.fromEntries(model.rooms.map(r=>[r.id,{...r,h:r.bottom-r.y,shape:r.shape,poly:r.poly||rectangle(r.x,r.y,r.w,r.bottom-r.y)}]));
  const floorPolygons=[
