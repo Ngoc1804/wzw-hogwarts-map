@@ -32,6 +32,23 @@ for area in src['world']['au_maps']:
 for f in src['hogwarts_castle']['floors']:
  for c in f['clusters']:
   for p in c['rooms']:add(p['name'],['Hogwarts',f['floor'],c['direction'],c['name']],id=p['id'])
+# Exact repeated named rooms in the same Hogwarts context; keep generic room names scoped.
+byname={}
+for key,row in list(rows.items()):
+ if row['name'].lower()=='phòng sinh hoạt chung':continue
+ byname.setdefault(norm(row['name']),[]).append(key)
+for name,keys in byname.items():
+ hog=[k for k in keys if k.startswith('HOG-')]
+ if len(hog)!=1:continue
+ canonical=rows[hog[0]]
+ for key in keys:
+  if key==hog[0] or rows[key]['bindings']:continue
+  row=rows.pop(key);canonical.setdefault('sourceIds',[]).append(key)
+  for path in row['paths']:
+   if path not in canonical['paths']:canonical['paths'].append(path)
+  for candidate in row['templateCandidates']:
+   if candidate not in canonical['templateCandidates']:canonical['templateCandidates'].append(candidate)
+  merged.append({'id':canonical['id'],'name':row['name'],'previousId':key,'reason':'exact same named Hogwarts room'})
 for row in rows.values():row['decision']='template-if-bound' if row['bindings'] else 'recipe-required';row['note']='Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically.'
 out={'schemaVersion':'1.0.0','places':list(rows.values()),'mergedReferences':merged,'policy':'Exact IDs and scoped aliases only. User-supplied floor/direction assignments are design input, not independently verified canon. No inferred adjacency.'}
 (R/'maps/decision-atlas.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')

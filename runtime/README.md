@@ -8,7 +8,7 @@ Schema duy nhất: `map-data.schema.json`. Chuyển từ 1.0.0: bỏ `layout`, `
 
 `viewer.mjs`: template/generated, crop theo các nơi hiển thị (không ép bán kính PC), fog polygon được chỉ định, actor/hint/inspector, pan/zoom, tải HTML offline. Nhân vật trong nhà ở template ngoài trời có ribbon trên công trình và không có dấu chân ngoài nhà. Nhân vật ngoài trời cần position được xác minh; chưa có bộ walkable polygon bao phủ 13 template. Không đoán đất hợp lệ từ bounding box.
 
-Recipe hiện hỗ trợ room rectangle/L/T/U/round/polygon; dựng hành lang nối theo đường vuông góc. Đồ nội thất hỗ trợ role desk/table/chair/bed/shelf/cabinet và phải vừa các ô sàn hợp lệ. Đây là renderer hình học cơ sở; chưa có biên tập cổng, stair/lift chi tiết, định tuyến tránh giao cắt giữa các hành lang hoặc hiệu ứng che khuất công trình chọn lọc. Không coi mặt bằng sinh ra là sơ đồ canon.
+Recipe hiện hỗ trợ room rectangle/L/T/U/round/polygon; dựng hành lang nối theo đường vuông góc. Đồ nội thất hỗ trợ role desk/table/chair/bed/shelf/cabinet hoặc ID bất kỳ trong 259 asset (tải khi cần, ghim cùng commit atlas) và phải vừa các ô sàn hợp lệ. Đây là renderer hình học cơ sở; chưa có biên tập cổng, stair/lift chi tiết, định tuyến tránh giao cắt giữa các hành lang hoặc hiệu ứng che khuất công trình chọn lọc. Không coi mặt bằng sinh ra là sơ đồ canon.
 
 Build: `python tools/build_runtime.py --out /tmp/wizamap --ref <full atlas commit>`; bundle phải được phát hành rồi loader ghim full commit chứa bundle. `tools/contract-fixture.json` chỉ là input của test, không đóng gói runtime.
 

@@ -62,7 +62,8 @@
       "inspector": {
         "overhear": "Bạn đang quan sát.",
         "observation": "Khu nhà kính ở ngay cạnh."
-      }
+      },
+      "environment": "inside"
     }
   ],
   "hints": [

@@ -1,6 +1,6 @@
 # Atlas: template hoặc dựng mới
 
-773 địa điểm; 55 tham chiếu lặp được hợp nhất.
+762 địa điểm; 66 tham chiếu lặp được hợp nhất.
 
 Tên giống nhau tại hai nhà/tầng khác nhau vẫn có ID riêng. Các quan hệ và tầng do file duyệt cung cấp chưa được xác minh canon độc lập.
 
@@ -195,9 +195,7 @@ Tên giống nhau tại hai nhà/tầng khác nhau vẫn có ID riêng. Các qua
 | place-672449926010defa | Sân giữa các cánh lâu đài |  | h2 |
 | place-18698b5889fc3f6e | Sân chân tháp trong khối lâu đài |  | h2 |
 | place-6fea1e9af2c73390 | Sảnh tiếp cận Đại Sảnh |  | hall |
-| place-45fcd27825c8170c | Phòng nhỏ cạnh Đại Sảnh |  | hall |
 | place-b10a340acf0a3cb4 | Phòng sau bàn giáo viên |  | hall |
-| place-f12d13ed46becbda | Phòng học số 11 |  | hall |
 | place-f5cfd3a99bb4109b | Gian chứa chổi / kho chổi |  | hall |
 | place-c085a423e78a5f23 | Sân trong gắn với map hall |  | hall |
 | place-95a87c3c64a558f4 | Lối lên Cầu thang Lớn tại Tiền sảnh |  | hall |
@@ -209,12 +207,8 @@ Tên giống nhau tại hai nhà/tầng khác nhau vẫn có ID riêng. Các qua
 | place-1a3de44fa68baed7 | Ký túc nữ Ravenclaw |  | ravenclaw-common |
 | place-a24fffb714654ea2 | Sảnh trong khu Ravenclaw |  | ravenclaw-common |
 | place-bf6d6ff988507866 | Khu đọc và học nhóm bên trong khu Ravenclaw |  | ravenclaw-common |
-| place-df3a57f392257885 | Ký túc nam Hufflepuff |  | hufflepuff-common |
-| place-6fcae567a92d0f72 | Ký túc nữ Hufflepuff |  | hufflepuff-common |
 | place-bc5895d882bc9c04 | Hành lang chung trong khu Hufflepuff |  | hufflepuff-common |
 | place-d7b182969a9ff23b | Khu học nhóm bên trong khu Hufflepuff |  | hufflepuff-common |
-| place-b56258940bac3050 | Ký túc nam Slytherin |  | slytherin-common |
-| place-648b97b7e15cdc6c | Ký túc nữ Slytherin |  | slytherin-common |
 | place-ff0b0964092686ee | Hành lang chung Slytherin dưới hồ |  | slytherin-common |
 | place-5d44ae61ef7de990 | Khu đọc và học nhóm bên trong khu Slytherin |  | slytherin-common |
 | place-486af1289331d937 | Phố chính Hogsmeade |  | village-static |
@@ -547,11 +541,6 @@ Tên giống nhau tại hai nhà/tầng khác nhau vẫn có ID riêng. Các qua
 | place-e1734846b156c924 | Phòng khách ngủ |  |  |
 | place-3f17d0e7a74c409b | Phòng sở thích |  |  |
 | place-eb4a99489439876e | Kho dưới mái |  |  |
-| place-2d36bfe09e3ac93e | CCC 07.18 |  |  |
-| place-3966d1d533a67579 | Tiền phòng CCC |  |  |
-| place-854bb02cc4090b1c | Phòng thư liên nhà CCC |  |  |
-| place-2a2a7f4c1e3e15d5 | Phòng viết CCC |  |  |
-| place-68b5901038d8306c | Kho hồ sơ CCC |  |  |
 | place-d9bae0f76aff4dbc | Phòng áp mái Liad |  |  |
 | HOG-HMNGM-N-01 | Hành lang đá dưới Tháp Thiên văn |  |  |
 | HOG-HMNGM-N-02 | Phòng Giả kim |  |  |
@@ -575,8 +564,8 @@ Tên giống nhau tại hai nhà/tầng khác nhau vẫn có ID riêng. Các qua
 | HOG-HMNGC-N-03 | Kho nguyên liệu Độc dược |  |  |
 | HOG-HMNGC-N-04 | Phòng chuẩn bị bài thực hành |  |  |
 | HOG-HMNGC-N-05 | Phòng rửa vạc |  |  |
-| HOG-HMNGC-E-02 | Ký túc nam Slytherin |  |  |
-| HOG-HMNGC-E-03 | Ký túc nữ Slytherin |  |  |
+| HOG-HMNGC-E-02 | Ký túc nam Slytherin |  | slytherin-common |
+| HOG-HMNGC-E-03 | Ký túc nữ Slytherin |  | slytherin-common |
 | HOG-HMNGC-E-04 | Hành lang Slytherin dưới hồ |  |  |
 | HOG-HMNGC-E-05 | Phòng học nhóm Slytherin |  |  |
 | HOG-HMNGC-S-01 | Phòng tiệc Tử nhật |  |  |
@@ -594,8 +583,8 @@ Tên giống nhau tại hai nhà/tầng khác nhau vẫn có ID riêng. Các qua
 | HOG-TNGBP-N-03 | Phòng chuẩn bị suất ăn |  |  |
 | HOG-TNGBP-N-04 | Phòng rửa dụng cụ nhà bếp |  |  |
 | HOG-TNGBP-N-05 | Hành lang hậu cần bếp |  |  |
-| HOG-TNGBP-E-02 | Ký túc nam Hufflepuff |  |  |
-| HOG-TNGBP-E-03 | Ký túc nữ Hufflepuff |  |  |
+| HOG-TNGBP-E-02 | Ký túc nam Hufflepuff |  | hufflepuff-common |
+| HOG-TNGBP-E-03 | Ký túc nữ Hufflepuff |  | hufflepuff-common |
 | HOG-TNGBP-E-04 | Hành lang Hufflepuff |  |  |
 | HOG-TNGBP-E-05 | Phòng học nhóm Hufflepuff |  |  |
 | HOG-TNGBP-S-01 | Phòng giặt là |  |  |
@@ -621,10 +610,10 @@ Tên giống nhau tại hai nhà/tầng khác nhau vẫn có ID riêng. Các qua
 | HOG-TNG1-E-05 | Kho dụng cụ sảnh Trung tâm |  |  |
 | HOG-TNG1-E-06 | Phòng học trống Đ-01 |  |  |
 | HOG-TNG1-S-03 | Phòng chờ trước Phân loại |  |  |
-| HOG-TNG1-S-04 | Phòng nhỏ cạnh Đại Sảnh |  |  |
+| HOG-TNG1-S-04 | Phòng nhỏ cạnh Đại Sảnh |  | hall |
 | HOG-TNG1-S-05 | Phòng giáo viên (Staff Room) |  |  |
 | HOG-TNG1-S-07 | Phòng tiếp khách nhà trường |  |  |
-| HOG-TNG1-W-01 | Phòng học số 11 |  |  |
+| HOG-TNG1-W-01 | Phòng học số 11 |  | hall |
 | HOG-TNG1-W-02 | Kho chổi (Broom Cupboard) |  |  |
 | HOG-TNG1-W-03 | Hành lang vào sân Biến hình |  |  |
 | HOG-TNG1-W-04 | Hành lang hướng sân Tứ giác |  |  |

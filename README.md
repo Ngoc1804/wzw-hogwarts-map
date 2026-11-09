@@ -60,7 +60,7 @@ Chọn Bộ Pháp thuật · Tầng 8–10 trong menu. Atrium, Bảo mật và X
 - Hình gốc trung tính; màu là instance/palette tại `elements/palettes.json`.
 - Gallery đầy đủ: `elements/index.html`. Bản duyệt nhà/cây offline duy nhất: `tools/scenery-review.html`.
 - Nguồn sinh mẫu hiện hành: `elements/scripts/redesign_scenery.py`; dựng bản duyệt: `python tools/build_scenery_review.py`.
-- UI/nhãn/footsteps đã khóa nằm trong `ui/`, chưa nối thành engine MAP_DATA.
+- UI/nhãn/footsteps nằm trong `ui/`, được nối qua runtime/viewer.mjs.
 - Phần atlas canon do phiên khác phụ trách; không lấy danh mục template hiện tại làm giới hạn toàn thế giới.
 
 Sau khi nhận atlas: chốt schema MAP_DATA và bridge engine → ghép UI cố định → renderer template/hybrid trong Preview một chiều → actor/hint/fog → kiểm thử HTML shell trong Google AI Studio qua jsDelivr ghim commit. Không đưa NPC/quest/state RP vào GitHub.
@@ -71,7 +71,7 @@ Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phi�
 
 - [Cơ chế /MAP](docs/MAP_FLOW.md)
 - [Hợp đồng, module và trạng thái triển khai](runtime/README.md)
-- [JSON Schema 1.0.0](runtime/map-data.schema.json)
+- [JSON Schema 2.0.0](runtime/map-data.schema.json)
 - Hai file ví dụ đã loại bỏ; runtime yêu cầu MAP_DATA RP, không tự hiển thị dữ liệu mẫu.
 - Kiểm tra: `node --test tools/test_map_data.mjs`. Đây là nền hợp đồng/resolver; UI và renderer vận hành còn cần ghép.
 

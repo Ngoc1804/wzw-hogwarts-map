@@ -3779,44 +3779,8 @@
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
     {
-      "id": "place-45fcd27825c8170c",
-      "name": "Phòng nhỏ cạnh Đại Sảnh",
-      "aliases": [],
-      "paths": [
-        [
-          "template",
-          "hall"
-        ]
-      ],
-      "templateCandidates": [
-        "hall"
-      ],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
       "id": "place-b10a340acf0a3cb4",
       "name": "Phòng sau bàn giáo viên",
-      "aliases": [],
-      "paths": [
-        [
-          "template",
-          "hall"
-        ]
-      ],
-      "templateCandidates": [
-        "hall"
-      ],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
-      "id": "place-f12d13ed46becbda",
-      "name": "Phòng học số 11",
       "aliases": [],
       "paths": [
         [
@@ -4031,42 +3995,6 @@
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
     {
-      "id": "place-df3a57f392257885",
-      "name": "Ký túc nam Hufflepuff",
-      "aliases": [],
-      "paths": [
-        [
-          "template",
-          "hufflepuff-common"
-        ]
-      ],
-      "templateCandidates": [
-        "hufflepuff-common"
-      ],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
-      "id": "place-6fcae567a92d0f72",
-      "name": "Ký túc nữ Hufflepuff",
-      "aliases": [],
-      "paths": [
-        [
-          "template",
-          "hufflepuff-common"
-        ]
-      ],
-      "templateCandidates": [
-        "hufflepuff-common"
-      ],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
       "id": "place-bc5895d882bc9c04",
       "name": "Hành lang chung trong khu Hufflepuff",
       "aliases": [],
@@ -4096,42 +4024,6 @@
       ],
       "templateCandidates": [
         "hufflepuff-common"
-      ],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
-      "id": "place-b56258940bac3050",
-      "name": "Ký túc nam Slytherin",
-      "aliases": [],
-      "paths": [
-        [
-          "template",
-          "slytherin-common"
-        ]
-      ],
-      "templateCandidates": [
-        "slytherin-common"
-      ],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
-      "id": "place-648b97b7e15cdc6c",
-      "name": "Ký túc nữ Slytherin",
-      "aliases": [],
-      "paths": [
-        [
-          "template",
-          "slytherin-common"
-        ]
-      ],
-      "templateCandidates": [
-        "slytherin-common"
       ],
       "bindings": {},
       "source": "user-review-unverified-canon",
@@ -9914,91 +9806,6 @@
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
     {
-      "id": "place-2d36bfe09e3ac93e",
-      "name": "CCC 07.18",
-      "aliases": [],
-      "paths": [
-        [
-          "Hogwarts › Tầng 8 · cánh Tây",
-          "CCC 07.18 · Hogwarts",
-          "Tầng 8 · cánh Tây"
-        ]
-      ],
-      "templateCandidates": [],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
-      "id": "place-3966d1d533a67579",
-      "name": "Tiền phòng CCC",
-      "aliases": [],
-      "paths": [
-        [
-          "Hogwarts › Tầng 8 · cánh Tây",
-          "CCC 07.18 · Hogwarts",
-          "Tầng 8 · cánh Tây"
-        ]
-      ],
-      "templateCandidates": [],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
-      "id": "place-854bb02cc4090b1c",
-      "name": "Phòng thư liên nhà CCC",
-      "aliases": [],
-      "paths": [
-        [
-          "Hogwarts › Tầng 8 · cánh Tây",
-          "CCC 07.18 · Hogwarts",
-          "Tầng 8 · cánh Tây"
-        ]
-      ],
-      "templateCandidates": [],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
-      "id": "place-2a2a7f4c1e3e15d5",
-      "name": "Phòng viết CCC",
-      "aliases": [],
-      "paths": [
-        [
-          "Hogwarts › Tầng 8 · cánh Tây",
-          "CCC 07.18 · Hogwarts",
-          "Tầng 8 · cánh Tây"
-        ]
-      ],
-      "templateCandidates": [],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
-      "id": "place-68b5901038d8306c",
-      "name": "Kho hồ sơ CCC",
-      "aliases": [],
-      "paths": [
-        [
-          "Hogwarts › Tầng 8 · cánh Tây",
-          "CCC 07.18 · Hogwarts",
-          "Tầng 8 · cánh Tây"
-        ]
-      ],
-      "templateCandidates": [],
-      "bindings": {},
-      "source": "user-review-unverified-canon",
-      "decision": "recipe-required",
-      "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
-    },
-    {
       "id": "place-d9bae0f76aff4dbc",
       "name": "Phòng áp mái Liad",
       "aliases": [],
@@ -10421,11 +10228,20 @@
           "HẦM NGỤC",
           "Đông",
           "Lối Slytherin dưới mặt hồ"
+        ],
+        [
+          "template",
+          "slytherin-common"
         ]
       ],
-      "templateCandidates": [],
+      "templateCandidates": [
+        "slytherin-common"
+      ],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-b56258940bac3050"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -10439,11 +10255,20 @@
           "HẦM NGỤC",
           "Đông",
           "Lối Slytherin dưới mặt hồ"
+        ],
+        [
+          "template",
+          "slytherin-common"
         ]
       ],
-      "templateCandidates": [],
+      "templateCandidates": [
+        "slytherin-common"
+      ],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-648b97b7e15cdc6c"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -10763,11 +10588,20 @@
           "TẦNG BẾP",
           "Đông",
           "Cụm Hufflepuff"
+        ],
+        [
+          "template",
+          "hufflepuff-common"
         ]
       ],
-      "templateCandidates": [],
+      "templateCandidates": [
+        "hufflepuff-common"
+      ],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-df3a57f392257885"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -10781,11 +10615,20 @@
           "TẦNG BẾP",
           "Đông",
           "Cụm Hufflepuff"
+        ],
+        [
+          "template",
+          "hufflepuff-common"
         ]
       ],
-      "templateCandidates": [],
+      "templateCandidates": [
+        "hufflepuff-common"
+      ],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-6fcae567a92d0f72"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -11249,11 +11092,20 @@
           "TẦNG 1",
           "Nam",
           "Entrance Hall – Great Hall"
+        ],
+        [
+          "template",
+          "hall"
         ]
       ],
-      "templateCandidates": [],
+      "templateCandidates": [
+        "hall"
+      ],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-45fcd27825c8170c"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -11303,11 +11155,20 @@
           "TẦNG 1",
           "Tây",
           "Transfiguration Courtyard approach"
+        ],
+        [
+          "template",
+          "hall"
         ]
       ],
-      "templateCandidates": [],
+      "templateCandidates": [
+        "hall"
+      ],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-f12d13ed46becbda"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -13967,11 +13828,19 @@
           "TẦNG 8",
           "Tây",
           "CCC / senior clubs (AU)"
+        ],
+        [
+          "Hogwarts › Tầng 8 · cánh Tây",
+          "CCC 07.18 · Hogwarts",
+          "Tầng 8 · cánh Tây"
         ]
       ],
       "templateCandidates": [],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-2d36bfe09e3ac93e"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -13985,11 +13854,19 @@
           "TẦNG 8",
           "Tây",
           "CCC / senior clubs (AU)"
+        ],
+        [
+          "Hogwarts › Tầng 8 · cánh Tây",
+          "CCC 07.18 · Hogwarts",
+          "Tầng 8 · cánh Tây"
         ]
       ],
       "templateCandidates": [],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-3966d1d533a67579"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -14003,11 +13880,19 @@
           "TẦNG 8",
           "Tây",
           "CCC / senior clubs (AU)"
+        ],
+        [
+          "Hogwarts › Tầng 8 · cánh Tây",
+          "CCC 07.18 · Hogwarts",
+          "Tầng 8 · cánh Tây"
         ]
       ],
       "templateCandidates": [],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-854bb02cc4090b1c"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -14021,11 +13906,19 @@
           "TẦNG 8",
           "Tây",
           "CCC / senior clubs (AU)"
+        ],
+        [
+          "Hogwarts › Tầng 8 · cánh Tây",
+          "CCC 07.18 · Hogwarts",
+          "Tầng 8 · cánh Tây"
         ]
       ],
       "templateCandidates": [],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-2a2a7f4c1e3e15d5"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -14039,11 +13932,19 @@
           "TẦNG 8",
           "Tây",
           "CCC / senior clubs (AU)"
+        ],
+        [
+          "Hogwarts › Tầng 8 · cánh Tây",
+          "CCC 07.18 · Hogwarts",
+          "Tầng 8 · cánh Tây"
         ]
       ],
       "templateCandidates": [],
       "bindings": {},
       "source": "user-review-unverified-canon",
+      "sourceIds": [
+        "place-68b5901038d8306c"
+      ],
       "decision": "recipe-required",
       "note": "Overview membership does not prove an interior floor plan. A template candidate without a binding cannot be mounted automatically."
     },
@@ -14540,6 +14441,72 @@
         "Nam",
         "Gryffindor entrance – common route"
       ]
+    },
+    {
+      "id": "HOG-TNG1-S-04",
+      "name": "Phòng nhỏ cạnh Đại Sảnh",
+      "previousId": "place-45fcd27825c8170c",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-TNG1-W-01",
+      "name": "Phòng học số 11",
+      "previousId": "place-f12d13ed46becbda",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-TNGBP-E-02",
+      "name": "Ký túc nam Hufflepuff",
+      "previousId": "place-df3a57f392257885",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-TNGBP-E-03",
+      "name": "Ký túc nữ Hufflepuff",
+      "previousId": "place-6fcae567a92d0f72",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-HMNGC-E-02",
+      "name": "Ký túc nam Slytherin",
+      "previousId": "place-b56258940bac3050",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-HMNGC-E-03",
+      "name": "Ký túc nữ Slytherin",
+      "previousId": "place-648b97b7e15cdc6c",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-TNG8-W-01",
+      "name": "CCC 07.18",
+      "previousId": "place-2d36bfe09e3ac93e",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-TNG8-W-02",
+      "name": "Tiền phòng CCC",
+      "previousId": "place-3966d1d533a67579",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-TNG8-W-03",
+      "name": "Phòng thư liên nhà CCC",
+      "previousId": "place-854bb02cc4090b1c",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-TNG8-W-04",
+      "name": "Phòng viết CCC",
+      "previousId": "place-2a2a7f4c1e3e15d5",
+      "reason": "exact same named Hogwarts room"
+    },
+    {
+      "id": "HOG-TNG8-W-05",
+      "name": "Kho hồ sơ CCC",
+      "previousId": "place-68b5901038d8306c",
+      "reason": "exact same named Hogwarts room"
     }
   ],
   "policy": "Exact IDs and scoped aliases only. User-supplied floor/direction assignments are design input, not independently verified canon. No inferred adjacency."

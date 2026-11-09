@@ -76,13 +76,20 @@
   "runtimeV2": {
     "schemaVersion": "2.0.0",
     "status": "implemented baseline; detailed limitations in docs/DEVELOPMENT_STATUS.md",
-    "nodeTests": 9,
+    "nodeTests": 10,
     "atlasTests": 5,
     "inventoryTests": 3,
     "sceneryTests": 3,
     "gallery": "259 passed",
     "chromium": "13 templates mounted; no page errors; generated, fog and walking status verified",
     "aiStudio": "not tested in authenticated Preview this session",
-    "mobileHardware": "not tested"
+    "mobileHardware": "not tested",
+    "offline": "Exported HTML reload via setContent with network blocked passed; file:// navigation blocked by managed Chrome policy",
+    "decisionAtlasPlaces": 762,
+    "mergedReferences": 66,
+    "ornamentPathsRemoved": {
+      "library": 29,
+      "embeddedAtlas": 5
+    }
   }
 }

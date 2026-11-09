@@ -1,8 +1,16 @@
 // Ephemeral layout, created only for this Preview. No storage or network writes.
 export function buildGeometry(plan){
- const rooms=Object.fromEntries(plan.places.map((p,i)=>[p.id,{id:p.id,x:80+i*340,y:80,w:240,h:['straight','curved'].includes(p.generation.shape)?80:200,shape:p.generation.shape,recipe:p.generation}]));
- const routes=plan.connections.map((c,i)=>{const a=rooms[c.from],b=rooms[c.to],y=340+i*46;return {...c,points:[[a.x+120,a.y+a.h],[a.x+120,y],[b.x+120,y],[b.x+120,b.y+b.h]]}});
- return {rooms,routes,bounds:[0,0,Math.max(400,plan.places.length*340),Math.max(420,400+routes.length*46)]};
+ const rooms={},floors=[...new Set(plan.places.map(p=>p.floor||''))];
+ let floorY=80;
+ for(const floor of floors){const list=plan.places.filter(p=>(p.floor||'')===floor);const order={north:0,west:1,core:2,east:3,south:4,tower:5};list.sort((a,b)=>(order[a.zone]??2)-(order[b.zone]??2));list.forEach((p,i)=>{rooms[p.id]={id:p.id,x:80+(i%3)*340,y:floorY+Math.floor(i/3)*300,w:240,h:['straight','curved'].includes(p.generation.shape)?80:200,shape:p.generation.shape,recipe:p.generation}});floorY+=Math.ceil(list.length/3)*300+100;}
+ const bounds=[0,0,Math.max(440,Math.min(3,plan.places.length)*340+140),floorY+140];
+ const occupied=new Set();const cell=20,key=(x,y)=>x+','+y;
+ const blocked=(x,y)=>Object.values(rooms).some(r=>x>r.x-18&&x<r.x+r.w+18&&y>r.y-18&&y<r.y+r.h+18);
+ function route(a,b){const start=[a.x+a.w/2,a.y+a.h+40],goal=[b.x+b.w/2,b.y+b.h+40];const queue=[{p:start,g:0,f:0}],best=new Map([[key(...start),0]]),prev=new Map();let found=false;
+ while(queue.length){queue.sort((a,b)=>a.f-b.f);const current=queue.shift(),[x,y]=current.p,k=key(x,y);if(current.g!==best.get(k))continue;if(x===goal[0]&&y===goal[1]){found=true;break}for(const [dx,dy]of [[20,0],[-20,0],[0,20],[0,-20]]){const nx=x+dx,ny=y+dy,nk=key(nx,ny);if(nx<20||ny<20||nx>bounds[2]-20||ny>bounds[3]-20||blocked(nx,ny))continue;const g=current.g+1+(occupied.has(nk)?3:0);if(g<(best.get(nk)??Infinity)){best.set(nk,g);prev.set(nk,[x,y]);queue.push({p:[nx,ny],g,f:g+(Math.abs(nx-goal[0])+Math.abs(ny-goal[1]))/cell})}}}
+ if(!found)throw Error('Không tìm được hành lang nối phòng; hãy giảm phòng hoặc tách tầng');let at=goal,ps=[goal];while(key(...at)!==key(...start)){at=prev.get(key(...at));ps.push(at)}ps.reverse();ps.forEach(p=>occupied.add(key(...p)));return [[start[0],a.y+a.h],...ps,[goal[0],b.y+b.h]];
+ }
+ const routes=plan.connections.map(c=>({...c,points:route(rooms[c.from],rooms[c.to])}));return {rooms,routes,bounds};
 }
 export function roomPath(r){
  const {x,y,w,h,shape}=r;
