@@ -83,7 +83,11 @@ async function render(data){assertMapData(data);plan=resolveMap(data);const id=p
  const occluders=exterior?(spatial?.occlusionRegions||[]).map(region=>{
   const allowed=EXTERIOR_OCCLUDERS[id]||[];
   if(!allowed.includes(region.targetId))throw Error('Occlusion target not approved for template: '+region.targetId);
-  const target=[...svg.querySelectorAll('[data-id]')].find(n=>n.dataset.id===(registry.templates[id].targets[region.targetId]||[])[0]);
+  const targets=registry.templates[id].targets[region.targetId]||[];
+  if(targets.length!==1&&!region.interactiveId)throw Error('Ambiguous occlusion building: '+region.targetId+'; specify interactiveId');
+  const interactiveId=region.interactiveId||targets[0];
+  if(!targets.includes(interactiveId))throw Error('Occlusion interactiveId not in approved building: '+interactiveId);
+  const target=[...svg.querySelectorAll('[data-id]')].find(n=>n.dataset.id===interactiveId);
   if(!target)throw Error('Occlusion target absent from SVG: '+region.targetId);
   return {id:region.id,target,contains:p=>pointInPolygon(p,region.points)};
  }):[];
