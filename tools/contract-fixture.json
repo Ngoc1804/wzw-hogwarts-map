@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "2.0.0",
   "campaignId": "demo-au",
   "worldId": "demo-world",
   "snapshotId": "turn-001",
@@ -11,82 +11,45 @@
     "quote": "Lạc có kế hoạch vẫn được tính là khám phá."
   },
   "view": {
-    "scopeId": "au-study-wing",
-    "spaceKind": "floor",
-    "preferredMode": "generated",
+    "scopeId": "hogwarts-grounds",
+    "spaceKind": "grounds",
+    "preferredMode": "auto",
     "templateId": null,
-    "centerPlaceId": "local-study",
+    "centerPlaceId": "local-greenhouses",
     "routePlaceIds": [
-      "local-study",
-      "local-corridor"
+      "local-greenhouses"
     ],
-    "maxHops": 1,
-    "maxPlaces": 12
+    "crop": true
   },
   "focus": {
     "pcActorId": "pc",
-    "actualPlaceId": "local-study",
+    "actualPlaceId": "local-greenhouses",
     "selectedId": null
   },
   "places": [
     {
-      "id": "local-study",
-      "name": "Phòng học phụ",
-      "atlasRef": null,
-      "kind": "room",
+      "id": "local-greenhouses",
+      "name": "Nhà kính",
+      "atlasRef": "greenhouses",
+      "kind": "greenhouse",
       "parentId": null,
-      "floor": "1",
-      "zone": "north",
+      "floor": null,
+      "zone": null,
       "inspector": {
-        "overhear": "Hoạt động mẫu trong campaign AU.",
-        "observation": "Bố cục mẫu, không phải vị trí canon."
+        "overhear": "Một nhóm học sinh đang chuẩn bị chậu.",
+        "observation": "Bàn dụng cụ để sát lối đi."
       },
-      "generation": {
-        "function": "study",
-        "shape": "L",
-        "furnishings": [
-          {
-            "role": "study-desk",
-            "count": 4
-          }
-        ]
-      }
-    },
-    {
-      "id": "local-corridor",
-      "name": "Hành lang khu học",
-      "atlasRef": null,
-      "kind": "corridor",
-      "parentId": null,
-      "floor": "1",
-      "zone": "north",
-      "inspector": {
-        "overhear": "Hoạt động mẫu trong campaign AU.",
-        "observation": "Bố cục mẫu, không phải vị trí canon."
-      },
-      "generation": {
-        "function": "circulation",
-        "shape": "straight",
-        "furnishings": []
-      }
+      "generation": null
     }
   ],
-  "connections": [
-    {
-      "id": "link-study",
-      "from": "local-study",
-      "to": "local-corridor",
-      "kind": "doorway",
-      "state": "open"
-    }
-  ],
+  "connections": [],
   "actors": [
     {
       "id": "pc",
       "name": "BẠN",
       "isPC": true,
       "entityType": "person",
-      "placeId": "local-study",
+      "placeId": "local-greenhouses",
       "tagType": "gryffindor",
       "role": null,
       "onPatrol": false,
@@ -107,7 +70,7 @@
       "id": "hint-pots",
       "packId": "pack-1992-09",
       "sourceQuestId": "help-pots",
-      "placeId": "local-study",
+      "placeId": "local-greenhouses",
       "type": "life",
       "title": "Chuyển chậu cần thêm một tay?",
       "priority": 50,
@@ -119,8 +82,7 @@
   ],
   "visibility": {
     "visiblePlaceIds": [
-      "local-study",
-      "local-corridor"
+      "local-greenhouses"
     ],
     "fogRegionIds": []
   },
@@ -133,10 +95,5 @@
       "pool": 0,
       "life": 6
     }
-  },
-  "layout": {
-    "scopeKey": "study-wing-layout",
-    "version": 1,
-    "stateRef": null
   }
 }

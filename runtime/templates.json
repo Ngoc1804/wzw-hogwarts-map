@@ -3,7 +3,7 @@
   "source": "maps/catalog.json + maps/interaction-index.json",
   "sourceHashes": {
     "maps/catalog.json": "e99b2088ddef8388c508a69f8988f9f4983b420f94e6452094d0d959aa2323b3",
-    "maps/interaction-index.json": "a98e68ba9b6595b0cd3196cb22cc929027409e47937e7f75b40063aa2b53eb6a"
+    "maps/interaction-index.json": "619a7335c8de062276100b75a60a3460d381de61c55be22d4b9c681888483178"
   },
   "templates": {
     "h1": {

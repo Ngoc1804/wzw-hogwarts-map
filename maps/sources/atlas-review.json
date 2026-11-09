@@ -1,0 +1,2707 @@
+{
+  "templates": [
+    {
+      "id": "h1",
+      "name": "Hogwarts và vùng phụ cận — ngoài trời",
+      "locations": [
+        "Bãi học bay",
+        "Bãi cỏ học tập quanh trường",
+        "Sân cỏ cạnh lâu đài",
+        "Bãi cỏ và đồng cỏ quanh Hogwarts",
+        "Đường dạo ngoài trời quanh Hogwarts",
+        "Đường mòn giữa Hogwarts và Hogsmeade",
+        "Đường tới nhà ga Hogsmeade",
+        "Lối vào Rừng Cấm",
+        "Bìa Rừng Cấm",
+        "Đường mòn Rừng Cấm",
+        "Khoảng rừng sâu",
+        "Khu nhân mã trong Rừng Cấm",
+        "Khu ổ nhện Aragog",
+        "Hồ Đen",
+        "Mặt hồ và khu vực trên thuyền",
+        "Bờ Hồ Đen",
+        "Đường dạo ven hồ",
+        "Bãi cỏ ven hồ",
+        "Bến thuyền Hogwarts",
+        "Nhà thuyền Hogwarts",
+        "Cây cổ thụ ven hồ",
+        "Lối đi và bãi đất ven hồ",
+        "Lều Hagrid và các phòng bên trong",
+        "Vườn bí Hagrid",
+        "Vườn nhà Hagrid",
+        "Đường tới lều Hagrid",
+        "Các nhà kính Hogwarts và các phòng bên trong",
+        "Vườn Thảo dược",
+        "Vườn cây gần nhà kính",
+        "Đường giữa các nhà kính",
+        "Nhà cú và khu vực bên trong Nhà cú",
+        "Lối lên Nhà cú",
+        "Liễu Roi và bãi đất quanh cây",
+        "Vùng sát sân Quidditch ngoài ranh sân",
+        "Đường tới sân Quidditch",
+        "Đường đi ngoài các tường bao lâu đài",
+        "Các bãi cỏ ngoài sân trong và ngoài khu cầu/cổng H2",
+        "Bến ga / bến thuyền Hogsmeade ngoài khu nhà ga",
+        "Các đường dạo và bãi đất trống ngoài trời quanh trường chưa thuộc template khác"
+      ]
+    },
+    {
+      "id": "h2",
+      "name": "Lâu đài Hogwarts — khối kiến trúc, sân trong và cầu",
+      "locations": [
+        "Ngoại thất khối lâu đài Hogwarts",
+        "Sân trước lâu đài trong khu cổng",
+        "Sân vào lâu đài trong khu cổng",
+        "Sân Viaduct",
+        "Sân Transfiguration (Biến hình)",
+        "Sân Bell Tower (Tháp Chuông)",
+        "Sân Quad",
+        "Sân Clock Tower (Đồng hồ)",
+        "Sân Wyvern",
+        "Sân Mistletoe",
+        "Hai sân trong lâu đài",
+        "Cầu cạn Viaduct",
+        "Cầu đá nối các cánh lâu đài",
+        "Cầu gỗ và các cầu nối thuộc khối lâu đài",
+        "Cổng chính Hogwarts",
+        "Sân giữa các cánh lâu đài",
+        "Sân chân tháp trong khối lâu đài"
+      ]
+    },
+    {
+      "id": "hall",
+      "name": "Tầng trệt & Đại Sảnh Hogwarts",
+      "locations": [
+        "Đại Sảnh",
+        "Tiền sảnh",
+        "Sảnh tiếp cận Đại Sảnh",
+        "Gian chờ trước Phân loại",
+        "Phòng nhỏ cạnh Đại Sảnh",
+        "Phòng sau bàn giáo viên",
+        "Phòng giáo viên",
+        "Văn phòng Filch",
+        "Phòng học số 11",
+        "Gian chứa chổi / kho chổi",
+        "Sân trong gắn với map hall",
+        "Lối lên Cầu thang Lớn tại Tiền sảnh"
+      ]
+    },
+    {
+      "id": "gryffindor-common",
+      "name": "Gryffindor · phòng chung và phòng ngủ",
+      "locations": [
+        "Phòng sinh hoạt chung Gryffindor",
+        "Ký túc nam Gryffindor",
+        "Ký túc nữ Gryffindor",
+        "Cầu thang trong khu Gryffindor",
+        "Khu sinh hoạt và học nhóm bên trong khu Gryffindor"
+      ]
+    },
+    {
+      "id": "ravenclaw-common",
+      "name": "Ravenclaw · phòng chung và phòng ngủ",
+      "locations": [
+        "Phòng sinh hoạt chung Ravenclaw",
+        "Ký túc nam Ravenclaw",
+        "Ký túc nữ Ravenclaw",
+        "Sảnh trong khu Ravenclaw",
+        "Khu đọc và học nhóm bên trong khu Ravenclaw"
+      ]
+    },
+    {
+      "id": "hufflepuff-common",
+      "name": "Hufflepuff · phòng chung và phòng ngủ",
+      "locations": [
+        "Phòng sinh hoạt chung Hufflepuff",
+        "Ký túc nam Hufflepuff",
+        "Ký túc nữ Hufflepuff",
+        "Hành lang chung trong khu Hufflepuff",
+        "Khu học nhóm bên trong khu Hufflepuff"
+      ]
+    },
+    {
+      "id": "slytherin-common",
+      "name": "Slytherin · phòng chung và phòng ngủ",
+      "locations": [
+        "Phòng sinh hoạt chung Slytherin",
+        "Ký túc nam Slytherin",
+        "Ký túc nữ Slytherin",
+        "Hành lang chung Slytherin dưới hồ",
+        "Khu đọc và học nhóm bên trong khu Slytherin"
+      ]
+    },
+    {
+      "id": "village-static",
+      "name": "Làng Hogsmeade",
+      "locations": [
+        "Phố chính Hogsmeade",
+        "Quảng trường Hogsmeade",
+        "Các ngõ ở Hogsmeade",
+        "Khu nhà dân Hogsmeade",
+        "Nhà dân trong template làng",
+        "Honeydukes và tầng hầm",
+        "Zonko’s",
+        "Gladrags",
+        "Scrivenshaft’s",
+        "Bưu điện Hogsmeade",
+        "Ba Cây Chổi và các phòng của quán",
+        "Dervish & Banges",
+        "Đầu Heo và các phòng của quán",
+        "Quán trà Madam Puddifoot",
+        "Lều Hú và các phòng bên trong",
+        "Các cửa hàng hiện trong làng",
+        "Apothecary tại Hogsmeade trong template"
+      ]
+    },
+    {
+      "id": "pitch-static",
+      "name": "Sân Quidditch · toàn khu",
+      "locations": [
+        "Sân Quidditch",
+        "Mặt sân thi đấu",
+        "Các khán đài Quidditch",
+        "Khu bình luận / phòng bình luận",
+        "Phòng thay đồ đội A",
+        "Phòng thay đồ đội B",
+        "Phòng thay đồ các đội",
+        "Kho chổi tại sân",
+        "Dãy phòng phụ của sân",
+        "Sân tập nhỏ trong quần thể Quidditch",
+        "Lối đi và sân trong ranh khu Quidditch"
+      ]
+    },
+    {
+      "id": "express",
+      "name": "Ga và Hogwarts Express",
+      "locations": [
+        "King’s Cross",
+        "Sân ga 9¾",
+        "Khu chờ lên tàu tại King’s Cross",
+        "Hogwarts Express",
+        "Đầu máy Hogwarts Express",
+        "Các toa Hogwarts Express",
+        "Toa thường",
+        "Toa mẫu Gryffindor",
+        "Toa mẫu Ravenclaw",
+        "Toa mẫu Hufflepuff",
+        "Toa mẫu Slytherin",
+        "Mọi buồng hành khách trong các toa",
+        "Hành lang toa",
+        "Lối nối giữa các toa",
+        "Ga Hogsmeade",
+        "Sân ga Hogsmeade (khu tàu)",
+        "Nhà ga Hogsmeade"
+      ]
+    },
+    {
+      "id": "diagon-knockturn",
+      "name": "Diagon Alley & Knockturn Alley",
+      "locations": [
+        "Hẻm Xéo",
+        "Hẻm Knockturn",
+        "Các ngõ phố nối Hẻm Xéo và Knockturn",
+        "Cái Vạc Lủng và các phòng trọ",
+        "Sân sau Cái Vạc Lủng",
+        "Gringotts và hệ thống hầm / kho tiền",
+        "Kho tiền 713",
+        "Kho tiền gia đình Potter",
+        "Kho tiền Lestrange",
+        "Ollivanders",
+        "Flourish & Blotts",
+        "Madam Malkin’s",
+        "Quality Quidditch Supplies",
+        "Eeylops Owl Emporium",
+        "Magical Menagerie",
+        "Potage’s Cauldrons",
+        "Florean Fortescue’s",
+        "Gambol & Japes",
+        "Weasleys’ Wizard Wheezes (nếu tồn tại theo thời kỳ)",
+        "Twilfitt & Tatting’s",
+        "Scribbulus",
+        "Apothecary",
+        "Tiệm đồ cũ",
+        "Tiệm áo chùng cũ",
+        "Tiệm bút lông và giấy da",
+        "Các tiệm, xưởng, quán trong bản đồ Diagon",
+        "Các nhà dân trên phố trong bản đồ Diagon",
+        "Borgin & Burkes",
+        "Tiệm cổ vật / cầm đồ tại Knockturn",
+        "Các cơ sở Knockturn khác trong template",
+        "Nhà dân và ngõ ở Knockturn"
+      ]
+    },
+    {
+      "id": "ministry2",
+      "name": "Bộ Pháp thuật · tầng 1–7",
+      "locations": [
+        "Tầng 1 – Văn phòng Bộ trưởng",
+        "Văn phòng Thứ trưởng / trợ lý Bộ trưởng",
+        "Tầng 2 – Thi hành Luật Pháp thuật",
+        "Trụ sở Thần Sáng",
+        "Văn phòng Sử dụng Pháp thuật Sai trái",
+        "Văn phòng Lạm dụng Đồ tạo tác Muggle",
+        "Khu hành chính Wizengamot",
+        "Tầng 3 – Tai nạn và Thảm họa Pháp thuật",
+        "Đội Đảo ngược Tai nạn Pháp thuật",
+        "Bộ phận Xóa trí nhớ",
+        "Ủy ban Biện minh với Muggle",
+        "Tầng 4 – Điều hòa và Kiểm soát Sinh vật",
+        "Bộ phận Quái thú",
+        "Bộ phận Sinh vật có tri giác",
+        "Bộ phận Linh hồn",
+        "Văn phòng Liên lạc Yêu tinh",
+        "Văn phòng Tư vấn Sinh vật gây hại",
+        "Tầng 5 – Hợp tác Pháp thuật Quốc tế",
+        "Khu thương mại / luật quốc tế",
+        "Văn phòng Liên lạc Pháp thuật Quốc tế",
+        "Tầng 6 – Giao thông Pháp thuật",
+        "Văn phòng Mạng Floo",
+        "Quản lý Chổi bay",
+        "Cơ quan Khóa Cảng",
+        "Văn phòng Cấp phép Độn thổ",
+        "Tầng 7 – Trò chơi và Thể thao Pháp thuật",
+        "Trụ sở Liên đoàn Quidditch Anh–Ireland",
+        "Câu lạc bộ Gobstones chính thức",
+        "Văn phòng Bằng sáng chế Lố bịch"
+      ]
+    },
+    {
+      "id": "ministry-8-10",
+      "name": "Bộ Pháp thuật · tầng 8–10",
+      "locations": [
+        "Tầng 8 – Atrium",
+        "Sảnh tiếp đón Bộ Pháp thuật",
+        "Khu an ninh Bộ Pháp thuật",
+        "Khu giao thông Floo Bộ Pháp thuật",
+        "Khu tiếp nhận khách Bộ Pháp thuật",
+        "Tầng 9 – Bộ Bảo mật",
+        "Sảnh tròn xoay",
+        "Phòng Thời gian",
+        "Sảnh Tiên tri",
+        "Phòng Tử thần",
+        "Phòng Não",
+        "Phòng Không gian",
+        "Phòng Tình yêu / phòng khóa kín",
+        "Tầng 10 – Khu xử án",
+        "Phòng xử án số 10",
+        "Phòng chờ xét xử",
+        "Phòng hỗ trợ xử án"
+      ]
+    }
+  ],
+  "world": {
+    "areas": [
+      {
+        "path": [
+          "Britain",
+          "Scotland",
+          "Highlands",
+          "Hogsmeade: đường phố và cơ sở"
+        ],
+        "places": [
+          "Hang Sirius trú ở vùng núi gần làng"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "London",
+          "Cửa ngõ và ga"
+        ],
+        "places": [
+          "Charing Cross Road",
+          "Ga Paddington",
+          "Tottenham Court Road",
+          "Quán cà phê Tottenham Court Road"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "London",
+          "Bệnh viện St Mungo",
+          "Tầng trệt"
+        ],
+        "places": [
+          "Sảnh tiếp nhận St Mungo",
+          "Khu điều trị tai nạn đồ tạo tác"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "London",
+          "Bệnh viện St Mungo",
+          "Tầng 1"
+        ],
+        "places": [
+          "Khu điều trị thương tích do sinh vật"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "London",
+          "Bệnh viện St Mungo",
+          "Tầng 2"
+        ],
+        "places": [
+          "Khu điều trị bệnh và nhiễm trùng pháp thuật"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "London",
+          "Bệnh viện St Mungo",
+          "Tầng 3"
+        ],
+        "places": [
+          "Khu điều trị ngộ độc độc dược và thực vật"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "London",
+          "Bệnh viện St Mungo",
+          "Tầng 4"
+        ],
+        "places": [
+          "Khu điều trị thương tổn do bùa chú",
+          "Phòng bệnh dài hạn Janus Thickey"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "London",
+          "Bệnh viện St Mungo",
+          "Tầng 5"
+        ],
+        "places": [
+          "Phòng trà khách thăm",
+          "Cửa hàng bệnh viện"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "London",
+          "Nhà ở / trụ sở"
+        ],
+        "places": [
+          "Số 12 Grimmauld Place / nhà Black",
+          "Sảnh nhà Black",
+          "Bếp nhà Black",
+          "Phòng khách nhà Black",
+          "Phòng ngủ Sirius Black",
+          "Phòng ngủ Regulus Black",
+          "Phòng ngủ khác nhà Black",
+          "Nhà Tonks (địa chỉ không xác định)",
+          "Nhà Kingsley Shacklebolt (địa chỉ không xác định)",
+          "Nhà Granger (địa chỉ không xác định)",
+          "Nhà Diggle (địa chỉ không xác định)",
+          "Nhà Gregorovitch (địa chỉ không xác định)",
+          "Số 11 Grimmauld Place",
+          "Số 13 Grimmauld Place"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "London",
+          "Địa điểm khác"
+        ],
+        "places": [
+          "Trại trẻ mồ côi của Tom Riddle",
+          "Phòng Tom Riddle ở trại trẻ",
+          "Văn phòng quản lý trại trẻ",
+          "Số 10 Downing Street / văn phòng Thủ tướng Muggle",
+          "Purge and Dowse (mặt tiền St Mungo)"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "Surrey",
+          "Little Whinging"
+        ],
+        "places": [
+          "Little Whinging",
+          "Privet Drive",
+          "Số 4 Privet Drive / nhà Dursley",
+          "Phòng khách Dursley",
+          "Bếp nhà Dursley",
+          "Phòng ăn nhà Dursley",
+          "Phòng ngủ Harry",
+          "Phòng ngủ Dudley",
+          "Phòng ngủ Vernon/Petunia",
+          "Gầm cầu thang nhà Dursley",
+          "Vườn nhà Dursley",
+          "Nhà bà Figg",
+          "Magnolia Crescent",
+          "Magnolia Road",
+          "Công viên Little Whinging",
+          "Số 2 Magnolia Crescent (địa chỉ được nhắc)",
+          "Số 7 Privet Drive"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "Tây Nam",
+          "Ottery St Catchpole"
+        ],
+        "places": [
+          "Làng Ottery St Catchpole",
+          "Hang Sóc / Nhà Weasley",
+          "Bếp Hang Sóc",
+          "Phòng khách Hang Sóc",
+          "Phòng ngủ Arthur & Molly",
+          "Phòng ngủ Ron",
+          "Phòng ngủ Ginny",
+          "Phòng ngủ Fred & George",
+          "Các phòng ngủ khác Hang Sóc",
+          "Gác mái Hang Sóc",
+          "Vườn Hang Sóc",
+          "Bãi chơi Quidditch sau nhà",
+          "Nhà Lovegood",
+          "Phòng sinh hoạt nhà Lovegood",
+          "Phòng Luna Lovegood",
+          "Phòng làm việc Xenophilius",
+          "Vườn nhà Lovegood",
+          "Nhà Diggory",
+          "Nhà Fawcett"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "Godric’s Hollow"
+        ],
+        "places": [
+          "Làng Godric’s Hollow",
+          "Quảng trường Godric’s Hollow",
+          "Nhà thờ Godric’s Hollow",
+          "Nghĩa địa Godric’s Hollow",
+          "Nhà Potter / Potter Cottage",
+          "Nhà Bathilda Bagshot",
+          "Nhà gia đình Dumbledore"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "Little Hangleton / Great Hangleton"
+        ],
+        "places": [
+          "Làng Little Hangleton",
+          "Làng Great Hangleton",
+          "Biệt thự Riddle",
+          "Nghĩa địa Little Hangleton",
+          "Nhà Gaunt",
+          "Quán The Hanged Man"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "Cokeworth / Spinner’s End"
+        ],
+        "places": [
+          "Cokeworth",
+          "Spinner’s End",
+          "Nhà Snape",
+          "Railview Hotel"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "Wiltshire"
+        ],
+        "places": [
+          "Trang viên Malfoy",
+          "Khuôn viên Malfoy Manor",
+          "Đại sảnh Malfoy Manor",
+          "Phòng khách Malfoy Manor",
+          "Hầm giam Malfoy Manor"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "Tinworth / ven biển"
+        ],
+        "places": [
+          "Làng Tinworth",
+          "Shell Cottage / nhà Bill và Fleur",
+          "Bếp Shell Cottage",
+          "Phòng khách Shell Cottage",
+          "Phòng ngủ Shell Cottage",
+          "Vườn Shell Cottage",
+          "Bờ biển gần Shell Cottage"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "England",
+          "Các địa điểm và nhà khác"
+        ],
+        "places": [
+          "Nhà cô Muriel",
+          "Nhà Hepzibah Smith",
+          "Nhà Alastor Moody",
+          "Nhà Barty Crouch Sr.",
+          "Nhà gia đình Longbottom (địa chỉ không xác định)",
+          "Nhà Slughorn ở tạm tại Budleigh Babberton",
+          "Budleigh Babberton",
+          "Upper Flagley",
+          "Rừng Dean",
+          "Bãi cắm trại trong Rừng Dean",
+          "Túp lều ngoài biển trong tập một",
+          "Nhà của Amos Diggory (nếu tách khỏi Ottery St Catchpole)"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "Phương tiện và tuyến đường"
+        ],
+        "places": [
+          "Xe Buýt Hiệp Sĩ",
+          "Phòng khách trên xe Buýt Hiệp Sĩ"
+        ]
+      },
+      {
+        "path": [
+          "Britain",
+          "Ngoài khơi, vị trí bí mật"
+        ],
+        "places": [
+          "Nhà tù Azkaban",
+          "Các dãy phòng giam Azkaban"
+        ]
+      },
+      {
+        "path": [
+          "France",
+          "Trường pháp thuật"
+        ],
+        "places": [
+          "Beauxbatons Academy of Magic"
+        ]
+      },
+      {
+        "path": [
+          "Bắc Âu",
+          "Trường pháp thuật"
+        ],
+        "places": [
+          "Durmstrang Institute (vị trí bí mật, chưa chốt nước)"
+        ]
+      },
+      {
+        "path": [
+          "Châu Âu",
+          "Vị trí không xác định",
+          "Nurmengard"
+        ],
+        "places": [
+          "Nurmengard"
+        ]
+      },
+      {
+        "path": [
+          "Albania",
+          "Rừng"
+        ],
+        "places": [
+          "Rừng Albania – nơi Voldemort trú ẩn"
+        ]
+      },
+      {
+        "path": [
+          "Romania",
+          "Khu bảo tồn"
+        ],
+        "places": [
+          "Khu nuôi/bảo tồn rồng Romania – nơi Charlie làm việc"
+        ]
+      },
+      {
+        "path": [
+          "United States",
+          "Massachusetts",
+          "Trường học"
+        ],
+        "places": [
+          "Ilvermorny School of Witchcraft and Wizardry"
+        ]
+      },
+      {
+        "path": [
+          "United States",
+          "New York",
+          "Cơ quan pháp thuật"
+        ],
+        "places": [
+          "MACUSA Headquarters"
+        ]
+      },
+      {
+        "path": [
+          "Japan",
+          "Minami Iwo Jima"
+        ],
+        "places": [
+          "Mahoutokoro School of Magic"
+        ]
+      },
+      {
+        "path": [
+          "Uganda",
+          "Mountains of the Moon"
+        ],
+        "places": [
+          "Uagadou School of Magic"
+        ]
+      },
+      {
+        "path": [
+          "Brazil",
+          "Trường pháp thuật"
+        ],
+        "places": [
+          "Castelobruxo School of Magic"
+        ]
+      },
+      {
+        "path": [
+          "Khác"
+        ],
+        "places": [
+          "Khu bảo vệ Hòn đá Phù thủy dưới Hogwarts",
+          "Đấu trường thử thách rồng",
+          "Mê cung Tam Pháp thuật ở sân Quidditch",
+          "Khu thử thách Hồ Đen",
+          "Khu cắm trại Beauxbatons",
+          "Bãi neo tàu Durmstrang",
+          "Lăng mộ Dumbledore",
+          "Phòng của Ủy ban Đăng ký Phù thủy gốc Muggle",
+          "Hang biển của Voldemort",
+          "Hồ ngầm trong hang biển",
+          "Đảo đá trong hồ hang biển",
+          "Cánh đồng World Cup Quidditch",
+          "Khu lều World Cup",
+          "Sân vận động World Cup",
+          "Các lăng mộ Ai Cập mà Bill phá giải lời nguyền"
+        ]
+      }
+    ],
+    "au_maps": [
+      {
+        "name": "7 Rowan Mews · London",
+        "area": "Britain › London",
+        "floors": [
+          {
+            "floor": "Bán hầm",
+            "places": [
+              "Bếp",
+              "Pantry",
+              "Laundry",
+              "Kho"
+            ]
+          },
+          {
+            "floor": "Tầng 1 (trệt)",
+            "places": [
+              "Sảnh",
+              "Phòng khách",
+              "Phòng ăn",
+              "Phòng vườn",
+              "Sân trong",
+              "Phòng áo khoác"
+            ]
+          },
+          {
+            "floor": "Tầng 2",
+            "places": [
+              "Thư viện",
+              "Study Valerian",
+              "Study Amethyst",
+              "Phòng tiếp khách"
+            ]
+          },
+          {
+            "floor": "Tầng 3",
+            "places": [
+              "Master suite",
+              "Phòng Liad",
+              "Phòng khách ngủ",
+              "Phòng tắm"
+            ]
+          },
+          {
+            "floor": "Áp mái",
+            "places": [
+              "Kho gia đình"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "WzW House · 18 Ganton Street · Soho",
+        "area": "Britain › London",
+        "floors": [
+          {
+            "floor": "Tầng hầm",
+            "places": [
+              "Kho lưu trữ bản in",
+              "Kho giấy",
+              "Kho mẫu",
+              "Phòng thiết bị"
+            ]
+          },
+          {
+            "floor": "Tầng 1 (trệt)",
+            "places": [
+              "Sảnh tiếp tân",
+              "Phòng trưng bày",
+              "Phòng tiếp khách",
+              "Phòng giao nhận"
+            ]
+          },
+          {
+            "floor": "Tầng 2",
+            "places": [
+              "Phòng biên tập",
+              "Phòng họp",
+              "Phòng viết nội dung"
+            ]
+          },
+          {
+            "floor": "Tầng 3",
+            "places": [
+              "Studio ảnh",
+              "Phòng tạo kiểu",
+              "Phòng thay đồ",
+              "Phòng mẫu"
+            ]
+          },
+          {
+            "floor": "Tầng 4",
+            "places": [
+              "Studio sáng tạo",
+              "Phòng duyệt bản in"
+            ]
+          },
+          {
+            "floor": "Tầng mái",
+            "places": [
+              "Bếp nhỏ",
+              "Thư viện ấn phẩm",
+              "Sân thượng"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Loft 5A · 21 Great Titchfield Street · Fitzrovia",
+        "area": "Britain › London",
+        "floors": [
+          {
+            "floor": "Sảnh chung",
+            "places": [
+              "Sảnh chung"
+            ]
+          },
+          {
+            "floor": "Loft 5A",
+            "places": [
+              "Phòng khách & bếp",
+              "Studio sáng tạo",
+              "Phòng ngủ",
+              "Phòng thay đồ",
+              "Phòng tiện ích"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Whitecap Estate · Isle of Wight",
+        "area": "Britain › Isle of Wight",
+        "floors": [
+          {
+            "floor": "Khuôn viên",
+            "places": [
+              "Biệt thự Whitecap",
+              "Vườn",
+              "Hồ bơi",
+              "Bãi biển Whitecap",
+              "Nhà khách",
+              "Chuồng gia cầm"
+            ]
+          },
+          {
+            "floor": "Tầng 1 (trệt)",
+            "places": [
+              "Tiền sảnh",
+              "Phòng khách",
+              "Phòng ăn",
+              "Thư viện",
+              "Phòng D&D",
+              "Bếp",
+              "Hiên ngoài",
+              "Phòng kính"
+            ]
+          },
+          {
+            "floor": "Tầng 2",
+            "places": [
+              "Phòng ngủ gia đình",
+              "Phòng khách ngủ",
+              "Phòng sinh hoạt",
+              "Ban công"
+            ]
+          },
+          {
+            "floor": "Áp mái",
+            "places": [
+              "Phòng áp mái",
+              "Kho dưới mái",
+              "Phòng sở thích"
+            ]
+          },
+          {
+            "floor": "Bờ biển Whitecap",
+            "places": [
+              "Bến Whitecap"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Grayhaven Estate · California",
+        "area": "United States › California",
+        "floors": [
+          {
+            "floor": "Khuôn viên",
+            "places": [
+              "Biệt thự Grayhaven",
+              "Nhà khách",
+              "Vườn",
+              "Sân hồ bơi",
+              "Studio nhà kính"
+            ]
+          },
+          {
+            "floor": "Tầng 1 (trệt)",
+            "places": [
+              "Tiền sảnh",
+              "Phòng khách",
+              "Phòng ăn",
+              "Bếp gia đình",
+              "Phòng làm việc",
+              "Phòng sinh hoạt hướng vườn",
+              "Phòng kính"
+            ]
+          },
+          {
+            "floor": "Tầng 2",
+            "places": [
+              "Phòng gia đình",
+              "Phòng khách ngủ",
+              "Phòng đọc"
+            ]
+          },
+          {
+            "floor": "Nhà khách",
+            "places": [
+              "Phòng khách & bếp",
+              "Phòng ngủ phía đông",
+              "Phòng ngủ phía tây",
+              "Terrace"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nhà PC · London",
+        "area": "Britain › London",
+        "floors": [
+          {
+            "floor": "Bán hầm",
+            "places": [
+              "Phòng tiện ích",
+              "Phòng giặt",
+              "Kho",
+              "Phòng sửa đồ"
+            ]
+          },
+          {
+            "floor": "Tầng 1 (trệt)",
+            "places": [
+              "Tiền sảnh",
+              "Phòng khách",
+              "Phòng ăn",
+              "Bếp",
+              "Hiên sau",
+              "Vườn sau"
+            ]
+          },
+          {
+            "floor": "Tầng 2",
+            "places": [
+              "Phòng ngủ chính",
+              "Phòng làm việc",
+              "Phòng tắm"
+            ]
+          },
+          {
+            "floor": "Tầng 3",
+            "places": [
+              "Phòng BẠN",
+              "Phòng khách ngủ"
+            ]
+          },
+          {
+            "floor": "Áp mái",
+            "places": [
+              "Phòng sở thích",
+              "Kho dưới mái"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CCC 07.18 · Hogwarts",
+        "area": "Hogwarts › Tầng 8 · cánh Tây",
+        "floors": [
+          {
+            "floor": "Tầng 8 · cánh Tây",
+            "places": [
+              "CCC 07.18",
+              "Tiền phòng CCC",
+              "Phòng thư liên nhà CCC",
+              "Phòng viết CCC",
+              "Kho hồ sơ CCC"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Liad’s Attic · Hogwarts",
+        "area": "Hogwarts › Áp mái",
+        "floors": [
+          {
+            "floor": "Áp mái",
+            "places": [
+              "Phòng áp mái Liad"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "hogwarts_castle": {
+    "floors": [
+      {
+        "floor": "HẦM NGẦM",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "Đường dẫn hầm kỹ thuật",
+            "rooms": [
+              {
+                "id": "HOG-HMNGM-N-01",
+                "name": "Hành lang đá dưới Tháp Thiên văn"
+              },
+              {
+                "id": "HOG-HMNGM-N-02",
+                "name": "Phòng Giả kim"
+              },
+              {
+                "id": "HOG-HMNGM-N-03",
+                "name": "Kho than và nhiên liệu"
+              },
+              {
+                "id": "HOG-HMNGM-N-04",
+                "name": "Phòng kiểm tra móng tháp"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Hầm di tích và cửa sâu",
+            "rooms": [
+              {
+                "id": "HOG-HMNGM-E-01",
+                "name": "Đường ống xuống Phòng Chứa Bí mật"
+              },
+              {
+                "id": "HOG-HMNGM-E-02",
+                "name": "Phòng Chứa Bí mật"
+              },
+              {
+                "id": "HOG-HMNGM-E-03",
+                "name": "Gian cửa chắn hầm cổ"
+              },
+              {
+                "id": "HOG-HMNGM-E-04",
+                "name": "Hành lang dẫn đến hầm bị niêm phong"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Cụm hầm đá bảo vệ cũ",
+            "rooms": [
+              {
+                "id": "HOG-HMNGM-S-01",
+                "name": "Gian Dây Sa-tăng"
+              },
+              {
+                "id": "HOG-HMNGM-S-02",
+                "name": "Gian chìa khóa bay"
+              },
+              {
+                "id": "HOG-HMNGM-S-03",
+                "name": "Gian bàn cờ phù thủy"
+              },
+              {
+                "id": "HOG-HMNGM-S-04",
+                "name": "Gian thử thách Độc dược"
+              },
+              {
+                "id": "HOG-HMNGM-S-05",
+                "name": "Gian cuối bảo vệ Hòn đá"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "Hầm đá xưa và phòng nghiên cứu",
+            "rooms": [
+              {
+                "id": "HOG-HMNGM-W-01",
+                "name": "Map Chamber"
+              },
+              {
+                "id": "HOG-HMNGM-W-02",
+                "name": "Undercroft"
+              },
+              {
+                "id": "HOG-HMNGM-W-03",
+                "name": "Kho dụng cụ khảo cổ"
+              },
+              {
+                "id": "HOG-HMNGM-W-04",
+                "name": "Phòng lập bản vẽ công trình"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "HẦM NGỤC",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "Cụm Độc dược và gian chuẩn bị",
+            "rooms": [
+              {
+                "id": "HOG-HMNGC-N-01",
+                "name": "Phòng học Độc dược"
+              },
+              {
+                "id": "HOG-HMNGC-N-02",
+                "name": "Văn phòng Snape"
+              },
+              {
+                "id": "HOG-HMNGC-N-03",
+                "name": "Kho nguyên liệu Độc dược"
+              },
+              {
+                "id": "HOG-HMNGC-N-04",
+                "name": "Phòng chuẩn bị bài thực hành"
+              },
+              {
+                "id": "HOG-HMNGC-N-05",
+                "name": "Phòng rửa vạc"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Lối Slytherin dưới mặt hồ",
+            "rooms": [
+              {
+                "id": "HOG-HMNGC-E-01",
+                "name": "Phòng sinh hoạt chung Slytherin"
+              },
+              {
+                "id": "HOG-HMNGC-E-02",
+                "name": "Ký túc nam Slytherin"
+              },
+              {
+                "id": "HOG-HMNGC-E-03",
+                "name": "Ký túc nữ Slytherin"
+              },
+              {
+                "id": "HOG-HMNGC-E-04",
+                "name": "Hành lang Slytherin dưới hồ"
+              },
+              {
+                "id": "HOG-HMNGC-E-05",
+                "name": "Phòng học nhóm Slytherin"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Kho và tuyến phục vụ dưới Đại Sảnh",
+            "rooms": [
+              {
+                "id": "HOG-HMNGC-S-01",
+                "name": "Phòng tiệc Tử nhật"
+              },
+              {
+                "id": "HOG-HMNGC-S-02",
+                "name": "Kho vật tư lau dọn"
+              },
+              {
+                "id": "HOG-HMNGC-S-03",
+                "name": "Hành lang vận chuyển thực phẩm"
+              },
+              {
+                "id": "HOG-HMNGC-S-04",
+                "name": "Phòng trực gia tinh"
+              },
+              {
+                "id": "HOG-HMNGC-S-05",
+                "name": "Phòng kỹ thuật lò sưởi"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "Cụm lớp học ngầm và hầm cũ",
+            "rooms": [
+              {
+                "id": "HOG-HMNGC-W-01",
+                "name": "Hành lang hầm Tháp Thiên văn"
+              },
+              {
+                "id": "HOG-HMNGC-W-02",
+                "name": "Phòng phân loại mẫu khoáng"
+              },
+              {
+                "id": "HOG-HMNGC-W-03",
+                "name": "Phòng học trống HN-01"
+              },
+              {
+                "id": "HOG-HMNGC-W-04",
+                "name": "Kho nồi vạc cũ"
+              },
+              {
+                "id": "HOG-HMNGC-W-05",
+                "name": "Phòng lưu mẫu độc dược"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "TẦNG BẾP",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "Bếp và lối phục vụ",
+            "rooms": [
+              {
+                "id": "HOG-TNGBP-N-01",
+                "name": "Bếp Hogwarts"
+              },
+              {
+                "id": "HOG-TNGBP-N-02",
+                "name": "Kho thực phẩm khô"
+              },
+              {
+                "id": "HOG-TNGBP-N-03",
+                "name": "Phòng chuẩn bị suất ăn"
+              },
+              {
+                "id": "HOG-TNGBP-N-04",
+                "name": "Phòng rửa dụng cụ nhà bếp"
+              },
+              {
+                "id": "HOG-TNGBP-N-05",
+                "name": "Hành lang hậu cần bếp"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Cụm Hufflepuff",
+            "rooms": [
+              {
+                "id": "HOG-TNGBP-E-01",
+                "name": "Phòng sinh hoạt chung Hufflepuff"
+              },
+              {
+                "id": "HOG-TNGBP-E-02",
+                "name": "Ký túc nam Hufflepuff"
+              },
+              {
+                "id": "HOG-TNGBP-E-03",
+                "name": "Ký túc nữ Hufflepuff"
+              },
+              {
+                "id": "HOG-TNGBP-E-04",
+                "name": "Hành lang Hufflepuff"
+              },
+              {
+                "id": "HOG-TNGBP-E-05",
+                "name": "Phòng học nhóm Hufflepuff"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Giặt là và kho phục vụ",
+            "rooms": [
+              {
+                "id": "HOG-TNGBP-S-01",
+                "name": "Phòng giặt là"
+              },
+              {
+                "id": "HOG-TNGBP-S-02",
+                "name": "Phòng đồ vải"
+              },
+              {
+                "id": "HOG-TNGBP-S-03",
+                "name": "Kho khăn trải bàn"
+              },
+              {
+                "id": "HOG-TNGBP-S-04",
+                "name": "Phòng bảo trì dụng cụ giặt"
+              },
+              {
+                "id": "HOG-TNGBP-S-05",
+                "name": "Hành lang kho phía Nam"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "Khu công vụ và hầm thực phẩm",
+            "rooms": [
+              {
+                "id": "HOG-TNGBP-W-01",
+                "name": "Phòng nghỉ gia tinh"
+              },
+              {
+                "id": "HOG-TNGBP-W-02",
+                "name": "Kho rau củ"
+              },
+              {
+                "id": "HOG-TNGBP-W-03",
+                "name": "Kho thảo mộc nhà bếp"
+              },
+              {
+                "id": "HOG-TNGBP-W-04",
+                "name": "Kho dụng cụ dự phòng"
+              },
+              {
+                "id": "HOG-TNGBP-W-05",
+                "name": "Hành lang kết nối hầm phía Tây"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "TẦNG 1",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "North Hall – Bell Tower",
+            "rooms": [
+              {
+                "id": "HOG-TNG1-N-01",
+                "name": "Sảnh phía Bắc (North Hall)"
+              },
+              {
+                "id": "HOG-TNG1-N-02",
+                "name": "Sảnh chân Tháp Chuông"
+              },
+              {
+                "id": "HOG-TNG1-N-03",
+                "name": "Hành lang tới cửa Bắc Hogwarts"
+              },
+              {
+                "id": "HOG-TNG1-N-04",
+                "name": "Phòng trực cửa Bắc"
+              },
+              {
+                "id": "HOG-TNG1-N-05",
+                "name": "Kho đồ dùng sân tập"
+              },
+              {
+                "id": "HOG-TNG1-N-06",
+                "name": "Phòng học trống B-01"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Library Annex – Viaduct",
+            "rooms": [
+              {
+                "id": "HOG-TNG1-E-01",
+                "name": "Sảnh Trung tâm (Central Hall)"
+              },
+              {
+                "id": "HOG-TNG1-E-02",
+                "name": "Sảnh lối vào Cầu cạn (Viaduct Entrance)"
+              },
+              {
+                "id": "HOG-TNG1-E-03",
+                "name": "Hành lang nối khu nhà kính"
+              },
+              {
+                "id": "HOG-TNG1-E-04",
+                "name": "Phòng tiếp học sinh mới"
+              },
+              {
+                "id": "HOG-TNG1-E-05",
+                "name": "Kho dụng cụ sảnh Trung tâm"
+              },
+              {
+                "id": "HOG-TNG1-E-06",
+                "name": "Phòng học trống Đ-01"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Entrance Hall – Great Hall",
+            "rooms": [
+              {
+                "id": "HOG-TNG1-S-01",
+                "name": "Tiền sảnh (Entrance Hall)"
+              },
+              {
+                "id": "HOG-TNG1-S-02",
+                "name": "Đại Sảnh (Great Hall)"
+              },
+              {
+                "id": "HOG-TNG1-S-03",
+                "name": "Phòng chờ trước Phân loại"
+              },
+              {
+                "id": "HOG-TNG1-S-04",
+                "name": "Phòng nhỏ cạnh Đại Sảnh"
+              },
+              {
+                "id": "HOG-TNG1-S-05",
+                "name": "Phòng giáo viên (Staff Room)"
+              },
+              {
+                "id": "HOG-TNG1-S-06",
+                "name": "Văn phòng Filch"
+              },
+              {
+                "id": "HOG-TNG1-S-07",
+                "name": "Phòng tiếp khách nhà trường"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "Transfiguration Courtyard approach",
+            "rooms": [
+              {
+                "id": "HOG-TNG1-W-01",
+                "name": "Phòng học số 11"
+              },
+              {
+                "id": "HOG-TNG1-W-02",
+                "name": "Kho chổi (Broom Cupboard)"
+              },
+              {
+                "id": "HOG-TNG1-W-03",
+                "name": "Hành lang vào sân Biến hình"
+              },
+              {
+                "id": "HOG-TNG1-W-04",
+                "name": "Hành lang hướng sân Tứ giác"
+              },
+              {
+                "id": "HOG-TNG1-W-05",
+                "name": "Phòng gửi áo choàng"
+              },
+              {
+                "id": "HOG-TNG1-W-06",
+                "name": "Kho dụng cụ Biến hình"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "TẦNG 2",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "History & Transfiguration corridor",
+            "rooms": [
+              {
+                "id": "HOG-TNG2-N-01",
+                "name": "Phòng Lịch sử Pháp thuật"
+              },
+              {
+                "id": "HOG-TNG2-N-02",
+                "name": "Văn phòng McGonagall"
+              },
+              {
+                "id": "HOG-TNG2-N-03",
+                "name": "Phòng học Biến hình"
+              },
+              {
+                "id": "HOG-TNG2-N-04",
+                "name": "Phòng chuẩn bị Biến hình"
+              },
+              {
+                "id": "HOG-TNG2-N-05",
+                "name": "Kho sách Lịch sử Pháp thuật"
+              },
+              {
+                "id": "HOG-TNG2-N-06",
+                "name": "Phòng học trống B-02"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Scholars / North Hall upper walk",
+            "rooms": [
+              {
+                "id": "HOG-TNG2-W-01",
+                "name": "Phòng học Muggle học"
+              },
+              {
+                "id": "HOG-TNG2-W-02",
+                "name": "Phòng Chữ tượng hình (Hieroglyphics)"
+              },
+              {
+                "id": "HOG-TNG2-W-03",
+                "name": "Hành lang tầng trên North Hall"
+              },
+              {
+                "id": "HOG-TNG2-W-04",
+                "name": "Phòng lưu mô hình lịch sử"
+              },
+              {
+                "id": "HOG-TNG2-W-05",
+                "name": "Kho bản đồ giảng dạy"
+              },
+              {
+                "id": "HOG-TNG2-W-06",
+                "name": "Phòng học trống T-02"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Hospital & Faculty Tower access",
+            "rooms": [
+              {
+                "id": "HOG-TNG2-S-01",
+                "name": "Bệnh xá Hogwarts"
+              },
+              {
+                "id": "HOG-TNG2-S-02",
+                "name": "Văn phòng bà Pomfrey"
+              },
+              {
+                "id": "HOG-TNG2-S-03",
+                "name": "Hành lang vào Tháp Giáo viên"
+              },
+              {
+                "id": "HOG-TNG2-S-04",
+                "name": "Phòng thay băng"
+              },
+              {
+                "id": "HOG-TNG2-S-05",
+                "name": "Kho vật tư y tế"
+              },
+              {
+                "id": "HOG-TNG2-S-06",
+                "name": "Phòng chờ bệnh xá"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "DADA teaching cluster",
+            "rooms": [
+              {
+                "id": "HOG-TNG2-E-01",
+                "name": "Phòng học Phòng chống Nghệ thuật Hắc ám"
+              },
+              {
+                "id": "HOG-TNG2-E-02",
+                "name": "Hành lang Tháp DADA tầng thấp"
+              },
+              {
+                "id": "HOG-TNG2-E-03",
+                "name": "Phòng học phụ Tháp DADA"
+              },
+              {
+                "id": "HOG-TNG2-E-04",
+                "name": "Phòng thực hành phòng vệ"
+              },
+              {
+                "id": "HOG-TNG2-E-05",
+                "name": "Kho đạo cụ DADA"
+              },
+              {
+                "id": "HOG-TNG2-E-06",
+                "name": "Phòng học trống Đ-02"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "TẦNG 3",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "Phòng vệ sinh Myrtle và dãy hành lang",
+            "rooms": [
+              {
+                "id": "HOG-TNG3-N-01",
+                "name": "Nhà vệ sinh Myrtle"
+              },
+              {
+                "id": "HOG-TNG3-N-02",
+                "name": "Hành lang tầng hai cạnh nhà vệ sinh Myrtle"
+              },
+              {
+                "id": "HOG-TNG3-N-03",
+                "name": "Nhà vệ sinh nam tầng này"
+              },
+              {
+                "id": "HOG-TNG3-N-04",
+                "name": "Kho bảo trì đường nước"
+              },
+              {
+                "id": "HOG-TNG3-N-05",
+                "name": "Phòng trực hành lang B-03"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Cầu thang tắt và hành lang lâu đài",
+            "rooms": [
+              {
+                "id": "HOG-TNG3-W-02",
+                "name": "Hành lang tranh bản đồ Argyllshire"
+              },
+              {
+                "id": "HOG-TNG3-W-03",
+                "name": "Phòng kiểm tra an toàn cầu thang"
+              },
+              {
+                "id": "HOG-TNG3-W-04",
+                "name": "Phòng học trống T-03"
+              },
+              {
+                "id": "HOG-TNG3-W-05",
+                "name": "Kho ghế bàn học"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Phòng học bổ trợ",
+            "rooms": [
+              {
+                "id": "HOG-TNG3-S-01",
+                "name": "Phòng luyện đũa phép cơ bản"
+              },
+              {
+                "id": "HOG-TNG3-S-02",
+                "name": "Phòng học trống N-03"
+              },
+              {
+                "id": "HOG-TNG3-S-03",
+                "name": "Kho thiết bị học tập"
+              },
+              {
+                "id": "HOG-TNG3-S-04",
+                "name": "Phòng làm việc trợ giảng"
+              },
+              {
+                "id": "HOG-TNG3-S-05",
+                "name": "Phòng sinh hoạt học sinh nhỏ"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "Văn phòng DADA – lối kín",
+            "rooms": [
+              {
+                "id": "HOG-TNG3-E-01",
+                "name": "Văn phòng giáo sư DADA (Lockhart 1992)"
+              },
+              {
+                "id": "HOG-TNG3-E-02",
+                "name": "Hành lang tới văn phòng DADA"
+              },
+              {
+                "id": "HOG-TNG3-E-03",
+                "name": "Phòng tiếp phụ huynh của khoa DADA"
+              },
+              {
+                "id": "HOG-TNG3-E-04",
+                "name": "Phòng lưu giáo án"
+              },
+              {
+                "id": "HOG-TNG3-E-05",
+                "name": "Phòng học trống Đ-03"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "TẦNG 4",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "Trophy – Armour Gallery",
+            "rooms": [
+              {
+                "id": "HOG-TNG4-N-01",
+                "name": "Phòng Trưng bày Chiến tích"
+              },
+              {
+                "id": "HOG-TNG4-N-02",
+                "name": "Hành lang áo giáp"
+              },
+              {
+                "id": "HOG-TNG4-N-03",
+                "name": "Phòng Âm nhạc (Music Room)"
+              },
+              {
+                "id": "HOG-TNG4-N-04",
+                "name": "Kho bảo quản cúp"
+              },
+              {
+                "id": "HOG-TNG4-N-05",
+                "name": "Phòng tập hòa tấu"
+              },
+              {
+                "id": "HOG-TNG4-N-06",
+                "name": "Phòng học trống B-04"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Gallery – North Hall upper route",
+            "rooms": [
+              {
+                "id": "HOG-TNG4-W-01",
+                "name": "Hành lang tầng trên Sảnh Bắc"
+              },
+              {
+                "id": "HOG-TNG4-W-02",
+                "name": "Phòng trưng bày cổ vật giáo dục"
+              },
+              {
+                "id": "HOG-TNG4-W-03",
+                "name": "Phòng học trống T-04"
+              },
+              {
+                "id": "HOG-TNG4-W-04",
+                "name": "Kho trang phục biểu diễn"
+              },
+              {
+                "id": "HOG-TNG4-W-05",
+                "name": "Phòng phục hồi hiện vật"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Câu lạc bộ và hoạt động nhóm",
+            "rooms": [
+              {
+                "id": "HOG-TNG4-S-01",
+                "name": "Phòng tập Đấu tay đôi dự phòng"
+              },
+              {
+                "id": "HOG-TNG4-S-02",
+                "name": "Phòng chuẩn bị câu lạc bộ"
+              },
+              {
+                "id": "HOG-TNG4-S-03",
+                "name": "Phòng tập diễn thuyết"
+              },
+              {
+                "id": "HOG-TNG4-S-04",
+                "name": "Phòng họp học sinh"
+              },
+              {
+                "id": "HOG-TNG4-S-05",
+                "name": "Phòng học trống N-04"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "Charms – hành lang cấm cũ",
+            "rooms": [
+              {
+                "id": "HOG-TNG4-E-01",
+                "name": "Phòng học Bùa chú"
+              },
+              {
+                "id": "HOG-TNG4-E-02",
+                "name": "Hành lang Bùa chú"
+              },
+              {
+                "id": "HOG-TNG4-E-03",
+                "name": "Hành lang cấm tầng ba năm 1991"
+              },
+              {
+                "id": "HOG-TNG4-E-04",
+                "name": "Gian cửa sập của Fluffy (1991)"
+              },
+              {
+                "id": "HOG-TNG4-E-05",
+                "name": "Phòng thực hành Bùa chú"
+              },
+              {
+                "id": "HOG-TNG4-E-06",
+                "name": "Kho đồ dùng Bùa chú"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "TẦNG 5",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "Library – Restricted Section",
+            "rooms": [
+              {
+                "id": "HOG-TNG5-N-01",
+                "name": "Thư viện Hogwarts"
+              },
+              {
+                "id": "HOG-TNG5-N-02",
+                "name": "Khu Sách Cấm (Restricted Section)"
+              },
+              {
+                "id": "HOG-TNG5-N-03",
+                "name": "Phòng làm việc thủ thư"
+              },
+              {
+                "id": "HOG-TNG5-N-04",
+                "name": "Phòng đọc nghiên cứu"
+              },
+              {
+                "id": "HOG-TNG5-N-05",
+                "name": "Phòng tra cứu mục lục"
+              },
+              {
+                "id": "HOG-TNG5-N-06",
+                "name": "Kho sách ít dùng"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Long Gallery – chuyên môn",
+            "rooms": [
+              {
+                "id": "HOG-TNG5-E-01",
+                "name": "Hành lang Dài (Long Gallery)"
+              },
+              {
+                "id": "HOG-TNG5-E-02",
+                "name": "Phòng học Số học (Arithmancy)"
+              },
+              {
+                "id": "HOG-TNG5-E-03",
+                "name": "Phòng bản đồ và địa lý pháp thuật"
+              },
+              {
+                "id": "HOG-TNG5-E-04",
+                "name": "Phòng giải mã mật thư"
+              },
+              {
+                "id": "HOG-TNG5-E-05",
+                "name": "Phòng học trống Đ-05"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Lối đi tầng bốn và gian trống",
+            "rooms": [
+              {
+                "id": "HOG-TNG5-S-01",
+                "name": "Phòng trống từng chứa Gương Ảo ảnh năm 1991"
+              },
+              {
+                "id": "HOG-TNG5-S-02",
+                "name": "Hành lang gương thông lối bí mật cũ"
+              },
+              {
+                "id": "HOG-TNG5-S-03",
+                "name": "Phòng lưu hồ sơ thư viện"
+              },
+              {
+                "id": "HOG-TNG5-S-04",
+                "name": "Phòng học trống N-05"
+              },
+              {
+                "id": "HOG-TNG5-S-05",
+                "name": "Kho vật dụng sảnh đọc"
+              },
+              {
+                "id": "HOG-TNG3-W-01",
+                "name": "Cầu thang tắt sau thảm treo"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "Cổ ngữ – học thuật",
+            "rooms": [
+              {
+                "id": "HOG-TNG5-W-01",
+                "name": "Phòng học Cổ ngữ Runes"
+              },
+              {
+                "id": "HOG-TNG5-W-02",
+                "name": "Phòng dịch cổ ngữ"
+              },
+              {
+                "id": "HOG-TNG5-W-03",
+                "name": "Phòng học chuyên đề lịch sử"
+              },
+              {
+                "id": "HOG-TNG5-W-04",
+                "name": "Phòng nghiên cứu tư liệu"
+              },
+              {
+                "id": "HOG-TNG5-W-05",
+                "name": "Phòng học trống T-05"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "TẦNG 6",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "Prefects corridor – Faculty route",
+            "rooms": [
+              {
+                "id": "HOG-TNG6-N-01",
+                "name": "Phòng tắm Huynh trưởng"
+              },
+              {
+                "id": "HOG-TNG6-N-02",
+                "name": "Hành lang trước Phòng tắm Huynh trưởng"
+              },
+              {
+                "id": "HOG-TNG6-N-03",
+                "name": "Hành lang Tháp Giáo viên tầng trên"
+              },
+              {
+                "id": "HOG-TNG6-N-04",
+                "name": "Phòng nghỉ huynh trưởng"
+              },
+              {
+                "id": "HOG-TNG6-N-05",
+                "name": "Kho khăn và đồng phục"
+              },
+              {
+                "id": "HOG-TNG6-N-06",
+                "name": "Phòng học trống B-06"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Phòng học trung cấp",
+            "rooms": [
+              {
+                "id": "HOG-TNG6-E-01",
+                "name": "Phòng nghiên cứu Số học"
+              },
+              {
+                "id": "HOG-TNG6-E-02",
+                "name": "Hành lang cánh Đông tầng năm"
+              },
+              {
+                "id": "HOG-TNG6-E-03",
+                "name": "Phòng mỹ thuật pháp thuật"
+              },
+              {
+                "id": "HOG-TNG6-E-04",
+                "name": "Kho bài tập và bảng phép"
+              },
+              {
+                "id": "HOG-TNG6-E-05",
+                "name": "Phòng học trống Đ-06"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Lối lên Tháp Đồng hồ",
+            "rooms": [
+              {
+                "id": "HOG-TNG6-S-01",
+                "name": "Hành lang Tháp Đồng hồ tầng cao"
+              },
+              {
+                "id": "HOG-TNG6-S-02",
+                "name": "Phòng bảo trì cơ cấu đồng hồ"
+              },
+              {
+                "id": "HOG-TNG6-S-03",
+                "name": "Phòng câu lạc bộ học thuật"
+              },
+              {
+                "id": "HOG-TNG6-S-04",
+                "name": "Phòng làm báo học sinh"
+              },
+              {
+                "id": "HOG-TNG6-S-05",
+                "name": "Kho thiết bị triển lãm"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "Hành lang cửa sổ cao",
+            "rooms": [
+              {
+                "id": "HOG-TNG6-W-01",
+                "name": "Hành lang cửa sổ phía Tây tầng năm"
+              },
+              {
+                "id": "HOG-TNG6-W-02",
+                "name": "Phòng tập nhạc nhóm nhỏ"
+              },
+              {
+                "id": "HOG-TNG6-W-03",
+                "name": "Phòng đọc yên tĩnh"
+              },
+              {
+                "id": "HOG-TNG6-W-04",
+                "name": "Phòng học trống T-06"
+              },
+              {
+                "id": "HOG-TNG6-W-05",
+                "name": "Kho đồ thủ công"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "TẦNG 7",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "Upper stair – tower access",
+            "rooms": [
+              {
+                "id": "HOG-TNG7-N-01",
+                "name": "Phòng lưu bảng thành tích học thuật"
+              },
+              {
+                "id": "HOG-TNG7-N-02",
+                "name": "Phòng lưu sổ kết quả học tập"
+              },
+              {
+                "id": "HOG-TNG7-N-03",
+                "name": "Kho thiết bị tiết học nâng cao"
+              },
+              {
+                "id": "HOG-TNG7-N-04",
+                "name": "Phòng học trống B-07"
+              },
+              {
+                "id": "HOG-TNG7-N-05",
+                "name": "Hành lang cầu thang phía Bắc"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Seminar & advanced teaching",
+            "rooms": [
+              {
+                "id": "HOG-TNG7-E-01",
+                "name": "Nhà vệ sinh nam tầng sáu"
+              },
+              {
+                "id": "HOG-TNG7-E-02",
+                "name": "Phòng học chuyên đề Phép thuật nâng cao"
+              },
+              {
+                "id": "HOG-TNG7-E-03",
+                "name": "Phòng hội thảo nhỏ"
+              },
+              {
+                "id": "HOG-TNG7-E-04",
+                "name": "Phòng thí nghiệm an toàn"
+              },
+              {
+                "id": "HOG-TNG7-E-05",
+                "name": "Phòng học trống Đ-07"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Đường nối Faculty/Clock tower",
+            "rooms": [
+              {
+                "id": "HOG-TNG7-S-01",
+                "name": "Hành lang phía trên Tháp Giáo viên"
+              },
+              {
+                "id": "HOG-TNG7-S-02",
+                "name": "Phòng lưu biên bản giáo viên"
+              },
+              {
+                "id": "HOG-TNG7-S-03",
+                "name": "Phòng xem lịch học"
+              },
+              {
+                "id": "HOG-TNG7-S-04",
+                "name": "Kho sách tham khảo"
+              },
+              {
+                "id": "HOG-TNG7-S-05",
+                "name": "Phòng học trống N-07"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "Cụm sinh hoạt và trò chơi",
+            "rooms": [
+              {
+                "id": "HOG-TNG7-W-01",
+                "name": "Phòng Gobstones"
+              },
+              {
+                "id": "HOG-TNG7-W-02",
+                "name": "Phòng câu lạc bộ cờ phù thủy"
+              },
+              {
+                "id": "HOG-TNG7-W-03",
+                "name": "Phòng làm dự án học sinh"
+              },
+              {
+                "id": "HOG-TNG7-W-04",
+                "name": "Phòng học trống T-07"
+              },
+              {
+                "id": "HOG-TNG7-W-05",
+                "name": "Hành lang kính tầng cao"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "floor": "TẦNG 8",
+        "clusters": [
+          {
+            "direction": "Bắc",
+            "name": "Upper Grand Staircase / Headmaster",
+            "rooms": [
+              {
+                "id": "HOG-TNG8-N-01",
+                "name": "Hành lang dẫn lên văn phòng Hiệu trưởng"
+              },
+              {
+                "id": "HOG-TNG8-N-02",
+                "name": "Sảnh vào văn phòng Hiệu trưởng"
+              },
+              {
+                "id": "HOG-TNG8-N-03",
+                "name": "Sảnh tầng cao Cầu thang Lớn"
+              },
+              {
+                "id": "HOG-TNG8-N-04",
+                "name": "Phòng học trống B-08"
+              },
+              {
+                "id": "HOG-TNG8-N-05",
+                "name": "Kho giấy tờ giáo vụ"
+              }
+            ]
+          },
+          {
+            "direction": "Đông",
+            "name": "Room of Requirement",
+            "rooms": [
+              {
+                "id": "HOG-TNG8-E-01",
+                "name": "Hành lang tầng bảy trước Phòng Yêu cầu"
+              },
+              {
+                "id": "HOG-TNG8-E-02",
+                "name": "Phòng Yêu cầu (Room of Requirement)"
+              },
+              {
+                "id": "HOG-TNG8-E-03",
+                "name": "Phòng học trống Đ-08"
+              },
+              {
+                "id": "HOG-TNG8-E-04",
+                "name": "Phòng nghi lễ học thuật"
+              },
+              {
+                "id": "HOG-TNG8-E-05",
+                "name": "Phòng bảo quản tranh phép"
+              }
+            ]
+          },
+          {
+            "direction": "Nam",
+            "name": "Gryffindor entrance – common route",
+            "rooms": [
+              {
+                "id": "HOG-TNG8-S-01",
+                "name": "Lối chân dung Bà Béo"
+              },
+              {
+                "id": "HOG-TNG8-S-02",
+                "name": "Phòng sinh hoạt chung Gryffindor"
+              },
+              {
+                "id": "HOG-TNG8-S-03",
+                "name": "Lối cầu thang ký túc Gryffindor"
+              },
+              {
+                "id": "HOG-TNG8-S-04",
+                "name": "Phòng học nhóm tầng bảy"
+              },
+              {
+                "id": "HOG-TNG8-S-05",
+                "name": "Hành lang tranh tầng bảy"
+              }
+            ]
+          },
+          {
+            "direction": "Tây",
+            "name": "CCC / senior clubs (AU)",
+            "rooms": [
+              {
+                "id": "HOG-TNG8-W-01",
+                "name": "CCC 07.18"
+              },
+              {
+                "id": "HOG-TNG8-W-02",
+                "name": "Tiền phòng CCC"
+              },
+              {
+                "id": "HOG-TNG8-W-03",
+                "name": "Phòng thư liên nhà CCC"
+              },
+              {
+                "id": "HOG-TNG8-W-04",
+                "name": "Phòng viết CCC"
+              },
+              {
+                "id": "HOG-TNG8-W-05",
+                "name": "Kho hồ sơ CCC"
+              },
+              {
+                "id": "HOG-TNG8-W-06",
+                "name": "Phòng họp liên nhà"
+              },
+              {
+                "id": "HOG-TNG8-W-07",
+                "name": "Phòng học trống T-08"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "towers": [
+      {
+        "name": "Tháp Gryffindor",
+        "direction": "Tây Nam",
+        "levels": [
+          {
+            "level": "Lối vào (Tầng 8)",
+            "rooms": [
+              {
+                "id": "TWR-01-01-02",
+                "name": "Lối thang ký túc nam"
+              },
+              {
+                "id": "TWR-01-01-03",
+                "name": "Lối thang ký túc nữ"
+              }
+            ]
+          },
+          {
+            "level": "Tầng tháp trên",
+            "rooms": [
+              {
+                "id": "TWR-01-02-01",
+                "name": "Ký túc nam Gryffindor"
+              },
+              {
+                "id": "TWR-01-02-02",
+                "name": "Ký túc nữ Gryffindor"
+              },
+              {
+                "id": "TWR-01-02-03",
+                "name": "Phòng sinh hoạt học sinh cuối hành lang"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp Ravenclaw",
+        "direction": "Tây",
+        "levels": [
+          {
+            "level": "Lối vào tháp cao",
+            "rooms": [
+              {
+                "id": "TWR-02-01-01",
+                "name": "Phòng sinh hoạt chung Ravenclaw"
+              },
+              {
+                "id": "TWR-02-01-02",
+                "name": "Sảnh vào Ravenclaw"
+              },
+              {
+                "id": "TWR-02-01-03",
+                "name": "Phòng đọc học thuật Ravenclaw"
+              }
+            ]
+          },
+          {
+            "level": "Khu phòng ngủ",
+            "rooms": [
+              {
+                "id": "TWR-02-02-01",
+                "name": "Ký túc nam Ravenclaw"
+              },
+              {
+                "id": "TWR-02-02-02",
+                "name": "Ký túc nữ Ravenclaw"
+              },
+              {
+                "id": "TWR-02-02-03",
+                "name": "Phòng học nhóm Ravenclaw"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp Bắc (Tiên tri)",
+        "direction": "Bắc",
+        "levels": [
+          {
+            "level": "Tầng tiếp cận",
+            "rooms": [
+              {
+                "id": "TWR-03-01-01",
+                "name": "Cầu thang xoắn lên Tháp Bắc"
+              },
+              {
+                "id": "TWR-03-01-02",
+                "name": "Phòng lưu bản đồ sao Tiên tri"
+              }
+            ]
+          },
+          {
+            "level": "Đỉnh tháp",
+            "rooms": [
+              {
+                "id": "TWR-03-02-01",
+                "name": "Phòng học Tiên tri"
+              },
+              {
+                "id": "TWR-03-02-02",
+                "name": "Kho dụng cụ bói toán"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp Thiên văn",
+        "direction": "Tây Bắc",
+        "levels": [
+          {
+            "level": "Tầng chân tháp",
+            "rooms": [
+              {
+                "id": "TWR-04-01-01",
+                "name": "Hành lang chân Tháp Thiên văn"
+              },
+              {
+                "id": "TWR-04-01-02",
+                "name": "Phòng bảo trì kính thiên văn"
+              }
+            ]
+          },
+          {
+            "level": "Tầng giữa",
+            "rooms": [
+              {
+                "id": "TWR-04-02-01",
+                "name": "Phòng chuẩn bị quan sát"
+              },
+              {
+                "id": "TWR-04-02-02",
+                "name": "Kho bản đồ sao"
+              }
+            ]
+          },
+          {
+            "level": "Đỉnh tháp",
+            "rooms": [
+              {
+                "id": "TWR-04-03-01",
+                "name": "Phòng học Thiên văn"
+              },
+              {
+                "id": "TWR-04-03-02",
+                "name": "Đài quan sát Thiên văn"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp Hiệu trưởng",
+        "direction": "Bắc / Trung tâm",
+        "levels": [
+          {
+            "level": "Tầng cửa vào",
+            "rooms": [
+              {
+                "id": "TWR-05-01-01",
+                "name": "Cầu thang xoắn sau tượng đá"
+              },
+              {
+                "id": "TWR-05-01-02",
+                "name": "Phòng chờ văn phòng Hiệu trưởng"
+              }
+            ]
+          },
+          {
+            "level": "Đỉnh tháp",
+            "rooms": [
+              {
+                "id": "TWR-05-02-01",
+                "name": "Văn phòng Hiệu trưởng"
+              },
+              {
+                "id": "TWR-05-02-02",
+                "name": "Phòng lưu dụng cụ hiệu trưởng"
+              },
+              {
+                "id": "TWR-05-02-03",
+                "name": "Kho tài liệu Hiệu trưởng"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp Đồng hồ",
+        "direction": "Tây Nam",
+        "levels": [
+          {
+            "level": "Chân tháp",
+            "rooms": [
+              {
+                "id": "TWR-06-01-01",
+                "name": "Sảnh Tháp Đồng hồ"
+              },
+              {
+                "id": "TWR-06-01-02",
+                "name": "Phòng trực giờ giấc"
+              }
+            ]
+          },
+          {
+            "level": "Giữa tháp",
+            "rooms": [
+              {
+                "id": "TWR-06-02-01",
+                "name": "Gian cơ cấu bánh răng"
+              },
+              {
+                "id": "TWR-06-02-02",
+                "name": "Phòng bảo trì đồng hồ"
+              }
+            ]
+          },
+          {
+            "level": "Đỉnh tháp",
+            "rooms": [
+              {
+                "id": "TWR-06-03-01",
+                "name": "Buồng quả lắc lớn"
+              },
+              {
+                "id": "TWR-06-03-02",
+                "name": "Buồng kiểm tra chuông giờ"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp Chuông",
+        "direction": "Bắc",
+        "levels": [
+          {
+            "level": "Chân tháp",
+            "rooms": [
+              {
+                "id": "TWR-07-01-02",
+                "name": "Phòng giữ dụng cụ chuông"
+              }
+            ]
+          },
+          {
+            "level": "Đỉnh tháp",
+            "rooms": [
+              {
+                "id": "TWR-07-02-01",
+                "name": "Đài treo chuông"
+              },
+              {
+                "id": "TWR-07-02-02",
+                "name": "Phòng vận hành chuông"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp Giáo viên (Faculty Tower)",
+        "direction": "Nam",
+        "levels": [
+          {
+            "level": "Tầng tiếp cận",
+            "rooms": [
+              {
+                "id": "TWR-08-01-01",
+                "name": "Lối vào Faculty Tower"
+              },
+              {
+                "id": "TWR-08-01-02",
+                "name": "Phòng trực nhân viên"
+              }
+            ]
+          },
+          {
+            "level": "Tầng giữa",
+            "rooms": [
+              {
+                "id": "TWR-08-02-01",
+                "name": "Hành lang các phòng giáo viên"
+              },
+              {
+                "id": "TWR-08-02-02",
+                "name": "Phòng nghỉ giáo viên"
+              }
+            ]
+          },
+          {
+            "level": "Tầng trên",
+            "rooms": [
+              {
+                "id": "TWR-08-03-01",
+                "name": "Hành lang nối bệnh xá"
+              },
+              {
+                "id": "TWR-08-03-02",
+                "name": "Phòng họp giảng viên kín"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp DADA",
+        "direction": "Đông",
+        "levels": [
+          {
+            "level": "Chân tháp",
+            "rooms": [
+              {
+                "id": "TWR-09-01-01",
+                "name": "Sảnh chân Tháp DADA"
+              },
+              {
+                "id": "TWR-09-01-02",
+                "name": "Kho đạo cụ phòng vệ"
+              }
+            ]
+          },
+          {
+            "level": "Tầng giảng dạy",
+            "rooms": [
+              {
+                "id": "TWR-09-02-01",
+                "name": "Phòng học Phòng chống Nghệ thuật Hắc ám — cửa tháp"
+              },
+              {
+                "id": "TWR-09-02-02",
+                "name": "Phòng tập đũa phép tại tháp"
+              }
+            ]
+          },
+          {
+            "level": "Tầng trên",
+            "rooms": [
+              {
+                "id": "TWR-09-03-01",
+                "name": "Hành lang Tháp DADA tầng cao"
+              },
+              {
+                "id": "TWR-09-03-02",
+                "name": "Phòng làm việc bổ trợ DADA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp Cầu thang Lớn",
+        "direction": "Trung tâm",
+        "levels": [
+          {
+            "level": "Chân tháp",
+            "rooms": [
+              {
+                "id": "TWR-10-01-01",
+                "name": "Cầu thang Lớn"
+              },
+              {
+                "id": "TWR-10-01-02",
+                "name": "Buồng kiểm tra cầu thang"
+              }
+            ]
+          },
+          {
+            "level": "Lưng chừng",
+            "rooms": [
+              {
+                "id": "TWR-10-02-01",
+                "name": "Hành lang tranh nối Cầu thang Lớn"
+              },
+              {
+                "id": "TWR-10-02-02",
+                "name": "Phòng trực hành lang giữa tầng"
+              }
+            ]
+          },
+          {
+            "level": "Đỉnh tháp",
+            "rooms": [
+              {
+                "id": "TWR-10-03-01",
+                "name": "Sảnh cao Cầu thang Lớn"
+              },
+              {
+                "id": "TWR-10-03-02",
+                "name": "Kho bảng hướng dẫn lớp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tháp Tây (Nhà cú)",
+        "direction": "Tây",
+        "levels": [
+          {
+            "level": "Lối lên",
+            "rooms": [
+              {
+                "id": "TWR-11-01-01",
+                "name": "Cầu thang Nhà cú"
+              },
+              {
+                "id": "TWR-11-01-02",
+                "name": "Kho thức ăn cho cú"
+              }
+            ]
+          },
+          {
+            "level": "Tầng chuồng cú",
+            "rooms": [
+              {
+                "id": "TWR-11-02-01",
+                "name": "Nhà cú (Owlery)"
+              },
+              {
+                "id": "TWR-11-02-02",
+                "name": "Phòng chăm sóc cú bị thương"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

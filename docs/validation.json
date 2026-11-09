@@ -72,5 +72,17 @@
       "diffCheck": "passed",
       "browser": "not rerun: no rendering changes; replacement renderer not implemented"
     }
+  },
+  "runtimeV2": {
+    "schemaVersion": "2.0.0",
+    "status": "implemented baseline; detailed limitations in docs/DEVELOPMENT_STATUS.md",
+    "nodeTests": 9,
+    "atlasTests": 5,
+    "inventoryTests": 3,
+    "sceneryTests": 3,
+    "gallery": "259 passed",
+    "chromium": "13 templates mounted; no page errors; generated, fog and walking status verified",
+    "aiStudio": "not tested in authenticated Preview this session",
+    "mobileHardware": "not tested"
   }
 }

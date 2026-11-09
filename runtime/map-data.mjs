@@ -33,7 +33,6 @@ export function validateMapData(data) {
   const places=new Set(data.places.map(p=>p.id)),visible=new Set(data.visibility.visiblePlaceIds);
   const requirePlace=(id,label)=>{if(!places.has(id))errors.push(`${label}: unknown place`)};
   requirePlace(data.focus.actualPlaceId,'PC');requirePlace(data.view.centerPlaceId,'view center');
-  if(data.view.centerPlaceId!==data.focus.actualPlaceId)errors.push('Local view must center on PC');
   data.view.routePlaceIds.forEach(id=>requirePlace(id,'route'));data.visibility.visiblePlaceIds.forEach(id=>requirePlace(id,'visibility'));
   if(data.focus.selectedId!==null&&!ids.has(data.focus.selectedId))errors.push('Unknown selected entity');
   if(!visible.has(data.focus.actualPlaceId))errors.push('PC place must be visible');
@@ -59,12 +58,10 @@ export function validateMapData(data) {
   }
   const graph=new Map(data.places.map(p=>[p.id,[]]));
   for(const c of data.connections){requirePlace(c.from,'connection');requirePlace(c.to,'connection');if(c.from===c.to)errors.push('Self connection');graph.get(c.from)?.push(c.to);graph.get(c.to)?.push(c.from);}
-  const distance=new Map([[data.focus.actualPlaceId,0]]),queue=[data.focus.actualPlaceId];
-  for(let i=0;i<queue.length;i++){const id=queue[i];for(const to of graph.get(id)||[])if(!distance.has(to)){distance.set(to,distance.get(id)+1);queue.push(to)}}
-  if(data.places.length>data.view.maxPlaces)errors.push('Local place budget exceeded');
-  for(const p of data.places)if(!distance.has(p.id)||distance.get(p.id)>data.view.maxHops)errors.push('Place outside local neighborhood');
   for(let i=1;i<data.view.routePlaceIds.length;i++)if(!graph.get(data.view.routePlaceIds[i-1])?.includes(data.view.routePlaceIds[i]))errors.push('Route has an unlinked step');
   if(data.view.routePlaceIds.length&&data.view.routePlaceIds[0]!==data.focus.actualPlaceId)errors.push('Route must begin at PC');
+  const regions=new Set((data.visibility.fogRegions||[]).map(r=>r.id));
+  for(const id of data.visibility.fogRegionIds)if(!regions.has(id))errors.push('Fog region needs explicit geometry: '+id);
   return {ok:errors.length===0,errors};
 }
 export function assertMapData(data){const result=validateMapData(data);if(!result.ok)throw new Error(result.errors.join('; '));return data}

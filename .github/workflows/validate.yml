@@ -1,0 +1,16 @@
+name: Validate WIZAMAP
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: node --test tools/test_map_data.mjs tools/test_ui.mjs
+      - run: python tools/atlas.py validate && python tools/test_atlas.py && python tools/test_inventory.py && python tools/test_scenery.py
+      - run: npm ci --prefix elements && npm --prefix elements test

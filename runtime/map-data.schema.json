@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:wizawi:wizamap:map-data:1.0.0",
-  "title": "WIZAMAP MAP_DATA 1.0.0",
+  "$id": "urn:wizawi:wizamap:map-data:2.0.0",
+  "title": "WIZAMAP MAP_DATA 2.0.0",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "schemaVersion": {
-      "const": "1.0.0"
+      "const": "2.0.0"
     },
     "campaignId": {
       "type": "string",
@@ -99,18 +99,10 @@
             "type": "string",
             "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
           },
-          "uniqueItems": true,
-          "maxItems": 20
+          "uniqueItems": true
         },
-        "maxHops": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 2
-        },
-        "maxPlaces": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 20
+        "crop": {
+          "type": "boolean"
         }
       },
       "required": [
@@ -119,9 +111,7 @@
         "preferredMode",
         "templateId",
         "centerPlaceId",
-        "routePlaceIds",
-        "maxHops",
-        "maxPlaces"
+        "routePlaceIds"
       ]
     },
     "focus": {
@@ -155,8 +145,7 @@
       "items": {
         "$ref": "#/$defs/place"
       },
-      "minItems": 1,
-      "maxItems": 20
+      "minItems": 1
     },
     "connections": {
       "type": "array",
@@ -232,8 +221,7 @@
             "type": "string",
             "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
           },
-          "uniqueItems": true,
-          "maxItems": 20
+          "uniqueItems": true
         },
         "fogRegionIds": {
           "type": "array",
@@ -243,6 +231,29 @@
           },
           "uniqueItems": true,
           "maxItems": 30
+        },
+        "fogRegions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "points": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "$ref": "#/$defs/point"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "points"
+            ]
+          }
         }
       },
       "required": [
@@ -300,32 +311,6 @@
         "packId",
         "limits"
       ]
-    },
-    "layout": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "scopeKey": {
-          "type": "string",
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
-        },
-        "version": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "stateRef": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
-        }
-      },
-      "required": [
-        "scopeKey",
-        "version",
-        "stateRef"
-      ]
     }
   },
   "required": [
@@ -342,8 +327,7 @@
     "actors",
     "hints",
     "visibility",
-    "questPolicy",
-    "layout"
+    "questPolicy"
   ],
   "$defs": {
     "place": {
@@ -611,6 +595,16 @@
             "overhear",
             "observation"
           ]
+        },
+        "environment": {
+          "type": "string",
+          "enum": [
+            "inside",
+            "outside"
+          ]
+        },
+        "position": {
+          "$ref": "#/$defs/point"
         }
       },
       "required": [
@@ -698,6 +692,22 @@
         "title",
         "priority",
         "inspector"
+      ]
+    },
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
       ]
     }
   }

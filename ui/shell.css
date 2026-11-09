@@ -11,3 +11,6 @@
 body.motion-off #mapmount *{animation-play-state:paused!important}#mapmount .tree-canopy{transform-box:view-box} 
 /* Current policy: no location ribbons. Map geometry remains clickable. */
 .plaque,.location-tag{display:none!important}
+/* A low iframe uses the same drawer as a narrow phone. */
+@media(max-height:650px){.layout{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) 40px}.layout.drawer-open{grid-template-rows:minmax(0,1fr) min(45dvh,240px)}aside{padding:0 14px;overflow:auto}.drawer-toggle{display:flex;width:100%;justify-content:space-between;position:sticky;top:0;background:var(--paper);z-index:5}.layout:not(.drawer-open) aside>.identity,.layout:not(.drawer-open) aside>section{display:none}}
+.mapmount{touch-action:none;min-height:0}.qa-error:empty{display:none}

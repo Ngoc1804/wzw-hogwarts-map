@@ -1,37 +1,15 @@
-# MAP_DATA 1.0.0 — cơ chế đã chốt
+# MAP_DATA 2.0.0
 
-**Trạng thái:** có schema, ví dụ, validator, bộ chọn template/recipe và adapter lưu layout có kiểm tính ổn định. Chưa có full rendering engine, chưa ghép UI vào index.html, chưa triển khai /map vận hành trong AI Studio. Không nhầm module trả render plan với bản đồ đã vẽ.
+Một chiều: Gemini/context RP → MAP_DATA + HTML loader → bundle ghim commit → Google AI Studio Preview. GitHub chỉ cung cấp code và artwork; Preview không ghi GitHub, không yêu cầu seed hoặc storage.
 
-Nguồn hợp đồng duy nhất: `map-data.schema.json`. Quy tắc và flow: `../docs/MAP_FLOW.md`. Hai JSON trong `examples/` chỉ là fixture minh họa, không phải NPC/quest thật hoặc bản đồ canon mới.
+Schema duy nhất: `map-data.schema.json`. Chuyển từ 1.0.0: bỏ `layout`, `view.maxHops`, `view.maxPlaces`; thêm `view.crop` (mặc định bật), `visibility.fogRegions` (polygon SVG), actor `environment` và `position` tùy trường hợp. Hai dữ liệu ví dụ cũ đã xóa. Thiếu MAP_DATA phải báo lỗi, không thay bằng fixture.
 
-| File | Vai trò |
-|---|---|
-| map-data.schema.json | Hợp đồng đầy đủ, đóng trường lạ, giới hạn và loại dữ liệu |
-| map-data.mjs | Kiểm schema được dùng ở đây và các quan hệ ID, locality, cap, tháng/pack; serialize an toàn |
-| templates.json | Registry adapter từ index template hiện tại, không phải atlas canon |
-| resolve-map.mjs | Chọn template chính xác hoặc recipe; khóa layout + seed SHA-256 |
-| prepare-map.mjs | Gọi storage/geometry callbacks, không cho di chuyển phòng cũ hoặc đổi seed |
+`resolve-map.mjs` kiểm binding chính xác; template bắt buộc thiếu binding sẽ lỗi. Auto thiếu binding yêu cầu recipe cho tất cả phòng được dựng. `geometry.mjs` dựng mặt bằng tạm theo dữ liệu được cấp trong Preview, không lưu state. Actor stance=walk hiển thị thanh hành động “Đang đi”; RP quyết định di chuyển.
 
-```js
-import {prepareMap} from './prepare-map.mjs';
-const plan = await prepareMap(MAP_DATA, {
-  loadLayout, saveLayout, createLayout, extendLayout
-});
-// Render plan cục bộ bằng viewer/template crop hoặc hybrid renderer sau khi chúng được hoàn thiện.
-```
+`viewer.mjs`: template/generated, crop theo các nơi hiển thị (không ép bán kính PC), fog polygon được chỉ định, actor/hint/inspector, pan/zoom, tải HTML offline. Nhân vật trong nhà ở template ngoài trời có ribbon trên công trình và không có dấu chân ngoài nhà. Nhân vật ngoài trời cần position được xác minh; chưa có bộ walkable polygon bao phủ 13 template. Không đoán đất hợp lệ từ bounding box.
 
-Các callback do host cung cấp; module không giả làm storage đã triển khai. Host phải lưu bền và khóa/serialize cập nhật theo layout key. LocalStorage chỉ là cache, không bảo đảm qua các Preview origin khác nhau. Thiếu state đã chỉ định phải báo lỗi, không tự dựng lại.
+Recipe hiện hỗ trợ room rectangle/L/T/U/round/polygon; dựng hành lang nối theo đường vuông góc. Đồ nội thất hỗ trợ role desk/table/chair/bed/shelf/cabinet và phải vừa các ô sàn hợp lệ. Đây là renderer hình học cơ sở; chưa có biên tập cổng, stair/lift chi tiết, định tuyến tránh giao cắt giữa các hành lang hoặc hiệu ứng che khuất công trình chọn lọc. Không coi mặt bằng sinh ra là sơ đồ canon.
 
-Validator không biết NPC card, bí mật, monthly pack hay chat. Nó chỉ kiểm tính nhất quán của dữ liệu khai báo. Gemini chịu trách nhiệm chọn đúng nội dung, gate và quest nguồn. Không fetch hoặc gửi toàn bộ prompt/pack vào GitHub.
+Build: `python tools/build_runtime.py --out /tmp/wizamap --ref <full atlas commit>`; bundle phải được phát hành rồi loader ghim full commit chứa bundle. `tools/contract-fixture.json` chỉ là input của test, không đóng gói runtime.
 
-Template không khớp là fallback sang recipe (auto) hoặc lỗi rõ (template bắt buộc). Recipe còn thiếu thì yêu cầu bổ sung dữ liệu; không đoán theo tên. Chỉ được mount sau khi thực hiện crop/mask cục bộ; không mount toàn tầng rồi gọi đó là local map. Full SVG tĩnh không phải cơ chế bảo mật bí mật RP.
-
-Node 24+ dùng được các module này; trình duyệt hiện đại cần JSON modules và Web Crypto. Đóng gói thành browser bundle ghim commit và thử AI Studio vẫn là công việc tiếp theo.
-
-Kiểm tra: `node --test tools/test_map_data.mjs` từ root repo.
-
-Khi index atlas thay đổi, chạy `python tools/sync_template_registry.py` để cập nhật adapter; lệnh này không sửa maps/*.
-
-## Trạng thái hành lang
-
-Demo và bộ dựng hình hành lang cũ đã bị loại bỏ khỏi source hiện hành theo yêu cầu người dùng. Renderer thay thế chưa triển khai. Kế hoạch phát triển chưa được người dùng duyệt và phải được thảo luận trong chat trước khi đưa lên GitHub.
+Kiểm tra: `node --test tools/test_map_data.mjs tools/test_ui.mjs`, `python tools/atlas.py validate`, `python tools/test_atlas.py`.

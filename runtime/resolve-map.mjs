@@ -1,17 +1,12 @@
 import registry from './templates.json' with {type:'json'};
 import {assertMapData} from './map-data.mjs';
-export const LAYOUT_ALGORITHM='hybrid-v1';
-export function layoutIdentity(data){return JSON.stringify([data.worldId,data.view.scopeId,data.layout.scopeKey,data.layout.version])}
-export async function layoutSeed(data){const bytes=new TextEncoder().encode(layoutIdentity(data));const hash=await crypto.subtle.digest('SHA-256',bytes);return [...new Uint8Array(hash)].map(v=>v.toString(16).padStart(2,'0')).join('')}
 export function resolveMap(data,templates=registry.templates){
-  assertMapData(data);
-  const required=data.places.filter(p=>data.visibility.visiblePlaceIds.includes(p.id));
-  const candidates=Object.entries(templates).filter(([,t])=>required.every(p=>p.atlasRef&&t.targets[p.atlasRef]?.length));
-  let selected=data.view.templateId?candidates.find(([id])=>id===data.view.templateId):candidates[0];
-  if(data.view.preferredMode==='generated')selected=null;
-  if(data.view.preferredMode==='template'&&!selected)throw new Error('Requested template cannot cover the local places');
-  if(selected){const [id,t]=selected;return {mode:'template',templateId:id,mapId:t.mapId,requiresLocalCrop:true,targets:required.map(p=>({placeId:p.id,interactiveIds:t.targets[p.atlasRef]})),layoutKey:layoutIdentity(data)}}
-  for(const p of required)if(!p.generation)throw new Error('Generated place requires a recipe description or atlas adapter: '+p.id);
-  return {mode:'generated',scopeId:data.view.scopeId,places:required.map(p=>({id:p.id,recipe:p.generation})),connections:data.connections,layoutKey:layoutIdentity(data),algorithm:LAYOUT_ALGORITHM};
+ assertMapData(data);
+ const places=data.places.filter(p=>data.visibility.visiblePlaceIds.includes(p.id));
+ const ids=Object.keys(templates).filter(id=>places.every(p=>p.atlasRef&&templates[id].targets[p.atlasRef]?.length));
+ const id=data.view.templateId?ids.find(id=>id===data.view.templateId):ids[0];
+ if(data.view.preferredMode!=='generated'&&id)return {mode:'template',templateId:id,targets:places.map(p=>({placeId:p.id,interactiveIds:templates[id].targets[p.atlasRef]}))};
+ if(data.view.preferredMode==='template')throw Error('Requested template cannot cover visible places');
+ for(const p of places)if(!p.generation)throw Error('Missing recipe for '+p.id);
+ return {mode:'generated',places,connections:data.connections.filter(c=>places.some(p=>p.id===c.from)&&places.some(p=>p.id===c.to))};
 }
-// This resolves a render plan only. It never mounts a full floor or regenerates stored geometry.
