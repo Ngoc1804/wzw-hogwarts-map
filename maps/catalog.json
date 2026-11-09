@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "canonicalAtlas": "index.html",
-  "mapCount": 12,
+  "mapCount": 13,
   "h2Included": true,
   "maps": [
     {
@@ -526,6 +526,54 @@
       ],
       "extract": "python tools/atlas.py extract diagon-knockturn",
       "payloadPointer": "#map-data / maps.diagon-knockturn.svg"
+    },
+    {
+      "id": "ministry-8-10",
+      "title": "Bộ Pháp thuật · Tầng 8–10",
+      "svgBytes": 84980,
+      "bounds": [
+        0,
+        0,
+        1900,
+        2900
+      ],
+      "reading": null,
+      "interactiveIds": [
+        "mm-floo-in-0",
+        "mm-floo-out-0",
+        "mm-floo-in-1",
+        "mm-floo-out-1",
+        "mm-floo-in-2",
+        "mm-floo-out-2",
+        "mm-floo-in-3",
+        "mm-floo-out-3",
+        "mm-floo-in-4",
+        "mm-floo-out-4",
+        "mm-floo-in-5",
+        "mm-floo-out-5",
+        "mm-fountain",
+        "mm-visitor",
+        "mm-security",
+        "mm-lift-8",
+        "mm-up",
+        "mm-time",
+        "mm-prophecy",
+        "mm-death",
+        "mm-brain",
+        "mm-space",
+        "mm-love",
+        "mm-rotunda",
+        "mm-lift-9",
+        "mm-stairs-9",
+        "mm-court",
+        "mm-accused",
+        "mm-waiting",
+        "mm-office",
+        "mm-escort",
+        "mm-stairs-10"
+      ],
+      "extract": "python tools/atlas.py extract ministry-8-10",
+      "payloadPointer": "#map-data / maps.ministry-8-10.svg"
     }
   ]
 }

@@ -2,16 +2,16 @@
   "schemaVersion": "1.0.0",
   "branch": "demo-1",
   "canonicalAtlas": "index.html",
-  "revisionLabel": "h2-grounds-final",
-  "mapCount": 12,
+  "revisionLabel": "ministry-8-10-approved",
+  "mapCount": 13,
   "files": {
     "index.html": {
-      "bytes": 923852,
-      "sha256": "b91876521ee40fb036624bf7df59aa8ed64ef4b8e025d470664764c7ef470c57"
+      "bytes": 949511,
+      "sha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
     },
     "maps/catalog.json": {
-      "bytes": 12565,
-      "sha256": "408164bc044b373d1ae5a2cfb1f3b22dbccaf7542936315eb2bbc95c6d822160"
+      "bytes": 13661,
+      "sha256": "7377239bae1f475c2318dab8d20097df565767b6aa7384d62e6afe8a11cd2610"
     },
     "templates/h1/shading.svg": {
       "bytes": 26018,
@@ -20,6 +20,10 @@
     "templates/h1/shading-tokens.json": {
       "bytes": 6530,
       "sha256": "3b6d34db0798a1ccb9ebfcd20e2917785be65081a374b9e188d9eb759511ce9e"
+    },
+    "tools/build_ministry.py": {
+      "bytes": 21253,
+      "sha256": "595fbf6f0c49be6898fdedfd7f5a2ab49957e3803c3c82f4bb230df3461382d2"
     }
   }
 }

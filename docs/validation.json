@@ -1,47 +1,29 @@
 {
-  "baseCommit": "bffe27b07be20efca8231407308276f11e4acc21",
+  "baseCommit": "58cf5917d85fbbfefa5fcfa1d1190558b8699700",
   "canonicalAtlas": "index.html",
-  "htmlBytes": 923852,
-  "htmlSha256": "b91876521ee40fb036624bf7df59aa8ed64ef4b8e025d470664764c7ef470c57",
-  "maps": 12,
-  "h2InteractivePlaces": 72,
-  "previous11MapsByteIdentical": true,
-  "existingSharedVectorsUnchanged": true,
-  "structuralValidation": {
-    "maps": 12,
-    "sharedVectors": 2718,
-    "references": "valid"
+  "maps": 13,
+  "onlyNewMap": "ministry-8-10",
+  "unapprovedMapsIncluded": false,
+  "previous12MapRecordsIdentical": true,
+  "sharedVectorsUnchanged": true,
+  "htmlBytes": 949511,
+  "htmlSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17",
+  "tests": {
+    "atlas": 5,
+    "ministry": 2
   },
-  "atlasToolTests": "5 passed",
   "browser": {
-    "checked": [
-      "h1",
-      "h2",
-      "hall",
-      "ministry2",
-      "express",
-      "gryffindor-common",
-      "ravenclaw-common",
-      "hufflepuff-common",
-      "slytherin-common",
-      "village-static",
-      "pitch-static",
-      "diagon-knockturn"
-    ],
-    "pause": true,
-    "resume": true,
-    "h2Targets": 72,
-    "targetFailures": [],
-    "duplicateIds": 0,
-    "labels": "inline",
-    "zoom": true,
-    "reopenedTargets": 72,
+    "engine": "Chromium",
+    "errors": [],
+    "targetsChecked": 32,
+    "liftFocus": true,
+    "floor10ScrollTop": 947,
+    "h1PauseResume": true,
+    "exportReopened": true,
     "mobile": {
       "width": 390,
-      "scroll": 390
-    },
-    "errors": []
-  },
-  "galleryAndSourceAssets": "unchanged; tests not rerun because no gallery/framework changes",
-  "cleanup": "Only canonical index.html and current source/documentation changes are committed; no PNG, ZIP, standalone H2 HTML, backups or extracted SVG."
+      "noHorizontalOverflow": true,
+      "tapInspector": true
+    }
+  }
 }

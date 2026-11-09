@@ -97,12 +97,12 @@ def refresh(file, html, data):
     catalog={'schemaVersion':'1.0.0','canonicalAtlas':'index.html','mapCount':len(data['maps']),
              'h2Included':'h2' in data['maps'],'maps':metadata(data)}
     (root/'maps/catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
-    tracked=['index.html','maps/catalog.json','templates/h1/shading.svg','templates/h1/shading-tokens.json']
+    tracked=['index.html','maps/catalog.json','templates/h1/shading.svg','templates/h1/shading-tokens.json','tools/build_ministry.py']
     files={name:{'bytes':(root/name).stat().st_size,'sha256':hashlib.sha256((root/name).read_bytes()).hexdigest()}
            for name in tracked if (root/name).exists()}
     (root/'docs').mkdir(exist_ok=True)
     manifest={'schemaVersion':'1.0.0','branch':'demo-1','canonicalAtlas':'index.html',
-              'revisionLabel':'h2-grounds-final','mapCount':len(data['maps']),'files':files}
+              'revisionLabel':'ministry-8-10-approved' if 'ministry-8-10' in data['maps'] else 'h2-grounds-final','mapCount':len(data['maps']),'files':files}
     (root/'docs/release.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     return manifest
 

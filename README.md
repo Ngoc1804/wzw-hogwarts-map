@@ -1,6 +1,6 @@
 # WIZAMAP · demo-1
 
-**Bản đã chốt:** atlas hiện tại nằm duy nhất ở **[index.html](index.html)**: 12 map, H1 có animation và shading địa hình/kiến trúc. Mở trực tiếp file HTML; không cần server hay CDN. Dùng nút **Tải HTML** để lưu bản đầy đủ.
+**Bản đã chốt:** atlas hiện tại nằm duy nhất ở **[index.html](index.html)**: 13 map, H1 có animation và shading địa hình/kiến trúc. Mở trực tiếp file HTML; không cần server hay CDN. Dùng nút **Tải HTML** để lưu bản đầy đủ.
 
 ## Tìm nhanh
 
@@ -19,7 +19,7 @@
 
 ```text
 index.html          Atlas độc lập duy nhất, dữ liệu SVG nén gzip bên trong
-maps/catalog.json   Danh mục 12 map và ID tương tác; tạo tự động từ HTML
+maps/catalog.json   Danh mục 13 map và ID tương tác; tạo tự động từ HTML
 templates/h1/      Overlay shading và bảng màu/vị trí tái sử dụng
 elements/          Thư viện 305 SVG khung, gallery, tài liệu và bộ sinh mẫu
 tools/             Công cụ lấy/chèn từng map, kiểm tra và trang preview
@@ -48,3 +48,7 @@ Express, các map phòng chung/phòng ngủ, Hogsmeade, Quidditch và Diagon/Kno
 Nhánh chỉ giữ bản hiện hành. Không lưu thêm index-v*.html, bản ZIP, cache, snapshot hoặc bộ sinh catalog cũ cạnh bản chính. Lấy đúng bản theo mã SHA-256 trong `docs/release.json`; mọi chỉnh sửa tiếp theo bắt đầu từ bản này.
 
 
+
+## Bộ tầng 8–10
+
+Chọn Bộ Pháp thuật · Tầng 8–10 trong menu. Atrium, Bảo mật và Xét xử xếp dọc, nối bằng lift 8↔9 và cầu thang 9↔10. Xem `docs/MINISTRY_8_10.md` và source `tools/build_ministry.py`.
