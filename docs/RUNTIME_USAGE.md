@@ -12,12 +12,20 @@ Crop bật mặc định, fit các nơi được gửi; crop=false để toàn c
 
 ```html
 <!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><body><p id="status">Đang tải WIZAMAP…</p><iframe title="Bản đồ RP" sandbox="allow-scripts allow-downloads" style="width:100%;height:90dvh;border:0"></iframe><script type="application/json" id="rp-map-data">{}</script><script>
-(async()=>{try{const data=JSON.parse(document.querySelector('#rp-map-data').textContent);const r=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@d79eed97db61f877983803d3da9f53ac88fe6ef6/runtime/bundle.js');if(!r.ok)throw Error('Runtime HTTP '+r.status);const code=await r.text();const safe=JSON.stringify(data).replace(/</g,'\\u003c');document.querySelector('iframe').srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+safe+'<\/script><script>'+code.replace(/<\/script/gi,'<\\/script')+'<\/script>';document.querySelector('#status').textContent='Runtime đã tải; trạng thái dữ liệu hiển thị bên trong bản đồ.'}catch(e){document.querySelector('#status').textContent='Không mở được bản đồ: '+e.message}})();
+(async()=>{try{const data=JSON.parse(document.querySelector('#rp-map-data').textContent);const r=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@631bb37b24eeaad92592ef5b5996a33d93825a59/runtime/bundle.js');if(!r.ok)throw Error('Runtime HTTP '+r.status);const code=await r.text();const safe=JSON.stringify(data).replace(/</g,'\\u003c');document.querySelector('iframe').srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+safe+'<\/script><script>'+code.replace(/<\/script/gi,'<\\/script')+'<\/script>';document.querySelector('#status').textContent='Runtime đã tải; trạng thái dữ liệu hiển thị bên trong bản đồ.'}catch(e){document.querySelector('#status').textContent='Không mở được bản đồ: '+e.message}})();
 </script></body></html>
 
 ```
 
 
+
+
+
+### Generated indoor: Stage 2 scene layout
+
+When a template does not cover the visible scene, `view.preferredMode: "generated"` uses the approved Stage 2 formulas. Pass only the currently visible place records (not the entire floor) and optional `view.indoor: {layout:"ell", roomWidth:300, roomDepth:260, corridorWidth:160}`. Supported layouts: horizontal, vertical, ell, tee, cross, court, cloister, windows, curved, tower (or auto with constraints/knownStructure). Each generated room's `generation.shape` is rectangle/L/U/T/cross/round; a corridor place with shape straight uses real hallway floor. Optional `generation.width/depth` overrides the general room dimensions. Mixed floors are rejected; no prebuilt floor, no multiple wings, no layout persistence, no A* movement simulation. A scene can contain one room or even a corridor only (except a tower formula with no rooms).
+
+Transient `buildGeometry()` output includes `floorPolygons` (actual concave room/corridor floors), `actorZones` (conservative inset standing patches), `exclusionZones` (courtyard/void, stairs, doors, thresholds) and `suggestedAnchors` by place ID. If an indoor actor has no exact position, Preview uses a safe anchor for its current place; explicit positions outside that place's safe zones are rejected. These polygons describe illustrative standing surfaces, not routes or movement physics. Drawing uses the approved lightweight Stage 2 SVG architectural walls, doors, windows and floor materials; no furniture is generated. Room labels are architectural signage, not place ribbons.
 
 ### Spatial Geometry (optional MAP_DATA 2.0)
 
@@ -136,6 +144,9 @@ Crop lấy phạm vi cảnh/route và tọa độ actor có thể thấy, không
         },
         "spatial": {
           "$ref": "#/$defs/spatial"
+        },
+        "indoor": {
+          "$ref": "#/$defs/indoor"
         }
       },
       "required": [
@@ -467,7 +478,8 @@ Crop lấy phạm vi cảnh/route và tọa độ actor có thể thấy, không
                 "round",
                 "polygon",
                 "straight",
-                "curved"
+                "curved",
+                "cross"
               ]
             },
             "furnishings": {
@@ -492,6 +504,16 @@ Crop lấy phạm vi cảnh/route và tọa độ actor có thể thấy, không
                 ]
               },
               "maxItems": 30
+            },
+            "width": {
+              "type": "number",
+              "minimum": 180,
+              "maximum": 560
+            },
+            "depth": {
+              "type": "number",
+              "minimum": 180,
+              "maximum": 520
             }
           },
           "required": [
@@ -819,6 +841,123 @@ Crop lấy phạm vi cảnh/route và tọa độ actor có thể thấy, không
         "id",
         "points"
       ]
+    },
+    "indoor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "layout": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "horizontal",
+            "vertical",
+            "ell",
+            "tee",
+            "cross",
+            "court",
+            "cloister",
+            "windows",
+            "curved",
+            "tower"
+          ]
+        },
+        "knownStructure": {
+          "type": "string",
+          "enum": [
+            "horizontal",
+            "vertical",
+            "ell",
+            "tee",
+            "cross",
+            "court",
+            "cloister",
+            "windows",
+            "curved",
+            "tower"
+          ]
+        },
+        "constraints": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "courtyard": {
+              "type": "string",
+              "enum": [
+                "open",
+                "closed"
+              ]
+            },
+            "windows": {
+              "type": "boolean"
+            },
+            "curved": {
+              "type": "boolean"
+            },
+            "tower": {
+              "type": "boolean"
+            },
+            "branches": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 4
+            },
+            "orientation": {
+              "type": "string",
+              "enum": [
+                "horizontal",
+                "vertical"
+              ]
+            }
+          }
+        },
+        "roomWidth": {
+          "type": "number",
+          "minimum": 180,
+          "maximum": 560
+        },
+        "roomDepth": {
+          "type": "number",
+          "minimum": 180,
+          "maximum": 520
+        },
+        "corridorWidth": {
+          "type": "number",
+          "minimum": 100,
+          "maximum": 240
+        },
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "horizontal",
+              "vertical",
+              "ell",
+              "tee",
+              "cross",
+              "court",
+              "cloister",
+              "windows",
+              "curved",
+              "tower"
+            ]
+          }
+        },
+        "strategy": {
+          "type": "string",
+          "enum": [
+            "constraints",
+            "random"
+          ]
+        },
+        "allowRandom": {
+          "type": "boolean"
+        }
+      }
     }
   }
 }
