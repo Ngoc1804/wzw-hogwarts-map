@@ -34,4 +34,4 @@ Khi index atlas thay đổi, chạy `python tools/sync_template_registry.py` đ�
 
 ## Prototype hình học hành lang
 
-`corridors.mjs` có 7 loại: straight, L, T, cross, U, curved, loop; trả path/ports theo kích thước đầu vào. `tools/corridor-demo.html` là một mạng mẫu nối 16 phòng với asset hiện hành. Dựng lại bằng `python tools/build_corridor_demo.py`. Đây là test hình học, chưa tự bố trí từ mọi MAP_DATA, chưa nối UI/gameplay. Không có persistence bắt buộc giữa các Preview độc lập.
+`corridors.mjs` có 7 loại: straight, L, T, cross, U, curved, loop; trả path/ports theo kích thước đầu vào. Bản thử các phòng rời nối bằng nhánh dài đã bị người dùng loại bỏ; không tái tạo hoặc dùng làm mẫu. Chuẩn mới là cụm phòng sát hành lang theo QA V2. Đây là test hình học, chưa tự bố trí từ mọi MAP_DATA, chưa nối UI/gameplay. Không có persistence bắt buộc giữa các Preview độc lập.

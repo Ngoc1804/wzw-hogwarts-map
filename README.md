@@ -75,4 +75,3 @@ Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phi�
 - [Ví dụ template](runtime/examples/local-template.json), [ví dụ hybrid](runtime/examples/local-generated.json)
 - Kiểm tra: `node --test tools/test_map_data.mjs`. Đây là nền hợp đồng/resolver; UI và renderer vận hành còn cần ghép.
 
-[Thử 7 kiểu hành lang và 16 phòng ghép asset](tools/corridor-demo.html): HTML offline có zoom, chọn phòng và highlight từng kiểu. Bản thử độc lập, không thêm vào danh mục 13 template đã duyệt.
