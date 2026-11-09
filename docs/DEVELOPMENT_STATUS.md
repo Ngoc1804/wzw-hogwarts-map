@@ -1,5 +1,10 @@
 # Trạng thái triển khai
 
+## Actor Positioning · Crop/Fog · Occlusion (10/11/2026)
+
+Đã bổ sung MAP_DATA view.spatial (polygon walkable/blocked/occlusion), kiểm tra vị trí ngoài trời dựa trên vùng đã xác minh; vị trí NPC mới được tính mỗi /map, không lưu state. Actor/hint trong fog không tạo ribbon/marker/inspector; crop theo cảnh, route và tọa độ nhân vật. Fade công trình che theo occlusionRegion có binding kỹ thuật được xác minh, opacity 0.7 khi hover/chọn; binding chứa nhiều SVG bắt buộc interactiveId chính xác. CI chạy spatial tests + compile bundle và các test atlas. Chưa có dữ liệu polygon được duyệt cho mọi template, nên chưa công bố bao phủ 13 template đối với vị trí ngoài trời hay occlusion. Chưa kiểm AI Studio đăng nhập/điện thoại thật.
+
+
 Đã triển khai: bỏ ornament nơ lặp trong asset, gallery; MAP_DATA 2.0.0 không storage/seed/radius; xóa hai ví dụ runtime; không có fixture tự bật; decision atlas 762 nơi và 66 tham chiếu gộp; template resolver; renderer cơ sở phòng và hành lang; crop; fog polygon; UI/actor/hint/inspector; thanh hành động Đang đi; một scheduler footsteps; drawer khung thấp; bundle jsDelivr và shell một entry URL; CI.
 
 Đã kiểm: 14 Node tests (contract/geometry/atlas/UI); 5 atlas tests; 3 inventory tests; 3 scenery tests; gallery 259 SVG; Chromium mount 13 template không page error; desktop 1360×900, mobile 390×420. Kết quả này không chứng minh hiệu năng điện thoại thật hoặc Preview AI Studio có đăng nhập.
