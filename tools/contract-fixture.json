@@ -3,7 +3,7 @@
   "campaignId": "demo-au",
   "worldId": "demo-world",
   "snapshotId": "turn-001",
-  "atlasVersion": "template-index-v2",
+  "atlasVersion": "atlas-optimized-1.0",
   "meta": {
     "date": "1992-09-11",
     "time": "10:25",
