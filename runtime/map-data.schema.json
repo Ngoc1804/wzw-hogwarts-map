@@ -106,6 +106,9 @@
         },
         "spatial": {
           "$ref": "#/$defs/spatial"
+        },
+        "indoor": {
+          "$ref": "#/$defs/indoor"
         }
       },
       "required": [
@@ -437,7 +440,8 @@
                 "round",
                 "polygon",
                 "straight",
-                "curved"
+                "curved",
+                "cross"
               ]
             },
             "furnishings": {
@@ -462,6 +466,16 @@
                 ]
               },
               "maxItems": 30
+            },
+            "width": {
+              "type": "number",
+              "minimum": 180,
+              "maximum": 560
+            },
+            "depth": {
+              "type": "number",
+              "minimum": 180,
+              "maximum": 520
             }
           },
           "required": [
@@ -789,6 +803,123 @@
         "id",
         "points"
       ]
+    },
+    "indoor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "layout": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "horizontal",
+            "vertical",
+            "ell",
+            "tee",
+            "cross",
+            "court",
+            "cloister",
+            "windows",
+            "curved",
+            "tower"
+          ]
+        },
+        "knownStructure": {
+          "type": "string",
+          "enum": [
+            "horizontal",
+            "vertical",
+            "ell",
+            "tee",
+            "cross",
+            "court",
+            "cloister",
+            "windows",
+            "curved",
+            "tower"
+          ]
+        },
+        "constraints": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "courtyard": {
+              "type": "string",
+              "enum": [
+                "open",
+                "closed"
+              ]
+            },
+            "windows": {
+              "type": "boolean"
+            },
+            "curved": {
+              "type": "boolean"
+            },
+            "tower": {
+              "type": "boolean"
+            },
+            "branches": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 4
+            },
+            "orientation": {
+              "type": "string",
+              "enum": [
+                "horizontal",
+                "vertical"
+              ]
+            }
+          }
+        },
+        "roomWidth": {
+          "type": "number",
+          "minimum": 180,
+          "maximum": 560
+        },
+        "roomDepth": {
+          "type": "number",
+          "minimum": 180,
+          "maximum": 520
+        },
+        "corridorWidth": {
+          "type": "number",
+          "minimum": 100,
+          "maximum": 240
+        },
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "horizontal",
+              "vertical",
+              "ell",
+              "tee",
+              "cross",
+              "court",
+              "cloister",
+              "windows",
+              "curved",
+              "tower"
+            ]
+          }
+        },
+        "strategy": {
+          "type": "string",
+          "enum": [
+            "constraints",
+            "random"
+          ]
+        },
+        "allowRandom": {
+          "type": "boolean"
+        }
+      }
     }
   }
 }
