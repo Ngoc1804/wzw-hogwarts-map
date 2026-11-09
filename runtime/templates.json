@@ -1,0 +1,648 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "maps/catalog.json + maps/interaction-index.json",
+  "sourceHashes": {
+    "maps/catalog.json": "e99b2088ddef8388c508a69f8988f9f4983b420f94e6452094d0d959aa2323b3",
+    "maps/interaction-index.json": "a98e68ba9b6595b0cd3196cb22cc929027409e47937e7f75b40063aa2b53eb6a"
+  },
+  "templates": {
+    "h1": {
+      "mapId": "h1",
+      "targets": {
+        "forest": [
+          "region-4"
+        ],
+        "lake": [
+          "region-3"
+        ],
+        "station-dock": [
+          "region:station-dock"
+        ],
+        "castle": [
+          "region-0"
+        ],
+        "hagrid": [
+          "region:extra:5"
+        ],
+        "willow": [
+          "region:extra:2"
+        ],
+        "greenhouses": [
+          "region:extra:0"
+        ],
+        "owlery": [
+          "region:extra:1"
+        ],
+        "quidditch-pitch": [
+          "region:extra:4"
+        ],
+        "flying-lawn": [
+          "region:extra:7"
+        ],
+        "forecourt": [
+          "region:extra:8"
+        ],
+        "hogsmeade": [
+          "region-1"
+        ],
+        "hogsmeade-shop-0": [
+          "village-house-0"
+        ],
+        "hogsmeade-shop-1": [
+          "village-house-1"
+        ],
+        "hogsmeade-shop-2": [
+          "village-house-2"
+        ],
+        "hogsmeade-shop-3": [
+          "village-house-3"
+        ],
+        "hogsmeade-shop-4": [
+          "village-house-4"
+        ],
+        "hogsmeade-shop-5": [
+          "village-house-5"
+        ],
+        "hogsmeade-shop-6": [
+          "village-house-6"
+        ],
+        "hogsmeade-shop-7": [
+          "village-house-7"
+        ],
+        "hogsmeade-shop-8": [
+          "village-house-8"
+        ],
+        "hogsmeade-shop-9": [
+          "village-house-9"
+        ],
+        "shrieking-shack": [
+          "region-6"
+        ],
+        "hogsmeade-station": [
+          "region-2"
+        ],
+        "boathouse": [
+          "lakeside-boathouse"
+        ],
+        "ancient-tree": [
+          "lakeside-tree"
+        ],
+        "hogwarts-express": [
+          "train-v5"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "h2": {
+      "mapId": "h2",
+      "targets": {
+        "lake": [
+          "h2-place-0"
+        ],
+        "wyvern-court": [
+          "h2-place-3"
+        ],
+        "mistletoe-court": [
+          "h2-place-4"
+        ],
+        "forecourt": [
+          "h2-place-5"
+        ],
+        "castle-6": [
+          "h2-place-6"
+        ],
+        "great-hall": [
+          "h2-place-7"
+        ],
+        "castle-8": [
+          "h2-place-8"
+        ],
+        "castle-9": [
+          "h2-place-9"
+        ],
+        "castle-10": [
+          "h2-place-10"
+        ],
+        "castle-11": [
+          "h2-place-11"
+        ],
+        "castle-12": [
+          "h2-place-12"
+        ],
+        "castle-13": [
+          "h2-place-13"
+        ],
+        "castle-14": [
+          "h2-place-14"
+        ],
+        "castle-15": [
+          "h2-place-15"
+        ],
+        "castle-18": [
+          "h2-place-18"
+        ],
+        "castle-19": [
+          "h2-place-19"
+        ],
+        "castle-24": [
+          "h2-place-24"
+        ],
+        "castle-25": [
+          "h2-place-25"
+        ],
+        "castle-28": [
+          "h2-place-28"
+        ],
+        "entrance-hall": [
+          "h2-place-29"
+        ],
+        "castle-30": [
+          "h2-place-30"
+        ],
+        "castle-31": [
+          "h2-place-31"
+        ],
+        "castle-35": [
+          "h2-place-35"
+        ],
+        "castle-36": [
+          "h2-place-36"
+        ],
+        "quidditch-pitch": [
+          "h2-place-50"
+        ],
+        "greenhouses": [
+          "h2-place-54"
+        ],
+        "herb-garden": [
+          "h2-place-55"
+        ],
+        "hagrid": [
+          "h2-place-56"
+        ],
+        "pumpkin-garden": [
+          "h2-place-57"
+        ],
+        "owlery": [
+          "h2-place-59"
+        ],
+        "ancient-tree": [
+          "h2-place-60"
+        ],
+        "willow": [
+          "h2-place-61"
+        ],
+        "stands": [
+          "h2-place-70"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "hall": {
+      "mapId": "hall",
+      "targets": {
+        "courtyard": [
+          "gf-courtyard"
+        ],
+        "staff-room": [
+          "gf-staff"
+        ],
+        "filch-office": [
+          "gf-filch"
+        ],
+        "classroom-11": [
+          "gf-class11"
+        ],
+        "sorting-waiting": [
+          "gf-waiting"
+        ],
+        "hall-antechamber": [
+          "gf-antechamber"
+        ],
+        "entrance-hall": [
+          "gf-entrance"
+        ],
+        "broom-cupboard": [
+          "gf-broom"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "ministry2": {
+      "mapId": "ministry2",
+      "targets": {
+        "department-1": [
+          "min-level-1"
+        ],
+        "department-2": [
+          "min-level-2"
+        ],
+        "department-3": [
+          "min-level-3"
+        ],
+        "department-4": [
+          "min-level-4"
+        ],
+        "department-5": [
+          "min-level-5"
+        ],
+        "department-6": [
+          "min-level-6"
+        ],
+        "department-7": [
+          "min-level-7"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "express": {
+      "mapId": "express",
+      "targets": {
+        "kings-cross": [
+          "ex-kings"
+        ],
+        "hogsmeade-station": [
+          "ex-station"
+        ],
+        "express-coach-0": [
+          "coach-0-room-1",
+          "coach-0-room-2",
+          "coach-0-room-3",
+          "coach-0-room-4",
+          "coach-0-room-5"
+        ],
+        "express-coach-1": [
+          "coach-1-room-1",
+          "coach-1-room-2",
+          "coach-1-room-3",
+          "coach-1-room-4",
+          "coach-1-room-5"
+        ],
+        "express-coach-2": [
+          "coach-2-room-1",
+          "coach-2-room-2",
+          "coach-2-room-3",
+          "coach-2-room-4",
+          "coach-2-room-5"
+        ],
+        "express-coach-3": [
+          "coach-3-room-1",
+          "coach-3-room-2",
+          "coach-3-room-3",
+          "coach-3-room-4",
+          "coach-3-room-5"
+        ],
+        "standard-coach": [
+          "ex-standard"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "gryffindor-common": {
+      "mapId": "gryffindor-common",
+      "targets": {
+        "gryffindor-common-room": [
+          "gryffindor-hearth"
+        ],
+        "gryffindor-dormitories": [
+          "gryffindor-sleep-0",
+          "gryffindor-sleep-1"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "ravenclaw-common": {
+      "mapId": "ravenclaw-common",
+      "targets": {
+        "ravenclaw-common-room": [
+          "ravenclaw-hearth"
+        ],
+        "ravenclaw-dormitories": [
+          "ravenclaw-sleep-0",
+          "ravenclaw-sleep-1"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "hufflepuff-common": {
+      "mapId": "hufflepuff-common",
+      "targets": {
+        "hufflepuff-common-room": [
+          "huff-lounge"
+        ],
+        "hufflepuff-dormitories": [
+          "hufflepuff-bed-0",
+          "hufflepuff-bed-1",
+          "hufflepuff-bed-2",
+          "hufflepuff-bed-3",
+          "hufflepuff-bed-4"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "slytherin-common": {
+      "mapId": "slytherin-common",
+      "targets": {
+        "slytherin-common-room": [
+          "sly-lounge"
+        ],
+        "slytherin-dormitories": [
+          "slytherin-bed-0",
+          "slytherin-bed-1",
+          "slytherin-bed-2",
+          "slytherin-bed-3",
+          "slytherin-bed-4"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "village-static": {
+      "mapId": "village-static",
+      "targets": {
+        "shrieking-shack": [
+          "v-shack"
+        ],
+        "hogsmeade-homes": [
+          "v-home-6",
+          "v-home-4",
+          "v-home-7",
+          "v-home-3",
+          "v-home-1",
+          "v-home-0",
+          "v-home-9",
+          "v-home-11",
+          "v-home-12",
+          "v-home-13",
+          "v-home-14",
+          "v-home-16",
+          "v-home-17",
+          "v-home-18",
+          "v-home-21",
+          "v-home-22",
+          "v-home-29",
+          "v-home-28",
+          "v-home-23",
+          "v-home-30",
+          "v-home-27",
+          "v-home-24"
+        ],
+        "hogsmeade-shop-2": [
+          "v-gladrags"
+        ],
+        "hogsmeade-shop-1": [
+          "v-zonkos"
+        ],
+        "hogsmeade-shop-5": [
+          "v-broomsticks"
+        ],
+        "hogsmeade-shop-0": [
+          "v-honeydukes"
+        ],
+        "hogsmeade-shop-6": [
+          "v-dervish"
+        ],
+        "village-square": [
+          "v-square"
+        ],
+        "hogsmeade-shop-4": [
+          "v-post"
+        ],
+        "hogsmeade-shop-3": [
+          "v-quills"
+        ],
+        "hogsmeade-shop-7": [
+          "v-hogshead"
+        ],
+        "hogsmeade-shop-8": [
+          "v-puddifoot"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "pitch-static": {
+      "mapId": "pitch-static",
+      "targets": {
+        "commentary": [
+          "q-commentary"
+        ],
+        "stands": [
+          "q-stand-0-0",
+          "q-stand-1-0",
+          "q-stand-0-1",
+          "q-stand-1-1",
+          "q-stand-0-2",
+          "q-stand-1-2",
+          "q-stand-0-3",
+          "q-stand-1-3"
+        ],
+        "quidditch-pitch": [
+          "q-field"
+        ],
+        "pitch-room-0": [
+          "q-building-0"
+        ],
+        "pitch-room-1": [
+          "q-building-1"
+        ],
+        "pitch-room-2": [
+          "q-building-2"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "diagon-knockturn": {
+      "mapId": "diagon-knockturn",
+      "targets": {
+        "da-homes": [
+          "da-terrace-7",
+          "da-terrace-11",
+          "da-terrace-13",
+          "da-terrace-17",
+          "da-terrace-20",
+          "da-terrace-8",
+          "da-terrace-9",
+          "da-terrace-10",
+          "da-terrace-12",
+          "da-terrace-14",
+          "da-terrace-15",
+          "da-terrace-16",
+          "da-terrace-18",
+          "da-terrace-19",
+          "da-terrace-21"
+        ],
+        "da-ollivanders": [
+          "da-ollivanders"
+        ],
+        "da-scribbulus": [
+          "da-scribbulus"
+        ],
+        "da-flourish": [
+          "da-flourish"
+        ],
+        "da-house-a": [
+          "da-house-a"
+        ],
+        "da-quidditch": [
+          "da-quidditch"
+        ],
+        "da-menagerie": [
+          "da-menagerie"
+        ],
+        "da-gambol": [
+          "da-gambol"
+        ],
+        "da-apothecary": [
+          "da-apothecary"
+        ],
+        "da-goods": [
+          "da-goods"
+        ],
+        "da-print": [
+          "da-print"
+        ],
+        "da-weasleys": [
+          "da-weasleys"
+        ],
+        "da-tailor": [
+          "da-tailor"
+        ],
+        "da-optics": [
+          "da-optics"
+        ],
+        "da-stationery": [
+          "da-stationery"
+        ],
+        "da-fortescue": [
+          "da-fortescue"
+        ],
+        "da-robe-used": [
+          "da-robe-used"
+        ],
+        "da-remedies": [
+          "da-remedies"
+        ],
+        "da-obscurus": [
+          "da-obscurus"
+        ],
+        "da-wizardwear": [
+          "da-wizardwear"
+        ],
+        "da-workshop": [
+          "da-workshop"
+        ],
+        "da-cafe": [
+          "da-cafe"
+        ],
+        "da-potage": [
+          "da-potage"
+        ],
+        "da-malkin": [
+          "da-malkin"
+        ],
+        "da-eeylops": [
+          "da-eeylops"
+        ],
+        "da-twilfitt": [
+          "da-twilfitt"
+        ],
+        "da-gold": [
+          "da-gold"
+        ],
+        "da-gringotts": [
+          "da-gringotts"
+        ],
+        "da-leaky": [
+          "da-leaky"
+        ],
+        "ka-candles": [
+          "ka-candles"
+        ],
+        "ka-homes": [
+          "ka-block-0",
+          "ka-block-8",
+          "ka-block-9",
+          "ka-block-10",
+          "ka-block-11",
+          "ka-block-1",
+          "ka-block-13",
+          "ka-block-12",
+          "ka-block-2",
+          "ka-block-14",
+          "ka-block-4",
+          "ka-block-3",
+          "ka-block-15",
+          "ka-block-5",
+          "ka-block-6",
+          "ka-block-7"
+        ],
+        "ka-entrance": [
+          "ka-entrance"
+        ],
+        "ka-upper": [
+          "ka-upper"
+        ],
+        "ka-relics": [
+          "ka-relics"
+        ],
+        "ka-borgin": [
+          "ka-borgin"
+        ],
+        "ka-corner": [
+          "ka-corner"
+        ],
+        "ka-gloom": [
+          "ka-gloom"
+        ],
+        "ka-dealer": [
+          "ka-dealer"
+        ],
+        "ka-bones": [
+          "ka-bones"
+        ],
+        "ka-end": [
+          "ka-end"
+        ]
+      },
+      "policy": "local-crop-required"
+    },
+    "ministry-8-10": {
+      "mapId": "ministry-8-10",
+      "targets": {
+        "ministry-fountain": [
+          "mm-fountain"
+        ],
+        "ministry-time": [
+          "mm-time"
+        ],
+        "ministry-prophecy": [
+          "mm-prophecy"
+        ],
+        "ministry-death": [
+          "mm-death"
+        ],
+        "ministry-brain": [
+          "mm-brain"
+        ],
+        "ministry-space": [
+          "mm-space"
+        ],
+        "ministry-love": [
+          "mm-love"
+        ],
+        "ministry-rotunda": [
+          "mm-rotunda"
+        ],
+        "ministry-court": [
+          "mm-court"
+        ],
+        "ministry-waiting": [
+          "mm-waiting"
+        ],
+        "ministry-office": [
+          "mm-office"
+        ]
+      },
+      "policy": "local-crop-required"
+    }
+  }
+}

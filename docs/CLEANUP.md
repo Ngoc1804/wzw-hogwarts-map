@@ -18,7 +18,7 @@ Chủ repo cần đổi default branch thành demo-1 trong GitHub Settings. Sau 
 
 ## Tiếp theo (không làm atlas trong phiên này)
 
-1. Chốt JSON Schema MAP_DATA và ví dụ từ Gemini: meta, view/scope, focus, places, routes, actors, hints, visibility, layout/persistence. ID atlas và ID click là hai lớp riêng.
+1. Schema MAP_DATA 1.0.0, ví dụ và resolver đã có trong runtime/. Xem docs/MAP_FLOW.md. Bước kế tiếp là adapter atlas mới và UI/local crop; ID atlas và ID click là hai lớp riêng.
 2. Ghép UI cố định với viewer: thanh trên/sidebar, nhãn đúng palette, giới hạn 10 tag NPC, nhóm đông người, footsteps và inspector/hóng hớt.
 3. Xây renderer hybrid: chọn template khi có, dựng phòng/hành lang từ base khi chưa có; giữ seed/layout đã lưu, thêm phòng vào dự trữ.
 4. Runtime cung cấp dữ liệu RP/knowledge gate; renderer không suy NPC, lịch, quest hoặc bí mật. Có atlas thì nạp qua adapter, không phụ thuộc hoàn tất toàn atlas để định nghĩa schema.

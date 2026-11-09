@@ -66,3 +66,11 @@ Chọn Bộ Pháp thuật · Tầng 8–10 trong menu. Atrium, Bảo mật và X
 Sau khi nhận atlas: chốt schema MAP_DATA và bridge engine → ghép UI cố định → renderer template/hybrid có seed và lưu bố cục → actor/hint/fog → kiểm thử HTML shell trong Google AI Studio qua jsDelivr ghim commit. Không đưa NPC/quest/state RP vào GitHub.
 
 Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phiên bản; bản cũ tra trong lịch sử Git.
+
+## MAP_DATA và flow đã chốt
+
+- [Cơ chế /MAP](docs/MAP_FLOW.md)
+- [Hợp đồng, module và trạng thái triển khai](runtime/README.md)
+- [JSON Schema 1.0.0](runtime/map-data.schema.json)
+- [Ví dụ template](runtime/examples/local-template.json), [ví dụ hybrid](runtime/examples/local-generated.json)
+- Kiểm tra: `node --test tools/test_map_data.mjs`. Đây là nền hợp đồng/resolver; UI và renderer vận hành còn cần ghép.

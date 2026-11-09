@@ -37,3 +37,5 @@ UI chuẩn được trích từ lịch sử demo-1 tại 9e54f6a, không lấy m
 Hybrid: mặt bằng cho phòng/tường/lối đi; nội thất/decor dùng top/front/2.5D phù hợp. Không tự tạo bản top cho mọi đồ. Bộ hiện hành được người dùng chốt: 259 asset; 18 base nhà, 12 cây và 2 cây đặc biệt; màu tách riêng. Không tự gộp thêm vì chỉ cùng chức năng. Không phục hồi importer V3/generator hoặc HTML duyệt cũ.
 
 Atlas canon đang do phiên khác làm: không sửa maps/*, docs/ATLAS.md hoặc docs/research/* trong tác vụ dọn file nếu chưa có yêu cầu mới. Luôn fetch head mới trước khi push; không force-push.
+
+Cơ chế /MAP chuẩn: docs/MAP_FLOW.md và runtime/map-data.schema.json. Không tạo hợp đồng khác trong README/HTML mẫu. Giữ cap 10 tag NPC ngoài PC, 6 hint đúng tháng RP, cửa sổ cục bộ quanh PC. Resolver hiện chỉ trả plan; không tuyên bố engine đã render hoặc đã nối AI Studio.

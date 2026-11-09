@@ -10,4 +10,4 @@ Wizawi – Toà soạn Mộng Mị. Shell, ribbon và dấu chân lấy từ l�
 - Reduced motion: dùng hai chân đứng luân phiên opacity chậm, không dịch chuyển; đây là lựa chọn người dùng đã chốt, khác hoàn toàn tắt animation.
 - Walk: 6 nhịp × 550 ms, sau đó ẩn 2000 ms. Không tạo state di chuyển RP.
 
-Đây là bộ UI chuẩn bị ghép, chưa thay viewer `index.html` hoặc hoàn thành hợp đồng MAP_DATA. Nối vận hành thuộc bước 4 trở đi.
+Bộ UI giữ nguyên để ghép vào viewer. Hợp đồng MAP_DATA 1.0.0 đã có tại `../runtime/`; flow tại `../docs/MAP_FLOW.md`. Chưa thay viewer `index.html` hoặc hoàn tất nối vận hành.

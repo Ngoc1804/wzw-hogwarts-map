@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0.0",
+  "campaignId": "demo-au",
+  "worldId": "demo-world",
+  "snapshotId": "turn-001",
+  "atlasVersion": "template-index-v2",
+  "meta": {
+    "date": "1992-09-11",
+    "time": "10:25",
+    "areaName": "Khuôn viên Hogwarts",
+    "quote": "Lạc có kế hoạch vẫn được tính là khám phá."
+  },
+  "view": {
+    "scopeId": "au-study-wing",
+    "spaceKind": "floor",
+    "preferredMode": "generated",
+    "templateId": null,
+    "centerPlaceId": "local-study",
+    "routePlaceIds": [
+      "local-study",
+      "local-corridor"
+    ],
+    "maxHops": 1,
+    "maxPlaces": 12
+  },
+  "focus": {
+    "pcActorId": "pc",
+    "actualPlaceId": "local-study",
+    "selectedId": null
+  },
+  "places": [
+    {
+      "id": "local-study",
+      "name": "Phòng học phụ",
+      "atlasRef": null,
+      "kind": "room",
+      "parentId": null,
+      "floor": "1",
+      "zone": "north",
+      "inspector": {
+        "overhear": "Hoạt động mẫu trong campaign AU.",
+        "observation": "Bố cục mẫu, không phải vị trí canon."
+      },
+      "generation": {
+        "function": "study",
+        "shape": "L",
+        "furnishings": [
+          {
+            "role": "study-desk",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-corridor",
+      "name": "Hành lang khu học",
+      "atlasRef": null,
+      "kind": "corridor",
+      "parentId": null,
+      "floor": "1",
+      "zone": "north",
+      "inspector": {
+        "overhear": "Hoạt động mẫu trong campaign AU.",
+        "observation": "Bố cục mẫu, không phải vị trí canon."
+      },
+      "generation": {
+        "function": "circulation",
+        "shape": "straight",
+        "furnishings": []
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "link-study",
+      "from": "local-study",
+      "to": "local-corridor",
+      "kind": "doorway",
+      "state": "open"
+    }
+  ],
+  "actors": [
+    {
+      "id": "pc",
+      "name": "BẠN",
+      "isPC": true,
+      "entityType": "person",
+      "placeId": "local-study",
+      "tagType": "gryffindor",
+      "role": null,
+      "onPatrol": false,
+      "stance": "idle",
+      "activity": "Đang quan sát",
+      "priority": 100,
+      "positionMode": "normal",
+      "positionReason": null,
+      "presenceBasis": "status",
+      "inspector": {
+        "overhear": "Bạn đang quan sát.",
+        "observation": "Khu nhà kính ở ngay cạnh."
+      }
+    }
+  ],
+  "hints": [
+    {
+      "id": "hint-pots",
+      "packId": "pack-1992-09",
+      "sourceQuestId": "help-pots",
+      "placeId": "local-study",
+      "type": "life",
+      "title": "Chuyển chậu cần thêm một tay?",
+      "priority": 50,
+      "inspector": {
+        "overhear": "Nhóm học sinh đang tìm người phụ.",
+        "observation": "Một xe chậu đang chờ."
+      }
+    }
+  ],
+  "visibility": {
+    "visiblePlaceIds": [
+      "local-study",
+      "local-corridor"
+    ],
+    "fogRegionIds": []
+  },
+  "questPolicy": {
+    "month": "1992-09",
+    "packId": "pack-1992-09",
+    "limits": {
+      "main": 0,
+      "side": 0,
+      "pool": 0,
+      "life": 6
+    }
+  },
+  "layout": {
+    "scopeKey": "study-wing-layout",
+    "version": 1,
+    "stateRef": null
+  }
+}

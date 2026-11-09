@@ -40,5 +40,16 @@
     "deletedObsoleteBranches": 5,
     "defaultBranchChange": "blocked: GitHub API 403 Resource not accessible by integration",
     "remainingBranches": "demo-1 and main, synchronized by fast-forward; main remains default until settings changed"
+  },
+  "mapDataMechanism": {
+    "date": "2026-11-09",
+    "schemaVersion": "1.0.0",
+    "contractTests": 15,
+    "uiTests": 3,
+    "inventoryTests": 3,
+    "browser": "Chromium: JSON modules, both examples, template selection, generated plan, Web Crypto seed passed; no page errors",
+    "approvedArtworkAndUiUnchanged": true,
+    "atlasFilesUnchanged": true,
+    "implementation": "schema, validation, planning and persistence adapter; no complete geometry renderer or AI Studio integration"
   }
 }
