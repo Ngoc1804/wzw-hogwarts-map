@@ -13,7 +13,7 @@ with tempfile.TemporaryDirectory() as directory:
         shutil.copyfile(ROOT/'scripts'/name,isolated/'scripts'/name)
     subprocess.run([sys.executable,str(isolated/'scripts/new_house_assets.py')],check=True)
     generated=sorted((isolated/'assets').glob('house.*.svg'))
-    assert len(generated)==15
+    assert len(generated)==13
     for file in generated:
         assert file.read_bytes()==(ROOT/'assets'/file.name).read_bytes(),file.name+' differs from the approved framework'
-print('PASS: all 15 regenerated house frameworks exactly match the approved SVGs')
+print('PASS: all 13 regenerated house frameworks exactly match the approved SVGs')

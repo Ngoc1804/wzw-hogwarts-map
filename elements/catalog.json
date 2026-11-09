@@ -53,7 +53,21 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "92c006ad7f9e9b8a763371e147f911aee12a7e6a2eba5b06efabf3ab2cfbf1be",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 92.0,
+        "y": 83.0,
+        "width": 72.0,
+        "height": 83.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 96,
+        "y": 90,
+        "width": 64,
+        "height": 76
+      }
     },
     {
       "id": "seat.stool",
@@ -106,7 +120,21 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6fc71081b00427ac2293bdeaa7fa0635f5e3c43a74c69106aa6842c84baafd53",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 100.0,
+        "y": 100.0,
+        "width": 56.0,
+        "height": 56.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 100,
+        "y": 100,
+        "width": 56,
+        "height": 56
+      }
     },
     {
       "id": "seat.armchair",
@@ -160,7 +188,21 @@
       },
       "upgraded": true,
       "geometryFingerprint": "0991778ca56544bd2fa71ce51a9dcdcc7e65065176eaca8748729a81fcec5aaa",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 65.5,
+        "y": 66.0,
+        "width": 125.0,
+        "height": 117.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 75.5,
+        "y": 73,
+        "width": 105,
+        "height": 110
+      }
     },
     {
       "id": "seat.lounge",
@@ -214,7 +256,21 @@
       },
       "upgraded": true,
       "geometryFingerprint": "0001cfa8a92a16a398410bf7729ca22836a6fec844beefd72b86ee577b81485e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 70.5,
+        "y": 43.0,
+        "width": 115.0,
+        "height": 163.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 80.5,
+        "y": 50,
+        "width": 95,
+        "height": 156
+      }
     },
     {
       "id": "seat.bench",
@@ -267,7 +323,21 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "1d6e6a777dd71926facdb603e915e05ddddacd6afc2a63a8adcaf54371f42a6a",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 31.5,
+        "y": 93.5,
+        "width": 193.0,
+        "height": 62.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 35.5,
+        "y": 100.5,
+        "width": 185,
+        "height": 55
+      }
     },
     {
       "id": "seat.sofa",
@@ -321,7 +391,21 @@
       },
       "upgraded": true,
       "geometryFingerprint": "c4474f4b9929ce838c216e87c0f034bc00ad9ae8fb866243fe3b3535f5cc3b35",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 23.0,
+        "y": 70.0,
+        "width": 210.0,
+        "height": 109.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 33,
+        "y": 77,
+        "width": 190,
+        "height": 102
+      }
     },
     {
       "id": "seat.corner",
@@ -373,7 +457,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "74fdf9b9160f0325da7b43dabaffd4ab006c677301e001a6f4260a147cdd0f65",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 42.0,
+        "y": 57.0,
+        "width": 172.0,
+        "height": 149.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "table.dining",
@@ -427,7 +519,21 @@
       },
       "upgraded": true,
       "geometryFingerprint": "046cade95b84505401ffdb5b25decdf4f4a6bc4cba07b781f079decd5908a261",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 38.0,
+        "y": 83.0,
+        "width": 180.0,
+        "height": 90.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 46,
+        "y": 91,
+        "width": 164,
+        "height": 74
+      }
     },
     {
       "id": "table.study",
@@ -480,7 +586,21 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "b337e0d89d07eee0be6e5a1a85870ea420a064dff0afcf7ac6060dad00db2443",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 71.0,
+        "y": 89.0,
+        "width": 114.0,
+        "height": 78.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 79,
+        "y": 97,
+        "width": 98,
+        "height": 62
+      }
     },
     {
       "id": "table.desk",
@@ -534,7 +654,21 @@
       },
       "upgraded": true,
       "geometryFingerprint": "830b6f315276059f6455869e657d6750ae203a8f1aa117a10822a66084f65a5e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 49.0,
+        "y": 81.0,
+        "width": 158.0,
+        "height": 94.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 57,
+        "y": 89,
+        "width": 142,
+        "height": 78
+      }
     },
     {
       "id": "table.coffee",
@@ -587,7 +721,21 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "e31cbb8b60e6cd64bfa1896cd0018e580be52305cf29a60d9e2d22d1c588b624",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 65.5,
+        "y": 95.5,
+        "width": 125.0,
+        "height": 65.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 73.5,
+        "y": 103.5,
+        "width": 109,
+        "height": 49
+      }
     },
     {
       "id": "table.bedside",
@@ -640,7 +788,21 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "aead7b8f41fcae4aba305208c541df38dd06bb3af4ce6cf1d4b0232af4bd6f44",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 94.0,
+        "y": 95.5,
+        "width": 68.0,
+        "height": 65.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 102,
+        "y": 103.5,
+        "width": 52,
+        "height": 49
+      }
     },
     {
       "id": "table.prep",
@@ -693,7 +855,21 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "fe550024e107651458635da2a7393aa0edb731fdaa0f2399a7fcbe3282bb27e5",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 38.0,
+        "y": 75.5,
+        "width": 180.0,
+        "height": 105.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 46,
+        "y": 83.5,
+        "width": 164,
+        "height": 89
+      }
     },
     {
       "id": "table.long",
@@ -746,7 +922,21 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "f0df7df765b811bbbb325fb040146015958c64a4726125f6b1c81e1ec72fcc16",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 23.0,
+        "y": 95.5,
+        "width": 210.0,
+        "height": 65.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "x": 31,
+        "y": 103.5,
+        "width": 194,
+        "height": 49
+      }
     },
     {
       "id": "table.round",
@@ -798,7 +988,20 @@
       },
       "upgraded": true,
       "geometryFingerprint": "4a2592c81e4f2eb3e6bba6ec0d0dc1c84ef96e38d7e14c8e9cce6ca9878c314b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 46.0,
+        "y": 46.0,
+        "width": 164.0,
+        "height": 164.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "cx": 128,
+        "cy": 128,
+        "r": 68
+      }
     },
     {
       "id": "table.oval",
@@ -849,7 +1052,21 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "660a2ba0cbc9caee959c01f2dc5338544c0806b66070d5d2c2243d19cba9951c",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 28.0,
+        "y": 70.0,
+        "width": 200.0,
+        "height": 116.0,
+        "collisionReady": false
+      },
+      "surface": {
+        "cx": 128,
+        "cy": 128,
+        "rx": 85,
+        "ry": 43
+      }
     },
     {
       "id": "storage.bookcase",
@@ -902,7 +1119,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "73ce21d99fa3199b4adad07276bc870b41f0904e67aac032c263cc7c913abba2",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 38.0,
+        "y": 65.5,
+        "width": 180.0,
+        "height": 125.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "storage.double",
@@ -955,7 +1180,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "901db25ffb6dce24b5cc295c650be9c3521828fdd1a505807c3f4b7a7ff54b76",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 33.0,
+        "y": 48.0,
+        "width": 190.0,
+        "height": 160.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "storage.cabinet",
@@ -1009,7 +1242,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "e8dddd6c68e4b2f340ca51e791c7c56862bdc72200313b54e22eea0abec01293",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 65.5,
+        "y": 37.5,
+        "width": 125.0,
+        "height": 175.5,
+        "collisionReady": false
+      }
     },
     {
       "id": "storage.drawers",
@@ -1062,7 +1303,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "f552232d33d1b2fe319667d0e99a8d96bafcb11777568e536f9fb58842b4b6b9",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 67.0,
+        "y": 57.0,
+        "width": 122.0,
+        "height": 142.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "storage.files",
@@ -1116,7 +1365,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "04aebe7e436614fb2ef9c0411368f2b075d9ac5402e14a73d289979501eaba9b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 84.0,
+        "y": 36.0,
+        "width": 88.0,
+        "height": 184.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "storage.display",
@@ -1170,7 +1427,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "9c5493d2fae9d2c37393e11ea66ad4cdc85a538e5d94d8448faf844d4b594814",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 50.5,
+        "y": 37.5,
+        "width": 155.0,
+        "height": 165.5,
+        "collisionReady": false
+      }
     },
     {
       "id": "storage.open",
@@ -1223,7 +1488,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "c48d1c83a1fbcb0348084396604a1c2113e567ea584ac27473a7142cc4e8d015",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 45.5,
+        "y": 62.0,
+        "width": 165.0,
+        "height": 132.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "storage.wall",
@@ -1276,7 +1549,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "af2865f553e2bb32440ad98634fb943f1b220e45a0ca0c7780b000e6869cd724",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 33.0,
+        "y": 105.5,
+        "width": 190.0,
+        "height": 45.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "storage.wine",
@@ -1329,7 +1610,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "bf7ec2306f49dff90ee6fe17ba6e6c14bb54afe2eca748d9a78535b893989658",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 63.0,
+        "y": 55.5,
+        "width": 130.0,
+        "height": 145.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "bed.single",
@@ -1380,7 +1669,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "87bf011fa74f38ae74339a8646bc2e1b3aa2cadcffe1ded7d560d36b4203f7a8",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 80.5,
+        "y": 39.0,
+        "width": 95.0,
+        "height": 178.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "bed.double",
@@ -1431,7 +1728,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "5d1e13bc63823ae000ce28dfa3e4e08c6f1db19feae6193a552fdda0b1350091",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 43.0,
+        "y": 36.5,
+        "width": 170.0,
+        "height": 183.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "bed.canopy",
@@ -1482,7 +1787,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "be8a5b167dacf5416f514966321eb4f50de3c714206c351f7d39d741390fff1b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 40.0,
+        "y": 25.5,
+        "width": 181.0,
+        "height": 205.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "bed.bunk",
@@ -1533,7 +1846,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "06db9f758a83e1bedfcf35c7172dbf94a1aa424aff07a8f754412faedb59eb26",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.0,
+        "y": 55.0,
+        "width": 161.0,
+        "height": 150.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "bed.screen",
@@ -1584,7 +1905,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "5c8c5afa4203038e390b92eb390cf0341b1423668d9bc4e80e21979049e9344b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 42.0,
+        "y": 56.0,
+        "width": 168.0,
+        "height": 142.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "fixture.fireplace",
@@ -1635,7 +1964,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "7c12e6b14658fe2f0816fbc968532e357ebb596c57a535ddd54e5e6fa2d2f77d",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 36.0,
+        "y": 48.0,
+        "width": 184.0,
+        "height": 147.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "fixture.stove",
@@ -1686,7 +2023,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "31671f8aeecb893b12c7aecaf7ff297a04940b14a4efdec0dd32f5be2c09a151",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 73.0,
+        "y": 35.0,
+        "width": 110.0,
+        "height": 163.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "fixture.sink",
@@ -1737,7 +2082,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "b1ba309395f9d7963e703df40be90e8942786fd9271177b1e72b4875b34a6ac4",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.0,
+        "y": 51.25,
+        "width": 160.0,
+        "height": 136.75,
+        "collisionReady": false
+      }
     },
     {
       "id": "fixture.bathtub",
@@ -1788,7 +2141,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6cc8f302d6a3b27d828e1a85184072fa4fa794106a9de99cd5c85a1d3f5d4a77",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.0,
+        "y": 27.0,
+        "width": 140.0,
+        "height": 199.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "fixture.toilet",
@@ -1839,7 +2200,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ea2d929a53cd8a876719bed9a2c1ba7f123cf6547f2a48586bddbccab160304b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 83.0,
+        "y": 45.0,
+        "width": 90.0,
+        "height": 159.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "fixture.range",
@@ -1890,7 +2259,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "701699f1f5b5bf0b2c894d9f29ad81ededc23a7d7d5b198dda895bcf0e50597a",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 52.0,
+        "y": 51.0,
+        "width": 152.0,
+        "height": 154.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.counter",
@@ -1941,7 +2318,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "c82244027699c956613cd9734fd00e313f3e00f97e5f57c7ba30e053b2c0bdcd",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 83.0,
+        "width": 186.0,
+        "height": 95.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.counter-corner",
@@ -1992,7 +2377,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "87090c41927078bf456a3d8c860a6e4ab09e7078ad2f38c23f278eef4b14fb9b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 36.0,
+        "y": 47.0,
+        "width": 175.0,
+        "height": 164.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.rug",
@@ -2044,7 +2437,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "72ff920a52353b4cc633da008db8be95051fab623ab17a72efb62d9b835ba2b4",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 45.0,
+        "y": 63.0,
+        "width": 166.0,
+        "height": 130.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.rug-round",
@@ -2096,7 +2497,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "7f9501f608392ce4aeb21c7b5a9e9309fc81d1c12c61e88011ed5dc2bd29f23f",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 45.0,
+        "y": 45.0,
+        "width": 166.0,
+        "height": 166.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.mirror",
@@ -2148,7 +2557,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "8ce3c290aecfcdd894db3229b407eb01b65abcd5770a7ee70e8c2990edfbb5e2",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 82.0,
+        "y": 32.0,
+        "width": 92.0,
+        "height": 180.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.portrait",
@@ -2200,7 +2617,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "32fe7d304b8cf79e0e51f240218c3d45ef12e5d6bc0a5234632af3e2b531f27f",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 54.0,
+        "y": 43.0,
+        "width": 148.0,
+        "height": 170.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.clock",
@@ -2252,7 +2677,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "c4c170186dd1fed17f886da77fe5c65cbd735ebd57e028bc4573ea20bd1bd364",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 49.0,
+        "y": 49.0,
+        "width": 158.0,
+        "height": 158.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.chest",
@@ -2304,7 +2737,15 @@
       },
       "upgraded": true,
       "geometryFingerprint": "578b5ea67df0e4d6a94036bb448a58f88582e7e66580e0baec24244f34e3e83b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 49.0,
+        "y": 70.5,
+        "width": 158.0,
+        "height": 122.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.crate",
@@ -2355,7 +2796,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "c07bafb0c4ea7e248d4d92dfd52084329235cdb3cc59524ec112fb326cc6fd4e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 65.0,
+        "y": 65.0,
+        "width": 126.0,
+        "height": 126.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.barrel",
@@ -2406,7 +2855,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "4d0f7a4884957908cab7e60381bac91ff52e3ae4e6452ca4fdada689f0859572",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 62.0,
+        "y": 40.0,
+        "width": 132.0,
+        "height": 176.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.cart",
@@ -2457,7 +2914,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "b0224e314bd0887c8da5b2ff93d02f05d0420bd75248104f5de4f30893b1b2ba",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.0,
+        "y": 34.0,
+        "width": 160.0,
+        "height": 158.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.sack",
@@ -2508,7 +2973,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "8b7ac7690cf885d8a5f2ecde3e8378042e314881e56645b6922488509cd60004",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 70.954,
+        "y": 56.0,
+        "width": 114.092,
+        "height": 156.5,
+        "collisionReady": false
+      }
     },
     {
       "id": "object.basket",
@@ -2559,7 +3032,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "26d6aed5b75f6e8e7ca0a58fe0be094b4ceac83866da10a6eeec8636519e49f4",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 54.0,
+        "y": 69.5,
+        "width": 148.0,
+        "height": 123.5,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.book",
@@ -2612,7 +3093,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "73c61264cc5d75504802c6a9cdff8e8fcf6af49b9d9284c723d6c3e8728231c1",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 83.0,
+        "y": 54.0,
+        "width": 90.0,
+        "height": 145.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.book-open",
@@ -2665,7 +3154,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6e9bf4773429a6ed74fb9dd4f622f885838c479b1cfe2ea26f386a692874b0b8",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 61.795,
+        "width": 186.0,
+        "height": 136.205,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.scroll",
@@ -2718,7 +3215,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "55456e817f51bdd5adfccf691fb38529adee62b70416898473ba4c6ab68965c5",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 55.0,
+        "y": 52.0,
+        "width": 146.0,
+        "height": 152.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.ink",
@@ -2771,7 +3276,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "a1b336144b5c853e59018800e7839e8afb636dbf0223a5e79f90302e6086cf5e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 72.0,
+        "y": 41.0,
+        "width": 130.0,
+        "height": 149.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.mug",
@@ -2824,7 +3337,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "d913adb93f5d7e55bf5dc7e3eb0467b8e674e4404a58f5c21fc1d21e89e80d93",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 74.0,
+        "y": 83.0,
+        "width": 125.786,
+        "height": 90.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.plate",
@@ -2877,7 +3398,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "0e8100192f3fe919de8662d9bec5cc80906c019bc46219bc070b549ed08fc2f1",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 51.0,
+        "y": 51.0,
+        "width": 154.0,
+        "height": 154.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.teapot",
@@ -2930,7 +3459,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "9a23d31194ba0fcfd32737f8ece25935c0c8f41988ae2690db45e17f7149fff6",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 76.0,
+        "width": 171.252,
+        "height": 114.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.pot",
@@ -2983,7 +3520,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "a9ec41da9f859c7cbd6a7ba3ca3afa4ec88a06afd6318bb542723725e3cb5b85",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 41.0,
+        "y": 63.0,
+        "width": 174.0,
+        "height": 130.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.pan",
@@ -3036,7 +3581,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "c3aceff73d36487400e8a73b43c9314dcfff2b1920c055f964d480e902a3716a",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 55.0,
+        "y": 77.0,
+        "width": 177.0,
+        "height": 118.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.bottle",
@@ -3089,7 +3642,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "3a262f295f6bd30e2791b90ed391c84bfbe4c4963a3dc3c8c7509d3eaa322060",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 84.0,
+        "y": 31.0,
+        "width": 88.0,
+        "height": 172.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.candle",
@@ -3142,7 +3703,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ef20d6ef5d9cf9f691827588d3ef6fef0a61eea04fb693a8e008730fa75764ac",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 84.0,
+        "y": 72.0,
+        "width": 88.0,
+        "height": 126.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.lamp",
@@ -3195,7 +3764,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "c63dbe564652071e8dea3d1ee823175ae5a40d15d673b19850ae4d7b4250c185",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 79.0,
+        "y": 51.0,
+        "width": 98.0,
+        "height": 162.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "accessory.chandelier",
@@ -3248,7 +3825,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "b409231044dc5b6d03ad575896cd09f29178d1e4e5a2e9e62a9bb6ae2873a99e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.842,
+        "y": 50.0,
+        "width": 138.315,
+        "height": 156.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.wall",
@@ -3310,7 +3895,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "553596ca7787a0b1f51a709f5b23abc3619be4e5acf7f0cac49b3586617d84e4",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 24.0,
+        "y": 99.0,
+        "width": 208.0,
+        "height": 58.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.wall-corner",
@@ -3372,7 +3965,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "0fda5592d742fd63ffd33ef9c6f53f027983589a2691ca19367b5060cab15994",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 35.0,
+        "width": 186.0,
+        "height": 186.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.wall-t",
@@ -3439,7 +4040,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "0f6d153684f061bc27ccf97cf50c2e5f28b32ce6cf9229b4af6d82a48c0b998a",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 24.0,
+        "y": 70.0,
+        "width": 208.0,
+        "height": 162.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.wall-curve",
@@ -3490,7 +4099,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "fa710fbafb65f149364bb20bbcf316dcf0d42f81e749d82030b8a317c8f0e856",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 30.0,
+        "y": 30.0,
+        "width": 192.0,
+        "height": 192.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.floor-stone",
@@ -3541,7 +4158,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "5fb4c27a0cc4225ac9c141275b3bd82390eff2442b927b924443fabd7e021242",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 29.0,
+        "y": 29.0,
+        "width": 198.0,
+        "height": 198.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.floor-wood",
@@ -3592,7 +4217,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "05efed2afabd76321b30963f2c5365d93671c7bff957e855c781c04085533504",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 29.0,
+        "y": 29.0,
+        "width": 198.0,
+        "height": 198.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.door",
@@ -3643,7 +4276,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "25427de62ae8552a31a590c3375d02663a047720924f2a0542edb4121bf28fb1",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 69.0,
+        "y": 29.0,
+        "width": 118.0,
+        "height": 198.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.door-double",
@@ -3694,7 +4335,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "960ae5eac81816c1b8a27fba37fb39722ee816b2b89f7e9fb424865bdb6f4103",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 38.0,
+        "y": 29.0,
+        "width": 180.0,
+        "height": 198.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.door-arch",
@@ -3745,7 +4394,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "d81eb63ef4b4b63cae72e640eb4005569fb46dd0d2fe63ba73bbdffc5424e236",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 61.0,
+        "y": 29.0,
+        "width": 134.0,
+        "height": 193.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.door-round",
@@ -3796,7 +4453,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6daee5fda043cb9f6924341b6b6f2d23c45eebb868f7a19679b902bcbef51d76",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 37.0,
+        "y": 37.0,
+        "width": 182.0,
+        "height": 182.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.door-iron",
@@ -3847,7 +4512,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "5141a62b41b227d4d931a3f857b8e3a20508be6184ee260a9e04cde6fdf2fd80",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 59.0,
+        "y": 29.0,
+        "width": 138.0,
+        "height": 198.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.hatch",
@@ -3898,7 +4571,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "1c07ee9126c57d9c41e9002b091086eaeb2d35d0a39e829b4b8aa41fce84b08c",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 46.0,
+        "y": 48.0,
+        "width": 164.0,
+        "height": 160.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.window",
@@ -3949,7 +4630,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "bdd76beb1385050beb5bedd9a130335287fd360ac7ee60b7416ded1faa89965f",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 60.0,
+        "y": 42.0,
+        "width": 136.0,
+        "height": 172.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.window-arch",
@@ -4000,7 +4689,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "46c8c27ca4fb5f33248a138fbac8c01cd13f2c49b344f6458ee3050093249b27",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 65.0,
+        "y": 31.0,
+        "width": 126.0,
+        "height": 186.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.window-round",
@@ -4051,7 +4748,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "cb5c3f9bd19f26e570e0b7ddd49aee56200f25d264a7022c9783ffc0e0f9d233",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 44.0,
+        "y": 44.0,
+        "width": 168.0,
+        "height": 168.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.window-shutters",
@@ -4102,7 +4807,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "7ce0a8f004de2e6ef727b2a791f530724b8989fc3be6a1d5c008b499c3f1ab0e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 39.0,
+        "y": 63.0,
+        "width": 178.0,
+        "height": 130.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.stairs",
@@ -4164,7 +4877,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "63fba07b1f41d4514106a510ab28263516da0137731b7a8ef7f63029c17afdae",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 65.0,
+        "y": 27.0,
+        "width": 126.0,
+        "height": 202.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.stairs-l",
@@ -4215,7 +4936,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "75e7ff0753e95d3d2c730fa3099af892b345c79a1c979347e86709d0ee8ed18e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 28.0,
+        "width": 193.0,
+        "height": 194.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.stairs-spiral",
@@ -4266,7 +4995,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "5fb17d88756aa79fdd045c9ef751052bd8e49e1e4807815aaa120f12bf1babe3",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 31.0,
+        "y": 31.0,
+        "width": 194.0,
+        "height": 194.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.ladder",
@@ -4317,7 +5054,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "f88df0987e97ec6cf529c9ff6544346c9638ecb185261f18751b8684f06ac603",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 80.0,
+        "y": 27.0,
+        "width": 96.0,
+        "height": 202.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.column-round",
@@ -4368,7 +5113,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "99a252dbdec53e0c505b7be05d69de938767a0f00fd4cd1a145b1570bce27576",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 69.0,
+        "y": 40.0,
+        "width": 118.0,
+        "height": 180.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.column-square",
@@ -4419,7 +5172,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "a56eaa885447822a5fc85fd6a5a9452e8a72f4b5a12ea54efab829cd3d5ea48d",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 73.0,
+        "y": 36.0,
+        "width": 110.0,
+        "height": 186.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.arch",
@@ -4470,7 +5231,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "db682eb126969faf0ad18383fbcfe3c04bd922a420eeec344e1495f36edb769d",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 38.0,
+        "y": 10.0,
+        "width": 180.0,
+        "height": 216.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "architecture.balustrade",
@@ -4521,7 +5290,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "32bc1dcc6173a15047e6dfa985b983fad5458dc67f4c3ac90bcae73a90d58de7",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 24.0,
+        "y": 75.0,
+        "width": 208.0,
+        "height": 115.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.round",
@@ -4575,7 +5352,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "2e794e141ec8031ae23c5c800c09950259e4ae8a66728140661401fa40032d94",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 49.53,
+        "y": 39.879,
+        "width": 159.175,
+        "height": 186.121,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.umbrella",
@@ -4629,7 +5414,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "d6e1695dfdd938dd0f5aa092bcc3ac3af3f950c5825fa5be3349e1ba302a1c49",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 16.803,
+        "y": 49.663,
+        "width": 228.574,
+        "height": 176.337,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.columnar",
@@ -4683,7 +5476,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "0036c5d5e54692e1232ce9eb4d8dd4932c21e3dcb0059a06a4358a66962e1916",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 84.061,
+        "y": 17.29,
+        "width": 89.091,
+        "height": 208.71,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.ancient",
@@ -4737,7 +5538,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "1f795cdbbe99100a25e1cebf3b10c9372f999c7d37b411366e1840d5ef956834",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.897,
+        "y": 29.194,
+        "width": 182.44,
+        "height": 201.806,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.willow",
@@ -4791,7 +5600,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "7b66a68ad25cf88f60523ecb4f3f3b1b54c6dfa36967b67ab94db3d910a4a871",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 46.443,
+        "y": 38.527,
+        "width": 164.038,
+        "height": 187.473,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.fruit",
@@ -4845,7 +5662,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "5f1d501a9b09533ddba8417f48437f48be0a8b86199249c10bb6b4db30c470a7",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 49.53,
+        "y": 39.879,
+        "width": 159.175,
+        "height": 186.121,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.flowering",
@@ -4899,7 +5724,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "3e7ac9156b4d1ed923fcbedf0d1927a0aaef176e9e7d94a25ed9a74f12227335",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 38.015,
+        "y": 27.283,
+        "width": 177.442,
+        "height": 198.717,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.sapling",
@@ -4953,7 +5786,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "e9a53c77cf6449680fab97708c6b2f71378f2444809cd086de74a9354608e452",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 81.572,
+        "y": 60.005,
+        "width": 93.154,
+        "height": 169.995,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.bare",
@@ -5007,7 +5848,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "984616c1fe74255aaad6a686a88b1ef382bde4c129a7163ecd1ddc5dae1aee63",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 45.0,
+        "y": 34.0,
+        "width": 159.0,
+        "height": 192.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.dead",
@@ -5061,7 +5910,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "b245de3cc39e8d99183cb48f9436a31d2bbb466f7bf58664e2aa6d9165e6f195",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.0,
+        "y": 65.0,
+        "width": 137.0,
+        "height": 161.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.pine",
@@ -5115,7 +5972,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "bb3583cea758969c798f8e9849a35f2021766f0363ec39b8e15d7a65045c5c32",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 57.62,
+        "y": 29.0,
+        "width": 140.76,
+        "height": 197.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.cypress",
@@ -5169,7 +6034,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "fb1cf0dcd32fa4fa38d69766a03cd276c8fc8fd76881137c39b874df8ed78f0b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 89.24,
+        "y": 29.0,
+        "width": 77.52,
+        "height": 197.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "tree.spruce",
@@ -5223,7 +6096,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ff8355086ed5fb98344059afcaad012baef6eb4cb3e7d8abe7535e1d13b962fd",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.18,
+        "y": 29.0,
+        "width": 185.64,
+        "height": 197.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.bush",
@@ -5276,7 +6157,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "7c2657eeb2b35f969c34e3ac5994bc962035ce2628c9f1810629a83fb2700621",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.832,
+        "y": 87.485,
+        "width": 187.445,
+        "height": 110.907,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.flower-bush",
@@ -5329,7 +6218,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "db21f80cd4da3fb43b3d87efcbbeb0c47c368a7ed40ff0b9bf6a81886fdcf446",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 42.716,
+        "y": 89.907,
+        "width": 173.486,
+        "height": 104.911,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.hedge",
@@ -5382,7 +6279,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "a4cd1d545ee5e60133008bca5642d79d63a0c57be119f1e42f842a991fbd88d1",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 24.0,
+        "y": 89.0,
+        "width": 206.0,
+        "height": 78.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.fern",
@@ -5435,7 +6340,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "9007c59153aeefd00e4df0feda8b2ad229a46306ebb9c3290c851bbaef33b69d",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 21.694,
+        "y": 73.22,
+        "width": 212.612,
+        "height": 113.141,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.reeds",
@@ -5488,7 +6401,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "f770c4fbc48cff8330e31209c8484f63db2800d73dfd4877efd9fc4313037bc5",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 57.969,
+        "y": 44.0,
+        "width": 131.031,
+        "height": 170.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.grass",
@@ -5541,7 +6462,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "cfec11039814cb83da8b5361cec76627498c3f676ed38a87040bd916a2a9a6f8",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 38.571,
+        "y": 82.0,
+        "width": 177.669,
+        "height": 129.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.stump",
@@ -5594,7 +6523,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "8fc678e864200ca0bba6310da2cc6fe4e29c68bde6b13c3ba71c409648d1dff9",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 62.0,
+        "y": 75.0,
+        "width": 132.0,
+        "height": 143.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.log",
@@ -5647,7 +6584,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "8db96405f691b4e52eef95533577a83518adf6c326e875998cbeaf5778863b01",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 26.0,
+        "y": 98.0,
+        "width": 183.0,
+        "height": 62.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.planter",
@@ -5700,7 +6645,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "3f93b317b034cf2df107eb1acca4a677d0e984973ca714e033a2aa1aa9729c49",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 15.508,
+        "y": 56.906,
+        "width": 197.622,
+        "height": 163.094,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.hanging",
@@ -5753,7 +6706,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "46a9e8c715475c77ad16f9dd17fd06eeef6ae06041a257f74b6d63d33ae01dc3",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 59.0,
+        "y": 29.0,
+        "width": 138.0,
+        "height": 185.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.vine",
@@ -5806,7 +6767,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "e065a3f1ffe8d5c0b3bbca2331258ce2341ec019868c777cb60d93cae8acbceb",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 95.39,
+        "y": 28.0,
+        "width": 67.241,
+        "height": 196.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "terrain.boulder",
@@ -5857,7 +6826,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ded03943c2c120a4c12e390f21a849eb154e1c78f35f6c3975dc1448cbe025d0",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 34.49,
+        "y": 50.362,
+        "width": 188.104,
+        "height": 161.256,
+        "collisionReady": false
+      }
     },
     {
       "id": "terrain.flat",
@@ -5908,7 +6885,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ec7568471bc3da1ea086e216c95a2a3f5e57795489cd45b911d75aca8d1edd5a",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 27.302,
+        "y": 83.0,
+        "width": 202.178,
+        "height": 106.229,
+        "collisionReady": false
+      }
     },
     {
       "id": "terrain.cliff",
@@ -5959,7 +6944,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "2228c86aa59777d8d72a2a076c6e6584de3a737c9324a5573be62a99f50547e9",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 28.302,
+        "y": 28.362,
+        "width": 196.891,
+        "height": 196.026,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.pond",
@@ -6010,7 +7003,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "196fa4f5de845ec2ac906125f0d45c0af28c9bc7bf300f71317fb7d27d816788",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 15.138,
+        "y": 40.385,
+        "width": 214.169,
+        "height": 169.658,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.stream",
@@ -6061,7 +7062,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "2314823d28995e42d2614e094bde7a6e10656e9c8ff2e23f4e74fe3cba055e7a",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 62.0,
+        "y": 24.0,
+        "width": 142.0,
+        "height": 208.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.waterfall",
@@ -6112,7 +7121,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "8b8b683b64641d428266e36e91f7a39331f9d1fc2a8fd64b0ab55a04b35787d3",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 45.0,
+        "y": 38.0,
+        "width": 166.0,
+        "height": 187.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.path",
@@ -6163,7 +7180,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ed167f08bd88319bd15c8b467f96dbe528626bf8bac516170b2b4314107daed5",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 66.799,
+        "y": 22.0,
+        "width": 107.201,
+        "height": 212.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.paving",
@@ -6214,7 +7239,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6bde7efd502f3ac923c91a0d5432c37f096c125506fd461e28668ae2056b5916",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 27.0,
+        "y": 27.0,
+        "width": 202.0,
+        "height": 202.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.steps",
@@ -6265,7 +7298,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "b9c35b46277c528110fc353703f31b08376a47fbd684724dac3e41ff6719b296",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 37.0,
+        "y": 40.0,
+        "width": 182.0,
+        "height": 161.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.bridge",
@@ -6316,7 +7357,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "042aa01519c25641fefced1555316c192615fb3fa9cbe0ba29cade10179494ff",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 21.0,
+        "y": 65.0,
+        "width": 214.0,
+        "height": 126.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.bridge-stone",
@@ -6367,7 +7416,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "92cccb35db45fa09f37a4574251c21701bfbba48bacb1212e0c3d27f44fbb946",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 27.0,
+        "y": 104.0,
+        "width": 202.0,
+        "height": 102.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.fence",
@@ -6418,7 +7475,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "fd824fd3b9c9b763ec80c2286507cbbf269edbfee95f064465252903e990e767",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 27.0,
+        "y": 49.0,
+        "width": 202.0,
+        "height": 155.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.iron-fence",
@@ -6469,7 +7534,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "d5e8a4b401d8d6d8718294f454b9fde538f4ab638b4ffe8504cea00bdae10527",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 26.0,
+        "y": 49.0,
+        "width": 204.0,
+        "height": 158.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.gate",
@@ -6520,7 +7593,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "e5d9a6629f64959b5ca44cd5aafef08b80960ece68820eed450479712f2bb7c8",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 32.0,
+        "y": 62.0,
+        "width": 192.0,
+        "height": 153.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.bed",
@@ -6571,7 +7652,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "d4068a6c99bb47f2ddec2782e97adc21de252c35455414c64efa69c96bcd6249",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 29.0,
+        "y": 49.0,
+        "width": 198.0,
+        "height": 158.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.trellis",
@@ -6622,7 +7711,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "92f042f3f9a8b9e562cd8175d5a084641271f6a919e933eb817c50510b98660e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 37.0,
+        "y": 38.0,
+        "width": 182.0,
+        "height": 170.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.well",
@@ -6673,7 +7770,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "cd8bc0f7a7869b96496c64e2630a36e096698c50ce6444a07149d77611fd7d4e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 32.0,
+        "width": 186.0,
+        "height": 183.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.fountain",
@@ -6724,7 +7829,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "2db250672a16d255874d9fe1b704add0189da3e86b0e627731302bc0db2a877b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 35.0,
+        "width": 186.0,
+        "height": 186.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.garden-bench",
@@ -6775,7 +7888,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "76eea5d18ae84e80fe8386652fbf78d559d07e58113679b270a3fd1862e95b61",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 41.0,
+        "y": 73.0,
+        "width": 174.0,
+        "height": 111.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.picnic",
@@ -6826,7 +7947,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "3a397cb2a15efbaa17bb4f1f66a5d28de7a9ca76122830e7b91f9bab9b8c5a5b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 49.0,
+        "y": 45.0,
+        "width": 158.0,
+        "height": 166.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.streetlamp",
@@ -6877,7 +8006,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "d3b5961eaf8554b14b83ac09bac05127d20f094c6bcad77727e6a7fe2fa3cbac",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 84.0,
+        "y": 14.0,
+        "width": 88.0,
+        "height": 215.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.dock",
@@ -6928,7 +8065,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "50e8a9174f904ad076ed641b21252e3ff4c9c329e0e3f479880663afbb550035",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 28.0,
+        "y": 82.0,
+        "width": 200.0,
+        "height": 93.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.boat",
@@ -6979,7 +8124,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ab5d1244b49db10c21fa7a26a1c46b5a4b5cfd732a41d551d4b0fd8b55273467",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 44.0,
+        "y": 21.0,
+        "width": 160.0,
+        "height": 214.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.wheelbarrow",
@@ -7030,7 +8183,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "32597dbde3038f0ae351044d7a46c5b39a33cf52d4db3eddb681e4658c07f8e0",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 70.0,
+        "y": 18.0,
+        "width": 116.0,
+        "height": 210.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.gravestone",
@@ -7081,7 +8242,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "4058cbfa4a9f8addc2d4c2b940128fab4a844c4dd369b8f0c4df0f9db6eb76c4",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 71.0,
+        "y": 54.0,
+        "width": 114.0,
+        "height": 166.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "landscape.tent",
@@ -7132,7 +8301,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "e7e6a6c70d393cf608bcba268110513aae7b663cc16213e2ec1ea90a2ba6ae43",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 31.0,
+        "y": 34.0,
+        "width": 194.0,
+        "height": 180.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "house.cottage",
@@ -7435,66 +8612,6 @@
       "sourceStatus": "redesigned"
     },
     {
-      "id": "house.porch",
-      "name": "Nhà có hiên",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.porch.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "c243786889359441f41c0988127167c46afce7dcb0eb7d7ce3c764b8bf6d4acd",
-      "sourceStatus": "redesigned"
-    },
-    {
       "id": "house.shop",
       "name": "Cửa hàng cơ bản",
       "category": "Nhà cửa · Khối cơ bản",
@@ -7672,66 +8789,6 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "a2eddd50397894e115601cd572dfd8dccfd17b11ea26063f4cc0e0171bd0b08d",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.garden",
-      "name": "Nhà vườn",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.garden.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "64fd885e8c9d267f8fca14599f23648c88a1774cf7b515bbb52a8bd36cef89be",
       "sourceStatus": "redesigned"
     },
     {
@@ -8023,7 +9080,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "f57b59a209da59569159b461a14b4dfdce0ec46cbab2a0fe37b5e6fd07377c7e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 25.0,
+        "y": 54.0,
+        "width": 206.0,
+        "height": 136.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "building-part.roof-hip",
@@ -8074,7 +9139,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6a6885bffec6d8972891c2bbb1cfdb245e0800f3a909c3e8cd66990efd99e79e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 25.0,
+        "y": 65.0,
+        "width": 206.0,
+        "height": 121.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "building-part.roof-dome",
@@ -8125,7 +9198,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "11ece1b31ebb5d85ed455ab34cd2c62e3d2f6d50d7c04840b667c8f40de3ff91",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 30.0,
+        "y": 57.867,
+        "width": 196.0,
+        "height": 134.133,
+        "collisionReady": false
+      }
     },
     {
       "id": "building-part.chimney",
@@ -8176,7 +9257,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "30a0d280e09414dbccb0df92a6dfed21d884e5f1cd1d33e517d787076a128c2a",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 79.0,
+        "y": 45.0,
+        "width": 98.0,
+        "height": 160.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "building-part.awning",
@@ -8227,7 +9316,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "2df19c564f74cabe8758b7618c6636ed8e3cb0b3a5b076178d777f43b5c36df8",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 24.0,
+        "y": 74.0,
+        "width": 210.0,
+        "height": 146.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "building-part.balcony",
@@ -8278,7 +9375,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "baeda207e2d3bb9c414877e2e033d6d064dd46d805fe96a14d78fac4a05eca38",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 31.0,
+        "y": 95.0,
+        "width": 194.0,
+        "height": 102.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "building-part.sign",
@@ -8329,7 +9434,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "494d57c0524ad1929ff0eeb705ab80bdd2b857b9a92c4f37f9f5cc07433f572f",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 45.0,
+        "y": 46.0,
+        "width": 165.0,
+        "height": 167.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "building-part.dormer",
@@ -8380,7 +9493,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ff5855b57caf2d8777092efb04a3a5caff30f99b7a562a04a9e85fc1fd80dc93",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 62.0,
+        "y": 54.0,
+        "width": 132.0,
+        "height": 153.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "building-part.planter-box",
@@ -8431,7 +9552,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6113019109ab97541ebcb08e266cce3d36bcbf1e803924d37fc584df0af1c15d",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 39.0,
+        "y": 75.0,
+        "width": 178.0,
+        "height": 117.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "storage.bookcase-top",
@@ -8482,7 +9611,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ad25f4ab29def8836e6da12932d5075f8df82806e73f57007d75e0a07122943c",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 29.0,
+        "y": 94.0,
+        "width": 198.0,
+        "height": 68.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "fixture.fireplace-top",
@@ -8533,7 +9670,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6522ed3561e67e2f6838cf321566ddaa13a85fc1559825581fbb1c61340d81c6",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 26.0,
+        "y": 68.0,
+        "width": 204.0,
+        "height": 140.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "plant.pot-top",
@@ -8584,7 +9729,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "bfddf2af4d793a2544e4b62b9ed5f2f9403e605d5bd25bb74570aa1cc9e49d4e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 44.156,
+        "y": 42.0,
+        "width": 167.801,
+        "height": 165.164,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.curtain",
@@ -8635,7 +9788,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6bbb85ccd0819585516646f49980044bd5e781dd4e9469b0bf7485e04c92dea7",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 30.0,
+        "y": 39.0,
+        "width": 196.0,
+        "height": 177.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.lamp-floor",
@@ -8686,7 +9847,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "562f71ff83c61a10b340c39c788db407d7386003d4da44250e8277d45fb9ef5e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 65.0,
+        "y": 30.0,
+        "width": 126.0,
+        "height": 200.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.sconce",
@@ -8737,7 +9906,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "b949110cd6c6f19c0ad4b6b1b1a66a573d89812eb19b997d5e0e0cc427d94a7f",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 61.5,
+        "y": 29.0,
+        "width": 133.0,
+        "height": 177.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.torch",
@@ -8788,7 +9965,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "9ce706283442c1800b58d019e594a9a730d1b47bf3b0a530d6be2ddb56f4d6d6",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 96.064,
+        "y": 29.0,
+        "width": 62.803,
+        "height": 189.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.globe",
@@ -8839,7 +10024,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "7e3fcb82df76655e6ed69af794410d9499cb21811a1aa0982ff821dec8dc0fbd",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 61.0,
+        "y": 41.0,
+        "width": 134.0,
+        "height": 190.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.books-stack",
@@ -8890,7 +10083,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "29f5f81fee1bb161691bd95d186f7c69932a9d722a5cd51043aa21bdb1511449",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 52.0,
+        "y": 73.0,
+        "width": 155.0,
+        "height": 111.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.blackboard",
@@ -8941,7 +10142,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "54a2f40adadb64fc356599df3b2de386f3caebf752f3f04342b184ac2d7d29c4",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 42.0,
+        "width": 186.0,
+        "height": 184.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.towel",
@@ -8992,7 +10201,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "5267a021a506cce646d42f8b44e979ba67b2736b37bfd4f7d7c25373dd00e902",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 49.0,
+        "y": 66.0,
+        "width": 158.0,
+        "height": 134.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.bucket",
@@ -9043,7 +10260,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "c05b63ca1f6cb5b2e0e33df1aaaa51caf7b66276ccf34b664f59ec5f15fe7747",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 65.0,
+        "y": 46.0,
+        "width": 126.0,
+        "height": 171.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.rainbarrel",
@@ -9094,7 +10319,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "d2cd24f21a1eec7c9ab1d86d5f9e3ea35cc6f3270fed715ae5cdd34f1737ad96",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 72.0,
+        "y": 42.0,
+        "width": 138.0,
+        "height": 168.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.compost",
@@ -9145,7 +10378,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "9f14ef4942458299641e72b4c22926998f689774f1ee15a53abc6ec311131b39",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 38.0,
+        "y": 55.414,
+        "width": 180.0,
+        "height": 155.586,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.woodpile",
@@ -9196,7 +10437,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "4d2d0a5cbe72cb222d2ae7341b078f483d08a200bde10bff063a6ecb3901658c",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 44.0,
+        "y": 97.0,
+        "width": 166.0,
+        "height": 118.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.flowerbed",
@@ -9247,7 +10496,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "8813cbb532a1d57caffe3191959175f3523917c135dbac73bef8dd6f39e13d02",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 31.0,
+        "y": 53.0,
+        "width": 194.0,
+        "height": 146.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.shower",
@@ -9298,7 +10555,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "2e74402958df168c5ce2f62c5296c30ae69165d3ea2f8eac03d31752bd47d97d",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 42.0,
+        "y": 42.0,
+        "width": 172.0,
+        "height": 172.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "extra.safe",
@@ -9349,7 +10614,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "809e811dd727b985a725a7b66be95a3b3e5f73bb24346fc8785a9925d1eab733",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 57.0,
+        "y": 48.0,
+        "width": 142.0,
+        "height": 160.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.fireplace-stone",
@@ -9403,7 +10676,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "3a0eed1489c9949634273ae7fb5f633c105e4beaf44ca63c84c90e1bc8bc7495",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 17.0,
+        "y": 54.0,
+        "width": 222.0,
+        "height": 179.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.fireplace-carved",
@@ -9457,7 +10738,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "7768e97956d5d06f49d800bab484f6f8c746c2b2f3b29fb0ff02b3b53ab36433",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 17.0,
+        "y": 54.0,
+        "width": 222.0,
+        "height": 179.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.fireplace-gothic",
@@ -9511,7 +10800,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "73df6f81330b29cecdd0db6de077c564c0b6e1cd1b002ea4f4ae5750242b0c20",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 17.0,
+        "y": 54.0,
+        "width": 222.0,
+        "height": 179.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.fireplace-floo",
@@ -9565,7 +10862,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "9c0b64c2b1a5ab39cf45e00442a8e58fef970c1f4addda150a2cbac852c38d18",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 17.0,
+        "y": 18.0,
+        "width": 222.0,
+        "height": 215.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.fireguard",
@@ -9619,7 +10924,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "c60df1ade8cac7c3a1d75f1b88eaae9ea27e74dc7e914a3cca80c5705efc0b04",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 41.0,
+        "y": 74.5,
+        "width": 174.0,
+        "height": 135.5,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.potions-cabinet",
@@ -9673,7 +10986,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "26ab2a83c2d085a14c548e8fc92956533b0213ff2f92d9746266b809a16026ef",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 40.0,
+        "y": 34.0,
+        "width": 176.0,
+        "height": 194.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.library-ladder",
@@ -9727,7 +11048,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "84b2d40682efdcb60b5765035c243545fad43b5a9c8cfacdc5631f7ecf250818",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 32.0,
+        "y": 37.0,
+        "width": 192.0,
+        "height": 192.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.library-curved",
@@ -9781,7 +11110,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "1e656e9a54f7ba184de8fab63efa37b385458f2ebb7688b568b08075cefbab5c",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 33.0,
+        "y": 40.0,
+        "width": 190.0,
+        "height": 181.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.display",
@@ -9835,7 +11172,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "fa9b354442781e55122103aed2cd463ba9902270f9c1b052399a0cbf5ff4b634",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 34.5,
+        "y": 38.0,
+        "width": 187.0,
+        "height": 190.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.archive",
@@ -9889,7 +11234,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "4356962f6e1184f04eb60c293346ed0afe1e7120992c99e6b27b246b3c3daab5",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 44.5,
+        "y": 38.0,
+        "width": 167.0,
+        "height": 190.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.broom-rack",
@@ -9943,7 +11296,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "8db90183250d8e60e5acb1c39c103f25394b00b6c686d3ab36fab52ebbb1de15",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 31.0,
+        "y": 57.986,
+        "width": 194.0,
+        "height": 160.014,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.broom-wall",
@@ -9997,7 +11358,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "191ac3f94509cede4c70f0f55e1d533d6a6023a4b406669faf46aa8f4c910158",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 7.145,
+        "y": 51.0,
+        "width": 213.855,
+        "height": 161.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.cauldron",
@@ -10051,7 +11420,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "100f04958a4cb01590f5cea9fa8a2b50e14e12276311d3d63b8a0729a000d2af",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 45.359,
+        "y": 92.0,
+        "width": 165.282,
+        "height": 122.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.cauldron-large",
@@ -10105,7 +11482,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "37d764cd85fbd7d21baa4f10b43a670ae715c3f5eedfd9eca87ab6e09f181fef",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 41.227,
+        "y": 66.75,
+        "width": 173.546,
+        "height": 159.25,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.potions-bench",
@@ -10159,7 +11544,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "56d2c7fa9b515b34053c863b38b3cca9165ec35af75be648cd389ecb24eb133e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 25.0,
+        "y": 72.6,
+        "width": 206.0,
+        "height": 156.4,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.telescope",
@@ -10213,7 +11606,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "cf9e1f18e2b0d2e5dd6362ae8f05c707eda3e29667ca59d3da282a922bd0a875",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 39.369,
+        "y": 27.32,
+        "width": 167.42,
+        "height": 202.68,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.orrery",
@@ -10267,7 +11668,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "32d58d6afaa4150dd5c6689357093f44500c051d63e27e1ed404dbb1d5675ce0",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 34.0,
+        "y": 36.429,
+        "width": 188.0,
+        "height": 191.571,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.lectern",
@@ -10321,7 +11730,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "991f4c2be917a60cc2f94f7cf4cd743e128a751541cfa2dc313fb64175adfe88",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 53.0,
+        "y": 54.0,
+        "width": 150.0,
+        "height": 177.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "cluster.divination",
@@ -10376,7 +11793,15 @@
       },
       "isAssembly": true,
       "geometryFingerprint": "2dae76bc69a0ac7e3926bbf99fb39bcf1b0c2b253b29518df7bf7e3a52291771",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 20.0,
+        "y": 63.0,
+        "width": 216.0,
+        "height": 155.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "cluster.research",
@@ -10431,7 +11856,15 @@
       },
       "isAssembly": true,
       "geometryFingerprint": "b3ec86a409d316133ba4bb34e05f9ab630e3550e77fffda1e7c465bf0b9874b4",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 20.0,
+        "y": 57.0,
+        "width": 216.0,
+        "height": 161.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "cluster.headmaster",
@@ -10486,7 +11919,15 @@
       },
       "isAssembly": true,
       "geometryFingerprint": "c1600b72fc6a03657f8449f2bb8e40974dcc43446b4a141f103a5786a2d13b69",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 20.0,
+        "y": 44.0,
+        "width": 216.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "cluster.astronomy",
@@ -10541,7 +11982,15 @@
       },
       "isAssembly": true,
       "geometryFingerprint": "2cb6aa6241fa5536857b0198a5d4831e37119f2989e89ab219a340a278e58ccf",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 20.0,
+        "y": 62.0,
+        "width": 216.0,
+        "height": 156.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "cluster.books",
@@ -10596,7 +12045,15 @@
       },
       "isAssembly": true,
       "geometryFingerprint": "6c12bbf6c6f0e5712412f82564a698e41b9f5289bf0c403fa073932dd80fd803",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 46.0,
+        "y": 70.0,
+        "width": 146.0,
+        "height": 125.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "cluster.tea",
@@ -10651,7 +12108,15 @@
       },
       "isAssembly": true,
       "geometryFingerprint": "3cf01ff593fbb0595abca97292e59e6563f25be33305a3773c288ed73a90e855",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 20.0,
+        "y": 105.0,
+        "width": 216.0,
+        "height": 113.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "cluster.candelabrum",
@@ -10706,7 +12171,15 @@
       },
       "isAssembly": true,
       "geometryFingerprint": "7f6c2ee227d7659f65f0babc260530897d2cb6ffd0a953087668fad197f0c1d5",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 52.0,
+        "y": 47.0,
+        "width": 152.0,
+        "height": 185.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.portrait",
@@ -10760,7 +12233,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "f21d030c68f52d6780d9927b46bfd15bc47d094acd4e696d15e66fc0a87fb855",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 65.5,
+        "y": 44.5,
+        "width": 125.0,
+        "height": 166.5,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.portrait-wall",
@@ -10814,7 +12295,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "17f530c449216218c7c94f29cea8f95b7088c45dd6e903dfaad5bdfaefd604d1",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 23.5,
+        "y": 23.0,
+        "width": 207.0,
+        "height": 218.28,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.landscape",
@@ -10868,7 +12357,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "94e60dea839f0fe7438eb4ded7f434f3ee15d7db6e96cc28d7b72fe824cc90b3",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 22.0,
+        "y": 54.0,
+        "width": 212.0,
+        "height": 151.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.armour",
@@ -10922,7 +12419,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "3a9100545ddc12c95c141fa6fe91b3fb79d0382d540b17c0a0b9474f43ca4fec",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 59.0,
+        "y": 19.0,
+        "width": 138.0,
+        "height": 220.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.bust",
@@ -10976,7 +12481,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "3f3fb2338bac77ba7cef5bf21d73aeb90c4afac057451c11db934d6215a73d20",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 75.0,
+        "y": 27.977,
+        "width": 106.0,
+        "height": 205.023,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.statue",
@@ -11030,7 +12543,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "b553585e65bf73737779d310f3d9c78cb38cc14ace9c156e99a05d5c3cf5d6d0",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 64.0,
+        "y": 13.0,
+        "width": 119.0,
+        "height": 222.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.grandfather-clock",
@@ -11084,7 +12605,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "a83b6001f5d9493f8441f074d4ccba788237ca15c269fb7cf6e56a2ac5c8c4d5",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 70.0,
+        "y": 41.5,
+        "width": 116.0,
+        "height": 190.5,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.mirror",
@@ -11138,7 +12667,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "3cf0aff5f93636e95c7a9d12ccf3bf3c1612a3d28a7f740995ddb906a7c814a6",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.407,
+        "y": 43.0,
+        "width": 159.185,
+        "height": 179.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.noticeboard",
@@ -11192,7 +12729,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "1a98e0692e6639293cce19b993262868a0f6ac4858878bf9a75703fcb1966a87",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 30.0,
+        "y": 49.0,
+        "width": 196.0,
+        "height": 166.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.planter-floor",
@@ -11246,7 +12791,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "2222cf43b670c76c86599de18de2d613da8a7b1a2dbbd96c44a2d2e06e4c7353",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 8.566,
+        "y": 36.746,
+        "width": 198.983,
+        "height": 193.254,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.curtain-tall",
@@ -11300,7 +12853,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "846bf4636d7ca430085bb9d9ee3a43f12984a32d470be2ddec3f1780250ec61e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 23.0,
+        "y": 24.0,
+        "width": 210.0,
+        "height": 203.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.curtain-partition",
@@ -11354,7 +12915,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "5a604589b8110961606dfdf0590642158b9cbc11812c47b10b0e992b2ab681c5",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 23.0,
+        "y": 24.0,
+        "width": 210.0,
+        "height": 203.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.curtain-bed",
@@ -11408,7 +12977,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "2d4617ba7db1bccbe2f419c68c47bd2c837c21d501deeb2de60c99b234ee8a16",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 23.0,
+        "y": 24.0,
+        "width": 210.0,
+        "height": 203.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "unique.pensieve",
@@ -11463,7 +13040,15 @@
       },
       "placementPolicy": "story-specific; do not scatter as generic furniture",
       "geometryFingerprint": "910d4e5ea28cb99a617ca7de2b1c9c11ba2e61fb8df1e288663d3f5768fe16a8",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.0,
+        "y": 72.0,
+        "width": 160.0,
+        "height": 159.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "unique.memory-cabinet",
@@ -11518,7 +13103,15 @@
       },
       "placementPolicy": "story-specific; do not scatter as generic furniture",
       "geometryFingerprint": "0e96de84b1f67f13de3c336e68ba2a15595e9c803565a69a839ef16184cb8490",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 34.5,
+        "y": 22.5,
+        "width": 187.0,
+        "height": 205.5,
+        "collisionReady": false
+      }
     },
     {
       "id": "unique.sorting-hat",
@@ -11573,7 +13166,15 @@
       },
       "placementPolicy": "story-specific; do not scatter as generic furniture",
       "geometryFingerprint": "80aba0da11d33f0aa919a05be3c5eefac6e6fd5445519cb771f2724cb035988f",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 36.0,
+        "y": 24.0,
+        "width": 184.0,
+        "height": 211.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "unique.goblet-fire",
@@ -11628,7 +13229,15 @@
       },
       "placementPolicy": "story-specific; do not scatter as generic furniture",
       "geometryFingerprint": "bd9012cc70e1f8c5cdb6e8285c96711f1d2c4b68e42724c0ecb60dd9b0439469",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 71.0,
+        "y": 24.0,
+        "width": 114.0,
+        "height": 209.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "unique.triwizard-cup",
@@ -11683,7 +13292,15 @@
       },
       "placementPolicy": "story-specific; do not scatter as generic furniture",
       "geometryFingerprint": "f82b5fa4b55737a3544e872f42d584a27d60a7435c6b5f9e0818c2449f40d66b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 39.387,
+        "y": 61.667,
+        "width": 177.226,
+        "height": 169.333,
+        "collisionReady": false
+      }
     },
     {
       "id": "unique.weasley-clock",
@@ -11738,7 +13355,15 @@
       },
       "placementPolicy": "story-specific; do not scatter as generic furniture",
       "geometryFingerprint": "bfb43d2e95ad7f3f79aa626748e2ce8453440386f8141d5cf380f0fe7188c638",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 61.0,
+        "y": 16.0,
+        "width": 134.0,
+        "height": 216.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "unique.vanishing-cabinet",
@@ -11793,7 +13418,15 @@
       },
       "placementPolicy": "story-specific; do not scatter as generic furniture",
       "geometryFingerprint": "09dec76313a33fcdfe5fd118dcaf73f9efbeabfe1f205211ae8b16fc097bb7dc",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 51.0,
+        "y": 17.975,
+        "width": 154.0,
+        "height": 215.025,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.astronomy-cabinet",
@@ -11847,7 +13480,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "c416e7264ec7218fd0d88b2e0a6dda9acf47a6bb6b0c9a41b4b5c029f0cf0031",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 33.0,
+        "y": 30.0,
+        "width": 190.0,
+        "height": 198.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.storage-top",
@@ -11901,7 +13542,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "9278a62a1f7b4561d93f4007aeb866ffbbb969b25c36af674a03ac7dc21069d4",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 86.0,
+        "width": 186.0,
+        "height": 84.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "wizard.display-top",
@@ -11955,7 +13604,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "b3c9d08294d28ecfba193ace92cf554a490621a16963e29399ddc61c9350560b",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 86.0,
+        "width": 186.0,
+        "height": 84.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.rug-runner",
@@ -12009,7 +13666,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "06c9064ffd255d54a37c9ba1cd774ef99036996a8a67915378952e2110d3d12d",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 66.0,
+        "y": 19.0,
+        "width": 124.0,
+        "height": 218.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "decor.chandelier",
@@ -12063,7 +13728,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "ff964824e61727cb0f4234029ef36dce3b734675365851ae41089b3a32aa6d48",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 44.0,
+        "y": 17.0,
+        "width": 168.0,
+        "height": 173.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "module.house-body-stone",
@@ -12128,7 +13801,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "cb873509e8bc30923589ee3d7c4318bd16bac21f4c39948d00404d74353c039e",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 35.0,
+        "y": 75.0,
+        "width": 186.0,
+        "height": 150.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "crest.gryffindor",
@@ -12185,7 +13866,15 @@
       },
       "geometryFingerprint": "ca8b44a67edf8dc49abd6981acad6146c28dd7f414b5e49056d1fe0fb6d99bcb",
       "attribution": "Adapted Game-icons: Lorc (lion/eagle/snake), Caro Asercion (badger), CC BY 3.0; custom heraldic setting.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.0,
+        "y": 44.0,
+        "width": 140.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "crest.ravenclaw",
@@ -12242,7 +13931,15 @@
       },
       "geometryFingerprint": "688c18356467603a60aff9692a76f53aa4ec084461fb53cfc9dcef8247e0f8a7",
       "attribution": "Adapted Game-icons: Lorc (lion/eagle/snake), Caro Asercion (badger), CC BY 3.0; custom heraldic setting.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.0,
+        "y": 44.0,
+        "width": 160.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "crest.hufflepuff",
@@ -12299,7 +13996,15 @@
       },
       "geometryFingerprint": "93754a0f8f12a47962f1153b19a8f862b23e33c602b1dc017692a910f7688c0e",
       "attribution": "Adapted Game-icons: Lorc (lion/eagle/snake), Caro Asercion (badger), CC BY 3.0; custom heraldic setting.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.0,
+        "y": 44.0,
+        "width": 140.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "crest.slytherin",
@@ -12356,7 +14061,15 @@
       },
       "geometryFingerprint": "0ea9881cfa1d2fd78aa8ce3eb216dd00599289f93a02dcae639b5e073fdb25b8",
       "attribution": "Adapted Game-icons: Lorc (lion/eagle/snake), Caro Asercion (badger), CC BY 3.0; custom heraldic setting.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.0,
+        "y": 44.0,
+        "width": 140.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "crest.beauxbatons",
@@ -12413,7 +14126,15 @@
       },
       "geometryFingerprint": "b40c213a2ad3cddde5794ce95e2cd4303152fc154b962e8bafd0712ed498097f",
       "attribution": "Original Beauxbatons/Durmstrang interpretation; book/film identity references.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.0,
+        "y": 41.0,
+        "width": 140.0,
+        "height": 177.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "crest.durmstrang",
@@ -12470,7 +14191,15 @@
       },
       "geometryFingerprint": "6be259946c769963156fcbc2a93cbba5fa8e3b920a7c524f33401310783a3543",
       "attribution": "Original Beauxbatons/Durmstrang interpretation; book/film identity references.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.0,
+        "y": 44.0,
+        "width": 160.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "banner.vertical",
@@ -12540,7 +14269,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "20a072eccbd41d17a46a5b02257614eed248792dcde4635477448678f628bc88",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 49.0,
+        "y": 28.0,
+        "width": 158.0,
+        "height": 194.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "banner.forked",
@@ -12610,7 +14347,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "cdc8b60f80f9ad9ebf2b65f678fe5d30b933e61ea064b2406a3695536b16c870",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 49.0,
+        "y": 28.0,
+        "width": 158.0,
+        "height": 201.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "banner.pole",
@@ -12680,7 +14425,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "48370ee1a0c41714f05e51581fe06bbc001f9957f9962631e270d3b3a1037b65",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 40.0,
+        "y": 17.0,
+        "width": 178.0,
+        "height": 212.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "banner.plaque",
@@ -12750,7 +14503,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "fd3165118c98b9539bd21ce84048ec95ad06e4d74bc526f8c797ad9a7abbb3ff",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 45.0,
+        "y": 35.0,
+        "width": 166.0,
+        "height": 190.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "banner.tapestry",
@@ -12820,7 +14581,15 @@
         "unit": "css-px"
       },
       "geometryFingerprint": "6e95300c5c86a69a43b3e3af73471dedd9abf3ca4b8b0eddaecb05d5a781e991",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 38.0,
+        "y": 23.0,
+        "width": 180.0,
+        "height": 213.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "flag.gryffindor",
@@ -12877,7 +14646,15 @@
       },
       "geometryFingerprint": "ca8b44a67edf8dc49abd6981acad6146c28dd7f414b5e49056d1fe0fb6d99bcb",
       "attribution": "Adapted Game-icons: Lorc (lion/eagle/snake), Caro Asercion (badger), CC BY 3.0; custom heraldic setting.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.0,
+        "y": 44.0,
+        "width": 140.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "flag.ravenclaw",
@@ -12934,7 +14711,15 @@
       },
       "geometryFingerprint": "688c18356467603a60aff9692a76f53aa4ec084461fb53cfc9dcef8247e0f8a7",
       "attribution": "Adapted Game-icons: Lorc (lion/eagle/snake), Caro Asercion (badger), CC BY 3.0; custom heraldic setting.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.0,
+        "y": 44.0,
+        "width": 160.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "flag.hufflepuff",
@@ -12991,7 +14776,15 @@
       },
       "geometryFingerprint": "93754a0f8f12a47962f1153b19a8f862b23e33c602b1dc017692a910f7688c0e",
       "attribution": "Adapted Game-icons: Lorc (lion/eagle/snake), Caro Asercion (badger), CC BY 3.0; custom heraldic setting.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.0,
+        "y": 44.0,
+        "width": 140.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "flag.slytherin",
@@ -13048,7 +14841,15 @@
       },
       "geometryFingerprint": "0ea9881cfa1d2fd78aa8ce3eb216dd00599289f93a02dcae639b5e073fdb25b8",
       "attribution": "Adapted Game-icons: Lorc (lion/eagle/snake), Caro Asercion (badger), CC BY 3.0; custom heraldic setting.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.0,
+        "y": 44.0,
+        "width": 140.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "flag.beauxbatons",
@@ -13105,7 +14906,15 @@
       },
       "geometryFingerprint": "b40c213a2ad3cddde5794ce95e2cd4303152fc154b962e8bafd0712ed498097f",
       "attribution": "Original Beauxbatons/Durmstrang interpretation; book/film identity references.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 58.0,
+        "y": 41.0,
+        "width": 140.0,
+        "height": 177.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "flag.durmstrang",
@@ -13162,7 +14971,15 @@
       },
       "geometryFingerprint": "6be259946c769963156fcbc2a93cbba5fa8e3b920a7c524f33401310783a3543",
       "attribution": "Original Beauxbatons/Durmstrang interpretation; book/film identity references.",
-      "sourceStatus": "retained-framework"
+      "sourceStatus": "retained-framework",
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 48.0,
+        "y": 44.0,
+        "width": 160.0,
+        "height": 174.0,
+        "collisionReady": false
+      }
     },
     {
       "id": "map.h1.gladrags",
@@ -13954,11 +15771,2129 @@
         650
       ],
       "sourceStatus": "extracted-from-map"
+    },
+    {
+      "id": "building.village-static.v-shack",
+      "name": "v-shack",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        102.86,
+        103.904,
+        114.04,
+        130.896
+      ],
+      "file": "assets/building.village-static.v-shack.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-shack",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 105.86000061035156,
+        "y": 106.90428161621094,
+        "width": 108.03999328613281,
+        "height": 124.89572143554688,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-6",
+      "name": "v-home-6",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1136,
+        123.222,
+        152,
+        174.778
+      ],
+      "file": "assets/building.village-static.v-home-6.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-6",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1139,
+        "y": 126.22200012207031,
+        "width": 146,
+        "height": 168.7779998779297,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-4",
+      "name": "v-home-4",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        951,
+        171.64,
+        152,
+        194.36
+      ],
+      "file": "assets/building.village-static.v-home-4.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-4",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 954,
+        "y": 174.63999938964844,
+        "width": 146,
+        "height": 188.36000061035156,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-7",
+      "name": "v-home-7",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1314,
+        177.68,
+        160,
+        195.32
+      ],
+      "file": "assets/building.village-static.v-home-7.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-7",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1317,
+        "y": 180.67999267578125,
+        "width": 154,
+        "height": 189.32000732421875,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-3",
+      "name": "v-home-3",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        738,
+        205.754,
+        160,
+        175.246
+      ],
+      "file": "assets/building.village-static.v-home-3.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-3",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 741,
+        "y": 208.75399780273438,
+        "width": 154,
+        "height": 169.24600219726562,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-1",
+      "name": "v-home-1",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        572,
+        203.44,
+        161.25,
+        195.56
+      ],
+      "file": "assets/building.village-static.v-home-1.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-1",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 575,
+        "y": 206.44000244140625,
+        "width": 155.25,
+        "height": 189.55999755859375,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-0",
+      "name": "v-home-0",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        416,
+        245.818,
+        168,
+        176.182
+      ],
+      "file": "assets/building.village-static.v-home-0.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-0",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 419,
+        "y": 248.8179931640625,
+        "width": 162,
+        "height": 170.1820068359375,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-9",
+      "name": "v-home-9",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1443,
+        248.144,
+        152,
+        174.856
+      ],
+      "file": "assets/building.village-static.v-home-9.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-9",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1446,
+        "y": 251.1439971923828,
+        "width": 146,
+        "height": 168.8560028076172,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-gladrags",
+      "name": "v-gladrags",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1524.32,
+        245.48,
+        229.68,
+        243.52
+      ],
+      "file": "assets/building.village-static.v-gladrags.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-gladrags",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1527.3199462890625,
+        "y": 248.47999572753906,
+        "width": 223.67999267578125,
+        "height": 237.52000427246094,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-zonkos",
+      "name": "v-zonkos",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1289.6,
+        342.4,
+        239.4,
+        230.6
+      ],
+      "file": "assets/building.village-static.v-zonkos.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-zonkos",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1292.5999755859375,
+        "y": 345.3999938964844,
+        "width": 233.39999389648438,
+        "height": 224.60000610351562,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-11",
+      "name": "v-home-11",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        200,
+        394.56,
+        168,
+        211.44
+      ],
+      "file": "assets/building.village-static.v-home-11.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-11",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 203,
+        "y": 397.55999755859375,
+        "width": 162,
+        "height": 205.44000244140625,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-broomsticks",
+      "name": "v-broomsticks",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        871.8,
+        372.32,
+        401.45,
+        285.68
+      ],
+      "file": "assets/building.village-static.v-broomsticks.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-broomsticks",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 874.7999877929688,
+        "y": 375.32000732421875,
+        "width": 395.45001220703125,
+        "height": 279.67999267578125,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-honeydukes",
+      "name": "v-honeydukes",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        584.64,
+        431.96,
+        279.36,
+        254.04
+      ],
+      "file": "assets/building.village-static.v-honeydukes.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-honeydukes",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 587.6400146484375,
+        "y": 434.96002197265625,
+        "width": 273.3599853515625,
+        "height": 248.0399932861328,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-12",
+      "name": "v-home-12",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        317,
+        538.988,
+        152,
+        175.012
+      ],
+      "file": "assets/building.village-static.v-home-12.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-12",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 320,
+        "y": 541.988037109375,
+        "width": 146,
+        "height": 169.01199340820312,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-13",
+      "name": "v-home-13",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        431,
+        601,
+        152,
+        194
+      ],
+      "file": "assets/building.village-static.v-home-13.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-13",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 434,
+        "y": 604,
+        "width": 146,
+        "height": 188,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-dervish",
+      "name": "v-dervish",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1460,
+        562.96,
+        274.25,
+        238.04
+      ],
+      "file": "assets/building.village-static.v-dervish.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-dervish",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1463,
+        "y": 565.9600219726562,
+        "width": 268.2500305175781,
+        "height": 232.0399932861328,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-14",
+      "name": "v-home-14",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        217,
+        655.88,
+        152,
+        210.12
+      ],
+      "file": "assets/building.village-static.v-home-14.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-14",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 220,
+        "y": 658.8800048828125,
+        "width": 146,
+        "height": 204.1199951171875,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-post",
+      "name": "v-post",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        512.76,
+        677.216,
+        237.24,
+        258.784
+      ],
+      "file": "assets/building.village-static.v-post.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-post",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 515.760009765625,
+        "y": 680.2160034179688,
+        "width": 231.24000549316406,
+        "height": 252.78399658203125,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-16",
+      "name": "v-home-16",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1445,
+        743.16,
+        155.25,
+        194.84
+      ],
+      "file": "assets/building.village-static.v-home-16.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-16",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1448,
+        "y": 746.1600341796875,
+        "width": 149.25,
+        "height": 188.83999633789062,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-17",
+      "name": "v-home-17",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1590,
+        785.36,
+        176,
+        212.64
+      ],
+      "file": "assets/building.village-static.v-home-17.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-17",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1593,
+        "y": 788.3599853515625,
+        "width": 170,
+        "height": 206.63999938964844,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-quills",
+      "name": "v-quills",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1166.52,
+        796.28,
+        240.48,
+        246.72
+      ],
+      "file": "assets/building.village-static.v-quills.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-quills",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1169.52001953125,
+        "y": 799.280029296875,
+        "width": 234.48001098632812,
+        "height": 240.72000122070312,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-18",
+      "name": "v-home-18",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1724,
+        948.222,
+        152,
+        174.778
+      ],
+      "file": "assets/building.village-static.v-home-18.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-18",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1727,
+        "y": 951.2219848632812,
+        "width": 146,
+        "height": 168.7779998779297,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-hogshead",
+      "name": "v-hogshead",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        286,
+        913.88,
+        279.25,
+        238.12
+      ],
+      "file": "assets/building.village-static.v-hogshead.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-hogshead",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 289,
+        "y": 916.8800048828125,
+        "width": 273.2500305175781,
+        "height": 232.1199951171875,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-puddifoot",
+      "name": "v-puddifoot",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        840.68,
+        936.52,
+        238.32,
+        235.48
+      ],
+      "file": "assets/building.village-static.v-puddifoot.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-puddifoot",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 843.6799926757812,
+        "y": 939.52001953125,
+        "width": 232.32000732421875,
+        "height": 229.47999572753906,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-21",
+      "name": "v-home-21",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1266,
+        1006.208,
+        168,
+        175.792
+      ],
+      "file": "assets/building.village-static.v-home-21.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-21",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1269,
+        "y": 1009.2080078125,
+        "width": 162,
+        "height": 169.79200744628906,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-22",
+      "name": "v-home-22",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1423,
+        1068.8,
+        160,
+        195.2
+      ],
+      "file": "assets/building.village-static.v-home-22.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-22",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1426,
+        "y": 1071.800048828125,
+        "width": 154,
+        "height": 189.1999969482422,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-29",
+      "name": "v-home-29",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        788,
+        1062.76,
+        152,
+        210.24
+      ],
+      "file": "assets/building.village-static.v-home-29.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-29",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 791,
+        "y": 1065.760009765625,
+        "width": 146,
+        "height": 204.24000549316406,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-28",
+      "name": "v-home-28",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        673,
+        1188.4,
+        153.25,
+        194.6
+      ],
+      "file": "assets/building.village-static.v-home-28.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-28",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 676,
+        "y": 1191.4000244140625,
+        "width": 147.25,
+        "height": 188.60000610351562,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-23",
+      "name": "v-home-23",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1176,
+        1192.84,
+        168,
+        212.16
+      ],
+      "file": "assets/building.village-static.v-home-23.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-23",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1179,
+        "y": 1195.8399658203125,
+        "width": 162,
+        "height": 206.16000366210938,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-30",
+      "name": "v-home-30",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        156,
+        1244.52,
+        160,
+        175.48
+      ],
+      "file": "assets/building.village-static.v-home-30.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-30",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 159,
+        "y": 1247.52001953125,
+        "width": 154,
+        "height": 169.47999572753906,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-27",
+      "name": "v-home-27",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        513,
+        1249.52,
+        160,
+        175.48
+      ],
+      "file": "assets/building.village-static.v-home-27.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-27",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 516,
+        "y": 1252.52001953125,
+        "width": 154,
+        "height": 169.47999572753906,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.village-static.v-home-24",
+      "name": "v-home-24",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        1382,
+        1292.598,
+        160,
+        175.402
+      ],
+      "file": "assets/building.village-static.v-home-24.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "village-static",
+        "interactiveId": "v-home-24",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 1385,
+        "y": 1295.5980224609375,
+        "width": 154,
+        "height": 169.40199279785156,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-7",
+      "name": "da-terrace-7",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        2307,
+        1037,
+        237,
+        351
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-7.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-7",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 2310,
+        "y": 1040,
+        "width": 231,
+        "height": 345,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-11",
+      "name": "da-terrace-11",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        3175,
+        1037,
+        261,
+        344
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-11.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-11",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 3178,
+        "y": 1040,
+        "width": 255,
+        "height": 338,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-13",
+      "name": "da-terrace-13",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        3780,
+        1037,
+        278,
+        351
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-13.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-13",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 3783,
+        "y": 1040,
+        "width": 272,
+        "height": 345,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-17",
+      "name": "da-terrace-17",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4728,
+        1037,
+        253,
+        344
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-17.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-17",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4731,
+        "y": 1040,
+        "width": 247,
+        "height": 338,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-20",
+      "name": "da-terrace-20",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        5404,
+        1083,
+        278,
+        299
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-20.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-20",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 5407,
+        "y": 1086,
+        "width": 272,
+        "height": 293,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-8",
+      "name": "da-terrace-8",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        2513,
+        1083,
+        261,
+        299
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-8.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-8",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 2516,
+        "y": 1086,
+        "width": 255,
+        "height": 293,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-9",
+      "name": "da-terrace-9",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        2742,
+        1053,
+        243,
+        336
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-9.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-9",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 2745,
+        "y": 1056,
+        "width": 237,
+        "height": 330,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-10",
+      "name": "da-terrace-10",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        2954,
+        1072,
+        252,
+        313
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-10.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-10",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 2957,
+        "y": 1075,
+        "width": 246,
+        "height": 307,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-12",
+      "name": "da-terrace-12",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        3567,
+        1068,
+        244,
+        316
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-12.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-12",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 3570,
+        "y": 1071,
+        "width": 238,
+        "height": 310,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-14",
+      "name": "da-terrace-14",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4027,
+        1083,
+        263,
+        299
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-14.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-14",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4030,
+        "y": 1086,
+        "width": 257,
+        "height": 293,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-15",
+      "name": "da-terrace-15",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4258,
+        1053,
+        244,
+        336
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-15.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-15",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4261,
+        "y": 1056,
+        "width": 238,
+        "height": 330,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-16",
+      "name": "da-terrace-16",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4471,
+        1072,
+        288,
+        313
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-16.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-16",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4474,
+        "y": 1075,
+        "width": 282,
+        "height": 307,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-18",
+      "name": "da-terrace-18",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4949,
+        1068,
+        274,
+        316
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-18.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-18",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4952,
+        "y": 1071,
+        "width": 268,
+        "height": 310,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-19",
+      "name": "da-terrace-19",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        5192,
+        1037,
+        243,
+        351
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-19.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-19",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 5195,
+        "y": 1040,
+        "width": 237,
+        "height": 345,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.da-terrace-21",
+      "name": "da-terrace-21",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        5650,
+        1053,
+        271,
+        336
+      ],
+      "file": "assets/building.diagon-knockturn.da-terrace-21.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "da-terrace-21",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 5653,
+        "y": 1056,
+        "width": 265,
+        "height": 330,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-0",
+      "name": "ka-block-0",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        3035.979,
+        1045,
+        289.527,
+        357
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-0.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-0",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 3038.9794921875,
+        "y": 1048,
+        "width": 283.526611328125,
+        "height": 351,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-8",
+      "name": "ka-block-8",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4519.676,
+        1142,
+        303.83,
+        340
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-8.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-8",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4522.67626953125,
+        "y": 1145,
+        "width": 297.830078125,
+        "height": 334,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-9",
+      "name": "ka-block-9",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4737.894,
+        1115,
+        318.901,
+        367
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-9.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-9",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4740.8935546875,
+        "y": 1118,
+        "width": 312.9013671875,
+        "height": 361,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-10",
+      "name": "ka-block-10",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4957.605,
+        1130,
+        318.901,
+        367
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-10.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-10",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4960.60498046875,
+        "y": 1133,
+        "width": 312.9013671875,
+        "height": 361,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-11",
+      "name": "ka-block-11",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        5187.094,
+        1147,
+        326.167,
+        365
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-11.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-11",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 5190.09375,
+        "y": 1150,
+        "width": 320.16650390625,
+        "height": 359,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-1",
+      "name": "ka-block-1",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        3062.094,
+        1360,
+        326.289,
+        372
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-1.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-1",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 3065.09375,
+        "y": 1363,
+        "width": 320.28857421875,
+        "height": 366,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-13",
+      "name": "ka-block-13",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4826.094,
+        1435,
+        289.701,
+        367
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-13.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-13",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4829.09375,
+        "y": 1438,
+        "width": 283.701171875,
+        "height": 361,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-12",
+      "name": "ka-block-12",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4615.456,
+        1425,
+        290.05,
+        387
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-12.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-12",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4618.4560546875,
+        "y": 1428,
+        "width": 284.05029296875,
+        "height": 381,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-2",
+      "name": "ka-block-2",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        3186.752,
+        1597,
+        326.254,
+        370
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-2.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-2",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 3189.75244140625,
+        "y": 1600,
+        "width": 320.253662109375,
+        "height": 364,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-14",
+      "name": "ka-block-14",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        5572.265,
+        1597,
+        275.241,
+        375
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-14.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-14",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 5575.26513671875,
+        "y": 1600,
+        "width": 269.2412109375,
+        "height": 369,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-4",
+      "name": "ka-block-4",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        3634.703,
+        1735,
+        259.803,
+        327
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-4.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-4",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 3637.703125,
+        "y": 1738,
+        "width": 253.802978515625,
+        "height": 321,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-3",
+      "name": "ka-block-3",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        3221.894,
+        1850,
+        282.314,
+        362
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-3.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-3",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 3224.893798828125,
+        "y": 1853,
+        "width": 276.31396484375,
+        "height": 356,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-15",
+      "name": "ka-block-15",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        5351.894,
+        2050,
+        282.489,
+        372
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-15.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-15",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 5354.8935546875,
+        "y": 2053,
+        "width": 276.48876953125,
+        "height": 366,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-5",
+      "name": "ka-block-5",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4029.494,
+        2092,
+        304.528,
+        380
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-5.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-5",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4032.493896484375,
+        "y": 2095,
+        "width": 298.528076171875,
+        "height": 374,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-6",
+      "name": "ka-block-6",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4583.23,
+        2165,
+        311.776,
+        377
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-6.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-6",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4586.23046875,
+        "y": 2168,
+        "width": 305.77587890625,
+        "height": 371,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
+    },
+    {
+      "id": "building.diagon-knockturn.ka-block-7",
+      "name": "ka-block-7",
+      "category": "Nhà cửa · Template 2.5D",
+      "view": "elevation",
+      "viewBox": [
+        4800.294,
+        2205,
+        297.176,
+        377
+      ],
+      "file": "assets/building.diagon-knockturn.ka-block-7.svg",
+      "sourceStatus": "extracted-from-approved-template",
+      "source": {
+        "mapId": "diagon-knockturn",
+        "interactiveId": "ka-block-7",
+        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+      },
+      "ports": [],
+      "occupancy": {
+        "type": "geometry-bbox",
+        "x": 4803.2939453125,
+        "y": 2208,
+        "width": 291.17578125,
+        "height": 371,
+        "collisionReady": false
+      },
+      "tags": [
+        "2.5d",
+        "template-extract"
+      ]
     }
   ],
   "aliases": {
     "r2-hagrid": "house.hagrid-hex",
     "r2-station": "house.station",
-    "h1.village-home": "house.cottage"
+    "h1.village-home": "house.cottage",
+    "template:village-static/v-shack": "building.village-static.v-shack",
+    "template:village-static/v-home-6": "building.village-static.v-home-6",
+    "template:village-static/v-home-4": "building.village-static.v-home-4",
+    "template:village-static/v-home-7": "building.village-static.v-home-7",
+    "template:village-static/v-home-3": "building.village-static.v-home-3",
+    "template:village-static/v-home-1": "building.village-static.v-home-1",
+    "template:village-static/v-home-0": "building.village-static.v-home-0",
+    "template:village-static/v-home-9": "building.village-static.v-home-9",
+    "template:village-static/v-gladrags": "building.village-static.v-gladrags",
+    "template:village-static/v-zonkos": "building.village-static.v-zonkos",
+    "template:village-static/v-home-11": "building.village-static.v-home-11",
+    "template:village-static/v-broomsticks": "building.village-static.v-broomsticks",
+    "template:village-static/v-honeydukes": "building.village-static.v-honeydukes",
+    "template:village-static/v-home-12": "building.village-static.v-home-12",
+    "template:village-static/v-home-13": "building.village-static.v-home-13",
+    "template:village-static/v-dervish": "building.village-static.v-dervish",
+    "template:village-static/v-home-14": "building.village-static.v-home-14",
+    "template:village-static/v-post": "building.village-static.v-post",
+    "template:village-static/v-home-16": "building.village-static.v-home-16",
+    "template:village-static/v-home-17": "building.village-static.v-home-17",
+    "template:village-static/v-quills": "building.village-static.v-quills",
+    "template:village-static/v-home-18": "building.village-static.v-home-18",
+    "template:village-static/v-hogshead": "building.village-static.v-hogshead",
+    "template:village-static/v-puddifoot": "building.village-static.v-puddifoot",
+    "template:village-static/v-home-21": "building.village-static.v-home-21",
+    "template:village-static/v-home-22": "building.village-static.v-home-22",
+    "template:village-static/v-home-29": "building.village-static.v-home-29",
+    "template:village-static/v-home-28": "building.village-static.v-home-28",
+    "template:village-static/v-home-23": "building.village-static.v-home-23",
+    "template:village-static/v-home-30": "building.village-static.v-home-30",
+    "template:village-static/v-home-27": "building.village-static.v-home-27",
+    "template:village-static/v-home-24": "building.village-static.v-home-24",
+    "template:diagon-knockturn/da-terrace-7": "building.diagon-knockturn.da-terrace-7",
+    "template:diagon-knockturn/da-terrace-11": "building.diagon-knockturn.da-terrace-11",
+    "template:diagon-knockturn/da-ollivanders": "frontage.da-ollivanders",
+    "template:diagon-knockturn/da-scribbulus": "frontage.da-scribbulus",
+    "template:diagon-knockturn/da-terrace-13": "building.diagon-knockturn.da-terrace-13",
+    "template:diagon-knockturn/da-flourish": "frontage.da-flourish",
+    "template:diagon-knockturn/da-house-a": "frontage.da-house-a",
+    "template:diagon-knockturn/da-quidditch": "frontage.da-quidditch",
+    "template:diagon-knockturn/da-menagerie": "frontage.da-menagerie",
+    "template:diagon-knockturn/da-terrace-17": "building.diagon-knockturn.da-terrace-17",
+    "template:diagon-knockturn/da-gambol": "frontage.da-gambol",
+    "template:diagon-knockturn/da-apothecary": "frontage.da-apothecary",
+    "template:diagon-knockturn/da-goods": "frontage.da-goods",
+    "template:diagon-knockturn/da-print": "frontage.da-print",
+    "template:diagon-knockturn/da-weasleys": "frontage.da-weasleys",
+    "template:diagon-knockturn/da-tailor": "frontage.da-tailor",
+    "template:diagon-knockturn/da-optics": "frontage.da-optics",
+    "template:diagon-knockturn/da-terrace-20": "building.diagon-knockturn.da-terrace-20",
+    "template:diagon-knockturn/da-stationery": "frontage.da-stationery",
+    "template:diagon-knockturn/da-fortescue": "frontage.da-fortescue",
+    "template:diagon-knockturn/da-robe-used": "frontage.da-robe-used",
+    "template:diagon-knockturn/da-remedies": "frontage.da-remedies",
+    "template:diagon-knockturn/da-obscurus": "frontage.da-obscurus",
+    "template:diagon-knockturn/da-wizardwear": "frontage.da-wizardwear",
+    "template:diagon-knockturn/da-workshop": "frontage.da-workshop",
+    "template:diagon-knockturn/da-cafe": "frontage.da-cafe",
+    "template:diagon-knockturn/da-potage": "frontage.da-potage",
+    "template:diagon-knockturn/da-terrace-8": "building.diagon-knockturn.da-terrace-8",
+    "template:diagon-knockturn/da-terrace-9": "building.diagon-knockturn.da-terrace-9",
+    "template:diagon-knockturn/da-terrace-10": "building.diagon-knockturn.da-terrace-10",
+    "template:diagon-knockturn/da-malkin": "frontage.da-malkin",
+    "template:diagon-knockturn/da-terrace-12": "building.diagon-knockturn.da-terrace-12",
+    "template:diagon-knockturn/da-eeylops": "frontage.da-eeylops",
+    "template:diagon-knockturn/da-terrace-14": "building.diagon-knockturn.da-terrace-14",
+    "template:diagon-knockturn/da-terrace-15": "building.diagon-knockturn.da-terrace-15",
+    "template:diagon-knockturn/da-terrace-16": "building.diagon-knockturn.da-terrace-16",
+    "template:diagon-knockturn/da-twilfitt": "frontage.da-twilfitt",
+    "template:diagon-knockturn/da-terrace-18": "building.diagon-knockturn.da-terrace-18",
+    "template:diagon-knockturn/da-terrace-19": "building.diagon-knockturn.da-terrace-19",
+    "template:diagon-knockturn/da-gold": "frontage.da-gold",
+    "template:diagon-knockturn/da-terrace-21": "building.diagon-knockturn.da-terrace-21",
+    "template:diagon-knockturn/da-leaky": "frontage.da-leaky",
+    "template:diagon-knockturn/ka-candles": "frontage.ka-candles",
+    "template:diagon-knockturn/ka-block-0": "building.diagon-knockturn.ka-block-0",
+    "template:diagon-knockturn/ka-entrance": "frontage.ka-entrance",
+    "template:diagon-knockturn/ka-upper": "frontage.ka-upper",
+    "template:diagon-knockturn/ka-block-8": "building.diagon-knockturn.ka-block-8",
+    "template:diagon-knockturn/ka-block-9": "building.diagon-knockturn.ka-block-9",
+    "template:diagon-knockturn/ka-block-10": "building.diagon-knockturn.ka-block-10",
+    "template:diagon-knockturn/ka-block-11": "building.diagon-knockturn.ka-block-11",
+    "template:diagon-knockturn/ka-block-1": "building.diagon-knockturn.ka-block-1",
+    "template:diagon-knockturn/ka-relics": "frontage.ka-relics",
+    "template:diagon-knockturn/ka-block-13": "building.diagon-knockturn.ka-block-13",
+    "template:diagon-knockturn/ka-borgin": "frontage.ka-borgin",
+    "template:diagon-knockturn/ka-block-12": "building.diagon-knockturn.ka-block-12",
+    "template:diagon-knockturn/ka-block-2": "building.diagon-knockturn.ka-block-2",
+    "template:diagon-knockturn/ka-block-14": "building.diagon-knockturn.ka-block-14",
+    "template:diagon-knockturn/ka-corner": "frontage.ka-corner",
+    "template:diagon-knockturn/ka-block-4": "building.diagon-knockturn.ka-block-4",
+    "template:diagon-knockturn/ka-gloom": "frontage.ka-gloom",
+    "template:diagon-knockturn/ka-dealer": "frontage.ka-dealer",
+    "template:diagon-knockturn/ka-block-3": "building.diagon-knockturn.ka-block-3",
+    "template:diagon-knockturn/ka-bones": "frontage.ka-bones",
+    "template:diagon-knockturn/ka-end": "frontage.ka-end",
+    "template:diagon-knockturn/ka-block-15": "building.diagon-knockturn.ka-block-15",
+    "template:diagon-knockturn/ka-block-5": "building.diagon-knockturn.ka-block-5",
+    "template:diagon-knockturn/ka-block-6": "building.diagon-knockturn.ka-block-6",
+    "template:diagon-knockturn/ka-block-7": "building.diagon-knockturn.ka-block-7",
+    "house.porch": "house.farmhouse",
+    "house.garden": "house.farmhouse"
   }
 }

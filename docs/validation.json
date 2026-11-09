@@ -25,5 +25,38 @@
       "noHorizontalOverflow": true,
       "tapInspector": true
     }
+  },
+  "assetUiAtlasAudit": {
+    "baseline": "a73be27",
+    "date": "2026-11-09",
+    "canonicalHtmlUnchanged": true,
+    "assetCount": 366,
+    "v3Count": 245,
+    "metadataRestored": 231,
+    "metadataNotTransferred": 14,
+    "newTemplateAssets": 63,
+    "removedDuplicateFiles": 2,
+    "worldAtlasLocations": 346,
+    "tests": {
+      "atlas": 5,
+      "ministry": 2,
+      "ui": 3,
+      "gallery": "passed",
+      "houseRegeneration": "13 canonical assets passed",
+      "svgValidation": "366 passed"
+    },
+    "browser": {
+      "newAssetGeometryChecked": 63,
+      "uiShell": true,
+      "patrolAndCrowdTags": true,
+      "reducedMotionTwoFeet": true,
+      "pageErrors": []
+    },
+    "notComplete": [
+      "live MAP_DATA integration",
+      "full canon spatial graph",
+      "every inline template shape promoted to an asset"
+    ],
+    "report": "elements/docs/ASSET_GAPS.md"
   }
 }

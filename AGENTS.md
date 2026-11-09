@@ -11,7 +11,7 @@ Bản đã chốt duy nhất là `index.html` theo SHA-256 trong `docs/release.j
 
 ## Giữ đúng thiết kế đã duyệt
 
-- Giữ 12 map, ID tương tác, đường đi và bố cục trừ khi yêu cầu hiện tại cho phép thay đổi. H2 đã được duyệt và tích hợp trong atlas; không tạo thêm HTML phiên bản hoặc SVG giải nén trong repo.
+- Giữ 13 map, ID tương tác, đường đi và bố cục trừ khi yêu cầu hiện tại cho phép thay đổi. H2 đã được duyệt và tích hợp trong atlas; không tạo thêm HTML phiên bản hoặc SVG giải nén trong repo.
 - H1 có đủ 10 tiệm Hogsmeade ở vị trí cũ, Hagrid lục giác, ga giữa nền gạch, cây cổ thụ phía tây hồ.
 - Giữ `#camera`, các `data-id`, `data-element`, `.cloth`, `.ancient-canopy`, `data-willow-strand`, `data-lake-outline`, `data-emitter`, nút motion và download.
 - Shading đất phải dùng mask bờ hồ; ưu tiên gradient dùng chung, tránh blur diện tích lớn và nhiều vòng animation.
@@ -29,3 +29,7 @@ Bản đã chốt duy nhất là `index.html` theo SHA-256 trong `docs/release.j
 Không commit `.atlas-work/`, node_modules, file cache, ZIP, HTML dự phòng, ảnh kiểm thử hay payload giải nén cũ. Dùng lịch sử Git để phục hồi. Giữ giấy phép và nguồn asset. Chỉ commit/push lên GitHub khi yêu cầu người dùng cho phép; không tự merge vào main.
 
 
+
+## UI và atlas hiện hành
+
+UI chuẩn được trích từ lịch sử demo-1 tại 9e54f6a, không lấy main làm thiết kế. `ui/` giữ shell, palette và footsteps tái sử dụng. Không có nhãn địa điểm dạng ribbon; chỉ nhãn PC/NPC/nhóm. Chữ kiến trúc/signage nằm trong template không phải actor tag. Prefect chỉ dùng màu tuần tra khi onPatrol=true; reduced motion dùng hai chân đứng đổi opacity chậm, không dịch chuyển. `maps/world-atlas.json` là index kiến trúc, chưa phải graph canon đầy đủ.

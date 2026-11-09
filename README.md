@@ -9,7 +9,7 @@
 | Xem/chỉnh map đang dùng | [maps/catalog.json](maps/catalog.json), [hướng dẫn chỉnh sửa](docs/EDITING.md) |
 | Tìm từng map, ID và hook | [Bản đồ dự án](docs/PROJECT_MAP.md) |
 | Tái sử dụng nền/shading H1 | [templates/h1](templates/h1/README.md) |
-| Xem 305 element khung | [elements/index.html](elements/index.html) |
+| Xem 366 element khung | [elements/index.html](elements/index.html) |
 | Tìm asset theo ID/nhóm | [elements/catalog.json](elements/catalog.json), [inventory](elements/docs/inventory.md) |
 | Làm việc bằng AI | [AGENTS.md](AGENTS.md) |
 | Kiểm tra bản hiện tại | [docs/release.json](docs/release.json), [validation](docs/validation.json) |
@@ -21,7 +21,7 @@
 index.html          Atlas độc lập duy nhất, dữ liệu SVG nén gzip bên trong
 maps/catalog.json   Danh mục 13 map và ID tương tác; tạo tự động từ HTML
 templates/h1/      Overlay shading và bảng màu/vị trí tái sử dụng
-elements/          Thư viện 305 SVG khung, gallery, tài liệu và bộ sinh mẫu
+elements/          Thư viện 366 SVG khung, gallery, tài liệu và bộ sinh mẫu
 tools/             Công cụ lấy/chèn từng map, kiểm tra và trang preview
 docs/              Sơ đồ dự án, quy trình chỉnh sửa, manifest và validation
 ```
@@ -52,3 +52,9 @@ Nhánh chỉ giữ bản hiện hành. Không lưu thêm index-v*.html, bản ZI
 ## Bộ tầng 8–10
 
 Chọn Bộ Pháp thuật · Tầng 8–10 trong menu. Atrium, Bảo mật và Xét xử xếp dọc, nối bằng lift 8↔9 và cầu thang 9↔10. Xem `docs/MINISTRY_8_10.md` và source `tools/build_ministry.py`.
+
+## UI, atlas tra cứu và audit asset
+
+- [UI khóa từ demo-1](ui/README.md)
+- [Atlas không gian](docs/ATLAS.md) và [dữ liệu](maps/world-atlas.json)
+- [Đối chiếu V3, tách nhà 2.5D và phần thiếu](elements/docs/ASSET_GAPS.md)

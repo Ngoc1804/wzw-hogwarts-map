@@ -1,0 +1,12 @@
+{
+  "source": "demo-1 history at 9e54f6a",
+  "atlasBaseline": "a73be27",
+  "status": "reusable shell and components; live MAP_DATA integration remains step 4+",
+  "excluded": [
+    "old SVG payload",
+    "demo NPCs",
+    "demo quests",
+    "old map generator",
+    "location ribbons"
+  ]
+}

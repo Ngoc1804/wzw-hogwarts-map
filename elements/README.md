@@ -1,4 +1,4 @@
-# Element frameworks · 305 SVG
+# Element frameworks · 366 SVG
 
 Mở [index.html](index.html) để tìm element, xem Khung/Trung tính và tải SVG. [catalog.json](catalog.json) chứa ID, nhóm, tags, view, màu và đường dẫn file; SVG độc lập nằm trong `assets/`.
 
@@ -10,7 +10,7 @@ Các mẫu là khung tái sử dụng: áp màu/decor ở instance. Nhà Hagrid 
 - `npm run build`: đóng gói lại gallery từ catalog và SVG đang có, rồi kiểm tra XML/ID/tham chiếu.
 - `npm test`: kiểm tra gallery hiện tại: pagination, tìm kiếm, xem trung tính và tải SVG.
 - `npm run generate:houses`: tái tạo các framework nhà khi tác vụ yêu cầu.
-- `npm run test:houses`: dựng thử trong thư mục tạm và đối chiếu đủ 15 khung nhà đã duyệt (cần `pip install -r requirements.txt`).
+- `npm run test:houses`: dựng thử trong thư mục tạm và đối chiếu đủ 13 khung nhà đã duyệt (cần `pip install -r requirements.txt`).
 
 Thư viện chỉ giữ công cụ đóng gói/kiểm tra hiện hành và bộ sinh framework nhà hiện tại. Không còn bộ sinh catalog cũ hoặc các script phụ thuộc catalog có trường `svg`.
 

@@ -71,7 +71,7 @@ def hagrid():
  for x in [76,169]:rect(o,x,111,16,26,'var(--glass,#ede6cf)',ink,1,data_window='true');line(o,x+8,111,x+8,137,wood,1)
  node('g',r,data_emitter='chimney',transform='translate(169 14)');node('g',r,data_port='entry',transform='translate(128 176)')
  return r
-types=['annex','corner-shop','cottage','farmhouse','garden','glasshouse','hall','inn','porch','shed','shop','station','timber','townhouse']
+types=['annex','corner-shop','cottage','farmhouse','glasshouse','hall','inn','shed','shop','station','timber','townhouse']
 for k in types:Path(OUT/f'house.{k}.svg').write_text(E.tostring(house(k),encoding='unicode'))
 Path(OUT/'house.hagrid-hex.svg').write_text(E.tostring(hagrid(),encoding='unicode'))
 for path in OUT.glob('house.*.svg'):
@@ -83,4 +83,4 @@ for path in OUT.glob('house.*.svg'):
   if f.startswith('var('):e.set('fill',re.sub(r'var\((--[\w-]+),[^)]*\)',r'var(\1,none)',f))
   elif f.startswith('#'):e.set('fill','var(--surface,none)')
  path.write_text(E.tostring(r,encoding='unicode'))
-print('15 editable house frameworks rebuilt')
+print('13 editable house frameworks rebuilt; porch/garden alias farmhouse')
