@@ -2,16 +2,16 @@
   "schemaVersion": "1.0.0",
   "branch": "demo-1",
   "canonicalAtlas": "index.html",
-  "revisionLabel": "h1-relief-v1",
-  "mapCount": 11,
+  "revisionLabel": "h2-grounds-final",
+  "mapCount": 12,
   "files": {
     "index.html": {
-      "bytes": 822836,
-      "sha256": "43d2dda5ee3752b98984668f5c55346e451a1cfb3350b8332ac98bd6891e252b"
+      "bytes": 923852,
+      "sha256": "b91876521ee40fb036624bf7df59aa8ed64ef4b8e025d470664764c7ef470c57"
     },
     "maps/catalog.json": {
-      "bytes": 10564,
-      "sha256": "85a4bc68ddb742ded9833c930e3f6127c8274e5d42730a8289fa24d04943bdc4"
+      "bytes": 12565,
+      "sha256": "408164bc044b373d1ae5a2cfb1f3b22dbccaf7542936315eb2bbc95c6d822160"
     },
     "templates/h1/shading.svg": {
       "bytes": 26018,

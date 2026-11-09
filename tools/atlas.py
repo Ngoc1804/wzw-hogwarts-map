@@ -102,7 +102,7 @@ def refresh(file, html, data):
            for name in tracked if (root/name).exists()}
     (root/'docs').mkdir(exist_ok=True)
     manifest={'schemaVersion':'1.0.0','branch':'demo-1','canonicalAtlas':'index.html',
-              'revisionLabel':'h1-relief-v1','mapCount':len(data['maps']),'files':files}
+              'revisionLabel':'h2-grounds-final','mapCount':len(data['maps']),'files':files}
     (root/'docs/release.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     return manifest
 
@@ -153,3 +153,4 @@ if __name__=='__main__':
     try:main()
     except (ValueError,KeyError,ET.ParseError) as e:
         print(str(e),file=sys.stderr);sys.exit(1)
+

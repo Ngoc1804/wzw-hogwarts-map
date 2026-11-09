@@ -32,7 +32,17 @@ class AtlasTests(unittest.TestCase):
         svg=Path(self.tmp.name)/'preview.svg';result=self.run_tool('extract','h1','--standalone','--out',str(svg));self.assertEqual(result.returncode,0,result.stderr)
         atlas.check_svg(svg.read_text());original=self.file.read_bytes()
         result=self.run_tool('apply','h1','--svg',str(svg));self.assertNotEqual(result.returncode,0);self.assertEqual(self.file.read_bytes(),original)
+    def test_h2_is_self_contained_and_every_target_has_metadata(self):
+        _,data=atlas.load(self.file)
+        h2=data['maps']['h2'];root=atlas.check_svg(h2['svg'])
+        targets=[e.get('data-id') for e in root.iter() if e.get('class')=='place']
+        self.assertEqual(len(targets),72)
+        self.assertEqual(set(targets),{p['id'] for p in h2['places']})
+        self.assertEqual(h2['bounds'],[0,0,1760,1120])
+        self.assertFalse(any(e.tag.endswith('}image') for e in root.iter()))
+        self.assertFalse(any(ref.startswith('wm-s') for ref in atlas.refs(h2['svg'])))
     def test_unknown_map_is_rejected(self):
         self.assertNotEqual(self.run_tool('extract','not-a-map').returncode,0)
 
 if __name__=='__main__':unittest.main()
+

@@ -1,6 +1,6 @@
 # WIZAMAP · demo-1
 
-**Bản đã chốt:** atlas hiện tại nằm duy nhất ở **[index.html](index.html)**: 11 map, H1 có animation và shading địa hình/kiến trúc. Mở trực tiếp file HTML; không cần server hay CDN. Dùng nút **Tải HTML** để lưu bản đầy đủ.
+**Bản đã chốt:** atlas hiện tại nằm duy nhất ở **[index.html](index.html)**: 12 map, H1 có animation và shading địa hình/kiến trúc. Mở trực tiếp file HTML; không cần server hay CDN. Dùng nút **Tải HTML** để lưu bản đầy đủ.
 
 ## Tìm nhanh
 
@@ -19,7 +19,7 @@
 
 ```text
 index.html          Atlas độc lập duy nhất, dữ liệu SVG nén gzip bên trong
-maps/catalog.json   Danh mục 11 map và ID tương tác; tạo tự động từ HTML
+maps/catalog.json   Danh mục 12 map và ID tương tác; tạo tự động từ HTML
 templates/h1/      Overlay shading và bảng màu/vị trí tái sử dụng
 elements/          Thư viện 305 SVG khung, gallery, tài liệu và bộ sinh mẫu
 tools/             Công cụ lấy/chèn từng map, kiểm tra và trang preview
@@ -41,9 +41,10 @@ python tools/test_atlas.py
 
 ## Nội dung hiện tại
 
-H1 giữ đủ 10 tiệm Hogsmeade ở vị trí đã duyệt; nhà Hagrid lục giác; ga nằm giữa nền gạch; cây cổ thụ ở bãi cỏ phía tây hồ. Lớp địa hình dùng gradient tĩnh và mask bờ hồ. H2 không nằm trong bản xuất hiện tại.
+H1 giữ đủ 10 tiệm Hogsmeade ở vị trí đã duyệt; nhà Hagrid lục giác; ga nằm giữa nền gạch; cây cổ thụ ở bãi cỏ phía tây hồ. Lớp địa hình dùng gradient tĩnh và mask bờ hồ. H2 có lâu đài, hai sân trong, sân Quidditch đầy đủ, nhà kính, nhà Hagrid, nhà cú, cầu gỗ H1 và Liễu Roi. Bản đồ là SVG tương tác, có nền địa hình và lối đi; dữ liệu nằm trong payload gzip dùng chung.
 
 Express, các map phòng chung/phòng ngủ, Hogsmeade, Quidditch và Diagon/Knockturn đều nằm trong atlas. Xem danh mục để lấy đúng ID. Demo giao diện/asset này chưa thay thế tích hợp MAP_DATA của WzW Runtime.
 
 Nhánh chỉ giữ bản hiện hành. Không lưu thêm index-v*.html, bản ZIP, cache, snapshot hoặc bộ sinh catalog cũ cạnh bản chính. Lấy đúng bản theo mã SHA-256 trong `docs/release.json`; mọi chỉnh sửa tiếp theo bắt đầu từ bản này.
+
 
