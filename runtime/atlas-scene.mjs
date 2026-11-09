@@ -2,7 +2,7 @@ import sceneAtlas from './atlas-index.json' with {type:'json'};
 // Stable place IDs, explicit template bindings and scene-local corridor choices only.
 // No fuzzy names, no inferred canon adjacency and no layout persistence.
 const known=new Set(sceneAtlas.knownPlaceIds),locked=new Set(sceneAtlas.lockedPlaceIds),
-      cccNonRoom=new Set(sceneAtlas.cccNonRoomPlaceIds);
+      cccNonRoom=new Set(sceneAtlas.cccNonRoomPlaceIds),noGenerate=new Set(sceneAtlas.noGeneratePlaceIds);
 export function canonicalPlaceId(id){return sceneAtlas.aliases[id]||id}
 export function isKnownAtlasPlace(id){return known.has(canonicalPlaceId(id))}
 export function verifiedAtlasBinding(id,templateId){return sceneAtlas.bindings[canonicalPlaceId(id)]?.[templateId]||null}
@@ -41,5 +41,10 @@ export function generatedSceneOptions(data,plan){
  }
  if(options.layout==='tower'&&count<2&&!data.view.indoor?.knownStructure)options.layout='horizontal';
  return options;
+}
+export function assertGeneratedScene(placeIds){
+ assertAllowedScene(placeIds);
+ for(const id of placeIds)if(noGenerate.has(canonicalPlaceId(id)))
+  throw Error('Existing fixed map/template required; no generated courtyard, exterior or Ministry: '+canonicalPlaceId(id));
 }
 export function listSceneAtlasGroups(){return sceneAtlas.groups}
