@@ -107,7 +107,7 @@
   "indoorStage2": {
     "status": "implemented source; CI and pinned bundle; browser/AI Studio pending",
     "date": "2026-11-10",
-    "bundleSha": "631bb37b24eeaad92592ef5b5996a33d93825a59",
+    "bundleSha": "f5801f36a9b31446d2516b02b4ead2c23e3758df",
     "generated": "scene-only Stage 2 ten formulas, no 3-column or A-star",
     "output": [
       "floorPolygons",
@@ -123,6 +123,7 @@
       "no movement simulation"
     ],
     "browser": "not reverified on authenticated AI Studio Preview",
-    "mobileHardware": "not tested"
+    "mobileHardware": "not tested",
+    "crop": "Generated scene keeps full room/hallway geometry in view, not actor-only anchors"
   }
 }
