@@ -22,7 +22,7 @@ export function drawIndoor(svg,geometry,onRoomClick){
   }
  }
  const stair=model.stair;
- for(let i=0;i<8;i++){
+ if(stair)for(let i=0;i<8;i++){
   const vertical=stair.orientation==='N';
   el('rect',{x:stair.x+(vertical?0:i*stair.w/8),y:stair.y+(vertical?i*stair.h/8:0),
    width:vertical?stair.w:stair.w/8,height:vertical?stair.h/8:stair.h,fill:i%2?'#c7b28c':'#dac39b',stroke:'#a7916d','stroke-width':.6},floor);
