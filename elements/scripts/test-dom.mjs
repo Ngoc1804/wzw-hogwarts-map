@@ -37,9 +37,9 @@ try{
   assert.equal(d.querySelectorAll('article').length,24);
   const first=d.querySelector('article small').textContent;get('next').click();assert.notEqual(d.querySelector('article small').textContent,first);
   checkInstanceIds();
-  get('search').value='hagrid';get('search').dispatchEvent(new w.Event('input'));
+  get('search').value='house.basic.hex';get('search').dispatchEvent(new w.Event('input'));
   assert.equal(d.querySelectorAll('article').length,1);
-  d.querySelector('article button').click();assert.equal(w.lastDownload,'house.hagrid-hex.svg');
+  d.querySelector('article button').click();assert.equal(w.lastDownload,'house.basic.hex.svg');
   get('mode').value='neutral';get('mode').dispatchEvent(new w.Event('change'));assert(d.body.classList.contains('neutral'));
   assert.deepEqual(errors,[]);
   console.log('PASS current gallery: catalog/frame equality, pagination, search, neutral view, SVG download');

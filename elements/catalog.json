@@ -5301,812 +5301,6 @@
       }
     },
     {
-      "id": "tree.round",
-      "name": "Cây tán tròn",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.round.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "2e794e141ec8031ae23c5c800c09950259e4ae8a66728140661401fa40032d94",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 49.53,
-        "y": 39.879,
-        "width": 159.175,
-        "height": 186.121,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.umbrella",
-      "name": "Cây tán ô",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.umbrella.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "d6e1695dfdd938dd0f5aa092bcc3ac3af3f950c5825fa5be3349e1ba302a1c49",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 16.803,
-        "y": 49.663,
-        "width": 228.574,
-        "height": 176.337,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.columnar",
-      "name": "Cây cao hẹp",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.columnar.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "0036c5d5e54692e1232ce9eb4d8dd4932c21e3dcb0059a06a4358a66962e1916",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 84.061,
-        "y": 17.29,
-        "width": 89.091,
-        "height": 208.71,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.ancient",
-      "name": "Cây cổ thụ",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.ancient.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "1f795cdbbe99100a25e1cebf3b10c9372f999c7d37b411366e1840d5ef956834",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 35.897,
-        "y": 29.194,
-        "width": 182.44,
-        "height": 201.806,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.willow",
-      "name": "Cây liễu rủ",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.willow.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "7b66a68ad25cf88f60523ecb4f3f3b1b54c6dfa36967b67ab94db3d910a4a871",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 46.443,
-        "y": 38.527,
-        "width": 164.038,
-        "height": 187.473,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.fruit",
-      "name": "Cây ăn quả",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.fruit.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "5f1d501a9b09533ddba8417f48437f48be0a8b86199249c10bb6b4db30c470a7",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 49.53,
-        "y": 39.879,
-        "width": 159.175,
-        "height": 186.121,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.flowering",
-      "name": "Cây có hoa",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.flowering.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "3e7ac9156b4d1ed923fcbedf0d1927a0aaef176e9e7d94a25ed9a74f12227335",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 38.015,
-        "y": 27.283,
-        "width": 177.442,
-        "height": 198.717,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.sapling",
-      "name": "Cây non có cọc",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.sapling.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "e9a53c77cf6449680fab97708c6b2f71378f2444809cd086de74a9354608e452",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 81.572,
-        "y": 60.005,
-        "width": 93.154,
-        "height": 169.995,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.bare",
-      "name": "Cây trụi lá",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.bare.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "984616c1fe74255aaad6a686a88b1ef382bde4c129a7163ecd1ddc5dae1aee63",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 45.0,
-        "y": 34.0,
-        "width": 159.0,
-        "height": 192.0,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.dead",
-      "name": "Cây khô",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.dead.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "b245de3cc39e8d99183cb48f9436a31d2bbb466f7bf58664e2aa6d9165e6f195",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 48.0,
-        "y": 65.0,
-        "width": 137.0,
-        "height": 161.0,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.pine",
-      "name": "Thông nhiều tầng",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.pine.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "bb3583cea758969c798f8e9849a35f2021766f0363ec39b8e15d7a65045c5c32",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 57.62,
-        "y": 29.0,
-        "width": 140.76,
-        "height": 197.0,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.cypress",
-      "name": "Cây lá kim cao",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.cypress.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "fb1cf0dcd32fa4fa38d69766a03cd276c8fc8fd76881137c39b874df8ed78f0b",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 89.24,
-        "y": 29.0,
-        "width": 77.52,
-        "height": 197.0,
-        "collisionReady": false
-      }
-    },
-    {
-      "id": "tree.spruce",
-      "name": "Thông tán rộng",
-      "category": "Cảnh quan · Cây",
-      "view": "elevation",
-      "tags": [
-        "vegetation",
-        "outdoor"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 128
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/tree.spruce.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "ff8355086ed5fb98344059afcaad012baef6eb4cb3e7d8abe7535e1d13b962fd",
-      "sourceStatus": "retained-framework",
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 35.18,
-        "y": 29.0,
-        "width": 185.64,
-        "height": 197.0,
-        "collisionReady": false
-      }
-    },
-    {
       "id": "plant.bush",
       "name": "Bụi thấp",
       "category": "Cảnh quan · Thực vật",
@@ -8310,726 +7504,6 @@
         "height": 180.0,
         "collisionReady": false
       }
-    },
-    {
-      "id": "house.cottage",
-      "name": "Cottage đá",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.cottage.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "2ec47f2df7fad5ea9158dde3caac66099281c02a59736f9cac061c1b0cab44de",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.timber",
-      "name": "Cottage gỗ",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.timber.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "dd30bdbb9701052a78d28a92868f8d4ee2a7b9027afc710667bdb2ad125bb3d3",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.townhouse",
-      "name": "Nhà phố hẹp",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.townhouse.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "a21ccfc5e20621d07bd43f777d731bcc60e04febabc6301039c0f10112efcbe9",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.farmhouse",
-      "name": "Nhà nông thôn",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.farmhouse.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "ceb9ae3588cd02bd0c1cd8398114ccbc0fc9f869b950f790e94b05730516a491",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.annex",
-      "name": "Nhà có chái",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.annex.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "8d4ac64bb95461eea5123065b26bb5d35d2169e4cee0243ec2856b92ac01e9f5",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.shop",
-      "name": "Cửa hàng cơ bản",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.shop.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "1666272c4869005212179f6e27810f156b21d78bf9c53ae237b5464fe945967a",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.corner-shop",
-      "name": "Cửa hàng góc",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.corner-shop.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "6c31597d4c52d45ebd99818510a4443d8fd7334324756c5b0462cdeb1ea3ca8e",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.shed",
-      "name": "Nhà kho",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.shed.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "a2eddd50397894e115601cd572dfd8dccfd17b11ea26063f4cc0e0171bd0b08d",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.glasshouse",
-      "name": "Nhà kính nhỏ",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 216
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 216
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.glasshouse.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "9ad94f96087382d3872f66a1d510b2bf782600257d8d3bd61cd433ab4c1e5edc",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.inn",
-      "name": "Quán trọ",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.inn.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "36bb8c845aa684ce0faac208ed3cbf108663a38da7129f8dc448e07306450aef",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.station",
-      "name": "Nhà ga nhỏ",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 214
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 214
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.station.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "b0c9b636970c515a297414e027a5076d105fdfad75f5b9ec223ac4cc1caa6daf",
-      "sourceStatus": "redesigned"
-    },
-    {
-      "id": "house.hall",
-      "name": "Hội trường",
-      "category": "Nhà cửa · Khối cơ bản",
-      "view": "elevation",
-      "tags": [
-        "exterior",
-        "building"
-      ],
-      "viewBox": [
-        0,
-        0,
-        256,
-        256
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 223
-      },
-      "size": {
-        "width": 256,
-        "height": 256,
-        "unit": "design-unit"
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 223
-        }
-      ],
-      "colorSlots": {
-        "surface": "none",
-        "wall": "none",
-        "wood": "none",
-        "roof": "none",
-        "glass": "none",
-        "foliage": "none",
-        "water": "none"
-      },
-      "source": {
-        "type": "original-procedural",
-        "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
-      },
-      "file": "assets/house.hall.svg",
-      "visibility": "main",
-      "mount": "floor",
-      "clearance": {
-        "front": 24,
-        "side": 8,
-        "unit": "design-unit",
-        "requiresSceneValidation": true
-      },
-      "recommendedDisplay": {
-        "width": 150,
-        "unit": "css-px"
-      },
-      "geometryFingerprint": "b5bd00aacd760da9aa6eb542bfa49db361ca2b8c74b7eed0fbf94f7b17f9a3d8",
-      "sourceStatus": "redesigned"
     },
     {
       "id": "building-part.roof-gable",
@@ -14982,10 +13456,10 @@
       }
     },
     {
-      "id": "map.h1.gladrags",
-      "name": "h1.gladrags",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.gladrags.svg",
+      "id": "architecture.owl-tower",
+      "name": "Kiến trúc · Tháp cú",
+      "category": "Kiến trúc · Đặc biệt",
+      "file": "assets/architecture.owl-tower.svg",
       "sourceStatus": "extracted-from-map",
       "viewBox": [
         0.0,
@@ -14995,49 +13469,10 @@
       ]
     },
     {
-      "id": "map.h1.honeydukes",
-      "name": "h1.honeydukes",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.honeydukes.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.owlery",
-      "name": "h1.owlery",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.owlery.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.boathouse",
-      "name": "h1.boathouse",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.boathouse.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.puddifoots",
-      "name": "h1.puddifoots",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.puddifoots.svg",
+      "id": "architecture.boathouse",
+      "name": "Kiến trúc · Nhà thuyền",
+      "category": "Kiến trúc · Đặc biệt",
+      "file": "assets/architecture.boathouse.svg",
       "sourceStatus": "extracted-from-map",
       "viewBox": [
         0.0,
@@ -15060,101 +13495,10 @@
       ]
     },
     {
-      "id": "map.h1.owl-post",
-      "name": "h1.owl-post",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.owl-post.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.scrivenshafts",
-      "name": "h1.scrivenshafts",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.scrivenshafts.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.three-broomsticks",
-      "name": "h1.three-broomsticks",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.three-broomsticks.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.zonkos",
-      "name": "h1.zonkos",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.zonkos.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.hogs-head",
-      "name": "h1.hogs-head",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.hogs-head.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.greenhouses",
-      "name": "h1.greenhouses",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.greenhouses.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.shrieking-shack",
-      "name": "h1.shrieking-shack",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.shrieking-shack.svg",
-      "sourceStatus": "extracted-from-map",
-      "viewBox": [
-        0.0,
-        0.0,
-        480.0,
-        340.0
-      ]
-    },
-    {
-      "id": "map.h1.dervish-banges",
-      "name": "h1.dervish-banges",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.h1.dervish-banges.svg",
+      "id": "architecture.greenhouses",
+      "name": "Kiến trúc · Nhà kính",
+      "category": "Kiến trúc · Đặc biệt",
+      "file": "assets/architecture.greenhouses.svg",
       "sourceStatus": "extracted-from-map",
       "viewBox": [
         0.0,
@@ -15190,10 +13534,10 @@
       ]
     },
     {
-      "id": "map.r2-castle",
-      "name": "r2-castle",
-      "category": "Map · Biến thể đang dùng",
-      "file": "assets/map.r2-castle.svg",
+      "id": "architecture.castle",
+      "name": "Kiến trúc · Lâu đài",
+      "category": "Kiến trúc · Đặc biệt",
+      "file": "assets/architecture.castle.svg",
       "sourceStatus": "extracted-from-map",
       "viewBox": [
         0.0,
@@ -15216,9 +13560,9 @@
       ]
     },
     {
-      "id": "map.r3-ancient-tree",
-      "name": "r3-ancient-tree",
-      "category": "Map · Biến thể đang dùng",
+      "id": "tree.ancient",
+      "name": "Cây · Cổ thụ đặc biệt",
+      "category": "Cây · Đặc biệt",
       "file": "assets/map.r3-ancient-tree.svg",
       "sourceStatus": "extracted-from-map",
       "viewBox": [
@@ -15242,9 +13586,9 @@
       ]
     },
     {
-      "id": "map.willow-redesign",
-      "name": "willow-redesign",
-      "category": "Map · Biến thể đang dùng",
+      "id": "tree.willow",
+      "name": "Cây · Liễu Roi đặc biệt",
+      "category": "Cây · Đặc biệt",
       "file": "assets/map.willow-redesign.svg",
       "sourceStatus": "extracted-from-map",
       "viewBox": [
@@ -15255,10 +13599,10 @@
       ]
     },
     {
-      "id": "house.hagrid-hex",
-      "name": "Nhà Hagrid · Lục giác",
-      "category": "Nhà cửa · Khối cơ bản",
-      "file": "assets/house.hagrid-hex.svg",
+      "id": "house.basic.hex",
+      "name": "Khung nhà · Lục giác",
+      "category": "Nhà · Khung basic",
+      "file": "assets/house.basic.hex.svg",
       "viewBox": [
         0,
         0,
@@ -15279,2621 +13623,625 @@
       "sourceStatus": "new-six-sided-house"
     },
     {
-      "id": "frontage.da-ollivanders",
-      "name": "OLLIVANDERS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-ollivanders.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-scribbulus",
-      "name": "SCRIBBULUS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-scribbulus.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-flourish",
-      "name": "FLOURISH & BLOTTS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-flourish.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-house-a",
-      "name": "No. 47 · BOOKBINDERY",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-house-a.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-quidditch",
-      "name": "QUALITY QUIDDITCH SUPPLIES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-quidditch.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-menagerie",
-      "name": "MAGICAL MENAGERIE",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-menagerie.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-gambol",
-      "name": "GAMBOL & JAPES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-gambol.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-apothecary",
-      "name": "APOTHECARY",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-apothecary.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-goods",
-      "name": "SECOND-HAND GOODS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-goods.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-print",
-      "name": "PRINTS & PARCHMENT",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-print.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-weasleys",
-      "name": "WEASLEYS’ WIZARD WHEEZES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-weasleys.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-tailor",
-      "name": "TRAVELLING CLOAKS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-tailor.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-optics",
-      "name": "TELESCOPES & INSTRUMENTS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-optics.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-stationery",
-      "name": "PARCHMENT & QUILL",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-stationery.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-fortescue",
-      "name": "FLOREAN FORTESCUE’S",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-fortescue.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-robe-used",
-      "name": "SECOND-HAND ROBES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-robe-used.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-remedies",
-      "name": "HERBAL REMEDIES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-remedies.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-obscurus",
-      "name": "OBSCURUS BOOKS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-obscurus.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-wizardwear",
-      "name": "WIZARDWEAR",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-wizardwear.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-workshop",
-      "name": "CAULDRON REPAIRS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-workshop.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-cafe",
-      "name": "TEA & COFFEE",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-cafe.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-potage",
-      "name": "POTAGE’S CAULDRONS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-potage.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-malkin",
-      "name": "MADAM MALKIN’S",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-malkin.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-eeylops",
-      "name": "EEYLOPS OWL EMPORIUM",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-eeylops.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-twilfitt",
-      "name": "TWILFITT & TATTING’S",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-twilfitt.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-gold",
-      "name": "SILVERSMITH",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-gold.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-gringotts",
-      "name": "Gringotts Wizarding Bank",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-gringotts.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.da-leaky",
-      "name": "THE LEAKY CAULDRON",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.da-leaky.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-candles",
-      "name": "CANDLES & CURIOS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-candles.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-entrance",
-      "name": "No. 2 · OLD CURIOSITIES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-entrance.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-upper",
-      "name": "OLD PAWN SHOP",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-upper.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-relics",
-      "name": "RELICS & ANTIQUITIES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-relics.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-borgin",
-      "name": "BORGIN & BURKES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-borgin.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-corner",
-      "name": "SILVER & CURIOS",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-corner.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-gloom",
-      "name": "SHUTTERED PREMISES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-gloom.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-dealer",
-      "name": "ANTIQUARIAN",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-dealer.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-bones",
-      "name": "ODDITIES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-bones.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "frontage.ka-end",
-      "name": "LOCKED STORES",
-      "category": "Nhà cửa · Mặt tiền cửa tiệm",
-      "file": "assets/frontage.ka-end.svg",
-      "viewBox": [
-        -30,
-        -150,
-        460,
-        650
-      ],
-      "sourceStatus": "extracted-from-map"
-    },
-    {
-      "id": "building.village-static.v-shack",
-      "name": "v-shack",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "house.wood.gable",
+      "name": "Nhà gỗ · Mái dốc",
+      "category": "Nhà · Nhà gỗ",
       "view": "elevation",
+      "file": "assets/house.wood.gable.svg",
       "viewBox": [
-        102.86,
-        103.904,
-        114.04,
-        130.896
-      ],
-      "file": "assets/building.village-static.v-shack.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-shack",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 105.86000061035156,
-        "y": 106.90428161621094,
-        "width": 108.03999328613281,
-        "height": 124.89572143554688,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-6",
-      "name": "v-home-6",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        1136,
-        123.222,
-        152,
-        174.778
-      ],
-      "file": "assets/building.village-static.v-home-6.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-6",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1139,
-        "y": 126.22200012207031,
-        "width": 146,
-        "height": 168.7779998779297,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-4",
-      "name": "v-home-4",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        951,
-        171.64,
-        152,
-        194.36
-      ],
-      "file": "assets/building.village-static.v-home-4.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-4",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 954,
-        "y": 174.63999938964844,
-        "width": 146,
-        "height": 188.36000061035156,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-7",
-      "name": "v-home-7",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        1314,
-        177.68,
-        160,
-        195.32
-      ],
-      "file": "assets/building.village-static.v-home-7.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-7",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1317,
-        "y": 180.67999267578125,
-        "width": 154,
-        "height": 189.32000732421875,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-3",
-      "name": "v-home-3",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        738,
-        205.754,
-        160,
-        175.246
-      ],
-      "file": "assets/building.village-static.v-home-3.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-3",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 741,
-        "y": 208.75399780273438,
-        "width": 154,
-        "height": 169.24600219726562,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-1",
-      "name": "v-home-1",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        572,
-        203.44,
-        161.25,
-        195.56
-      ],
-      "file": "assets/building.village-static.v-home-1.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-1",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 575,
-        "y": 206.44000244140625,
-        "width": 155.25,
-        "height": 189.55999755859375,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-0",
-      "name": "v-home-0",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        416,
+        416.0,
         245.818,
-        168,
+        168.0,
         176.182
       ],
-      "file": "assets/building.village-static.v-home-0.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-0",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 419,
-        "y": 248.8179931640625,
-        "width": 162,
-        "height": 170.1820068359375,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-9",
-      "name": "v-home-9",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        1443,
-        248.144,
-        152,
-        174.856
+        "canonical-base"
       ],
-      "file": "assets/building.village-static.v-home-9.svg",
-      "sourceStatus": "extracted-from-approved-template",
       "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-9",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+        "template": "village-static",
+        "instance": "v-home-0"
       },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1446,
-        "y": 251.1439971923828,
-        "width": 146,
-        "height": 168.8560028076172,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
+      "ports": []
     },
     {
-      "id": "building.village-static.v-gladrags",
-      "name": "v-gladrags",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "house.wood.hip",
+      "name": "Nhà gỗ · Mái chóp",
+      "category": "Nhà · Nhà gỗ",
       "view": "elevation",
+      "file": "assets/house.wood.hip.svg",
       "viewBox": [
-        1524.32,
-        245.48,
-        229.68,
-        243.52
+        951.0,
+        171.64,
+        152.0,
+        194.36
       ],
-      "file": "assets/building.village-static.v-gladrags.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-gladrags",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1527.3199462890625,
-        "y": 248.47999572753906,
-        "width": 223.67999267578125,
-        "height": 237.52000427246094,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-zonkos",
-      "name": "v-zonkos",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        1289.6,
-        342.4,
-        239.4,
-        230.6
+        "canonical-base"
       ],
-      "file": "assets/building.village-static.v-zonkos.svg",
-      "sourceStatus": "extracted-from-approved-template",
       "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-zonkos",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+        "template": "village-static",
+        "instance": "v-home-4"
       },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1292.5999755859375,
-        "y": 345.3999938964844,
-        "width": 233.39999389648438,
-        "height": 224.60000610351562,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
+      "ports": []
     },
     {
-      "id": "building.village-static.v-home-11",
-      "name": "v-home-11",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "house.wood.wide",
+      "name": "Nhà gỗ · Khối rộng",
+      "category": "Nhà · Nhà gỗ",
       "view": "elevation",
-      "viewBox": [
-        200,
-        394.56,
-        168,
-        211.44
-      ],
-      "file": "assets/building.village-static.v-home-11.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-11",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 203,
-        "y": 397.55999755859375,
-        "width": 162,
-        "height": 205.44000244140625,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-broomsticks",
-      "name": "v-broomsticks",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
+      "file": "assets/house.wood.wide.svg",
       "viewBox": [
         871.8,
         372.32,
         401.45,
         285.68
       ],
-      "file": "assets/building.village-static.v-broomsticks.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-broomsticks",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 874.7999877929688,
-        "y": 375.32000732421875,
-        "width": 395.45001220703125,
-        "height": 279.67999267578125,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "village-static",
+        "instance": "v-broomsticks"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-honeydukes",
-      "name": "v-honeydukes",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "house.brick.low",
+      "name": "Nhà tường · Khối thấp",
+      "category": "Nhà · Nhà gạch / tường",
       "view": "elevation",
+      "file": "assets/house.brick.low.svg",
       "viewBox": [
-        584.64,
-        431.96,
-        279.36,
-        254.04
+        2307.0,
+        1037.0,
+        237.0,
+        351.0
       ],
-      "file": "assets/building.village-static.v-honeydukes.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-honeydukes",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 587.6400146484375,
-        "y": 434.96002197265625,
-        "width": 273.3599853515625,
-        "height": 248.0399932861328,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "diagon-knockturn",
+        "instance": "da-terrace-7",
+        "roofJoinFixed": true
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-home-12",
-      "name": "v-home-12",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "house.brick.tall",
+      "name": "Nhà tường · Nhà phố cao",
+      "category": "Nhà · Nhà gạch / tường",
       "view": "elevation",
+      "file": "assets/house.brick.tall.svg",
       "viewBox": [
-        317,
-        538.988,
-        152,
-        175.012
+        1184.689,
+        415.0,
+        335.516,
+        487.0
       ],
-      "file": "assets/building.village-static.v-home-12.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-12",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 320,
-        "y": 541.988037109375,
-        "width": 146,
-        "height": 169.01199340820312,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "diagon-knockturn",
+        "instance": "da-ollivanders",
+        "roofJoinFixed": true
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-home-13",
-      "name": "v-home-13",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "house.brick.wide",
+      "name": "Nhà tường · Khối rộng",
+      "category": "Nhà · Nhà gạch / tường",
       "view": "elevation",
+      "file": "assets/house.brick.wide.svg",
       "viewBox": [
-        431,
-        601,
-        152,
-        194
+        2414.633,
+        417.0,
+        466.874,
+        480.0
       ],
-      "file": "assets/building.village-static.v-home-13.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-13",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 434,
-        "y": 604,
-        "width": 146,
-        "height": 188,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "diagon-knockturn",
+        "instance": "da-quidditch",
+        "roofJoinFixed": true
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-dervish",
-      "name": "v-dervish",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "house.basic.rectangle",
+      "name": "Khung nhà · Chữ nhật",
+      "category": "Nhà · Khung basic",
       "view": "elevation",
+      "file": "assets/house.basic.rectangle.svg",
       "viewBox": [
-        1460,
-        562.96,
-        274.25,
-        238.04
+        -16.0,
+        -90.0,
+        240.0,
+        330.0
       ],
-      "file": "assets/building.village-static.v-dervish.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-dervish",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1463,
-        "y": 565.9600219726562,
-        "width": 268.2500305175781,
-        "height": 232.0399932861328,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "type": "new structural base; connected roof/wall"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-home-14",
-      "name": "v-home-14",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "house.basic.tall",
+      "name": "Khung nhà · Cao tầng",
+      "category": "Nhà · Khung basic",
       "view": "elevation",
+      "file": "assets/house.basic.tall.svg",
       "viewBox": [
-        217,
-        655.88,
-        152,
-        210.12
+        -16.0,
+        -90.0,
+        240.0,
+        330.0
       ],
-      "file": "assets/building.village-static.v-home-14.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-14",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 220,
-        "y": 658.8800048828125,
-        "width": 146,
-        "height": 204.1199951171875,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "type": "new structural base; connected roof/wall"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-post",
-      "name": "v-post",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "tree.beech",
+      "name": "Cây · Dẻ gai",
+      "category": "Cây · Nét Quidditch",
       "view": "elevation",
+      "file": "assets/tree.beech.svg",
       "viewBox": [
-        512.76,
-        677.216,
-        237.24,
-        258.784
+        -55.264,
+        -187.45,
+        108.719,
+        203.45
       ],
-      "file": "assets/building.village-static.v-post.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-post",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 515.760009765625,
-        "y": 680.2160034179688,
-        "width": 231.24000549316406,
-        "height": 252.78399658203125,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "pitch-static",
+        "family": "beech"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-home-16",
-      "name": "v-home-16",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "tree.birch",
+      "name": "Cây · Bạch dương",
+      "category": "Cây · Nét Quidditch",
       "view": "elevation",
+      "file": "assets/tree.birch.svg",
       "viewBox": [
-        1445,
-        743.16,
-        155.25,
-        194.84
+        -52.501,
+        -186.628,
+        108.57,
+        202.628
       ],
-      "file": "assets/building.village-static.v-home-16.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-16",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1448,
-        "y": 746.1600341796875,
-        "width": 149.25,
-        "height": 188.83999633789062,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "pitch-static",
+        "family": "birch"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-home-17",
-      "name": "v-home-17",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "tree.pine",
+      "name": "Cây · Thông",
+      "category": "Cây · Nét Quidditch",
       "view": "elevation",
+      "file": "assets/tree.pine.svg",
       "viewBox": [
-        1590,
-        785.36,
-        176,
-        212.64
+        -43.0,
+        -196.0,
+        92.0,
+        212.0
       ],
-      "file": "assets/building.village-static.v-home-17.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-17",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1593,
-        "y": 788.3599853515625,
-        "width": 170,
-        "height": 206.63999938964844,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "pitch-static",
+        "family": "pine"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-quills",
-      "name": "v-quills",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "tree.oak",
+      "name": "Cây · Sồi tán rộng",
+      "category": "Cây · Nét Quidditch",
       "view": "elevation",
+      "file": "assets/tree.oak.svg",
       "viewBox": [
-        1166.52,
-        796.28,
-        240.48,
-        246.72
+        -83.345,
+        -162.496,
+        170.302,
+        178.496
       ],
-      "file": "assets/building.village-static.v-quills.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-quills",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1169.52001953125,
-        "y": 799.280029296875,
-        "width": 234.48001098632812,
-        "height": 240.72000122070312,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "pitch-static",
+        "family": "oak"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-home-18",
-      "name": "v-home-18",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "tree.spruce",
+      "name": "Cây · Vân sam",
+      "category": "Cây · Nét Quidditch",
       "view": "elevation",
+      "file": "assets/tree.spruce.svg",
       "viewBox": [
-        1724,
-        948.222,
-        152,
-        174.778
+        -50.4,
+        -196.0,
+        100.8,
+        212.0
       ],
-      "file": "assets/building.village-static.v-home-18.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-18",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1727,
-        "y": 951.2219848632812,
-        "width": 146,
-        "height": 168.7779998779297,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "pitch-static",
+        "family": "spruce"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-hogshead",
-      "name": "v-hogshead",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "tree.alder",
+      "name": "Cây · Tống quán sủ",
+      "category": "Cây · Nét Quidditch",
       "view": "elevation",
+      "file": "assets/tree.alder.svg",
       "viewBox": [
-        286,
-        913.88,
-        279.25,
-        238.12
+        -94.086,
+        -151.476,
+        189.81,
+        167.476
       ],
-      "file": "assets/building.village-static.v-hogshead.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-hogshead",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 289,
-        "y": 916.8800048828125,
-        "width": 273.2500305175781,
-        "height": 232.1199951171875,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "pitch-static",
+        "family": "alder"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-puddifoot",
-      "name": "v-puddifoot",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "tree.rowan",
+      "name": "Cây · Thanh lương trà",
+      "category": "Cây · Nét Quidditch",
       "view": "elevation",
+      "file": "assets/tree.rowan.svg",
       "viewBox": [
-        840.68,
-        936.52,
-        238.32,
-        235.48
+        -55.328,
+        -174.834,
+        110.672,
+        190.834
       ],
-      "file": "assets/building.village-static.v-puddifoot.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-puddifoot",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 843.6799926757812,
-        "y": 939.52001953125,
-        "width": 232.32000732421875,
-        "height": 229.47999572753906,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "template": "pitch-static",
+        "family": "rowan"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-home-21",
-      "name": "v-home-21",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "tree.spreading",
+      "name": "Cây · Tán lệch",
+      "category": "Cây · Nét Quidditch",
       "view": "elevation",
+      "file": "assets/tree.spreading.svg",
       "viewBox": [
-        1266,
-        1006.208,
-        168,
-        175.792
+        0,
+        0,
+        230,
+        280
       ],
-      "file": "assets/building.village-static.v-home-21.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-21",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1269,
-        "y": 1009.2080078125,
-        "width": 162,
-        "height": 169.79200744628906,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
+        "canonical-base"
+      ],
+      "source": {
+        "type": "original design",
+        "styleReference": "approved Quidditch muted layered trees"
+      },
+      "ports": []
     },
     {
-      "id": "building.village-static.v-home-22",
-      "name": "v-home-22",
-      "category": "Nhà cửa · Template 2.5D",
+      "id": "tree.slender",
+      "name": "Cây · Tán nhiều tầng",
+      "category": "Cây · Nét Quidditch",
       "view": "elevation",
+      "file": "assets/tree.slender.svg",
       "viewBox": [
-        1423,
-        1068.8,
-        160,
-        195.2
+        0,
+        0,
+        230,
+        280
       ],
-      "file": "assets/building.village-static.v-home-22.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-22",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1426,
-        "y": 1071.800048828125,
-        "width": 154,
-        "height": 189.1999969482422,
-        "collisionReady": false
-      },
       "tags": [
         "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-29",
-      "name": "v-home-29",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        788,
-        1062.76,
-        152,
-        210.24
+        "canonical-base"
       ],
-      "file": "assets/building.village-static.v-home-29.svg",
-      "sourceStatus": "extracted-from-approved-template",
       "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-29",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+        "type": "original design",
+        "styleReference": "approved Quidditch muted layered trees"
       },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 791,
-        "y": 1065.760009765625,
-        "width": 146,
-        "height": 204.24000549316406,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-28",
-      "name": "v-home-28",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        673,
-        1188.4,
-        153.25,
-        194.6
-      ],
-      "file": "assets/building.village-static.v-home-28.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-28",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 676,
-        "y": 1191.4000244140625,
-        "width": 147.25,
-        "height": 188.60000610351562,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-23",
-      "name": "v-home-23",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        1176,
-        1192.84,
-        168,
-        212.16
-      ],
-      "file": "assets/building.village-static.v-home-23.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-23",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1179,
-        "y": 1195.8399658203125,
-        "width": 162,
-        "height": 206.16000366210938,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-30",
-      "name": "v-home-30",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        156,
-        1244.52,
-        160,
-        175.48
-      ],
-      "file": "assets/building.village-static.v-home-30.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-30",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 159,
-        "y": 1247.52001953125,
-        "width": 154,
-        "height": 169.47999572753906,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-27",
-      "name": "v-home-27",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        513,
-        1249.52,
-        160,
-        175.48
-      ],
-      "file": "assets/building.village-static.v-home-27.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-27",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 516,
-        "y": 1252.52001953125,
-        "width": 154,
-        "height": 169.47999572753906,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.village-static.v-home-24",
-      "name": "v-home-24",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        1382,
-        1292.598,
-        160,
-        175.402
-      ],
-      "file": "assets/building.village-static.v-home-24.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "village-static",
-        "interactiveId": "v-home-24",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 1385,
-        "y": 1295.5980224609375,
-        "width": 154,
-        "height": 169.40199279785156,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-7",
-      "name": "da-terrace-7",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        2307,
-        1037,
-        237,
-        351
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-7.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-7",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 2310,
-        "y": 1040,
-        "width": 231,
-        "height": 345,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-11",
-      "name": "da-terrace-11",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        3175,
-        1037,
-        261,
-        344
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-11.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-11",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 3178,
-        "y": 1040,
-        "width": 255,
-        "height": 338,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-13",
-      "name": "da-terrace-13",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        3780,
-        1037,
-        278,
-        351
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-13.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-13",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 3783,
-        "y": 1040,
-        "width": 272,
-        "height": 345,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-17",
-      "name": "da-terrace-17",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4728,
-        1037,
-        253,
-        344
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-17.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-17",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4731,
-        "y": 1040,
-        "width": 247,
-        "height": 338,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-20",
-      "name": "da-terrace-20",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        5404,
-        1083,
-        278,
-        299
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-20.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-20",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 5407,
-        "y": 1086,
-        "width": 272,
-        "height": 293,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-8",
-      "name": "da-terrace-8",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        2513,
-        1083,
-        261,
-        299
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-8.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-8",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 2516,
-        "y": 1086,
-        "width": 255,
-        "height": 293,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-9",
-      "name": "da-terrace-9",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        2742,
-        1053,
-        243,
-        336
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-9.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-9",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 2745,
-        "y": 1056,
-        "width": 237,
-        "height": 330,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-10",
-      "name": "da-terrace-10",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        2954,
-        1072,
-        252,
-        313
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-10.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-10",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 2957,
-        "y": 1075,
-        "width": 246,
-        "height": 307,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-12",
-      "name": "da-terrace-12",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        3567,
-        1068,
-        244,
-        316
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-12.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-12",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 3570,
-        "y": 1071,
-        "width": 238,
-        "height": 310,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-14",
-      "name": "da-terrace-14",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4027,
-        1083,
-        263,
-        299
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-14.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-14",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4030,
-        "y": 1086,
-        "width": 257,
-        "height": 293,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-15",
-      "name": "da-terrace-15",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4258,
-        1053,
-        244,
-        336
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-15.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-15",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4261,
-        "y": 1056,
-        "width": 238,
-        "height": 330,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-16",
-      "name": "da-terrace-16",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4471,
-        1072,
-        288,
-        313
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-16.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-16",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4474,
-        "y": 1075,
-        "width": 282,
-        "height": 307,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-18",
-      "name": "da-terrace-18",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4949,
-        1068,
-        274,
-        316
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-18.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-18",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4952,
-        "y": 1071,
-        "width": 268,
-        "height": 310,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-19",
-      "name": "da-terrace-19",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        5192,
-        1037,
-        243,
-        351
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-19.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-19",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 5195,
-        "y": 1040,
-        "width": 237,
-        "height": 345,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.da-terrace-21",
-      "name": "da-terrace-21",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        5650,
-        1053,
-        271,
-        336
-      ],
-      "file": "assets/building.diagon-knockturn.da-terrace-21.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "da-terrace-21",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 5653,
-        "y": 1056,
-        "width": 265,
-        "height": 330,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-0",
-      "name": "ka-block-0",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        3035.979,
-        1045,
-        289.527,
-        357
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-0.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-0",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 3038.9794921875,
-        "y": 1048,
-        "width": 283.526611328125,
-        "height": 351,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-8",
-      "name": "ka-block-8",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4519.676,
-        1142,
-        303.83,
-        340
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-8.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-8",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4522.67626953125,
-        "y": 1145,
-        "width": 297.830078125,
-        "height": 334,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-9",
-      "name": "ka-block-9",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4737.894,
-        1115,
-        318.901,
-        367
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-9.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-9",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4740.8935546875,
-        "y": 1118,
-        "width": 312.9013671875,
-        "height": 361,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-10",
-      "name": "ka-block-10",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4957.605,
-        1130,
-        318.901,
-        367
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-10.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-10",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4960.60498046875,
-        "y": 1133,
-        "width": 312.9013671875,
-        "height": 361,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-11",
-      "name": "ka-block-11",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        5187.094,
-        1147,
-        326.167,
-        365
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-11.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-11",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 5190.09375,
-        "y": 1150,
-        "width": 320.16650390625,
-        "height": 359,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-1",
-      "name": "ka-block-1",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        3062.094,
-        1360,
-        326.289,
-        372
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-1.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-1",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 3065.09375,
-        "y": 1363,
-        "width": 320.28857421875,
-        "height": 366,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-13",
-      "name": "ka-block-13",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4826.094,
-        1435,
-        289.701,
-        367
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-13.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-13",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4829.09375,
-        "y": 1438,
-        "width": 283.701171875,
-        "height": 361,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-12",
-      "name": "ka-block-12",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4615.456,
-        1425,
-        290.05,
-        387
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-12.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-12",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4618.4560546875,
-        "y": 1428,
-        "width": 284.05029296875,
-        "height": 381,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-2",
-      "name": "ka-block-2",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        3186.752,
-        1597,
-        326.254,
-        370
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-2.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-2",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 3189.75244140625,
-        "y": 1600,
-        "width": 320.253662109375,
-        "height": 364,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-14",
-      "name": "ka-block-14",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        5572.265,
-        1597,
-        275.241,
-        375
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-14.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-14",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 5575.26513671875,
-        "y": 1600,
-        "width": 269.2412109375,
-        "height": 369,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-4",
-      "name": "ka-block-4",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        3634.703,
-        1735,
-        259.803,
-        327
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-4.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-4",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 3637.703125,
-        "y": 1738,
-        "width": 253.802978515625,
-        "height": 321,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-3",
-      "name": "ka-block-3",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        3221.894,
-        1850,
-        282.314,
-        362
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-3.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-3",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 3224.893798828125,
-        "y": 1853,
-        "width": 276.31396484375,
-        "height": 356,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-15",
-      "name": "ka-block-15",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        5351.894,
-        2050,
-        282.489,
-        372
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-15.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-15",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 5354.8935546875,
-        "y": 2053,
-        "width": 276.48876953125,
-        "height": 366,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-5",
-      "name": "ka-block-5",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4029.494,
-        2092,
-        304.528,
-        380
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-5.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-5",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4032.493896484375,
-        "y": 2095,
-        "width": 298.528076171875,
-        "height": 374,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-6",
-      "name": "ka-block-6",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4583.23,
-        2165,
-        311.776,
-        377
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-6.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-6",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4586.23046875,
-        "y": 2168,
-        "width": 305.77587890625,
-        "height": 371,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
-    },
-    {
-      "id": "building.diagon-knockturn.ka-block-7",
-      "name": "ka-block-7",
-      "category": "Nhà cửa · Template 2.5D",
-      "view": "elevation",
-      "viewBox": [
-        4800.294,
-        2205,
-        297.176,
-        377
-      ],
-      "file": "assets/building.diagon-knockturn.ka-block-7.svg",
-      "sourceStatus": "extracted-from-approved-template",
-      "source": {
-        "mapId": "diagon-knockturn",
-        "interactiveId": "ka-block-7",
-        "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
-      },
-      "ports": [],
-      "occupancy": {
-        "type": "geometry-bbox",
-        "x": 4803.2939453125,
-        "y": 2208,
-        "width": 291.17578125,
-        "height": 371,
-        "collisionReady": false
-      },
-      "tags": [
-        "2.5d",
-        "template-extract"
-      ]
+      "ports": []
     }
   ],
   "aliases": {
-    "r2-hagrid": "house.hagrid-hex",
-    "r2-station": "house.station",
-    "h1.village-home": "house.cottage",
-    "template:village-static/v-shack": "building.village-static.v-shack",
-    "template:village-static/v-home-6": "building.village-static.v-home-6",
-    "template:village-static/v-home-4": "building.village-static.v-home-4",
-    "template:village-static/v-home-7": "building.village-static.v-home-7",
-    "template:village-static/v-home-3": "building.village-static.v-home-3",
-    "template:village-static/v-home-1": "building.village-static.v-home-1",
-    "template:village-static/v-home-0": "building.village-static.v-home-0",
-    "template:village-static/v-home-9": "building.village-static.v-home-9",
-    "template:village-static/v-gladrags": "building.village-static.v-gladrags",
-    "template:village-static/v-zonkos": "building.village-static.v-zonkos",
-    "template:village-static/v-home-11": "building.village-static.v-home-11",
-    "template:village-static/v-broomsticks": "building.village-static.v-broomsticks",
-    "template:village-static/v-honeydukes": "building.village-static.v-honeydukes",
-    "template:village-static/v-home-12": "building.village-static.v-home-12",
-    "template:village-static/v-home-13": "building.village-static.v-home-13",
-    "template:village-static/v-dervish": "building.village-static.v-dervish",
-    "template:village-static/v-home-14": "building.village-static.v-home-14",
-    "template:village-static/v-post": "building.village-static.v-post",
-    "template:village-static/v-home-16": "building.village-static.v-home-16",
-    "template:village-static/v-home-17": "building.village-static.v-home-17",
-    "template:village-static/v-quills": "building.village-static.v-quills",
-    "template:village-static/v-home-18": "building.village-static.v-home-18",
-    "template:village-static/v-hogshead": "building.village-static.v-hogshead",
-    "template:village-static/v-puddifoot": "building.village-static.v-puddifoot",
-    "template:village-static/v-home-21": "building.village-static.v-home-21",
-    "template:village-static/v-home-22": "building.village-static.v-home-22",
-    "template:village-static/v-home-29": "building.village-static.v-home-29",
-    "template:village-static/v-home-28": "building.village-static.v-home-28",
-    "template:village-static/v-home-23": "building.village-static.v-home-23",
-    "template:village-static/v-home-30": "building.village-static.v-home-30",
-    "template:village-static/v-home-27": "building.village-static.v-home-27",
-    "template:village-static/v-home-24": "building.village-static.v-home-24",
-    "template:diagon-knockturn/da-terrace-7": "building.diagon-knockturn.da-terrace-7",
-    "template:diagon-knockturn/da-terrace-11": "building.diagon-knockturn.da-terrace-11",
-    "template:diagon-knockturn/da-ollivanders": "frontage.da-ollivanders",
-    "template:diagon-knockturn/da-scribbulus": "frontage.da-scribbulus",
-    "template:diagon-knockturn/da-terrace-13": "building.diagon-knockturn.da-terrace-13",
-    "template:diagon-knockturn/da-flourish": "frontage.da-flourish",
-    "template:diagon-knockturn/da-house-a": "frontage.da-house-a",
-    "template:diagon-knockturn/da-quidditch": "frontage.da-quidditch",
-    "template:diagon-knockturn/da-menagerie": "frontage.da-menagerie",
-    "template:diagon-knockturn/da-terrace-17": "building.diagon-knockturn.da-terrace-17",
-    "template:diagon-knockturn/da-gambol": "frontage.da-gambol",
-    "template:diagon-knockturn/da-apothecary": "frontage.da-apothecary",
-    "template:diagon-knockturn/da-goods": "frontage.da-goods",
-    "template:diagon-knockturn/da-print": "frontage.da-print",
-    "template:diagon-knockturn/da-weasleys": "frontage.da-weasleys",
-    "template:diagon-knockturn/da-tailor": "frontage.da-tailor",
-    "template:diagon-knockturn/da-optics": "frontage.da-optics",
-    "template:diagon-knockturn/da-terrace-20": "building.diagon-knockturn.da-terrace-20",
-    "template:diagon-knockturn/da-stationery": "frontage.da-stationery",
-    "template:diagon-knockturn/da-fortescue": "frontage.da-fortescue",
-    "template:diagon-knockturn/da-robe-used": "frontage.da-robe-used",
-    "template:diagon-knockturn/da-remedies": "frontage.da-remedies",
-    "template:diagon-knockturn/da-obscurus": "frontage.da-obscurus",
-    "template:diagon-knockturn/da-wizardwear": "frontage.da-wizardwear",
-    "template:diagon-knockturn/da-workshop": "frontage.da-workshop",
-    "template:diagon-knockturn/da-cafe": "frontage.da-cafe",
-    "template:diagon-knockturn/da-potage": "frontage.da-potage",
-    "template:diagon-knockturn/da-terrace-8": "building.diagon-knockturn.da-terrace-8",
-    "template:diagon-knockturn/da-terrace-9": "building.diagon-knockturn.da-terrace-9",
-    "template:diagon-knockturn/da-terrace-10": "building.diagon-knockturn.da-terrace-10",
-    "template:diagon-knockturn/da-malkin": "frontage.da-malkin",
-    "template:diagon-knockturn/da-terrace-12": "building.diagon-knockturn.da-terrace-12",
-    "template:diagon-knockturn/da-eeylops": "frontage.da-eeylops",
-    "template:diagon-knockturn/da-terrace-14": "building.diagon-knockturn.da-terrace-14",
-    "template:diagon-knockturn/da-terrace-15": "building.diagon-knockturn.da-terrace-15",
-    "template:diagon-knockturn/da-terrace-16": "building.diagon-knockturn.da-terrace-16",
-    "template:diagon-knockturn/da-twilfitt": "frontage.da-twilfitt",
-    "template:diagon-knockturn/da-terrace-18": "building.diagon-knockturn.da-terrace-18",
-    "template:diagon-knockturn/da-terrace-19": "building.diagon-knockturn.da-terrace-19",
-    "template:diagon-knockturn/da-gold": "frontage.da-gold",
-    "template:diagon-knockturn/da-terrace-21": "building.diagon-knockturn.da-terrace-21",
-    "template:diagon-knockturn/da-leaky": "frontage.da-leaky",
-    "template:diagon-knockturn/ka-candles": "frontage.ka-candles",
-    "template:diagon-knockturn/ka-block-0": "building.diagon-knockturn.ka-block-0",
-    "template:diagon-knockturn/ka-entrance": "frontage.ka-entrance",
-    "template:diagon-knockturn/ka-upper": "frontage.ka-upper",
-    "template:diagon-knockturn/ka-block-8": "building.diagon-knockturn.ka-block-8",
-    "template:diagon-knockturn/ka-block-9": "building.diagon-knockturn.ka-block-9",
-    "template:diagon-knockturn/ka-block-10": "building.diagon-knockturn.ka-block-10",
-    "template:diagon-knockturn/ka-block-11": "building.diagon-knockturn.ka-block-11",
-    "template:diagon-knockturn/ka-block-1": "building.diagon-knockturn.ka-block-1",
-    "template:diagon-knockturn/ka-relics": "frontage.ka-relics",
-    "template:diagon-knockturn/ka-block-13": "building.diagon-knockturn.ka-block-13",
-    "template:diagon-knockturn/ka-borgin": "frontage.ka-borgin",
-    "template:diagon-knockturn/ka-block-12": "building.diagon-knockturn.ka-block-12",
-    "template:diagon-knockturn/ka-block-2": "building.diagon-knockturn.ka-block-2",
-    "template:diagon-knockturn/ka-block-14": "building.diagon-knockturn.ka-block-14",
-    "template:diagon-knockturn/ka-corner": "frontage.ka-corner",
-    "template:diagon-knockturn/ka-block-4": "building.diagon-knockturn.ka-block-4",
-    "template:diagon-knockturn/ka-gloom": "frontage.ka-gloom",
-    "template:diagon-knockturn/ka-dealer": "frontage.ka-dealer",
-    "template:diagon-knockturn/ka-block-3": "building.diagon-knockturn.ka-block-3",
-    "template:diagon-knockturn/ka-bones": "frontage.ka-bones",
-    "template:diagon-knockturn/ka-end": "frontage.ka-end",
-    "template:diagon-knockturn/ka-block-15": "building.diagon-knockturn.ka-block-15",
-    "template:diagon-knockturn/ka-block-5": "building.diagon-knockturn.ka-block-5",
-    "template:diagon-knockturn/ka-block-6": "building.diagon-knockturn.ka-block-6",
-    "template:diagon-knockturn/ka-block-7": "building.diagon-knockturn.ka-block-7",
-    "house.porch": "house.farmhouse",
-    "house.garden": "house.farmhouse"
+    "r2-hagrid": "house.basic.hex",
+    "r2-station": "house.basic.rectangle",
+    "h1.village-home": "house.wood.gable",
+    "template:village-static/v-shack": "house.wood.gable",
+    "template:village-static/v-home-6": "house.wood.gable",
+    "template:village-static/v-home-4": "house.wood.gable",
+    "template:village-static/v-home-7": "house.wood.gable",
+    "template:village-static/v-home-3": "house.wood.gable",
+    "template:village-static/v-home-1": "house.wood.gable",
+    "template:village-static/v-home-0": "house.wood.gable",
+    "template:village-static/v-home-9": "house.wood.gable",
+    "template:village-static/v-gladrags": "house.wood.gable",
+    "template:village-static/v-zonkos": "house.wood.gable",
+    "template:village-static/v-home-11": "house.wood.gable",
+    "template:village-static/v-broomsticks": "house.wood.gable",
+    "template:village-static/v-honeydukes": "house.wood.gable",
+    "template:village-static/v-home-12": "house.wood.gable",
+    "template:village-static/v-home-13": "house.wood.gable",
+    "template:village-static/v-dervish": "house.wood.gable",
+    "template:village-static/v-home-14": "house.wood.gable",
+    "template:village-static/v-post": "house.wood.gable",
+    "template:village-static/v-home-16": "house.wood.gable",
+    "template:village-static/v-home-17": "house.wood.gable",
+    "template:village-static/v-quills": "house.wood.gable",
+    "template:village-static/v-home-18": "house.wood.gable",
+    "template:village-static/v-hogshead": "house.wood.gable",
+    "template:village-static/v-puddifoot": "house.wood.gable",
+    "template:village-static/v-home-21": "house.wood.gable",
+    "template:village-static/v-home-22": "house.wood.gable",
+    "template:village-static/v-home-29": "house.wood.gable",
+    "template:village-static/v-home-28": "house.wood.gable",
+    "template:village-static/v-home-23": "house.wood.gable",
+    "template:village-static/v-home-30": "house.wood.gable",
+    "template:village-static/v-home-27": "house.wood.gable",
+    "template:village-static/v-home-24": "house.wood.gable",
+    "template:diagon-knockturn/da-terrace-7": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-11": "house.brick.tall",
+    "template:diagon-knockturn/da-ollivanders": "house.brick.tall",
+    "template:diagon-knockturn/da-scribbulus": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-13": "house.brick.tall",
+    "template:diagon-knockturn/da-flourish": "house.brick.tall",
+    "template:diagon-knockturn/da-house-a": "house.brick.tall",
+    "template:diagon-knockturn/da-quidditch": "house.brick.tall",
+    "template:diagon-knockturn/da-menagerie": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-17": "house.brick.tall",
+    "template:diagon-knockturn/da-gambol": "house.brick.tall",
+    "template:diagon-knockturn/da-apothecary": "house.brick.tall",
+    "template:diagon-knockturn/da-goods": "house.brick.tall",
+    "template:diagon-knockturn/da-print": "house.brick.tall",
+    "template:diagon-knockturn/da-weasleys": "house.brick.tall",
+    "template:diagon-knockturn/da-tailor": "house.brick.tall",
+    "template:diagon-knockturn/da-optics": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-20": "house.brick.tall",
+    "template:diagon-knockturn/da-stationery": "house.brick.tall",
+    "template:diagon-knockturn/da-fortescue": "house.brick.tall",
+    "template:diagon-knockturn/da-robe-used": "house.brick.tall",
+    "template:diagon-knockturn/da-remedies": "house.brick.tall",
+    "template:diagon-knockturn/da-obscurus": "house.brick.tall",
+    "template:diagon-knockturn/da-wizardwear": "house.brick.tall",
+    "template:diagon-knockturn/da-workshop": "house.brick.tall",
+    "template:diagon-knockturn/da-cafe": "house.brick.tall",
+    "template:diagon-knockturn/da-potage": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-8": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-9": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-10": "house.brick.tall",
+    "template:diagon-knockturn/da-malkin": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-12": "house.brick.tall",
+    "template:diagon-knockturn/da-eeylops": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-14": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-15": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-16": "house.brick.tall",
+    "template:diagon-knockturn/da-twilfitt": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-18": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-19": "house.brick.tall",
+    "template:diagon-knockturn/da-gold": "house.brick.tall",
+    "template:diagon-knockturn/da-terrace-21": "house.brick.tall",
+    "template:diagon-knockturn/da-leaky": "house.brick.tall",
+    "template:diagon-knockturn/ka-candles": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-0": "house.brick.tall",
+    "template:diagon-knockturn/ka-entrance": "house.brick.tall",
+    "template:diagon-knockturn/ka-upper": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-8": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-9": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-10": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-11": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-1": "house.brick.tall",
+    "template:diagon-knockturn/ka-relics": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-13": "house.brick.tall",
+    "template:diagon-knockturn/ka-borgin": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-12": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-2": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-14": "house.brick.tall",
+    "template:diagon-knockturn/ka-corner": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-4": "house.brick.tall",
+    "template:diagon-knockturn/ka-gloom": "house.brick.tall",
+    "template:diagon-knockturn/ka-dealer": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-3": "house.brick.tall",
+    "template:diagon-knockturn/ka-bones": "house.brick.tall",
+    "template:diagon-knockturn/ka-end": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-15": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-5": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-6": "house.brick.tall",
+    "template:diagon-knockturn/ka-block-7": "house.brick.tall",
+    "house.porch": "house.basic.rectangle",
+    "house.garden": "house.basic.rectangle",
+    "tree.round": "tree.oak",
+    "tree.umbrella": "tree.oak",
+    "tree.columnar": "tree.oak",
+    "tree.fruit": "tree.oak",
+    "tree.flowering": "tree.oak",
+    "tree.sapling": "tree.oak",
+    "tree.bare": "tree.oak",
+    "tree.dead": "tree.oak",
+    "tree.cypress": "tree.pine",
+    "house.cottage": "house.wood.gable",
+    "house.timber": "house.wood.gable",
+    "house.townhouse": "house.basic.rectangle",
+    "house.farmhouse": "house.basic.rectangle",
+    "house.annex": "house.basic.rectangle",
+    "house.shop": "house.basic.rectangle",
+    "house.corner-shop": "house.basic.rectangle",
+    "house.shed": "house.basic.rectangle",
+    "house.glasshouse": "house.basic.rectangle",
+    "house.inn": "house.basic.rectangle",
+    "house.station": "house.basic.rectangle",
+    "house.hall": "house.basic.rectangle",
+    "map.h1.gladrags": "house.wood.gable",
+    "map.h1.honeydukes": "house.wood.gable",
+    "map.h1.owlery": "architecture.owl-tower",
+    "map.h1.boathouse": "architecture.boathouse",
+    "map.h1.puddifoots": "house.wood.gable",
+    "map.h1.owl-post": "house.wood.gable",
+    "map.h1.scrivenshafts": "house.wood.gable",
+    "map.h1.three-broomsticks": "house.wood.gable",
+    "map.h1.zonkos": "house.wood.gable",
+    "map.h1.hogs-head": "house.wood.gable",
+    "map.h1.greenhouses": "architecture.greenhouses",
+    "map.h1.shrieking-shack": "house.wood.gable",
+    "map.h1.dervish-banges": "house.wood.gable",
+    "map.r2-castle": "architecture.castle",
+    "map.r3-ancient-tree": "tree.ancient",
+    "map.willow-redesign": "tree.willow",
+    "house.hagrid-hex": "house.basic.hex",
+    "frontage.da-ollivanders": "house.brick.tall",
+    "frontage.da-scribbulus": "house.brick.tall",
+    "frontage.da-flourish": "house.brick.tall",
+    "frontage.da-house-a": "house.brick.tall",
+    "frontage.da-quidditch": "house.brick.tall",
+    "frontage.da-menagerie": "house.brick.tall",
+    "frontage.da-gambol": "house.brick.tall",
+    "frontage.da-apothecary": "house.brick.tall",
+    "frontage.da-goods": "house.brick.tall",
+    "frontage.da-print": "house.brick.tall",
+    "frontage.da-weasleys": "house.brick.tall",
+    "frontage.da-tailor": "house.brick.tall",
+    "frontage.da-optics": "house.brick.tall",
+    "frontage.da-stationery": "house.brick.tall",
+    "frontage.da-fortescue": "house.brick.tall",
+    "frontage.da-robe-used": "house.brick.tall",
+    "frontage.da-remedies": "house.brick.tall",
+    "frontage.da-obscurus": "house.brick.tall",
+    "frontage.da-wizardwear": "house.brick.tall",
+    "frontage.da-workshop": "house.brick.tall",
+    "frontage.da-cafe": "house.brick.tall",
+    "frontage.da-potage": "house.brick.tall",
+    "frontage.da-malkin": "house.brick.tall",
+    "frontage.da-eeylops": "house.brick.tall",
+    "frontage.da-twilfitt": "house.brick.tall",
+    "frontage.da-gold": "house.brick.tall",
+    "frontage.da-gringotts": "house.brick.tall",
+    "frontage.da-leaky": "house.brick.tall",
+    "frontage.ka-candles": "house.brick.tall",
+    "frontage.ka-entrance": "house.brick.tall",
+    "frontage.ka-upper": "house.brick.tall",
+    "frontage.ka-relics": "house.brick.tall",
+    "frontage.ka-borgin": "house.brick.tall",
+    "frontage.ka-corner": "house.brick.tall",
+    "frontage.ka-gloom": "house.brick.tall",
+    "frontage.ka-dealer": "house.brick.tall",
+    "frontage.ka-bones": "house.brick.tall",
+    "frontage.ka-end": "house.brick.tall",
+    "building.village-static.v-shack": "house.wood.gable",
+    "building.village-static.v-home-6": "house.wood.gable",
+    "building.village-static.v-home-4": "house.wood.gable",
+    "building.village-static.v-home-7": "house.wood.gable",
+    "building.village-static.v-home-3": "house.wood.gable",
+    "building.village-static.v-home-1": "house.wood.gable",
+    "building.village-static.v-home-0": "house.wood.gable",
+    "building.village-static.v-home-9": "house.wood.gable",
+    "building.village-static.v-gladrags": "house.wood.gable",
+    "building.village-static.v-zonkos": "house.wood.gable",
+    "building.village-static.v-home-11": "house.wood.gable",
+    "building.village-static.v-broomsticks": "house.wood.gable",
+    "building.village-static.v-honeydukes": "house.wood.gable",
+    "building.village-static.v-home-12": "house.wood.gable",
+    "building.village-static.v-home-13": "house.wood.gable",
+    "building.village-static.v-dervish": "house.wood.gable",
+    "building.village-static.v-home-14": "house.wood.gable",
+    "building.village-static.v-post": "house.wood.gable",
+    "building.village-static.v-home-16": "house.wood.gable",
+    "building.village-static.v-home-17": "house.wood.gable",
+    "building.village-static.v-quills": "house.wood.gable",
+    "building.village-static.v-home-18": "house.wood.gable",
+    "building.village-static.v-hogshead": "house.wood.gable",
+    "building.village-static.v-puddifoot": "house.wood.gable",
+    "building.village-static.v-home-21": "house.wood.gable",
+    "building.village-static.v-home-22": "house.wood.gable",
+    "building.village-static.v-home-29": "house.wood.gable",
+    "building.village-static.v-home-28": "house.wood.gable",
+    "building.village-static.v-home-23": "house.wood.gable",
+    "building.village-static.v-home-30": "house.wood.gable",
+    "building.village-static.v-home-27": "house.wood.gable",
+    "building.village-static.v-home-24": "house.wood.gable",
+    "building.diagon-knockturn.da-terrace-7": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-11": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-13": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-17": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-20": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-8": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-9": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-10": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-12": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-14": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-15": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-16": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-18": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-19": "house.brick.tall",
+    "building.diagon-knockturn.da-terrace-21": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-0": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-8": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-9": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-10": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-11": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-1": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-13": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-12": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-2": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-14": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-4": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-3": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-15": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-5": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-6": "house.brick.tall",
+    "building.diagon-knockturn.ka-block-7": "house.brick.tall"
   }
 }

@@ -83,5 +83,36 @@
       "Hybrid decor does not require top view",
       "Published review HTML loads baseline asset images from jsDelivr; Internet required"
     ]
+  },
+  "sceneryConsolidation": {
+    "baseline": "5bae4f7",
+    "date": "2026-11-09",
+    "oldAssetCount": 366,
+    "newAssetCount": 247,
+    "houseBases": 9,
+    "treeBases": 11,
+    "woodMasonryBasic": [
+      3,
+      3,
+      3
+    ],
+    "fixedDiagonRoofWallJoins": 68,
+    "fixedChimneyJoins": 36,
+    "other12MapsUnchanged": true,
+    "interactiveIdsUnchanged": true,
+    "tests": {
+      "atlas": 5,
+      "ministry": 2,
+      "inventory": 3,
+      "gallery": "passed",
+      "svgValidation": "247 passed"
+    },
+    "browser": {
+      "sceneryAssets": 20,
+      "mapCount": 13,
+      "h1PauseResume": true,
+      "pageErrors": []
+    },
+    "canonResearchStatus": "research/design brief with sources; full book-canon registry still incomplete"
   }
 }

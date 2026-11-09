@@ -12,6 +12,8 @@ class Inventory(unittest.TestCase):
                 self.assertNotIn(target,seen);seen.add(target);target=catalog['aliases'][target]
             self.assertIn(target,ids)
         self.assertNotIn('house.porch',ids);self.assertNotIn('house.garden',ids)
+        self.assertEqual(len(ids),247)
+        self.assertEqual(len([x for x in ids if x.startswith('house.')]),9)
     def test_world_atlas_preserves_every_interactive_id(self):
         world=json.loads((ROOT/'maps/world-atlas.json').read_text());_,payload=atlas.load(ROOT/'index.html')
         index=json.loads((ROOT/'maps/interaction-index.json').read_text())

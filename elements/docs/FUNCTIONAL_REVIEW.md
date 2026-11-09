@@ -1,4 +1,4 @@
-# Rà soát 366 asset — chờ duyệt
+# Rà soát 247 asset — chờ duyệt
 
 Rooms/walls/circulation use a floor plan. Furniture/decor may use top, front or 2.5D as appropriate.
 
@@ -6,10 +6,10 @@ Không xóa hoặc nén lại file nguồn trong đợt này. Không bắt buộ
 
 | Phép đo | Trước | Sau dự kiến / đo thử |
 |---|---|
-| SVG thô → mỗi SVG gzip riêng | 3,097.0 KiB | 503.4 KiB |
-| SVG thô → một luồng gzip thử trong RAM | 3,097.0 KiB | 266.2 KiB |
-| HTML gallery → gzip HTTP giả lập | 402.5 KiB | 301.5 KiB |
-| Gộp tất cả ứng viên (trần lý thuyết, chưa gồm preset/decor) | 3,097.0 KiB | ≥ 3,068.7 KiB |
+| SVG thô → mỗi SVG gzip riêng | 1,186.1 KiB | 216.5 KiB |
+| SVG thô → một luồng gzip thử trong RAM | 1,186.1 KiB | 125.7 KiB |
+| HTML gallery → gzip HTTP giả lập | 197.4 KiB | 147.9 KiB |
+| Gộp tất cả ứng viên (trần lý thuyết, chưa gồm preset/decor) | 1,186.1 KiB | ≥ 1,157.8 KiB |
 
 Không cộng các con số tiết kiệm này: chúng thuộc các cách đóng gói khác nhau. Gzip HTTP không làm nhẹ file HTML lưu trên đĩa. Gallery đã nén payload nội bộ.
 
@@ -35,6 +35,6 @@ Không cộng các con số tiết kiệm này: chúng thuộc các cách đóng
 
 ## Kiến trúc và các mẫu khác
 
-- 63 hình nhà phố tách từ template, 38 mặt tiền, 21 biến thể map: giữ hình đã duyệt. Cần dựng hệ preset thân/mái/biển hiệu trước khi giảm số file, không xóa theo tên chức năng.
+- Kho nhà đã rút về 9 base trong ba nhóm gỗ/tường/basic. Hình instance có tên riêng giữ trong template, không làm thành thẻ asset riêng.
 - Giường đơn/đôi/tầng/có màn; cửa đơn/đôi/vòm/sắt; tường thẳng/góc/T/cong; lò Floo và bảo vật đã chọn có khác biệt sử dụng, không gộp mù.
-- Danh sách đủ 366 mẫu và quyết định từng mẫu: `functional-review.json`; HTML tải xuống hiển thị trực tiếp SVG hiện hành.
+- Danh sách đủ 247 mẫu và quyết định từng mẫu: `functional-review.json`; HTML tải xuống hiển thị trực tiếp SVG hiện hành.

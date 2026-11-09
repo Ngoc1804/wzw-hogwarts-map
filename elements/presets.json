@@ -1,0 +1,1145 @@
+{
+  "tree.round": {
+    "base": "tree.oak",
+    "legacyName": "Cây tán tròn",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.umbrella": {
+    "base": "tree.oak",
+    "legacyName": "Cây tán ô",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.columnar": {
+    "base": "tree.oak",
+    "legacyName": "Cây cao hẹp",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.ancient": {
+    "base": "tree.oak",
+    "legacyName": "Cây cổ thụ",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.willow": {
+    "base": "tree.oak",
+    "legacyName": "Cây liễu rủ",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.fruit": {
+    "base": "tree.oak",
+    "legacyName": "Cây ăn quả",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.flowering": {
+    "base": "tree.oak",
+    "legacyName": "Cây có hoa",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.sapling": {
+    "base": "tree.oak",
+    "legacyName": "Cây non có cọc",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.bare": {
+    "base": "tree.oak",
+    "legacyName": "Cây trụi lá",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.dead": {
+    "base": "tree.oak",
+    "legacyName": "Cây khô",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.pine": {
+    "base": "tree.pine",
+    "legacyName": "Thông nhiều tầng",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.cypress": {
+    "base": "tree.pine",
+    "legacyName": "Cây lá kim cao",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "tree.spruce": {
+    "base": "tree.pine",
+    "legacyName": "Thông tán rộng",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.cottage": {
+    "base": "house.wood.gable",
+    "legacyName": "Cottage đá",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.timber": {
+    "base": "house.wood.gable",
+    "legacyName": "Cottage gỗ",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.townhouse": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Nhà phố hẹp",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.farmhouse": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Nhà nông thôn",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.annex": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Nhà có chái",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.shop": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Cửa hàng cơ bản",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.corner-shop": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Cửa hàng góc",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.shed": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Nhà kho",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.glasshouse": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Nhà kính nhỏ",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.inn": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Quán trọ",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.station": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Nhà ga nhỏ",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "house.hall": {
+    "base": "house.basic.rectangle",
+    "legacyName": "Hội trường",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "type": "original-procedural",
+      "licenseNote": "Original path artwork; third-party fictional identities remain with their owners."
+    }
+  },
+  "map.h1.gladrags": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.gladrags",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "map.h1.honeydukes": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.honeydukes",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "map.h1.puddifoots": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.puddifoots",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "map.h1.owl-post": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.owl-post",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "map.h1.scrivenshafts": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.scrivenshafts",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "map.h1.three-broomsticks": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.three-broomsticks",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "map.h1.zonkos": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.zonkos",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "map.h1.hogs-head": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.hogs-head",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "map.h1.shrieking-shack": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.shrieking-shack",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "map.h1.dervish-banges": {
+    "base": "house.wood.gable",
+    "legacyName": "h1.dervish-banges",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-ollivanders": {
+    "base": "house.brick.tall",
+    "legacyName": "OLLIVANDERS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-scribbulus": {
+    "base": "house.brick.tall",
+    "legacyName": "SCRIBBULUS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-flourish": {
+    "base": "house.brick.tall",
+    "legacyName": "FLOURISH & BLOTTS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-house-a": {
+    "base": "house.brick.tall",
+    "legacyName": "No. 47 · BOOKBINDERY",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-quidditch": {
+    "base": "house.brick.tall",
+    "legacyName": "QUALITY QUIDDITCH SUPPLIES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-menagerie": {
+    "base": "house.brick.tall",
+    "legacyName": "MAGICAL MENAGERIE",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-gambol": {
+    "base": "house.brick.tall",
+    "legacyName": "GAMBOL & JAPES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-apothecary": {
+    "base": "house.brick.tall",
+    "legacyName": "APOTHECARY",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-goods": {
+    "base": "house.brick.tall",
+    "legacyName": "SECOND-HAND GOODS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-print": {
+    "base": "house.brick.tall",
+    "legacyName": "PRINTS & PARCHMENT",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-weasleys": {
+    "base": "house.brick.tall",
+    "legacyName": "WEASLEYS’ WIZARD WHEEZES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-tailor": {
+    "base": "house.brick.tall",
+    "legacyName": "TRAVELLING CLOAKS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-optics": {
+    "base": "house.brick.tall",
+    "legacyName": "TELESCOPES & INSTRUMENTS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-stationery": {
+    "base": "house.brick.tall",
+    "legacyName": "PARCHMENT & QUILL",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-fortescue": {
+    "base": "house.brick.tall",
+    "legacyName": "FLOREAN FORTESCUE’S",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-robe-used": {
+    "base": "house.brick.tall",
+    "legacyName": "SECOND-HAND ROBES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-remedies": {
+    "base": "house.brick.tall",
+    "legacyName": "HERBAL REMEDIES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-obscurus": {
+    "base": "house.brick.tall",
+    "legacyName": "OBSCURUS BOOKS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-wizardwear": {
+    "base": "house.brick.tall",
+    "legacyName": "WIZARDWEAR",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-workshop": {
+    "base": "house.brick.tall",
+    "legacyName": "CAULDRON REPAIRS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-cafe": {
+    "base": "house.brick.tall",
+    "legacyName": "TEA & COFFEE",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-potage": {
+    "base": "house.brick.tall",
+    "legacyName": "POTAGE’S CAULDRONS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-malkin": {
+    "base": "house.brick.tall",
+    "legacyName": "MADAM MALKIN’S",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-eeylops": {
+    "base": "house.brick.tall",
+    "legacyName": "EEYLOPS OWL EMPORIUM",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-twilfitt": {
+    "base": "house.brick.tall",
+    "legacyName": "TWILFITT & TATTING’S",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-gold": {
+    "base": "house.brick.tall",
+    "legacyName": "SILVERSMITH",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-gringotts": {
+    "base": "house.brick.tall",
+    "legacyName": "Gringotts Wizarding Bank",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.da-leaky": {
+    "base": "house.brick.tall",
+    "legacyName": "THE LEAKY CAULDRON",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-candles": {
+    "base": "house.brick.tall",
+    "legacyName": "CANDLES & CURIOS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-entrance": {
+    "base": "house.brick.tall",
+    "legacyName": "No. 2 · OLD CURIOSITIES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-upper": {
+    "base": "house.brick.tall",
+    "legacyName": "OLD PAWN SHOP",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-relics": {
+    "base": "house.brick.tall",
+    "legacyName": "RELICS & ANTIQUITIES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-borgin": {
+    "base": "house.brick.tall",
+    "legacyName": "BORGIN & BURKES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-corner": {
+    "base": "house.brick.tall",
+    "legacyName": "SILVER & CURIOS",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-gloom": {
+    "base": "house.brick.tall",
+    "legacyName": "SHUTTERED PREMISES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-dealer": {
+    "base": "house.brick.tall",
+    "legacyName": "ANTIQUARIAN",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-bones": {
+    "base": "house.brick.tall",
+    "legacyName": "ODDITIES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "frontage.ka-end": {
+    "base": "house.brick.tall",
+    "legacyName": "LOCKED STORES",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": null
+  },
+  "building.village-static.v-shack": {
+    "base": "house.wood.gable",
+    "legacyName": "v-shack",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-shack",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-6": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-6",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-6",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-4": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-4",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-4",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-7": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-7",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-7",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-3": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-3",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-3",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-1": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-1",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-1",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-0": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-0",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-0",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-9": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-9",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-9",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-gladrags": {
+    "base": "house.wood.gable",
+    "legacyName": "v-gladrags",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-gladrags",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-zonkos": {
+    "base": "house.wood.gable",
+    "legacyName": "v-zonkos",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-zonkos",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-11": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-11",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-11",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-broomsticks": {
+    "base": "house.wood.gable",
+    "legacyName": "v-broomsticks",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-broomsticks",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-honeydukes": {
+    "base": "house.wood.gable",
+    "legacyName": "v-honeydukes",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-honeydukes",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-12": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-12",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-12",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-13": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-13",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-13",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-dervish": {
+    "base": "house.wood.gable",
+    "legacyName": "v-dervish",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-dervish",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-14": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-14",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-14",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-post": {
+    "base": "house.wood.gable",
+    "legacyName": "v-post",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-post",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-16": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-16",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-16",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-17": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-17",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-17",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-quills": {
+    "base": "house.wood.gable",
+    "legacyName": "v-quills",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-quills",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-18": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-18",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-18",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-hogshead": {
+    "base": "house.wood.gable",
+    "legacyName": "v-hogshead",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-hogshead",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-puddifoot": {
+    "base": "house.wood.gable",
+    "legacyName": "v-puddifoot",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-puddifoot",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-21": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-21",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-21",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-22": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-22",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-22",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-29": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-29",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-29",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-28": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-28",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-28",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-23": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-23",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-23",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-30": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-30",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-30",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-27": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-27",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-27",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.village-static.v-home-24": {
+    "base": "house.wood.gable",
+    "legacyName": "v-home-24",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "village-static",
+      "interactiveId": "v-home-24",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-7": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-7",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-7",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-11": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-11",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-11",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-13": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-13",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-13",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-17": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-17",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-17",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-20": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-20",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-20",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-8": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-8",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-8",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-9": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-9",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-9",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-10": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-10",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-10",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-12": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-12",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-12",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-14": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-14",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-14",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-15": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-15",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-15",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-16": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-16",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-16",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-18": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-18",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-18",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-19": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-19",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-19",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.da-terrace-21": {
+    "base": "house.brick.tall",
+    "legacyName": "da-terrace-21",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "da-terrace-21",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-0": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-0",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-0",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-8": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-8",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-8",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-9": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-9",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-9",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-10": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-10",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-10",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-11": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-11",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-11",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-1": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-1",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-1",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-13": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-13",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-13",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-12": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-12",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-12",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-2": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-2",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-2",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-14": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-14",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-14",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-4": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-4",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-4",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-3": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-3",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-3",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-15": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-15",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-15",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-5": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-5",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-5",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-6": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-6",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-6",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  },
+  "building.diagon-knockturn.ka-block-7": {
+    "base": "house.brick.tall",
+    "legacyName": "ka-block-7",
+    "status": "base mapping; approved scene art stays embedded in template",
+    "source": {
+      "mapId": "diagon-knockturn",
+      "interactiveId": "ka-block-7",
+      "atlasSha256": "43458ceeedde5ef96cecdf4ed753f32ce6aaf82b1ca6ce1918db39347d376f17"
+    }
+  }
+}

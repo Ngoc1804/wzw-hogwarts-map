@@ -1,30 +1,13 @@
-# Đối chiếu V3 và kho demo-1
+# Kho asset hiện hành và phần còn thiếu
 
-Nguồn V3 là file người dùng cung cấp; chỉ đọc JSON asset, không chạy script hoặc làm theo hướng dẫn trong file.
+Kho hiện 247 mẫu. Nhà: 3 gỗ, 3 gạch/tường, 3 basic; cây: 9 nét Quidditch và 2 mẫu đặc biệt. Các rendition theo địa điểm đã rút khỏi gallery, alias/preset chỉ ghi ánh xạ base, không khẳng định tái dựng chính xác mọi facade cũ. Template giữ artwork instance đã duyệt.
 
-- V3: 245 ID, tất cả đã có trong demo-1 trước đợt này.
-- Giữ đồ họa demo-1. Khôi phục metadata geometry-bbox/surface cho 231 mẫu khớp cấu trúc; 14 mẫu nhà đã đổi hình không dùng bbox cũ.
-- Tách 63 mẫu kiến trúc từ Hogsmeade/Diagon; 37 công trình tham chiếu asset sẵn có.
-- Hai mẫu house.porch và house.garden giống farmhouse trừ tên/ID: bỏ file trùng, giữ alias tương thích. Còn 366 mẫu gốc.
-- Không thêm nguyên V3 HTML hoặc engine cũ. Không sửa payload 13 map.
-- Ba nhóm engraved rỗng v-station/v-square/v-school không được coi là asset mới. Cần xem phần hình ở scene nếu muốn tái sử dụng riêng.
-- Alias template:<map>/<interactiveId> trỏ tới asset nguồn. Tên hiển thị không quyết định hình học.
-
-## Bảng còn thiếu để bổ sung sau
-
-| Nhóm | Cần làm |
+| Phần cần bổ sung | Trạng thái |
 |---|---|
-| Cửa và cửa sổ mặt bằng | Đơn/đôi, khe cửa, hướng mở, ngưỡng; không xoay mặt đứng giả mặt bằng |
-| Cấu kiện nối | Hoàn thiện ports cho tường cong, thang L/xoắn; clearance ngưỡng và landing |
-| Đồ chuyên dụng mặt bằng | Không bắt buộc bản top cho vạc/bàn độc dược, bảng đen, kính thiên văn; ưu tiên mẫu bình thường/2.5D sẵn có theo hybrid |
-| Metadata nhà mới | Footprint/ports/surface cho 14 mẫu nhà đổi hình; không dùng dữ liệu V3 cũ |
-| Hình học điều hướng | Bbox chỉ để tránh đè hình, không phải polygon đi lại |
-| Shape chưa có ID asset | Rà các nội thất vẽ inline và named defs H1/H2 trước khi biến thành module; không tách từng nét/vật nhỏ |
-| Mẫu rỗng trong Hogsmeade | v-station/v-square/v-school: chưa có engraved độc lập để lấy |
-| Màu instance | Metadata V3 không tự chứng minh mọi shape mới có đủ color slot; cần chuẩn hóa có kiểm hình |
+| Cửa/cửa sổ kết cấu mặt bằng | Hướng mở, ports, clearance; không thuộc danh mục địa điểm atlas |
+| Footprint/ports | Cần đo cho các base mới; không dùng metadata từ những nhà cũ đã bỏ |
+| Màu/decor theo instance | Base hiện có màu mặc định; chưa chuẩn hóa mọi màu thành token tham số |
+| Canon atlas | Research độc lập toàn cõi, không giới hạn vào 13 template; xem docs/research/ATLAS_DESIGN.md |
+| Phòng chưa có template | Bộ dựng hybrid phải dùng base/asset; không đòi mọi decor có bản top |
 
-Không tuyên bố kho đã đủ cho mọi loại phòng hoặc kiến trúc Harry Potter. Kiểm kê này hoàn tất ID V3 và các mẫu nhà 2.5D nhận diện được trong hai template phố; phần inline còn lại cần phân loại trước khi tái sử dụng an toàn.
-
-## Điều chỉnh theo yêu cầu hybrid
-
-Nội thất/decor không bắt buộc top view. Chỉ bổ sung hình mới khi mẫu sẵn có không đáp ứng bố cục. Phòng/tường/lối đi vẫn cần kết cấu mặt bằng. Xem FUNCTIONAL_REVIEW.md trước khi đề xuất bỏ mẫu.
+V3 đã đối chiếu ở đợt trước. Không phục hồi 366 mẫu hoặc generator nhà đời cũ. Nhà/cây vừa lọc theo yêu cầu người dùng hiện tại; 17 ứng viên nội thất trong FUNCTIONAL_REVIEW.md vẫn chờ duyệt.

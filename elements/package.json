@@ -7,8 +7,6 @@
   "private": true,
   "scripts": {
     "build": "node scripts/gallery.mjs && python scripts/verify.py",
-    "test": "node scripts/test-dom.mjs",
-    "generate:houses": "python scripts/new_house_assets.py",
-    "test:houses": "python scripts/test_house_generator.py"
+    "test": "node scripts/test-dom.mjs"
   }
 }
