@@ -12,10 +12,18 @@ Crop bật mặc định, fit các nơi được gửi; crop=false để toàn c
 
 ```html
 <!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><body><p id="status">Đang tải WIZAMAP…</p><iframe title="Bản đồ RP" sandbox="allow-scripts allow-downloads" style="width:100%;height:90dvh;border:0"></iframe><script type="application/json" id="rp-map-data">{}</script><script>
-(async()=>{try{const data=JSON.parse(document.querySelector('#rp-map-data').textContent);const r=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@ee3160e0b3be23c6bdb662e90ebdaa01b403569f/runtime/bundle.js');if(!r.ok)throw Error('Runtime HTTP '+r.status);const code=await r.text();const safe=JSON.stringify(data).replace(/</g,'\\u003c');document.querySelector('iframe').srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+safe+'<\/script><script>'+code.replace(/<\/script/gi,'<\\/script')+'<\/script>';document.querySelector('#status').textContent='Runtime đã tải; trạng thái dữ liệu hiển thị bên trong bản đồ.'}catch(e){document.querySelector('#status').textContent='Không mở được bản đồ: '+e.message}})();
+(async()=>{try{const data=JSON.parse(document.querySelector('#rp-map-data').textContent);const r=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@513a8127bb8f795db2ae0ef78146cc0c53166a3e/runtime/bundle.js');if(!r.ok)throw Error('Runtime HTTP '+r.status);const code=await r.text();const safe=JSON.stringify(data).replace(/</g,'\\u003c');document.querySelector('iframe').srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+safe+'<\/script><script>'+code.replace(/<\/script/gi,'<\\/script')+'<\/script>';document.querySelector('#status').textContent='Runtime đã tải; trạng thái dữ liệu hiển thị bên trong bản đồ.'}catch(e){document.querySelector('#status').textContent='Không mở được bản đồ: '+e.message}})();
 </script></body></html>
 
 ```
+
+
+
+### Spatial Geometry (optional MAP_DATA 2.0)
+
+Trên template ngoài trời, actor `environment=outside` cần `position` và `view.spatial.walkableRegions` (polygon sàn/đất đã xác minh), `blockedRegions` (mái, mặt nước, vật cản). Runtime kiểm tra vị trí nằm trong walkable và ngoài blocked; nếu không đủ dữ liệu sẽ báo lỗi thay vì đoán từ bbox. Có thể dùng `occlusionRegions: [{id,targetId,points}]` để định nghĩa vùng chiếu che đã xác minh: `targetId` là khóa kỹ thuật trong `runtime/templates.json`, phải thuộc whitelist công trình của template. Hover/chọn NPC bị che chỉ giảm opacity đúng công trình xuống 0.7; rời vùng hoặc đổi `/map` sẽ tính lại. Không cần state hoặc backend.
+
+Crop lấy phạm vi cảnh/route và tọa độ actor có thể thấy, không dùng maxHops hay bán kính PC. Fog polygon che nhãn, hint, actor và chặn inspector khi vùng bị fog. MAP_DATA phải được lọc bí mật RP **trước** khi gửi cho Preview; fog không phải bảo mật.
 
 ## Hợp đồng dữ liệu
 
