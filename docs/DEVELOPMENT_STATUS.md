@@ -1,3 +1,7 @@
+# Indoor Stage 2 runtime integration — 10/11/2026
+
+Generated three-column/A* replaced by Stage 2 scene-only formulas. MAP_DATA accepts `view.indoor` and per-room dimensions; current scene only. Generated drawing uses approved 2.5D SVG walls, doors and corridor floors. `buildGeometry` exposes `floorPolygons`, `actorZones`, `exclusionZones` and `suggestedAnchors`, with no fake corridor rooms, no route simulation or layout persistence. 13 fixed artwork templates are unchanged. CI covers formula and standing-zone geometry. Authenticated AI Studio Preview and real mobile devices are not yet tested.
+
 # Trạng thái triển khai
 
 ## Actor Positioning · Crop/Fog · Occlusion (10/11/2026)
