@@ -9,11 +9,11 @@
   "functionIndex": {
     "administration": {
       "name": "Hành chính · làm việc",
-      "count": 34
+      "count": 33
     },
     "circulation": {
       "name": "Giao thông · kết nối",
-      "count": 104
+      "count": 103
     },
     "commerce": {
       "name": "Cửa hàng · dịch vụ thương mại",
@@ -21,7 +21,7 @@
     },
     "other": {
       "name": "Chuyên biệt · khác",
-      "count": 326
+      "count": 322
     },
     "outdoor": {
       "name": "Ngoài trời",
@@ -37,7 +37,7 @@
     },
     "storage": {
       "name": "Kho · lưu trữ",
-      "count": 53
+      "count": 52
     },
     "study": {
       "name": "Học tập · nghiên cứu",
