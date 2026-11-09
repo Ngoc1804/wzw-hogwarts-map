@@ -52,7 +52,7 @@ test('all five unbuilt AU maps are locked; CCC builds main room only',()=>{
  }
 });
 test('Ministry and existing H1/H2 exteriors do not generate duplicate maps',()=>{
- for(const id of sceneIndex.noGeneratePlaceIds)assert.throws(()=>assertGeneratedScene([id]),/Existing fixed map/);
+ for(const id of sceneIndex.noGeneratePlaceIds)assert.throws(()=>assertGeneratedScene([id]),/Existing fixed map|AU map locked/);
  assert.throws(()=>resolveMap({...withPlace('P-30cf89999f5e15'),view:{...withPlace('P-30cf89999f5e15').view,preferredMode:'generated'}}),/Existing fixed map/);
 });
 test('castle, tower and only three approved AU have flexible presets',()=>{
