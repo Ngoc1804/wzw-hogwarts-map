@@ -15,7 +15,7 @@ export function buildIndoorWalls(model){
  }
  for(const f of model.facades||[])raw.push({...f,z:depth*1.8});
  if(model.entrance)gaps.push(model.entrance);
- 
+
  const groups=new Map();for(const s of raw){const k=s.axis+':'+s.fixed;if(!groups.has(k))groups.set(k,[]);groups.get(k).push(s);}
  const walls=[];
  for(const segs of groups.values()){
