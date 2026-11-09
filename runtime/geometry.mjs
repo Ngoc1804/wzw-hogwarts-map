@@ -62,12 +62,15 @@ export function buildGeometry(plan,indoor={}){
  const places=plan.places;
  if(!places.length)throw Error('Indoor scene requires at least one visible room');
  if(new Set(places.map(p=>p.floor||'')).size>1)throw Error('Only the current indoor floor/scene may be built; provide one floor per /map');
- const records=places.map(p=>({
+ const corridorPlaces=places.filter(p=>p.kind==='corridor');
+ const roomPlaces=places.filter(p=>p.kind!=='corridor');
+ if(!roomPlaces.length&&indoor.layout==='tower')throw Error('Tower recipe requires an actual room');
+ const records=roomPlaces.map(p=>({
   id:p.id,name:p.name,shape:shapeFor(p),
   ...(p.generation?.width?{width:p.generation.width}:{}),
   ...(p.generation?.depth?{depth:p.generation.depth}:{})
  }));
- const request={...indoor,rooms:records};
+ const request={...indoor,rooms:records,allowEmptyRooms:!records.length};
  // The current MAP_DATA place list defines the scene. Ignore any external roomCount.
  delete request.roomCount;
  const model=buildIndoorLayout(request),walls=buildIndoorWalls(model);
@@ -85,19 +88,25 @@ export function buildGeometry(plan,indoor={}){
   actorZones.push(...v.regions);suggestedAnchors[r.id]=v.anchors;
   safeAreas[r.id]=v.regions;
  }
- const corridorZones=[],corridorAnchors=[];
+ const corridorZones=[],corridorAnchors=[],corridorAreas=[];
  for(let i=0;i<model.floors.length;i++){
   const p=model.floors[i];
   // Exclude overlapping rooms and void areas from corridor actor zones.
   const blockers=[...exclusions,...model.rooms.map(r=>({poly:rooms[r.id].poly}))];
-  try{const v=positions('corridor:'+i,p,blockers,12);corridorZones.push(...v.regions);corridorAnchors.push(...v.anchors)}catch(e){
+  try{const v=positions('corridor:'+i,p,blockers,12);corridorZones.push(...v.regions);corridorAnchors.push(...v.anchors);corridorAreas.push({floor:p,index:i,...v})}catch(e){
    // A short connector can have no safe standing area; never manufacture one.
    if(!e.message.startsWith('No safe actor surface'))throw e;
   }
  }
  actorZones.push(...corridorZones);
+ if(corridorPlaces.length&&!corridorAreas.length)throw Error('No safe corridor surface for current scene');
+ corridorPlaces.forEach((p,i)=>{
+  const area=corridorAreas[i%corridorAreas.length];
+  suggestedAnchors[p.id]=area.anchors;safeAreas[p.id]=area.regions;
+  floorPolygons.push(asRegion('corridor-place:'+p.id,area.floor));
+ });
  for(const p of places)if(!suggestedAnchors[p.id]?.length)throw Error('Missing safe indoor anchor for '+p.id);
- return {rooms,model,walls,bounds:model.bounds,floorPolygons,actorZones,exclusionZones,suggestedAnchors,corridorAnchors,safeAreas,routes:[]};
+ return {rooms,model,walls,bounds:model.bounds,floorPolygons,actorZones,exclusionZones,suggestedAnchors,corridorAnchors,corridorPlaceIds:corridorPlaces.map(p=>p.id),safeAreas,routes:[]};
 }
 export function indoorActorPoint(geometry,placeId,position){
  const zones=geometry.safeAreas[placeId];
