@@ -1,766 +1,828 @@
-# WZW ATLAS — ĐÃ CHUẨN HÓA
+# WZW ATLAS — ĐÃ TỐI ƯU
 
-747 mục nguồn → 733 địa điểm; gộp 14 lần lặp.
+Chỉ dùng dữ liệu người dùng cung cấp. 747 mục nguồn → 733 địa điểm; gộp 14 lần lặp rõ ràng. Giữ đầy đủ khu vực, tầng, cụm và ID phòng gốc.
 
-Chỉ dùng atlas người dùng cung cấp. Cùng chức năng ở nhà/tầng khác nhau vẫn là địa điểm riêng. Template đề xuất không đồng nghĩa đã có mặt bằng nội thất. Không suy kết nối từ danh mục.
+Cùng chức năng ở hai vị trí khác nhau vẫn là hai địa điểm. Nhóm chức năng giúp tra cứu; không tự tạo kết nối hoặc mặt bằng. Danh sách nơi thuộc template chỉ là phạm vi đề xuất, chưa phải xác nhận có bản vẽ nội thất. JSON giữ toàn bộ cấu trúc và tham chiếu chi tiết.
 
-## administration
+## Template
 
-- **Phòng chờ văn phòng Hiệu trưởng** · `TWR-05-01-02` — Hogwarts / Tháp Hiệu trưởng / Tầng cửa vào
-- **Phòng họp** · `P-cc6eda155ffa84` — WzW House · 18 Ganton Street · Soho / Tầng 2
-- **Phòng họp giảng viên kín** · `TWR-08-03-02` — Hogwarts / Tháp Giáo viên (Faculty Tower) / Tầng trên
-- **Phòng họp học sinh** · `HOG-TNG4-S-04` — Hogwarts / TẦNG 4 / Nam / Câu lạc bộ và hoạt động nhóm
-- **Phòng họp liên nhà** · `HOG-TNG8-W-06` — Hogwarts / TẦNG 8 / Tây / CCC / senior clubs (AU)
-- **Phòng làm việc** · `P-0cf87e2f9d3027` — Grayhaven Estate · California / Tầng 1 (trệt)
-- **Phòng làm việc** · `P-56dbab3b62a960` — Nhà PC · London / Tầng 2
-- **Phòng làm việc bổ trợ DADA** · `TWR-09-03-02` — Hogwarts / Tháp DADA / Tầng trên
-- **Phòng làm việc thủ thư** · `HOG-TNG5-N-03` — Hogwarts / TẦNG 5 / Bắc / Library – Restricted Section
-- **Phòng làm việc trợ giảng** · `HOG-TNG3-S-04` — Hogwarts / TẦNG 3 / Nam / Phòng học bổ trợ
-- **Phòng làm việc Xenophilius** · `P-10483afb50657b` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Phòng trực cửa Bắc** · `HOG-TNG1-N-04` — Hogwarts / TẦNG 1 / Bắc / North Hall – Bell Tower
-- **Phòng trực gia tinh** · `HOG-HMNGC-S-04` — Hogwarts / HẦM NGỤC / Nam / Kho và tuyến phục vụ dưới Đại Sảnh
-- **Phòng trực giờ giấc** · `TWR-06-01-02` — Hogwarts / Tháp Đồng hồ / Chân tháp
-- **Phòng trực nhân viên** · `TWR-08-01-02` — Hogwarts / Tháp Giáo viên (Faculty Tower) / Tầng tiếp cận
-- **Số 10 Downing Street / văn phòng Thủ tướng Muggle** · `P-000814ab7a3200` — Britain / England / London / Địa điểm khác
-- **Tầng 1 – Văn phòng Bộ trưởng** · `P-10ca277b3be7f2` — Template / ministry2
-- **Văn phòng bà Pomfrey** · `HOG-TNG2-S-02` — Hogwarts / TẦNG 2 / Nam / Hospital & Faculty Tower access
-- **Văn phòng Bằng sáng chế Lố bịch** · `P-3e401191d71800` — Template / ministry2
-- **Văn phòng Cấp phép Độn thổ** · `P-13dfea8fe4bf27` — Template / ministry2
-- **Văn phòng Filch** · `HOG-TNG1-S-06` — Hogwarts / TẦNG 1 / Nam / Entrance Hall – Great Hall
-- **Văn phòng Filch** · `P-5e20349a56bd1b` — Template / hall
-- **Văn phòng giáo sư DADA (Lockhart 1992)** · `HOG-TNG3-E-01` — Hogwarts / TẦNG 3 / Tây / Văn phòng DADA – lối kín
-- **Văn phòng Hiệu trưởng** · `TWR-05-02-01` — Hogwarts / Tháp Hiệu trưởng / Đỉnh tháp
-- **Văn phòng Lạm dụng Đồ tạo tác Muggle** · `P-444469fe1666f1` — Template / ministry2
-- **Văn phòng Liên lạc Pháp thuật Quốc tế** · `P-a3d0329c5db5e2` — Template / ministry2
-- **Văn phòng Liên lạc Yêu tinh** · `P-76e93cc0236521` — Template / ministry2
-- **Văn phòng Mạng Floo** · `P-58ba0981b28173` — Template / ministry2
-- **Văn phòng McGonagall** · `HOG-TNG2-N-02` — Hogwarts / TẦNG 2 / Bắc / History & Transfiguration corridor
-- **Văn phòng quản lý trại trẻ** · `P-561f5bd89f1fb7` — Britain / England / London / Địa điểm khác
-- **Văn phòng Snape** · `HOG-HMNGC-N-02` — Hogwarts / HẦM NGỤC / Bắc / Cụm Độc dược và gian chuẩn bị
-- **Văn phòng Sử dụng Pháp thuật Sai trái** · `P-ad6b222c1cf8e4` — Template / ministry2
-- **Văn phòng Thứ trưởng / trợ lý Bộ trưởng** · `P-f9c67c9c540345` — Template / ministry2
-- **Văn phòng Tư vấn Sinh vật gây hại** · `P-873b198808d71f` — Template / ministry2
+- **h1** — Hogwarts và vùng phụ cận — ngoài trời · 39 tham chiếu.
+- **h2** — Lâu đài Hogwarts — khối kiến trúc, sân trong và cầu · 17 tham chiếu.
+- **hall** — Tầng trệt & Đại Sảnh Hogwarts · 12 tham chiếu.
+- **gryffindor-common** — Gryffindor · phòng chung và phòng ngủ · 5 tham chiếu.
+- **ravenclaw-common** — Ravenclaw · phòng chung và phòng ngủ · 5 tham chiếu.
+- **hufflepuff-common** — Hufflepuff · phòng chung và phòng ngủ · 5 tham chiếu.
+- **slytherin-common** — Slytherin · phòng chung và phòng ngủ · 5 tham chiếu.
+- **village-static** — Làng Hogsmeade · 17 tham chiếu.
+- **pitch-static** — Sân Quidditch · toàn khu · 11 tham chiếu.
+- **express** — Ga và Hogwarts Express · 17 tham chiếu.
+- **diagon-knockturn** — Diagon Alley & Knockturn Alley · 31 tham chiếu.
+- **ministry2** — Bộ Pháp thuật · tầng 1–7 · 29 tham chiếu.
+- **ministry-8-10** — Bộ Pháp thuật · tầng 8–10 · 17 tham chiếu.
 
-## circulation
+## Danh mục địa điểm theo khu vực và chức năng
 
-- **Buồng kiểm tra cầu thang** · `TWR-10-01-02` — Hogwarts / Tháp Cầu thang Lớn / Chân tháp
-- **Các bãi cỏ ngoài sân trong và ngoài khu cầu/cổng H2** · `P-13ae06fd76adc5` — Template / h1
-- **Các lăng mộ Ai Cập mà Bill phá giải lời nguyền** · `P-3be97f06839afa` — Khác
-- **Cầu cạn Viaduct** · `P-f79a562f43d99a` — Template / h2
-- **Cầu thang Lớn** · `TWR-10-01-01` — Hogwarts / Tháp Cầu thang Lớn / Chân tháp
-- **Cầu thang Nhà cú** · `TWR-11-01-01` — Hogwarts / Tháp Tây (Nhà cú) / Lối lên
-- **Cầu thang tắt sau thảm treo** · `HOG-TNG3-W-01` — Hogwarts / TẦNG 5 / Nam / Lối đi tầng bốn và gian trống
-- **Cầu thang trong khu Gryffindor** · `P-6a9cb408f9f168` — Template / gryffindor-common
-- **Cầu thang xoắn lên Tháp Bắc** · `TWR-03-01-01` — Hogwarts / Tháp Bắc (Tiên tri) / Tầng tiếp cận
-- **Cầu thang xoắn sau tượng đá** · `TWR-05-01-01` — Hogwarts / Tháp Hiệu trưởng / Tầng cửa vào
-- **Cổng chính Hogwarts** · `P-ae87f1280dad9c` — Template / h2
-- **Công viên Little Whinging** · `P-2fdedba88577ad` — Britain / England / Surrey / Little Whinging
-- **Đại Sảnh** · `P-bd27aa15491ba5` — Template / hall
-- **Đại Sảnh (Great Hall)** · `HOG-TNG1-S-02` — Hogwarts / TẦNG 1 / Nam / Entrance Hall – Great Hall
-- **Đại sảnh Malfoy Manor** · `P-7ceaf0fcb836c1` — Britain / England / Wiltshire
-- **Gầm cầu thang nhà Dursley** · `P-df6db152b7d063` — Britain / England / Surrey / Little Whinging
-- **Hành lang áo giáp** · `HOG-TNG4-N-02` — Hogwarts / TẦNG 4 / Bắc / Trophy – Armour Gallery
-- **Hành lang Bùa chú** · `HOG-TNG4-E-02` — Hogwarts / TẦNG 4 / Tây / Charms – hành lang cấm cũ
-- **Hành lang các phòng giáo viên** · `TWR-08-02-01` — Hogwarts / Tháp Giáo viên (Faculty Tower) / Tầng giữa
-- **Hành lang cấm tầng ba năm 1991** · `HOG-TNG4-E-03` — Hogwarts / TẦNG 4 / Tây / Charms – hành lang cấm cũ
-- **Hành lang cánh Đông tầng năm** · `HOG-TNG6-E-02` — Hogwarts / TẦNG 6 / Đông / Phòng học trung cấp
-- **Hành lang cầu thang phía Bắc** · `HOG-TNG7-N-05` — Hogwarts / TẦNG 7 / Bắc / Upper stair – tower access
-- **Hành lang chân Tháp Thiên văn** · `TWR-04-01-01` — Hogwarts / Tháp Thiên văn / Tầng chân tháp
-- **Hành lang chung Slytherin dưới hồ** · `P-1cbafaf3eaef87` — Template / slytherin-common
-- **Hành lang chung trong khu Hufflepuff** · `P-cabb450c67c344` — Template / hufflepuff-common
-- **Hành lang cửa sổ phía Tây tầng năm** · `HOG-TNG6-W-01` — Hogwarts / TẦNG 6 / Tây / Hành lang cửa sổ cao
-- **Hành lang đá dưới Tháp Thiên văn** · `HOG-HMNGM-N-01` — Hogwarts / HẦM NGẦM / Bắc / Đường dẫn hầm kỹ thuật
-- **Hành lang Dài (Long Gallery)** · `HOG-TNG5-E-01` — Hogwarts / TẦNG 5 / Đông / Long Gallery – chuyên môn
-- **Hành lang dẫn đến hầm bị niêm phong** · `HOG-HMNGM-E-04` — Hogwarts / HẦM NGẦM / Đông / Hầm di tích và cửa sâu
-- **Hành lang dẫn lên văn phòng Hiệu trưởng** · `HOG-TNG8-N-01` — Hogwarts / TẦNG 8 / Bắc / Upper Grand Staircase / Headmaster
-- **Hành lang gương thông lối bí mật cũ** · `HOG-TNG5-S-02` — Hogwarts / TẦNG 5 / Nam / Lối đi tầng bốn và gian trống
-- **Hành lang hầm Tháp Thiên văn** · `HOG-HMNGC-W-01` — Hogwarts / HẦM NGỤC / Tây / Cụm lớp học ngầm và hầm cũ
-- **Hành lang hậu cần bếp** · `HOG-TNGBP-N-05` — Hogwarts / TẦNG BẾP / Bắc / Bếp và lối phục vụ
-- **Hành lang Hufflepuff** · `HOG-TNGBP-E-04` — Hogwarts / TẦNG BẾP / Đông / Cụm Hufflepuff
-- **Hành lang hướng sân Tứ giác** · `HOG-TNG1-W-04` — Hogwarts / TẦNG 1 / Tây / Transfiguration Courtyard approach
-- **Hành lang kết nối hầm phía Tây** · `HOG-TNGBP-W-05` — Hogwarts / TẦNG BẾP / Tây / Khu công vụ và hầm thực phẩm
-- **Hành lang kho phía Nam** · `HOG-TNGBP-S-05` — Hogwarts / TẦNG BẾP / Nam / Giặt là và kho phục vụ
-- **Hành lang kính tầng cao** · `HOG-TNG7-W-05` — Hogwarts / TẦNG 7 / Tây / Cụm sinh hoạt và trò chơi
-- **Hành lang nối bệnh xá** · `TWR-08-03-01` — Hogwarts / Tháp Giáo viên (Faculty Tower) / Tầng trên
-- **Hành lang nối khu nhà kính** · `HOG-TNG1-E-03` — Hogwarts / TẦNG 1 / Đông / Library Annex – Viaduct
-- **Hành lang phía trên Tháp Giáo viên** · `HOG-TNG7-S-01` — Hogwarts / TẦNG 7 / Nam / Đường nối Faculty/Clock tower
-- **Hành lang Slytherin dưới hồ** · `HOG-HMNGC-E-04` — Hogwarts / HẦM NGỤC / Đông / Lối Slytherin dưới mặt hồ
-- **Hành lang tầng bảy trước Phòng Yêu cầu** · `HOG-TNG8-E-01` — Hogwarts / TẦNG 8 / Đông / Room of Requirement
-- **Hành lang tầng hai cạnh nhà vệ sinh Myrtle** · `HOG-TNG3-N-02` — Hogwarts / TẦNG 3 / Bắc / Phòng vệ sinh Myrtle và dãy hành lang
-- **Hành lang tầng trên North Hall** · `HOG-TNG2-W-03` — Hogwarts / TẦNG 2 / Đông / Scholars / North Hall upper walk
-- **Hành lang tầng trên Sảnh Bắc** · `HOG-TNG4-W-01` — Hogwarts / TẦNG 4 / Đông / Gallery – North Hall upper route
-- **Hành lang Tháp DADA tầng cao** · `TWR-09-03-01` — Hogwarts / Tháp DADA / Tầng trên
-- **Hành lang Tháp DADA tầng thấp** · `HOG-TNG2-E-02` — Hogwarts / TẦNG 2 / Tây / DADA teaching cluster
-- **Hành lang Tháp Đồng hồ tầng cao** · `HOG-TNG6-S-01` — Hogwarts / TẦNG 6 / Nam / Lối lên Tháp Đồng hồ
-- **Hành lang Tháp Giáo viên tầng trên** · `HOG-TNG6-N-03` — Hogwarts / TẦNG 6 / Bắc / Prefects corridor – Faculty route
-- **Hành lang toa** · `P-a04785690fe84b` — Template / express
-- **Hành lang tới cửa Bắc Hogwarts** · `HOG-TNG1-N-03` — Hogwarts / TẦNG 1 / Bắc / North Hall – Bell Tower
-- **Hành lang tới văn phòng DADA** · `HOG-TNG3-E-02` — Hogwarts / TẦNG 3 / Tây / Văn phòng DADA – lối kín
-- **Hành lang tranh bản đồ Argyllshire** · `HOG-TNG3-W-02` — Hogwarts / TẦNG 3 / Đông / Cầu thang tắt và hành lang lâu đài
-- **Hành lang tranh nối Cầu thang Lớn** · `TWR-10-02-01` — Hogwarts / Tháp Cầu thang Lớn / Lưng chừng
-- **Hành lang tranh tầng bảy** · `HOG-TNG8-S-05` — Hogwarts / TẦNG 8 / Nam / Gryffindor entrance – common route
-- **Hành lang trước Phòng tắm Huynh trưởng** · `HOG-TNG6-N-02` — Hogwarts / TẦNG 6 / Bắc / Prefects corridor – Faculty route
-- **Hành lang vận chuyển thực phẩm** · `HOG-HMNGC-S-03` — Hogwarts / HẦM NGỤC / Nam / Kho và tuyến phục vụ dưới Đại Sảnh
-- **Hành lang vào sân Biến hình** · `HOG-TNG1-W-03` — Hogwarts / TẦNG 1 / Tây / Transfiguration Courtyard approach
-- **Hành lang vào Tháp Giáo viên** · `HOG-TNG2-S-03` — Hogwarts / TẦNG 2 / Nam / Hospital & Faculty Tower access
-- **Kho dụng cụ sảnh Trung tâm** · `HOG-TNG1-E-05` — Hogwarts / TẦNG 1 / Đông / Library Annex – Viaduct
-- **Kho vật dụng sảnh đọc** · `HOG-TNG5-S-05` — Hogwarts / TẦNG 5 / Nam / Lối đi tầng bốn và gian trống
-- **Lối cầu thang ký túc Gryffindor** · `HOG-TNG8-S-03` — Hogwarts / TẦNG 8 / Nam / Gryffindor entrance – common route
-- **Lối chân dung Bà Béo** · `HOG-TNG8-S-01` — Hogwarts / TẦNG 8 / Nam / Gryffindor entrance – common route
-- **Lối đi và bãi đất ven hồ** · `P-bb3906692ce0a3` — Template / h1
-- **Lối đi và sân trong ranh khu Quidditch** · `P-f9359f86975e71` — Template / pitch-static
-- **Lối lên Cầu thang Lớn tại Tiền sảnh** · `P-d216ce626788ed` — Template / hall
-- **Lối lên Nhà cú** · `P-cc5bcc4d694457` — Template / h1
-- **Lối nối giữa các toa** · `P-27cbd65e002cd1` — Template / express
-- **Lối thang ký túc nam** · `TWR-01-01-02` — Hogwarts / Tháp Gryffindor / Lối vào (Tầng 8)
-- **Lối thang ký túc nữ** · `TWR-01-01-03` — Hogwarts / Tháp Gryffindor / Lối vào (Tầng 8)
-- **Lối vào Faculty Tower** · `TWR-08-01-01` — Hogwarts / Tháp Giáo viên (Faculty Tower) / Tầng tiếp cận
-- **Lối vào Rừng Cấm** · `P-0006dd26862fbe` — Template / h1
-- **Phòng kiểm tra an toàn cầu thang** · `HOG-TNG3-W-03` — Hogwarts / TẦNG 3 / Đông / Cầu thang tắt và hành lang lâu đài
-- **Phòng lập bản vẽ công trình** · `HOG-HMNGM-W-04` — Hogwarts / HẦM NGẦM / Tây / Hầm đá xưa và phòng nghiên cứu
-- **Phòng nhỏ cạnh Đại Sảnh** · `P-ce57067fcd107f` — Template / hall; Hogwarts / TẦNG 1 / Nam / Entrance Hall – Great Hall
-- **Phòng sinh hoạt học sinh cuối hành lang** · `TWR-01-02-03` — Hogwarts / Tháp Gryffindor / Tầng tháp trên
-- **Phòng trực hành lang B-03** · `HOG-TNG3-N-05` — Hogwarts / TẦNG 3 / Bắc / Phòng vệ sinh Myrtle và dãy hành lang
-- **Phòng trực hành lang giữa tầng** · `TWR-10-02-02` — Hogwarts / Tháp Cầu thang Lớn / Lưng chừng
-- **Sảnh** · `P-d5c52789ba1582` — 7 Rowan Mews · London / Tầng 1 (trệt)
-- **Sảnh cao Cầu thang Lớn** · `TWR-10-03-01` — Hogwarts / Tháp Cầu thang Lớn / Đỉnh tháp
-- **Sảnh chân Tháp Chuông** · `HOG-TNG1-N-02` — Hogwarts / TẦNG 1 / Bắc / North Hall – Bell Tower
-- **Sảnh chân Tháp DADA** · `TWR-09-01-01` — Hogwarts / Tháp DADA / Chân tháp
-- **Sảnh chung** · `P-d1e5c9e5641c72` — Loft 5A · 21 Great Titchfield Street · Fitzrovia / Sảnh chung
-- **Sảnh lối vào Cầu cạn (Viaduct Entrance)** · `HOG-TNG1-E-02` — Hogwarts / TẦNG 1 / Đông / Library Annex – Viaduct
-- **Sảnh nhà Black** · `P-0d84f863a32ec4` — Britain / England / London / Nhà ở / trụ sở
-- **Sảnh phía Bắc (North Hall)** · `HOG-TNG1-N-01` — Hogwarts / TẦNG 1 / Bắc / North Hall – Bell Tower
-- **Sảnh tầng cao Cầu thang Lớn** · `HOG-TNG8-N-03` — Hogwarts / TẦNG 8 / Bắc / Upper Grand Staircase / Headmaster
-- **Sảnh Tháp Đồng hồ** · `TWR-06-01-01` — Hogwarts / Tháp Đồng hồ / Chân tháp
-- **Sảnh Tiên tri** · `P-c089c78b883a86` — Template / ministry-8-10
-- **Sảnh tiếp cận Đại Sảnh** · `P-0880e4fe3da124` — Template / hall
-- **Sảnh tiếp đón Bộ Pháp thuật** · `P-1901b8ad031d44` — Template / ministry-8-10
-- **Sảnh tiếp nhận St Mungo** · `P-a3e9554f74bb7f` — Britain / England / London / Bệnh viện St Mungo / Tầng trệt
-- **Sảnh tiếp tân** · `P-0f0f21af1613e3` — WzW House · 18 Ganton Street · Soho / Tầng 1 (trệt)
-- **Sảnh tròn xoay** · `P-44a4a4856bc09b` — Template / ministry-8-10
-- **Sảnh trong khu Ravenclaw** · `P-8fd2ba76f6cef8` — Template / ravenclaw-common
-- **Sảnh Trung tâm (Central Hall)** · `HOG-TNG1-E-01` — Hogwarts / TẦNG 1 / Đông / Library Annex – Viaduct
-- **Sảnh vào Ravenclaw** · `TWR-02-01-02` — Hogwarts / Tháp Ravenclaw / Lối vào tháp cao
-- **Sảnh vào văn phòng Hiệu trưởng** · `HOG-TNG8-N-02` — Hogwarts / TẦNG 8 / Bắc / Upper Grand Staircase / Headmaster
-- **Tiền sảnh** · `P-660382eb5d124f` — Template / hall
-- **Tiền sảnh** · `P-704560d7aaa0f1` — Whitecap Estate · Isle of Wight / Tầng 1 (trệt)
-- **Tiền sảnh** · `P-b2554d6b1381cd` — Nhà PC · London / Tầng 1 (trệt)
-- **Tiền sảnh** · `P-fd29682932d8c0` — Grayhaven Estate · California / Tầng 1 (trệt)
-- **Tiền sảnh (Entrance Hall)** · `HOG-TNG1-S-01` — Hogwarts / TẦNG 1 / Nam / Entrance Hall – Great Hall
+### 7 Rowan Mews · London / Bán hầm
 
-## commerce
+- **Chuyên biệt · khác:** Kho.
+- **Phục vụ · sinh hoạt:** Bếp; Laundry; Pantry.
 
-- **Các cửa hàng hiện trong làng** · `P-c8e6b9a47ac0b8` — Template / village-static
-- **Các tiệm, xưởng, quán trong bản đồ Diagon** · `P-95cdaf84841bcd` — Template / diagon-knockturn
-- **Cơ quan Khóa Cảng** · `P-da0766f575a2ce` — Template / ministry2
-- **Cửa hàng bệnh viện** · `P-fc634b366552e4` — Britain / England / London / Bệnh viện St Mungo / Tầng 5
-- **Đài quan sát Thiên văn** · `TWR-04-03-02` — Hogwarts / Tháp Thiên văn / Đỉnh tháp
-- **Phòng bảo quản tranh phép** · `HOG-TNG8-E-05` — Hogwarts / TẦNG 8 / Đông / Room of Requirement
-- **Phòng chuẩn bị quan sát** · `TWR-04-02-01` — Hogwarts / Tháp Thiên văn / Tầng giữa
-- **Quán cà phê Tottenham Court Road** · `P-2236da8489dfad` — Britain / England / London / Cửa ngõ và ga
-- **Quản lý Chổi bay** · `P-05c90391d35da8` — Template / ministry2
-- **Quán The Hanged Man** · `P-1257864e10b184` — Britain / England / Little Hangleton / Great Hangleton
-- **Quán trà Madam Puddifoot** · `P-28dd4f052c2855` — Template / village-static
-- **Tiệm áo chùng cũ** · `P-9253053d400539` — Template / diagon-knockturn
-- **Tiệm bút lông và giấy da** · `P-2b888eaec42438` — Template / diagon-knockturn
-- **Tiệm cổ vật / cầm đồ tại Knockturn** · `P-5d33c248682e4b` — Template / diagon-knockturn
-- **Tiệm đồ cũ** · `P-1b93d2a168cc1a` — Template / diagon-knockturn
+### 7 Rowan Mews · London / Tầng 1 (trệt)
 
-## other
+- **Chuyên biệt · khác:** Phòng ăn; Phòng áo khoác; Phòng khách.
+- **Giao thông · kết nối:** Sảnh.
+- **Ngoài trời:** Phòng vườn; Sân trong.
 
-- **Apothecary** · `P-ece8b34b0783e7` — Template / diagon-knockturn
-- **Apothecary tại Hogsmeade trong template** · `P-2be38007d6f246` — Template / village-static
-- **Ba Cây Chổi và các phòng của quán** · `P-561ef194a3cfad` — Template / village-static
-- **Ban công** · `P-e320c112ea6a38` — Whitecap Estate · Isle of Wight / Tầng 2
-- **Beauxbatons Academy of Magic** · `P-240c66e1c2ad19` — France / Trường pháp thuật
-- **Bến ga / bến thuyền Hogsmeade ngoài khu nhà ga** · `P-6fca659549629d` — Template / h1
-- **Bến thuyền Hogwarts** · `P-7f18ace1f8b2d7` — Template / h1
-- **Bến Whitecap** · `P-6f010e23dbcf13` — Whitecap Estate · Isle of Wight / Bờ biển Whitecap
-- **Bệnh xá Hogwarts** · `HOG-TNG2-S-01` — Hogwarts / TẦNG 2 / Nam / Hospital & Faculty Tower access
-- **Biệt thự Grayhaven** · `P-28f1e32ca3f09f` — Grayhaven Estate · California / Khuôn viên
-- **Biệt thự Riddle** · `P-3af65a0ca62879` — Britain / England / Little Hangleton / Great Hangleton
-- **Biệt thự Whitecap** · `P-6622d43a61e262` — Whitecap Estate · Isle of Wight / Khuôn viên
-- **Borgin & Burkes** · `P-b08a347b7ef127` — Template / diagon-knockturn
-- **Budleigh Babberton** · `P-b4e7452b5bd988` — Britain / England / Các địa điểm và nhà khác
-- **Buồng kiểm tra chuông giờ** · `TWR-06-03-02` — Hogwarts / Tháp Đồng hồ / Đỉnh tháp
-- **Buồng quả lắc lớn** · `TWR-06-03-01` — Hogwarts / Tháp Đồng hồ / Đỉnh tháp
-- **Bưu điện Hogsmeade** · `P-f29f8a2656ded8` — Template / village-static
-- **Các cơ sở Knockturn khác trong template** · `P-5c5b87e483e862` — Template / diagon-knockturn
-- **Các dãy phòng giam Azkaban** · `P-8957dd0847f167` — Britain / Ngoài khơi, vị trí bí mật
-- **Các khán đài Quidditch** · `P-5a4fefc72d7d57` — Template / pitch-static
-- **Các ngõ ở Hogsmeade** · `P-f30d790b24b65a` — Template / village-static
-- **Các nhà kính Hogwarts và các phòng bên trong** · `P-96d14a7a982d4e` — Template / h1
-- **Các toa Hogwarts Express** · `P-83c52658df2171` — Template / express
-- **Cái Vạc Lủng và các phòng trọ** · `P-c7788eabe9f16a` — Template / diagon-knockturn
-- **Cánh đồng World Cup Quidditch** · `P-297d369b484bc3` — Khác
-- **Castelobruxo School of Magic** · `P-dc6e4d25cb717b` — Brazil / Trường pháp thuật
-- **Cầu đá nối các cánh lâu đài** · `P-5eb3bde9176879` — Template / h2
-- **Cầu gỗ và các cầu nối thuộc khối lâu đài** · `P-0a1ff4c2777f64` — Template / h2
-- **Cây cổ thụ ven hồ** · `P-9f810bb6686c6d` — Template / h1
-- **CCC 07.18** · `HOG-TNG8-W-01` — Hogwarts / TẦNG 8 / Tây / CCC / senior clubs (AU)
-- **CCC 07.18** · `P-7dbd9dfca98ac3` — CCC 07.18 · Hogwarts / Tầng 8 · cánh Tây
-- **Charing Cross Road** · `P-a91d33c0729151` — Britain / England / London / Cửa ngõ và ga
-- **Chuồng gia cầm** · `P-fafa275e3442de` — Whitecap Estate · Isle of Wight / Khuôn viên
-- **Cokeworth** · `P-5965034df92b27` — Britain / England / Cokeworth / Spinner’s End
-- **Đài treo chuông** · `TWR-07-02-01` — Hogwarts / Tháp Chuông / Đỉnh tháp
-- **Đầu Heo và các phòng của quán** · `P-81a969eb658163` — Template / village-static
-- **Đầu máy Hogwarts Express** · `P-00020cadb6235e` — Template / express
-- **Đấu trường thử thách rồng** · `P-4ba45d2ca765ad` — Khác
-- **Dãy phòng phụ của sân** · `P-936cbb9c617eca` — Template / pitch-static
-- **Dervish & Banges** · `P-8de3a27d58bad8` — Template / village-static
-- **Đội Đảo ngược Tai nạn Pháp thuật** · `P-6f640309d1ece1` — Template / ministry2
-- **Đường dạo ngoài trời quanh Hogwarts** · `P-385234641b8727` — Template / h1
-- **Đường dạo ven hồ** · `P-9c45a4f54ea1ee` — Template / h1
-- **Đường đi ngoài các tường bao lâu đài** · `P-6ac732451f03d7` — Template / h1
-- **Đường giữa các nhà kính** · `P-31f204a8e0e490` — Template / h1
-- **Đường mòn giữa Hogwarts và Hogsmeade** · `P-d76cff03ee7601` — Template / h1
-- **Đường ống xuống Phòng Chứa Bí mật** · `HOG-HMNGM-E-01` — Hogwarts / HẦM NGẦM / Đông / Hầm di tích và cửa sâu
-- **Đường tới lều Hagrid** · `P-7debd31a87a61e` — Template / h1
-- **Đường tới nhà ga Hogsmeade** · `P-ff62bf19892de9` — Template / h1
-- **Durmstrang Institute (vị trí bí mật, chưa chốt nước)** · `P-0b1c0c88e006f3` — Bắc Âu / Trường pháp thuật
-- **Eeylops Owl Emporium** · `P-83b46b70fcdcc6` — Template / diagon-knockturn
-- **Florean Fortescue’s** · `P-065a853b8d7608` — Template / diagon-knockturn
-- **Flourish & Blotts** · `P-b652531fad15ad` — Template / diagon-knockturn
-- **Ga Hogsmeade** · `P-94a7036730f10e` — Template / express
-- **Ga Paddington** · `P-13cff25cacf38f` — Britain / England / London / Cửa ngõ và ga
-- **Gác mái Hang Sóc** · `P-c11e875f2e672c` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Gambol & Japes** · `P-f4ef10f0794466` — Template / diagon-knockturn
-- **Gian bàn cờ phù thủy** · `HOG-HMNGM-S-03` — Hogwarts / HẦM NGẦM / Nam / Cụm hầm đá bảo vệ cũ
-- **Gian chìa khóa bay** · `HOG-HMNGM-S-02` — Hogwarts / HẦM NGẦM / Nam / Cụm hầm đá bảo vệ cũ
-- **Gian cơ cấu bánh răng** · `TWR-06-02-01` — Hogwarts / Tháp Đồng hồ / Giữa tháp
-- **Gian cửa chắn hầm cổ** · `HOG-HMNGM-E-03` — Hogwarts / HẦM NGẦM / Đông / Hầm di tích và cửa sâu
-- **Gian cửa sập của Fluffy (1991)** · `HOG-TNG4-E-04` — Hogwarts / TẦNG 4 / Tây / Charms – hành lang cấm cũ
-- **Gian cuối bảo vệ Hòn đá** · `HOG-HMNGM-S-05` — Hogwarts / HẦM NGẦM / Nam / Cụm hầm đá bảo vệ cũ
-- **Gian Dây Sa-tăng** · `HOG-HMNGM-S-01` — Hogwarts / HẦM NGẦM / Nam / Cụm hầm đá bảo vệ cũ
-- **Gian thử thách Độc dược** · `HOG-HMNGM-S-04` — Hogwarts / HẦM NGẦM / Nam / Cụm hầm đá bảo vệ cũ
-- **Gladrags** · `P-8bd319c866a655` — Template / village-static
-- **Hầm giam Malfoy Manor** · `P-cdc1a91748b387` — Britain / England / Wiltshire
-- **Hang biển của Voldemort** · `P-b86cbfbdc07271` — Khác
-- **Hang Sirius trú ở vùng núi gần làng** · `P-65ac0b29ed7007` — Britain / Scotland / Highlands / Hogsmeade: đường phố và cơ sở
-- **Hang Sóc / Nhà Weasley** · `P-0bdde710277c5f` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Hẻm Knockturn** · `P-71db87f76e608b` — Template / diagon-knockturn
-- **Hẻm Xéo** · `P-046c1c72bb9fc9` — Template / diagon-knockturn
-- **Hiên ngoài** · `P-ca5dbc8d9268d5` — Whitecap Estate · Isle of Wight / Tầng 1 (trệt)
-- **Hiên sau** · `P-176df525d65b31` — Nhà PC · London / Tầng 1 (trệt)
-- **Hogwarts Express** · `P-ea0d1c088bb35d` — Template / express
-- **Honeydukes và tầng hầm** · `P-ce64687addd09a` — Template / village-static
-- **Ilvermorny School of Witchcraft and Wizardry** · `P-b1a5bbf296daf9` — United States / Massachusetts / Trường học
-- **Kho** · `P-5e88541888baad` — Nhà PC · London / Bán hầm
-- **Kho** · `P-6101b5e9235dbd` — 7 Rowan Mews · London / Bán hầm
-- **Khu bảo vệ Hòn đá Phù thủy dưới Hogwarts** · `P-f012e9d745204b` — Khác
-- **Khu bình luận / phòng bình luận** · `P-09b9d228df78c4` — Template / pitch-static
-- **Khu cắm trại Beauxbatons** · `P-3a8e137752a294` — Khác
-- **Khu điều trị ngộ độc độc dược và thực vật** · `P-9f4eba8cbc0134` — Britain / England / London / Bệnh viện St Mungo / Tầng 3
-- **Khu điều trị tai nạn đồ tạo tác** · `P-1af0a04a59056b` — Britain / England / London / Bệnh viện St Mungo / Tầng trệt
-- **Khu điều trị thương tích do sinh vật** · `P-aec6a126a04246` — Britain / England / London / Bệnh viện St Mungo / Tầng 1
-- **Khu điều trị thương tổn do bùa chú** · `P-a62b074fca27d7` — Britain / England / London / Bệnh viện St Mungo / Tầng 4
-- **Khu hành chính Wizengamot** · `P-80b97fa352d930` — Template / ministry2
-- **Khu lều World Cup** · `P-a19b8a7eea3f66` — Khác
-- **Khu nhà dân Hogsmeade** · `P-81c7ab0cff5ac4` — Template / village-static
-- **Khu nuôi/bảo tồn rồng Romania – nơi Charlie làm việc** · `P-6f37aeb5ab1ff0` — Romania / Khu bảo tồn
-- **Khu ổ nhện Aragog** · `P-8c15e0bfc2d11d` — Template / h1
-- **Khu Sách Cấm (Restricted Section)** · `HOG-TNG5-N-02` — Hogwarts / TẦNG 5 / Bắc / Library – Restricted Section
-- **Khu thương mại / luật quốc tế** · `P-dfec82bd2d4f53` — Template / ministry2
-- **Khuôn viên Malfoy Manor** · `P-37846d42ec845c` — Britain / England / Wiltshire
-- **King’s Cross** · `P-a8f847e818afa1` — Template / express
-- **Làng Godric’s Hollow** · `P-dec21f949ed798` — Britain / England / Godric’s Hollow
-- **Làng Great Hangleton** · `P-e57b3aa8509cf4` — Britain / England / Little Hangleton / Great Hangleton
-- **Làng Little Hangleton** · `P-95f33b1a222e12` — Britain / England / Little Hangleton / Great Hangleton
-- **Lăng mộ Dumbledore** · `P-36df14fc8355e4` — Khác
-- **Làng Ottery St Catchpole** · `P-e68bc933cbfc46` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Làng Tinworth** · `P-292e4cf5737a49` — Britain / England / Tinworth / ven biển
-- **Lều Hagrid và các phòng bên trong** · `P-143a2447e31c2c` — Template / h1
-- **Lều Hú và các phòng bên trong** · `P-79710fe4d4bcfa` — Template / village-static
-- **Little Whinging** · `P-5cd173a0de0b12` — Britain / England / Surrey / Little Whinging
-- **MACUSA Headquarters** · `P-632d1664ab4804` — United States / New York / Cơ quan pháp thuật
-- **Madam Malkin’s** · `P-c342fdc0ef620b` — Template / diagon-knockturn
-- **Magical Menagerie** · `P-c2473d02e0de42` — Template / diagon-knockturn
-- **Magnolia Crescent** · `P-3733c32c66774d` — Britain / England / Surrey / Little Whinging
-- **Magnolia Road** · `P-424cf93d589f58` — Britain / England / Surrey / Little Whinging
-- **Mahoutokoro School of Magic** · `P-e207e1cad9aa75` — Japan / Minami Iwo Jima
-- **Map Chamber** · `HOG-HMNGM-W-01` — Hogwarts / HẦM NGẦM / Tây / Hầm đá xưa và phòng nghiên cứu
-- **Mọi buồng hành khách trong các toa** · `P-226721c1fff80c` — Template / express
-- **Nghĩa địa Godric’s Hollow** · `P-5ddef138f591ee` — Britain / England / Godric’s Hollow
-- **Nghĩa địa Little Hangleton** · `P-cf6e6f0ff253af` — Britain / England / Little Hangleton / Great Hangleton
-- **Ngoại thất khối lâu đài Hogwarts** · `P-f8ed3dbe20d357` — Template / h2
-- **Nhà Alastor Moody** · `P-54d36cdd92de52` — Britain / England / Các địa điểm và nhà khác
-- **Nhà bà Figg** · `P-712dcf0d542fa9` — Britain / England / Surrey / Little Whinging
-- **Nhà Barty Crouch Sr.** · `P-1809b6a4970166` — Britain / England / Các địa điểm và nhà khác
-- **Nhà Bathilda Bagshot** · `P-05d77e52709869` — Britain / England / Godric’s Hollow
-- **Nhà cô Muriel** · `P-52ea7749d9b897` — Britain / England / Các địa điểm và nhà khác
-- **Nhà cú (Owlery)** · `TWR-11-02-01` — Hogwarts / Tháp Tây (Nhà cú) / Tầng chuồng cú
-- **Nhà cú và khu vực bên trong Nhà cú** · `P-f322d7e98b6a02` — Template / h1
-- **Nhà của Amos Diggory (nếu tách khỏi Ottery St Catchpole)** · `P-7c0776422fe490` — Britain / England / Các địa điểm và nhà khác
-- **Nhà dân trong template làng** · `P-197b2052678b9d` — Template / village-static
-- **Nhà dân và ngõ ở Knockturn** · `P-0fe532e3c7b3e8` — Template / diagon-knockturn
-- **Nhà Diggle (địa chỉ không xác định)** · `P-e10f1f2455074a` — Britain / England / London / Nhà ở / trụ sở
-- **Nhà Diggory** · `P-e1b58685e41178` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Nhà Fawcett** · `P-223c9a29e759d3` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Nhà ga Hogsmeade** · `P-47576b791ebc5b` — Template / express
-- **Nhà Gaunt** · `P-1388a8951a3c11` — Britain / England / Little Hangleton / Great Hangleton
-- **Nhà gia đình Dumbledore** · `P-55b6096c51b788` — Britain / England / Godric’s Hollow
-- **Nhà gia đình Longbottom (địa chỉ không xác định)** · `P-ac442939b95160` — Britain / England / Các địa điểm và nhà khác
-- **Nhà Granger (địa chỉ không xác định)** · `P-4091d06b78b915` — Britain / England / London / Nhà ở / trụ sở
-- **Nhà Gregorovitch (địa chỉ không xác định)** · `P-5bfdb63dbfad77` — Britain / England / London / Nhà ở / trụ sở
-- **Nhà Hepzibah Smith** · `P-aabefd99376d5b` — Britain / England / Các địa điểm và nhà khác
-- **Nhà khách** · `P-35450f7ad71727` — Whitecap Estate · Isle of Wight / Khuôn viên
-- **Nhà khách** · `P-aae6653add136e` — Grayhaven Estate · California / Khuôn viên
-- **Nhà Kingsley Shacklebolt (địa chỉ không xác định)** · `P-ecc27e85264a4a` — Britain / England / London / Nhà ở / trụ sở
-- **Nhà Lovegood** · `P-64d0087ee0c1b2` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Nhà Potter / Potter Cottage** · `P-5d4b08c68c7c51` — Britain / England / Godric’s Hollow
-- **Nhà Slughorn ở tạm tại Budleigh Babberton** · `P-30e83b523e3592` — Britain / England / Các địa điểm và nhà khác
-- **Nhà Snape** · `P-90f19984c65a90` — Britain / England / Cokeworth / Spinner’s End
-- **Nhà thuyền Hogwarts** · `P-9bf6e71ff3108b` — Template / h1
-- **Nhà Tonks (địa chỉ không xác định)** · `P-8ffce1da3d07cd` — Britain / England / London / Nhà ở / trụ sở
-- **Nhà tù Azkaban** · `P-d45c30dace5abc` — Britain / Ngoài khơi, vị trí bí mật
-- **Nurmengard** · `P-4427f295c86374` — Châu Âu / Vị trí không xác định / Nurmengard
-- **Ollivanders** · `P-04180946d36a33` — Template / diagon-knockturn
-- **Phòng Âm nhạc (Music Room)** · `HOG-TNG4-N-03` — Hogwarts / TẦNG 4 / Bắc / Trophy – Armour Gallery
-- **Phòng ăn** · `P-052c1a401bbcfe` — Whitecap Estate · Isle of Wight / Tầng 1 (trệt)
-- **Phòng ăn** · `P-1d43d774de1087` — 7 Rowan Mews · London / Tầng 1 (trệt)
-- **Phòng ăn** · `P-26295c3fd155a4` — Grayhaven Estate · California / Tầng 1 (trệt)
-- **Phòng ăn** · `P-7210700596d5ae` — Nhà PC · London / Tầng 1 (trệt)
-- **Phòng ăn nhà Dursley** · `P-5bc4accf8f9cfb` — Britain / England / Surrey / Little Whinging
-- **Phòng áo khoác** · `P-3c919f6f95c429` — 7 Rowan Mews · London / Tầng 1 (trệt)
-- **Phòng áp mái** · `P-04c058ca77c028` — Whitecap Estate · Isle of Wight / Áp mái
-- **Phòng áp mái Liad** · `P-0b2a64c33ccc84` — Liad’s Attic · Hogwarts / Áp mái
-- **Phòng BẠN** · `P-7a95ade5b09943` — Nhà PC · London / Tầng 3
-- **Phòng bản đồ và địa lý pháp thuật** · `HOG-TNG5-E-03` — Hogwarts / TẦNG 5 / Đông / Long Gallery – chuyên môn
-- **Phòng bảo trì cơ cấu đồng hồ** · `HOG-TNG6-S-02` — Hogwarts / TẦNG 6 / Nam / Lối lên Tháp Đồng hồ
-- **Phòng bảo trì đồng hồ** · `TWR-06-02-02` — Hogwarts / Tháp Đồng hồ / Giữa tháp
-- **Phòng bảo trì kính thiên văn** · `TWR-04-01-02` — Hogwarts / Tháp Thiên văn / Tầng chân tháp
-- **Phòng bệnh dài hạn Janus Thickey** · `P-c7580930f2caac` — Britain / England / London / Bệnh viện St Mungo / Tầng 4
-- **Phòng biên tập** · `P-c6d06746fedb75` — WzW House · 18 Ganton Street · Soho / Tầng 2
-- **Phòng chăm sóc cú bị thương** · `TWR-11-02-02` — Hogwarts / Tháp Tây (Nhà cú) / Tầng chuồng cú
-- **Phòng Chữ tượng hình (Hieroglyphics)** · `HOG-TNG2-W-02` — Hogwarts / TẦNG 2 / Đông / Scholars / North Hall upper walk
-- **Phòng Chứa Bí mật** · `HOG-HMNGM-E-02` — Hogwarts / HẦM NGẦM / Đông / Hầm di tích và cửa sâu
-- **Phòng chuẩn bị Biến hình** · `HOG-TNG2-N-04` — Hogwarts / TẦNG 2 / Bắc / History & Transfiguration corridor
-- **Phòng chuẩn bị câu lạc bộ** · `HOG-TNG4-S-02` — Hogwarts / TẦNG 4 / Nam / Câu lạc bộ và hoạt động nhóm
-- **Phòng chuẩn bị suất ăn** · `HOG-TNGBP-N-03` — Hogwarts / TẦNG BẾP / Bắc / Bếp và lối phục vụ
-- **Phòng của Ủy ban Đăng ký Phù thủy gốc Muggle** · `P-9b80548a6b0f27` — Khác
-- **Phòng D&D** · `P-62939be1327ef1` — Whitecap Estate · Isle of Wight / Tầng 1 (trệt)
-- **Phòng dịch cổ ngữ** · `HOG-TNG5-W-02` — Hogwarts / TẦNG 5 / Tây / Cổ ngữ – học thuật
-- **Phòng đồ vải** · `HOG-TNGBP-S-02` — Hogwarts / TẦNG BẾP / Nam / Giặt là và kho phục vụ
-- **Phòng duyệt bản in** · `P-b61993cdbfa4f0` — WzW House · 18 Ganton Street · Soho / Tầng 4
-- **Phòng gia đình** · `P-fb55d3d6b976e4` — Grayhaven Estate · California / Tầng 2
-- **Phòng Giả kim** · `HOG-HMNGM-N-02` — Hogwarts / HẦM NGẦM / Bắc / Đường dẫn hầm kỹ thuật
-- **Phòng giải mã mật thư** · `HOG-TNG5-E-04` — Hogwarts / TẦNG 5 / Đông / Long Gallery – chuyên môn
-- **Phòng giao nhận** · `P-f1273cfbd8dcc9` — WzW House · 18 Ganton Street · Soho / Tầng 1 (trệt)
-- **Phòng giáo viên** · `P-86e7455d5f7d47` — Template / hall
-- **Phòng giáo viên (Staff Room)** · `HOG-TNG1-S-05` — Hogwarts / TẦNG 1 / Nam / Entrance Hall – Great Hall
-- **Phòng giữ dụng cụ chuông** · `TWR-07-01-02` — Hogwarts / Tháp Chuông / Chân tháp
-- **Phòng Gobstones** · `HOG-TNG7-W-01` — Hogwarts / TẦNG 7 / Tây / Cụm sinh hoạt và trò chơi
-- **Phòng gửi áo choàng** · `HOG-TNG1-W-05` — Hogwarts / TẦNG 1 / Tây / Transfiguration Courtyard approach
-- **Phòng hội thảo nhỏ** · `HOG-TNG7-E-03` — Hogwarts / TẦNG 7 / Đông / Seminar & advanced teaching
-- **Phòng khách** · `P-4f927c3f8e69d3` — Whitecap Estate · Isle of Wight / Tầng 1 (trệt)
-- **Phòng khách** · `P-8f34772df41a97` — Nhà PC · London / Tầng 1 (trệt)
-- **Phòng khách** · `P-a40a9139e15cdf` — 7 Rowan Mews · London / Tầng 1 (trệt)
-- **Phòng khách** · `P-f257da4f8369a2` — Grayhaven Estate · California / Tầng 1 (trệt)
-- **Phòng khách Dursley** · `P-7b1adb6069d328` — Britain / England / Surrey / Little Whinging
-- **Phòng khách Hang Sóc** · `P-4e78486f8e5d5c` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Phòng khách Malfoy Manor** · `P-bbfe47f234c957` — Britain / England / Wiltshire
-- **Phòng khách nhà Black** · `P-9b9d65883bc0bb` — Britain / England / London / Nhà ở / trụ sở
-- **Phòng khách Shell Cottage** · `P-60ff93fb1c4473` — Britain / England / Tinworth / ven biển
-- **Phòng khách trên xe Buýt Hiệp Sĩ** · `P-aa74a45869a845` — Britain / Phương tiện và tuyến đường
-- **Phòng Không gian** · `P-f6ff23e797445d` — Template / ministry-8-10
-- **Phòng kiểm tra móng tháp** · `HOG-HMNGM-N-04` — Hogwarts / HẦM NGẦM / Bắc / Đường dẫn hầm kỹ thuật
-- **Phòng kính** · `P-38afa9168985ae` — Grayhaven Estate · California / Tầng 1 (trệt)
-- **Phòng kính** · `P-819514c84e1a30` — Whitecap Estate · Isle of Wight / Tầng 1 (trệt)
-- **Phòng kỹ thuật lò sưởi** · `HOG-HMNGC-S-05` — Hogwarts / HẦM NGỤC / Nam / Kho và tuyến phục vụ dưới Đại Sảnh
-- **Phòng làm báo học sinh** · `HOG-TNG6-S-04` — Hogwarts / TẦNG 6 / Nam / Lối lên Tháp Đồng hồ
-- **Phòng làm dự án học sinh** · `HOG-TNG7-W-03` — Hogwarts / TẦNG 7 / Tây / Cụm sinh hoạt và trò chơi
-- **Phòng Liad** · `P-558513338bec03` — 7 Rowan Mews · London / Tầng 3
-- **Phòng Lịch sử Pháp thuật** · `HOG-TNG2-N-01` — Hogwarts / TẦNG 2 / Bắc / History & Transfiguration corridor
-- **Phòng Luna Lovegood** · `P-1c6f7973221157` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Phòng lưu bản đồ sao Tiên tri** · `TWR-03-01-02` — Hogwarts / Tháp Bắc (Tiên tri) / Tầng tiếp cận
-- **Phòng lưu bảng thành tích học thuật** · `HOG-TNG7-N-01` — Hogwarts / TẦNG 7 / Bắc / Upper stair – tower access
-- **Phòng lưu biên bản giáo viên** · `HOG-TNG7-S-02` — Hogwarts / TẦNG 7 / Nam / Đường nối Faculty/Clock tower
-- **Phòng lưu dụng cụ hiệu trưởng** · `TWR-05-02-02` — Hogwarts / Tháp Hiệu trưởng / Đỉnh tháp
-- **Phòng lưu giáo án** · `HOG-TNG3-E-04` — Hogwarts / TẦNG 3 / Tây / Văn phòng DADA – lối kín
-- **Phòng lưu mô hình lịch sử** · `HOG-TNG2-W-04` — Hogwarts / TẦNG 2 / Đông / Scholars / North Hall upper walk
-- **Phòng lưu sổ kết quả học tập** · `HOG-TNG7-N-02` — Hogwarts / TẦNG 7 / Bắc / Upper stair – tower access
-- **Phòng luyện đũa phép cơ bản** · `HOG-TNG3-S-01` — Hogwarts / TẦNG 3 / Nam / Phòng học bổ trợ
-- **Phòng mẫu** · `P-ceed22a8b82bc0` — WzW House · 18 Ganton Street · Soho / Tầng 3
-- **Phòng mỹ thuật pháp thuật** · `HOG-TNG6-E-03` — Hogwarts / TẦNG 6 / Đông / Phòng học trung cấp
-- **Phòng Não** · `P-fd24a44f33135c` — Template / ministry-8-10
-- **Phòng nghỉ gia tinh** · `HOG-TNGBP-W-01` — Hogwarts / TẦNG BẾP / Tây / Khu công vụ và hầm thực phẩm
-- **Phòng nghỉ giáo viên** · `TWR-08-02-02` — Hogwarts / Tháp Giáo viên (Faculty Tower) / Tầng giữa
-- **Phòng nghỉ huynh trưởng** · `HOG-TNG6-N-04` — Hogwarts / TẦNG 6 / Bắc / Prefects corridor – Faculty route
-- **Phòng nghi lễ học thuật** · `HOG-TNG8-E-04` — Hogwarts / TẦNG 8 / Đông / Room of Requirement
-- **Phòng nghiên cứu Số học** · `HOG-TNG6-E-01` — Hogwarts / TẦNG 6 / Đông / Phòng học trung cấp
-- **Phòng nghiên cứu tư liệu** · `HOG-TNG5-W-04` — Hogwarts / TẦNG 5 / Tây / Cổ ngữ – học thuật
-- **Phòng phân loại mẫu khoáng** · `HOG-HMNGC-W-02` — Hogwarts / HẦM NGỤC / Tây / Cụm lớp học ngầm và hầm cũ
-- **Phòng phục hồi hiện vật** · `HOG-TNG4-W-05` — Hogwarts / TẦNG 4 / Đông / Gallery – North Hall upper route
-- **Phòng rửa vạc** · `HOG-HMNGC-N-05` — Hogwarts / HẦM NGỤC / Bắc / Cụm Độc dược và gian chuẩn bị
-- **Phòng sau bàn giáo viên** · `P-95936a141ed516` — Template / hall
-- **Phòng sinh hoạt** · `P-c2ae860eb1abb4` — Whitecap Estate · Isle of Wight / Tầng 2
-- **Phòng sinh hoạt chung Gryffindor** · `P-441745282e9e54` — Template / gryffindor-common; Hogwarts / TẦNG 8 / Nam / Gryffindor entrance – common route
-- **Phòng sinh hoạt chung Hufflepuff** · `P-1795bc600c2b41` — Template / hufflepuff-common; Hogwarts / TẦNG BẾP / Đông / Cụm Hufflepuff
-- **Phòng sinh hoạt chung Ravenclaw** · `P-4bde45f1a1cb07` — Template / ravenclaw-common; Hogwarts / Tháp Ravenclaw / Lối vào tháp cao
-- **Phòng sinh hoạt chung Slytherin** · `P-80ce1ea13c2632` — Template / slytherin-common; Hogwarts / HẦM NGỤC / Đông / Lối Slytherin dưới mặt hồ
-- **Phòng sinh hoạt học sinh nhỏ** · `HOG-TNG3-S-05` — Hogwarts / TẦNG 3 / Nam / Phòng học bổ trợ
-- **Phòng sinh hoạt nhà Lovegood** · `P-eb0e081c67cc39` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Phòng sở thích** · `P-9d66d64ae1eced` — Nhà PC · London / Áp mái
-- **Phòng sở thích** · `P-c2b0b9eb3b7897` — Whitecap Estate · Isle of Wight / Áp mái
-- **Phòng sửa đồ** · `P-ad08891d59bb8b` — Nhà PC · London / Bán hầm
-- **Phòng tạo kiểu** · `P-eeef4f392301fb` — WzW House · 18 Ganton Street · Soho / Tầng 3
-- **Phòng tập Đấu tay đôi dự phòng** · `HOG-TNG4-S-01` — Hogwarts / TẦNG 4 / Nam / Câu lạc bộ và hoạt động nhóm
-- **Phòng tập diễn thuyết** · `HOG-TNG4-S-03` — Hogwarts / TẦNG 4 / Nam / Câu lạc bộ và hoạt động nhóm
-- **Phòng tập đũa phép tại tháp** · `TWR-09-02-02` — Hogwarts / Tháp DADA / Tầng giảng dạy
-- **Phòng tập hòa tấu** · `HOG-TNG4-N-05` — Hogwarts / TẦNG 4 / Bắc / Trophy – Armour Gallery
-- **Phòng tập nhạc nhóm nhỏ** · `HOG-TNG6-W-02` — Hogwarts / TẦNG 6 / Tây / Hành lang cửa sổ cao
-- **Phòng thay băng** · `HOG-TNG2-S-04` — Hogwarts / TẦNG 2 / Nam / Hospital & Faculty Tower access
-- **Phòng thay đồ** · `P-7146cc78e7b6bb` — WzW House · 18 Ganton Street · Soho / Tầng 3
-- **Phòng thay đồ** · `P-85d4eac574abfb` — Loft 5A · 21 Great Titchfield Street · Fitzrovia / Loft 5A
-- **Phòng thay đồ các đội** · `P-e27a6e6c098632` — Template / pitch-static
-- **Phòng thay đồ đội A** · `P-638d3d8f890b97` — Template / pitch-static
-- **Phòng thay đồ đội B** · `P-12d570650689e2` — Template / pitch-static
-- **Phòng thí nghiệm an toàn** · `HOG-TNG7-E-04` — Hogwarts / TẦNG 7 / Đông / Seminar & advanced teaching
-- **Phòng thiết bị** · `P-c48031b40aa4a6` — WzW House · 18 Ganton Street · Soho / Tầng hầm
-- **Phòng Thời gian** · `P-86cd9a8defbb03` — Template / ministry-8-10
-- **Phòng thư liên nhà CCC** · `HOG-TNG8-W-03` — Hogwarts / TẦNG 8 / Tây / CCC / senior clubs (AU)
-- **Phòng thư liên nhà CCC** · `P-4830d8d84c0a5a` — CCC 07.18 · Hogwarts / Tầng 8 · cánh Tây
-- **Phòng thực hành Bùa chú** · `HOG-TNG4-E-05` — Hogwarts / TẦNG 4 / Tây / Charms – hành lang cấm cũ
-- **Phòng thực hành phòng vệ** · `HOG-TNG2-E-04` — Hogwarts / TẦNG 2 / Tây / DADA teaching cluster
-- **Phòng tiệc Tử nhật** · `HOG-HMNGC-S-01` — Hogwarts / HẦM NGỤC / Nam / Kho và tuyến phục vụ dưới Đại Sảnh
-- **Phòng tiện ích** · `P-6748bf2a512b32` — Loft 5A · 21 Great Titchfield Street · Fitzrovia / Loft 5A
-- **Phòng tiện ích** · `P-84e3b35dd330b5` — Nhà PC · London / Bán hầm
-- **Phòng tiếp học sinh mới** · `HOG-TNG1-E-04` — Hogwarts / TẦNG 1 / Đông / Library Annex – Viaduct
-- **Phòng tiếp khách** · `P-86f19e61932103` — 7 Rowan Mews · London / Tầng 2
-- **Phòng tiếp khách** · `P-cbf1bbfe09504a` — WzW House · 18 Ganton Street · Soho / Tầng 1 (trệt)
-- **Phòng tiếp khách nhà trường** · `HOG-TNG1-S-07` — Hogwarts / TẦNG 1 / Nam / Entrance Hall – Great Hall
-- **Phòng tiếp phụ huynh của khoa DADA** · `HOG-TNG3-E-03` — Hogwarts / TẦNG 3 / Tây / Văn phòng DADA – lối kín
-- **Phòng Tình yêu / phòng khóa kín** · `P-2c9c4c00c1d80b` — Template / ministry-8-10
-- **Phòng Tom Riddle ở trại trẻ** · `P-8f6fe8ad4cc0c0` — Britain / England / London / Địa điểm khác
-- **Phòng tra cứu mục lục** · `HOG-TNG5-N-05` — Hogwarts / TẦNG 5 / Bắc / Library – Restricted Section
-- **Phòng trà khách thăm** · `P-98946e3d409a8a` — Britain / England / London / Bệnh viện St Mungo / Tầng 5
-- **Phòng trống từng chứa Gương Ảo ảnh năm 1991** · `HOG-TNG5-S-01` — Hogwarts / TẦNG 5 / Nam / Lối đi tầng bốn và gian trống
-- **Phòng Tử thần** · `P-bd4a42764da881` — Template / ministry-8-10
-- **Phòng vận hành chuông** · `TWR-07-02-02` — Hogwarts / Tháp Chuông / Đỉnh tháp
-- **Phòng viết CCC** · `HOG-TNG8-W-04` — Hogwarts / TẦNG 8 / Tây / CCC / senior clubs (AU)
-- **Phòng viết CCC** · `P-ae81c478038c2b` — CCC 07.18 · Hogwarts / Tầng 8 · cánh Tây
-- **Phòng viết nội dung** · `P-35150c109c52c8` — WzW House · 18 Ganton Street · Soho / Tầng 2
-- **Phòng xem lịch học** · `HOG-TNG7-S-03` — Hogwarts / TẦNG 7 / Nam / Đường nối Faculty/Clock tower
-- **Phòng xử án số 10** · `P-9805ab2f38804f` — Template / ministry-8-10
-- **Phòng Yêu cầu (Room of Requirement)** · `HOG-TNG8-E-02` — Hogwarts / TẦNG 8 / Đông / Room of Requirement
-- **Potage’s Cauldrons** · `P-bdd56dfa509b7c` — Template / diagon-knockturn
-- **Privet Drive** · `P-43ffcc1098a3aa` — Britain / England / Surrey / Little Whinging
-- **Purge and Dowse (mặt tiền St Mungo)** · `P-851acac2ec7f8b` — Britain / England / London / Địa điểm khác
-- **Quality Quidditch Supplies** · `P-c97880d2883d88` — Template / diagon-knockturn
-- **Quảng trường Godric’s Hollow** · `P-6c6fc8c763f6b7` — Britain / England / Godric’s Hollow
-- **Quảng trường Hogsmeade** · `P-d2a51c4e5a9cd6` — Template / village-static
-- **Railview Hotel** · `P-a56cde3ee35e1c` — Britain / England / Cokeworth / Spinner’s End
-- **Scribbulus** · `P-57a63e2aaa9159` — Template / diagon-knockturn
-- **Scrivenshaft’s** · `P-eb74631b825f74` — Template / village-static
-- **Shell Cottage / nhà Bill và Fleur** · `P-209dc8c61fa3bb` — Britain / England / Tinworth / ven biển
-- **Số 11 Grimmauld Place** · `P-c22fddd973f9ed` — Britain / England / London / Nhà ở / trụ sở
-- **Số 12 Grimmauld Place / nhà Black** · `P-c7df9592a50155` — Britain / England / London / Nhà ở / trụ sở
-- **Số 13 Grimmauld Place** · `P-4f2d8576d24f18` — Britain / England / London / Nhà ở / trụ sở
-- **Số 2 Magnolia Crescent (địa chỉ được nhắc)** · `P-89ce1f70269693` — Britain / England / Surrey / Little Whinging
-- **Số 4 Privet Drive / nhà Dursley** · `P-911d23f3180589` — Britain / England / Surrey / Little Whinging
-- **Số 7 Privet Drive** · `P-efe5e3b54c110c` — Britain / England / Surrey / Little Whinging
-- **Spinner’s End** · `P-2cda580d14d444` — Britain / England / Cokeworth / Spinner’s End
-- **Studio ảnh** · `P-056435e23f0696` — WzW House · 18 Ganton Street · Soho / Tầng 3
-- **Studio nhà kính** · `P-18b19a8c7825cf` — Grayhaven Estate · California / Khuôn viên
-- **Studio sáng tạo** · `P-2943e215e1b645` — Loft 5A · 21 Great Titchfield Street · Fitzrovia / Loft 5A
-- **Studio sáng tạo** · `P-e7944584d870f6` — WzW House · 18 Ganton Street · Soho / Tầng 4
-- **Tầng 10 – Khu xử án** · `P-4fee03ab76bb30` — Template / ministry-8-10
-- **Tầng 2 – Thi hành Luật Pháp thuật** · `P-adc8756e94687f` — Template / ministry2
-- **Tầng 3 – Tai nạn và Thảm họa Pháp thuật** · `P-8372c04e802fdc` — Template / ministry2
-- **Tầng 4 – Điều hòa và Kiểm soát Sinh vật** · `P-4d4b012a451ee2` — Template / ministry2
-- **Tầng 5 – Hợp tác Pháp thuật Quốc tế** · `P-3d600b63857ca0` — Template / ministry2
-- **Tầng 6 – Giao thông Pháp thuật** · `P-4247829f4f87d7` — Template / ministry2
-- **Tầng 7 – Trò chơi và Thể thao Pháp thuật** · `P-8f8a0811461a67` — Template / ministry2
-- **Tầng 8 – Atrium** · `P-5b000833260ab3` — Template / ministry-8-10
-- **Terrace** · `P-aae0e4c8ac4172` — Grayhaven Estate · California / Nhà khách
-- **Tiền phòng CCC** · `HOG-TNG8-W-02` — Hogwarts / TẦNG 8 / Tây / CCC / senior clubs (AU)
-- **Tiền phòng CCC** · `P-eb17a00f2392a6` — CCC 07.18 · Hogwarts / Tầng 8 · cánh Tây
-- **Toa mẫu Gryffindor** · `P-38988e75264a65` — Template / express
-- **Toa mẫu Hufflepuff** · `P-e1641c684d1741` — Template / express
-- **Toa mẫu Ravenclaw** · `P-aab0be0508401d` — Template / express
-- **Toa mẫu Slytherin** · `P-c901ae9bd25828` — Template / express
-- **Toa thường** · `P-5889d83ab64879` — Template / express
-- **Tottenham Court Road** · `P-23a728f27029ae` — Britain / England / London / Cửa ngõ và ga
-- **Trại trẻ mồ côi của Tom Riddle** · `P-ee2064eb7e377a` — Britain / England / London / Địa điểm khác
-- **Trang viên Malfoy** · `P-0a94eb38a5cf40` — Britain / England / Wiltshire
-- **Trụ sở Liên đoàn Quidditch Anh–Ireland** · `P-f66347f72f87d0` — Template / ministry2
-- **Trụ sở Thần Sáng** · `P-af6716662de8c8` — Template / ministry2
-- **Túp lều ngoài biển trong tập một** · `P-df07d01094f11f` — Britain / England / Các địa điểm và nhà khác
-- **Twilfitt & Tatting’s** · `P-58bb45e6da0252` — Template / diagon-knockturn
-- **Uagadou School of Magic** · `P-42ca1a78fc7d46` — Uganda / Mountains of the Moon
-- **Undercroft** · `HOG-HMNGM-W-02` — Hogwarts / HẦM NGẦM / Tây / Hầm đá xưa và phòng nghiên cứu
-- **Upper Flagley** · `P-39e69af2a5fc7c` — Britain / England / Các địa điểm và nhà khác
-- **Ủy ban Biện minh với Muggle** · `P-9301236b54857d` — Template / ministry2
-- **Weasleys’ Wizard Wheezes (nếu tồn tại theo thời kỳ)** · `P-5a0ec074efb106` — Template / diagon-knockturn
-- **Xe Buýt Hiệp Sĩ** · `P-8d8c423e13cb3d` — Britain / Phương tiện và tuyến đường
-- **Zonko’s** · `P-633d0bcb4ab87e` — Template / village-static
+### 7 Rowan Mews · London / Tầng 2
 
-## outdoor
+- **Chuyên biệt · khác:** Phòng tiếp khách.
+- **Học tập · nghiên cứu:** Study Amethyst; Study Valerian; Thư viện.
 
-- **Bãi biển Whitecap** · `P-fb05960b29389c` — Whitecap Estate · Isle of Wight / Khuôn viên
-- **Bãi cắm trại trong Rừng Dean** · `P-a6360747d2eff6` — Britain / England / Các địa điểm và nhà khác
-- **Bãi chơi Quidditch sau nhà** · `P-ff60dc5c801cf1` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Bãi cỏ học tập quanh trường** · `P-effd8342cc396c` — Template / h1
-- **Bãi cỏ và đồng cỏ quanh Hogwarts** · `P-0d712868c509cf` — Template / h1
-- **Bãi cỏ ven hồ** · `P-17db50485e2b83` — Template / h1
-- **Bãi học bay** · `P-e7ebf6e1f0fcb9` — Template / h1
-- **Bãi neo tàu Durmstrang** · `P-0286a54346e7d7` — Khác
-- **Bìa Rừng Cấm** · `P-7904b8045f6614` — Template / h1
-- **Bờ biển gần Shell Cottage** · `P-16ec3a57420b99` — Britain / England / Tinworth / ven biển
-- **Bờ Hồ Đen** · `P-59e90d8a9ccc63` — Template / h1
-- **Bộ phận Linh hồn** · `P-f52be73f7dd9ce` — Template / ministry2
-- **Bộ phận Quái thú** · `P-5fc3c5a0bcb0d1` — Template / ministry2
-- **Bộ phận Sinh vật có tri giác** · `P-2df6c97ce86355` — Template / ministry2
-- **Bộ phận Xóa trí nhớ** · `P-951dc2baa9a710` — Template / ministry2
-- **Các đường dạo và bãi đất trống ngoài trời quanh trường chưa thuộc template khác** · `P-4df8571e5dea2e` — Template / h1
-- **Các ngõ phố nối Hẻm Xéo và Knockturn** · `P-d85dbd8c19bb3b` — Template / diagon-knockturn
-- **Các nhà dân trên phố trong bản đồ Diagon** · `P-06a1ce678f15be` — Template / diagon-knockturn
-- **Câu lạc bộ Gobstones chính thức** · `P-91ec4108625f7b` — Template / ministry2
-- **Đảo đá trong hồ hang biển** · `P-c12015ea2dc205` — Khác
-- **Đường mòn Rừng Cấm** · `P-63aa8852e10090` — Template / h1
-- **Đường tới sân Quidditch** · `P-c061b81bba5c42` — Template / h1
-- **Gian chờ trước Phân loại** · `P-6e4b06065f0997` — Template / hall
-- **Hai sân trong lâu đài** · `P-1ecd945e2b86b7` — Template / h2
-- **Hồ bơi** · `P-91e1d4b9d90ce6` — Whitecap Estate · Isle of Wight / Khuôn viên
-- **Hồ Đen** · `P-30cf89999f5e15` — Template / h1
-- **Hồ ngầm trong hang biển** · `P-07666cff74b9d9` — Khác
-- **Khoảng rừng sâu** · `P-8fd3daca88a6f1` — Template / h1
-- **Khu an ninh Bộ Pháp thuật** · `P-dadcf596a0437f` — Template / ministry-8-10
-- **Khu chờ lên tàu tại King’s Cross** · `P-dafe46b4834d00` — Template / express
-- **Khu điều trị bệnh và nhiễm trùng pháp thuật** · `P-9d882410cbff44` — Britain / England / London / Bệnh viện St Mungo / Tầng 2
-- **Khu giao thông Floo Bộ Pháp thuật** · `P-df6ec24bb2876c` — Template / ministry-8-10
-- **Khu nhân mã trong Rừng Cấm** · `P-52b6fe3a29d440` — Template / h1
-- **Khu thử thách Hồ Đen** · `P-a575b46f2ae1a8` — Khác
-- **Khu tiếp nhận khách Bộ Pháp thuật** · `P-c251f1aa2096c0` — Template / ministry-8-10
-- **Liễu Roi và bãi đất quanh cây** · `P-9fffb1aaa57eea` — Template / h1
-- **Mặt hồ và khu vực trên thuyền** · `P-8f7588d4e8a5bc` — Template / h1
-- **Mặt sân thi đấu** · `P-6575df3a62913f` — Template / pitch-static
-- **Mê cung Tam Pháp thuật ở sân Quidditch** · `P-c4b0eda051d309` — Khác
-- **Nhà thờ Godric’s Hollow** · `P-2a51f7e8e278a7` — Britain / England / Godric’s Hollow
-- **Phố chính Hogsmeade** · `P-5e1f1cc14a2adb` — Template / village-static
-- **Phòng câu lạc bộ cờ phù thủy** · `HOG-TNG7-W-02` — Hogwarts / TẦNG 7 / Tây / Cụm sinh hoạt và trò chơi
-- **Phòng câu lạc bộ học thuật** · `HOG-TNG6-S-03` — Hogwarts / TẦNG 6 / Nam / Lối lên Tháp Đồng hồ
-- **Phòng chờ bệnh xá** · `HOG-TNG2-S-06` — Hogwarts / TẦNG 2 / Nam / Hospital & Faculty Tower access
-- **Phòng chờ trước Phân loại** · `HOG-TNG1-S-03` — Hogwarts / TẦNG 1 / Nam / Entrance Hall – Great Hall
-- **Phòng chờ xét xử** · `P-bf3c24a146fb6a` — Template / ministry-8-10
-- **Phòng chuẩn bị bài thực hành** · `HOG-HMNGC-N-04` — Hogwarts / HẦM NGỤC / Bắc / Cụm Độc dược và gian chuẩn bị
-- **Phòng hỗ trợ xử án** · `P-241e2fa15a09f1` — Template / ministry-8-10
-- **Phòng sinh hoạt hướng vườn** · `P-8547e7b53ee0e6` — Grayhaven Estate · California / Tầng 1 (trệt)
-- **Phòng trưng bày** · `P-2e483807e1273e` — WzW House · 18 Ganton Street · Soho / Tầng 1 (trệt)
-- **Phòng Trưng bày Chiến tích** · `HOG-TNG4-N-01` — Hogwarts / TẦNG 4 / Bắc / Trophy – Armour Gallery
-- **Phòng trưng bày cổ vật giáo dục** · `HOG-TNG4-W-02` — Hogwarts / TẦNG 4 / Đông / Gallery – North Hall upper route
-- **Phòng vườn** · `P-36a9268e0e2288` — 7 Rowan Mews · London / Tầng 1 (trệt)
-- **Rừng Albania – nơi Voldemort trú ẩn** · `P-a69db007365fe0` — Albania / Rừng
-- **Rừng Dean** · `P-4f6ef384d93fb3` — Britain / England / Các địa điểm và nhà khác
-- **Sân Bell Tower (Tháp Chuông)** · `P-38bf6be09df746` — Template / h2
-- **Sân chân tháp trong khối lâu đài** · `P-f6319cb5ddb159` — Template / h2
-- **Sân Clock Tower (Đồng hồ)** · `P-de97c63af46b5c` — Template / h2
-- **Sân cỏ cạnh lâu đài** · `P-8153c1a6e4e7dc` — Template / h1
-- **Sân ga 9¾** · `P-3a9add588aa69a` — Template / express
-- **Sân ga Hogsmeade (khu tàu)** · `P-b879bbed8fdc49` — Template / express
-- **Sân giữa các cánh lâu đài** · `P-33d82440a9be50` — Template / h2
-- **Sân hồ bơi** · `P-f5b0d79a9fcc91` — Grayhaven Estate · California / Khuôn viên
-- **Sân Mistletoe** · `P-442f7275b6c832` — Template / h2
-- **Sân Quad** · `P-501e057d5be6b1` — Template / h2
-- **Sân Quidditch** · `P-7abe41594af2ff` — Template / pitch-static
-- **Sân sau Cái Vạc Lủng** · `P-dbdb26cb4f253a` — Template / diagon-knockturn
-- **Sân tập nhỏ trong quần thể Quidditch** · `P-eeb5352311e7c0` — Template / pitch-static
-- **Sân thượng** · `P-45ca006de2e29d` — WzW House · 18 Ganton Street · Soho / Tầng mái
-- **Sân Transfiguration (Biến hình)** · `P-6d6cfd0e60241f` — Template / h2
-- **Sân trong** · `P-1802311f93c216` — 7 Rowan Mews · London / Tầng 1 (trệt)
-- **Sân trong gắn với map hall** · `P-ba63b94f595caf` — Template / hall
-- **Sân trước lâu đài trong khu cổng** · `P-399f2c035627f1` — Template / h2
-- **Sân vận động World Cup** · `P-9ebcfc85eb0c36` — Khác
-- **Sân vào lâu đài trong khu cổng** · `P-5daf783e1e1f28` — Template / h2
-- **Sân Viaduct** · `P-bca1f1945d52e9` — Template / h2
-- **Sân Wyvern** · `P-585c0776dc54a3` — Template / h2
-- **Tầng 9 – Bộ Bảo mật** · `P-1bd95d9a21aa0e` — Template / ministry-8-10
-- **Vùng sát sân Quidditch ngoài ranh sân** · `P-9c19f623bbb1e3` — Template / h1
-- **Vườn** · `P-dfec655aa06ffb` — Whitecap Estate · Isle of Wight / Khuôn viên
-- **Vườn** · `P-fbcb3e25adb914` — Grayhaven Estate · California / Khuôn viên
-- **Vườn bí Hagrid** · `P-1174317bcb3096` — Template / h1
-- **Vườn cây gần nhà kính** · `P-29bc58039f5eae` — Template / h1
-- **Vườn Hang Sóc** · `P-c3f56557f43009` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Vườn nhà Dursley** · `P-4232fc85ff42c4` — Britain / England / Surrey / Little Whinging
-- **Vườn nhà Hagrid** · `P-b830cb70ee02f6` — Template / h1
-- **Vườn nhà Lovegood** · `P-e3c60767666046` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Vườn sau** · `P-6acb59a2cd0cf1` — Nhà PC · London / Tầng 1 (trệt)
-- **Vườn Shell Cottage** · `P-25a2f0dc7c7eba` — Britain / England / Tinworth / ven biển
-- **Vườn Thảo dược** · `P-f2d3a414a25b76` — Template / h1
+### 7 Rowan Mews · London / Tầng 3
 
-## residential
+- **Chuyên biệt · khác:** Phòng Liad.
+- **Cư trú · ký túc:** Master suite; Phòng khách ngủ.
+- **Phục vụ · sinh hoạt:** Phòng tắm.
 
-- **Các phòng ngủ khác Hang Sóc** · `P-4890242d6f09e8` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Ký túc nam Gryffindor** · `P-a63fc4014d765b` — Template / gryffindor-common; Hogwarts / Tháp Gryffindor / Tầng tháp trên
-- **Ký túc nam Hufflepuff** · `P-ebceb992eb9255` — Template / hufflepuff-common; Hogwarts / TẦNG BẾP / Đông / Cụm Hufflepuff
-- **Ký túc nam Ravenclaw** · `P-439400ea5f0cd4` — Template / ravenclaw-common; Hogwarts / Tháp Ravenclaw / Khu phòng ngủ
-- **Ký túc nam Slytherin** · `P-6b050b321ff558` — Template / slytherin-common; Hogwarts / HẦM NGỤC / Đông / Lối Slytherin dưới mặt hồ
-- **Ký túc nữ Gryffindor** · `P-468097e3d74bf1` — Template / gryffindor-common; Hogwarts / Tháp Gryffindor / Tầng tháp trên
-- **Ký túc nữ Hufflepuff** · `P-b4314de4234c88` — Template / hufflepuff-common; Hogwarts / TẦNG BẾP / Đông / Cụm Hufflepuff
-- **Ký túc nữ Ravenclaw** · `P-7d130cc86d97eb` — Template / ravenclaw-common; Hogwarts / Tháp Ravenclaw / Khu phòng ngủ
-- **Ký túc nữ Slytherin** · `P-a6425ebd843fab` — Template / slytherin-common; Hogwarts / HẦM NGỤC / Đông / Lối Slytherin dưới mặt hồ
-- **Master suite** · `P-e51ad92343c8de` — 7 Rowan Mews · London / Tầng 3
-- **Phòng khách ngủ** · `P-120f81b5d30c37` — Grayhaven Estate · California / Tầng 2
-- **Phòng khách ngủ** · `P-4ccd67d1317f71` — 7 Rowan Mews · London / Tầng 3
-- **Phòng khách ngủ** · `P-51deeb2c56d244` — Whitecap Estate · Isle of Wight / Tầng 2
-- **Phòng khách ngủ** · `P-f67fdab0b798c6` — Nhà PC · London / Tầng 3
-- **Phòng ngủ** · `P-7fab1a6c46fde1` — Loft 5A · 21 Great Titchfield Street · Fitzrovia / Loft 5A
-- **Phòng ngủ Arthur & Molly** · `P-695c706560e4fb` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Phòng ngủ chính** · `P-cadd273181369d` — Nhà PC · London / Tầng 2
-- **Phòng ngủ Dudley** · `P-d311ceb6407c3e` — Britain / England / Surrey / Little Whinging
-- **Phòng ngủ Fred & George** · `P-328fae86b7c01c` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Phòng ngủ gia đình** · `P-838b8e1603bb66` — Whitecap Estate · Isle of Wight / Tầng 2
-- **Phòng ngủ Ginny** · `P-6eac4eb0234cb3` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Phòng ngủ Harry** · `P-88aadc4a38ae9c` — Britain / England / Surrey / Little Whinging
-- **Phòng ngủ khác nhà Black** · `P-81e49b0d4bd6c3` — Britain / England / London / Nhà ở / trụ sở
-- **Phòng ngủ phía đông** · `P-239cfed7a31957` — Grayhaven Estate · California / Nhà khách
-- **Phòng ngủ phía tây** · `P-9ce0d6987c6167` — Grayhaven Estate · California / Nhà khách
-- **Phòng ngủ Regulus Black** · `P-1ba2a8427cd9a8` — Britain / England / London / Nhà ở / trụ sở
-- **Phòng ngủ Ron** · `P-0ebb356a309e42` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Phòng ngủ Shell Cottage** · `P-7c862bcde92bda` — Britain / England / Tinworth / ven biển
-- **Phòng ngủ Sirius Black** · `P-b73feb15c40870` — Britain / England / London / Nhà ở / trụ sở
-- **Phòng ngủ Vernon/Petunia** · `P-57ffd05e36562d` — Britain / England / Surrey / Little Whinging
+### 7 Rowan Mews · London / Áp mái
 
-## service
+- **Kho · lưu trữ:** Kho gia đình.
 
-- **Bếp** · `P-17b225b47b5160` — Whitecap Estate · Isle of Wight / Tầng 1 (trệt)
-- **Bếp** · `P-78ec748eb7b9ce` — Nhà PC · London / Tầng 1 (trệt)
-- **Bếp** · `P-c986bd14a65aff` — 7 Rowan Mews · London / Bán hầm
-- **Bếp gia đình** · `P-0afb8b38025951` — Grayhaven Estate · California / Tầng 1 (trệt)
-- **Bếp Hang Sóc** · `P-2e8e6fd50795cc` — Britain / England / Tây Nam / Ottery St Catchpole
-- **Bếp Hogwarts** · `HOG-TNGBP-N-01` — Hogwarts / TẦNG BẾP / Bắc / Bếp và lối phục vụ
-- **Bếp nhà Black** · `P-501145c3fc9c8d` — Britain / England / London / Nhà ở / trụ sở
-- **Bếp nhà Dursley** · `P-18feb9f615073d` — Britain / England / Surrey / Little Whinging
-- **Bếp nhỏ** · `P-f76c14a8f564e2` — WzW House · 18 Ganton Street · Soho / Tầng mái
-- **Bếp Shell Cottage** · `P-b1b448f37c4d1e` — Britain / England / Tinworth / ven biển
-- **Laundry** · `P-05cf8a6d391ae0` — 7 Rowan Mews · London / Bán hầm
-- **Nhà vệ sinh Myrtle** · `HOG-TNG3-N-01` — Hogwarts / TẦNG 3 / Bắc / Phòng vệ sinh Myrtle và dãy hành lang
-- **Nhà vệ sinh nam tầng này** · `HOG-TNG3-N-03` — Hogwarts / TẦNG 3 / Bắc / Phòng vệ sinh Myrtle và dãy hành lang
-- **Nhà vệ sinh nam tầng sáu** · `HOG-TNG7-E-01` — Hogwarts / TẦNG 7 / Đông / Seminar & advanced teaching
-- **Pantry** · `P-f63320e3ce02f8` — 7 Rowan Mews · London / Bán hầm
-- **Phòng bảo trì dụng cụ giặt** · `HOG-TNGBP-S-04` — Hogwarts / TẦNG BẾP / Nam / Giặt là và kho phục vụ
-- **Phòng giặt** · `P-b64b4fd825a7ea` — Nhà PC · London / Bán hầm
-- **Phòng giặt là** · `HOG-TNGBP-S-01` — Hogwarts / TẦNG BẾP / Nam / Giặt là và kho phục vụ
-- **Phòng khách & bếp** · `P-aff4fe8ba8b10c` — Grayhaven Estate · California / Nhà khách
-- **Phòng khách & bếp** · `P-d62f3f91b273a7` — Loft 5A · 21 Great Titchfield Street · Fitzrovia / Loft 5A
-- **Phòng rửa dụng cụ nhà bếp** · `HOG-TNGBP-N-04` — Hogwarts / TẦNG BẾP / Bắc / Bếp và lối phục vụ
-- **Phòng tắm** · `P-572439c7221fb9` — 7 Rowan Mews · London / Tầng 3
-- **Phòng tắm** · `P-866203855d3998` — Nhà PC · London / Tầng 2
-- **Phòng tắm Huynh trưởng** · `HOG-TNG6-N-01` — Hogwarts / TẦNG 6 / Bắc / Prefects corridor – Faculty route
+### Albania / Rừng
 
-## storage
+- **Ngoài trời:** Rừng Albania – nơi Voldemort trú ẩn.
 
-- **Gian chứa chổi / kho chổi** · `P-14c5870146b747` — Template / hall
-- **Gringotts và hệ thống hầm / kho tiền** · `P-4cb1d44097aaf0` — Template / diagon-knockturn
-- **Kho bài tập và bảng phép** · `HOG-TNG6-E-04` — Hogwarts / TẦNG 6 / Đông / Phòng học trung cấp
-- **Kho bản đồ giảng dạy** · `HOG-TNG2-W-05` — Hogwarts / TẦNG 2 / Đông / Scholars / North Hall upper walk
-- **Kho bản đồ sao** · `TWR-04-02-02` — Hogwarts / Tháp Thiên văn / Tầng giữa
-- **Kho bảng hướng dẫn lớp** · `TWR-10-03-02` — Hogwarts / Tháp Cầu thang Lớn / Đỉnh tháp
-- **Kho bảo quản cúp** · `HOG-TNG4-N-04` — Hogwarts / TẦNG 4 / Bắc / Trophy – Armour Gallery
-- **Kho bảo trì đường nước** · `HOG-TNG3-N-04` — Hogwarts / TẦNG 3 / Bắc / Phòng vệ sinh Myrtle và dãy hành lang
-- **Kho chổi (Broom Cupboard)** · `HOG-TNG1-W-02` — Hogwarts / TẦNG 1 / Tây / Transfiguration Courtyard approach
-- **Kho chổi tại sân** · `P-cf86b4537874ba` — Template / pitch-static
-- **Kho đạo cụ DADA** · `HOG-TNG2-E-05` — Hogwarts / TẦNG 2 / Tây / DADA teaching cluster
-- **Kho đạo cụ phòng vệ** · `TWR-09-01-02` — Hogwarts / Tháp DADA / Chân tháp
-- **Kho đồ dùng Bùa chú** · `HOG-TNG4-E-06` — Hogwarts / TẦNG 4 / Tây / Charms – hành lang cấm cũ
-- **Kho đồ dùng sân tập** · `HOG-TNG1-N-05` — Hogwarts / TẦNG 1 / Bắc / North Hall – Bell Tower
-- **Kho đồ thủ công** · `HOG-TNG6-W-05` — Hogwarts / TẦNG 6 / Tây / Hành lang cửa sổ cao
-- **Kho dụng cụ Biến hình** · `HOG-TNG1-W-06` — Hogwarts / TẦNG 1 / Tây / Transfiguration Courtyard approach
-- **Kho dụng cụ bói toán** · `TWR-03-02-02` — Hogwarts / Tháp Bắc (Tiên tri) / Đỉnh tháp
-- **Kho dụng cụ dự phòng** · `HOG-TNGBP-W-04` — Hogwarts / TẦNG BẾP / Tây / Khu công vụ và hầm thực phẩm
-- **Kho dụng cụ khảo cổ** · `HOG-HMNGM-W-03` — Hogwarts / HẦM NGẦM / Tây / Hầm đá xưa và phòng nghiên cứu
-- **Kho dưới mái** · `P-aafb6b5cc0a4c6` — Nhà PC · London / Áp mái
-- **Kho dưới mái** · `P-cd916ab4eeb2b0` — Whitecap Estate · Isle of Wight / Áp mái
-- **Kho ghế bàn học** · `HOG-TNG3-W-05` — Hogwarts / TẦNG 3 / Đông / Cầu thang tắt và hành lang lâu đài
-- **Kho gia đình** · `P-2ae3745c48f04a` — 7 Rowan Mews · London / Áp mái
-- **Kho giấy** · `P-579062ef9135bd` — WzW House · 18 Ganton Street · Soho / Tầng hầm
-- **Kho giấy tờ giáo vụ** · `HOG-TNG8-N-05` — Hogwarts / TẦNG 8 / Bắc / Upper Grand Staircase / Headmaster
-- **Kho hồ sơ CCC** · `HOG-TNG8-W-05` — Hogwarts / TẦNG 8 / Tây / CCC / senior clubs (AU)
-- **Kho hồ sơ CCC** · `P-8dc648ce85a4fe` — CCC 07.18 · Hogwarts / Tầng 8 · cánh Tây
-- **Kho khăn trải bàn** · `HOG-TNGBP-S-03` — Hogwarts / TẦNG BẾP / Nam / Giặt là và kho phục vụ
-- **Kho khăn và đồng phục** · `HOG-TNG6-N-05` — Hogwarts / TẦNG 6 / Bắc / Prefects corridor – Faculty route
-- **Kho lưu trữ bản in** · `P-836c31b9c17543` — WzW House · 18 Ganton Street · Soho / Tầng hầm
-- **Kho mẫu** · `P-47e13519fc6e78` — WzW House · 18 Ganton Street · Soho / Tầng hầm
-- **Kho nguyên liệu Độc dược** · `HOG-HMNGC-N-03` — Hogwarts / HẦM NGỤC / Bắc / Cụm Độc dược và gian chuẩn bị
-- **Kho nồi vạc cũ** · `HOG-HMNGC-W-04` — Hogwarts / HẦM NGỤC / Tây / Cụm lớp học ngầm và hầm cũ
-- **Kho rau củ** · `HOG-TNGBP-W-02` — Hogwarts / TẦNG BẾP / Tây / Khu công vụ và hầm thực phẩm
-- **Kho sách ít dùng** · `HOG-TNG5-N-06` — Hogwarts / TẦNG 5 / Bắc / Library – Restricted Section
-- **Kho sách Lịch sử Pháp thuật** · `HOG-TNG2-N-05` — Hogwarts / TẦNG 2 / Bắc / History & Transfiguration corridor
-- **Kho sách tham khảo** · `HOG-TNG7-S-04` — Hogwarts / TẦNG 7 / Nam / Đường nối Faculty/Clock tower
-- **Kho tài liệu Hiệu trưởng** · `TWR-05-02-03` — Hogwarts / Tháp Hiệu trưởng / Đỉnh tháp
-- **Kho than và nhiên liệu** · `HOG-HMNGM-N-03` — Hogwarts / HẦM NGẦM / Bắc / Đường dẫn hầm kỹ thuật
-- **Kho thảo mộc nhà bếp** · `HOG-TNGBP-W-03` — Hogwarts / TẦNG BẾP / Tây / Khu công vụ và hầm thực phẩm
-- **Kho thiết bị học tập** · `HOG-TNG3-S-03` — Hogwarts / TẦNG 3 / Nam / Phòng học bổ trợ
-- **Kho thiết bị tiết học nâng cao** · `HOG-TNG7-N-03` — Hogwarts / TẦNG 7 / Bắc / Upper stair – tower access
-- **Kho thiết bị triển lãm** · `HOG-TNG6-S-05` — Hogwarts / TẦNG 6 / Nam / Lối lên Tháp Đồng hồ
-- **Kho thức ăn cho cú** · `TWR-11-01-02` — Hogwarts / Tháp Tây (Nhà cú) / Lối lên
-- **Kho thực phẩm khô** · `HOG-TNGBP-N-02` — Hogwarts / TẦNG BẾP / Bắc / Bếp và lối phục vụ
-- **Kho tiền 713** · `P-cc0a4d9d894357` — Template / diagon-knockturn
-- **Kho tiền gia đình Potter** · `P-fde802b26605cc` — Template / diagon-knockturn
-- **Kho tiền Lestrange** · `P-1db46d6df4495f` — Template / diagon-knockturn
-- **Kho trang phục biểu diễn** · `HOG-TNG4-W-04` — Hogwarts / TẦNG 4 / Đông / Gallery – North Hall upper route
-- **Kho vật tư lau dọn** · `HOG-HMNGC-S-02` — Hogwarts / HẦM NGỤC / Nam / Kho và tuyến phục vụ dưới Đại Sảnh
-- **Kho vật tư y tế** · `HOG-TNG2-S-05` — Hogwarts / TẦNG 2 / Nam / Hospital & Faculty Tower access
-- **Phòng lưu hồ sơ thư viện** · `HOG-TNG5-S-03` — Hogwarts / TẦNG 5 / Nam / Lối đi tầng bốn và gian trống
-- **Phòng lưu mẫu độc dược** · `HOG-HMNGC-W-05` — Hogwarts / HẦM NGỤC / Tây / Cụm lớp học ngầm và hầm cũ
+### Brazil / Trường pháp thuật
 
-## study
+- **Chuyên biệt · khác:** Castelobruxo School of Magic.
 
-- **Khu đọc và học nhóm bên trong khu Ravenclaw** · `P-da0da47f74a252` — Template / ravenclaw-common
-- **Khu đọc và học nhóm bên trong khu Slytherin** · `P-b063050bb041b4` — Template / slytherin-common
-- **Khu học nhóm bên trong khu Hufflepuff** · `P-18305f9ea8f94d` — Template / hufflepuff-common
-- **Khu sinh hoạt và học nhóm bên trong khu Gryffindor** · `P-337a20429f7b9d` — Template / gryffindor-common
-- **Phòng đọc** · `P-cad4970480cc75` — Grayhaven Estate · California / Tầng 2
-- **Phòng đọc học thuật Ravenclaw** · `TWR-02-01-03` — Hogwarts / Tháp Ravenclaw / Lối vào tháp cao
-- **Phòng đọc nghiên cứu** · `HOG-TNG5-N-04` — Hogwarts / TẦNG 5 / Bắc / Library – Restricted Section
-- **Phòng đọc yên tĩnh** · `HOG-TNG6-W-03` — Hogwarts / TẦNG 6 / Tây / Hành lang cửa sổ cao
-- **Phòng học Biến hình** · `HOG-TNG2-N-03` — Hogwarts / TẦNG 2 / Bắc / History & Transfiguration corridor
-- **Phòng học Bùa chú** · `HOG-TNG4-E-01` — Hogwarts / TẦNG 4 / Tây / Charms – hành lang cấm cũ
-- **Phòng học chuyên đề lịch sử** · `HOG-TNG5-W-03` — Hogwarts / TẦNG 5 / Tây / Cổ ngữ – học thuật
-- **Phòng học chuyên đề Phép thuật nâng cao** · `HOG-TNG7-E-02` — Hogwarts / TẦNG 7 / Đông / Seminar & advanced teaching
-- **Phòng học Cổ ngữ Runes** · `HOG-TNG5-W-01` — Hogwarts / TẦNG 5 / Tây / Cổ ngữ – học thuật
-- **Phòng học Độc dược** · `HOG-HMNGC-N-01` — Hogwarts / HẦM NGỤC / Bắc / Cụm Độc dược và gian chuẩn bị
-- **Phòng học Muggle học** · `HOG-TNG2-W-01` — Hogwarts / TẦNG 2 / Đông / Scholars / North Hall upper walk
-- **Phòng học nhóm Hufflepuff** · `HOG-TNGBP-E-05` — Hogwarts / TẦNG BẾP / Đông / Cụm Hufflepuff
-- **Phòng học nhóm Ravenclaw** · `TWR-02-02-03` — Hogwarts / Tháp Ravenclaw / Khu phòng ngủ
-- **Phòng học nhóm Slytherin** · `HOG-HMNGC-E-05` — Hogwarts / HẦM NGỤC / Đông / Lối Slytherin dưới mặt hồ
-- **Phòng học nhóm tầng bảy** · `HOG-TNG8-S-04` — Hogwarts / TẦNG 8 / Nam / Gryffindor entrance – common route
-- **Phòng học Phòng chống Nghệ thuật Hắc ám** · `HOG-TNG2-E-01` — Hogwarts / TẦNG 2 / Tây / DADA teaching cluster
-- **Phòng học Phòng chống Nghệ thuật Hắc ám — cửa tháp** · `TWR-09-02-01` — Hogwarts / Tháp DADA / Tầng giảng dạy
-- **Phòng học phụ Tháp DADA** · `HOG-TNG2-E-03` — Hogwarts / TẦNG 2 / Tây / DADA teaching cluster
-- **Phòng học số 11** · `P-5fc25ea9745ef9` — Template / hall; Hogwarts / TẦNG 1 / Tây / Transfiguration Courtyard approach
-- **Phòng học Số học (Arithmancy)** · `HOG-TNG5-E-02` — Hogwarts / TẦNG 5 / Đông / Long Gallery – chuyên môn
-- **Phòng học Thiên văn** · `TWR-04-03-01` — Hogwarts / Tháp Thiên văn / Đỉnh tháp
-- **Phòng học Tiên tri** · `TWR-03-02-01` — Hogwarts / Tháp Bắc (Tiên tri) / Đỉnh tháp
-- **Phòng học trống B-01** · `HOG-TNG1-N-06` — Hogwarts / TẦNG 1 / Bắc / North Hall – Bell Tower
-- **Phòng học trống B-02** · `HOG-TNG2-N-06` — Hogwarts / TẦNG 2 / Bắc / History & Transfiguration corridor
-- **Phòng học trống B-04** · `HOG-TNG4-N-06` — Hogwarts / TẦNG 4 / Bắc / Trophy – Armour Gallery
-- **Phòng học trống B-06** · `HOG-TNG6-N-06` — Hogwarts / TẦNG 6 / Bắc / Prefects corridor – Faculty route
-- **Phòng học trống B-07** · `HOG-TNG7-N-04` — Hogwarts / TẦNG 7 / Bắc / Upper stair – tower access
-- **Phòng học trống B-08** · `HOG-TNG8-N-04` — Hogwarts / TẦNG 8 / Bắc / Upper Grand Staircase / Headmaster
-- **Phòng học trống Đ-01** · `HOG-TNG1-E-06` — Hogwarts / TẦNG 1 / Đông / Library Annex – Viaduct
-- **Phòng học trống Đ-02** · `HOG-TNG2-E-06` — Hogwarts / TẦNG 2 / Tây / DADA teaching cluster
-- **Phòng học trống Đ-03** · `HOG-TNG3-E-05` — Hogwarts / TẦNG 3 / Tây / Văn phòng DADA – lối kín
-- **Phòng học trống Đ-05** · `HOG-TNG5-E-05` — Hogwarts / TẦNG 5 / Đông / Long Gallery – chuyên môn
-- **Phòng học trống Đ-06** · `HOG-TNG6-E-05` — Hogwarts / TẦNG 6 / Đông / Phòng học trung cấp
-- **Phòng học trống Đ-07** · `HOG-TNG7-E-05` — Hogwarts / TẦNG 7 / Đông / Seminar & advanced teaching
-- **Phòng học trống Đ-08** · `HOG-TNG8-E-03` — Hogwarts / TẦNG 8 / Đông / Room of Requirement
-- **Phòng học trống HN-01** · `HOG-HMNGC-W-03` — Hogwarts / HẦM NGỤC / Tây / Cụm lớp học ngầm và hầm cũ
-- **Phòng học trống N-03** · `HOG-TNG3-S-02` — Hogwarts / TẦNG 3 / Nam / Phòng học bổ trợ
-- **Phòng học trống N-04** · `HOG-TNG4-S-05` — Hogwarts / TẦNG 4 / Nam / Câu lạc bộ và hoạt động nhóm
-- **Phòng học trống N-05** · `HOG-TNG5-S-04` — Hogwarts / TẦNG 5 / Nam / Lối đi tầng bốn và gian trống
-- **Phòng học trống N-07** · `HOG-TNG7-S-05` — Hogwarts / TẦNG 7 / Nam / Đường nối Faculty/Clock tower
-- **Phòng học trống T-02** · `HOG-TNG2-W-06` — Hogwarts / TẦNG 2 / Đông / Scholars / North Hall upper walk
-- **Phòng học trống T-03** · `HOG-TNG3-W-04` — Hogwarts / TẦNG 3 / Đông / Cầu thang tắt và hành lang lâu đài
-- **Phòng học trống T-04** · `HOG-TNG4-W-03` — Hogwarts / TẦNG 4 / Đông / Gallery – North Hall upper route
-- **Phòng học trống T-05** · `HOG-TNG5-W-05` — Hogwarts / TẦNG 5 / Tây / Cổ ngữ – học thuật
-- **Phòng học trống T-06** · `HOG-TNG6-W-04` — Hogwarts / TẦNG 6 / Tây / Hành lang cửa sổ cao
-- **Phòng học trống T-07** · `HOG-TNG7-W-04` — Hogwarts / TẦNG 7 / Tây / Cụm sinh hoạt và trò chơi
-- **Phòng học trống T-08** · `HOG-TNG8-W-07` — Hogwarts / TẦNG 8 / Tây / CCC / senior clubs (AU)
-- **Study Amethyst** · `P-2e95be7ac27f5e` — 7 Rowan Mews · London / Tầng 2
-- **Study Valerian** · `P-ad5ac899e9989d` — 7 Rowan Mews · London / Tầng 2
-- **Thư viện** · `P-3bf90655eabf0a` — 7 Rowan Mews · London / Tầng 2
-- **Thư viện** · `P-79d20dbdcafbc7` — Whitecap Estate · Isle of Wight / Tầng 1 (trệt)
-- **Thư viện ấn phẩm** · `P-f11d32df681cb8` — WzW House · 18 Ganton Street · Soho / Tầng mái
-- **Thư viện Hogwarts** · `HOG-TNG5-N-01` — Hogwarts / TẦNG 5 / Bắc / Library – Restricted Section
+### Britain / England / Cokeworth / Spinner’s End
 
+- **Chuyên biệt · khác:** Cokeworth; Nhà Snape; Railview Hotel; Spinner’s End.
+
+### Britain / England / Các địa điểm và nhà khác
+
+- **Chuyên biệt · khác:** Budleigh Babberton; Nhà Alastor Moody; Nhà Barty Crouch Sr.; Nhà cô Muriel; Nhà của Amos Diggory (nếu tách khỏi Ottery St Catchpole); Nhà gia đình Longbottom (địa chỉ không xác định); Nhà Hepzibah Smith; Nhà Slughorn ở tạm tại Budleigh Babberton; Túp lều ngoài biển trong tập một; Upper Flagley.
+- **Ngoài trời:** Bãi cắm trại trong Rừng Dean; Rừng Dean.
+
+### Britain / England / Godric’s Hollow
+
+- **Chuyên biệt · khác:** Làng Godric’s Hollow; Nghĩa địa Godric’s Hollow; Nhà Bathilda Bagshot; Nhà gia đình Dumbledore; Nhà Potter / Potter Cottage; Quảng trường Godric’s Hollow.
+- **Ngoài trời:** Nhà thờ Godric’s Hollow.
+
+### Britain / England / Little Hangleton / Great Hangleton
+
+- **Chuyên biệt · khác:** Biệt thự Riddle; Làng Great Hangleton; Làng Little Hangleton; Nghĩa địa Little Hangleton; Nhà Gaunt.
+- **Cửa hàng · dịch vụ thương mại:** Quán The Hanged Man.
+
+### Britain / England / London / Bệnh viện St Mungo / Tầng 1
+
+- **Chuyên biệt · khác:** Khu điều trị thương tích do sinh vật.
+
+### Britain / England / London / Bệnh viện St Mungo / Tầng 2
+
+- **Ngoài trời:** Khu điều trị bệnh và nhiễm trùng pháp thuật.
+
+### Britain / England / London / Bệnh viện St Mungo / Tầng 3
+
+- **Chuyên biệt · khác:** Khu điều trị ngộ độc độc dược và thực vật.
+
+### Britain / England / London / Bệnh viện St Mungo / Tầng 4
+
+- **Chuyên biệt · khác:** Khu điều trị thương tổn do bùa chú; Phòng bệnh dài hạn Janus Thickey.
+
+### Britain / England / London / Bệnh viện St Mungo / Tầng 5
+
+- **Chuyên biệt · khác:** Phòng trà khách thăm.
+- **Cửa hàng · dịch vụ thương mại:** Cửa hàng bệnh viện.
+
+### Britain / England / London / Bệnh viện St Mungo / Tầng trệt
+
+- **Chuyên biệt · khác:** Khu điều trị tai nạn đồ tạo tác.
+- **Giao thông · kết nối:** Sảnh tiếp nhận St Mungo.
+
+### Britain / England / London / Cửa ngõ và ga
+
+- **Chuyên biệt · khác:** Charing Cross Road; Ga Paddington; Tottenham Court Road.
+- **Cửa hàng · dịch vụ thương mại:** Quán cà phê Tottenham Court Road.
+
+### Britain / England / London / Nhà ở / trụ sở
+
+- **Chuyên biệt · khác:** Nhà Diggle (địa chỉ không xác định); Nhà Granger (địa chỉ không xác định); Nhà Gregorovitch (địa chỉ không xác định); Nhà Kingsley Shacklebolt (địa chỉ không xác định); Nhà Tonks (địa chỉ không xác định); Phòng khách nhà Black; Số 11 Grimmauld Place; Số 12 Grimmauld Place / nhà Black; Số 13 Grimmauld Place.
+- **Cư trú · ký túc:** Phòng ngủ khác nhà Black; Phòng ngủ Regulus Black; Phòng ngủ Sirius Black.
+- **Giao thông · kết nối:** Sảnh nhà Black.
+- **Phục vụ · sinh hoạt:** Bếp nhà Black.
+
+### Britain / England / London / Địa điểm khác
+
+- **Chuyên biệt · khác:** Phòng Tom Riddle ở trại trẻ; Purge and Dowse (mặt tiền St Mungo); Trại trẻ mồ côi của Tom Riddle.
+- **Hành chính · làm việc:** Số 10 Downing Street / văn phòng Thủ tướng Muggle; Văn phòng quản lý trại trẻ.
+
+### Britain / England / Surrey / Little Whinging
+
+- **Chuyên biệt · khác:** Little Whinging; Magnolia Crescent; Magnolia Road; Nhà bà Figg; Phòng ăn nhà Dursley; Phòng khách Dursley; Privet Drive; Số 2 Magnolia Crescent (địa chỉ được nhắc); Số 4 Privet Drive / nhà Dursley; Số 7 Privet Drive.
+- **Cư trú · ký túc:** Phòng ngủ Dudley; Phòng ngủ Harry; Phòng ngủ Vernon/Petunia.
+- **Giao thông · kết nối:** Công viên Little Whinging; Gầm cầu thang nhà Dursley.
+- **Ngoài trời:** Vườn nhà Dursley.
+- **Phục vụ · sinh hoạt:** Bếp nhà Dursley.
+
+### Britain / England / Tinworth / ven biển
+
+- **Chuyên biệt · khác:** Làng Tinworth; Phòng khách Shell Cottage; Shell Cottage / nhà Bill và Fleur.
+- **Cư trú · ký túc:** Phòng ngủ Shell Cottage.
+- **Ngoài trời:** Bờ biển gần Shell Cottage; Vườn Shell Cottage.
+- **Phục vụ · sinh hoạt:** Bếp Shell Cottage.
+
+### Britain / England / Tây Nam / Ottery St Catchpole
+
+- **Chuyên biệt · khác:** Gác mái Hang Sóc; Hang Sóc / Nhà Weasley; Làng Ottery St Catchpole; Nhà Diggory; Nhà Fawcett; Nhà Lovegood; Phòng khách Hang Sóc; Phòng Luna Lovegood; Phòng sinh hoạt nhà Lovegood.
+- **Cư trú · ký túc:** Các phòng ngủ khác Hang Sóc; Phòng ngủ Arthur & Molly; Phòng ngủ Fred & George; Phòng ngủ Ginny; Phòng ngủ Ron.
+- **Hành chính · làm việc:** Phòng làm việc Xenophilius.
+- **Ngoài trời:** Bãi chơi Quidditch sau nhà; Vườn Hang Sóc; Vườn nhà Lovegood.
+- **Phục vụ · sinh hoạt:** Bếp Hang Sóc.
+
+### Britain / England / Wiltshire
+
+- **Chuyên biệt · khác:** Hầm giam Malfoy Manor; Khuôn viên Malfoy Manor; Phòng khách Malfoy Manor; Trang viên Malfoy.
+- **Giao thông · kết nối:** Đại sảnh Malfoy Manor.
+
+### Britain / Ngoài khơi, vị trí bí mật
+
+- **Chuyên biệt · khác:** Các dãy phòng giam Azkaban; Nhà tù Azkaban.
+
+### Britain / Phương tiện và tuyến đường
+
+- **Chuyên biệt · khác:** Phòng khách trên xe Buýt Hiệp Sĩ; Xe Buýt Hiệp Sĩ.
+
+### Britain / Scotland / Highlands / Hogsmeade: đường phố và cơ sở
+
+- **Chuyên biệt · khác:** Hang Sirius trú ở vùng núi gần làng.
+
+### Bắc Âu / Trường pháp thuật
+
+- **Chuyên biệt · khác:** Durmstrang Institute (vị trí bí mật, chưa chốt nước).
+
+### CCC 07.18 · Hogwarts / Tầng 8 · cánh Tây
+
+- **Chuyên biệt · khác:** CCC 07.18; Phòng thư liên nhà CCC; Phòng viết CCC; Tiền phòng CCC.
+- **Kho · lưu trữ:** Kho hồ sơ CCC.
+
+### Châu Âu / Vị trí không xác định / Nurmengard
+
+- **Chuyên biệt · khác:** Nurmengard.
+
+### France / Trường pháp thuật
+
+- **Chuyên biệt · khác:** Beauxbatons Academy of Magic.
+
+### Grayhaven Estate · California / Khuôn viên
+
+- **Chuyên biệt · khác:** Biệt thự Grayhaven; Nhà khách; Studio nhà kính.
+- **Ngoài trời:** Sân hồ bơi; Vườn.
+
+### Grayhaven Estate · California / Nhà khách
+
+- **Chuyên biệt · khác:** Terrace.
+- **Cư trú · ký túc:** Phòng ngủ phía đông; Phòng ngủ phía tây.
+- **Phục vụ · sinh hoạt:** Phòng khách & bếp.
+
+### Grayhaven Estate · California / Tầng 1 (trệt)
+
+- **Chuyên biệt · khác:** Phòng ăn; Phòng khách; Phòng kính.
+- **Giao thông · kết nối:** Tiền sảnh.
+- **Hành chính · làm việc:** Phòng làm việc.
+- **Ngoài trời:** Phòng sinh hoạt hướng vườn.
+- **Phục vụ · sinh hoạt:** Bếp gia đình.
+
+### Grayhaven Estate · California / Tầng 2
+
+- **Chuyên biệt · khác:** Phòng gia đình.
+- **Cư trú · ký túc:** Phòng khách ngủ.
+- **Học tập · nghiên cứu:** Phòng đọc.
+
+### Hogwarts / HẦM NGẦM / Bắc / Đường dẫn hầm kỹ thuật
+
+- **Chuyên biệt · khác:** Phòng Giả kim; Phòng kiểm tra móng tháp.
+- **Giao thông · kết nối:** Hành lang đá dưới Tháp Thiên văn.
+- **Kho · lưu trữ:** Kho than và nhiên liệu.
+
+### Hogwarts / HẦM NGẦM / Nam / Cụm hầm đá bảo vệ cũ
+
+- **Chuyên biệt · khác:** Gian bàn cờ phù thủy; Gian chìa khóa bay; Gian cuối bảo vệ Hòn đá; Gian Dây Sa-tăng; Gian thử thách Độc dược.
+
+### Hogwarts / HẦM NGẦM / Tây / Hầm đá xưa và phòng nghiên cứu
+
+- **Chuyên biệt · khác:** Map Chamber; Undercroft.
+- **Giao thông · kết nối:** Phòng lập bản vẽ công trình.
+- **Kho · lưu trữ:** Kho dụng cụ khảo cổ.
+
+### Hogwarts / HẦM NGẦM / Đông / Hầm di tích và cửa sâu
+
+- **Chuyên biệt · khác:** Đường ống xuống Phòng Chứa Bí mật; Gian cửa chắn hầm cổ; Phòng Chứa Bí mật.
+- **Giao thông · kết nối:** Hành lang dẫn đến hầm bị niêm phong.
+
+### Hogwarts / HẦM NGỤC / Bắc / Cụm Độc dược và gian chuẩn bị
+
+- **Chuyên biệt · khác:** Phòng rửa vạc.
+- **Hành chính · làm việc:** Văn phòng Snape.
+- **Học tập · nghiên cứu:** Phòng học Độc dược.
+- **Kho · lưu trữ:** Kho nguyên liệu Độc dược.
+- **Ngoài trời:** Phòng chuẩn bị bài thực hành.
+
+### Hogwarts / HẦM NGỤC / Nam / Kho và tuyến phục vụ dưới Đại Sảnh
+
+- **Chuyên biệt · khác:** Phòng kỹ thuật lò sưởi; Phòng tiệc Tử nhật.
+- **Giao thông · kết nối:** Hành lang vận chuyển thực phẩm.
+- **Hành chính · làm việc:** Phòng trực gia tinh.
+- **Kho · lưu trữ:** Kho vật tư lau dọn.
+
+### Hogwarts / HẦM NGỤC / Tây / Cụm lớp học ngầm và hầm cũ
+
+- **Chuyên biệt · khác:** Phòng phân loại mẫu khoáng.
+- **Giao thông · kết nối:** Hành lang hầm Tháp Thiên văn.
+- **Học tập · nghiên cứu:** Phòng học trống HN-01.
+- **Kho · lưu trữ:** Kho nồi vạc cũ; Phòng lưu mẫu độc dược.
+
+### Hogwarts / HẦM NGỤC / Đông / Lối Slytherin dưới mặt hồ
+
+- **Chuyên biệt · khác:** Phòng sinh hoạt chung Slytherin.
+- **Cư trú · ký túc:** Ký túc nam Slytherin; Ký túc nữ Slytherin.
+- **Giao thông · kết nối:** Hành lang Slytherin dưới hồ.
+- **Học tập · nghiên cứu:** Phòng học nhóm Slytherin.
+
+### Hogwarts / Tháp Bắc (Tiên tri) / Tầng tiếp cận
+
+- **Chuyên biệt · khác:** Phòng lưu bản đồ sao Tiên tri.
+- **Giao thông · kết nối:** Cầu thang xoắn lên Tháp Bắc.
+
+### Hogwarts / Tháp Bắc (Tiên tri) / Đỉnh tháp
+
+- **Học tập · nghiên cứu:** Phòng học Tiên tri.
+- **Kho · lưu trữ:** Kho dụng cụ bói toán.
+
+### Hogwarts / Tháp Chuông / Chân tháp
+
+- **Chuyên biệt · khác:** Phòng giữ dụng cụ chuông.
+
+### Hogwarts / Tháp Chuông / Đỉnh tháp
+
+- **Chuyên biệt · khác:** Đài treo chuông; Phòng vận hành chuông.
+
+### Hogwarts / Tháp Cầu thang Lớn / Chân tháp
+
+- **Giao thông · kết nối:** Buồng kiểm tra cầu thang; Cầu thang Lớn.
+
+### Hogwarts / Tháp Cầu thang Lớn / Lưng chừng
+
+- **Giao thông · kết nối:** Hành lang tranh nối Cầu thang Lớn; Phòng trực hành lang giữa tầng.
+
+### Hogwarts / Tháp Cầu thang Lớn / Đỉnh tháp
+
+- **Giao thông · kết nối:** Sảnh cao Cầu thang Lớn.
+- **Kho · lưu trữ:** Kho bảng hướng dẫn lớp.
+
+### Hogwarts / Tháp DADA / Chân tháp
+
+- **Giao thông · kết nối:** Sảnh chân Tháp DADA.
+- **Kho · lưu trữ:** Kho đạo cụ phòng vệ.
+
+### Hogwarts / Tháp DADA / Tầng giảng dạy
+
+- **Chuyên biệt · khác:** Phòng tập đũa phép tại tháp.
+- **Học tập · nghiên cứu:** Phòng học Phòng chống Nghệ thuật Hắc ám — cửa tháp.
+
+### Hogwarts / Tháp DADA / Tầng trên
+
+- **Giao thông · kết nối:** Hành lang Tháp DADA tầng cao.
+- **Hành chính · làm việc:** Phòng làm việc bổ trợ DADA.
+
+### Hogwarts / Tháp Giáo viên (Faculty Tower) / Tầng giữa
+
+- **Chuyên biệt · khác:** Phòng nghỉ giáo viên.
+- **Giao thông · kết nối:** Hành lang các phòng giáo viên.
+
+### Hogwarts / Tháp Giáo viên (Faculty Tower) / Tầng tiếp cận
+
+- **Giao thông · kết nối:** Lối vào Faculty Tower.
+- **Hành chính · làm việc:** Phòng trực nhân viên.
+
+### Hogwarts / Tháp Giáo viên (Faculty Tower) / Tầng trên
+
+- **Giao thông · kết nối:** Hành lang nối bệnh xá.
+- **Hành chính · làm việc:** Phòng họp giảng viên kín.
+
+### Hogwarts / Tháp Gryffindor / Lối vào (Tầng 8)
+
+- **Giao thông · kết nối:** Lối thang ký túc nam; Lối thang ký túc nữ.
+
+### Hogwarts / Tháp Gryffindor / Tầng tháp trên
+
+- **Cư trú · ký túc:** Ký túc nam Gryffindor; Ký túc nữ Gryffindor.
+- **Giao thông · kết nối:** Phòng sinh hoạt học sinh cuối hành lang.
+
+### Hogwarts / Tháp Hiệu trưởng / Tầng cửa vào
+
+- **Giao thông · kết nối:** Cầu thang xoắn sau tượng đá.
+- **Hành chính · làm việc:** Phòng chờ văn phòng Hiệu trưởng.
+
+### Hogwarts / Tháp Hiệu trưởng / Đỉnh tháp
+
+- **Chuyên biệt · khác:** Phòng lưu dụng cụ hiệu trưởng.
+- **Hành chính · làm việc:** Văn phòng Hiệu trưởng.
+- **Kho · lưu trữ:** Kho tài liệu Hiệu trưởng.
+
+### Hogwarts / Tháp Ravenclaw / Khu phòng ngủ
+
+- **Cư trú · ký túc:** Ký túc nam Ravenclaw; Ký túc nữ Ravenclaw.
+- **Học tập · nghiên cứu:** Phòng học nhóm Ravenclaw.
+
+### Hogwarts / Tháp Ravenclaw / Lối vào tháp cao
+
+- **Chuyên biệt · khác:** Phòng sinh hoạt chung Ravenclaw.
+- **Giao thông · kết nối:** Sảnh vào Ravenclaw.
+- **Học tập · nghiên cứu:** Phòng đọc học thuật Ravenclaw.
+
+### Hogwarts / Tháp Thiên văn / Tầng chân tháp
+
+- **Chuyên biệt · khác:** Phòng bảo trì kính thiên văn.
+- **Giao thông · kết nối:** Hành lang chân Tháp Thiên văn.
+
+### Hogwarts / Tháp Thiên văn / Tầng giữa
+
+- **Cửa hàng · dịch vụ thương mại:** Phòng chuẩn bị quan sát.
+- **Kho · lưu trữ:** Kho bản đồ sao.
+
+### Hogwarts / Tháp Thiên văn / Đỉnh tháp
+
+- **Cửa hàng · dịch vụ thương mại:** Đài quan sát Thiên văn.
+- **Học tập · nghiên cứu:** Phòng học Thiên văn.
+
+### Hogwarts / Tháp Tây (Nhà cú) / Lối lên
+
+- **Giao thông · kết nối:** Cầu thang Nhà cú.
+- **Kho · lưu trữ:** Kho thức ăn cho cú.
+
+### Hogwarts / Tháp Tây (Nhà cú) / Tầng chuồng cú
+
+- **Chuyên biệt · khác:** Nhà cú (Owlery); Phòng chăm sóc cú bị thương.
+
+### Hogwarts / Tháp Đồng hồ / Chân tháp
+
+- **Giao thông · kết nối:** Sảnh Tháp Đồng hồ.
+- **Hành chính · làm việc:** Phòng trực giờ giấc.
+
+### Hogwarts / Tháp Đồng hồ / Giữa tháp
+
+- **Chuyên biệt · khác:** Gian cơ cấu bánh răng; Phòng bảo trì đồng hồ.
+
+### Hogwarts / Tháp Đồng hồ / Đỉnh tháp
+
+- **Chuyên biệt · khác:** Buồng kiểm tra chuông giờ; Buồng quả lắc lớn.
+
+### Hogwarts / TẦNG 1 / Bắc / North Hall – Bell Tower
+
+- **Giao thông · kết nối:** Hành lang tới cửa Bắc Hogwarts; Sảnh chân Tháp Chuông; Sảnh phía Bắc (North Hall).
+- **Hành chính · làm việc:** Phòng trực cửa Bắc.
+- **Học tập · nghiên cứu:** Phòng học trống B-01.
+- **Kho · lưu trữ:** Kho đồ dùng sân tập.
+
+### Hogwarts / TẦNG 1 / Nam / Entrance Hall – Great Hall
+
+- **Chuyên biệt · khác:** Phòng giáo viên (Staff Room); Phòng tiếp khách nhà trường.
+- **Giao thông · kết nối:** Đại Sảnh (Great Hall); Phòng nhỏ cạnh Đại Sảnh; Tiền sảnh (Entrance Hall).
+- **Hành chính · làm việc:** Văn phòng Filch.
+- **Ngoài trời:** Phòng chờ trước Phân loại.
+
+### Hogwarts / TẦNG 1 / Tây / Transfiguration Courtyard approach
+
+- **Chuyên biệt · khác:** Phòng gửi áo choàng.
+- **Giao thông · kết nối:** Hành lang hướng sân Tứ giác; Hành lang vào sân Biến hình.
+- **Học tập · nghiên cứu:** Phòng học số 11.
+- **Kho · lưu trữ:** Kho chổi (Broom Cupboard); Kho dụng cụ Biến hình.
+
+### Hogwarts / TẦNG 1 / Đông / Library Annex – Viaduct
+
+- **Chuyên biệt · khác:** Phòng tiếp học sinh mới.
+- **Giao thông · kết nối:** Hành lang nối khu nhà kính; Kho dụng cụ sảnh Trung tâm; Sảnh lối vào Cầu cạn (Viaduct Entrance); Sảnh Trung tâm (Central Hall).
+- **Học tập · nghiên cứu:** Phòng học trống Đ-01.
+
+### Hogwarts / TẦNG 2 / Bắc / History & Transfiguration corridor
+
+- **Chuyên biệt · khác:** Phòng chuẩn bị Biến hình; Phòng Lịch sử Pháp thuật.
+- **Hành chính · làm việc:** Văn phòng McGonagall.
+- **Học tập · nghiên cứu:** Phòng học Biến hình; Phòng học trống B-02.
+- **Kho · lưu trữ:** Kho sách Lịch sử Pháp thuật.
+
+### Hogwarts / TẦNG 2 / Nam / Hospital & Faculty Tower access
+
+- **Chuyên biệt · khác:** Bệnh xá Hogwarts; Phòng thay băng.
+- **Giao thông · kết nối:** Hành lang vào Tháp Giáo viên.
+- **Hành chính · làm việc:** Văn phòng bà Pomfrey.
+- **Kho · lưu trữ:** Kho vật tư y tế.
+- **Ngoài trời:** Phòng chờ bệnh xá.
+
+### Hogwarts / TẦNG 2 / Tây / DADA teaching cluster
+
+- **Chuyên biệt · khác:** Phòng thực hành phòng vệ.
+- **Giao thông · kết nối:** Hành lang Tháp DADA tầng thấp.
+- **Học tập · nghiên cứu:** Phòng học Phòng chống Nghệ thuật Hắc ám; Phòng học phụ Tháp DADA; Phòng học trống Đ-02.
+- **Kho · lưu trữ:** Kho đạo cụ DADA.
+
+### Hogwarts / TẦNG 2 / Đông / Scholars / North Hall upper walk
+
+- **Chuyên biệt · khác:** Phòng Chữ tượng hình (Hieroglyphics); Phòng lưu mô hình lịch sử.
+- **Giao thông · kết nối:** Hành lang tầng trên North Hall.
+- **Học tập · nghiên cứu:** Phòng học Muggle học; Phòng học trống T-02.
+- **Kho · lưu trữ:** Kho bản đồ giảng dạy.
+
+### Hogwarts / TẦNG 3 / Bắc / Phòng vệ sinh Myrtle và dãy hành lang
+
+- **Giao thông · kết nối:** Hành lang tầng hai cạnh nhà vệ sinh Myrtle; Phòng trực hành lang B-03.
+- **Kho · lưu trữ:** Kho bảo trì đường nước.
+- **Phục vụ · sinh hoạt:** Nhà vệ sinh Myrtle; Nhà vệ sinh nam tầng này.
+
+### Hogwarts / TẦNG 3 / Nam / Phòng học bổ trợ
+
+- **Chuyên biệt · khác:** Phòng luyện đũa phép cơ bản; Phòng sinh hoạt học sinh nhỏ.
+- **Hành chính · làm việc:** Phòng làm việc trợ giảng.
+- **Học tập · nghiên cứu:** Phòng học trống N-03.
+- **Kho · lưu trữ:** Kho thiết bị học tập.
+
+### Hogwarts / TẦNG 3 / Tây / Văn phòng DADA – lối kín
+
+- **Chuyên biệt · khác:** Phòng lưu giáo án; Phòng tiếp phụ huynh của khoa DADA.
+- **Giao thông · kết nối:** Hành lang tới văn phòng DADA.
+- **Hành chính · làm việc:** Văn phòng giáo sư DADA (Lockhart 1992).
+- **Học tập · nghiên cứu:** Phòng học trống Đ-03.
+
+### Hogwarts / TẦNG 3 / Đông / Cầu thang tắt và hành lang lâu đài
+
+- **Giao thông · kết nối:** Hành lang tranh bản đồ Argyllshire; Phòng kiểm tra an toàn cầu thang.
+- **Học tập · nghiên cứu:** Phòng học trống T-03.
+- **Kho · lưu trữ:** Kho ghế bàn học.
+
+### Hogwarts / TẦNG 4 / Bắc / Trophy – Armour Gallery
+
+- **Chuyên biệt · khác:** Phòng Âm nhạc (Music Room); Phòng tập hòa tấu.
+- **Giao thông · kết nối:** Hành lang áo giáp.
+- **Học tập · nghiên cứu:** Phòng học trống B-04.
+- **Kho · lưu trữ:** Kho bảo quản cúp.
+- **Ngoài trời:** Phòng Trưng bày Chiến tích.
+
+### Hogwarts / TẦNG 4 / Nam / Câu lạc bộ và hoạt động nhóm
+
+- **Chuyên biệt · khác:** Phòng chuẩn bị câu lạc bộ; Phòng tập Đấu tay đôi dự phòng; Phòng tập diễn thuyết.
+- **Hành chính · làm việc:** Phòng họp học sinh.
+- **Học tập · nghiên cứu:** Phòng học trống N-04.
+
+### Hogwarts / TẦNG 4 / Tây / Charms – hành lang cấm cũ
+
+- **Chuyên biệt · khác:** Gian cửa sập của Fluffy (1991); Phòng thực hành Bùa chú.
+- **Giao thông · kết nối:** Hành lang Bùa chú; Hành lang cấm tầng ba năm 1991.
+- **Học tập · nghiên cứu:** Phòng học Bùa chú.
+- **Kho · lưu trữ:** Kho đồ dùng Bùa chú.
+
+### Hogwarts / TẦNG 4 / Đông / Gallery – North Hall upper route
+
+- **Chuyên biệt · khác:** Phòng phục hồi hiện vật.
+- **Giao thông · kết nối:** Hành lang tầng trên Sảnh Bắc.
+- **Học tập · nghiên cứu:** Phòng học trống T-04.
+- **Kho · lưu trữ:** Kho trang phục biểu diễn.
+- **Ngoài trời:** Phòng trưng bày cổ vật giáo dục.
+
+### Hogwarts / TẦNG 5 / Bắc / Library – Restricted Section
+
+- **Chuyên biệt · khác:** Khu Sách Cấm (Restricted Section); Phòng tra cứu mục lục.
+- **Hành chính · làm việc:** Phòng làm việc thủ thư.
+- **Học tập · nghiên cứu:** Phòng đọc nghiên cứu; Thư viện Hogwarts.
+- **Kho · lưu trữ:** Kho sách ít dùng.
+
+### Hogwarts / TẦNG 5 / Nam / Lối đi tầng bốn và gian trống
+
+- **Chuyên biệt · khác:** Phòng trống từng chứa Gương Ảo ảnh năm 1991.
+- **Giao thông · kết nối:** Cầu thang tắt sau thảm treo; Hành lang gương thông lối bí mật cũ; Kho vật dụng sảnh đọc.
+- **Học tập · nghiên cứu:** Phòng học trống N-05.
+- **Kho · lưu trữ:** Phòng lưu hồ sơ thư viện.
+
+### Hogwarts / TẦNG 5 / Tây / Cổ ngữ – học thuật
+
+- **Chuyên biệt · khác:** Phòng dịch cổ ngữ; Phòng nghiên cứu tư liệu.
+- **Học tập · nghiên cứu:** Phòng học chuyên đề lịch sử; Phòng học Cổ ngữ Runes; Phòng học trống T-05.
+
+### Hogwarts / TẦNG 5 / Đông / Long Gallery – chuyên môn
+
+- **Chuyên biệt · khác:** Phòng bản đồ và địa lý pháp thuật; Phòng giải mã mật thư.
+- **Giao thông · kết nối:** Hành lang Dài (Long Gallery).
+- **Học tập · nghiên cứu:** Phòng học Số học (Arithmancy); Phòng học trống Đ-05.
+
+### Hogwarts / TẦNG 6 / Bắc / Prefects corridor – Faculty route
+
+- **Chuyên biệt · khác:** Phòng nghỉ huynh trưởng.
+- **Giao thông · kết nối:** Hành lang Tháp Giáo viên tầng trên; Hành lang trước Phòng tắm Huynh trưởng.
+- **Học tập · nghiên cứu:** Phòng học trống B-06.
+- **Kho · lưu trữ:** Kho khăn và đồng phục.
+- **Phục vụ · sinh hoạt:** Phòng tắm Huynh trưởng.
+
+### Hogwarts / TẦNG 6 / Nam / Lối lên Tháp Đồng hồ
+
+- **Chuyên biệt · khác:** Phòng bảo trì cơ cấu đồng hồ; Phòng làm báo học sinh.
+- **Giao thông · kết nối:** Hành lang Tháp Đồng hồ tầng cao.
+- **Kho · lưu trữ:** Kho thiết bị triển lãm.
+- **Ngoài trời:** Phòng câu lạc bộ học thuật.
+
+### Hogwarts / TẦNG 6 / Tây / Hành lang cửa sổ cao
+
+- **Chuyên biệt · khác:** Phòng tập nhạc nhóm nhỏ.
+- **Giao thông · kết nối:** Hành lang cửa sổ phía Tây tầng năm.
+- **Học tập · nghiên cứu:** Phòng đọc yên tĩnh; Phòng học trống T-06.
+- **Kho · lưu trữ:** Kho đồ thủ công.
+
+### Hogwarts / TẦNG 6 / Đông / Phòng học trung cấp
+
+- **Chuyên biệt · khác:** Phòng mỹ thuật pháp thuật; Phòng nghiên cứu Số học.
+- **Giao thông · kết nối:** Hành lang cánh Đông tầng năm.
+- **Học tập · nghiên cứu:** Phòng học trống Đ-06.
+- **Kho · lưu trữ:** Kho bài tập và bảng phép.
+
+### Hogwarts / TẦNG 7 / Bắc / Upper stair – tower access
+
+- **Chuyên biệt · khác:** Phòng lưu bảng thành tích học thuật; Phòng lưu sổ kết quả học tập.
+- **Giao thông · kết nối:** Hành lang cầu thang phía Bắc.
+- **Học tập · nghiên cứu:** Phòng học trống B-07.
+- **Kho · lưu trữ:** Kho thiết bị tiết học nâng cao.
+
+### Hogwarts / TẦNG 7 / Nam / Đường nối Faculty/Clock tower
+
+- **Chuyên biệt · khác:** Phòng lưu biên bản giáo viên; Phòng xem lịch học.
+- **Giao thông · kết nối:** Hành lang phía trên Tháp Giáo viên.
+- **Học tập · nghiên cứu:** Phòng học trống N-07.
+- **Kho · lưu trữ:** Kho sách tham khảo.
+
+### Hogwarts / TẦNG 7 / Tây / Cụm sinh hoạt và trò chơi
+
+- **Chuyên biệt · khác:** Phòng Gobstones; Phòng làm dự án học sinh.
+- **Giao thông · kết nối:** Hành lang kính tầng cao.
+- **Học tập · nghiên cứu:** Phòng học trống T-07.
+- **Ngoài trời:** Phòng câu lạc bộ cờ phù thủy.
+
+### Hogwarts / TẦNG 7 / Đông / Seminar & advanced teaching
+
+- **Chuyên biệt · khác:** Phòng hội thảo nhỏ; Phòng thí nghiệm an toàn.
+- **Học tập · nghiên cứu:** Phòng học chuyên đề Phép thuật nâng cao; Phòng học trống Đ-07.
+- **Phục vụ · sinh hoạt:** Nhà vệ sinh nam tầng sáu.
+
+### Hogwarts / TẦNG 8 / Bắc / Upper Grand Staircase / Headmaster
+
+- **Giao thông · kết nối:** Hành lang dẫn lên văn phòng Hiệu trưởng; Sảnh tầng cao Cầu thang Lớn; Sảnh vào văn phòng Hiệu trưởng.
+- **Học tập · nghiên cứu:** Phòng học trống B-08.
+- **Kho · lưu trữ:** Kho giấy tờ giáo vụ.
+
+### Hogwarts / TẦNG 8 / Nam / Gryffindor entrance – common route
+
+- **Chuyên biệt · khác:** Phòng sinh hoạt chung Gryffindor.
+- **Giao thông · kết nối:** Hành lang tranh tầng bảy; Lối cầu thang ký túc Gryffindor; Lối chân dung Bà Béo.
+- **Học tập · nghiên cứu:** Phòng học nhóm tầng bảy.
+
+### Hogwarts / TẦNG 8 / Tây / CCC / senior clubs (AU)
+
+- **Chuyên biệt · khác:** CCC 07.18; Phòng thư liên nhà CCC; Phòng viết CCC; Tiền phòng CCC.
+- **Hành chính · làm việc:** Phòng họp liên nhà.
+- **Học tập · nghiên cứu:** Phòng học trống T-08.
+- **Kho · lưu trữ:** Kho hồ sơ CCC.
+
+### Hogwarts / TẦNG 8 / Đông / Room of Requirement
+
+- **Chuyên biệt · khác:** Phòng nghi lễ học thuật; Phòng Yêu cầu (Room of Requirement).
+- **Cửa hàng · dịch vụ thương mại:** Phòng bảo quản tranh phép.
+- **Giao thông · kết nối:** Hành lang tầng bảy trước Phòng Yêu cầu.
+- **Học tập · nghiên cứu:** Phòng học trống Đ-08.
+
+### Hogwarts / TẦNG BẾP / Bắc / Bếp và lối phục vụ
+
+- **Chuyên biệt · khác:** Phòng chuẩn bị suất ăn.
+- **Giao thông · kết nối:** Hành lang hậu cần bếp.
+- **Kho · lưu trữ:** Kho thực phẩm khô.
+- **Phục vụ · sinh hoạt:** Bếp Hogwarts; Phòng rửa dụng cụ nhà bếp.
+
+### Hogwarts / TẦNG BẾP / Nam / Giặt là và kho phục vụ
+
+- **Chuyên biệt · khác:** Phòng đồ vải.
+- **Giao thông · kết nối:** Hành lang kho phía Nam.
+- **Kho · lưu trữ:** Kho khăn trải bàn.
+- **Phục vụ · sinh hoạt:** Phòng bảo trì dụng cụ giặt; Phòng giặt là.
+
+### Hogwarts / TẦNG BẾP / Tây / Khu công vụ và hầm thực phẩm
+
+- **Chuyên biệt · khác:** Phòng nghỉ gia tinh.
+- **Giao thông · kết nối:** Hành lang kết nối hầm phía Tây.
+- **Kho · lưu trữ:** Kho dụng cụ dự phòng; Kho rau củ; Kho thảo mộc nhà bếp.
+
+### Hogwarts / TẦNG BẾP / Đông / Cụm Hufflepuff
+
+- **Chuyên biệt · khác:** Phòng sinh hoạt chung Hufflepuff.
+- **Cư trú · ký túc:** Ký túc nam Hufflepuff; Ký túc nữ Hufflepuff.
+- **Giao thông · kết nối:** Hành lang Hufflepuff.
+- **Học tập · nghiên cứu:** Phòng học nhóm Hufflepuff.
+
+### Japan / Minami Iwo Jima
+
+- **Chuyên biệt · khác:** Mahoutokoro School of Magic.
+
+### Khác
+
+- **Chuyên biệt · khác:** Cánh đồng World Cup Quidditch; Đấu trường thử thách rồng; Hang biển của Voldemort; Khu bảo vệ Hòn đá Phù thủy dưới Hogwarts; Khu cắm trại Beauxbatons; Khu lều World Cup; Lăng mộ Dumbledore; Phòng của Ủy ban Đăng ký Phù thủy gốc Muggle.
+- **Giao thông · kết nối:** Các lăng mộ Ai Cập mà Bill phá giải lời nguyền.
+- **Ngoài trời:** Bãi neo tàu Durmstrang; Đảo đá trong hồ hang biển; Hồ ngầm trong hang biển; Khu thử thách Hồ Đen; Mê cung Tam Pháp thuật ở sân Quidditch; Sân vận động World Cup.
+
+### Liad’s Attic · Hogwarts / Áp mái
+
+- **Chuyên biệt · khác:** Phòng áp mái Liad.
+
+### Loft 5A · 21 Great Titchfield Street · Fitzrovia / Loft 5A
+
+- **Chuyên biệt · khác:** Phòng thay đồ; Phòng tiện ích; Studio sáng tạo.
+- **Cư trú · ký túc:** Phòng ngủ.
+- **Phục vụ · sinh hoạt:** Phòng khách & bếp.
+
+### Loft 5A · 21 Great Titchfield Street · Fitzrovia / Sảnh chung
+
+- **Giao thông · kết nối:** Sảnh chung.
+
+### Nhà PC · London / Bán hầm
+
+- **Chuyên biệt · khác:** Kho; Phòng sửa đồ; Phòng tiện ích.
+- **Phục vụ · sinh hoạt:** Phòng giặt.
+
+### Nhà PC · London / Tầng 1 (trệt)
+
+- **Chuyên biệt · khác:** Hiên sau; Phòng ăn; Phòng khách.
+- **Giao thông · kết nối:** Tiền sảnh.
+- **Ngoài trời:** Vườn sau.
+- **Phục vụ · sinh hoạt:** Bếp.
+
+### Nhà PC · London / Tầng 2
+
+- **Cư trú · ký túc:** Phòng ngủ chính.
+- **Hành chính · làm việc:** Phòng làm việc.
+- **Phục vụ · sinh hoạt:** Phòng tắm.
+
+### Nhà PC · London / Tầng 3
+
+- **Chuyên biệt · khác:** Phòng BẠN.
+- **Cư trú · ký túc:** Phòng khách ngủ.
+
+### Nhà PC · London / Áp mái
+
+- **Chuyên biệt · khác:** Phòng sở thích.
+- **Kho · lưu trữ:** Kho dưới mái.
+
+### Romania / Khu bảo tồn
+
+- **Chuyên biệt · khác:** Khu nuôi/bảo tồn rồng Romania – nơi Charlie làm việc.
+
+### Template / diagon-knockturn
+
+- **Chuyên biệt · khác:** Apothecary; Borgin & Burkes; Các cơ sở Knockturn khác trong template; Cái Vạc Lủng và các phòng trọ; Eeylops Owl Emporium; Florean Fortescue’s; Flourish & Blotts; Gambol & Japes; Hẻm Knockturn; Hẻm Xéo; Madam Malkin’s; Magical Menagerie; Nhà dân và ngõ ở Knockturn; Ollivanders; Potage’s Cauldrons; Quality Quidditch Supplies; Scribbulus; Twilfitt & Tatting’s; Weasleys’ Wizard Wheezes (nếu tồn tại theo thời kỳ).
+- **Cửa hàng · dịch vụ thương mại:** Các tiệm, xưởng, quán trong bản đồ Diagon; Tiệm áo chùng cũ; Tiệm bút lông và giấy da; Tiệm cổ vật / cầm đồ tại Knockturn; Tiệm đồ cũ.
+- **Kho · lưu trữ:** Gringotts và hệ thống hầm / kho tiền; Kho tiền 713; Kho tiền gia đình Potter; Kho tiền Lestrange.
+- **Ngoài trời:** Các ngõ phố nối Hẻm Xéo và Knockturn; Các nhà dân trên phố trong bản đồ Diagon; Sân sau Cái Vạc Lủng.
+
+### Template / express
+
+- **Chuyên biệt · khác:** Các toa Hogwarts Express; Đầu máy Hogwarts Express; Ga Hogsmeade; Hogwarts Express; King’s Cross; Mọi buồng hành khách trong các toa; Nhà ga Hogsmeade; Toa mẫu Gryffindor; Toa mẫu Hufflepuff; Toa mẫu Ravenclaw; Toa mẫu Slytherin; Toa thường.
+- **Giao thông · kết nối:** Hành lang toa; Lối nối giữa các toa.
+- **Ngoài trời:** Khu chờ lên tàu tại King’s Cross; Sân ga 9¾; Sân ga Hogsmeade (khu tàu).
+
+### Template / gryffindor-common
+
+- **Giao thông · kết nối:** Cầu thang trong khu Gryffindor.
+- **Học tập · nghiên cứu:** Khu sinh hoạt và học nhóm bên trong khu Gryffindor.
+
+### Template / h1
+
+- **Chuyên biệt · khác:** Bến ga / bến thuyền Hogsmeade ngoài khu nhà ga; Bến thuyền Hogwarts; Các nhà kính Hogwarts và các phòng bên trong; Cây cổ thụ ven hồ; Đường dạo ngoài trời quanh Hogwarts; Đường dạo ven hồ; Đường đi ngoài các tường bao lâu đài; Đường giữa các nhà kính; Đường mòn giữa Hogwarts và Hogsmeade; Đường tới lều Hagrid; Đường tới nhà ga Hogsmeade; Khu ổ nhện Aragog; Lều Hagrid và các phòng bên trong; Nhà cú và khu vực bên trong Nhà cú; Nhà thuyền Hogwarts.
+- **Giao thông · kết nối:** Các bãi cỏ ngoài sân trong và ngoài khu cầu/cổng H2; Lối đi và bãi đất ven hồ; Lối lên Nhà cú; Lối vào Rừng Cấm.
+- **Ngoài trời:** Bãi cỏ học tập quanh trường; Bãi cỏ và đồng cỏ quanh Hogwarts; Bãi cỏ ven hồ; Bãi học bay; Bìa Rừng Cấm; Bờ Hồ Đen; Các đường dạo và bãi đất trống ngoài trời quanh trường chưa thuộc template khác; Đường mòn Rừng Cấm; Đường tới sân Quidditch; Hồ Đen; Khoảng rừng sâu; Khu nhân mã trong Rừng Cấm; Liễu Roi và bãi đất quanh cây; Mặt hồ và khu vực trên thuyền; Sân cỏ cạnh lâu đài; Vùng sát sân Quidditch ngoài ranh sân; Vườn bí Hagrid; Vườn cây gần nhà kính; Vườn nhà Hagrid; Vườn Thảo dược.
+
+### Template / h2
+
+- **Chuyên biệt · khác:** Cầu đá nối các cánh lâu đài; Cầu gỗ và các cầu nối thuộc khối lâu đài; Ngoại thất khối lâu đài Hogwarts.
+- **Giao thông · kết nối:** Cầu cạn Viaduct; Cổng chính Hogwarts.
+- **Ngoài trời:** Hai sân trong lâu đài; Sân Bell Tower (Tháp Chuông); Sân chân tháp trong khối lâu đài; Sân Clock Tower (Đồng hồ); Sân giữa các cánh lâu đài; Sân Mistletoe; Sân Quad; Sân Transfiguration (Biến hình); Sân trước lâu đài trong khu cổng; Sân vào lâu đài trong khu cổng; Sân Viaduct; Sân Wyvern.
+
+### Template / hall
+
+- **Chuyên biệt · khác:** Phòng giáo viên; Phòng sau bàn giáo viên.
+- **Giao thông · kết nối:** Đại Sảnh; Lối lên Cầu thang Lớn tại Tiền sảnh; Sảnh tiếp cận Đại Sảnh; Tiền sảnh.
+- **Hành chính · làm việc:** Văn phòng Filch.
+- **Kho · lưu trữ:** Gian chứa chổi / kho chổi.
+- **Ngoài trời:** Gian chờ trước Phân loại; Sân trong gắn với map hall.
+
+### Template / hufflepuff-common
+
+- **Giao thông · kết nối:** Hành lang chung trong khu Hufflepuff.
+- **Học tập · nghiên cứu:** Khu học nhóm bên trong khu Hufflepuff.
+
+### Template / ministry2
+
+- **Chuyên biệt · khác:** Đội Đảo ngược Tai nạn Pháp thuật; Khu hành chính Wizengamot; Khu thương mại / luật quốc tế; Tầng 2 – Thi hành Luật Pháp thuật; Tầng 3 – Tai nạn và Thảm họa Pháp thuật; Tầng 4 – Điều hòa và Kiểm soát Sinh vật; Tầng 5 – Hợp tác Pháp thuật Quốc tế; Tầng 6 – Giao thông Pháp thuật; Tầng 7 – Trò chơi và Thể thao Pháp thuật; Trụ sở Liên đoàn Quidditch Anh–Ireland; Trụ sở Thần Sáng; Ủy ban Biện minh với Muggle.
+- **Cửa hàng · dịch vụ thương mại:** Cơ quan Khóa Cảng; Quản lý Chổi bay.
+- **Hành chính · làm việc:** Tầng 1 – Văn phòng Bộ trưởng; Văn phòng Bằng sáng chế Lố bịch; Văn phòng Cấp phép Độn thổ; Văn phòng Lạm dụng Đồ tạo tác Muggle; Văn phòng Liên lạc Pháp thuật Quốc tế; Văn phòng Liên lạc Yêu tinh; Văn phòng Mạng Floo; Văn phòng Sử dụng Pháp thuật Sai trái; Văn phòng Thứ trưởng / trợ lý Bộ trưởng; Văn phòng Tư vấn Sinh vật gây hại.
+- **Ngoài trời:** Bộ phận Linh hồn; Bộ phận Quái thú; Bộ phận Sinh vật có tri giác; Bộ phận Xóa trí nhớ; Câu lạc bộ Gobstones chính thức.
+
+### Template / ministry-8-10
+
+- **Chuyên biệt · khác:** Phòng Không gian; Phòng Não; Phòng Thời gian; Phòng Tình yêu / phòng khóa kín; Phòng Tử thần; Phòng xử án số 10; Tầng 10 – Khu xử án; Tầng 8 – Atrium.
+- **Giao thông · kết nối:** Sảnh Tiên tri; Sảnh tiếp đón Bộ Pháp thuật; Sảnh tròn xoay.
+- **Ngoài trời:** Khu an ninh Bộ Pháp thuật; Khu giao thông Floo Bộ Pháp thuật; Khu tiếp nhận khách Bộ Pháp thuật; Phòng chờ xét xử; Phòng hỗ trợ xử án; Tầng 9 – Bộ Bảo mật.
+
+### Template / pitch-static
+
+- **Chuyên biệt · khác:** Các khán đài Quidditch; Dãy phòng phụ của sân; Khu bình luận / phòng bình luận; Phòng thay đồ các đội; Phòng thay đồ đội A; Phòng thay đồ đội B.
+- **Giao thông · kết nối:** Lối đi và sân trong ranh khu Quidditch.
+- **Kho · lưu trữ:** Kho chổi tại sân.
+- **Ngoài trời:** Mặt sân thi đấu; Sân Quidditch; Sân tập nhỏ trong quần thể Quidditch.
+
+### Template / ravenclaw-common
+
+- **Giao thông · kết nối:** Sảnh trong khu Ravenclaw.
+- **Học tập · nghiên cứu:** Khu đọc và học nhóm bên trong khu Ravenclaw.
+
+### Template / slytherin-common
+
+- **Giao thông · kết nối:** Hành lang chung Slytherin dưới hồ.
+- **Học tập · nghiên cứu:** Khu đọc và học nhóm bên trong khu Slytherin.
+
+### Template / village-static
+
+- **Chuyên biệt · khác:** Apothecary tại Hogsmeade trong template; Ba Cây Chổi và các phòng của quán; Bưu điện Hogsmeade; Các ngõ ở Hogsmeade; Đầu Heo và các phòng của quán; Dervish & Banges; Gladrags; Honeydukes và tầng hầm; Khu nhà dân Hogsmeade; Lều Hú và các phòng bên trong; Nhà dân trong template làng; Quảng trường Hogsmeade; Scrivenshaft’s; Zonko’s.
+- **Cửa hàng · dịch vụ thương mại:** Các cửa hàng hiện trong làng; Quán trà Madam Puddifoot.
+- **Ngoài trời:** Phố chính Hogsmeade.
+
+### Uganda / Mountains of the Moon
+
+- **Chuyên biệt · khác:** Uagadou School of Magic.
+
+### United States / Massachusetts / Trường học
+
+- **Chuyên biệt · khác:** Ilvermorny School of Witchcraft and Wizardry.
+
+### United States / New York / Cơ quan pháp thuật
+
+- **Chuyên biệt · khác:** MACUSA Headquarters.
+
+### Whitecap Estate · Isle of Wight / Bờ biển Whitecap
+
+- **Chuyên biệt · khác:** Bến Whitecap.
+
+### Whitecap Estate · Isle of Wight / Khuôn viên
+
+- **Chuyên biệt · khác:** Biệt thự Whitecap; Chuồng gia cầm; Nhà khách.
+- **Ngoài trời:** Bãi biển Whitecap; Hồ bơi; Vườn.
+
+### Whitecap Estate · Isle of Wight / Tầng 1 (trệt)
+
+- **Chuyên biệt · khác:** Hiên ngoài; Phòng ăn; Phòng D&D; Phòng khách; Phòng kính.
+- **Giao thông · kết nối:** Tiền sảnh.
+- **Học tập · nghiên cứu:** Thư viện.
+- **Phục vụ · sinh hoạt:** Bếp.
+
+### Whitecap Estate · Isle of Wight / Tầng 2
+
+- **Chuyên biệt · khác:** Ban công; Phòng sinh hoạt.
+- **Cư trú · ký túc:** Phòng khách ngủ; Phòng ngủ gia đình.
+
+### Whitecap Estate · Isle of Wight / Áp mái
+
+- **Chuyên biệt · khác:** Phòng áp mái; Phòng sở thích.
+- **Kho · lưu trữ:** Kho dưới mái.
+
+### WzW House · 18 Ganton Street · Soho / Tầng 1 (trệt)
+
+- **Chuyên biệt · khác:** Phòng giao nhận; Phòng tiếp khách.
+- **Giao thông · kết nối:** Sảnh tiếp tân.
+- **Ngoài trời:** Phòng trưng bày.
+
+### WzW House · 18 Ganton Street · Soho / Tầng 2
+
+- **Chuyên biệt · khác:** Phòng biên tập; Phòng viết nội dung.
+- **Hành chính · làm việc:** Phòng họp.
+
+### WzW House · 18 Ganton Street · Soho / Tầng 3
+
+- **Chuyên biệt · khác:** Phòng mẫu; Phòng tạo kiểu; Phòng thay đồ; Studio ảnh.
+
+### WzW House · 18 Ganton Street · Soho / Tầng 4
+
+- **Chuyên biệt · khác:** Phòng duyệt bản in; Studio sáng tạo.
+
+### WzW House · 18 Ganton Street · Soho / Tầng hầm
+
+- **Chuyên biệt · khác:** Phòng thiết bị.
+- **Kho · lưu trữ:** Kho giấy; Kho lưu trữ bản in; Kho mẫu.
+
+### WzW House · 18 Ganton Street · Soho / Tầng mái
+
+- **Học tập · nghiên cứu:** Thư viện ấn phẩm.
+- **Ngoài trời:** Sân thượng.
+- **Phục vụ · sinh hoạt:** Bếp nhỏ.
