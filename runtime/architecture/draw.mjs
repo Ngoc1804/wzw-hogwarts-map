@@ -11,7 +11,16 @@ export function drawIndoor(svg,geometry,onRoomClick){
  for(const v of model.voids){
   path(floor,ppath(v.poly),{fill:'#c5c6a4',stroke:'#a3a37b','stroke-width':1,'data-void':'true','pointer-events':'none'});
  }
- path(floor,model.floors.map(ppath).join(''),{fill:'url(#hall-floor)','fill-rule':'nonzero','data-corridor-floor':'true'});
+ for(const [i,poly] of model.floors.entries()){
+  const corridorId=geometry.corridorPlaceIds?.[i%Math.max(1,geometry.corridorPlaceIds.length)];
+  const segment=path(floor,ppath(poly),{fill:'url(#hall-floor)','fill-rule':'nonzero','data-corridor-floor':'true'});
+  if(corridorId){
+   segment.setAttribute('data-corridor',corridorId);
+   segment.setAttribute('tabindex','0');segment.setAttribute('role','button');
+   segment.onclick=()=>onRoomClick(corridorId);
+   segment.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onRoomClick(corridorId)}};
+  }
+ }
  const stair=model.stair;
  for(let i=0;i<8;i++){
   const vertical=stair.orientation==='N';
