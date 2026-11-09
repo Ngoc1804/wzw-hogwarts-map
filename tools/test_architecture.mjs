@@ -21,7 +21,7 @@ test('all ten formulas vary count and dimensions with clear rectangular rooms an
 test('room identities, individual sizes and nonrectangular shapes are handled independently',()=>{
  const m=buildIndoorLayout({layout:'ell',rooms:Array.from({length:7},(_,i)=>({id:'id-'+i,name:'Tên '+i,width:200+i*20,depth:200+i*25,shape:['rectangle','L','U','T','cross','round','rectangle'][i]}))});
  for(let i=0;i<7;i++){assert.equal(m.rooms[i].id,'id-'+i);assert.equal(m.rooms[i].name,'Tên '+i);assert.equal(m.rooms[i].doorSide==='E'||m.rooms[i].doorSide==='W'?m.rooms[i].w:m.rooms[i].bottom-m.rooms[i].y,200+i*25);}
- assert.equal(m.thresholds.length,1);assert.throws(()=>buildIndoorLayout({roomCount:2}));assert.throws(()=>buildIndoorLayout({roomCount:8,roomWidth:-1}));assert.throws(()=>buildIndoorLayout({roomCount:8,roomShape:'unknown'}));
+ assert.equal(m.thresholds.length,1);assert.equal(buildIndoorLayout({roomCount:2}).rooms.length,2);assert.throws(()=>buildIndoorLayout({roomCount:8,roomWidth:-1}));assert.throws(()=>buildIndoorLayout({roomCount:8,roomShape:'unknown'}));
 });
 test('walkable corridor remains connected through turns and all doors have an interior landing',()=>{
  for(const layout of Object.keys(FORMULAS)){
