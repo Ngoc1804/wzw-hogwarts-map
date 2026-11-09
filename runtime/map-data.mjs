@@ -60,6 +60,14 @@ export function validateMapData(data) {
   for(const c of data.connections){requirePlace(c.from,'connection');requirePlace(c.to,'connection');if(c.from===c.to)errors.push('Self connection');graph.get(c.from)?.push(c.to);graph.get(c.to)?.push(c.from);}
   for(let i=1;i<data.view.routePlaceIds.length;i++)if(!graph.get(data.view.routePlaceIds[i-1])?.includes(data.view.routePlaceIds[i]))errors.push('Route has an unlinked step');
   if(data.view.routePlaceIds.length&&data.view.routePlaceIds[0]!==data.focus.actualPlaceId)errors.push('Route must begin at PC');
+  // Geometry is explicitly sourced from the current scene: no inferred ground from roof/shape bounds.
+  const spatial=data.view.spatial;
+  if(spatial){
+    for(const [label,regions] of [['walkable',spatial.walkableRegions],['blocked',spatial.blockedRegions],['occlusion',spatial.occlusionRegions]]){
+      if(new Set(regions.map(r=>r.id)).size!==regions.length)errors.push('Duplicate '+label+' region ID');
+      for(const region of regions)if(!region.points.every(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)))errors.push('Invalid '+label+' polygon');
+    }
+  }
   const regions=new Set((data.visibility.fogRegions||[]).map(r=>r.id));
   for(const id of data.visibility.fogRegionIds)if(!regions.has(id))errors.push('Fog region needs explicit geometry: '+id);
   return {ok:errors.length===0,errors};
