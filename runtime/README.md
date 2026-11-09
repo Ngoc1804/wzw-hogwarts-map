@@ -13,3 +13,10 @@ Recipe hiện hỗ trợ room rectangle/L/T/U/round/polygon; dựng hành lang n
 Build: `python tools/build_runtime.py --out /tmp/wizamap --ref <full atlas commit>`; bundle phải được phát hành rồi loader ghim full commit chứa bundle. `tools/contract-fixture.json` chỉ là input của test, không đóng gói runtime.
 
 Kiểm tra: `node --test tools/test_map_data.mjs tools/test_ui.mjs`, `python tools/atlas.py validate`, `python tools/test_atlas.py`.
+
+
+### Spatial Geometry (optional MAP_DATA 2.0)
+
+Trên template ngoài trời, actor `environment=outside` cần `position` và `view.spatial.walkableRegions` (polygon sàn/đất đã xác minh), `blockedRegions` (mái, mặt nước, vật cản). Runtime kiểm tra vị trí nằm trong walkable và ngoài blocked; nếu không đủ dữ liệu sẽ báo lỗi thay vì đoán từ bbox. Có thể dùng `occlusionRegions: [{id,targetId,points}]` để định nghĩa vùng chiếu che đã xác minh: `targetId` là khóa kỹ thuật trong `runtime/templates.json`, phải thuộc whitelist công trình của template. Hover/chọn NPC bị che chỉ giảm opacity đúng công trình xuống 0.7; rời vùng hoặc đổi `/map` sẽ tính lại. Không cần state hoặc backend.
+
+Crop lấy phạm vi cảnh/route và tọa độ actor có thể thấy, không dùng maxHops hay bán kính PC. Fog polygon che nhãn, hint, actor và chặn inspector khi vùng bị fog. MAP_DATA phải được lọc bí mật RP **trước** khi gửi cho Preview; fog không phải bảo mật.
