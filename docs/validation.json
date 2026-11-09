@@ -107,7 +107,7 @@
   "indoorStage2": {
     "status": "implemented source; CI and pinned bundle; browser/AI Studio pending",
     "date": "2026-11-10",
-    "bundleSha": "f5801f36a9b31446d2516b02b4ead2c23e3758df",
+    "bundleSha": "308705107c240dff20decb1d4bf08c7337186217",
     "generated": "scene-only Stage 2 ten formulas, no 3-column or A-star",
     "output": [
       "floorPolygons",
@@ -125,5 +125,28 @@
     "browser": "not reverified on authenticated AI Studio Preview",
     "mobileHardware": "not tested",
     "crop": "Generated scene keeps full room/hallway geometry in view, not actor-only anchors"
+  },
+  "atlasCorridorRelease": {
+    "date": "2026-11-10",
+    "status": "implemented, CI subject to final check, authenticated AI Studio and real hardware not yet tested",
+    "sourceEntries": 747,
+    "canonicalPlaces": 726,
+    "mergedOccurrences": 21,
+    "aliases": 21,
+    "verifiedSvgPlaceBindings": 26,
+    "castlePresets": 44,
+    "towerPresets": 27,
+    "enabledAuPresets": 7,
+    "stMungoPresets": 6,
+    "lockedAuMaps": 5,
+    "buildableAu": [
+      "CCC 07.18 main room",
+      "Nhà PC London",
+      "Liad's Attic"
+    ],
+    "singleRoomFullFloor": true,
+    "courtyardExteriorMinistryGenerated": false,
+    "outdoorWalkableCoverage": "not verified for all templates",
+    "bundleSha": "308705107c240dff20decb1d4bf08c7337186217"
   }
 }
