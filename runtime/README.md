@@ -32,8 +32,6 @@ Kiểm tra: `node --test tools/test_map_data.mjs` từ root repo.
 
 Khi index atlas thay đổi, chạy `python tools/sync_template_registry.py` để cập nhật adapter; lệnh này không sửa maps/*.
 
-## Xây lại mặt bằng trong nhà
+## Trạng thái hành lang
 
-Demo và bộ dựng hình hành lang cũ đã bị loại bỏ hoàn toàn khỏi cây source hiện hành. Không dùng lại cơ chế vẽ các path rồi nối phòng rời bằng nhánh dài.
-
-[Kế hoạch xây lại theo QA V2](../docs/INDOOR_LAYOUT_PLAN.md) mô tả nền hình học, các giai đoạn, tiêu chí nghiệm thu và tích hợp MAP_DATA. Đây là kế hoạch; renderer mới chưa được triển khai. Các khai báo loại phòng/hình dạng trong schema không phải bộ dựng hình.
+Demo và bộ dựng hình hành lang cũ đã bị loại bỏ khỏi source hiện hành theo yêu cầu người dùng. Renderer thay thế chưa triển khai. Kế hoạch phát triển chưa được người dùng duyệt và phải được thảo luận trong chat trước khi đưa lên GitHub.

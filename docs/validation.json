@@ -54,10 +54,9 @@
   },
   "indoorLayoutRebuild": {
     "date": "2026-11-09",
-    "status": "rejected demo and geometry removed; replacement planned, not implemented",
+    "status": "rejected demo and geometry removed; replacement not implemented; development plan not approved",
     "reference": "WIZAMAP_QA_V2_Interactive (1).html",
     "referenceSha256": "26d6073fbcc9c3fb5957e56f8925dfc8db8530e4f16268114966c57d48c9ca33",
-    "plan": "docs/INDOOR_LAYOUT_PLAN.md",
     "removedGeometryFiles": [
       "runtime/corridors.mjs",
       "tools/test_corridors.mjs"
