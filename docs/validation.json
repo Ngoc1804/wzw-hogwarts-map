@@ -92,5 +92,16 @@
       "embeddedAtlas": 5
     },
     "auLocations": "Fictional AU addresses and floor plans, explicitly authorized by user for publication to this repository."
+  },
+  "spatialActorCropFog": {
+    "date": "2026-11-10",
+    "status": "code and unit tests implemented, CI checked; no authenticated AI Studio or hardware validation",
+    "sceneGeometry": "per-/map optional view.spatial; explicitly verified polygon surfaces required for exterior actors",
+    "occlusion": "verified candidate binding + explicit polygon + interactiveId for grouped targets; hover/selection opacity 0.7",
+    "crop": "fit scene visible targets, route and actor positions; not PC radius",
+    "fog": "polygon hides actor ribbon, footsteps, hint and blocks place inspector interactions; RP secrets must be excluded upstream",
+    "atlas": "atlas-optimized-1.0, 747 source references, 733 unique places, 14 merges",
+    "releaseBundleSha": "d79eed97db61f877983803d3da9f53ac88fe6ef6",
+    "ci": "Node spatial tests, runtime compilation, atlas and inventory validations; browser and AI Studio not rerun"
   }
 }
