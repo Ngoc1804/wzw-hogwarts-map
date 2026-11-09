@@ -72,5 +72,18 @@
       "diffCheck": "passed",
       "browser": "not rerun: no rendering changes; replacement renderer not implemented"
     }
+  },
+  "templatePreview": {
+    "date": "2026-11-09",
+    "scope": "public static templates only; no corridor generation",
+    "templatesMountedInChromium": 13,
+    "nodeContractAndUiTests": 18,
+    "atlasTests": 5,
+    "offlineExportReload": "passed with external requests blocked",
+    "browserViewports": [
+      "1360x900",
+      "390x844"
+    ],
+    "aiStudio": "HTML shell prepared; actual AI Studio session not yet verified"
   }
 }
