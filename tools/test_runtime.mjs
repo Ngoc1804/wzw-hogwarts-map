@@ -6,7 +6,23 @@ test('unknown data never renders another template silently',()=>{const d=sample(
 test('arbitrary disconnected places have no radius restriction',()=>{const d=sample();d.places.push({...d.places[0],id:'far',atlasRef:null});assert.equal(validateMapData(d).ok,true)});
 test('fog IDs require explicit polygon geometry',()=>{const d=sample();d.visibility.fogRegionIds=['fog'];assert.equal(validateMapData(d).ok,false);d.visibility.fogRegions=[{id:'fog',points:[{x:0,y:0},{x:30,y:0},{x:0,y:30}]}];assert.equal(validateMapData(d).ok,true)});
 test('generated rooms do not overlap and connectors avoid room interiors',()=>{const d=sample();d.view.preferredMode='generated';d.places[0].generation={function:'study',shape:'L',furnishings:[]};d.places.push({...d.places[0],id:'next'});d.visibility.visiblePlaceIds.push('next');d.connections.push({id:'link',from:d.places[0].id,to:'next',kind:'corridor',state:'open'});const g=buildGeometry(resolveMap(d));const rs=Object.values(g.rooms);assert.ok(rs[0].x+rs[0].w<rs[1].x);assert.equal(g.routes.length,1);for(const c of g.routes)assert.ok(c.points[1][1]>rs[0].y+rs[0].h)});
-test('atlas IDs unique and bindings resolve to known template targets',()=>{const a=JSON.parse(fs.readFileSync('maps/decision-atlas.json'));const t=JSON.parse(fs.readFileSync('runtime/templates.json'));assert.equal(new Set(a.places.map(p=>p.id)).size,a.places.length);for(const p of a.places)for(const [id,targets]of Object.entries(p.bindings))assert.deepEqual(targets,t.templates[id].targets[p.id])});
+test('optimized user atlas preserves 747 references / 733 places and valid nested placeIds',()=>{
+ const a=JSON.parse(fs.readFileSync('maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json'));
+ assert.equal(a.schemaVersion,'atlas-optimized-1.0');
+ assert.deepEqual(a.statistics,{sourceEntries:747,places:733,mergedOccurrences:14});
+ assert.equal(a.places.length,733);
+ const ids=new Set(a.places.map(p=>p.id));assert.equal(ids.size,733);
+ assert.equal(a.places.reduce((n,p)=>n+(p.sourceIds||[]).length,0),14);
+ let refs=0;const check=rows=>{for(const id of rows){assert.ok(ids.has(id),'unknown placeId: '+id);refs++}};
+ for(const template of a.templates)check(template.placeIds);
+ for(const area of a.world.areas)check(area.placeIds);
+ for(const map of a.world.au_maps)for(const floor of map.floors)check(floor.placeIds);
+ for(const floor of a.hogwarts_castle.floors)for(const cluster of floor.clusters)check(cluster.placeIds);
+ for(const tower of a.hogwarts_castle.towers)for(const level of tower.levels)check(level.placeIds);
+ assert.equal(refs,747);
+ const registry=JSON.parse(fs.readFileSync('runtime/templates.json'));
+ assert.equal(Object.keys(registry.templates).length,13);
+});
 test('A* handles multiple rows and keeps connector grid outside unrelated rooms',()=>{const places=Array.from({length:9},(_,i)=>({id:'r'+i,floor:'floor',zone:i%2?'east':'west',generation:{shape:i%2?'L':'rectangle',function:'study',furnishings:[]}}));const connections=Array.from({length:8},(_,i)=>({id:'c'+i,from:'r'+i,to:'r'+(i+1),state:'open'}));const g=buildGeometry({places,connections});assert.equal(g.routes.length,8);for(const c of g.routes)for(const [x,y]of c.points.slice(1,-1))for(const r of Object.values(g.rooms))assert.ok(!(x>r.x&&x<r.x+r.w&&y>r.y&&y<r.y+r.h))});
 test('PC separate from 10 NPC/group tags and duplicates rejected',()=>{const d=sample();for(let i=0;i<10;i++)d.actors.push({...d.actors[0],id:'npc'+i,isPC:false,entityType:'group'});assert.equal(validateMapData(d).ok,true);d.actors.push({...d.actors[0],id:'extra',isPC:false});assert.equal(validateMapData(d).ok,false);d.actors.pop();d.actors[1].id=d.actors[0].id;assert.equal(validateMapData(d).ok,false)});
 test('monthly hints, source quotas and hidden fields rejected',()=>{for(const mutate of [d=>d.questPolicy.month='1990-01',d=>d.hints[0].packId='wrong',d=>d.questPolicy.limits.life=0,d=>d.internalHiddenState='secret']){const d=sample();mutate(d);assert.equal(validateMapData(d).ok,false)}});
