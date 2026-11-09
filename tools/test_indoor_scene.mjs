@@ -83,3 +83,12 @@ test('corridor-only scene draws floors without inventing rooms',()=>{
  assert.ok(g.actorZones.length>0&&g.floorPolygons.length>0);
  assert.ok(indoorActorPoint(g,'room-1'));
 });
+
+test('single-room generated floor does not fabricate a corridor or stair',()=>{
+ const g=buildGeometry(plan(1),{layout:'ell'});
+ assert.equal(Object.keys(g.rooms).length,1);
+ assert.equal(g.model.floors.length,0);
+ assert.equal(g.model.stair,null);
+ assert.equal(g.floorPolygons.filter(x=>x.id.startsWith('corridor:')).length,0);
+ assert.ok(indoorActorPoint(g,'room-0'));
+});
