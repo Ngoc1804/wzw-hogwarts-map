@@ -1,6 +1,6 @@
 # Kho element hiện hành
 
-247 mẫu gốc; nhà theo 3 nhóm gỗ/tường/basic. Alias và preset không nhân bản hình.
+259 mẫu. Master hình học và palette tách riêng. Nhà gồm 18 base trong ba nhóm; cây 12 kiểu và 2 mẫu đặc biệt.
 
 ## Nội thất · Ghế
 
@@ -315,32 +315,44 @@
 - `tree.ancient` — Cây · Cổ thụ đặc biệt
 - `tree.willow` — Cây · Liễu Roi đặc biệt
 
-## Nhà · Khung basic
-
-- `house.basic.hex` — Khung nhà · Lục giác
-- `house.basic.rectangle` — Khung nhà · Chữ nhật
-- `house.basic.tall` — Khung nhà · Cao tầng
-
 ## Nhà · Nhà gỗ
 
 - `house.wood.gable` — Nhà gỗ · Mái dốc
 - `house.wood.hip` — Nhà gỗ · Mái chóp
 - `house.wood.wide` — Nhà gỗ · Khối rộng
+- `house.wood.barn` — Nhà gỗ · Mái gãy / nhà kho
+- `house.wood.l` — Nhà gỗ · Khối chữ L
+- `house.wood.double` — Nhà gỗ · Hai đầu hồi
 
-## Nhà · Nhà gạch / tường
+## Nhà · Nhà tường
 
-- `house.brick.low` — Nhà tường · Khối thấp
+- `house.brick.low` — Nhà tường · Một tầng mái lệch
 - `house.brick.tall` — Nhà tường · Nhà phố cao
 - `house.brick.wide` — Nhà tường · Khối rộng
+- `house.brick.mansard` — Nhà tường · Mái mansard
+- `house.brick.l` — Nhà tường · Khối chữ L
+- `house.brick.arcade` — Nhà tường · Dãy vòm
 
-## Cây · Nét Quidditch
+## Nhà · Khung basic
 
-- `tree.beech` — Cây · Dẻ gai
-- `tree.birch` — Cây · Bạch dương
-- `tree.pine` — Cây · Thông
-- `tree.oak` — Cây · Sồi tán rộng
-- `tree.spruce` — Cây · Vân sam
-- `tree.alder` — Cây · Tống quán sủ
-- `tree.rowan` — Cây · Thanh lương trà
-- `tree.spreading` — Cây · Tán lệch
-- `tree.slender` — Cây · Tán nhiều tầng
+- `house.basic.rectangle` — Khung basic · Chữ nhật
+- `house.basic.tall` — Khung basic · Nhà phố cao
+- `house.basic.hex` — Khung basic · Lục giác
+- `house.basic.l` — Khung basic · Khối chữ L
+- `house.basic.u` — Khung basic · Chữ U
+- `house.basic.round` — Khung basic · Khối tròn
+
+## Cây · Hình khối riêng
+
+- `tree.oak` — Cây · Tán sồi nhiều nhánh
+- `tree.beech` — Cây · Tán bầu dục cao
+- `tree.birch` — Cây · Bạch dương ba thân
+- `tree.pine` — Cây · Thông tán dù
+- `tree.spruce` — Cây · Lá kim hình tháp
+- `tree.alder` — Cây · Nhiều thân tán thấp
+- `tree.rowan` — Cây · Tán chùm quả
+- `tree.spreading` — Cây · Nghiêng theo gió
+- `tree.slender` — Cây · Tán cột hẹp
+- `tree.weeping` — Cây · Tán rủ
+- `tree.bare` — Cây · Cành trụi
+- `tree.fruit` — Cây · Cây ăn quả thấp

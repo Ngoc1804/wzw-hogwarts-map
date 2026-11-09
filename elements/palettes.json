@@ -1,0 +1,27 @@
+{
+  "neutral": {},
+  "warm": {
+    "wall": "#c9b28b",
+    "wall-side": "#a38b68",
+    "roof": "#65705b",
+    "roof-side": "#475347",
+    "wood": "#92754e",
+    "glass": "#b6c9b7",
+    "foliage": "#91a477",
+    "foliage-dark": "#71865d",
+    "foliage-light": "#b2bf93",
+    "fruit": "#af785e"
+  },
+  "cool": {
+    "wall": "#c1beb1",
+    "wall-side": "#96988d",
+    "roof": "#657c85",
+    "roof-side": "#435965",
+    "wood": "#85816c",
+    "glass": "#c0d1c8",
+    "foliage": "#87a198",
+    "foliage-dark": "#5e8179",
+    "foliage-light": "#aac4ae",
+    "fruit": "#bd9a67"
+  }
+}

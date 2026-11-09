@@ -13599,50 +13599,37 @@
       ]
     },
     {
-      "id": "house.basic.hex",
-      "name": "Khung nhà · Lục giác",
-      "category": "Nhà · Khung basic",
-      "file": "assets/house.basic.hex.svg",
-      "viewBox": [
-        0,
-        0,
-        256,
-        220
-      ],
-      "anchor": {
-        "x": 128,
-        "y": 176
-      },
-      "ports": [
-        {
-          "name": "entry",
-          "x": 128,
-          "y": 176
-        }
-      ],
-      "sourceStatus": "new-six-sided-house"
-    },
-    {
       "id": "house.wood.gable",
       "name": "Nhà gỗ · Mái dốc",
       "category": "Nhà · Nhà gỗ",
       "view": "elevation",
       "file": "assets/house.wood.gable.svg",
       "viewBox": [
-        416.0,
-        245.818,
-        168.0,
-        176.182
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "template": "village-static",
-        "instance": "v-home-0"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "house.wood.hip",
@@ -13651,20 +13638,31 @@
       "view": "elevation",
       "file": "assets/house.wood.hip.svg",
       "viewBox": [
-        951.0,
-        171.64,
-        152.0,
-        194.36
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "template": "village-static",
-        "instance": "v-home-4"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "house.wood.wide",
@@ -13673,329 +13671,910 @@
       "view": "elevation",
       "file": "assets/house.wood.wide.svg",
       "viewBox": [
-        871.8,
-        372.32,
-        401.45,
-        285.68
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "template": "village-static",
-        "instance": "v-broomsticks"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "house.wood.barn",
+      "name": "Nhà gỗ · Mái gãy / nhà kho",
+      "category": "Nhà · Nhà gỗ",
+      "view": "elevation",
+      "file": "assets/house.wood.barn.svg",
+      "viewBox": [
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
+      ],
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "house.wood.l",
+      "name": "Nhà gỗ · Khối chữ L",
+      "category": "Nhà · Nhà gỗ",
+      "view": "elevation",
+      "file": "assets/house.wood.l.svg",
+      "viewBox": [
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
+      ],
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "house.wood.double",
+      "name": "Nhà gỗ · Hai đầu hồi",
+      "category": "Nhà · Nhà gỗ",
+      "view": "elevation",
+      "file": "assets/house.wood.double.svg",
+      "viewBox": [
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
+      ],
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "house.brick.low",
-      "name": "Nhà tường · Khối thấp",
-      "category": "Nhà · Nhà gạch / tường",
+      "name": "Nhà tường · Một tầng mái lệch",
+      "category": "Nhà · Nhà tường",
       "view": "elevation",
       "file": "assets/house.brick.low.svg",
       "viewBox": [
-        2307.0,
-        1037.0,
-        237.0,
-        351.0
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "template": "diagon-knockturn",
-        "instance": "da-terrace-7",
-        "roofJoinFixed": true
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "house.brick.tall",
       "name": "Nhà tường · Nhà phố cao",
-      "category": "Nhà · Nhà gạch / tường",
+      "category": "Nhà · Nhà tường",
       "view": "elevation",
       "file": "assets/house.brick.tall.svg",
       "viewBox": [
-        1184.689,
-        415.0,
-        335.516,
-        487.0
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "template": "diagon-knockturn",
-        "instance": "da-ollivanders",
-        "roofJoinFixed": true
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "house.brick.wide",
       "name": "Nhà tường · Khối rộng",
-      "category": "Nhà · Nhà gạch / tường",
+      "category": "Nhà · Nhà tường",
       "view": "elevation",
       "file": "assets/house.brick.wide.svg",
       "viewBox": [
-        2414.633,
-        417.0,
-        466.874,
-        480.0
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "template": "diagon-knockturn",
-        "instance": "da-quidditch",
-        "roofJoinFixed": true
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "house.brick.mansard",
+      "name": "Nhà tường · Mái mansard",
+      "category": "Nhà · Nhà tường",
+      "view": "elevation",
+      "file": "assets/house.brick.mansard.svg",
+      "viewBox": [
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
+      ],
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "house.brick.l",
+      "name": "Nhà tường · Khối chữ L",
+      "category": "Nhà · Nhà tường",
+      "view": "elevation",
+      "file": "assets/house.brick.l.svg",
+      "viewBox": [
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
+      ],
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "house.brick.arcade",
+      "name": "Nhà tường · Dãy vòm",
+      "category": "Nhà · Nhà tường",
+      "view": "elevation",
+      "file": "assets/house.brick.arcade.svg",
+      "viewBox": [
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
+      ],
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "house.basic.rectangle",
-      "name": "Khung nhà · Chữ nhật",
+      "name": "Khung basic · Chữ nhật",
       "category": "Nhà · Khung basic",
       "view": "elevation",
       "file": "assets/house.basic.rectangle.svg",
       "viewBox": [
-        -16.0,
-        -90.0,
-        240.0,
-        330.0
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "type": "new structural base; connected roof/wall"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "house.basic.tall",
-      "name": "Khung nhà · Cao tầng",
+      "name": "Khung basic · Nhà phố cao",
       "category": "Nhà · Khung basic",
       "view": "elevation",
       "file": "assets/house.basic.tall.svg",
       "viewBox": [
-        -16.0,
-        -90.0,
-        240.0,
-        330.0
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "type": "new structural base; connected roof/wall"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
-      "id": "tree.beech",
-      "name": "Cây · Dẻ gai",
-      "category": "Cây · Nét Quidditch",
+      "id": "house.basic.hex",
+      "name": "Khung basic · Lục giác",
+      "category": "Nhà · Khung basic",
       "view": "elevation",
-      "file": "assets/tree.beech.svg",
+      "file": "assets/house.basic.hex.svg",
       "viewBox": [
-        -55.264,
-        -187.45,
-        108.719,
-        203.45
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "template": "pitch-static",
-        "family": "beech"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
-      "id": "tree.birch",
-      "name": "Cây · Bạch dương",
-      "category": "Cây · Nét Quidditch",
+      "id": "house.basic.l",
+      "name": "Khung basic · Khối chữ L",
+      "category": "Nhà · Khung basic",
       "view": "elevation",
-      "file": "assets/tree.birch.svg",
+      "file": "assets/house.basic.l.svg",
       "viewBox": [
-        -52.501,
-        -186.628,
-        108.57,
-        202.628
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "template": "pitch-static",
-        "family": "birch"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
-      "id": "tree.pine",
-      "name": "Cây · Thông",
-      "category": "Cây · Nét Quidditch",
+      "id": "house.basic.u",
+      "name": "Khung basic · Chữ U",
+      "category": "Nhà · Khung basic",
       "view": "elevation",
-      "file": "assets/tree.pine.svg",
+      "file": "assets/house.basic.u.svg",
       "viewBox": [
-        -43.0,
-        -196.0,
-        92.0,
-        212.0
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
       ],
       "source": {
-        "template": "pitch-static",
-        "family": "pine"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "house.basic.round",
+      "name": "Khung basic · Khối tròn",
+      "category": "Nhà · Khung basic",
+      "view": "elevation",
+      "file": "assets/house.basic.round.svg",
+      "viewBox": [
+        -30.0,
+        -280.0,
+        350.0,
+        320.0
+      ],
+      "colorSlots": [
+        "wall",
+        "wall-side",
+        "roof",
+        "roof-side",
+        "wood",
+        "glass",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "tree.oak",
-      "name": "Cây · Sồi tán rộng",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Tán sồi nhiều nhánh",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
       "file": "assets/tree.oak.svg",
       "viewBox": [
-        -83.345,
-        -162.496,
-        170.302,
-        178.496
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
       ],
       "source": {
-        "template": "pitch-static",
-        "family": "oak"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "tree.beech",
+      "name": "Cây · Tán bầu dục cao",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "file": "assets/tree.beech.svg",
+      "viewBox": [
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
+      ],
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "tree.birch",
+      "name": "Cây · Bạch dương ba thân",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "file": "assets/tree.birch.svg",
+      "viewBox": [
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
+      ],
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "tree.pine",
+      "name": "Cây · Thông tán dù",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "file": "assets/tree.pine.svg",
+      "viewBox": [
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
+      ],
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "tree.spruce",
-      "name": "Cây · Vân sam",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Lá kim hình tháp",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
       "file": "assets/tree.spruce.svg",
       "viewBox": [
-        -50.4,
-        -196.0,
-        100.8,
-        212.0
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
       ],
       "source": {
-        "template": "pitch-static",
-        "family": "spruce"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "tree.alder",
-      "name": "Cây · Tống quán sủ",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Nhiều thân tán thấp",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
       "file": "assets/tree.alder.svg",
       "viewBox": [
-        -94.086,
-        -151.476,
-        189.81,
-        167.476
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
       ],
       "source": {
-        "template": "pitch-static",
-        "family": "alder"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "tree.rowan",
-      "name": "Cây · Thanh lương trà",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Tán chùm quả",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
       "file": "assets/tree.rowan.svg",
       "viewBox": [
-        -55.328,
-        -174.834,
-        110.672,
-        190.834
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
       ],
       "source": {
-        "template": "pitch-static",
-        "family": "rowan"
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "tree.spreading",
-      "name": "Cây · Tán lệch",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Nghiêng theo gió",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
       "file": "assets/tree.spreading.svg",
       "viewBox": [
-        0,
-        0,
-        230,
-        280
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
       ],
       "source": {
         "type": "original design",
-        "styleReference": "approved Quidditch muted layered trees"
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     },
     {
       "id": "tree.slender",
-      "name": "Cây · Tán nhiều tầng",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Tán cột hẹp",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
       "file": "assets/tree.slender.svg",
       "viewBox": [
-        0,
-        0,
-        230,
-        280
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
       ],
-      "tags": [
-        "2.5d",
-        "canonical-base"
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
       ],
       "source": {
         "type": "original design",
-        "styleReference": "approved Quidditch muted layered trees"
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
       },
-      "ports": []
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "tree.weeping",
+      "name": "Cây · Tán rủ",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "file": "assets/tree.weeping.svg",
+      "viewBox": [
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
+      ],
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "tree.bare",
+      "name": "Cây · Cành trụi",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "file": "assets/tree.bare.svg",
+      "viewBox": [
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
+      ],
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
+    },
+    {
+      "id": "tree.fruit",
+      "name": "Cây · Cây ăn quả thấp",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "file": "assets/tree.fruit.svg",
+      "viewBox": [
+        -20.0,
+        -260.0,
+        310.0,
+        290.0
+      ],
+      "colorSlots": [
+        "foliage",
+        "foliage-dark",
+        "foliage-light",
+        "wood",
+        "fruit",
+        "ink"
+      ],
+      "source": {
+        "type": "original design",
+        "owner": "Wizawi – Toà soạn Mộng Mị",
+        "style": "approved muted architectural linework; neutral geometry master"
+      },
+      "ports": [],
+      "tags": [
+        "neutral-master",
+        "parametric-color",
+        "distinct-silhouette"
+      ]
     }
   ],
   "aliases": {
@@ -14107,10 +14686,8 @@
     "tree.round": "tree.oak",
     "tree.umbrella": "tree.oak",
     "tree.columnar": "tree.oak",
-    "tree.fruit": "tree.oak",
     "tree.flowering": "tree.oak",
     "tree.sapling": "tree.oak",
-    "tree.bare": "tree.oak",
     "tree.dead": "tree.oak",
     "tree.cypress": "tree.pine",
     "house.cottage": "house.wood.gable",

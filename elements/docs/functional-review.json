@@ -2,22 +2,22 @@
   "schemaVersion": "1.0.0",
   "status": "review only; no asset removed or optimized",
   "hybrid": "Rooms/walls/circulation use a floor plan. Furniture/decor may use top, front or 2.5D as appropriate.",
-  "assetCount": 247,
+  "assetCount": 259,
   "exactDuplicateGroups": [],
   "decisionCounts": {
-    "GIỮ": 214,
+    "GIỮ": 226,
     "ĐỢI DUYỆT GỘP": 17,
     "GIỮ MẪU ĐỀ XUẤT": 11,
     "GIỮ / PRESET": 5
   },
   "sizes": {
-    "svgRawBytes": 1214552,
-    "svgIndividualGzipBytes": 221681,
-    "svgOneGzipBundleBytes": 128668,
-    "galleryHtmlBytes": 202122,
-    "galleryHtmlGzipBytes": 151407,
+    "svgRawBytes": 1365868,
+    "svgIndividualGzipBytes": 216008,
+    "svgOneGzipBundleBytes": 122143,
+    "galleryHtmlBytes": 193094,
+    "galleryHtmlGzipBytes": 144433,
     "conditionalRawSavingsUpperBound": 29004,
-    "conditionalRawRemainingLowerBound": 1185548
+    "conditionalRawRemainingLowerBound": 1336864
   },
   "sizeCaveats": [
     "Measured gzip is an in-memory estimate, not an applied asset transformation.",
@@ -2675,17 +2675,6 @@
       "gzipBytes": 21764
     },
     {
-      "id": "house.basic.hex",
-      "name": "Khung nhà · Lục giác",
-      "category": "Nhà · Khung basic",
-      "view": "template",
-      "family": "Nhà · Khung basic",
-      "decision": "GIỮ",
-      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 5334,
-      "gzipBytes": 810
-    },
-    {
       "id": "house.wood.gable",
       "name": "Nhà gỗ · Mái dốc",
       "category": "Nhà · Nhà gỗ",
@@ -2693,8 +2682,8 @@
       "family": "Nhà · Nhà gỗ",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 19342,
-      "gzipBytes": 2995
+      "bytes": 17570,
+      "gzipBytes": 1221
     },
     {
       "id": "house.wood.hip",
@@ -2704,8 +2693,8 @@
       "family": "Nhà · Nhà gỗ",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 23490,
-      "gzipBytes": 3544
+      "bytes": 17141,
+      "gzipBytes": 1197
     },
     {
       "id": "house.wood.wide",
@@ -2715,162 +2704,305 @@
       "family": "Nhà · Nhà gỗ",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 37093,
-      "gzipBytes": 5980
+      "bytes": 19380,
+      "gzipBytes": 1273
+    },
+    {
+      "id": "house.wood.barn",
+      "name": "Nhà gỗ · Mái gãy / nhà kho",
+      "category": "Nhà · Nhà gỗ",
+      "view": "elevation",
+      "family": "Nhà · Nhà gỗ",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 24735,
+      "gzipBytes": 1412
+    },
+    {
+      "id": "house.wood.l",
+      "name": "Nhà gỗ · Khối chữ L",
+      "category": "Nhà · Nhà gỗ",
+      "view": "elevation",
+      "family": "Nhà · Nhà gỗ",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 26560,
+      "gzipBytes": 1562
+    },
+    {
+      "id": "house.wood.double",
+      "name": "Nhà gỗ · Hai đầu hồi",
+      "category": "Nhà · Nhà gỗ",
+      "view": "elevation",
+      "family": "Nhà · Nhà gỗ",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 22013,
+      "gzipBytes": 1348
     },
     {
       "id": "house.brick.low",
-      "name": "Nhà tường · Khối thấp",
-      "category": "Nhà · Nhà gạch / tường",
+      "name": "Nhà tường · Một tầng mái lệch",
+      "category": "Nhà · Nhà tường",
       "view": "elevation",
-      "family": "Nhà · Nhà gạch / tường",
+      "family": "Nhà · Nhà tường",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 7143,
-      "gzipBytes": 1224
+      "bytes": 28125,
+      "gzipBytes": 1409
     },
     {
       "id": "house.brick.tall",
       "name": "Nhà tường · Nhà phố cao",
-      "category": "Nhà · Nhà gạch / tường",
+      "category": "Nhà · Nhà tường",
       "view": "elevation",
-      "family": "Nhà · Nhà gạch / tường",
+      "family": "Nhà · Nhà tường",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 18610,
-      "gzipBytes": 2803
+      "bytes": 32707,
+      "gzipBytes": 1535
     },
     {
       "id": "house.brick.wide",
       "name": "Nhà tường · Khối rộng",
-      "category": "Nhà · Nhà gạch / tường",
+      "category": "Nhà · Nhà tường",
       "view": "elevation",
-      "family": "Nhà · Nhà gạch / tường",
+      "family": "Nhà · Nhà tường",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 18215,
-      "gzipBytes": 2709
+      "bytes": 38506,
+      "gzipBytes": 1700
+    },
+    {
+      "id": "house.brick.mansard",
+      "name": "Nhà tường · Mái mansard",
+      "category": "Nhà · Nhà tường",
+      "view": "elevation",
+      "family": "Nhà · Nhà tường",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 43869,
+      "gzipBytes": 1865
+    },
+    {
+      "id": "house.brick.l",
+      "name": "Nhà tường · Khối chữ L",
+      "category": "Nhà · Nhà tường",
+      "view": "elevation",
+      "family": "Nhà · Nhà tường",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 47921,
+      "gzipBytes": 2024
+    },
+    {
+      "id": "house.brick.arcade",
+      "name": "Nhà tường · Dãy vòm",
+      "category": "Nhà · Nhà tường",
+      "view": "elevation",
+      "family": "Nhà · Nhà tường",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 31473,
+      "gzipBytes": 1412
     },
     {
       "id": "house.basic.rectangle",
-      "name": "Khung nhà · Chữ nhật",
+      "name": "Khung basic · Chữ nhật",
       "category": "Nhà · Khung basic",
       "view": "elevation",
       "family": "Nhà · Khung basic",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 473,
-      "gzipBytes": 299
+      "bytes": 1085,
+      "gzipBytes": 427
     },
     {
       "id": "house.basic.tall",
-      "name": "Khung nhà · Cao tầng",
+      "name": "Khung basic · Nhà phố cao",
       "category": "Nhà · Khung basic",
       "view": "elevation",
       "family": "Nhà · Khung basic",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 467,
-      "gzipBytes": 295
+      "bytes": 1080,
+      "gzipBytes": 426
     },
     {
-      "id": "tree.beech",
-      "name": "Cây · Dẻ gai",
-      "category": "Cây · Nét Quidditch",
+      "id": "house.basic.hex",
+      "name": "Khung basic · Lục giác",
+      "category": "Nhà · Khung basic",
       "view": "elevation",
-      "family": "Cây · Nét Quidditch",
+      "family": "Nhà · Khung basic",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 18005,
-      "gzipBytes": 3520
+      "bytes": 853,
+      "gzipBytes": 332
     },
     {
-      "id": "tree.birch",
-      "name": "Cây · Bạch dương",
-      "category": "Cây · Nét Quidditch",
+      "id": "house.basic.l",
+      "name": "Khung basic · Khối chữ L",
+      "category": "Nhà · Khung basic",
       "view": "elevation",
-      "family": "Cây · Nét Quidditch",
+      "family": "Nhà · Khung basic",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 17962,
-      "gzipBytes": 3522
+      "bytes": 1971,
+      "gzipBytes": 498
     },
     {
-      "id": "tree.pine",
-      "name": "Cây · Thông",
-      "category": "Cây · Nét Quidditch",
+      "id": "house.basic.u",
+      "name": "Khung basic · Chữ U",
+      "category": "Nhà · Khung basic",
       "view": "elevation",
-      "family": "Cây · Nét Quidditch",
+      "family": "Nhà · Khung basic",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 14921,
-      "gzipBytes": 2073
+      "bytes": 2854,
+      "gzipBytes": 515
+    },
+    {
+      "id": "house.basic.round",
+      "name": "Khung basic · Khối tròn",
+      "category": "Nhà · Khung basic",
+      "view": "elevation",
+      "family": "Nhà · Khung basic",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 577,
+      "gzipBytes": 315
     },
     {
       "id": "tree.oak",
-      "name": "Cây · Sồi tán rộng",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Tán sồi nhiều nhánh",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
-      "family": "Cây · Nét Quidditch",
+      "family": "Cây · Hình khối riêng",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 18023,
-      "gzipBytes": 3564
+      "bytes": 6941,
+      "gzipBytes": 2925
+    },
+    {
+      "id": "tree.beech",
+      "name": "Cây · Tán bầu dục cao",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "family": "Cây · Hình khối riêng",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 3083,
+      "gzipBytes": 1414
+    },
+    {
+      "id": "tree.birch",
+      "name": "Cây · Bạch dương ba thân",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "family": "Cây · Hình khối riêng",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 8238,
+      "gzipBytes": 2499
+    },
+    {
+      "id": "tree.pine",
+      "name": "Cây · Thông tán dù",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "family": "Cây · Hình khối riêng",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 5713,
+      "gzipBytes": 2428
     },
     {
       "id": "tree.spruce",
-      "name": "Cây · Vân sam",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Lá kim hình tháp",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
-      "family": "Cây · Nét Quidditch",
+      "family": "Cây · Hình khối riêng",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 14934,
-      "gzipBytes": 2184
+      "bytes": 1523,
+      "gzipBytes": 424
     },
     {
       "id": "tree.alder",
-      "name": "Cây · Tống quán sủ",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Nhiều thân tán thấp",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
-      "family": "Cây · Nét Quidditch",
+      "family": "Cây · Hình khối riêng",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 17746,
-      "gzipBytes": 3528
+      "bytes": 4461,
+      "gzipBytes": 1920
     },
     {
       "id": "tree.rowan",
-      "name": "Cây · Thanh lương trà",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Tán chùm quả",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
-      "family": "Cây · Nét Quidditch",
+      "family": "Cây · Hình khối riêng",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 19221,
-      "gzipBytes": 3682
+      "bytes": 5246,
+      "gzipBytes": 1994
     },
     {
       "id": "tree.spreading",
-      "name": "Cây · Tán lệch",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Nghiêng theo gió",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
-      "family": "Cây · Nét Quidditch",
+      "family": "Cây · Hình khối riêng",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 3179,
-      "gzipBytes": 1576
+      "bytes": 4463,
+      "gzipBytes": 1918
     },
     {
       "id": "tree.slender",
-      "name": "Cây · Tán nhiều tầng",
-      "category": "Cây · Nét Quidditch",
+      "name": "Cây · Tán cột hẹp",
+      "category": "Cây · Hình khối riêng",
       "view": "elevation",
-      "family": "Cây · Nét Quidditch",
+      "family": "Cây · Hình khối riêng",
       "decision": "GIỮ",
       "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
-      "bytes": 3229,
-      "gzipBytes": 1588
+      "bytes": 2944,
+      "gzipBytes": 1353
+    },
+    {
+      "id": "tree.weeping",
+      "name": "Cây · Tán rủ",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "family": "Cây · Hình khối riêng",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 3583,
+      "gzipBytes": 1072
+    },
+    {
+      "id": "tree.bare",
+      "name": "Cây · Cành trụi",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "family": "Cây · Hình khối riêng",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 594,
+      "gzipBytes": 331
+    },
+    {
+      "id": "tree.fruit",
+      "name": "Cây · Cây ăn quả thấp",
+      "category": "Cây · Hình khối riêng",
+      "view": "elevation",
+      "family": "Cây · Hình khối riêng",
+      "decision": "GIỮ",
+      "reason": "Vai trò/hình khác; chưa có bằng chứng dư thừa. Bản top/front được phép cùng tồn tại trong hybrid.",
+      "bytes": 3494,
+      "gzipBytes": 1474
     }
   ]
 }

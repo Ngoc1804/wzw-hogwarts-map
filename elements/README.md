@@ -1,4 +1,4 @@
-# Element frameworks · 247 SVG
+# Element frameworks · 259 SVG
 
 Mở [index.html](index.html) để tìm element, xem Khung/Trung tính và tải SVG. [catalog.json](catalog.json) chứa ID, nhóm, tags, view, màu và đường dẫn file; SVG độc lập nằm trong `assets/`.
 

@@ -114,5 +114,37 @@
       "pageErrors": []
     },
     "canonResearchStatus": "research/design brief with sources; full book-canon registry still incomplete"
+  },
+  "neutralSceneryRedesign": {
+    "date": "2026-11-09",
+    "baseline": "54ce01a",
+    "assets": 259,
+    "houseMasters": 18,
+    "treeMasters": 12,
+    "specialTrees": 2,
+    "colorPalettesSeparate": true,
+    "diagonRoofFacesRebuilt": 69,
+    "chimneyGapExtensions": 27,
+    "tests": {
+      "scenery": 3,
+      "inventory": 3,
+      "atlas": 5,
+      "ministry": 2,
+      "gallery": "passed",
+      "svg": "259 passed"
+    },
+    "browser": {
+      "neutralModels": 32,
+      "paletteSwitchChangesPaintNotGeometry": true,
+      "treeFilter": 14,
+      "woodFilter": 6,
+      "h1PauseResume": true,
+      "pageErrors": []
+    },
+    "visualChecks": [
+      "full neutral contact sheet",
+      "warm tree contact sheet",
+      "Diagon overview after restoring original facade uses and repairing roof geometry"
+    ]
   }
 }
