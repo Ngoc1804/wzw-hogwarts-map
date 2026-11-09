@@ -68,3 +68,18 @@ test('MAP_DATA optional indoor selection and per-room dimensions are validated',
 test('unknown indoor shapes fail instead of guessing another shape',()=>{
  assert.throws(()=>buildGeometry(plan(3,['polygon'])),/Unsupported indoor room shape/);
 });
+
+test('corridor place maps to actual passage floor, not a fake room',()=>{
+ const g=buildGeometry({mode:'generated',places:[...plan(3).places,{...place(4,'straight'),kind:'corridor'}],connections:[]},{layout:'tee'});
+ assert.equal(Object.keys(g.rooms).length,3);
+ assert.ok(g.floorPolygons.some(x=>x.id==='corridor-place:room-4'));
+ assert.ok(g.safeAreas['room-4']?.length);
+ assert.ok(indoorActorPoint(g,'room-4'));
+});
+test('corridor-only scene draws floors without inventing rooms',()=>{
+ const g=buildGeometry({mode:'generated',places:[{...place(1,'straight'),kind:'corridor'}],connections:[]},{layout:'horizontal'});
+ assert.equal(Object.keys(g.rooms).length,0);
+ assert.equal(g.model.rooms.length,0);
+ assert.ok(g.actorZones.length>0&&g.floorPolygons.length>0);
+ assert.ok(indoorActorPoint(g,'room-1'));
+});
