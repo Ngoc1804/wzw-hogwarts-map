@@ -103,5 +103,26 @@
     "atlas": "atlas-optimized-1.0, 747 source references, 733 unique places, 14 merges",
     "releaseBundleSha": "d79eed97db61f877983803d3da9f53ac88fe6ef6",
     "ci": "Node spatial tests, runtime compilation, atlas and inventory validations; browser and AI Studio not rerun"
+  },
+  "indoorStage2": {
+    "status": "implemented source; CI and pinned bundle; browser/AI Studio pending",
+    "date": "2026-11-10",
+    "bundleSha": "631bb37b24eeaad92592ef5b5996a33d93825a59",
+    "generated": "scene-only Stage 2 ten formulas, no 3-column or A-star",
+    "output": [
+      "floorPolygons",
+      "actorZones",
+      "exclusionZones",
+      "suggestedAnchors"
+    ],
+    "constraints": [
+      "one scene floor",
+      "no stored layout",
+      "no fake corridor-only room",
+      "no multiwing assembly",
+      "no movement simulation"
+    ],
+    "browser": "not reverified on authenticated AI Studio Preview",
+    "mobileHardware": "not tested"
   }
 }
