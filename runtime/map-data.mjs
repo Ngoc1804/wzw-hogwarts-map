@@ -30,6 +30,17 @@ export function validateMapData(data) {
   const ids=new Set();for(const row of [...data.places,...data.connections,...data.actors,...data.hints]){
     if(ids.has(row.id))errors.push('Duplicate public entity ID');ids.add(row.id);
   }
+  for(const place of data.places)for(const item of place.generation?.furnishings||[]){
+    if(item.custom){
+      if(item.assetId)errors.push('Choose assetId or custom drawing');
+      for(const shape of item.custom.shapes){
+        const fields=shape.type==='rect'?['width','height']:shape.type==='ellipse'?['rx','ry']:['d'];
+        for(const field of fields)if(!shape[field])errors.push('Custom '+shape.type+' needs '+field);
+      }
+      const s=item.custom.surface;
+      if(s&&(!s.width||!s.height||s.x+s.width>item.custom.width||s.y+s.height>item.custom.height))errors.push('Custom support surface outside asset');
+    }
+  }
   const places=new Set(data.places.map(p=>p.id)),visible=new Set(data.visibility.visiblePlaceIds);
   const requirePlace=(id,label)=>{if(!places.has(id))errors.push(`${label}: unknown place`)};
   requirePlace(data.focus.actualPlaceId,'PC');requirePlace(data.view.centerPlaceId,'view center');

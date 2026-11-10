@@ -1,10 +1,12 @@
 // Stage 2 lightweight 2.5D SVG: actual room/corridor floors, walls, doors and windows.
-// No furnishings, huge filters, extra floor assembly or scene persistence.
+import {drawFurnishings} from '../scene-assets.mjs';
 export function drawIndoor(svg,geometry,onRoomClick){
  const doc=new DOMParser().parseFromString(INDOOR_MATERIALS,'image/svg+xml');
  const defs=doc.querySelector('defs');
  if(!defs)throw Error('Indoor SVG materials have no defs');
- svg.append(document.importNode(defs,true));
+ const materials=document.importNode(defs,true);
+ materials.insertAdjacentHTML('beforeend','<pattern id="indoor-wood" width="32" height="75" patternUnits="userSpaceOnUse"><rect width="32" height="75" fill="#BE9B70"/><path d="M0 0V75M16 0V37H32M0 37H16V75" fill="none" stroke="#9B7956" stroke-width=".8"/></pattern><pattern id="indoor-tile" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="24" height="24" fill="#D8D1BC"/><path d="M0 0H24V24H0Z" fill="none" stroke="#B7AD94" stroke-width="1"/></pattern>');
+ svg.append(materials);
  const {el,txt,path,hwall,vwall,arch,lowdoor,angledWall,lancet}=createElements({});
  const root=el('g',{'data-indoor-scene':'true'},svg),floor=el('g',{'data-indoor-floor':'true'},root);
  const {model,walls}=geometry;
@@ -13,7 +15,7 @@ export function drawIndoor(svg,geometry,onRoomClick){
  }
  for(const [i,poly] of model.floors.entries()){
   const corridorId=geometry.corridorPlaceIds?.[i%Math.max(1,geometry.corridorPlaceIds.length)];
-  const segment=path(floor,ppath(poly),{fill:'url(#hall-floor)','fill-rule':'nonzero','data-corridor-floor':'true'});
+  const segment=path(floor,ppath(poly),{fill:'url(#hall-floor)','fill-rule':'nonzero','data-corridor-floor':'true','data-surface':'floor'});
   if(corridorId){
    segment.setAttribute('data-corridor',corridorId);
    segment.setAttribute('tabindex','0');segment.setAttribute('role','button');
@@ -30,7 +32,7 @@ export function drawIndoor(svg,geometry,onRoomClick){
  for(const t of model.thresholds)path(floor,ppath(t.poly),{fill:'url(#hall-floor)'});
  for(const r of model.rooms){
   const g=el('g',{'data-room':r.id,tabindex:0,role:'button','aria-label':r.name},floor);
-  path(g,ppath(geometry.rooms[r.id].poly),{fill:'url(#floor)',stroke:'#b9a483','stroke-width':.6,'data-room-floor':'true'});
+  path(g,ppath(geometry.rooms[r.id].poly),{fill:geometry.rooms[r.id].floorColor||({wood:'url(#indoor-wood)',tile:'url(#indoor-tile)',stone:'url(#floor)'}[geometry.rooms[r.id].floorMaterial]),stroke:'#b9a483','stroke-width':.6,'data-room-floor':'true','data-surface':'floor'});
   if(r.kind==='stairs')for(let j=0;j<10;j++)path(g,`M${r.x+10} ${r.y+15+j*(r.bottom-r.y-30)/10}h${r.w-20}`,{stroke:'#a38e6d','stroke-width':1});
   txt(g,r.x+r.w/2,r.y+(r.circular?85:30),r.name,{'text-anchor':'middle','font-size':14,fill:'#7c684c','pointer-events':'none'});
   g.onclick=()=>onRoomClick(r.id);
@@ -55,5 +57,6 @@ export function drawIndoor(svg,geometry,onRoomClick){
   if(w.axis==='H')lancet(wallLayer,w.x,w.y,64);
   else lancet(el('g',{transform:w.axis==='V'?`matrix(0 1 .35 1 ${w.x} ${w.y})`:`matrix(${w.tx} ${w.ty} .35 1 ${w.x} ${w.y})`},wallLayer),0,0,64);
  }
+ drawFurnishings(root,geometry.furnishingInstances);
  return root;
 }

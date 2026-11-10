@@ -456,8 +456,66 @@
                   },
                   "count": {
                     "type": "integer",
-                    "minimum": 1,
+                    "minimum": 0,
                     "maximum": 50
+                  },
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]{1,64}$"
+                  },
+                  "assetId": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "width": {
+                    "type": "number",
+                    "minimum": 5,
+                    "maximum": 500
+                  },
+                  "depth": {
+                    "type": "number",
+                    "minimum": 5,
+                    "maximum": 500
+                  },
+                  "rotation": {
+                    "type": "number",
+                    "minimum": -360,
+                    "maximum": 360
+                  },
+                  "color": {
+                    "type": "string",
+                    "pattern": "^#[0-9a-fA-F]{6}$"
+                  },
+                  "placement": {
+                    "enum": [
+                      "auto",
+                      "center",
+                      "rows",
+                      "wall-north",
+                      "wall-south",
+                      "wall-east",
+                      "wall-west"
+                    ]
+                  },
+                  "position": {
+                    "$ref": "#/$defs/point"
+                  },
+                  "on": {
+                    "type": "string",
+                    "maxLength": 64
+                  },
+                  "blocking": {
+                    "type": "boolean"
+                  },
+                  "custom": {
+                    "$ref": "#/$defs/customAsset"
+                  },
+                  "near": {
+                    "type": "string",
+                    "maxLength": 64
+                  },
+                  "nearOffset": {
+                    "$ref": "#/$defs/point"
                   }
                 },
                 "required": [
@@ -476,6 +534,23 @@
               "type": "number",
               "minimum": 180,
               "maximum": 520
+            },
+            "furnishingsMode": {
+              "enum": [
+                "replace",
+                "add"
+              ]
+            },
+            "floorMaterial": {
+              "enum": [
+                "stone",
+                "wood",
+                "tile"
+              ]
+            },
+            "floorColor": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
             }
           },
           "required": [
@@ -622,6 +697,11 @@
         },
         "position": {
           "$ref": "#/$defs/point"
+        },
+        "buildingId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
         }
       },
       "required": [
@@ -920,6 +1000,139 @@
           "type": "boolean"
         }
       }
+    },
+    "customAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "width": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 2000
+        },
+        "height": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 2000
+        },
+        "shapes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 60,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "enum": [
+                  "rect",
+                  "ellipse",
+                  "path"
+                ]
+              },
+              "x": {
+                "type": "number",
+                "minimum": -1000,
+                "maximum": 1000
+              },
+              "y": {
+                "type": "number",
+                "minimum": -1000,
+                "maximum": 1000
+              },
+              "width": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 2000
+              },
+              "height": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 2000
+              },
+              "rx": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "ry": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "d": {
+                "type": "string",
+                "maxLength": 12000,
+                "pattern": "^[MmZzLlHhVvCcSsQqTtAaEe0-9.,+ \\n\\r-]+$"
+              },
+              "fill": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "stroke": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "strokeWidth": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "cx": {
+                "type": "number",
+                "minimum": -1000,
+                "maximum": 2000
+              },
+              "cy": {
+                "type": "number",
+                "minimum": -1000,
+                "maximum": 2000
+              }
+            },
+            "required": [
+              "type",
+              "fill"
+            ]
+          }
+        },
+        "surface": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "x": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2000
+            },
+            "y": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2000
+            },
+            "width": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2000
+            },
+            "height": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2000
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "width",
+            "height"
+          ]
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "shapes"
+      ]
     }
   }
 }

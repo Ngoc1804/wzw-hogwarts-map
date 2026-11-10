@@ -32,8 +32,8 @@ test('explicit actor position wins over building label anchor',()=>{
 test('overlapping covers retain selection and restore original opacity',()=>{
  const target=initial=>({style:{value:initial,getPropertyValue(){return this.value},getPropertyPriority(){return 'important'},setProperty(k,v,p){this.value=v;this.priority=p},removeProperty(){this.value=''}}});
  const a=target('.5'),b=target('');const covers=occlusionController([{target:a,contains:p=>p.x>0},{target:b,contains:p=>p.y>0}]);
- covers.set('selected',{x:1,y:1});assert.equal(a.style.value,'0.7');assert.equal(b.style.value,'0.7');
- covers.set('hover',{x:1,y:0});covers.clear('selected');assert.equal(a.style.value,'0.7');assert.equal(b.style.value,'');
+ covers.set('selected',{x:1,y:1});assert.equal(a.style.value,'0.5');assert.equal(b.style.value,'0.5');
+ covers.set('hover',{x:1,y:0});covers.clear('selected');assert.equal(a.style.value,'0.5');assert.equal(b.style.value,'');
  covers.clear('hover');assert.equal(a.style.value,'.5');assert.equal(a.style.priority,'important');
  covers.dispose();
 });

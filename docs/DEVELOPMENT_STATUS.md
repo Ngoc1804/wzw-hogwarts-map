@@ -10,7 +10,7 @@ Dấu chân giữ đúng tọa độ SVG khi zoom/đổi viewport; chỉ nhãn �
 
 ## Công trình che nhân vật
 
-Các polygon occlusion trong MAP_DATA có binding chính xác tới SVG. Hover/focus/selection làm mờ tất cả công trình che cùng điểm xuống 0.7, giữ trạng thái chọn khi hover actor khác, khôi phục opacity/priority gốc khi bỏ chọn hoặc đổi cảnh. Chưa tuyên bố có polygon vật lý occlusion đầy đủ cho mọi công trình trong bốn bản đồ.
+Các polygon occlusion trong MAP_DATA có binding chính xác tới SVG. Hover/focus/selection làm mờ tất cả công trình che cùng điểm xuống 0.5, giữ trạng thái chọn khi hover actor khác, khôi phục opacity/priority gốc khi bỏ chọn hoặc đổi cảnh. Chưa tuyên bố có polygon vật lý occlusion đầy đủ cho mọi công trình trong bốn bản đồ.
 
 ## Độ phủ atlas
 
@@ -25,4 +25,8 @@ Báo cáo máy đọc: `docs/atlas-coverage.json`; tái kiểm: `node tools/audi
 
 Không lưu layout, không pathfinding, không tự mở các AU đang khóa. Không merge main. AI Studio có đăng nhập và điện thoại thật chưa nghiệm thu.
 
-Bundle: 3e6742725616f0d4e102c11ee0734641306c2933 (asset/atlas giữ SHA nguồn cũ vì artwork không đổi).
+Bundle: aabeb15e6e36bee21acd91ef81ee7e38b30573f4 (asset/atlas giữ SHA nguồn cũ vì artwork không đổi).
+
+## Indoor và flow đơn giản hóa
+
+Đã ghép nội thất/decor theo công dụng và yêu cầu MAP_DATA, asset thư viện hoặc hình vector custom; semantic sàn dùng chung, bảng tên trên mái, hover/chạm công trình 50%, dấu giày rõ hơn. Bundle tải atlas/asset theo nhu cầu. Quy trình và bộ cảnh thử: [INDOOR_PREVIEW.md](INDOOR_PREVIEW.md). Độ phủ atlas phía trên không đổi.

@@ -24,8 +24,8 @@ export function actorTag(actor, compact=false) {
 }
 export function feetState(elapsed, stance='idle', reduced=false) {
   if(stance!=='walk'||reduced) {
-    const f=Math.sin(elapsed/6400*Math.PI*2)*.13;
-    return [.78+f,.78-f];
+    const f=Math.sin(elapsed/6400*Math.PI*2)*.05;
+    return [.95+f,.95-f];
   }
   const t=((elapsed%5300)+5300)%5300, step=Math.floor(t/550);
   return Array.from({length:6},(_,i)=>t<3300&&i===step?1:0);
