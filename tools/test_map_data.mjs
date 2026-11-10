@@ -91,3 +91,36 @@ test('standing never fabricates a position when floor is missing or fully blocke
  assert.equal(pickStandingPoint({floors:[]}),null);
  assert.equal(pickStandingPoint({floors:[{x:0,y:0,width:20,height:20}],blockers:[{x:0,y:0,width:20,height:20}],origin:{x:10,y:10}}),null);
 });
+
+test('real Hogwarts H1 MAP_DATA fixture: full scene resolves without binding zones',()=>{
+ const data=read('real-hogwarts-greenhouses.json');
+ assert.deepEqual(validateMapData(data),{ok:true,errors:[]});
+ const plan=resolveMap(data);
+ assert.equal(plan.mode,'template');assert.equal(plan.templateId,'h1');
+ assert.equal(plan.standing.length,3);
+ assert.ok(plan.targets.some(t=>t.placeId==='greenhouse-path'&&t.interactiveIds.includes('region:extra:0')));
+ const occupied=[],roof={x:68,y:30,width:98,height:75},scenery={x:5,y:5,width:32,height:32};
+ for(const [index,actor] of plan.standing.entries()){
+   assert.deepEqual(actor.avoid,['roof','scenery']);
+   const point=pickStandingPoint({floors:[{x:0,y:0,width:230,height:160}],blockers:[roof,scenery],origin:{x:110,y:60},occupied,index});
+   assert.ok(point,'missing safe standing point for '+actor.actorId);
+   assert.ok(!(point.x>=roof.x&&point.x<=roof.x+roof.width&&point.y>=roof.y&&point.y<=roof.y+roof.height));
+   assert.ok(!(point.x>=scenery.x&&point.x<=scenery.x+scenery.width&&point.y>=scenery.y&&point.y<=scenery.y+scenery.height));
+   occupied.push(point);
+ }
+});
+test('real CCC Room MAP_DATA fixture: two actors fit on a single L-shaped floor',()=>{
+ const data=read('real-ccc-room.json');
+ assert.deepEqual(validateMapData(data),{ok:true,errors:[]});
+ const plan=resolveMap(data);
+ assert.equal(plan.mode,'generated');assert.equal(plan.places.length,1);
+ assert.equal(plan.connections.length,0);assert.equal(plan.standing.length,2);
+ const floor=[[0,0],[200,0],[200,70],[80,70],[80,160],[0,160]],occupied=[];
+ for(const [index,actor] of plan.standing.entries()){
+   assert.deepEqual(actor.anchorIds,[]);assert.deepEqual(actor.avoid,[]);
+   const point=pickStandingPoint({floors:[floor],origin:{x:150,y:120},occupied,index});
+   assert.ok(point,'missing floor point for '+actor.actorId);
+   assert.ok(point.x<=80||point.y<=70,'actor outside L-shaped floor');
+   occupied.push(point);
+ }
+});
