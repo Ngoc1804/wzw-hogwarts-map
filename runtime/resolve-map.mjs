@@ -79,7 +79,7 @@ export function resolveMap(input,templates=registry.templates){
   if(!localIndoor)throw Error('Unknown Atlas location requires an explicit customScene structural description and valid generation');
   const places=listed.map(placeWithGeneration);
   return {mode:'generated',sceneType:'local',scopeId:data.view.scopeId||'local:'+pcId,atlasVersion:atlasVersion(),places,
-   connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor.layout||'auto'}};
+   connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
  }
  const group=resolveAtlasLocality(pcId,data.view.scopeId);
  if(!group)throw Error('Atlas PC location has no approved generated scope or fixed template: '+pcId);
