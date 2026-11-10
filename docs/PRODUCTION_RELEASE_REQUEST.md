@@ -14,3 +14,11 @@
 - Verification: 74 Node tests, per-place Chromium own-floor checks for all 64, offline/inset framing and full browser regression. Source CI must pass before this request is published.
 - Details and inference limits: [DEMO3_LOCALITY_SURFACES.md](DEMO3_LOCALITY_SURFACES.md).
 - Rebuild the production candidate from this request commit, then pin loader and prompt to its immutable published bundle commit. AI Studio RP acceptance remains separate.
+
+## Flexible RP spot production release — 2026-11-11
+
+- Source tested: `9ca6358daa3b31602e33373af1f98a21529fd495` (GitHub Validate WIZAMAP: success).
+- Fix normalize-first place/actor/hint/visibility references and generic AU name safety.
+- Add optional `view.spotType` and `view.nearPlace` to MAP_DATA 3.2.0; generated corridor spots use safe existing corridor floor next to verified room.
+- Preserve 694 canonical places, 141 Atlas groups, the 13 fixed templates, AU locks and information gate.
+- Build and publish one immutable bundle. Update loader + R14.6 to the published commit after this workflow succeeds.
