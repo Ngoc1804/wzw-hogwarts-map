@@ -32,6 +32,14 @@ Kiểm tra: `node --test tools/test_map_data.mjs` từ root repo.
 
 Khi index atlas thay đổi, chạy `python tools/sync_template_registry.py` để cập nhật adapter; lệnh này không sửa maps/*.
 
+
+## Vị trí đứng (template / map tùy biến)
+
+- Template: PC/NPC đứng trên **sàn/đất trống** gần target, không đặt trên **mái nhà hoặc vật cảnh**. Target chỉ là điểm gợi ý để tìm sàn gần nhất, **không khóa đứng theo vùng binding**.
+- Map tùy biến: PC/NPC chỉ cần nằm trong **hình học vùng sàn** của map đã tạo; không dùng anchor template.
+- `resolveMap()` trả `standing` cho mỗi actor. `pickStandingPoint()` trong `standing.mjs` chọn điểm từ `floors` của viewer; template truyền thêm các silhouette `blockers` cho mái nhà và vật cảnh. Không tìm được sàn an toàn thì trả `null`, không tự đặt lên vật cản.
+- Đây là dữ liệu và thuật toán vị trí đứng, **chưa phải renderer PC/NPC đã tích hợp** vào `index.html`.
+
 ## Trạng thái hành lang
 
 Demo và bộ dựng hình hành lang cũ đã bị loại bỏ khỏi source hiện hành theo yêu cầu người dùng. Renderer thay thế chưa triển khai. Kế hoạch phát triển chưa được người dùng duyệt và phải được thảo luận trong chat trước khi đưa lên GitHub.
