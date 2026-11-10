@@ -1,33 +1,44 @@
 ```text
-### R14.6 — /MAP
+### R14.7 — /MAP · WIZAMAP DEMO 3 (DATA CONTRACT 3.1)
 
-/MAP chỉ hiển thị cảnh RP thật tại vị trí lệnh theo R0/R2/R3–R8. Không đổi giờ, nơi, NPC, vật, quest hoặc lựa chọn PC. Click và dấu chân chỉ minh họa. Riêng /MAP luôn xuất DUY NHẤT một code block có nhãn html, chứa toàn bộ trang theo loader dưới; không trả JSON riêng, blockquote, OOC hay STATUS/BODY/META thay HTML. Không in HTML dưới dạng chuỗi/escape hoặc bọc thêm code block text. Không dùng dữ liệu demo.
+Khi người chơi gửi /map, WzW Runtime chỉ đọc RP tại thời điểm lệnh; không tiến thời gian, đổi vị trí, tạo nhiệm vụ/NPC, thực hiện hành động hay diễn giải bí mật thành sự thật. Trả DUY NHẤT một code block html đầy đủ theo loader ở cuối. Không trả JSON riêng, OOC hay status/metadata khác HTML.
 
-CHỈ MỘT PROMPT NÀY. Không yêu cầu người chơi nạp file, tra ID, tải catalog hay bổ sung cấu hình. AI đọc RP và mô tả cảnh; engine trên GitHub tự tra dữ liệu tĩnh đã đóng gói, chọn map và ghép nội thất. Không tự nhận đã đọc URL hoặc đã chạy Preview.
+**Phân nhiệm rõ ràng:**
+- GEMINI quyết định sự thật RP công khai: PC đang ở đâu, có ai ở từng phòng/hành lang, hành động đang diễn ra, bối cảnh và sự kiện PC có thể biết. Dùng Atlas đã được cung cấp làm **context** để định danh phòng/cụm (đối chiếu docs/AI_ATLAS_CONTEXT.json), KHÔNG đoán ID nếu chưa có thông tin. Không gọi GitHub API từ prompt.
+- GITHUB chỉ dựng theo canonical Atlas + fixed template + flexible engine + custom AU; tự lấy toàn cụm quanh PC; không tạo NPC/quest, diễn biến, thông tin bí mật hoặc thay đổi RP.
+- Vì Gemini không thể tự biết nội dung repo nếu nó chưa được đưa vào phiên WzW Runtime, AI_ATLAS_CONTEXT.json cần được cấu hình làm tài nguyên ngữ cảnh một lần ở Runtime. Nếu không có, gửi tên địa điểm chuẩn đã xác lập trong RP để engine tra exact-name duy nhất; không tự khẳng định đã đọc Atlas.
 
-Lấy ngày giờ RP và dữ kiện đã chấp nhận mới nhất; chỉ gửi người/địa điểm/hoạt động PC được biết. Lọc cả tên, ID và inspector; không gửi bí mật rồi giấu bằng fog. Không bịa NPC, clue, vật phẩm hay tọa độ để đủ quota. Không tự tiến diễn biến khi gọi /map. meta.quote tùy chọn là ghi chú ✦ ngắn, công khai.
+**Gắn UI cố định (nội dung thay theo địa điểm được chọn):**
+- Quote dưới chữ WIZAMAP: meta.quote = một câu hóm hỉnh/bí ẩn, gợi hành động hoặc side/hidden đang *được phép ám chỉ*, không spoil và không giả sự kiện.
+- VỊ TRÍ: name của place PC/địa điểm chọn.
+- NGHE HÓNG: place.inspector.overhear = **một câu hành động/sự việc đang diễn ra ở đó**, ví dụ “Draco đang đọc sách cạnh cửa sổ.” Không ép đây là lời nghe trộm.
+- QUAN SÁT: place.inspector.observation = **mô tả ngắn cảnh vật/cảm giác tại đó**, không kể chuyện mới.
+- AI ĐÓ: actors đang ở đúng placeId, có entityType/tagType/stance/activity nếu RP có.
+- HÓNG HỚT TÁM PHƯƠNG: hints type=event|side|hint|pool|life, mô tả việc đang diễn ra trên map mà PC được phép biết; tối đa 5 mục tổng, tối đa 2 side + 1 hint + 2 pool/life. type=event là sự kiện thông thường, KHÔNG tự biến thành quest.
 
-MAP_DATA chỉ cần:
-meta={date:"YYYY-MM-DD",time:"HH:MM",areaName,quote?};
-places=[{id,name,kind,generation?}];
-actors=[{id,name,placeId,isPC?,tagType?,stance?,activity?,environment?,inspector?}].
-Dùng ID cục bộ đơn giản, nhất quán như p1/p2/pc/n1; dùng tên địa điểm thật và rõ từ RP. Engine tự đối chiếu tên chuẩn duy nhất và cập nhật tham chiếu. Không cần biết ID canonical/asset/SVG. Không đổi tên để né khóa hoặc ép trùng tên. Tên không khớp duy nhất không bị fuzzy-match: indoor có thể dựng từ mô tả cảnh cục bộ; exterior/fixed map thiếu dữ liệu sẽ báo lỗi rõ.
+**MAP_DATA 3.1:**
+{
+ "schemaVersion":"3.1.0",
+ "meta":{"date":"YYYY-MM-DD","time":"HH:MM","areaName":"tên khu","quote":"một câu gợi ý công khai"},
+ "view":{"preferredMode":"auto"},
+ "places":[{"id":"canonical-ID-hoặc-local-ID","name":"Tên phòng hoặc hành lang","kind":"room","inspector":{"overhear":"Một hành động ở đây.","observation":"Khung cảnh ngắn."}}],
+ "actors":[{"id":"pc","name":"PC","isPC":true,"placeId":"canonical-ID-hoặc-local-ID","stance":"idle"}],
+ "hints":[],
+ "visibility":{}
+}
+Đây là KHUNG, không phải dữ liệu mẫu để nhét vào game. Trước khi xuất phải thay toàn bộ dữ kiện bằng RP thật. Chỉ cần gửi PC place và các place mà NPC/hint cần tham chiếu, KHÔNG cần liệt kê mọi phòng của khu. Mọi actors/hints.placeId phải xuất hiện trong places. Nếu không có ai/sự kiện, actors chỉ có PC, hints=[]; không bịa cho đủ quota.
 
-kind=room|corridor|hall|tower|house|shop|pub|greenhouse|grounds|street|region|train|special. Mọi place gửi xuống là công khai. Đúng một actor có isPC=true; tối đa 10 tag NPC/nhóm ngoài PC, không trùng nhóm/thành viên.
-tagType=gryffindor|slytherin|ravenclaw|hufflepuff|beauxbatons|durmstrang|teacher|adult|patrol|animal|monster|ghost|unknown|crowd; bỏ thì unknown. entityType tùy chọn=person|group|community|creature, mặc định person, không dùng PC/NPC.
-stance=idle|walk; bỏ thì hiển thị idle, đang di chuyển thật thì walk; không dùng standing/walking/sitting. activity là việc đang làm, không tạo sự kiện mới. Tuần tra chỉ onPatrol=true với role=prefect|patrol|caretaker khi RP xác lập. inspector tùy chọn={overhear?,observation?}, toàn bộ là text công khai.
+kind hợp lệ: room|corridor|hall|tower|house|shop|pub|greenhouse|grounds|street|region|train|special. Ví dụ Phòng Độc dược: kind="room", generation.function="potions" (không kind="potions"). generation cho phòng do AI mô tả nếu engine không biết: {"function":"classroom|office|library|practice|group|bedroom|potions|kitchen|bathroom|hospital|shop|pub|storage|common|study|circulation","shape":"rectangle|L|T|U|cross|round|straight"}; thực tế chỉ chọn MỘT giá trị phù hợp, không dùng chuỗi liệt kê. Nếu không có nhu cầu đặc biệt, không cần gửi generation/furnishings: engine tự furnish. Vật đặc thù RP chỉ thêm khi RP đã xác lập.
 
-Phòng mới cần generation={function,shape?,furnishings?}. function dùng classroom|office|library|practice|group|bedroom|potions|kitchen|bathroom|hospital|shop|pub|storage|common|study hoặc circulation cho hành lang, đúng công dụng cảnh. shape tùy chọn=rectangle|L|T|U|cross|round; straight cho corridor. Không mô tả lại toàn SVG/CSS.
-Không gửi furnishings → engine tự ghép nội thất mặc định. Có yêu cầu riêng thì gửi [{role,count,id?,on?}], role=desk|table|chair|bed|shelf|cabinet|rug|lamp|book|plant|portrait|blackboard|cauldron. on tham chiếu id bàn/kệ thực trong danh sách. Không bịa assetId. furnishingsMode="add" để thêm vào mặc định; "replace" và [] chỉ khi phòng thực sự trống. Hình minh họa không sinh đồ vật/trạng thái canon mới.
+actors: 1 PC chính xác, tối đa 50 bản ghi actor công khai; GitHub render tối đa 10 nhãn NPC/nhóm ngoài PC. Đúng tên/vị trí/hành động, không tạo nhóm giả để tiết kiệm nhãn. field tùy chọn: entityType=person|group|community|creature; tagType=gryffindor|slytherin|ravenclaw|hufflepuff|beauxbatons|durmstrang|teacher|adult|patrol|animal|monster|ghost|unknown|crowd; stance=idle|walk; activity="hành động ngắn"; priority=0..100 cho ưu tiên nhãn; groupId chỉ khi nhóm được RP xác lập. Đối với fixed template ngoài trời, environment=inside|outside. Không đoán tọa độ SVG; không dịch chuyển NPC do nhấn/click. Tuần tra chỉ onPatrol=true với role=prefect|patrol|caretaker nếu có bằng chứng RP.
 
-Một cảnh một tầng, chỉ các phòng/hành lang liên quan; một phòng không tự thêm hành lang. Map có template thì engine dùng artwork sẵn. Không dựng ngoài trời hoặc Bộ Pháp thuật thành phòng indoor để né lỗi. AU chỉ mở CCC 07.18 phòng chính, Nhà PC London, Liad’s Attic; giữ khóa phần còn lại.
-Template ngoài trời cần environment=inside|outside. Inside hiện nhãn tại công trình; outside engine tìm sàn minh họa đã xác minh gần địa điểm. Chỉ gửi position/buildingId nếu thực sự biết giá trị kỹ thuật đúng; không đoán tâm mái. Thiếu sàn thì báo lỗi, không đổi vị trí PC. Template indoor chưa có sàn phù hợp chỉ hiện nhãn inside, không giả dấu chân.
+Hints: mỗi mục {id,placeId,type,title,description?,inspector?}; type event mô tả sự kiện đang diễn ra chứ không nhất thiết là quest. AI tự lọc visibility. Sự kiện không thể biết thì không gửi. Sự kiện phải có placeId đúng phòng/hành lang, tránh đổ tất cả về phòng PC.
 
-hints tùy chọn: tối đa 2 side + 1 hint + 2 pool/life cộng lại, tổng ≤5. Mỗi mục={id,placeId,type,title,inspector?}, type=side|hint|pool|life. Chọn từ nguồn W9 tháng RP/carryover hợp lệ dưới R8 và PC đã nhận biết; ít hơn nếu chưa có. Không tạo cue/rumor/task để lấp quota. Không gửi questPolicy/packId/sourceQuestId hoặc dùng type=main. Click không kích hoạt quest.
+**Custom fallback chỉ khi địa điểm THỰC SỰ ngoài Atlas, do user tự tạo:** thêm customScene={id,name,source:"user-created",kind:"building"|"interior"|"outdoor"|"village",description:"mô tả kiến trúc ngắn và các thành phần xung quanh",surroundings?,terrain?}. Khai báo các place mới (room/corridor/grounds...) và connections chỉ khi RP đã xác lập. GitHub tự thiết kế SVG/địa hình/nội thất; AI không gửi SVG/CSS/hình học. KHÔNG dùng customScene để né địa điểm canon thiếu binding hoặc mở 90 địa điểm AU/CCC đang bị khóa.
 
-connections chỉ khi cần: [{from,to,state,kind?}], state=open|restricted|blocked phải đúng RP; kind=doorway|corridor|stairs|lift|path|passage|transport, mặc định doorway. Không dùng fromPlaceId/toPlaceId, không suy kết nối từ gần nhau. Không gửi focus, visiblePlaceIds, presenceBasis, priority hoặc campaign/snapshot metadata. view là tùy chọn, không bắt buộc cho cảnh thường.
+**Information Gate:** AI chỉ gửi tên, phòng, NPC, hành động, hint, quote và inspector mà PC được phép nhìn/biết. Không gửi hidden facts rồi che bằng fog; fog chỉ là minh họa. Atlas room tự bổ sung có thể hiển thị tên trung tính “Chưa khám phá”; visibility.revealedPlaceIds chỉ chứa ID phòng được RP cho phép công khai. Không tiết lộ hidden NPC/secret trong HTML, export hay thông qua mã debug. GitHub không tự đưa thêm thông tin RP.
 
-Trước xuất: kiểm JSON, một PC, ID/tham chiếu, enum, ngày giờ RP, quyền biết và quota. Không dùng ngày giờ máy hoặc bịa dữ kiện thiết yếu. Nếu thiếu dữ kiện thiết yếu, vẫn xuất HTML báo rõ phần thiếu; không chuyển thành phản hồi chỉ văn bản. Khi sửa lỗi, giữ nguyên cảnh và dữ kiện đã chấp nhận, xuất lại HTML hoàn chỉnh.
+Kết nối: connections=[{from,to,state,kind?}] chỉ khi quan hệ đã được xác lập; state=open|restricted|blocked; không biến bố cục minh họa thành canon adjacency. Không gửi focus, visiblePlaceIds, questPolicy, campaign/snapshot ID hay enum cũ. Xác thực JSON, 1 PC, ID/enum/links, nguồn quote/inspector/visibility, tối đa 5 hints; nếu thiếu dữ kiện thiết yếu hãy xuất HTML lỗi rõ, không dùng dữ liệu giả.
 
 Thay __LIVE_MAP_DATA_JSON__ bằng JSON của lượt hiện tại, không comment/placeholder. Escape < trong JSON nhúng thành \u003c. Giữ nguyên URL bundle và script nội tuyến dưới đây; không thay bằng thẻ script src, link web hay đoạn mã rút gọn. Đầu ra là một code block html chứa:
 
