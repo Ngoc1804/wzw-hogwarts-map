@@ -7,6 +7,7 @@ const item=(id,assetId,width,depth,placement='auto',extra={})=>({id,role:id,asse
 export function roomRecipe(place){
  const f=place.generation?.function||place.kind||'other';
  const decor=[item('lamp','extra.sconce',18,14,'wall-north'),item('plant','plant.pot-top',24,24,'wall-east')];
+ if(f==='minimal')return [item('lamp','extra.sconce',18,14,'wall-north'),item('rug','object.rug',35,24,'center')];
  // Stage-1 purposes adapted to the current collision-aware placement engine.
  if(/^(office|administration)$|văn phòng/i.test(f))return [item('desk','table.desk',65,40,'wall-north'),item('chair','seat.armchair',28,28,'wall-east',{count:2}),item('shelf','storage.bookcase-top',65,22,'wall-west'),item('fireplace','fixture.fireplace-top',45,25,'wall-south'),item('rug','object.rug-round',70,70,'center'),...decor];
  if(/^(practice|practical)$|thực hành/i.test(f))return [item('bench','table.prep',48,30,'rows',{count:3}),item('stool','seat.stool',18,18,'auto',{count:3,near:'bench',nearOffset:{x:0,y:34}}),item('shelf','storage.bookcase-top',55,22,'wall-north'),...decor];
