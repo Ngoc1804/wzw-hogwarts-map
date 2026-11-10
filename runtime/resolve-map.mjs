@@ -4,7 +4,7 @@ import {
  canonicalPlaceId,isKnownAtlasPlace,verifiedAtlasBinding,
  generatedSceneOptions,canonicalPlaceFunction,isCanonicalCorridor,
  assertAllowedScene,assertGeneratedScene,resolveAtlasLocality,
- atlasPlaceName,listVerifiedTemplateBindings,atlasVersion,isLockedAtlasPlace
+ atlasPlaceName,listVerifiedTemplateBindings,atlasVersion,isLockedAtlasPlace,sceneTemplateOwners
 } from './atlas-scene.mjs';
 
 const TEMPLATE_SPECIFICITY={
@@ -57,7 +57,7 @@ export function resolveMap(input,templates=registry.templates){
  // parcels require an explicit, short customScene description.
  const localIndoor=!known&&listed.every(p=>p.generation&&['room','corridor','hall','tower','house','shop','pub','greenhouse','special'].includes(p.kind));
  if(!known&&!localIndoor&&!pcPlace.atlasRef)
-  throw Error('Unknown Atlas PC location: provide a user-created customScene with a short structural description');
+  throw Error('Missing recipe or unknown Atlas PC location: provide a user-created customScene with a short structural description');
  const preferred=data.view.templateId;
  const candidates=Object.keys(listVerifiedTemplateBindings(pcId)).filter(id=>technical(pcPlace,id,templates));
  const eligible=candidates.length?candidates:Object.keys(templates).filter(id=>technical(pcPlace,id,templates));
@@ -75,14 +75,22 @@ export function resolveMap(input,templates=registry.templates){
  }
  if(data.view.preferredMode==='template')throw Error('PC location has no verified fixed template');
  assertGeneratedScene([pcId]);
+ if(canonicalPlaceFunction(pcId)==='outdoor')throw Error('Outdoor place requires an exterior surface: '+pcId);
  if(!known){
-  if(!localIndoor)throw Error('Unknown Atlas location requires an explicit customScene structural description and valid generation');
+  if(!localIndoor)throw Error('Missing recipe: unknown Atlas location requires an explicit customScene structural description and valid generation');
   const places=listed.map(placeWithGeneration);
   return {mode:'generated',sceneType:'local',scopeId:data.view.scopeId||'local:'+pcId,atlasVersion:atlasVersion(),places,
    connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
  }
  const group=resolveAtlasLocality(pcId,data.view.scopeId);
- if(!group)throw Error('Atlas PC location has no approved generated scope or fixed template: '+pcId);
+ if(!group){
+  if(sceneTemplateOwners[pcId])throw Error('Existing fixed map/template required; missing verified binding: '+pcId);
+  if(canonicalPlaceFunction(pcId)==='outdoor')throw Error('Outdoor place requires an exterior surface: '+pcId);
+  // Canonical standalone interiors use the same engine, without inventing a scope.
+  const places=[placeWithGeneration(pcPlace)];
+  return {mode:'generated',sceneType:'atlas',scopeId:'place:'+pcId,atlasVersion:atlasVersion(),
+   places,connections:[],indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
+ }
  const ids=new Set(group.placeIds);
  const explicit=new Map(listed.filter(p=>ids.has(p.id)).map(p=>[p.id,p]));
  const revealed=new Set((data.visibility.revealedPlaceIds||[]).map(canonicalPlaceId));

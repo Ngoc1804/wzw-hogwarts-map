@@ -4675,5 +4675,637 @@
     "TWR-10-02-02",
     "TWR-10-03-01",
     "TWR-11-01-01"
-  ]
+  ],
+  "templateOwnerById": {
+    "P-10ca277b3be7f2": [
+      "ministry2"
+    ],
+    "P-3e401191d71800": [
+      "ministry2"
+    ],
+    "P-13dfea8fe4bf27": [
+      "ministry2"
+    ],
+    "HOG-TNG1-S-06": [
+      "hall"
+    ],
+    "P-444469fe1666f1": [
+      "ministry2"
+    ],
+    "P-a3d0329c5db5e2": [
+      "ministry2"
+    ],
+    "P-76e93cc0236521": [
+      "ministry2"
+    ],
+    "P-58ba0981b28173": [
+      "ministry2"
+    ],
+    "P-ad6b222c1cf8e4": [
+      "ministry2"
+    ],
+    "P-f9c67c9c540345": [
+      "ministry2"
+    ],
+    "P-873b198808d71f": [
+      "ministry2"
+    ],
+    "P-13ae06fd76adc5": [
+      "h1"
+    ],
+    "P-f79a562f43d99a": [
+      "h2"
+    ],
+    "P-6a9cb408f9f168": [
+      "gryffindor-common"
+    ],
+    "P-ae87f1280dad9c": [
+      "h2"
+    ],
+    "HOG-TNG1-S-02": [
+      "hall"
+    ],
+    "P-1cbafaf3eaef87": [
+      "slytherin-common"
+    ],
+    "P-cabb450c67c344": [
+      "hufflepuff-common"
+    ],
+    "P-a04785690fe84b": [
+      "express"
+    ],
+    "P-bb3906692ce0a3": [
+      "h1"
+    ],
+    "P-f9359f86975e71": [
+      "pitch-static"
+    ],
+    "P-d216ce626788ed": [
+      "hall"
+    ],
+    "P-cc5bcc4d694457": [
+      "h1"
+    ],
+    "P-27cbd65e002cd1": [
+      "express"
+    ],
+    "P-0006dd26862fbe": [
+      "h1"
+    ],
+    "P-ce57067fcd107f": [
+      "hall"
+    ],
+    "P-c089c78b883a86": [
+      "ministry-8-10"
+    ],
+    "P-0880e4fe3da124": [
+      "hall"
+    ],
+    "P-1901b8ad031d44": [
+      "ministry-8-10"
+    ],
+    "P-44a4a4856bc09b": [
+      "ministry-8-10"
+    ],
+    "P-8fd2ba76f6cef8": [
+      "ravenclaw-common"
+    ],
+    "P-660382eb5d124f": [
+      "hall"
+    ],
+    "P-c8e6b9a47ac0b8": [
+      "village-static"
+    ],
+    "P-95cdaf84841bcd": [
+      "diagon-knockturn"
+    ],
+    "P-da0766f575a2ce": [
+      "ministry2"
+    ],
+    "P-05c90391d35da8": [
+      "ministry2"
+    ],
+    "P-28dd4f052c2855": [
+      "village-static"
+    ],
+    "P-9253053d400539": [
+      "diagon-knockturn"
+    ],
+    "P-2b888eaec42438": [
+      "diagon-knockturn"
+    ],
+    "P-5d33c248682e4b": [
+      "diagon-knockturn"
+    ],
+    "P-1b93d2a168cc1a": [
+      "diagon-knockturn"
+    ],
+    "P-ece8b34b0783e7": [
+      "diagon-knockturn"
+    ],
+    "P-2be38007d6f246": [
+      "village-static"
+    ],
+    "P-561ef194a3cfad": [
+      "village-static"
+    ],
+    "P-6fca659549629d": [
+      "h1"
+    ],
+    "P-7f18ace1f8b2d7": [
+      "h1"
+    ],
+    "P-b08a347b7ef127": [
+      "diagon-knockturn"
+    ],
+    "P-f29f8a2656ded8": [
+      "village-static"
+    ],
+    "P-5c5b87e483e862": [
+      "diagon-knockturn"
+    ],
+    "P-5a4fefc72d7d57": [
+      "pitch-static"
+    ],
+    "P-f30d790b24b65a": [
+      "village-static"
+    ],
+    "P-96d14a7a982d4e": [
+      "h1"
+    ],
+    "P-83c52658df2171": [
+      "express"
+    ],
+    "P-c7788eabe9f16a": [
+      "diagon-knockturn"
+    ],
+    "P-5eb3bde9176879": [
+      "h2"
+    ],
+    "P-0a1ff4c2777f64": [
+      "h2"
+    ],
+    "P-9f810bb6686c6d": [
+      "h1"
+    ],
+    "P-81a969eb658163": [
+      "village-static"
+    ],
+    "P-00020cadb6235e": [
+      "express"
+    ],
+    "P-936cbb9c617eca": [
+      "pitch-static"
+    ],
+    "P-8de3a27d58bad8": [
+      "village-static"
+    ],
+    "P-6f640309d1ece1": [
+      "ministry2"
+    ],
+    "P-385234641b8727": [
+      "h1"
+    ],
+    "P-9c45a4f54ea1ee": [
+      "h1"
+    ],
+    "P-6ac732451f03d7": [
+      "h1"
+    ],
+    "P-31f204a8e0e490": [
+      "h1"
+    ],
+    "P-d76cff03ee7601": [
+      "h1"
+    ],
+    "P-7debd31a87a61e": [
+      "h1"
+    ],
+    "P-ff62bf19892de9": [
+      "h1"
+    ],
+    "P-83b46b70fcdcc6": [
+      "diagon-knockturn"
+    ],
+    "P-065a853b8d7608": [
+      "diagon-knockturn"
+    ],
+    "P-b652531fad15ad": [
+      "diagon-knockturn"
+    ],
+    "P-94a7036730f10e": [
+      "express"
+    ],
+    "P-f4ef10f0794466": [
+      "diagon-knockturn"
+    ],
+    "P-8bd319c866a655": [
+      "village-static"
+    ],
+    "P-71db87f76e608b": [
+      "diagon-knockturn"
+    ],
+    "P-046c1c72bb9fc9": [
+      "diagon-knockturn"
+    ],
+    "P-ea0d1c088bb35d": [
+      "express"
+    ],
+    "P-ce64687addd09a": [
+      "village-static"
+    ],
+    "P-09b9d228df78c4": [
+      "pitch-static"
+    ],
+    "P-80b97fa352d930": [
+      "ministry2"
+    ],
+    "P-81c7ab0cff5ac4": [
+      "village-static"
+    ],
+    "P-8c15e0bfc2d11d": [
+      "h1"
+    ],
+    "P-dfec82bd2d4f53": [
+      "ministry2"
+    ],
+    "P-a8f847e818afa1": [
+      "express"
+    ],
+    "P-143a2447e31c2c": [
+      "h1"
+    ],
+    "P-79710fe4d4bcfa": [
+      "village-static"
+    ],
+    "P-c342fdc0ef620b": [
+      "diagon-knockturn"
+    ],
+    "P-c2473d02e0de42": [
+      "diagon-knockturn"
+    ],
+    "P-226721c1fff80c": [
+      "express"
+    ],
+    "P-f8ed3dbe20d357": [
+      "h2"
+    ],
+    "P-f322d7e98b6a02": [
+      "h1"
+    ],
+    "P-197b2052678b9d": [
+      "village-static"
+    ],
+    "P-0fe532e3c7b3e8": [
+      "diagon-knockturn"
+    ],
+    "P-47576b791ebc5b": [
+      "express"
+    ],
+    "P-9bf6e71ff3108b": [
+      "h1"
+    ],
+    "P-04180946d36a33": [
+      "diagon-knockturn"
+    ],
+    "P-86e7455d5f7d47": [
+      "hall"
+    ],
+    "P-f6ff23e797445d": [
+      "ministry-8-10"
+    ],
+    "P-fd24a44f33135c": [
+      "ministry-8-10"
+    ],
+    "P-95936a141ed516": [
+      "hall"
+    ],
+    "P-441745282e9e54": [
+      "gryffindor-common"
+    ],
+    "P-1795bc600c2b41": [
+      "hufflepuff-common"
+    ],
+    "P-4bde45f1a1cb07": [
+      "ravenclaw-common"
+    ],
+    "P-80ce1ea13c2632": [
+      "slytherin-common"
+    ],
+    "P-e27a6e6c098632": [
+      "pitch-static"
+    ],
+    "P-638d3d8f890b97": [
+      "pitch-static"
+    ],
+    "P-12d570650689e2": [
+      "pitch-static"
+    ],
+    "P-86cd9a8defbb03": [
+      "ministry-8-10"
+    ],
+    "P-2c9c4c00c1d80b": [
+      "ministry-8-10"
+    ],
+    "P-bd4a42764da881": [
+      "ministry-8-10"
+    ],
+    "P-9805ab2f38804f": [
+      "ministry-8-10"
+    ],
+    "P-bdd56dfa509b7c": [
+      "diagon-knockturn"
+    ],
+    "P-c97880d2883d88": [
+      "diagon-knockturn"
+    ],
+    "P-d2a51c4e5a9cd6": [
+      "village-static"
+    ],
+    "P-57a63e2aaa9159": [
+      "diagon-knockturn"
+    ],
+    "P-eb74631b825f74": [
+      "village-static"
+    ],
+    "P-4fee03ab76bb30": [
+      "ministry-8-10"
+    ],
+    "P-adc8756e94687f": [
+      "ministry2"
+    ],
+    "P-8372c04e802fdc": [
+      "ministry2"
+    ],
+    "P-4d4b012a451ee2": [
+      "ministry2"
+    ],
+    "P-3d600b63857ca0": [
+      "ministry2"
+    ],
+    "P-4247829f4f87d7": [
+      "ministry2"
+    ],
+    "P-8f8a0811461a67": [
+      "ministry2"
+    ],
+    "P-5b000833260ab3": [
+      "ministry-8-10"
+    ],
+    "P-38988e75264a65": [
+      "express"
+    ],
+    "P-e1641c684d1741": [
+      "express"
+    ],
+    "P-aab0be0508401d": [
+      "express"
+    ],
+    "P-c901ae9bd25828": [
+      "express"
+    ],
+    "P-5889d83ab64879": [
+      "express"
+    ],
+    "P-f66347f72f87d0": [
+      "ministry2"
+    ],
+    "P-af6716662de8c8": [
+      "ministry2"
+    ],
+    "P-58bb45e6da0252": [
+      "diagon-knockturn"
+    ],
+    "P-9301236b54857d": [
+      "ministry2"
+    ],
+    "P-5a0ec074efb106": [
+      "diagon-knockturn"
+    ],
+    "P-633d0bcb4ab87e": [
+      "village-static"
+    ],
+    "P-effd8342cc396c": [
+      "h1"
+    ],
+    "P-0d712868c509cf": [
+      "h1"
+    ],
+    "P-17db50485e2b83": [
+      "h1"
+    ],
+    "P-e7ebf6e1f0fcb9": [
+      "h1"
+    ],
+    "P-7904b8045f6614": [
+      "h1"
+    ],
+    "P-59e90d8a9ccc63": [
+      "h1"
+    ],
+    "P-f52be73f7dd9ce": [
+      "ministry2"
+    ],
+    "P-5fc3c5a0bcb0d1": [
+      "ministry2"
+    ],
+    "P-2df6c97ce86355": [
+      "ministry2"
+    ],
+    "P-951dc2baa9a710": [
+      "ministry2"
+    ],
+    "P-4df8571e5dea2e": [
+      "h1"
+    ],
+    "P-d85dbd8c19bb3b": [
+      "diagon-knockturn"
+    ],
+    "P-06a1ce678f15be": [
+      "diagon-knockturn"
+    ],
+    "P-91ec4108625f7b": [
+      "ministry2"
+    ],
+    "P-63aa8852e10090": [
+      "h1"
+    ],
+    "P-c061b81bba5c42": [
+      "h1"
+    ],
+    "P-6e4b06065f0997": [
+      "hall"
+    ],
+    "P-1ecd945e2b86b7": [
+      "h2"
+    ],
+    "P-30cf89999f5e15": [
+      "h1"
+    ],
+    "P-8fd3daca88a6f1": [
+      "h1"
+    ],
+    "P-dadcf596a0437f": [
+      "ministry-8-10"
+    ],
+    "P-dafe46b4834d00": [
+      "express"
+    ],
+    "P-df6ec24bb2876c": [
+      "ministry-8-10"
+    ],
+    "P-52b6fe3a29d440": [
+      "h1"
+    ],
+    "P-c251f1aa2096c0": [
+      "ministry-8-10"
+    ],
+    "P-9fffb1aaa57eea": [
+      "h1"
+    ],
+    "P-8f7588d4e8a5bc": [
+      "h1"
+    ],
+    "P-6575df3a62913f": [
+      "pitch-static"
+    ],
+    "P-5e1f1cc14a2adb": [
+      "village-static"
+    ],
+    "P-bf3c24a146fb6a": [
+      "ministry-8-10"
+    ],
+    "P-241e2fa15a09f1": [
+      "ministry-8-10"
+    ],
+    "P-38bf6be09df746": [
+      "h2"
+    ],
+    "P-f6319cb5ddb159": [
+      "h2"
+    ],
+    "P-de97c63af46b5c": [
+      "h2"
+    ],
+    "P-8153c1a6e4e7dc": [
+      "h1"
+    ],
+    "P-3a9add588aa69a": [
+      "express"
+    ],
+    "P-b879bbed8fdc49": [
+      "express"
+    ],
+    "P-33d82440a9be50": [
+      "h2"
+    ],
+    "P-442f7275b6c832": [
+      "h2"
+    ],
+    "P-501e057d5be6b1": [
+      "h2"
+    ],
+    "P-7abe41594af2ff": [
+      "pitch-static"
+    ],
+    "P-dbdb26cb4f253a": [
+      "diagon-knockturn"
+    ],
+    "P-eeb5352311e7c0": [
+      "pitch-static"
+    ],
+    "P-6d6cfd0e60241f": [
+      "h2"
+    ],
+    "P-ba63b94f595caf": [
+      "hall"
+    ],
+    "P-399f2c035627f1": [
+      "h2"
+    ],
+    "P-5daf783e1e1f28": [
+      "h2"
+    ],
+    "P-bca1f1945d52e9": [
+      "h2"
+    ],
+    "P-585c0776dc54a3": [
+      "h2"
+    ],
+    "P-1bd95d9a21aa0e": [
+      "ministry-8-10"
+    ],
+    "P-9c19f623bbb1e3": [
+      "h1"
+    ],
+    "P-1174317bcb3096": [
+      "h1"
+    ],
+    "P-29bc58039f5eae": [
+      "h1"
+    ],
+    "P-b830cb70ee02f6": [
+      "h1"
+    ],
+    "P-f2d3a414a25b76": [
+      "h1"
+    ],
+    "P-a63fc4014d765b": [
+      "gryffindor-common"
+    ],
+    "P-ebceb992eb9255": [
+      "hufflepuff-common"
+    ],
+    "P-439400ea5f0cd4": [
+      "ravenclaw-common"
+    ],
+    "P-6b050b321ff558": [
+      "slytherin-common"
+    ],
+    "P-468097e3d74bf1": [
+      "gryffindor-common"
+    ],
+    "P-b4314de4234c88": [
+      "hufflepuff-common"
+    ],
+    "P-7d130cc86d97eb": [
+      "ravenclaw-common"
+    ],
+    "P-a6425ebd843fab": [
+      "slytherin-common"
+    ],
+    "P-14c5870146b747": [
+      "hall"
+    ],
+    "P-4cb1d44097aaf0": [
+      "diagon-knockturn"
+    ],
+    "P-cf86b4537874ba": [
+      "pitch-static"
+    ],
+    "P-cc0a4d9d894357": [
+      "diagon-knockturn"
+    ],
+    "P-fde802b26605cc": [
+      "diagon-knockturn"
+    ],
+    "P-1db46d6df4495f": [
+      "diagon-knockturn"
+    ],
+    "P-da0da47f74a252": [
+      "ravenclaw-common"
+    ],
+    "P-b063050bb041b4": [
+      "slytherin-common"
+    ],
+    "P-18305f9ea8f94d": [
+      "hufflepuff-common"
+    ],
+    "P-337a20429f7b9d": [
+      "gryffindor-common"
+    ],
+    "P-5fc25ea9745ef9": [
+      "hall"
+    ]
+  }
 }

@@ -58,14 +58,16 @@ function exclusionsFor(model){
  }
  return zones;
 }
-export function buildGeometry(plan,indoor={}){
+export function buildGeometry(plan,indoor=plan.indoor||{}){
  if(plan.mode!=='generated')throw Error('Indoor build requires generated scene');
  const places=plan.places;
+ const custom=Boolean(plan.customScene);
+ const outdoorKinds=new Set(['grounds','street','region']);
+ const exterior=custom;
+ const outdoorOnly=custom&&plan.customScene.kind==='outdoor';
  if(!places.length)throw Error('Indoor scene requires at least one visible room');
  if(new Set(places.map(p=>p.floor||'')).size>1)throw Error('Only the current indoor floor/scene may be built; provide one floor per /map');
- const custom=plan.sceneType==='custom',outdoorKinds=new Set(['grounds','street','region']);
- const exterior=custom&&['outdoor','village','building'].includes(plan.customScene?.kind);
- const corridorPlaces=places.filter(p=>p.kind==='corridor'||(exterior&&outdoorKinds.has(p.kind)));
+ const corridorPlaces=places.filter(p=>p.kind==='corridor'||(custom&&outdoorKinds.has(p.kind)));
  const roomPlaces=places.filter(p=>!corridorPlaces.includes(p));
  if(!roomPlaces.length&&indoor.layout==='tower')throw Error('Tower recipe requires an actual room');
  const records=roomPlaces.map(p=>({
@@ -100,7 +102,7 @@ export function buildGeometry(plan,indoor={}){
    const xs=poly.map(p=>p[0]),ys=poly.map(p=>p[1]);
    model.bounds=[Math.min(...xs)-55,Math.min(...ys)-85,Math.max(...xs)-Math.min(...xs)+110,Math.max(...ys)-Math.min(...ys)+150];
  }
- const walls=buildIndoorWalls(exterior?{...model,floors:[]}:model);
+ const walls=buildIndoorWalls(outdoorOnly?{...model,floors:[]}:model);
  const exclusions=exclusionsFor(model);
  const rooms=Object.fromEntries(model.rooms.map(r=>[r.id,{...r,h:r.bottom-r.y,shape:r.shape,poly:r.poly||rectangle(r.x,r.y,r.w,r.bottom-r.y)}]));
  const floorPolygons=[

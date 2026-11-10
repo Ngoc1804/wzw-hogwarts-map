@@ -9,7 +9,7 @@ export function auditCoverage(){
   const row={id,name:index.canonicalNameById[id]};
   if(index.lockedPlaceIds.includes(id)||index.cccNonRoomPlaceIds.includes(id))return {...row,status:'locked-by-policy'};
   if(index.bindings[id])return {...row,status:'template',bindings:index.bindings[id]};
-  if(index.noGeneratePlaceIds.includes(id))return {...row,status:'missing-fixed-binding'};
+  if(index.noGeneratePlaceIds.includes(id)||index.templateOwnerById?.[id])return {...row,status:'missing-fixed-binding'};
   if(index.placeFunctionById[id]==='outdoor')return {...row,status:'missing-outdoor-surface'};
   const d=structuredClone(fixture);d.places=[{...d.places[0],id,name:row.name,atlasRef:null,kind:index.corridorPlaceIds.includes(id)?'corridor':'room',generation:null}];
   d.view={...d.view,preferredMode:'generated',templateId:null,routePlaceIds:[id]};d.actors.forEach(a=>a.placeId=id);d.hints.forEach(h=>h.placeId=id);

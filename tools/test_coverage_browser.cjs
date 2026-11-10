@@ -34,7 +34,7 @@ const root=path.resolve(__dirname,'..'),review=JSON.parse(fs.readFileSync(root+'
   if(row.disposition==='resolved-binding')for(const e of row.evidence)assert.equal(await p.locator('#mapmount>svg '+e.selector).count(),1);
   else assert.equal(await p.locator('[data-element-id="bed.single"]').count(),2);
   if(d.actors[0].position)assert.ok(await p.evaluate(pt=>WIZAMAP_TEST.canStand(pt),d.actors[0].position));
-  await p.locator('.qa-tags .ribbon').click();assert.equal(await p.locator('#place-title').textContent(),row.name);
+  await p.locator('.qa-tags .ribbon').click();assert.equal(await p.locator('#place-title').textContent(),d.places[0].name);assert.ok((await p.locator('#actors').textContent()).includes(d.actors[0].name));
   console.log('PASS',row.disposition,id,row.name);
  }
  assert.deepEqual(errors,[]);

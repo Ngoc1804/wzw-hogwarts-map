@@ -100,13 +100,12 @@ export function buildIndoorLayout(request={}){
   for(const a of [-1.15,-.7,-.3]){const p=point(R+C,a);windows.push({axis:'D',x:p[0],y:p[1],tx:-Math.sin(a),ty:Math.cos(a)});}
  }
  if(id==='tower'){
-  const L=Math.ceil((N-2)/2)*maxF,R=Math.max(maxD,1.5*C);floor(-L,0,L,C);floor(0,0,C,C);H(-L,0,L,'S');H(-L,C,L,'N');
+  const L=Math.ceil((N-1)/2)*maxF,R=Math.max(maxD,1.5*C);floor(-L,0,L,C);floor(0,0,C,C);H(-L,0,L,'S');H(-L,C,L,'N');
   const chamber=makeRoom({...records.at(-1),shape:'round'}, {axis:'V',side:'W',x:C,y:C/2-R},0,2*R,2*R);chamber.name=records.at(-1).name;chamber.kind='tower';rooms.push(chamber);
-  const steps=makeRoom({...records.at(-2),shape:'rectangle'}, {axis:'H',side:'S',x:0,y:0},0,C,maxD);steps.kind='stairs';rooms.push(steps);
   stair={x:-L-70,y:10,w:70,h:C-20,orientation:'E'};entry('V',-L,10,C-10);
  }
  if(id==='cross'){const order=[0,4,2,7,1,5,3,6],copy=[...slots];slots.splice(0,slots.length,...order.map(i=>copy[i]));}
- const ordinary=id==='tower'?records.slice(0,-2):records;
+ const ordinary=id==='tower'?records.slice(0,-1):records;
  const groups=slots.map(s=>({...s,records:[],used:0}));
  for(const r of ordinary){const w=r.width||F;const eligible=groups.filter(s=>s.used+w<=s.length+1e-6).sort((a,b)=>a.used/a.length-b.used/b.length);if(!eligible.length)throw Error('Không đủ mặt tiền để đặt phòng '+r.id);eligible[0].records.push(r);eligible[0].used+=w;}
  for(const s of groups){let offset=(s.length-s.used)/2;for(const rec of s.records){const frontage=rec.width||F;rooms.push(makeRoom(rec,s,offset,frontage,rec.depth||D));offset+=frontage;}}

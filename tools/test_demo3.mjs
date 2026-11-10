@@ -53,3 +53,18 @@ test('Demo 3: 15 public NPC records and events are valid, label restriction is i
  assert.equal(validateMapData(d).ok,true);
  assert.equal(assertMapData(d).hints[0].type,'event');
 });
+
+test('standalone local room resolves without an indoor override and geometry honors the resolved plan',()=>{
+ const d={meta:{date:'1992-09-11',time:'16:30',areaName:'Phòng nhỏ'},places:[{id:'local-test',name:'Phòng nhỏ',kind:'room',generation:{function:'bedroom'}}],actors:[{id:'pc',name:'PC',isPC:true,placeId:'local-test'}]};
+ const before=structuredClone(d),plan=resolveMap(d),g=buildGeometry(plan);
+ assert.equal(g.model.rooms.length,1);assert.deepEqual(d,before);
+ const explicit=resolveMap({...d,view:{indoor:{layout:'ell'}}});
+ assert.equal(buildGeometry(explicit).model.recipe,'ell');
+});
+test('tower corridor keeps every supplied room instead of turning one into a narrow staircase',()=>{
+ const d=base();d.places=Array.from({length:5},(_,i)=>({id:'tower-room-'+i,name:'Phòng '+i,kind:'room',generation:{function:i===4?'storage':'study'}}));d.actors[0].placeId=d.places[0].id;d.view={indoor:{layout:'tower',roomWidth:260,roomDepth:240,corridorWidth:135}};
+ const plan=resolveMap(d),g=buildGeometry(plan);
+ assert.equal(g.model.recipe,'tower');assert.deepEqual(g.model.rooms.map(r=>r.id),d.places.map(p=>p.id));
+ assert.ok(g.model.rooms.every(r=>r.kind!=='stairs'));
+ for(const p of d.places){assert.ok(g.suggestedAnchors[p.id]?.length);assert.ok(g.furnishingInstances.some(i=>i.placeId===p.id));}
+});

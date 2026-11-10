@@ -80,3 +80,5 @@ export function atlasPlaceKind(id){return isCanonicalCorridor(id)?'corridor':'ro
 export function isLockedAtlasPlace(id){return locked.has(canonicalPlaceId(id))||cccNonRoom.has(canonicalPlaceId(id))}
 export function listVerifiedTemplateBindings(id){return sceneAtlas.bindings[canonicalPlaceId(id)]||{}}
 export function atlasVersion(){return sceneAtlas.atlasVersion}
+
+export const sceneTemplateOwners=sceneAtlas.templateOwnerById||{};
