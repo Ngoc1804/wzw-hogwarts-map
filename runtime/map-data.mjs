@@ -1,5 +1,21 @@
 import schema from './map-data.schema.json' with {type:'json'};
 
+// Apply only declared presentation defaults. Never infer RP facts or visibility.
+export function normalizeMapData(value, rule=schema) {
+  if(rule.$ref)rule=schema.$defs[rule.$ref.split('/').at(-1)];
+  if(value===undefined&&Object.hasOwn(rule,'default'))value=structuredClone(rule.default);
+  if(Array.isArray(value))return value.map(v=>normalizeMapData(v,rule.items||{}));
+  if(value&&typeof value==='object'){
+    const out={...value};
+    for(const [key,child] of Object.entries(rule.properties||{})){
+      const normalized=normalizeMapData(value[key],child);
+      if(normalized!==undefined)out[key]=normalized;
+    }
+    return out;
+  }
+  return value;
+}
+
 function check(value, rule, path, errors) {
   if(rule.$ref)rule=schema.$defs[rule.$ref.split('/').at(-1)];
   if('const' in rule && value!==rule.const)errors.push(`${path}: invalid constant`);
@@ -26,6 +42,7 @@ function check(value, rule, path, errors) {
   }
 }
 export function validateMapData(data) {
+  data=normalizeMapData(data);
   const errors=[];check(data,schema,'MAP_DATA',errors);if(errors.length)return {ok:false,errors};
   const ids=new Set();for(const row of [...data.places,...data.connections,...data.actors,...data.hints]){
     if(ids.has(row.id))errors.push('Duplicate public entity ID');ids.add(row.id);
@@ -43,7 +60,7 @@ export function validateMapData(data) {
   }
   const places=new Set(data.places.map(p=>p.id)),visible=new Set(data.visibility.visiblePlaceIds);
   const requirePlace=(id,label)=>{if(!places.has(id))errors.push(`${label}: unknown place`)};
-  requirePlace(data.focus.actualPlaceId,'PC');requirePlace(data.view.centerPlaceId,'view center');
+  requirePlace(data.focus.actualPlaceId,'PC');if(data.view.centerPlaceId!==undefined)requirePlace(data.view.centerPlaceId,'view center');
   data.view.routePlaceIds.forEach(id=>requirePlace(id,'route'));data.visibility.visiblePlaceIds.forEach(id=>requirePlace(id,'visibility'));
   if(data.focus.selectedId!==null&&!ids.has(data.focus.selectedId))errors.push('Unknown selected entity');
   if(!visible.has(data.focus.actualPlaceId))errors.push('PC place must be visible');
@@ -58,14 +75,17 @@ export function validateMapData(data) {
   }
   const date=new Date(data.meta.date+'T00:00:00Z');
   if(!Number.isFinite(date.valueOf())||date.toISOString().slice(0,10)!==data.meta.date)errors.push('Invalid RP date');
-  if(data.questPolicy.month!==data.meta.date.slice(0,7))errors.push('Quest month must match RP month');
-  if(Object.values(data.questPolicy.limits).reduce((a,b)=>a+b,0)>6)errors.push('Quest limits total exceeds 6');
-  const counts={main:0,side:0,pool:0,life:0},questIds=new Set();
-  for(const h of data.hints){
-    requirePlace(h.placeId,'hint');if(!visible.has(h.placeId))errors.push('Hint in nonvisible place');
-    if(h.packId!==data.questPolicy.packId)errors.push('Hint from another monthly pack');
-    const key=h.packId+'/'+h.sourceQuestId;if(questIds.has(key))errors.push('Duplicate quest source');questIds.add(key);
-    if(++counts[h.type]>data.questPolicy.limits[h.type])errors.push('Hint type quota exceeded');
+  if(data.hints.length&&!data.questPolicy)errors.push('MAP_DATA.questPolicy: required when hints are present');
+  if(data.questPolicy){
+    if(data.questPolicy.month!==data.meta.date.slice(0,7))errors.push('Quest month must match RP month');
+    if(Object.values(data.questPolicy.limits).reduce((a,b)=>a+b,0)>6)errors.push('Quest limits total exceeds 6');
+    const counts={main:0,side:0,pool:0,life:0},questIds=new Set();
+    for(const h of data.hints){
+      requirePlace(h.placeId,'hint');if(!visible.has(h.placeId))errors.push('Hint in nonvisible place');
+      if(h.packId!==data.questPolicy.packId)errors.push('Hint from another monthly pack');
+      const key=h.packId+'/'+h.sourceQuestId;if(questIds.has(key))errors.push('Duplicate quest source');questIds.add(key);
+      if(++counts[h.type]>data.questPolicy.limits[h.type])errors.push('Hint type quota exceeded');
+    }
   }
   const graph=new Map(data.places.map(p=>[p.id,[]]));
   for(const c of data.connections){requirePlace(c.from,'connection');requirePlace(c.to,'connection');if(c.from===c.to)errors.push('Self connection');graph.get(c.from)?.push(c.to);graph.get(c.to)?.push(c.from);}
@@ -83,6 +103,6 @@ export function validateMapData(data) {
   for(const id of data.visibility.fogRegionIds)if(!regions.has(id))errors.push('Fog region needs explicit geometry: '+id);
   return {ok:errors.length===0,errors};
 }
-export function assertMapData(data){const result=validateMapData(data);if(!result.ok)throw new Error(result.errors.join('; '));return data}
+export function assertMapData(data){const result=validateMapData(data);if(!result.ok)throw new Error(result.errors.join('; '));return normalizeMapData(data)}
 // Safe JSON for a non-executable application/json script element. Viewer uses textContent.
 export function serializeMapData(data){assertMapData(data);return JSON.stringify(data).replace(/[<>&\u2028\u2029]/g,c=>'\\u'+c.charCodeAt(0).toString(16).padStart(4,'0'))}

@@ -42,15 +42,14 @@
         },
         "quote": {
           "type": "string",
-          "minLength": 1,
-          "maxLength": 180
+          "maxLength": 180,
+          "default": ""
         }
       },
       "required": [
         "date",
         "time",
-        "areaName",
-        "quote"
+        "areaName"
       ]
     },
     "view": {
@@ -80,14 +79,16 @@
             "auto",
             "template",
             "generated"
-          ]
+          ],
+          "default": "auto"
         },
         "templateId": {
           "type": [
             "string",
             "null"
           ],
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$",
+          "default": null
         },
         "centerPlaceId": {
           "type": "string",
@@ -99,10 +100,12 @@
             "type": "string",
             "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "default": []
         },
         "crop": {
-          "type": "boolean"
+          "type": "boolean",
+          "default": true
         },
         "spatial": {
           "$ref": "#/$defs/spatial"
@@ -111,14 +114,8 @@
           "$ref": "#/$defs/indoor"
         }
       },
-      "required": [
-        "scopeId",
-        "spaceKind",
-        "preferredMode",
-        "templateId",
-        "centerPlaceId",
-        "routePlaceIds"
-      ]
+      "required": [],
+      "default": {}
     },
     "focus": {
       "type": "object",
@@ -137,13 +134,13 @@
             "string",
             "null"
           ],
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$",
+          "default": null
         }
       },
       "required": [
         "pcActorId",
-        "actualPlaceId",
-        "selectedId"
+        "actualPlaceId"
       ]
     },
     "places": {
@@ -200,7 +197,8 @@
           "state"
         ]
       },
-      "maxItems": 60
+      "maxItems": 60,
+      "default": []
     },
     "actors": {
       "type": "array",
@@ -215,7 +213,8 @@
       "items": {
         "$ref": "#/$defs/hint"
       },
-      "maxItems": 6
+      "maxItems": 6,
+      "default": []
     },
     "visibility": {
       "type": "object",
@@ -236,7 +235,8 @@
             "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
           },
           "uniqueItems": true,
-          "maxItems": 30
+          "maxItems": 30,
+          "default": []
         },
         "fogRegions": {
           "type": "array",
@@ -263,8 +263,7 @@
         }
       },
       "required": [
-        "visiblePlaceIds",
-        "fogRegionIds"
+        "visiblePlaceIds"
       ]
     },
     "questPolicy": {
@@ -321,19 +320,11 @@
   },
   "required": [
     "schemaVersion",
-    "campaignId",
-    "worldId",
-    "snapshotId",
-    "atlasVersion",
     "meta",
-    "view",
     "focus",
     "places",
-    "connections",
     "actors",
-    "hints",
-    "visibility",
-    "questPolicy"
+    "visibility"
   ],
   "$defs": {
     "place": {
@@ -353,7 +344,8 @@
             "string",
             "null"
           ],
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$",
+          "default": null
         },
         "kind": {
           "type": "string",
@@ -378,14 +370,16 @@
             "string",
             "null"
           ],
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$",
+          "default": null
         },
         "floor": {
           "type": [
             "string",
             "null"
           ],
-          "minLength": 1
+          "minLength": 1,
+          "default": null
         },
         "zone": {
           "type": [
@@ -399,7 +393,8 @@
             "west",
             "core",
             "tower"
-          ]
+          ],
+          "default": null
         },
         "inspector": {
           "type": "object",
@@ -417,7 +412,11 @@
           "required": [
             "overhear",
             "observation"
-          ]
+          ],
+          "default": {
+            "overhear": "",
+            "observation": ""
+          }
         },
         "generation": {
           "type": [
@@ -557,19 +556,14 @@
             "function",
             "shape",
             "furnishings"
-          ]
+          ],
+          "default": null
         }
       },
       "required": [
         "id",
         "name",
-        "atlasRef",
-        "kind",
-        "parentId",
-        "floor",
-        "zone",
-        "inspector",
-        "generation"
+        "kind"
       ]
     },
     "actor": {
@@ -624,10 +618,12 @@
             "string",
             "null"
           ],
-          "minLength": 1
+          "minLength": 1,
+          "default": null
         },
         "onPatrol": {
-          "type": "boolean"
+          "type": "boolean",
+          "default": false
         },
         "stance": {
           "type": "string",
@@ -638,12 +634,14 @@
         },
         "activity": {
           "type": "string",
-          "maxLength": 500
+          "maxLength": 500,
+          "default": ""
         },
         "priority": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 100
+          "maximum": 100,
+          "default": 0
         },
         "positionMode": {
           "type": "string",
@@ -653,14 +651,16 @@
             "concealed-passage",
             "animagus",
             "inside-container"
-          ]
+          ],
+          "default": "normal"
         },
         "positionReason": {
           "type": [
             "string",
             "null"
           ],
-          "minLength": 1
+          "minLength": 1,
+          "default": null
         },
         "presenceBasis": {
           "type": "string",
@@ -686,7 +686,11 @@
           "required": [
             "overhear",
             "observation"
-          ]
+          ],
+          "default": {
+            "overhear": "",
+            "observation": ""
+          }
         },
         "environment": {
           "type": "string",
@@ -711,15 +715,8 @@
         "entityType",
         "placeId",
         "tagType",
-        "role",
-        "onPatrol",
         "stance",
-        "activity",
-        "priority",
-        "positionMode",
-        "positionReason",
-        "presenceBasis",
-        "inspector"
+        "presenceBasis"
       ]
     },
     "hint": {
@@ -759,7 +756,8 @@
         "priority": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 100
+          "maximum": 100,
+          "default": 0
         },
         "inspector": {
           "type": "object",
@@ -777,7 +775,11 @@
           "required": [
             "overhear",
             "observation"
-          ]
+          ],
+          "default": {
+            "overhear": "",
+            "observation": ""
+          }
         }
       },
       "required": [
@@ -786,9 +788,7 @@
         "sourceQuestId",
         "placeId",
         "type",
-        "title",
-        "priority",
-        "inspector"
+        "title"
       ]
     },
     "point": {
@@ -1134,5 +1134,25 @@
         "shapes"
       ]
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "hints": {
+            "minItems": 1
+          }
+        },
+        "required": [
+          "hints"
+        ]
+      },
+      "then": {
+        "required": [
+          "questPolicy"
+        ]
+      }
+    }
+  ],
+  "$comment": "Optional presentation fields use schema defaults in normalizeMapData. visibility.visiblePlaceIds stays explicit; questPolicy is required when hints is nonempty. Existing MAP_DATA 2.0 payloads remain accepted."
 }

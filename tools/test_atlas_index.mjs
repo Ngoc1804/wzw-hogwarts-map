@@ -79,3 +79,31 @@ test('outdoor atlas records must never silently become indoor rectangles',()=>{
  const p=sceneIndex.knownPlaceIds.find(id=>sceneIndex.placeFunctionById[id]==='outdoor'&&!sceneIndex.bindings[id]&&!sceneIndex.noGeneratePlaceIds.includes(id)&&!sceneIndex.lockedPlaceIds.includes(id));
  assert.throws(()=>resolveMap(withPlace(p)),/Outdoor place|CCC/);
 });
+
+test('seven unbound Hogwarts interior rooms generate while fixed template policy remains enforced',()=>{
+ for(const id of ['HOG-TNG7-W-02','HOG-TNG6-S-03','HOG-TNG2-S-06','HOG-TNG1-S-03','HOG-HMNGC-N-04','HOG-TNG4-N-01','HOG-TNG4-W-02']){
+  const d=withPlace(id);d.view.preferredMode='generated';
+  assert.equal(resolveMap(d).mode,'generated');
+  assert.equal(sceneIndex.noGeneratePlaceIds.includes(id),false);
+ }
+ for(const id of sceneIndex.noGeneratePlaceIds)assert.throws(()=>assertGeneratedScene([id]));
+});
+
+test('part 4 review preserves policy and resolves only six proven bindings plus St Mungo classification',()=>{
+ const review=JSON.parse(fs.readFileSync('docs/coverage-review.json'));
+ assert.equal(review.entries.length,91);
+ for(const row of review.entries){
+  assert.ok(!sceneIndex.lockedPlaceIds.includes(row.id)&&!sceneIndex.cccNonRoomPlaceIds.includes(row.id));
+  if(row.disposition==='resolved-binding'){
+   const d=withPlace(row.id);d.view.preferredMode='template';d.view.templateId=row.templateId;
+   const p=resolveMap(d);assert.equal(p.mode,'template');assert.equal(p.places[0].atlasRef,row.atlasRef);
+   assert.deepEqual(p.targets[0].interactiveIds,row.evidence.map(e=>e.interactiveId));
+  }else if(row.disposition==='resolved-classification'){
+   const p=resolveMap(withPlace(row.id));assert.equal(p.mode,'generated');
+   assert.equal(p.places[0].generation.function,'healing');
+  }else{
+   assert.equal(sceneIndex.bindings[row.id],undefined);
+   assert.throws(()=>resolveMap(withPlace(row.id)),/Existing fixed map|Outdoor place/);
+  }
+ }
+});

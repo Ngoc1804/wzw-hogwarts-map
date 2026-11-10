@@ -2,8 +2,10 @@ import registry from './templates.json' with {type:'json'};
 import {assertMapData} from './map-data.mjs';
 import {assertAllowedScene,assertGeneratedScene,canonicalPlaceId,isKnownAtlasPlace,verifiedAtlasBinding,generatedSceneOptions,canonicalPlaceFunction,isCanonicalCorridor} from './atlas-scene.mjs';
 export function resolveMap(data,templates=registry.templates){
- assertMapData(data);
+ data=assertMapData(data);
  const places=data.places.filter(p=>data.visibility.visiblePlaceIds.includes(p.id));
+ const canonicalIds=places.map(p=>canonicalPlaceId(p.id));
+ if(new Set(canonicalIds).size!==canonicalIds.length)throw Error('Duplicate canonical place in current scene');
  assertAllowedScene(places.map(p=>p.id));
  const technical=(p,id)=>{
   const candidate=verifiedAtlasBinding(p.id,id)||verifiedAtlasBinding(p.atlasRef||'',id)||p.atlasRef;

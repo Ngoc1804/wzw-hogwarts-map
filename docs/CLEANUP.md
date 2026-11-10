@@ -12,13 +12,13 @@ Bộ asset người dùng chốt: commit 9b1562a, 259 SVG, 18 base nhà, 12 cây
 
 ## Nhánh mặc định còn bị chặn quyền
 
-GitHub API từ chối đổi default_branch sang demo-1: HTTP 403, Resource not accessible by integration. Không thể xóa main khi nó vẫn là nhánh mặc định. main được cập nhật fast-forward tới cùng commit với demo-1 để không còn trỏ bộ cũ; không merge artwork cũ trở lại.
+GitHub API từ chối đổi default_branch sang demo-1: HTTP 403, Resource not accessible by integration. Không thể xóa main khi nó vẫn là nhánh mặc định. Tại mốc dọn cũ main từng được cập nhật fast-forward với demo-1; trạng thái này không đại diện head hiện tại; không merge artwork cũ trở lại.
 
 Chủ repo cần đổi default branch thành demo-1 trong GitHub Settings. Sau đó có thể xóa main để chỉ còn demo-1. Trong lúc còn hai nhánh, demo-1 là nguồn làm việc chuẩn; main là nhánh mặc định đồng bộ tại mốc dọn này, không phải một bộ asset khác.
 
 ## Tiếp theo (không làm atlas trong phiên này)
 
-1. Schema MAP_DATA 1.0.0, ví dụ và resolver đã có trong runtime/. Xem docs/MAP_FLOW.md. Bước kế tiếp là adapter atlas mới và UI/local crop; ID atlas và ID click là hai lớp riêng.
+1. MAP_DATA 2.0 và renderer hiện hành nằm trên fix/map-flow-review; schema là nguồn hợp đồng duy nhất. Xem docs/MAP_FLOW.md. Bước kế tiếp là adapter atlas mới và UI/local crop; ID atlas và ID click là hai lớp riêng.
 2. Ghép UI cố định với viewer: thanh trên/sidebar, nhãn đúng palette, giới hạn 10 tag NPC, nhóm đông người, footsteps và inspector/hóng hớt.
 3. Xây renderer hybrid: chọn template khi có, dựng phòng/hành lang từ base khi chưa có; dựng trong Preview một chiều, không seed/storage.
 4. Runtime cung cấp dữ liệu RP/knowledge gate; renderer không suy NPC, lịch, quest hoặc bí mật. Có atlas thì nạp qua adapter, không phụ thuộc hoàn tất toàn atlas để định nghĩa schema.

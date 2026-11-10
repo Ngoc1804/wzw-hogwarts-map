@@ -1,0 +1,1039 @@
+{
+  "baselineCommit": "85c78d0cbc68bf664dc8bdca907809c99cc09947",
+  "artworkSha256": "d3fa1e3a2d821ea0fccfa29632a02d8cc04dd524984a9a8d38a2350ecdc69cc1",
+  "baselineCounts": {
+    "generated-indoor": 439,
+    "locked-by-policy": 90,
+    "missing-fixed-binding": 67,
+    "missing-outdoor-surface": 24,
+    "template": 106
+  },
+  "reviewed": 91,
+  "dispositions": {
+    "needs-aggregate-region-metadata": 2,
+    "needs-canon-artwork-correspondence": 7,
+    "needs-individual-room-metadata": 22,
+    "needs-local-region-metadata": 36,
+    "needs-new-exterior-scene": 17,
+    "resolved-binding": 6,
+    "resolved-classification": 1
+  },
+  "note": "Binding xác nhận nơi hiển thị, không chứng minh sàn. Không đổi artwork/canon ID/policy AU. Phần 4 không thiết kế thêm map.",
+  "entries": [
+    {
+      "id": "P-0006dd26862fbe",
+      "name": "Lối vào Rừng Cấm",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-0286a54346e7d7",
+      "name": "Bãi neo tàu Durmstrang",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-05c90391d35da8",
+      "name": "Quản lý Chổi bay",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-06a1ce678f15be",
+      "name": "Các nhà dân trên phố trong bản đồ Diagon",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "resolved-binding",
+      "templateId": "diagon-knockturn",
+      "atlasRef": "da-homes",
+      "evidence": [
+        {
+          "interactiveId": "da-terrace-7",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-7\"]"
+        },
+        {
+          "interactiveId": "da-terrace-11",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-11\"]"
+        },
+        {
+          "interactiveId": "da-terrace-13",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-13\"]"
+        },
+        {
+          "interactiveId": "da-terrace-17",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-17\"]"
+        },
+        {
+          "interactiveId": "da-terrace-20",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-20\"]"
+        },
+        {
+          "interactiveId": "da-terrace-8",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-8\"]"
+        },
+        {
+          "interactiveId": "da-terrace-9",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-9\"]"
+        },
+        {
+          "interactiveId": "da-terrace-10",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-10\"]"
+        },
+        {
+          "interactiveId": "da-terrace-12",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-12\"]"
+        },
+        {
+          "interactiveId": "da-terrace-14",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-14\"]"
+        },
+        {
+          "interactiveId": "da-terrace-15",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-15\"]"
+        },
+        {
+          "interactiveId": "da-terrace-16",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-16\"]"
+        },
+        {
+          "interactiveId": "da-terrace-18",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-18\"]"
+        },
+        {
+          "interactiveId": "da-terrace-19",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-19\"]"
+        },
+        {
+          "interactiveId": "da-terrace-21",
+          "label": "Nhà dân",
+          "selector": "[data-id=\"da-terrace-21\"]"
+        }
+      ],
+      "reason": "Danh mục nhà dân Diagon khớp đúng nhóm da-homes đã có; không gồm nhà Knockturn, không tạo mặt đất bên trong silhouette.",
+      "nextAction": "Dùng template; vị trí actor vẫn cần sàn/geometry hợp lệ, không dùng tâm shape."
+    },
+    {
+      "id": "P-07666cff74b9d9",
+      "name": "Hồ ngầm trong hang biển",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-0a1ff4c2777f64",
+      "name": "Cầu gỗ và các cầu nối thuộc khối lâu đài",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-0d712868c509cf",
+      "name": "Bãi cỏ và đồng cỏ quanh Hogwarts",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-13ae06fd76adc5",
+      "name": "Các bãi cỏ ngoài sân trong và ngoài khu cầu/cổng H2",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-13dfea8fe4bf27",
+      "name": "Văn phòng Cấp phép Độn thổ",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-16ec3a57420b99",
+      "name": "Bờ biển gần Shell Cottage",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-17db50485e2b83",
+      "name": "Bãi cỏ ven hồ",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-1901b8ad031d44",
+      "name": "Sảnh tiếp đón Bộ Pháp thuật",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-1bd95d9a21aa0e",
+      "name": "Tầng 9 – Bộ Bảo mật",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-aggregate-region-metadata",
+      "reason": "Đây là mục tổng hợp cấp tầng/khu; các phòng con có shape, nhưng chưa có region tổng hợp tương ứng.",
+      "nextAction": "Định nghĩa phạm vi tổng hợp và điểm đứng của cảnh; không thay bằng một phòng con hoặc cả SVG."
+    },
+    {
+      "id": "P-1ecd945e2b86b7",
+      "name": "Hai sân trong lâu đài",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-25a2f0dc7c7eba",
+      "name": "Vườn Shell Cottage",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-29bc58039f5eae",
+      "name": "Vườn cây gần nhà kính",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-2a51f7e8e278a7",
+      "name": "Nhà thờ Godric’s Hollow",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-2df6c97ce86355",
+      "name": "Bộ phận Sinh vật có tri giác",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-31f204a8e0e490",
+      "name": "Đường giữa các nhà kính",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-33d82440a9be50",
+      "name": "Sân giữa các cánh lâu đài",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-385234641b8727",
+      "name": "Đường dạo ngoài trời quanh Hogwarts",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-38bf6be09df746",
+      "name": "Sân Bell Tower (Tháp Chuông)",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-canon-artwork-correspondence",
+      "reason": "H2 dùng nhãn Wyvern/Tầm gửi/Đón tiếp, cầu gỗ và cầu lên nhà cú; chưa có đối chiếu đã xác minh tới tên sân/cầu canon này.",
+      "nextAction": "Đối chiếu thiết kế/canon trước khi thêm binding; không đoán bằng vị trí hoặc tên gần giống."
+    },
+    {
+      "id": "P-3e401191d71800",
+      "name": "Văn phòng Bằng sáng chế Lố bịch",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-4232fc85ff42c4",
+      "name": "Vườn nhà Dursley",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-444469fe1666f1",
+      "name": "Văn phòng Lạm dụng Đồ tạo tác Muggle",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-4df8571e5dea2e",
+      "name": "Các đường dạo và bãi đất trống ngoài trời quanh trường chưa thuộc template khác",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-4f6ef384d93fb3",
+      "name": "Rừng Dean",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-4fee03ab76bb30",
+      "name": "Tầng 10 – Khu xử án",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-aggregate-region-metadata",
+      "reason": "Đây là mục tổng hợp cấp tầng/khu; các phòng con có shape, nhưng chưa có region tổng hợp tương ứng.",
+      "nextAction": "Định nghĩa phạm vi tổng hợp và điểm đứng của cảnh; không thay bằng một phòng con hoặc cả SVG."
+    },
+    {
+      "id": "P-501e057d5be6b1",
+      "name": "Sân Quad",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-canon-artwork-correspondence",
+      "reason": "H2 dùng nhãn Wyvern/Tầm gửi/Đón tiếp, cầu gỗ và cầu lên nhà cú; chưa có đối chiếu đã xác minh tới tên sân/cầu canon này.",
+      "nextAction": "Đối chiếu thiết kế/canon trước khi thêm binding; không đoán bằng vị trí hoặc tên gần giống."
+    },
+    {
+      "id": "P-52b6fe3a29d440",
+      "name": "Khu nhân mã trong Rừng Cấm",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-58ba0981b28173",
+      "name": "Văn phòng Mạng Floo",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-59e90d8a9ccc63",
+      "name": "Bờ Hồ Đen",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-5daf783e1e1f28",
+      "name": "Sân vào lâu đài trong khu cổng",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-5e1f1cc14a2adb",
+      "name": "Phố chính Hogsmeade",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Có template ứng viên, nhưng chưa có binding/geometry chính xác cho địa điểm con.",
+      "nextAction": "Xác minh region tại template hiện hành; membership trong template không chứng minh tọa độ đứng."
+    },
+    {
+      "id": "P-5eb3bde9176879",
+      "name": "Cầu đá nối các cánh lâu đài",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-canon-artwork-correspondence",
+      "reason": "H2 dùng nhãn Wyvern/Tầm gửi/Đón tiếp, cầu gỗ và cầu lên nhà cú; chưa có đối chiếu đã xác minh tới tên sân/cầu canon này.",
+      "nextAction": "Đối chiếu thiết kế/canon trước khi thêm binding; không đoán bằng vị trí hoặc tên gần giống."
+    },
+    {
+      "id": "P-5fc3c5a0bcb0d1",
+      "name": "Bộ phận Quái thú",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-63aa8852e10090",
+      "name": "Đường mòn Rừng Cấm",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-6ac732451f03d7",
+      "name": "Đường đi ngoài các tường bao lâu đài",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-6acb59a2cd0cf1",
+      "name": "Vườn sau",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [
+        {
+          "key": "au/5/1",
+          "name": "Nhà PC · London · Tầng 1 (trệt)"
+        }
+      ],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-6d6cfd0e60241f",
+      "name": "Sân Transfiguration (Biến hình)",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-canon-artwork-correspondence",
+      "reason": "H2 dùng nhãn Wyvern/Tầm gửi/Đón tiếp, cầu gỗ và cầu lên nhà cú; chưa có đối chiếu đã xác minh tới tên sân/cầu canon này.",
+      "nextAction": "Đối chiếu thiết kế/canon trước khi thêm binding; không đoán bằng vị trí hoặc tên gần giống."
+    },
+    {
+      "id": "P-6f640309d1ece1",
+      "name": "Đội Đảo ngược Tai nạn Pháp thuật",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-76e93cc0236521",
+      "name": "Văn phòng Liên lạc Yêu tinh",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-80b97fa352d930",
+      "name": "Khu hành chính Wizengamot",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-8153c1a6e4e7dc",
+      "name": "Sân cỏ cạnh lâu đài",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-873b198808d71f",
+      "name": "Văn phòng Tư vấn Sinh vật gây hại",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-8c15e0bfc2d11d",
+      "name": "Khu ổ nhện Aragog",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-8f7588d4e8a5bc",
+      "name": "Mặt hồ và khu vực trên thuyền",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-8fd3daca88a6f1",
+      "name": "Khoảng rừng sâu",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-91ec4108625f7b",
+      "name": "Câu lạc bộ Gobstones chính thức",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-9301236b54857d",
+      "name": "Ủy ban Biện minh với Muggle",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-951dc2baa9a710",
+      "name": "Bộ phận Xóa trí nhớ",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-9c19f623bbb1e3",
+      "name": "Vùng sát sân Quidditch ngoài ranh sân",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-9c45a4f54ea1ee",
+      "name": "Đường dạo ven hồ",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-9d882410cbff44",
+      "name": "Khu điều trị bệnh và nhiễm trùng pháp thuật",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [
+        {
+          "key": "world/8",
+          "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 2"
+        }
+      ],
+      "disposition": "resolved-classification",
+      "effectiveFunction": "healing",
+      "evidence": [
+        {
+          "groupKey": "world/8",
+          "groupName": "Britain / England / London / Bệnh viện St Mungo / Tầng 2"
+        }
+      ],
+      "reason": "Địa điểm điều trị thuộc tầng 2 bệnh viện St Mungo; function=outdoor trong nguồn là phân loại sai. Chỉ sửa runtime, giữ nguyên atlas gốc.",
+      "nextAction": "Dựng cảnh indoor hiện tại bằng recipe điều trị, không tạo cả tầng."
+    },
+    {
+      "id": "P-9ebcfc85eb0c36",
+      "name": "Sân vận động World Cup",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-a3d0329c5db5e2",
+      "name": "Văn phòng Liên lạc Pháp thuật Quốc tế",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-a575b46f2ae1a8",
+      "name": "Khu thử thách Hồ Đen",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-a6360747d2eff6",
+      "name": "Bãi cắm trại trong Rừng Dean",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-a69db007365fe0",
+      "name": "Rừng Albania – nơi Voldemort trú ẩn",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-ad6b222c1cf8e4",
+      "name": "Văn phòng Sử dụng Pháp thuật Sai trái",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-ae87f1280dad9c",
+      "name": "Cổng chính Hogwarts",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "resolved-binding",
+      "templateId": "h2",
+      "atlasRef": "main-gate",
+      "evidence": [
+        {
+          "interactiveId": "h2-place-34",
+          "label": "Bậc thềm và cổng chính",
+          "selector": "[data-id=\"h2-place-34\"]"
+        }
+      ],
+      "reason": "Chỉ bậc/cổng chính H2, không gán cả khối lâu đài.",
+      "nextAction": "Dùng template; vị trí actor vẫn cần sàn/geometry hợp lệ, không dùng tâm shape."
+    },
+    {
+      "id": "P-af6716662de8c8",
+      "name": "Trụ sở Thần Sáng",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-b830cb70ee02f6",
+      "name": "Vườn nhà Hagrid",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-bb3906692ce0a3",
+      "name": "Lối đi và bãi đất ven hồ",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-bca1f1945d52e9",
+      "name": "Sân Viaduct",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-canon-artwork-correspondence",
+      "reason": "H2 dùng nhãn Wyvern/Tầm gửi/Đón tiếp, cầu gỗ và cầu lên nhà cú; chưa có đối chiếu đã xác minh tới tên sân/cầu canon này.",
+      "nextAction": "Đối chiếu thiết kế/canon trước khi thêm binding; không đoán bằng vị trí hoặc tên gần giống."
+    },
+    {
+      "id": "P-c061b81bba5c42",
+      "name": "Đường tới sân Quidditch",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-c12015ea2dc205",
+      "name": "Đảo đá trong hồ hang biển",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-c251f1aa2096c0",
+      "name": "Khu tiếp nhận khách Bộ Pháp thuật",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "resolved-binding",
+      "templateId": "ministry-8-10",
+      "atlasRef": "ministry-visitor",
+      "evidence": [
+        {
+          "interactiveId": "mm-visitor",
+          "label": "Visitor Entrance",
+          "selector": "[data-id=\"mm-visitor\"]"
+        }
+      ],
+      "reason": "Khu tiếp nhận khách khớp lối vào khách có nhãn VISITORS; không đồng nhất cả sảnh Atrium.",
+      "nextAction": "Dùng template; vị trí actor vẫn cần sàn/geometry hợp lệ, không dùng tâm shape."
+    },
+    {
+      "id": "P-c3f56557f43009",
+      "name": "Vườn Hang Sóc",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-c4b0eda051d309",
+      "name": "Mê cung Tam Pháp thuật ở sân Quidditch",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-cc5bcc4d694457",
+      "name": "Lối lên Nhà cú",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "resolved-binding",
+      "templateId": "h2",
+      "atlasRef": "owlery-path",
+      "evidence": [
+        {
+          "interactiveId": "h2-place-46",
+          "label": "Đường lên nhà cú",
+          "selector": "[data-id=\"h2-place-46\"]"
+        }
+      ],
+      "reason": "Lối lên Nhà cú khớp đường có nhãn riêng trong H2; không dùng bbox nhà cú.",
+      "nextAction": "Dùng template; vị trí actor vẫn cần sàn/geometry hợp lệ, không dùng tâm shape."
+    },
+    {
+      "id": "P-d76cff03ee7601",
+      "name": "Đường mòn giữa Hogwarts và Hogsmeade",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-d85dbd8c19bb3b",
+      "name": "Các ngõ phố nối Hẻm Xéo và Knockturn",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Có template ứng viên, nhưng chưa có binding/geometry chính xác cho địa điểm con.",
+      "nextAction": "Xác minh region tại template hiện hành; membership trong template không chứng minh tọa độ đứng."
+    },
+    {
+      "id": "P-da0766f575a2ce",
+      "name": "Cơ quan Khóa Cảng",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-dadcf596a0437f",
+      "name": "Khu an ninh Bộ Pháp thuật",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "resolved-binding",
+      "templateId": "ministry-8-10",
+      "atlasRef": "ministry-security",
+      "evidence": [
+        {
+          "interactiveId": "mm-security",
+          "label": "An ninh",
+          "selector": "[data-id=\"mm-security\"]"
+        }
+      ],
+      "reason": "Khu an ninh có shape riêng.",
+      "nextAction": "Dùng template; vị trí actor vẫn cần sàn/geometry hợp lệ, không dùng tâm shape."
+    },
+    {
+      "id": "P-dafe46b4834d00",
+      "name": "Khu chờ lên tàu tại King’s Cross",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Có template ứng viên, nhưng chưa có binding/geometry chính xác cho địa điểm con.",
+      "nextAction": "Xác minh region tại template hiện hành; membership trong template không chứng minh tọa độ đứng."
+    },
+    {
+      "id": "P-dbdb26cb4f253a",
+      "name": "Sân sau Cái Vạc Lủng",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Có template ứng viên, nhưng chưa có binding/geometry chính xác cho địa điểm con.",
+      "nextAction": "Xác minh region tại template hiện hành; membership trong template không chứng minh tọa độ đứng."
+    },
+    {
+      "id": "P-de97c63af46b5c",
+      "name": "Sân Clock Tower (Đồng hồ)",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-canon-artwork-correspondence",
+      "reason": "H2 dùng nhãn Wyvern/Tầm gửi/Đón tiếp, cầu gỗ và cầu lên nhà cú; chưa có đối chiếu đã xác minh tới tên sân/cầu canon này.",
+      "nextAction": "Đối chiếu thiết kế/canon trước khi thêm binding; không đoán bằng vị trí hoặc tên gần giống."
+    },
+    {
+      "id": "P-df6ec24bb2876c",
+      "name": "Khu giao thông Floo Bộ Pháp thuật",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "resolved-binding",
+      "templateId": "ministry-8-10",
+      "atlasRef": "ministry-floo",
+      "evidence": [
+        {
+          "interactiveId": "mm-floo-in-0",
+          "label": "Floo đến",
+          "selector": "[data-id=\"mm-floo-in-0\"]"
+        },
+        {
+          "interactiveId": "mm-floo-out-0",
+          "label": "Floo đi",
+          "selector": "[data-id=\"mm-floo-out-0\"]"
+        },
+        {
+          "interactiveId": "mm-floo-in-1",
+          "label": "Floo đến",
+          "selector": "[data-id=\"mm-floo-in-1\"]"
+        },
+        {
+          "interactiveId": "mm-floo-out-1",
+          "label": "Floo đi",
+          "selector": "[data-id=\"mm-floo-out-1\"]"
+        },
+        {
+          "interactiveId": "mm-floo-in-2",
+          "label": "Floo đến",
+          "selector": "[data-id=\"mm-floo-in-2\"]"
+        },
+        {
+          "interactiveId": "mm-floo-out-2",
+          "label": "Floo đi",
+          "selector": "[data-id=\"mm-floo-out-2\"]"
+        },
+        {
+          "interactiveId": "mm-floo-in-3",
+          "label": "Floo đến",
+          "selector": "[data-id=\"mm-floo-in-3\"]"
+        },
+        {
+          "interactiveId": "mm-floo-out-3",
+          "label": "Floo đi",
+          "selector": "[data-id=\"mm-floo-out-3\"]"
+        },
+        {
+          "interactiveId": "mm-floo-in-4",
+          "label": "Floo đến",
+          "selector": "[data-id=\"mm-floo-in-4\"]"
+        },
+        {
+          "interactiveId": "mm-floo-out-4",
+          "label": "Floo đi",
+          "selector": "[data-id=\"mm-floo-out-4\"]"
+        },
+        {
+          "interactiveId": "mm-floo-in-5",
+          "label": "Floo đến",
+          "selector": "[data-id=\"mm-floo-in-5\"]"
+        },
+        {
+          "interactiveId": "mm-floo-out-5",
+          "label": "Floo đi",
+          "selector": "[data-id=\"mm-floo-out-5\"]"
+        }
+      ],
+      "reason": "Khu giao thông Floo gồm đúng 12 lò đến/đi được gắn nhãn; binding nhóm, không phải tọa độ đứng.",
+      "nextAction": "Dùng template; vị trí actor vẫn cần sàn/geometry hợp lệ, không dùng tâm shape."
+    },
+    {
+      "id": "P-dfec82bd2d4f53",
+      "name": "Khu thương mại / luật quốc tế",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-e3c60767666046",
+      "name": "Vườn nhà Lovegood",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-eeb5352311e7c0",
+      "name": "Sân tập nhỏ trong quần thể Quidditch",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Có template ứng viên, nhưng chưa có binding/geometry chính xác cho địa điểm con.",
+      "nextAction": "Xác minh region tại template hiện hành; membership trong template không chứng minh tọa độ đứng."
+    },
+    {
+      "id": "P-effd8342cc396c",
+      "name": "Bãi cỏ học tập quanh trường",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-f52be73f7dd9ce",
+      "name": "Bộ phận Linh hồn",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-f6319cb5ddb159",
+      "name": "Sân chân tháp trong khối lâu đài",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-f66347f72f87d0",
+      "name": "Trụ sở Liên đoàn Quidditch Anh–Ireland",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-f79a562f43d99a",
+      "name": "Cầu cạn Viaduct",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-canon-artwork-correspondence",
+      "reason": "H2 dùng nhãn Wyvern/Tầm gửi/Đón tiếp, cầu gỗ và cầu lên nhà cú; chưa có đối chiếu đã xác minh tới tên sân/cầu canon này.",
+      "nextAction": "Đối chiếu thiết kế/canon trước khi thêm binding; không đoán bằng vị trí hoặc tên gần giống."
+    },
+    {
+      "id": "P-f9359f86975e71",
+      "name": "Lối đi và sân trong ranh khu Quidditch",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    },
+    {
+      "id": "P-f9c67c9c540345",
+      "name": "Văn phòng Thứ trưởng / trợ lý Bộ trưởng",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-individual-room-metadata",
+      "reason": "Artwork ministry2 chỉ có min-level-1…7 và nhãn phòng; chưa có shape riêng được định danh cho mục này.",
+      "nextAction": "Cần geometry/binding riêng cho phòng; không gán vào department-N của cả tầng."
+    },
+    {
+      "id": "P-ff60dc5c801cf1",
+      "name": "Bãi chơi Quidditch sau nhà",
+      "baselineStatus": "missing-outdoor-surface",
+      "groups": [],
+      "disposition": "needs-new-exterior-scene",
+      "reason": "Không có template hoặc mặt đất hiện hành tương ứng; renderer indoor không tạo được cảnh này.",
+      "nextAction": "Cần thiết kế cảnh ngoài trời/geometry riêng khi mở phạm vi; giữ lỗi rõ, không thay bằng phòng chữ nhật."
+    },
+    {
+      "id": "P-ff62bf19892de9",
+      "name": "Đường tới nhà ga Hogsmeade",
+      "baselineStatus": "missing-fixed-binding",
+      "groups": [],
+      "disposition": "needs-local-region-metadata",
+      "reason": "Template ứng viên có cảnh tổng quan nhưng chưa có shape/region đủ chính xác cho toàn phạm vi địa điểm này.",
+      "nextAction": "Xác định polygon/shape địa điểm và sàn thực từ artwork; không gán sang cả forest/lake/castle/grounds hoặc bbox công trình."
+    }
+  ]
+}

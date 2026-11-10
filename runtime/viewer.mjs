@@ -2,29 +2,34 @@
 for(const [id,source]of Object.entries(JSON.parse(document.querySelector('#qa-assets')?.textContent||'{}')))sceneAssetCache.set(id,source);
 let templateSpatial=JSON.parse(document.querySelector('#qa-spatial')?.textContent||'{"templates":{}}');
 const embeddedAtlas=document.querySelector('#qa-atlas')?JSON.parse(document.querySelector('#qa-atlas').textContent):null;
-const embeddedData=document.querySelector('#MAP_DATA')?JSON.parse(document.querySelector('#MAP_DATA').textContent):null;
+let embeddedData,inputError;
+try{embeddedData=document.querySelector('#MAP_DATA')?JSON.parse(document.querySelector('#MAP_DATA').textContent):window.MAP_DATA;}catch(e){inputError=e;}
+const debug=document.currentScript?.dataset.debug==='true';
 let bundleSource=document.currentScript.textContent;
 const bundleURL=document.currentScript.src;
 const NSVG='http://www.w3.org/2000/svg';
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n};
 let plan,geometry,visibleActors=[];
-let atlas=embeddedAtlas,activeData,svg,stops=[],box,base,drag,moved=false,motion=true;
+let atlas=embeddedAtlas,activeData,svg,stops=[],box,base,homeBox,drag,moved=false,motion=true;
 const q=s=>document.querySelector(s);
 const style=el('style');style.textContent=CSS+'\n.qa-tags{position:absolute;inset:0;pointer-events:none}.qa-tags button{position:absolute;pointer-events:auto;transform:translate(-50%,-100%)}.qa-controls{display:flex;gap:6px;flex-wrap:wrap}.qa-controls select{max-width:220px}.qa-error{color:#ffb6a5;white-space:pre-wrap}.qa-overlay{position:fixed;inset:10%;z-index:20;background:var(--paper);padding:20px;display:flex;flex-direction:column;gap:8px}.qa-overlay textarea{flex:1;min-height:150px}.qa-overlay[hidden]{display:none}.qa-tags .hint-marker{border:1px solid #8c2939;border-radius:50%;background:#eee4d1;color:#8c2939}';document.head.append(style);
 document.body.innerHTML=SHELL; // Trusted checked-in shell only; RP text uses textContent.
 const bar=el('div');bar.className='reviewbar qa-controls';q('.layout').before(bar);
-const select=el('select');select.setAttribute('aria-label','Template');bar.append(select);
+// Keep the selected template as internal state; RP has no atlas menu.
+const select={value:''};
 function button(label,fn){const b=el('button',label);b.className='review-button';b.onclick=fn;bar.append(b);return b}
-const status=el('span','Đang tải atlas…');status.setAttribute('role','status');bar.append(status);
+const status=el('span','Đang tải bản đồ…');status.setAttribute('role','status');bar.append(status);
 const error=el('div');error.className='qa-error';error.setAttribute('role','alert');bar.append(error);
+if(debug){
 const panel=el('div');panel.className='qa-overlay';panel.hidden=true;
 const editor=el('textarea');editor.setAttribute('aria-label','MAP_DATA JSON');panel.append(el('strong','MAP_DATA — chỉ dữ liệu công khai cho test'),editor);
 const apply=el('button','Áp dụng');apply.onclick=async()=>{try{await render(JSON.parse(editor.value));panel.hidden=true}catch(e){error.textContent=e.message}};
 const close=el('button','Đóng');close.onclick=()=>panel.hidden=true;panel.append(apply,close);document.body.append(panel);
 button('MAP_DATA',()=>{editor.value=JSON.stringify(activeData||{},null,2);panel.hidden=false});
-button('+',()=>zoom(.8));button('−',()=>zoom(1.25));button('Vừa khung',()=>{box=[...base];update()});
+}
+button('+',()=>zoom(.8));button('−',()=>zoom(1.25));button('Vừa khung',()=>{if(homeBox){box=[...homeBox];update()}});
 button('Chuyển động',()=>{motion=!motion;document.body.classList.toggle('motion-off',!motion);q('#mapmount').style.setProperty('--qa-motion',motion?'running':'paused')});
-button('Tải HTML',()=>{const copy=document.documentElement.cloneNode(true);copy.querySelector('body').replaceChildren();copy.querySelectorAll('style').forEach(n=>n.remove());const payload=el('script');payload.type='application/json';payload.id='qa-atlas';payload.textContent=JSON.stringify(atlas||null).replace(/</g,'\\u003c');if(atlas)copy.querySelector('body').append(payload);const spatialPayload=el('script');spatialPayload.type='application/json';spatialPayload.id='qa-spatial';spatialPayload.textContent=JSON.stringify(templateSpatial).replace(/</g,'\\u003c');copy.querySelector('body').append(spatialPayload);const assets=el('script');assets.type='application/json';assets.id='qa-assets';assets.textContent=JSON.stringify(Object.fromEntries(sceneAssetCache)).replace(/</g,'\\u003c');copy.querySelector('body').append(assets);const data=el('script');data.type='application/json';data.id='MAP_DATA';data.textContent=serializeMapData(activeData);copy.querySelector('body').append(data);const script=el('script');script.textContent=bundleSource;copy.querySelector('body').append(script);const url=URL.createObjectURL(new Blob(['<!doctype html>'+copy.outerHTML],{type:'text/html'}));const a=el('a');a.href=url;a.download='wizamap-template-test.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000)});
+button('Tải HTML',()=>{if(!activeData)return;const copy=document.documentElement.cloneNode(true);copy.querySelector('body').replaceChildren();copy.querySelectorAll('style').forEach(n=>n.remove());const payload=el('script');payload.type='application/json';payload.id='qa-atlas';payload.textContent=JSON.stringify(atlas||null).replace(/</g,'\\u003c');if(atlas)copy.querySelector('body').append(payload);const spatialPayload=el('script');spatialPayload.type='application/json';spatialPayload.id='qa-spatial';spatialPayload.textContent=JSON.stringify(templateSpatial).replace(/</g,'\\u003c');copy.querySelector('body').append(spatialPayload);const assets=el('script');assets.type='application/json';assets.id='qa-assets';assets.textContent=JSON.stringify(Object.fromEntries(sceneAssetCache)).replace(/</g,'\\u003c');copy.querySelector('body').append(assets);const data=el('script');data.type='application/json';data.id='MAP_DATA';data.textContent=serializeMapData(activeData);copy.querySelector('body').append(data);const script=el('script');script.textContent=bundleSource;copy.querySelector('body').append(script);const url=URL.createObjectURL(new Blob(['<!doctype html>'+copy.outerHTML],{type:'text/html'}));const a=el('a');a.href=url;a.download='wizamap.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000)});
 q('#drawer-toggle').onclick=()=>{const layout=q('.layout');layout.classList.toggle('drawer-open');q('#drawer-toggle').setAttribute('aria-expanded',String(layout.classList.contains('drawer-open')))};
 function inspect(row,placeId){let action=q('#actor-action');if(!action){action=el('div');action.id='actor-action';action.className='review-status';bar.append(action)}action.textContent=row.stance==='walk'?'Đang đi':row.activity||'';q('#place-title').textContent=row.name||row.title;q('#drawer-name').textContent=row.name||row.title;q('#place-area').textContent=activeData.meta.areaName;q('#activity').textContent=row.inspector?.overhear||'';q('#observation').textContent=row.inspector?.observation||'';q('#actors').replaceChildren(...visibleActors.filter(a=>a.placeId===placeId).map(a=>{const n=actorTag(a,true);n.onclick=()=>inspect(a,a.placeId);return n}))}
 const EXTERIOR_TEMPLATES=new Set(['h1','h2','village-static','diagon-knockturn']);
@@ -68,7 +73,7 @@ function update(){
  }
 }
 function zoom(f){if(!box)return;box=[box[0]+box[2]*(1-f)/2,box[1]+box[3]*(1-f)/2,box[2]*f,box[3]*f];update()}
-async function render(data){assertMapData(data);plan=resolveMap(data);
+async function renderScene(data){data=assertMapData(data);plan=resolveMap(data);
  if(plan.mode==='template')await loadAtlas();
  if(EXTERIOR_TEMPLATES.has(plan.templateId)&&!data.view.spatial&&!templateSpatial.templates[plan.templateId]){
   const response=await fetch(SPATIAL_URL);if(!response.ok)throw Error('Spatial HTTP '+response.status);templateSpatial=await response.json();
@@ -81,8 +86,13 @@ async function render(data){assertMapData(data);plan=resolveMap(data);
   hints:data.hints.map(h=>({...h,placeId:canonicalPlaceId(h.placeId)})),
   focus:{...data.focus,actualPlaceId:canonicalPlaceId(data.focus.actualPlaceId)},
   visibility:{...data.visibility,visiblePlaceIds:data.visibility.visiblePlaceIds.map(canonicalPlaceId)},
-  view:{...data.view,centerPlaceId:canonicalPlaceId(data.view.centerPlaceId),routePlaceIds:data.view.routePlaceIds.map(canonicalPlaceId)}
+  view:{...data.view,centerPlaceId:canonicalPlaceId(data.view.centerPlaceId||data.focus.actualPlaceId),routePlaceIds:data.view.routePlaceIds.map(canonicalPlaceId)}
  };
+ // Export exactly the public rendered scene, including canonical references.
+ const sceneIds=new Set(data.places.map(p=>p.id));
+ data.connections=data.connections.filter(c=>sceneIds.has(canonicalPlaceId(c.from))&&sceneIds.has(canonicalPlaceId(c.to))).map(c=>({...c,from:canonicalPlaceId(c.from),to:canonicalPlaceId(c.to)}));
+ data.view.routePlaceIds=data.view.routePlaceIds.filter(id=>sceneIds.has(id));
+ if(data.focus.selectedId)data.focus.selectedId=canonicalPlaceId(data.focus.selectedId);
  const id=plan.templateId;
  const exterior=EXTERIOR_TEMPLATES.has(id);
  const spatial=data.view.spatial||(exterior?templateSpatial.templates[id]:null);
@@ -117,7 +127,8 @@ async function render(data){assertMapData(data);plan=resolveMap(data);
   const i=actorCounts.get(a.placeId)||0;actorCounts.set(a.placeId,i+1);
   const suggested=geometry?.suggestedAnchors[a.placeId];
   if(exterior&&a.environment==='inside')actorRoofs.set(a.id,anchor(data.places.find(p=>p.id===a.placeId),a.buildingId));
-  actorPositions.set(a.id,geometry?indoorActorPoint(geometry,a.placeId,a.position||suggested[i%suggested.length]):actorGroundPoint(a,actorRoofs.get(a.id)||points.get(a.placeId)));
+  if(geometry&&!a.position&&i>=suggested.length)throw Error('Không đủ chỗ đứng NPC trong '+a.placeId+'; tăng diện tích hoặc giảm nội thất');
+  actorPositions.set(a.id,geometry?indoorActorPoint(geometry,a.placeId,a.position||suggested[i]):actorGroundPoint(a,actorRoofs.get(a.id)||points.get(a.placeId)));
  }
  // Do not expose fogged actors/hints through ribbons, navigation or inspector.
  visibleActors=data.actors.filter(a=>!pointInFog(actorPositions.get(a.id),data.visibility));
@@ -172,12 +183,23 @@ async function render(data){assertMapData(data);plan=resolveMap(data);
  const feet=document.createElementNS(NSVG,'g');feet.dataset.actorFeet=a.id;feet.setAttribute('fill','#C33C49');feet.setAttribute('stroke','#FFF0D4');feet.setAttribute('stroke-width','.9');feet.setAttribute('paint-order','stroke fill');feet.style.pointerEvents='none';svg.append(feet);
  if(a.environment==='inside'&&EXTERIOR_TEMPLATES.has(id)){feet.remove();labels.push({node:n,point,labelPoint,dx,dy})}else{if(exterior&&!a.position)throw Error('Ngoài trời cần position trên đất/sàn: '+a.id);labels.push({node:n,point:geometry?point:a.position||point,dx,dy,feet});stops.push(mountFeet(feet,a.stance));}
  }
- q('#quests').replaceChildren(...visibleHints.map(h=>{const p=data.places.find(p=>p.id===h.placeId),n=el('button',h.title+' · '+p.name);n.className='quest';n.onclick=()=>inspect(h,h.placeId);const marker=el('button','?');marker.className='hint-marker';marker.setAttribute('aria-label',h.title);marker.onclick=n.onclick;overlay.append(marker);labels.push({node:marker,point:points.get(h.placeId),dx:65,dy:EXTERIOR_TEMPLATES.has(id)?38:0});return n}));q('#hintcount').textContent=visibleHints.length+'/6';q('.quote').textContent=data.meta.quote;q('#zone').textContent=data.meta.areaName;q('.clock').textContent=data.meta.time;q('.date').textContent=data.meta.date;inspect(data.places.find(p=>p.id===data.focus.actualPlaceId),data.focus.actualPlaceId);
+ q('#quests').replaceChildren(...visibleHints.map(h=>{const p=data.places.find(p=>p.id===h.placeId),n=el('button',h.title+' · '+p.name);n.className='quest';n.onclick=()=>inspect(h,h.placeId);const marker=el('button','?');marker.className='hint-marker';marker.setAttribute('aria-label',h.title);marker.onclick=n.onclick;overlay.append(marker);labels.push({node:marker,point:points.get(h.placeId),dx:65,dy:EXTERIOR_TEMPLATES.has(id)?38:0});return n}));q('#hintcount').textContent=visibleHints.length+'/6';q('.quote').textContent=data.meta.quote;q('#zone').textContent=data.meta.areaName;q('.clock').textContent=data.meta.time;q('.date').textContent=data.meta.date;inspect(visibleActors.find(a=>a.isPC),data.focus.actualPlaceId);
+ const selected=[...data.places.filter(p=>!pointInFog(points.get(p.id),data.visibility)),...visibleActors,...visibleHints].find(row=>row.id===data.focus.selectedId);
+ if(selected)inspect(selected,selected.placeId||selected.id);
  if(data.view.crop!==false&&points.size){const viewport=q('#mapmount').getBoundingClientRect();const extent=geometry?(()=>{const [x,y,w,h]=geometry.bounds;return [{left:x,top:y,right:x+w,bottom:y+h}]})():[...points.values(),...visibleActors.map(a=>a.position||points.get(a.placeId)),...data.view.routePlaceIds.filter(id=>points.has(id)).map(id=>points.get(id))];box=fitSceneBounds(base,extent,{width:viewport.width,height:viewport.height},geometry?0:55);}
+ homeBox=[...box];
  for(const region of data.visibility.fogRegions||[]){if(!data.visibility.fogRegionIds.includes(region.id))continue;const fog=document.createElementNS(NSVG,'polygon');fog.setAttribute('points',region.points.map(p=>`${p.x},${p.y}`).join(' '));fog.setAttribute('fill','#303238');fog.setAttribute('opacity','.94');fog.setAttribute('pointer-events','all');fog.setAttribute('aria-hidden','true');svg.append(fog);}
  svg.onwheel=e=>{e.preventDefault();zoom(e.deltaY<0?.9:1.1)};svg.onpointerdown=e=>{if(e.button!==0)return;moved=false;drag={x:e.clientX,y:e.clientY,box:[...box]}};svg.onpointermove=e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>4)moved=true;if(!moved)return;svg.setPointerCapture(e.pointerId);const r=svg.getBoundingClientRect(),scale=Math.min(r.width/drag.box[2],r.height/drag.box[3]);box=[drag.box[0]-dx/scale,drag.box[1]-dy/scale,drag.box[2],drag.box[3]];update()};svg.onpointerup=svg.onpointercancel=()=>drag=null;svg.onlostpointercapture=()=>drag=null;
  let pinch;svg.addEventListener('touchstart',e=>{if(e.touches.length===2){drag=null;pinch={distance:Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY),box:[...box]}}},{passive:true});svg.addEventListener('touchmove',e=>{if(pinch&&e.touches.length===2){e.preventDefault();const distance=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);const f=pinch.distance/Math.max(1,distance),b=pinch.box;box=[b[0]+b[2]*(1-f)/2,b[1]+b[3]*(1-f)/2,b[2]*f,b[3]*f];update()}},{passive:false});svg.addEventListener('touchend',()=>pinch=null);
- if(id==='h1')stops.push(mountH1Motion(svg,()=>motion&&!document.hidden&&!matchMedia('(prefers-reduced-motion: reduce)').matches));update();status.textContent=geometry?'Mặt bằng dựng trong Preview':'Template: '+id;window.WIZAMAP_TEST={render,canStand(p){return (collectFloorSurfaces(svg).contains(p)||surfaceAllowed(p,activeData.view.spatial))&&!pointInRegions(p,activeData.view.spatial?.blockedRegions)&&!geometry?.exclusionZones.some(r=>pointInPolygon(p,r.points))},get data(){return structuredClone(activeData)},get template(){return select.value},get generatedGeometry(){return geometry?structuredClone({floorPolygons:geometry.floorPolygons,actorZones:geometry.actorZones,furnishingInstances:geometry.furnishingInstances,exclusionZones:geometry.exclusionZones,suggestedAnchors:geometry.suggestedAnchors}):null}};
+ if(id==='h1')stops.push(mountH1Motion(svg,()=>motion&&!document.hidden&&!matchMedia('(prefers-reduced-motion: reduce)').matches));update();status.textContent=geometry?'Mặt bằng dựng trong Preview':'Template: '+id;if(debug)window.WIZAMAP_TEST={render,canStand(p){return (collectFloorSurfaces(svg).contains(p)||surfaceAllowed(p,activeData.view.spatial))&&!pointInRegions(p,activeData.view.spatial?.blockedRegions)&&!geometry?.exclusionZones.some(r=>pointInPolygon(p,r.points))},get data(){return structuredClone(activeData)},get template(){return select.value},get generatedGeometry(){return geometry?structuredClone({floorPolygons:geometry.floorPolygons,actorZones:geometry.actorZones,furnishingInstances:geometry.furnishingInstances,exclusionZones:geometry.exclusionZones,suggestedAnchors:geometry.suggestedAnchors}):null}};
+}
+async function render(data){
+ try{return await renderScene(data)}catch(e){
+  stops.forEach(stop=>stop());stops=[];labels=[];visibleActors=[];svg=null;activeData=null;
+  q('#mapmount').replaceChildren();q('#actors').replaceChildren();q('#quests').replaceChildren();
+  for(const selector of ['#place-title','#place-area','#drawer-name','#activity','#observation','#hintcount','#zone','.quote','.clock','.date','#actor-action']){const n=q(selector);if(n)n.textContent='';}
+  error.textContent='Không mở được bản đồ: '+e.message;status.textContent='Lỗi';throw e;
+ }
 }
 // Capture embedded input before replacing the document body above.
 async function loadAtlas(){
@@ -190,7 +212,7 @@ async function loadAtlas(){
 }
 async function start(){try{
  if(!bundleSource&&bundleURL){const source=await fetch(bundleURL);if(!source.ok)throw Error('Bundle HTTP '+source.status);bundleSource=await source.text()}
- select.replaceChildren(...Object.keys(registry.templates).map(id=>{const o=el('option',id);o.value=id;return o}));select.hidden=true;
+ if(inputError)throw Error('MAP_DATA JSON: '+inputError.message);
  if(!embeddedData)throw Error('Thiếu MAP_DATA. Hãy cung cấp dữ liệu RP.');
  await render(embeddedData);new ResizeObserver(update).observe(q('#mapmount'));
 }catch(e){error.textContent='Không mở được Preview: '+e.message;status.textContent='Lỗi'}}

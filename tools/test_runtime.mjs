@@ -40,3 +40,23 @@ test('PC separate from 10 NPC/group tags and duplicates rejected',()=>{const d=s
 test('monthly hints, source quotas and hidden fields rejected',()=>{for(const mutate of [d=>d.questPolicy.month='1990-01',d=>d.hints[0].packId='wrong',d=>d.questPolicy.limits.life=0,d=>d.internalHiddenState='secret']){const d=sample();mutate(d);assert.equal(validateMapData(d).ok,false)}});
 test('one matching PC, visibility and real date required',()=>{for(const mutate of [d=>d.actors[0].isPC=false,d=>d.visibility.visiblePlaceIds=[],d=>d.meta.date='1992-02-30']){const d=sample();mutate(d);assert.equal(validateMapData(d).ok,false)}});
 test('HTML embedding serializes text without executable closing tags',async()=>{const {serializeMapData}=await import('../runtime/map-data.mjs');const d=sample();d.meta.quote='</script><script>alert(1)</script>';const text=serializeMapData(d);assert.ok(!text.includes('<'));assert.deepEqual(JSON.parse(text),d)});
+
+test('compact 2.0 data defaults presentation only and keeps caller untouched',async()=>{
+ const {assertMapData}=await import('../runtime/map-data.mjs');
+ const d=sample();for(const k of ['campaignId','worldId','snapshotId','atlasVersion','view','connections','questPolicy'])delete d[k];
+ d.hints=[];delete d.focus.selectedId;delete d.meta.quote;delete d.visibility.fogRegionIds;
+ for(const k of ['atlasRef','parentId','floor','zone','generation','inspector'])delete d.places[0][k];
+ d.places[0].generation={function:'study',shape:'rectangle',furnishings:[]};
+ for(const k of ['role','onPatrol','priority','activity','positionMode','positionReason','inspector'])delete d.actors[0][k];
+ const before=structuredClone(d),n=assertMapData(d);
+ assert.deepEqual(d,before);assert.equal(n.view.preferredMode,'auto');assert.equal(n.actors[0].stance,'idle');
+ assert.equal(n.actors[0].onPatrol,false);assert.equal(resolveMap(d).mode,'generated');
+ assert.equal(n.questPolicy,undefined);assert.deepEqual(n.visibility.visiblePlaceIds,d.visibility.visiblePlaceIds);
+ d.hints=sample().hints;assert.equal(validateMapData(d).ok,false);
+});
+test('compact defaults never conceal invalid fields, visibility or RP facts',()=>{
+ for(const mutate of [d=>d.view=null,d=>d.view.preferredMode=null,d=>d.visibility=null,d=>delete d.visibility.visiblePlaceIds,d=>delete d.meta.date,d=>delete d.actors[0].stance,d=>d.places[0].secret='hidden',d=>d.view.maxHops=1]){
+  const d=sample();mutate(d);assert.equal(validateMapData(d).ok,false);
+ }
+ for(const d of [null,[],false,{},'bad'])assert.equal(validateMapData(d).ok,false);
+});

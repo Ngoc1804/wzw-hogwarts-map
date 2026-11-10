@@ -358,6 +358,24 @@
     },
     "P-241e2fa15a09f1": {
       "ministry-8-10": "ministry-office"
+    },
+    "P-06a1ce678f15be": {
+      "diagon-knockturn": "da-homes"
+    },
+    "P-ae87f1280dad9c": {
+      "h2": "main-gate"
+    },
+    "P-c251f1aa2096c0": {
+      "ministry-8-10": "ministry-visitor"
+    },
+    "P-cc5bcc4d694457": {
+      "h2": "owlery-path"
+    },
+    "P-dadcf596a0437f": {
+      "ministry-8-10": "ministry-security"
+    },
+    "P-df6ec24bb2876c": {
+      "ministry-8-10": "ministry-floo"
     }
   },
   "groups": [
@@ -4361,7 +4379,7 @@
     "P-8fd3daca88a6f1": "outdoor",
     "P-dadcf596a0437f": "outdoor",
     "P-dafe46b4834d00": "outdoor",
-    "P-9d882410cbff44": "outdoor",
+    "P-9d882410cbff44": "healing",
     "P-df6ec24bb2876c": "outdoor",
     "P-52b6fe3a29d440": "outdoor",
     "P-a575b46f2ae1a8": "outdoor",
@@ -4372,17 +4390,17 @@
     "P-c4b0eda051d309": "outdoor",
     "P-2a51f7e8e278a7": "outdoor",
     "P-5e1f1cc14a2adb": "outdoor",
-    "HOG-TNG7-W-02": "outdoor",
-    "HOG-TNG6-S-03": "outdoor",
-    "HOG-TNG2-S-06": "outdoor",
-    "HOG-TNG1-S-03": "outdoor",
+    "HOG-TNG7-W-02": "common",
+    "HOG-TNG6-S-03": "study",
+    "HOG-TNG2-S-06": "common",
+    "HOG-TNG1-S-03": "common",
     "P-bf3c24a146fb6a": "outdoor",
-    "HOG-HMNGC-N-04": "outdoor",
+    "HOG-HMNGC-N-04": "study",
     "P-241e2fa15a09f1": "outdoor",
     "P-8547e7b53ee0e6": "outdoor",
     "P-2e483807e1273e": "outdoor",
-    "HOG-TNG4-N-01": "outdoor",
-    "HOG-TNG4-W-02": "outdoor",
+    "HOG-TNG4-N-01": "exhibition",
+    "HOG-TNG4-W-02": "exhibition",
     "P-36a9268e0e2288": "outdoor",
     "P-a69db007365fe0": "outdoor",
     "P-4f6ef384d93fb3": "outdoor",

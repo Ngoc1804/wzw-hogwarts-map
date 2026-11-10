@@ -22,3 +22,13 @@ Generated corridor layout comes from the current floor/cluster's flexible `corri
 AU gate: build **only CCC 07.18 main room**, **Nhà PC · London**, **Liad’s Attic**. Five other AU maps remain indexed as archival lookup data but are **blocked from Preview rendering/generation**; CCC subsidiary rooms remain indexed but not buildable. This is a runtime policy, not just documentation.
 
 Mọi element có semantic floor tự cho đứng được; dữ liệu mặt đất cũ hoặc view.spatial là fallback cho template chưa có semantic. Nhãn trên mái và độ mờ 50% dùng chung controller. Bbox chỉ phục vụ hiển thị, không tạo sàn. This release does not claim complete walkable polygons for every H1/H2/village/Diagon artwork. Always exclude secret places before MAP_DATA is sent to Preview; fog is not a security boundary.
+
+## MAP_DATA 2.0 gọn, tương thích dữ liệu đầy đủ
+
+Schema `runtime/map-data.schema.json` là nguồn duy nhất. `normalizeMapData()` áp dụng `default` khai báo trong schema trên bản sao; validator, resolver và viewer dùng cùng quy tắc. Trường lạ hoặc giá trị sai vẫn báo lỗi, không dùng default để che dữ liệu sai.
+
+Bắt buộc: `schemaVersion`, `meta.date/time/areaName`, `focus.pcActorId/actualPlaceId`, `places`, `actors`, `visibility.visiblePlaceIds`. Quyền hiển thị phải gửi rõ, không suy từ danh sách địa điểm.
+
+Có thể bỏ campaign/world/snapshot/atlasVersion nếu không cần tracking. Có thể bỏ `view` (auto, templateId=null, route rỗng, crop=true), `connections`, `hints` (mảng rỗng), quote (chuỗi rỗng), selectedId và metadata place rỗng. Inspector mặc định rỗng; actor có role=null, onPatrol=false, activity rỗng, priority=0, positionMode=normal, positionReason=null. Không suy ngày giờ, stance, identity/tagType, vị trí hoặc sự hiện diện NPC.
+
+Có hint thì **bắt buộc questPolicy**, tháng RP, packId và quota. Không tự chọn pack/quest hoặc quota. Có thể bỏ questPolicy khi không có hint; nếu gửi thì vẫn kiểm tra. Giới hạn 10 tag NPC ngoài PC và 6 hint giữ nguyên. Không thay bằng một hợp đồng 8 nhóm khác.
