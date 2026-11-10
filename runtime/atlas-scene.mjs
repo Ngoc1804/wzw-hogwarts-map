@@ -34,6 +34,15 @@ export function generatedSceneOptions(data,plan){
  const group=selectScenePreset(data,plan.places);
  const options={...(group?.preset?{layout:group.preset.layout}:{}),...data.view.indoor};
  const count=plan.places.filter(p=>p.kind!=='corridor').length;
+ // A formula is a grammar, not a fixed room arrangement: deterministic local
+ // proportions vary by scope, never by NPC/quest/time, and explicit RP overrides win.
+ if(group&&count>1){
+  let h=2166136261;
+  for(const ch of group.key+':'+sceneAtlas.atlasVersion)h=Math.imul(h^ch.charCodeAt(0),16777619)>>>0;
+  options.roomWidth??=240+(h%4)*20;
+  options.roomDepth??=210+((h>>>4)%4)*20;
+  options.corridorWidth??=125+((h>>>8)%4)*10;
+ }
  // A small scene is never forced into an oversized predefined hallway;
  // explicit user-specified layout is still honored where geometrically possible.
  if(count<=1&&!data.view.indoor?.layout&&!data.view.indoor?.knownStructure){
