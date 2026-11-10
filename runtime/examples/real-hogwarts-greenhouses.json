@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "1.0.0",
+  "campaignId": "hogwarts-rp-test",
+  "worldId": "hogwarts-1992",
+  "snapshotId": "greenhouses-scene-001",
+  "atlasVersion": "template-index-v2",
+  "meta": {
+    "date": "1992-09-11",
+    "time": "10:25",
+    "areaName": "Hogwarts · Nhà kính & bãi cỏ bay",
+    "quote": "Giáo sư Sprout đang hướng dẫn chăm sóc cây; Neville đứng bên cạnh xe chậu."
+  },
+  "view": {
+    "scopeId": "hogwarts-greenhouses-local",
+    "spaceKind": "grounds",
+    "preferredMode": "template",
+    "templateId": "h1",
+    "centerPlaceId": "greenhouse-path",
+    "routePlaceIds": [
+      "greenhouse-path",
+      "flying-lawn"
+    ],
+    "maxHops": 1,
+    "maxPlaces": 12
+  },
+  "focus": {
+    "pcActorId": "pc",
+    "actualPlaceId": "greenhouse-path",
+    "selectedId": null
+  },
+  "places": [
+    {
+      "id": "greenhouse-path",
+      "name": "Lối đi trước nhà kính",
+      "atlasRef": "greenhouses",
+      "kind": "grounds",
+      "parentId": null,
+      "floor": null,
+      "zone": null,
+      "inspector": {
+        "overhear": "Tiếng chậu đất và giọng hướng dẫn từ cửa nhà kính.",
+        "observation": "Lối đất mở phía trước nhà kính; mái kính và giá cây là vật cảnh, không phải chỗ đứng."
+      },
+      "generation": null
+    },
+    {
+      "id": "flying-lawn",
+      "name": "Bãi cỏ học bay",
+      "atlasRef": "flying-lawn",
+      "kind": "grounds",
+      "parentId": null,
+      "floor": null,
+      "zone": null,
+      "inspector": {
+        "overhear": "Tiếng nói chuyện từ sân cỏ.",
+        "observation": "Bãi cỏ trống có đường nối với khu nhà kính."
+      },
+      "generation": null
+    }
+  ],
+  "connections": [
+    {
+      "id": "path-greenhouse-lawn",
+      "from": "greenhouse-path",
+      "to": "flying-lawn",
+      "kind": "path",
+      "state": "open"
+    }
+  ],
+  "actors": [
+    {
+      "id": "pc",
+      "name": "BẠN",
+      "isPC": true,
+      "entityType": "person",
+      "placeId": "greenhouse-path",
+      "tagType": "gryffindor",
+      "role": null,
+      "onPatrol": false,
+      "stance": "idle",
+      "activity": "Đứng ở lối đi quan sát giờ học Thảo dược",
+      "priority": 100,
+      "positionMode": "normal",
+      "positionReason": null,
+      "presenceBasis": "status",
+      "inspector": {
+        "overhear": "Lời dặn về việc giữ chậu cây thẳng.",
+        "observation": "Đang đứng trên nền đất trước nhà kính."
+      }
+    },
+    {
+      "id": "sprout",
+      "name": "Giáo sư Sprout",
+      "isPC": false,
+      "entityType": "person",
+      "placeId": "greenhouse-path",
+      "tagType": "teacher",
+      "role": "teacher",
+      "onPatrol": false,
+      "stance": "idle",
+      "activity": "Hướng dẫn nhóm học sinh chuyển chậu",
+      "priority": 70,
+      "positionMode": "normal",
+      "positionReason": null,
+      "presenceBasis": "scene",
+      "inspector": {
+        "overhear": "Chuyển chậu thật cẩn thận.",
+        "observation": "Đứng cạnh lối vào nhà kính."
+      }
+    },
+    {
+      "id": "neville",
+      "name": "Neville Longbottom",
+      "isPC": false,
+      "entityType": "person",
+      "placeId": "greenhouse-path",
+      "tagType": "gryffindor",
+      "role": "student",
+      "onPatrol": false,
+      "stance": "idle",
+      "activity": "Đang giữ khay cây",
+      "priority": 55,
+      "positionMode": "normal",
+      "positionReason": null,
+      "presenceBasis": "scene",
+      "inspector": {
+        "overhear": "Cẩn thận chiếc chậu kia!",
+        "observation": "Cầm khay ở đoạn lối đi thoáng."
+      }
+    }
+  ],
+  "hints": [
+    {
+      "id": "hint-plant-tray",
+      "packId": "pack-1992-09",
+      "sourceQuestId": "help-sprout-tray",
+      "placeId": "greenhouse-path",
+      "type": "life",
+      "title": "Giúp đưa khay cây vào nhà kính?",
+      "priority": 50,
+      "inspector": {
+        "overhear": "Giáo sư cần người hỗ trợ.",
+        "observation": "Một khay cây đặt bên cạnh lối đi."
+      }
+    }
+  ],
+  "visibility": {
+    "visiblePlaceIds": [
+      "greenhouse-path",
+      "flying-lawn"
+    ],
+    "fogRegionIds": []
+  },
+  "questPolicy": {
+    "month": "1992-09",
+    "packId": "pack-1992-09",
+    "limits": {
+      "main": 0,
+      "side": 0,
+      "pool": 0,
+      "life": 6
+    }
+  },
+  "layout": {
+    "scopeKey": "greenhouses-local-v1",
+    "version": 1,
+    "stateRef": null
+  }
+}
