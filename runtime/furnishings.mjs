@@ -13,7 +13,7 @@ export function roomRecipe(place){
  if(/class|lesson|lớp/i.test(f))return [item('board','extra.blackboard',70,22,'wall-north'),item('desk','table.study',40,26,'rows',{count:4}),item('chair','seat.dining',20,20,'auto',{count:4,near:'desk',nearOffset:{x:0,y:30}}),...decor];
  if(/kitchen|bếp/i.test(f))return [item('range','fixture.range',60,35,'wall-north'),item('sink','fixture.sink',36,30,'wall-west'),item('prep','table.prep',65,42),item('pot','accessory.pot',18,18,'auto',{on:'prep'}),...decor];
  if(/bath|toilet|tắm/i.test(f))return [item('bath','fixture.bathtub',55,85,'wall-west'),item('sink','fixture.sink',32,28,'wall-north'),item('towel','extra.towel',25,18,'wall-east'),...decor];
- if(/hospital|ward|infirm|bệnh/i.test(f))return [item('bed','bed.single',40,65,'rows',{count:2}),item('cabinet','storage.cabinet',45,28,'wall-north'),item('lamp','extra.sconce',18,14,'wall-east')];
+ if(/hospital|ward|infirm|healing|bệnh/i.test(f))return [item('bed','bed.single',40,65,'rows',{count:2}),item('cabinet','storage.cabinet',45,28,'wall-north'),item('lamp','extra.sconce',18,14,'wall-east')];
  if(/shop|commerce|tiệm|cửa hàng/i.test(f))return [item('counter','object.counter',80,30,'wall-north'),item('display','storage.display',55,28,'wall-west'),item('crate','object.crate',28,28,'wall-east'),...decor];
  if(/pub|tavern|dining|ăn|quán/i.test(f))return [item('table','table.round',50,50,'rows',{count:2}),item('seat','seat.stool',22,22,'rows',{count:4}),item('bar','object.counter',70,28,'wall-north'),...decor];
  if(/storage|kho/i.test(f))return [item('shelf','storage.open',65,28,'wall-north'),item('crate','object.crate',32,32,'rows',{count:3}),item('barrel','object.barrel',30,30,'wall-west'),item('lamp','extra.sconce',18,14,'wall-east')];

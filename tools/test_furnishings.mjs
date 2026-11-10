@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {roomRecipe} from '../runtime/furnishings.mjs';
 import {buildGeometry,indoorActorPoint} from '../runtime/geometry.mjs';
 import {polygonsOverlap,polygonFits} from '../runtime/furnishings.mjs';
 import {validateMapData} from '../runtime/map-data.mjs';
@@ -45,4 +46,10 @@ test('explicit empty replacement is possible and floors accept exact points betw
 test('add mode overrides default IDs and count zero removes requested decor',()=>{
  const g=buildGeometry(plan('study','rectangle',[{id:'lamp',role:'lamp',count:0},{id:'desk',role:'desk',count:1,width:70,depth:40,color:'#55AA88'}],{furnishingsMode:'add'}));
  assert.equal(g.furnishingInstances.some(i=>i.id==='lamp'),false);const desks=g.furnishingInstances.filter(i=>i.id==='desk');assert.equal(desks.length,1);assert.equal(desks[0].color,'#55AA88');
+});
+
+test('healing function uses treatment beds instead of generic office defaults',()=>{
+ const requests=roomRecipe({generation:{function:'healing'}});
+ assert.ok(requests.some(item=>item.assetId==='bed.single'&&item.count===2));
+ assert.ok(!requests.some(item=>item.assetId==='table.desk'));
 });

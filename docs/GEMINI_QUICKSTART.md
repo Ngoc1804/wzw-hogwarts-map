@@ -26,3 +26,7 @@ Bắt buộc: `schemaVersion`, `meta.date/time/areaName`, `focus.pcActorId/actua
 Có thể bỏ campaign/world/snapshot/atlasVersion nếu không cần tracking. Có thể bỏ `view` (auto, templateId=null, route rỗng, crop=true), `connections`, `hints` (mảng rỗng), quote (chuỗi rỗng), selectedId và metadata place rỗng. Inspector mặc định rỗng; actor có role=null, onPatrol=false, activity rỗng, priority=0, positionMode=normal, positionReason=null. Không suy ngày giờ, stance, identity/tagType, vị trí hoặc sự hiện diện NPC.
 
 Có hint thì **bắt buộc questPolicy**, tháng RP, packId và quota. Không tự chọn pack/quest hoặc quota. Có thể bỏ questPolicy khi không có hint; nếu gửi thì vẫn kiểm tra. Giới hạn 10 tag NPC ngoài PC và 6 hint giữ nguyên. Không thay bằng một hợp đồng 8 nhóm khác.
+
+## Kết quả rà binding/surface phần 4
+
+Tra docs/COVERAGE_REVIEW.md theo ID khi binding còn thiếu. Sáu binding mới đã có trong runtime/atlas-index.json và maps/decision-atlas.json: đường lên nhà cú, cổng chính H2, lối khách/an ninh/Floo Bộ và nhóm nhà dân Diagon. Khu điều trị St Mungo tầng 2 dùng indoor healing. Không dùng shape Bộ cấp tầng làm binding cho từng văn phòng; không đồng nhất tên sân canon với Wyvern/Tầm gửi nếu chưa có bằng chứng. 84 mục còn thiếu được ghi rõ, không tự fallback thành phòng.

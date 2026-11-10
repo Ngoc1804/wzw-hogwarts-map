@@ -5,7 +5,7 @@ Nguồn phát triển `/map`: **fix/map-flow-review**, bắt đầu phần 1–3
 - [Cơ chế hiện hành](docs/MAP_FLOW.md): Preview một chiều, MAP_DATA 2.0, không seed/storage/backend.
 - [Hợp đồng duy nhất](runtime/map-data.schema.json), [hướng dẫn xuất dữ liệu](docs/GEMINI_QUICKSTART.md), [HTML loader](docs/RUNTIME_USAGE.md).
 - `index.html` là atlas artwork độc lập gồm 13 map, không phải entry `/map`. Runtime dùng artwork này theo dữ liệu cảnh; không thiết kế lại SVG.
-- [Trạng thái và giới hạn](docs/DEVELOPMENT_STATUS.md). 91 mục thiếu binding/surface, policy AU và nghiệm thu Playground vẫn giữ nguyên phạm vi.
+- [Trạng thái và giới hạn](docs/DEVELOPMENT_STATUS.md). 84 mục còn thiếu binding/surface sau rà phần 4, policy AU và nghiệm thu Playground vẫn giữ nguyên phạm vi.
 - UI production không có editor MAP_DATA, menu template hoặc test hook. Công cụ QA chỉ bật qua `tools/build_runtime.py --debug`.
 
 ## Tìm nhanh
@@ -91,3 +91,7 @@ Flow /MAP → MAP_DATA → template/atlas hoặc phòng dựng → nội thất/
 ## Bắt đầu với Gemini
 
 Đọc [luồng /map ngắn gọn](docs/GEMINI_QUICKSTART.md) và [bảng chọn cảnh](maps/decision-atlas.json).
+
+## Rà soát phần 4
+
+[91 mục đã đối chiếu](docs/COVERAGE_REVIEW.md): nối 6 binding, sửa 1 phân loại indoor; còn 84 mục có hướng xử lý theo ID. Artwork và policy AU giữ nguyên.

@@ -2156,11 +2156,13 @@
     {
       "id": "P-06a1ce678f15be",
       "name": "Các nhà dân trên phố trong bản đồ Diagon",
-      "mode": "template-or-generated",
+      "mode": "template-required",
       "templateCandidates": [
         "diagon-knockturn"
       ],
-      "verifiedBindings": {},
+      "verifiedBindings": {
+        "diagon-knockturn": "da-homes"
+      },
       "function": "outdoor",
       "needsExactBinding": false
     },
@@ -4980,10 +4982,10 @@
     {
       "id": "P-9d882410cbff44",
       "name": "Khu điều trị bệnh và nhiễm trùng pháp thuật",
-      "mode": "ai-scene-required",
+      "mode": "generated",
       "templateCandidates": [],
       "verifiedBindings": {},
-      "function": "outdoor",
+      "function": "healing",
       "needsExactBinding": false
     },
     {
@@ -5290,9 +5292,11 @@
       "templateCandidates": [
         "h2"
       ],
-      "verifiedBindings": {},
+      "verifiedBindings": {
+        "h2": "main-gate"
+      },
       "function": "circulation",
-      "needsExactBinding": true
+      "needsExactBinding": false
     },
     {
       "id": "P-aec6a126a04246",
@@ -5623,9 +5627,11 @@
       "templateCandidates": [
         "ministry-8-10"
       ],
-      "verifiedBindings": {},
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-visitor"
+      },
       "function": "outdoor",
-      "needsExactBinding": true
+      "needsExactBinding": false
     },
     {
       "id": "P-c2ae860eb1abb4",
@@ -5834,11 +5840,14 @@
       "name": "Lối lên Nhà cú",
       "mode": "template-required",
       "templateCandidates": [
-        "h1"
+        "h1",
+        "h2"
       ],
-      "verifiedBindings": {},
+      "verifiedBindings": {
+        "h2": "owlery-path"
+      },
       "function": "circulation",
-      "needsExactBinding": true
+      "needsExactBinding": false
     },
     {
       "id": "P-cc6eda155ffa84",
@@ -6042,9 +6051,11 @@
       "templateCandidates": [
         "ministry-8-10"
       ],
-      "verifiedBindings": {},
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-security"
+      },
       "function": "outdoor",
-      "needsExactBinding": true
+      "needsExactBinding": false
     },
     {
       "id": "P-dafe46b4834d00",
@@ -6122,9 +6133,11 @@
       "templateCandidates": [
         "ministry-8-10"
       ],
-      "verifiedBindings": {},
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-floo"
+      },
       "function": "outdoor",
-      "needsExactBinding": true
+      "needsExactBinding": false
     },
     {
       "id": "P-dfec655aa06ffb",

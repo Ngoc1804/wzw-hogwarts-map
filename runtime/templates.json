@@ -3,7 +3,7 @@
   "source": "maps/catalog.json + maps/interaction-index.json",
   "sourceHashes": {
     "maps/catalog.json": "e99b2088ddef8388c508a69f8988f9f4983b420f94e6452094d0d959aa2323b3",
-    "maps/interaction-index.json": "619a7335c8de062276100b75a60a3460d381de61c55be22d4b9c681888483178"
+    "maps/interaction-index.json": "238c3d5581a195de50a63d6429b8ec1b68b631ce9558ee4b52770d6b17fc03b7"
   },
   "templates": {
     "h1": {
@@ -162,11 +162,17 @@
         "castle-31": [
           "h2-place-31"
         ],
+        "main-gate": [
+          "h2-place-34"
+        ],
         "castle-35": [
           "h2-place-35"
         ],
         "castle-36": [
           "h2-place-36"
+        ],
+        "owlery-path": [
+          "h2-place-46"
         ],
         "quidditch-pitch": [
           "h2-place-50"
@@ -608,8 +614,28 @@
     "ministry-8-10": {
       "mapId": "ministry-8-10",
       "targets": {
+        "ministry-floo": [
+          "mm-floo-in-0",
+          "mm-floo-out-0",
+          "mm-floo-in-1",
+          "mm-floo-out-1",
+          "mm-floo-in-2",
+          "mm-floo-out-2",
+          "mm-floo-in-3",
+          "mm-floo-out-3",
+          "mm-floo-in-4",
+          "mm-floo-out-4",
+          "mm-floo-in-5",
+          "mm-floo-out-5"
+        ],
         "ministry-fountain": [
           "mm-fountain"
+        ],
+        "ministry-visitor": [
+          "mm-visitor"
+        ],
+        "ministry-security": [
+          "mm-security"
         ],
         "ministry-time": [
           "mm-time"

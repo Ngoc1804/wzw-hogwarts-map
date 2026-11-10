@@ -1,11 +1,11 @@
 {
   "total": 726,
   "counts": {
-    "generated-indoor": 439,
+    "generated-indoor": 440,
     "locked-by-policy": 90,
-    "missing-fixed-binding": 67,
-    "missing-outdoor-surface": 24,
-    "template": 106
+    "missing-fixed-binding": 62,
+    "missing-outdoor-surface": 22,
+    "template": 112
   },
   "entries": [
     {
@@ -1209,7 +1209,10 @@
     {
       "id": "P-06a1ce678f15be",
       "name": "Các nhà dân trên phố trong bản đồ Diagon",
-      "status": "missing-outdoor-surface"
+      "status": "template",
+      "bindings": {
+        "diagon-knockturn": "da-homes"
+      }
     },
     {
       "id": "P-07666cff74b9d9",
@@ -2760,7 +2763,7 @@
     {
       "id": "P-9d882410cbff44",
       "name": "Khu điều trị bệnh và nhiễm trùng pháp thuật",
-      "status": "missing-outdoor-surface"
+      "status": "generated-indoor"
     },
     {
       "id": "P-9ebcfc85eb0c36",
@@ -2933,7 +2936,10 @@
     {
       "id": "P-ae87f1280dad9c",
       "name": "Cổng chính Hogwarts",
-      "status": "missing-fixed-binding"
+      "status": "template",
+      "bindings": {
+        "h2": "main-gate"
+      }
     },
     {
       "id": "P-aec6a126a04246",
@@ -3118,7 +3124,10 @@
     {
       "id": "P-c251f1aa2096c0",
       "name": "Khu tiếp nhận khách Bộ Pháp thuật",
-      "status": "missing-fixed-binding"
+      "status": "template",
+      "bindings": {
+        "ministry-8-10": "ministry-visitor"
+      }
     },
     {
       "id": "P-c2ae860eb1abb4",
@@ -3235,7 +3244,10 @@
     {
       "id": "P-cc5bcc4d694457",
       "name": "Lối lên Nhà cú",
-      "status": "missing-fixed-binding"
+      "status": "template",
+      "bindings": {
+        "h2": "owlery-path"
+      }
     },
     {
       "id": "P-cc6eda155ffa84",
@@ -3344,7 +3356,10 @@
     {
       "id": "P-dadcf596a0437f",
       "name": "Khu an ninh Bộ Pháp thuật",
-      "status": "missing-fixed-binding"
+      "status": "template",
+      "bindings": {
+        "ministry-8-10": "ministry-security"
+      }
     },
     {
       "id": "P-dafe46b4834d00",
@@ -3384,7 +3399,10 @@
     {
       "id": "P-df6ec24bb2876c",
       "name": "Khu giao thông Floo Bộ Pháp thuật",
-      "status": "missing-fixed-binding"
+      "status": "template",
+      "bindings": {
+        "ministry-8-10": "ministry-floo"
+      }
     },
     {
       "id": "P-dfec655aa06ffb",

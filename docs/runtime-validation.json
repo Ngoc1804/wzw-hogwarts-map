@@ -93,5 +93,42 @@
       "repository-wide cleanup not in parts 1–3"
     ],
     "bundleCommit": "d2ee06ad634f5c4fac2d5500abb95642efb13cb7"
+  },
+  "part4": {
+    "baseCommit": "85c78d0cbc68bf664dc8bdca907809c99cc09947",
+    "reviewed": 91,
+    "resolvedBindings": 6,
+    "correctedIndoorClassifications": 1,
+    "remaining": 84,
+    "remainingCategories": {
+      "needs-aggregate-region-metadata": 2,
+      "needs-canon-artwork-correspondence": 7,
+      "needs-individual-room-metadata": 22,
+      "needs-local-region-metadata": 36,
+      "needs-new-exterior-scene": 17
+    },
+    "coverage": {
+      "generated-indoor": 440,
+      "locked-by-policy": 90,
+      "missing-fixed-binding": 62,
+      "missing-outdoor-surface": 22,
+      "template": 112
+    },
+    "nodeTestExecutions": 71,
+    "pythonTests": 13,
+    "browser": [
+      "six exact bindings rendered",
+      "St Mungo healing scene renders two beds",
+      "H2 path and gate use existing safe ground points",
+      "production entry regression",
+      "furnishings, custom drawing, mobile labels, offline download regression"
+    ],
+    "evidenceCheck": "python tools/review_coverage.py --check",
+    "bundleSha256": "4ea5c4deef8ed92472403fde9999cf0cc31756af136cf5256a87df6f1c130ce9",
+    "staticAssetRef": "85c78d0cbc68bf664dc8bdca907809c99cc09947",
+    "artworkUnchanged": true,
+    "assetsUnchanged": true,
+    "newOccludedGround": false,
+    "authenticatedPlaygroundAccepted": false
   }
 }

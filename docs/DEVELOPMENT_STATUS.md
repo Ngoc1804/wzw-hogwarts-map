@@ -16,12 +16,12 @@ Các polygon occlusion trong MAP_DATA có binding chính xác tới SVG. Hover/f
 
 Báo cáo máy đọc: `docs/atlas-coverage.json`; tái kiểm: `node tools/audit_coverage.mjs`.
 
-- 726 địa điểm: 106 có binding template, 439 dựng được cảnh trong nhà với vùng đứng an toàn.
+- 726 địa điểm: 112 có binding template, 440 dựng được cảnh trong nhà với vùng đứng an toàn.
 - 90 địa điểm bị khóa theo policy AU/CCC đã duyệt.
-- 67 còn thiếu binding mặt bằng cố định; 24 còn thiếu mặt bằng ngoài trời.
+- 62 còn thiếu binding mặt bằng cố định; 22 còn thiếu mặt bằng ngoài trời.
 - Tên chuẩn hiện có đủ cho mọi ID. Fallback lấy function/corridor từ atlas, không biến địa điểm ngoài trời thành phòng hình chữ nhật.
 
-**Chưa hoàn tất toàn bộ ba hạng mục.** 91 địa điểm thiếu mặt bằng/binding và vùng đất bị nhà che cần được thiết kế/đối chiếu tiếp; không thay bằng liên kết đại khái tới cả tầng hay cả khu.
+**Chưa hoàn tất toàn bộ ba hạng mục.** 84 địa điểm còn thiếu mặt bằng/binding; vùng đất bị nhà che vẫn cần được thiết kế/đối chiếu tiếp; không thay bằng liên kết đại khái tới cả tầng hay cả khu.
 
 Không lưu layout, không pathfinding, không tự mở các AU đang khóa. Không merge main. AI Studio có đăng nhập và điện thoại thật chưa nghiệm thu.
 
@@ -39,4 +39,12 @@ Bảng quyết định: `maps/decision-atlas.json`; hướng dẫn Gemini: `docs
 
 Nguồn phát triển là fix/map-flow-review, nền 23359d6. MAP_DATA 2.0 hỗ trợ bỏ trường trình bày theo default trong schema; quyền hiển thị và dữ kiện RP vẫn gửi rõ. Có hint thì cần questPolicy. Production không có editor JSON/menu template/test hook; QA bật --debug. JSON lỗi và render lỗi hiện thông báo, xóa cảnh/inspector cũ. Cả JSON #MAP_DATA và window.MAP_DATA đều được hỗ trợ.
 
-Kiểm tra mới ghi tại parts1to3 trong runtime-validation.json; các số liệu cũ là lịch sử, không phải nghiệm thu Playground. 91 mục thiếu binding/surface, phạm vi AU và phần dọn toàn repo không thay đổi.
+Kiểm tra mới ghi tại parts1to3 trong runtime-validation.json; các số liệu cũ là lịch sử, không phải nghiệm thu Playground. Tại mốc phần 1–3 còn 91 mục thiếu binding/surface; xem kết quả rà soát phần 4 bên dưới. Phạm vi AU và phần dọn toàn repo không đổi.
+
+## Phần 4 — kết quả rà 91 mục
+
+Báo cáo: [COVERAGE_REVIEW.md](COVERAGE_REVIEW.md), bằng chứng máy đọc: [coverage-review.json](coverage-review.json). Đã nối 6 binding có shape chính xác và sửa phân loại điều trị St Mungo thành indoor; không đổi atlas nguồn hoặc artwork. St Mungo dùng recipe healing có giường điều trị, vẫn chỉ dựng cảnh hiện tại.
+
+Còn 84 mục: 22 phòng Bộ Pháp thuật cần metadata riêng; 2 vùng tổng hợp; 7 tên sân/cầu canon cần đối chiếu; 36 vùng cục bộ; 17 cảnh ngoài trời cần geometry mới. Mỗi ID có lý do và bước tiếp theo. Không gán cả tầng vào phòng con, không tạo sân canon từ sân gần giống và không mở thêm AU.
+
+Kiểm tra bằng chứng: `python tools/review_coverage.py --check`; coverage: `node tools/audit_coverage.mjs`. Browser đã mở 6 binding và cảnh St Mungo, kiểm tra đường/cổng H2 với điểm trên registry mặt đất thật. Đây không phải xác nhận mọi điểm đứng trong các binding nhóm hoặc tầng đã đủ geometry. Chưa bổ sung vùng đất bị mái che hoặc nghiệm thu Playground.
