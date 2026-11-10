@@ -90,7 +90,7 @@ export function resolveMap(input,templates=registry.templates){
   if(isLockedAtlasPlace(id))return null;
   const p=explicit.get(id),name=atlasPlaceName(id)||id;
   const visible=Boolean(p||revealed.has(id));
-  const room={...(p||{id,name:visible?name:'Chưa khám phá',kind:isCanonicalCorridor(id)?'corridor':'room'})};
+  const room={...(p||{id,name:visible?name:'Chưa khám phá',kind:isCanonicalCorridor(id)?'corridor':'room',generation:{function:isCanonicalCorridor(id)?'circulation':'minimal'}})};
   if(!visible){room.name='Chưa khám phá';room.inspector={overhear:'',observation:''};}
   return placeWithGeneration(room);
  }).filter(Boolean);
