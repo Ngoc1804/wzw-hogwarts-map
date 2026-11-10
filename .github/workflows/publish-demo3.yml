@@ -1,0 +1,53 @@
+name: Publish Demo 3 candidate bundle
+on:
+  push:
+    branches: [demo-3]
+    paths:
+      - docs/PRODUCTION_RELEASE_REQUEST.md
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: demo3-production-publish
+  cancel-in-progress: false
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build production from exact source commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE_SHA="$(git rev-parse HEAD)"
+          python tools/build_atlas_index.py --check
+          python tools/build_runtime.py --out /tmp/wizamap-prod --ref "$SOURCE_SHA"
+          node --check /tmp/wizamap-prod/bundle.js
+          test -s /tmp/wizamap-prod/bundle.js
+          if grep -q 'const BUNDLE_REF="c4566668d00a5b4f3ce38f53b894f2691fe40259"' /tmp/wizamap-prod/bundle.js; then
+            echo 'ERROR: stale bundle source ref' >&2; exit 1
+          fi
+          cmp -s runtime/bundle.js /tmp/wizamap-prod/bundle.js && { echo 'ERROR: source and production bundle are unexpectedly identical'; exit 1; } || true
+          cp /tmp/wizamap-prod/bundle.js runtime/bundle.js
+          node --check runtime/bundle.js
+          echo "BUNDLE_SOURCE_SHA=$SOURCE_SHA" >> "$GITHUB_ENV"
+      - name: Commit bundle to demo-3 only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add runtime/bundle.js
+          if git diff --cached --quiet; then echo 'Production bundle unchanged'; exit 0; fi
+          git commit -m "build(demo-3): publish production runtime from ${BUNDLE_SOURCE_SHA}"
+          git push origin HEAD:demo-3
+          echo "PUBLISHED_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
