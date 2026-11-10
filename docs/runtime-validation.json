@@ -129,6 +129,7 @@
     "artworkUnchanged": true,
     "assetsUnchanged": true,
     "newOccludedGround": false,
-    "authenticatedPlaygroundAccepted": false
+    "authenticatedPlaygroundAccepted": false,
+    "bundleCommit": "e4b915f9a106aca4bf9684a4ba592b3886f74744"
   }
 }
