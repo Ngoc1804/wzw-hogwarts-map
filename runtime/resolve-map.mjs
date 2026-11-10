@@ -5,7 +5,7 @@ import {
  canonicalPlaceId,isKnownAtlasPlace,verifiedAtlasBinding,
  generatedSceneOptions,canonicalPlaceFunction,isCanonicalCorridor,
  assertAllowedScene,assertGeneratedScene,resolveAtlasLocality,
- atlasPlaceName,atlasPlaceKind,listVerifiedTemplateBindings,atlasVersion,isLockedAtlasPlace,sceneTemplateOwners
+ atlasPlaceName,atlasPlaceKind,listVerifiedTemplateBindings,atlasVersion,isLockedAtlasPlace,sceneTemplateOwners,resolveRelativeSceneScope
 } from './atlas-scene.mjs';
 
 const TEMPLATE_SPECIFICITY={
@@ -36,6 +36,11 @@ export function resolveMap(input,templates=registry.templates){
  if(new Set(listed.map(p=>p.id)).size!==listed.length)throw Error('Duplicate canonical place in current scene');
  assertAllowedScene(listed.map(p=>p.id));
  const known=isKnownAtlasPlace(pcId);
+ const pcPlace=listed.find(p=>p.id===pcId);
+ if(!pcPlace)throw Error('The PC place must appear in MAP_DATA.places');
+ const relative=['corridor','threshold','adhoc'].includes(data.view.spotType)&&!known&&pcPlace.kind==='corridor'&&!data.customScene;
+ const relativeGroup=relative?resolveRelativeSceneScope(data.view.scopeId,data.view.nearPlace):null;
+ if(relative&&!relativeGroup)throw Error('Cannot verify corridor scope: provide a known nearby room or approved scopeId');
  if(data.customScene&&known)throw Error('Custom scene cannot override canonical Atlas location');
 
  // Explicit AU/user-made scenes must not shadow an Atlas item or locked map.
@@ -54,15 +59,13 @@ export function resolveMap(input,templates=registry.templates){
    connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
  }
  // PC-controlled template selection: actors elsewhere must not defeat fixed artwork.
- const pcPlace=listed.find(p=>p.id===pcId);
- if(!pcPlace)throw Error('The PC place must appear in MAP_DATA.places');
  // Legacy locally described indoor rooms remain supported. Unknown outdoor/AU
  // parcels require an explicit, short customScene description.
  const localIndoor=!known&&listed.every(p=>p.generation&&['room','corridor','hall','tower','house','shop','pub','greenhouse','special'].includes(p.kind));
- if(!known&&!localIndoor&&!pcPlace.atlasRef)
+ if(!known&&!relativeGroup&&!localIndoor&&!pcPlace.atlasRef)
   throw Error('Missing recipe or unknown Atlas PC location: provide a user-created customScene with a short structural description');
  const preferred=data.view.templateId;
- const candidates=Object.keys(listVerifiedTemplateBindings(pcId)).filter(id=>technical(pcPlace,id,templates));
+ const candidates=relativeGroup?[]:Object.keys(listVerifiedTemplateBindings(pcId)).filter(id=>technical(pcPlace,id,templates));
  const eligible=candidates.length?candidates:Object.keys(templates).filter(id=>technical(pcPlace,id,templates));
  // A local Atlas reference is display-only: it may target existing public
  // artwork but cannot grant entry to protected canonical places.
@@ -78,13 +81,13 @@ export function resolveMap(input,templates=registry.templates){
  }
  if(data.view.preferredMode==='template')throw Error('PC location has no verified fixed template');
  assertGeneratedScene([pcId]);
- if(!known){
+ if(!known&&!relativeGroup){
   if(!localIndoor)throw Error('Missing recipe: unknown Atlas location requires an explicit customScene structural description and valid generation');
   const places=listed.map(placeWithGeneration);
   return {mode:'generated',sceneType:'local',scopeId:data.view.scopeId||'local:'+pcId,atlasVersion:atlasVersion(),places,
    connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
  }
- const group=resolveAtlasLocality(pcId,data.view.scopeId);
+ const group=relativeGroup||resolveAtlasLocality(pcId,data.view.scopeId);
  if(!group){
   if(sceneTemplateOwners[pcId])throw Error('Existing fixed map/template required; missing verified binding: '+pcId);
    // Canonical standalone interiors use the same engine, without inventing a scope.
@@ -104,8 +107,10 @@ export function resolveMap(input,templates=registry.templates){
   if(!visible){room.name='Chưa khám phá';room.inspector={overhear:'',observation:''};}
   return placeWithGeneration(room);
  }).filter(Boolean);
+ if(relativeGroup)places.push({...pcPlace,kind:'corridor',generation:{...pcPlace.generation,function:'circulation'}});
  if(!places.some(p=>p.id===pcId))throw Error('PC location cannot be rendered by its Atlas scope');
  return {mode:'generated',sceneType:'atlas',scopeId:group.key,atlasVersion:atlasVersion(),
   places,exteriorContext:exteriorContextFor(places)||(group.kind==='world'&&group.expand===false?{kind:'building',terrain:'grass'}:null),connections:data.connections.filter(c=>ids.has(canonicalPlaceId(c.from))&&ids.has(canonicalPlaceId(c.to))),
-  indoor:generatedSceneOptions(data,{places})};
+  indoor:generatedSceneOptions(data,{places}),
+  ...(relativeGroup?{spot:{placeId:pcId,nearPlaceId:group.placeIds.includes(canonicalPlaceId(data.view.nearPlace))?canonicalPlaceId(data.view.nearPlace):null,type:data.view.spotType}}:{})};
 }

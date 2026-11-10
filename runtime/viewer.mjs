@@ -110,6 +110,12 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
   const response=await fetch(SPATIAL_URL);if(!response.ok)throw Error('Spatial HTTP '+response.status);templateSpatial=await response.json();
  }
  const nextGeometry=plan.mode==='generated'?buildGeometry(plan,plan.indoor||data.view.indoor||{}):null;
+ // Place transient RP spots on an existing safe corridor, nearest to a verified room.
+ if(nextGeometry&&plan.spot?.nearPlaceId&&nextGeometry.rooms[plan.spot.nearPlaceId]){
+  const room=nextGeometry.rooms[plan.spot.nearPlaceId],cx=room.x+room.w/2,cy=room.y+room.h/2;
+  const anchors=nextGeometry.suggestedAnchors[plan.spot.placeId];
+  if(anchors)anchors.sort((a,b)=>Math.hypot(a.x-cx,a.y-cy)-Math.hypot(b.x-cx,b.y-cy));
+ }
  if(nextGeometry)await loadSceneAssets(nextGeometry.furnishingInstances);
  // Apply the atlas aliases after validating RP input, never add invisible places.
  data={...data,places:plan.places,

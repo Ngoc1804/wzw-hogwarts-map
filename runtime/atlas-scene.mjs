@@ -22,7 +22,8 @@ export function selectScenePreset(data,places){
  const explicit=sceneAtlas.groups.find(g=>g.key===data.view.scopeId);
  if(explicit){
   if(explicit.buildEnabled===false)throw Error('AU map locked until approved: '+explicit.name);
-  if([...ids].some(id=>!explicit.placeIds.includes(id)))throw Error('Scene includes places outside selected floor/area');
+  const spot=['corridor','threshold','adhoc'].includes(data.view.spotType)?data.focus.actualPlaceId:null;
+  if([...ids].some(id=>!explicit.placeIds.includes(id)&&id!==spot))throw Error('Scene includes places outside selected floor/area');
   return explicit;
  }
  const candidates=sceneAtlas.groups.filter(g=>g.preset&&[...ids].every(id=>g.placeIds.includes(id)));
@@ -90,3 +91,19 @@ export function listVerifiedTemplateBindings(id){return sceneAtlas.bindings[cano
 export function atlasVersion(){return sceneAtlas.atlasVersion}
 
 export const sceneTemplateOwners=sceneAtlas.templateOwnerById||{};
+
+// A transient RP corridor belongs to a verified scope, not a fabricated canon room.
+export function resolveRelativeSceneScope(scopeId,nearPlace){
+ const near=canonicalPlaceId(nearPlace||'');
+ if(known.has(near)){
+  const group=resolveAtlasLocality(near,scopeId||null);
+  if(group&&group.buildEnabled!==false&&['castle','tower'].includes(group.kind))return group;
+  if(scopeId)throw Error('Nearby Atlas room does not belong to requested scope: '+scopeId);
+ }
+ if(scopeId){
+  const group=sceneAtlas.groups.find(g=>g.key===scopeId);
+  if(group?.buildEnabled===false)throw Error('AU map locked until approved: '+scopeId);
+  if(group&&['castle','tower'].includes(group.kind)&&group.placeIds.length)return group;
+ }
+ return null;
+}

@@ -1,37 +1,62 @@
 import schema from './map-data.schema.json' with {type:'json'};
 import sceneAtlas from './atlas-index.json' with {type:'json'};
 
-// Exact public labels are resolved here so Gemini needs no external lookup pack.
+// Resolve unique human-readable Atlas names before applying the strict public schema.
 const atlasKnownIds=new Set(sceneAtlas.knownPlaceIds);
 const atlasLockedIds=new Set([...sceneAtlas.lockedPlaceIds,...sceneAtlas.cccNonRoomPlaceIds]);
 const exactPlaceNames=new Map();
-const nameKey=value=>typeof value==='string'?value.normalize('NFC').trim().toLocaleLowerCase('vi'):'';
-for(const [id,canonicalName] of Object.entries(sceneAtlas.canonicalNameById)){
- for(const name of sceneAtlas.placeNamesById?.[id]||[canonicalName]){
-  const key=nameKey(name);if(!exactPlaceNames.has(key))exactPlaceNames.set(key,[]);
-  if(!exactPlaceNames.get(key).includes(id))exactPlaceNames.get(key).push(id);
- }
+const nameKey=value=>typeof value==='string'?value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim():'';
+function addName(name,id){
+ const key=nameKey(name);if(!key)return;
+ if(!exactPlaceNames.has(key))exactPlaceNames.set(key,[]);
+ if(!exactPlaceNames.get(key).includes(id))exactPlaceNames.get(key).push(id);
+}
+for(const [id,canonicalName] of Object.entries(sceneAtlas.canonicalNameById))
+ for(const name of sceneAtlas.placeNamesById?.[id]||[canonicalName])addName(name,id);
+// Only verified public translations; never use substring guesses to unlock a place.
+for(const [name,id] of Object.entries({
+ 'Potions Classroom':'HOG-HMNGC-N-01',
+ 'Snape\'s Office':'HOG-HMNGC-N-02',
+ 'Ingredient Store':'HOG-HMNGC-N-03',
+ 'Potions Prep Room':'HOG-HMNGC-N-04',
+ 'Slytherin Common Room':'P-80ce1ea13c2632'
+}))if(atlasKnownIds.has(id))addName(name,id);
+function resolveName(value,scopeId){
+ if(typeof value!=='string')return null;
+ const direct=sceneAtlas.aliases[value]||value;
+ if(atlasKnownIds.has(direct))return direct;
+ const matches=exactPlaceNames.get(nameKey(value))||[];
+ if(matches.length===1)return matches[0];
+ if(scopeId){const local=matches.filter(id=>sceneAtlas.scopeById[id]===scopeId);if(local.length===1)return local[0];}
+ return null;
+}
+function machineId(value){
+ if(typeof value!=='string')return value;
+ if(/^[A-Za-z0-9][A-Za-z0-9._:/_-]{0,127}$/.test(value))return value;
+ const slug=nameKey(value).replace(/ /g,'-').slice(0,110);
+ return 'rp-'+(slug||'spot');
 }
 function resolvePublicPlaceNames(data){
  if(!Array.isArray(data.places))return data;
+ const scopeId=data.view?.scopeId;
  const aliases=new Map();
  for(const p of data.places){
   if(!p||typeof p!=='object'||typeof p.id!=='string')continue;
-  const canonical=sceneAtlas.aliases[p.id]||p.id;
-  if(atlasKnownIds.has(canonical)){aliases.set(p.id,canonical);continue;}
-  // Generic room labels cannot identify an AU house or another specific building.
-  if(/^(phòng (ngủ|khách|tắm|học|chính)|thư viện|bếp|kho|hành lang|sân trong|vườn)$/.test(nameKey(p.name)))continue;
-  const matches=exactPlaceNames.get(nameKey(p.name))||[];
-  if(matches.length===1)aliases.set(p.id,matches[0]);
+  const known=resolveName(p.id,scopeId)||resolveName(p.name,scopeId);
+  aliases.set(p.id,known||machineId(p.id));
  }
- const id=value=>aliases.get(value)||value;
+ const id=value=>aliases.get(value)||resolveName(value,scopeId)||machineId(value);
  const mapRows=(rows,fn)=>Array.isArray(rows)?rows.map(row=>row&&typeof row==='object'?fn(row):row):rows;
- return {...data,places:mapRows(data.places,p=>({...p,id:id(p.id)})),
+ return {...data,
+  places:mapRows(data.places,p=>({...p,id:id(p.id)})),
   actors:mapRows(data.actors,a=>({...a,placeId:id(a.placeId)})),
   hints:mapRows(data.hints,h=>({...h,placeId:id(h.placeId)})),
   connections:mapRows(data.connections,c=>({...c,from:id(c.from),to:id(c.to)})),
+  ...(data.visibility&&typeof data.visibility==='object'?{visibility:{...data.visibility,
+   ...(Array.isArray(data.visibility.revealedPlaceIds)?{revealedPlaceIds:data.visibility.revealedPlaceIds.map(id)}:{})}}:{}),
   ...(data.view&&typeof data.view==='object'&&!Array.isArray(data.view)?{view:{...data.view,
-   ...(data.view.selectedId!==undefined?{selectedId:id(data.view.selectedId)}:{}),
+   ...(typeof data.view.nearPlace==='string'?{nearPlace:resolveName(data.view.nearPlace,scopeId)||data.view.nearPlace}:{}),
+   ...(data.view.selectedId!==undefined&&data.view.selectedId!==null?{selectedId:id(data.view.selectedId)}:{}),
    ...(Array.isArray(data.view.routePlaceIds)?{routePlaceIds:data.view.routePlaceIds.map(id)}:{})}}:{})};
 }
 
