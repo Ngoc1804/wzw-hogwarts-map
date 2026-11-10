@@ -1,0 +1,589 @@
+{
+  "version": 1,
+  "regions": [
+    {
+      "placeId": "P-effd8342cc396c",
+      "templateId": "h1",
+      "parentRef": "castle",
+      "kind": "ground",
+      "name": "Bãi cỏ học tập quanh trường",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-8153c1a6e4e7dc",
+      "templateId": "h1",
+      "parentRef": "castle",
+      "kind": "ground",
+      "name": "Sân cỏ cạnh lâu đài",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-0d712868c509cf",
+      "templateId": "h1",
+      "parentRef": "castle",
+      "kind": "ground",
+      "name": "Bãi cỏ và đồng cỏ quanh Hogwarts",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-385234641b8727",
+      "templateId": "h1",
+      "parentRef": "castle",
+      "kind": "ground",
+      "name": "Đường dạo ngoài trời quanh Hogwarts",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-d76cff03ee7601",
+      "templateId": "h1",
+      "parentRef": "hogsmeade",
+      "kind": "ground",
+      "name": "Đường mòn giữa Hogwarts và Hogsmeade",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-ff62bf19892de9",
+      "templateId": "h1",
+      "parentRef": "hogsmeade",
+      "kind": "ground",
+      "name": "Đường tới nhà ga Hogsmeade",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-9c19f623bbb1e3",
+      "templateId": "h1",
+      "parentRef": "quidditch-pitch",
+      "kind": "ground",
+      "name": "Vùng sát sân Quidditch ngoài ranh sân",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-c061b81bba5c42",
+      "templateId": "h1",
+      "parentRef": "quidditch-pitch",
+      "kind": "ground",
+      "name": "Đường tới sân Quidditch",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-6ac732451f03d7",
+      "templateId": "h1",
+      "parentRef": "castle",
+      "kind": "ground",
+      "name": "Đường đi ngoài các tường bao lâu đài",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-13ae06fd76adc5",
+      "templateId": "h1",
+      "parentRef": "castle",
+      "kind": "ground",
+      "name": "Các bãi cỏ ngoài sân trong và ngoài khu cầu/cổng H2",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-4df8571e5dea2e",
+      "templateId": "h1",
+      "parentRef": "castle",
+      "kind": "ground",
+      "name": "Các đường dạo và bãi đất trống ngoài trời quanh trường chưa thuộc template khác",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-0006dd26862fbe",
+      "templateId": "h1",
+      "parentRef": "forest",
+      "kind": "ground",
+      "name": "Lối vào Rừng Cấm",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-63aa8852e10090",
+      "templateId": "h1",
+      "parentRef": "forest",
+      "kind": "ground",
+      "name": "Đường mòn Rừng Cấm",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-8fd3daca88a6f1",
+      "templateId": "h1",
+      "parentRef": "forest",
+      "kind": "ground",
+      "name": "Khoảng rừng sâu",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-52b6fe3a29d440",
+      "templateId": "h1",
+      "parentRef": "forest",
+      "kind": "ground",
+      "name": "Khu nhân mã trong Rừng Cấm",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-8c15e0bfc2d11d",
+      "templateId": "h1",
+      "parentRef": "forest",
+      "kind": "ground",
+      "name": "Khu ổ nhện Aragog",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-8f7588d4e8a5bc",
+      "templateId": "h1",
+      "parentRef": "lake",
+      "kind": "deck",
+      "name": "Mặt hồ và khu vực trên thuyền",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-59e90d8a9ccc63",
+      "templateId": "h1",
+      "parentRef": "lake",
+      "kind": "ground",
+      "name": "Bờ Hồ Đen",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-9c45a4f54ea1ee",
+      "templateId": "h1",
+      "parentRef": "lake",
+      "kind": "ground",
+      "name": "Đường dạo ven hồ",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-17db50485e2b83",
+      "templateId": "h1",
+      "parentRef": "lake",
+      "kind": "ground",
+      "name": "Bãi cỏ ven hồ",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-bb3906692ce0a3",
+      "templateId": "h1",
+      "parentRef": "lake",
+      "kind": "ground",
+      "name": "Lối đi và bãi đất ven hồ",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-a575b46f2ae1a8",
+      "templateId": "h1",
+      "parentRef": "lake",
+      "kind": "deck",
+      "name": "Khu thử thách Hồ Đen",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-1174317bcb3096",
+      "templateId": "h1",
+      "parentRef": "hagrid",
+      "kind": "ground",
+      "name": "Vườn bí Hagrid",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-b830cb70ee02f6",
+      "templateId": "h1",
+      "parentRef": "hagrid",
+      "kind": "ground",
+      "name": "Vườn nhà Hagrid",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-f2d3a414a25b76",
+      "templateId": "h1",
+      "parentRef": "greenhouses",
+      "kind": "ground",
+      "name": "Vườn Thảo dược",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-29bc58039f5eae",
+      "templateId": "h1",
+      "parentRef": "greenhouses",
+      "kind": "ground",
+      "name": "Vườn cây gần nhà kính",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-31f204a8e0e490",
+      "templateId": "h1",
+      "parentRef": "greenhouses",
+      "kind": "ground",
+      "name": "Đường giữa các nhà kính",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-cc5bcc4d694457",
+      "templateId": "h1",
+      "parentRef": "owlery",
+      "kind": "ground",
+      "name": "Lối lên Nhà cú / Cầu thang Nhà cú",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-4ba45d2ca765ad",
+      "templateId": "h1",
+      "parentRef": "forest",
+      "kind": "ground",
+      "name": "Đấu trường thử thách rồng Tam Pháp thuật",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-3a8e137752a294",
+      "templateId": "h1",
+      "parentRef": "hagrid",
+      "kind": "ground",
+      "name": "Khu cắm trại Beauxbatons",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-0286a54346e7d7",
+      "templateId": "h1",
+      "parentRef": "lake",
+      "kind": "deck",
+      "name": "Bãi neo tàu Durmstrang",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-36df14fc8355e4",
+      "templateId": "h1",
+      "parentRef": "lake",
+      "kind": "ground",
+      "name": "Lăng mộ Dumbledore",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-5daf783e1e1f28",
+      "templateId": "h2",
+      "parentRef": "forecourt",
+      "kind": "ground",
+      "name": "Sân vào lâu đài trong khu cổng",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-bca1f1945d52e9",
+      "templateId": "h2",
+      "parentRef": "forecourt",
+      "kind": "ground",
+      "name": "Sân Viaduct",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-6d6cfd0e60241f",
+      "templateId": "h2",
+      "parentRef": "mistletoe-court",
+      "kind": "ground",
+      "name": "Sân Transfiguration (Biến hình)",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-38bf6be09df746",
+      "templateId": "h2",
+      "parentRef": "wyvern-court",
+      "kind": "ground",
+      "name": "Sân Bell Tower (Tháp Chuông)",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-501e057d5be6b1",
+      "templateId": "h2",
+      "parentRef": "mistletoe-court",
+      "kind": "ground",
+      "name": "Sân Quad",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-de97c63af46b5c",
+      "templateId": "h2",
+      "parentRef": "wooden-bridge",
+      "kind": "inset",
+      "name": "Sân Clock Tower (Đồng hồ)",
+      "precision": "illustrative-local-region",
+      "evidence": "Supplementary plan inset associated with the inspected landmark; original 2.5D artwork has no independently verified walkable floor for this named courtyard/bridge. No canon-name alias."
+    },
+    {
+      "placeId": "P-1ecd945e2b86b7",
+      "templateId": "h2",
+      "parentRef": "wyvern-court",
+      "kind": "ground",
+      "name": "Hai sân trong lâu đài",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-33d82440a9be50",
+      "templateId": "h2",
+      "parentRef": "wyvern-court",
+      "kind": "ground",
+      "name": "Sân giữa các cánh lâu đài",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-f6319cb5ddb159",
+      "templateId": "h2",
+      "parentRef": "mistletoe-court",
+      "kind": "ground",
+      "name": "Sân chân tháp trong khối lâu đài",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-f79a562f43d99a",
+      "templateId": "h2",
+      "parentRef": "forecourt",
+      "kind": "inset",
+      "name": "Cầu cạn Viaduct",
+      "precision": "illustrative-local-region",
+      "evidence": "Supplementary plan inset associated with the inspected landmark; original 2.5D artwork has no independently verified walkable floor for this named courtyard/bridge. No canon-name alias."
+    },
+    {
+      "placeId": "P-5eb3bde9176879",
+      "templateId": "h2",
+      "parentRef": "castle-18",
+      "kind": "inset",
+      "name": "Cầu đá nối các cánh lâu đài",
+      "precision": "illustrative-local-region",
+      "evidence": "Supplementary plan inset associated with the inspected landmark; original 2.5D artwork has no independently verified walkable floor for this named courtyard/bridge. No canon-name alias."
+    },
+    {
+      "placeId": "P-0a1ff4c2777f64",
+      "templateId": "h2",
+      "parentRef": "wooden-bridge",
+      "kind": "inset",
+      "name": "Cầu gỗ và các cầu nối thuộc khối lâu đài",
+      "precision": "illustrative-local-region",
+      "evidence": "Supplementary plan inset associated with the inspected landmark; original 2.5D artwork has no independently verified walkable floor for this named courtyard/bridge. No canon-name alias."
+    },
+    {
+      "placeId": "P-0880e4fe3da124",
+      "templateId": "hall",
+      "parentRef": "entrance-hall",
+      "kind": "ground",
+      "name": "Sảnh tiếp cận Đại Sảnh",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-95936a141ed516",
+      "templateId": "hall",
+      "parentRef": "teacher-dais",
+      "kind": "inset",
+      "name": "Phòng sau bàn giáo viên",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "HOG-TNG1-S-07",
+      "templateId": "hall",
+      "parentRef": "entrance-hall",
+      "kind": "inset",
+      "name": "Phòng tiếp khách nhà trường",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "TWR-01-02-03",
+      "templateId": "gryffindor-common",
+      "parentRef": "gryffindor-dormitories",
+      "kind": "inset",
+      "name": "Phòng sinh hoạt học sinh cuối hành lang",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-5e1f1cc14a2adb",
+      "templateId": "village-static",
+      "parentRef": "village-square",
+      "kind": "ground",
+      "name": "Phố chính Hogsmeade",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-f30d790b24b65a",
+      "templateId": "village-static",
+      "parentRef": "village-square",
+      "kind": "ground",
+      "name": "Các ngõ ở Hogsmeade",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-c8e6b9a47ac0b8",
+      "templateId": "village-static",
+      "parentRef": "hogsmeade-shop-0",
+      "kind": "ground",
+      "name": "Các cửa hàng hiện trong làng",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-2be38007d6f246",
+      "templateId": "village-static",
+      "parentRef": "hogsmeade-homes",
+      "kind": "inset",
+      "name": "Apothecary tại Hogsmeade trong template",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-eeb5352311e7c0",
+      "templateId": "pitch-static",
+      "parentRef": "quidditch-pitch",
+      "kind": "ground",
+      "name": "Sân tập nhỏ trong quần thể Quidditch",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-f9359f86975e71",
+      "templateId": "pitch-static",
+      "parentRef": "quidditch-pitch",
+      "kind": "ground",
+      "name": "Lối đi và sân trong ranh khu Quidditch",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-c4b0eda051d309",
+      "templateId": "pitch-static",
+      "parentRef": "quidditch-pitch",
+      "kind": "ground",
+      "name": "Mê cung Tam Pháp thuật ở sân Quidditch (khi diễn ra)",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-dafe46b4834d00",
+      "templateId": "express",
+      "parentRef": "kings-cross",
+      "kind": "ground",
+      "name": "Khu chờ lên tàu tại King’s Cross",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-00020cadb6235e",
+      "templateId": "express",
+      "parentRef": "train",
+      "kind": "inset",
+      "name": "Đầu máy Hogwarts Express",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-046c1c72bb9fc9",
+      "templateId": "diagon-knockturn",
+      "parentRef": "da-homes",
+      "kind": "ground",
+      "name": "Hẻm Xéo",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-dbdb26cb4f253a",
+      "templateId": "diagon-knockturn",
+      "parentRef": "da-leaky",
+      "kind": "inset",
+      "name": "Sân sau Cái Vạc Lủng",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-95cdaf84841bcd",
+      "templateId": "diagon-knockturn",
+      "parentRef": "da-homes",
+      "kind": "ground",
+      "name": "Các tiệm, xưởng, quán trong bản đồ Diagon",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-71db87f76e608b",
+      "templateId": "diagon-knockturn",
+      "parentRef": "ka-homes",
+      "kind": "ground",
+      "name": "Hẻm Knockturn",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-5d33c248682e4b",
+      "templateId": "diagon-knockturn",
+      "parentRef": "ka-upper",
+      "kind": "ground",
+      "name": "Tiệm cổ vật / cầm đồ tại Knockturn",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-5c5b87e483e862",
+      "templateId": "diagon-knockturn",
+      "parentRef": "ka-homes",
+      "kind": "ground",
+      "name": "Các cơ sở Knockturn khác trong template",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    },
+    {
+      "placeId": "P-d85dbd8c19bb3b",
+      "templateId": "diagon-knockturn",
+      "parentRef": "ka-homes",
+      "kind": "ground",
+      "name": "Các ngõ phố nối Hẻm Xéo và Knockturn",
+      "precision": "illustrative-local-region",
+      "evidence": "Authored supplementary floor within approved owner; parent landmark visually inspected. Not an exact canon/artwork equivalence."
+    }
+  ],
+  "canonReferences": [
+    "https://www.hogwartscompanion.com/locations/world-map/hogwarts/clock-tower-courtyard",
+    "https://harry-potter-compendium.fandom.com/wiki/The_Quad",
+    "https://www.hp-lexicon.org/thing/dumbledores-white-marble-tomb/",
+    "https://www.hp-lexicon.org/place/atlas-wizarding-world/atlas-of-hogwarts/hogwarts-environs-books/"
+  ],
+  "sourceArtworkSha256": "d3fa1e3a2d821ea0fccfa29632a02d8cc04dd524984a9a8d38a2350ecdc69cc1",
+  "atlasVersion": "atlas-approved-2.0"
+}

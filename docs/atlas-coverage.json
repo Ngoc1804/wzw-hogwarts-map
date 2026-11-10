@@ -6,8 +6,8 @@
     "generated-exterior": 101,
     "generated-indoor": 280,
     "locked-by-policy": 86,
-    "missing-fixed-binding": 64,
-    "template": 133
+    "template": 133,
+    "template-supplement": 64
   },
   "entries": [
     {
@@ -21,32 +21,50 @@
     {
       "id": "P-effd8342cc396c",
       "name": "Bãi cỏ học tập quanh trường",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-effd8342cc396c"
+      }
     },
     {
       "id": "P-8153c1a6e4e7dc",
       "name": "Sân cỏ cạnh lâu đài",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-8153c1a6e4e7dc"
+      }
     },
     {
       "id": "P-0d712868c509cf",
       "name": "Bãi cỏ và đồng cỏ quanh Hogwarts",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-0d712868c509cf"
+      }
     },
     {
       "id": "P-385234641b8727",
       "name": "Đường dạo ngoài trời quanh Hogwarts",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-385234641b8727"
+      }
     },
     {
       "id": "P-d76cff03ee7601",
       "name": "Đường mòn giữa Hogwarts và Hogsmeade",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-d76cff03ee7601"
+      }
     },
     {
       "id": "P-ff62bf19892de9",
       "name": "Đường tới nhà ga Hogsmeade",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-ff62bf19892de9"
+      }
     },
     {
       "id": "P-9fffb1aaa57eea",
@@ -59,22 +77,34 @@
     {
       "id": "P-9c19f623bbb1e3",
       "name": "Vùng sát sân Quidditch ngoài ranh sân",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-9c19f623bbb1e3"
+      }
     },
     {
       "id": "P-c061b81bba5c42",
       "name": "Đường tới sân Quidditch",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-c061b81bba5c42"
+      }
     },
     {
       "id": "P-6ac732451f03d7",
       "name": "Đường đi ngoài các tường bao lâu đài",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-6ac732451f03d7"
+      }
     },
     {
       "id": "P-13ae06fd76adc5",
       "name": "Các bãi cỏ ngoài sân trong và ngoài khu cầu/cổng H2",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-13ae06fd76adc5"
+      }
     },
     {
       "id": "P-6fca659549629d",
@@ -87,12 +117,18 @@
     {
       "id": "P-4df8571e5dea2e",
       "name": "Các đường dạo và bãi đất trống ngoài trời quanh trường chưa thuộc template khác",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-4df8571e5dea2e"
+      }
     },
     {
       "id": "P-0006dd26862fbe",
       "name": "Lối vào Rừng Cấm",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-0006dd26862fbe"
+      }
     },
     {
       "id": "P-7904b8045f6614",
@@ -105,22 +141,34 @@
     {
       "id": "P-63aa8852e10090",
       "name": "Đường mòn Rừng Cấm",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-63aa8852e10090"
+      }
     },
     {
       "id": "P-8fd3daca88a6f1",
       "name": "Khoảng rừng sâu",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-8fd3daca88a6f1"
+      }
     },
     {
       "id": "P-52b6fe3a29d440",
       "name": "Khu nhân mã trong Rừng Cấm",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-52b6fe3a29d440"
+      }
     },
     {
       "id": "P-8c15e0bfc2d11d",
       "name": "Khu ổ nhện Aragog",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-8c15e0bfc2d11d"
+      }
     },
     {
       "id": "P-30cf89999f5e15",
@@ -133,22 +181,34 @@
     {
       "id": "P-8f7588d4e8a5bc",
       "name": "Mặt hồ và khu vực trên thuyền",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-8f7588d4e8a5bc"
+      }
     },
     {
       "id": "P-59e90d8a9ccc63",
       "name": "Bờ Hồ Đen",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-59e90d8a9ccc63"
+      }
     },
     {
       "id": "P-9c45a4f54ea1ee",
       "name": "Đường dạo ven hồ",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-9c45a4f54ea1ee"
+      }
     },
     {
       "id": "P-17db50485e2b83",
       "name": "Bãi cỏ ven hồ",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-17db50485e2b83"
+      }
     },
     {
       "id": "P-7f18ace1f8b2d7",
@@ -177,12 +237,18 @@
     {
       "id": "P-bb3906692ce0a3",
       "name": "Lối đi và bãi đất ven hồ",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-bb3906692ce0a3"
+      }
     },
     {
       "id": "P-a575b46f2ae1a8",
       "name": "Khu thử thách Hồ Đen",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-a575b46f2ae1a8"
+      }
     },
     {
       "id": "P-143a2447e31c2c",
@@ -195,12 +261,18 @@
     {
       "id": "P-1174317bcb3096",
       "name": "Vườn bí Hagrid",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-1174317bcb3096"
+      }
     },
     {
       "id": "P-b830cb70ee02f6",
       "name": "Vườn nhà Hagrid",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-b830cb70ee02f6"
+      }
     },
     {
       "id": "P-7debd31a87a61e",
@@ -221,17 +293,26 @@
     {
       "id": "P-f2d3a414a25b76",
       "name": "Vườn Thảo dược",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-f2d3a414a25b76"
+      }
     },
     {
       "id": "P-29bc58039f5eae",
       "name": "Vườn cây gần nhà kính",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-29bc58039f5eae"
+      }
     },
     {
       "id": "P-31f204a8e0e490",
       "name": "Đường giữa các nhà kính",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-31f204a8e0e490"
+      }
     },
     {
       "id": "P-f322d7e98b6a02",
@@ -260,27 +341,42 @@
     {
       "id": "P-cc5bcc4d694457",
       "name": "Lối lên Nhà cú / Cầu thang Nhà cú",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-cc5bcc4d694457"
+      }
     },
     {
       "id": "P-4ba45d2ca765ad",
       "name": "Đấu trường thử thách rồng Tam Pháp thuật",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-4ba45d2ca765ad"
+      }
     },
     {
       "id": "P-3a8e137752a294",
       "name": "Khu cắm trại Beauxbatons",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-3a8e137752a294"
+      }
     },
     {
       "id": "P-0286a54346e7d7",
       "name": "Bãi neo tàu Durmstrang",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-0286a54346e7d7"
+      }
     },
     {
       "id": "P-36df14fc8355e4",
       "name": "Lăng mộ Dumbledore",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h1": "locality-P-36df14fc8355e4"
+      }
     },
     {
       "id": "P-f8ed3dbe20d357",
@@ -309,32 +405,50 @@
     {
       "id": "P-5daf783e1e1f28",
       "name": "Sân vào lâu đài trong khu cổng",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-5daf783e1e1f28"
+      }
     },
     {
       "id": "P-bca1f1945d52e9",
       "name": "Sân Viaduct",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-bca1f1945d52e9"
+      }
     },
     {
       "id": "P-6d6cfd0e60241f",
       "name": "Sân Transfiguration (Biến hình)",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-6d6cfd0e60241f"
+      }
     },
     {
       "id": "P-38bf6be09df746",
       "name": "Sân Bell Tower (Tháp Chuông)",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-38bf6be09df746"
+      }
     },
     {
       "id": "P-501e057d5be6b1",
       "name": "Sân Quad",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-501e057d5be6b1"
+      }
     },
     {
       "id": "P-de97c63af46b5c",
       "name": "Sân Clock Tower (Đồng hồ)",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-de97c63af46b5c"
+      }
     },
     {
       "id": "P-585c0776dc54a3",
@@ -355,32 +469,50 @@
     {
       "id": "P-1ecd945e2b86b7",
       "name": "Hai sân trong lâu đài",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-1ecd945e2b86b7"
+      }
     },
     {
       "id": "P-33d82440a9be50",
       "name": "Sân giữa các cánh lâu đài",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-33d82440a9be50"
+      }
     },
     {
       "id": "P-f6319cb5ddb159",
       "name": "Sân chân tháp trong khối lâu đài",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-f6319cb5ddb159"
+      }
     },
     {
       "id": "P-f79a562f43d99a",
       "name": "Cầu cạn Viaduct",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-f79a562f43d99a"
+      }
     },
     {
       "id": "P-5eb3bde9176879",
       "name": "Cầu đá nối các cánh lâu đài",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-5eb3bde9176879"
+      }
     },
     {
       "id": "P-0a1ff4c2777f64",
       "name": "Cầu gỗ và các cầu nối thuộc khối lâu đài",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "h2": "locality-P-0a1ff4c2777f64"
+      }
     },
     {
       "id": "HOG-TNG1-S-02",
@@ -401,7 +533,10 @@
     {
       "id": "P-0880e4fe3da124",
       "name": "Sảnh tiếp cận Đại Sảnh",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "hall": "locality-P-0880e4fe3da124"
+      }
     },
     {
       "id": "P-6e4b06065f0997",
@@ -422,7 +557,10 @@
     {
       "id": "P-95936a141ed516",
       "name": "Phòng sau bàn giáo viên",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "hall": "locality-P-95936a141ed516"
+      }
     },
     {
       "id": "P-86e7455d5f7d47",
@@ -459,7 +597,10 @@
     {
       "id": "HOG-TNG1-S-07",
       "name": "Phòng tiếp khách nhà trường",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "hall": "locality-HOG-TNG1-S-07"
+      }
     },
     {
       "id": "P-5fc25ea9745ef9",
@@ -552,7 +693,10 @@
     {
       "id": "TWR-01-02-03",
       "name": "Phòng sinh hoạt học sinh cuối hành lang",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "gryffindor-common": "locality-TWR-01-02-03"
+      }
     },
     {
       "id": "P-4bde45f1a1cb07",
@@ -693,7 +837,10 @@
     {
       "id": "P-5e1f1cc14a2adb",
       "name": "Phố chính Hogsmeade",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "village-static": "locality-P-5e1f1cc14a2adb"
+      }
     },
     {
       "id": "P-d2a51c4e5a9cd6",
@@ -706,7 +853,10 @@
     {
       "id": "P-f30d790b24b65a",
       "name": "Các ngõ ở Hogsmeade",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "village-static": "locality-P-f30d790b24b65a"
+      }
     },
     {
       "id": "P-81c7ab0cff5ac4",
@@ -727,7 +877,10 @@
     {
       "id": "P-c8e6b9a47ac0b8",
       "name": "Các cửa hàng hiện trong làng",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "village-static": "locality-P-c8e6b9a47ac0b8"
+      }
     },
     {
       "id": "P-ce64687addd09a",
@@ -812,7 +965,10 @@
     {
       "id": "P-2be38007d6f246",
       "name": "Apothecary tại Hogsmeade trong template",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "village-static": "locality-P-2be38007d6f246"
+      }
     },
     {
       "id": "P-7abe41594af2ff",
@@ -857,17 +1013,26 @@
     {
       "id": "P-eeb5352311e7c0",
       "name": "Sân tập nhỏ trong quần thể Quidditch",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "pitch-static": "locality-P-eeb5352311e7c0"
+      }
     },
     {
       "id": "P-f9359f86975e71",
       "name": "Lối đi và sân trong ranh khu Quidditch",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "pitch-static": "locality-P-f9359f86975e71"
+      }
     },
     {
       "id": "P-c4b0eda051d309",
       "name": "Mê cung Tam Pháp thuật ở sân Quidditch (khi diễn ra)",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "pitch-static": "locality-P-c4b0eda051d309"
+      }
     },
     {
       "id": "P-638d3d8f890b97",
@@ -920,7 +1085,10 @@
     {
       "id": "P-dafe46b4834d00",
       "name": "Khu chờ lên tàu tại King’s Cross",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "express": "locality-P-dafe46b4834d00"
+      }
     },
     {
       "id": "P-ea0d1c088bb35d",
@@ -933,7 +1101,10 @@
     {
       "id": "P-00020cadb6235e",
       "name": "Đầu máy Hogwarts Express",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "express": "locality-P-00020cadb6235e"
+      }
     },
     {
       "id": "P-83c52658df2171",
@@ -1034,7 +1205,10 @@
     {
       "id": "P-046c1c72bb9fc9",
       "name": "Hẻm Xéo",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "diagon-knockturn": "locality-P-046c1c72bb9fc9"
+      }
     },
     {
       "id": "P-c7788eabe9f16a",
@@ -1047,7 +1221,10 @@
     {
       "id": "P-dbdb26cb4f253a",
       "name": "Sân sau Cái Vạc Lủng",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "diagon-knockturn": "locality-P-dbdb26cb4f253a"
+      }
     },
     {
       "id": "P-4cb1d44097aaf0",
@@ -1212,7 +1389,10 @@
     {
       "id": "P-95cdaf84841bcd",
       "name": "Các tiệm, xưởng, quán trong bản đồ Diagon",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "diagon-knockturn": "locality-P-95cdaf84841bcd"
+      }
     },
     {
       "id": "P-06a1ce678f15be",
@@ -1225,7 +1405,10 @@
     {
       "id": "P-71db87f76e608b",
       "name": "Hẻm Knockturn",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "diagon-knockturn": "locality-P-71db87f76e608b"
+      }
     },
     {
       "id": "P-b08a347b7ef127",
@@ -1238,12 +1421,18 @@
     {
       "id": "P-5d33c248682e4b",
       "name": "Tiệm cổ vật / cầm đồ tại Knockturn",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "diagon-knockturn": "locality-P-5d33c248682e4b"
+      }
     },
     {
       "id": "P-5c5b87e483e862",
       "name": "Các cơ sở Knockturn khác trong template",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "diagon-knockturn": "locality-P-5c5b87e483e862"
+      }
     },
     {
       "id": "P-0fe532e3c7b3e8",
@@ -1256,7 +1445,10 @@
     {
       "id": "P-d85dbd8c19bb3b",
       "name": "Các ngõ phố nối Hẻm Xéo và Knockturn",
-      "status": "missing-fixed-binding"
+      "status": "template-supplement",
+      "bindings": {
+        "diagon-knockturn": "locality-P-d85dbd8c19bb3b"
+      }
     },
     {
       "id": "P-10ca277b3be7f2",

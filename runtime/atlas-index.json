@@ -53,17 +53,77 @@
     "P-e7ebf6e1f0fcb9": {
       "h1": "flying-lawn"
     },
+    "P-effd8342cc396c": {
+      "h1": "locality-P-effd8342cc396c"
+    },
+    "P-8153c1a6e4e7dc": {
+      "h1": "locality-P-8153c1a6e4e7dc"
+    },
+    "P-0d712868c509cf": {
+      "h1": "locality-P-0d712868c509cf"
+    },
+    "P-385234641b8727": {
+      "h1": "locality-P-385234641b8727"
+    },
+    "P-d76cff03ee7601": {
+      "h1": "locality-P-d76cff03ee7601"
+    },
+    "P-ff62bf19892de9": {
+      "h1": "locality-P-ff62bf19892de9"
+    },
     "P-9fffb1aaa57eea": {
       "h1": "willow"
+    },
+    "P-9c19f623bbb1e3": {
+      "h1": "locality-P-9c19f623bbb1e3"
+    },
+    "P-c061b81bba5c42": {
+      "h1": "locality-P-c061b81bba5c42"
+    },
+    "P-6ac732451f03d7": {
+      "h1": "locality-P-6ac732451f03d7"
+    },
+    "P-13ae06fd76adc5": {
+      "h1": "locality-P-13ae06fd76adc5"
     },
     "P-6fca659549629d": {
       "h1": "station-dock"
     },
+    "P-4df8571e5dea2e": {
+      "h1": "locality-P-4df8571e5dea2e"
+    },
+    "P-0006dd26862fbe": {
+      "h1": "locality-P-0006dd26862fbe"
+    },
     "P-7904b8045f6614": {
       "h1": "forest"
     },
+    "P-63aa8852e10090": {
+      "h1": "locality-P-63aa8852e10090"
+    },
+    "P-8fd3daca88a6f1": {
+      "h1": "locality-P-8fd3daca88a6f1"
+    },
+    "P-52b6fe3a29d440": {
+      "h1": "locality-P-52b6fe3a29d440"
+    },
+    "P-8c15e0bfc2d11d": {
+      "h1": "locality-P-8c15e0bfc2d11d"
+    },
     "P-30cf89999f5e15": {
       "h1": "lake"
+    },
+    "P-8f7588d4e8a5bc": {
+      "h1": "locality-P-8f7588d4e8a5bc"
+    },
+    "P-59e90d8a9ccc63": {
+      "h1": "locality-P-59e90d8a9ccc63"
+    },
+    "P-9c45a4f54ea1ee": {
+      "h1": "locality-P-9c45a4f54ea1ee"
+    },
+    "P-17db50485e2b83": {
+      "h1": "locality-P-17db50485e2b83"
     },
     "P-7f18ace1f8b2d7": {
       "h1": "boathouse"
@@ -74,14 +134,35 @@
     "P-9f810bb6686c6d": {
       "h1": "ancient-tree"
     },
+    "P-bb3906692ce0a3": {
+      "h1": "locality-P-bb3906692ce0a3"
+    },
+    "P-a575b46f2ae1a8": {
+      "h1": "locality-P-a575b46f2ae1a8"
+    },
     "P-143a2447e31c2c": {
       "h1": "hagrid"
+    },
+    "P-1174317bcb3096": {
+      "h1": "locality-P-1174317bcb3096"
+    },
+    "P-b830cb70ee02f6": {
+      "h1": "locality-P-b830cb70ee02f6"
     },
     "P-7debd31a87a61e": {
       "h1": "hagrid"
     },
     "P-96d14a7a982d4e": {
       "h1": "greenhouses"
+    },
+    "P-f2d3a414a25b76": {
+      "h1": "locality-P-f2d3a414a25b76"
+    },
+    "P-29bc58039f5eae": {
+      "h1": "locality-P-29bc58039f5eae"
+    },
+    "P-31f204a8e0e490": {
+      "h1": "locality-P-31f204a8e0e490"
     },
     "P-f322d7e98b6a02": {
       "h1": "owlery"
@@ -92,6 +173,21 @@
     "TWR-11-02-02": {
       "h1": "owlery"
     },
+    "P-cc5bcc4d694457": {
+      "h1": "locality-P-cc5bcc4d694457"
+    },
+    "P-4ba45d2ca765ad": {
+      "h1": "locality-P-4ba45d2ca765ad"
+    },
+    "P-3a8e137752a294": {
+      "h1": "locality-P-3a8e137752a294"
+    },
+    "P-0286a54346e7d7": {
+      "h1": "locality-P-0286a54346e7d7"
+    },
+    "P-36df14fc8355e4": {
+      "h1": "locality-P-36df14fc8355e4"
+    },
     "P-f8ed3dbe20d357": {
       "h2": "castle-exterior"
     },
@@ -101,11 +197,47 @@
     "P-399f2c035627f1": {
       "h2": "forecourt"
     },
+    "P-5daf783e1e1f28": {
+      "h2": "locality-P-5daf783e1e1f28"
+    },
+    "P-bca1f1945d52e9": {
+      "h2": "locality-P-bca1f1945d52e9"
+    },
+    "P-6d6cfd0e60241f": {
+      "h2": "locality-P-6d6cfd0e60241f"
+    },
+    "P-38bf6be09df746": {
+      "h2": "locality-P-38bf6be09df746"
+    },
+    "P-501e057d5be6b1": {
+      "h2": "locality-P-501e057d5be6b1"
+    },
+    "P-de97c63af46b5c": {
+      "h2": "locality-P-de97c63af46b5c"
+    },
     "P-585c0776dc54a3": {
       "h2": "wyvern-court"
     },
     "P-442f7275b6c832": {
       "h2": "mistletoe-court"
+    },
+    "P-1ecd945e2b86b7": {
+      "h2": "locality-P-1ecd945e2b86b7"
+    },
+    "P-33d82440a9be50": {
+      "h2": "locality-P-33d82440a9be50"
+    },
+    "P-f6319cb5ddb159": {
+      "h2": "locality-P-f6319cb5ddb159"
+    },
+    "P-f79a562f43d99a": {
+      "h2": "locality-P-f79a562f43d99a"
+    },
+    "P-5eb3bde9176879": {
+      "h2": "locality-P-5eb3bde9176879"
+    },
+    "P-0a1ff4c2777f64": {
+      "h2": "locality-P-0a1ff4c2777f64"
     },
     "HOG-TNG1-S-02": {
       "hall": "great-hall"
@@ -113,11 +245,17 @@
     "HOG-TNG1-S-01": {
       "hall": "entrance-hall"
     },
+    "P-0880e4fe3da124": {
+      "hall": "locality-P-0880e4fe3da124"
+    },
     "P-6e4b06065f0997": {
       "hall": "sorting-waiting"
     },
     "P-ce57067fcd107f": {
       "hall": "hall-antechamber"
+    },
+    "P-95936a141ed516": {
+      "hall": "locality-P-95936a141ed516"
     },
     "P-86e7455d5f7d47": {
       "hall": "staff-room"
@@ -130,6 +268,9 @@
     },
     "P-d216ce626788ed": {
       "hall": "main-stairs"
+    },
+    "HOG-TNG1-S-07": {
+      "hall": "locality-HOG-TNG1-S-07"
     },
     "P-5fc25ea9745ef9": {
       "hall": "classroom-11"
@@ -163,6 +304,9 @@
     },
     "TWR-01-01-03": {
       "gryffindor-common": "stairs-female"
+    },
+    "TWR-01-02-03": {
+      "gryffindor-common": "locality-TWR-01-02-03"
     },
     "P-4bde45f1a1cb07": {
       "ravenclaw-common": "ravenclaw-common-room"
@@ -215,14 +359,23 @@
     "HOG-HMNGC-E-05": {
       "slytherin-common": "study"
     },
+    "P-5e1f1cc14a2adb": {
+      "village-static": "locality-P-5e1f1cc14a2adb"
+    },
     "P-d2a51c4e5a9cd6": {
       "village-static": "village-square"
+    },
+    "P-f30d790b24b65a": {
+      "village-static": "locality-P-f30d790b24b65a"
     },
     "P-81c7ab0cff5ac4": {
       "village-static": "hogsmeade-homes"
     },
     "P-197b2052678b9d": {
       "village-static": "hogsmeade-homes"
+    },
+    "P-c8e6b9a47ac0b8": {
+      "village-static": "locality-P-c8e6b9a47ac0b8"
     },
     "P-ce64687addd09a": {
       "village-static": "hogsmeade-shop-0"
@@ -254,6 +407,9 @@
     "P-79710fe4d4bcfa": {
       "village-static": "shrieking-shack"
     },
+    "P-2be38007d6f246": {
+      "village-static": "locality-P-2be38007d6f246"
+    },
     "P-7abe41594af2ff": {
       "pitch-static": "quidditch-pitch"
     },
@@ -268,6 +424,15 @@
     },
     "P-936cbb9c617eca": {
       "pitch-static": "support-rooms"
+    },
+    "P-eeb5352311e7c0": {
+      "pitch-static": "locality-P-eeb5352311e7c0"
+    },
+    "P-f9359f86975e71": {
+      "pitch-static": "locality-P-f9359f86975e71"
+    },
+    "P-c4b0eda051d309": {
+      "pitch-static": "locality-P-c4b0eda051d309"
     },
     "P-638d3d8f890b97": {
       "pitch-static": "pitch-room-0"
@@ -287,8 +452,14 @@
     "P-3a9add588aa69a": {
       "express": "kings-cross"
     },
+    "P-dafe46b4834d00": {
+      "express": "locality-P-dafe46b4834d00"
+    },
     "P-ea0d1c088bb35d": {
       "express": "train"
+    },
+    "P-00020cadb6235e": {
+      "express": "locality-P-00020cadb6235e"
     },
     "P-83c52658df2171": {
       "express": "train"
@@ -326,8 +497,14 @@
     "P-47576b791ebc5b": {
       "express": "hogsmeade-station"
     },
+    "P-046c1c72bb9fc9": {
+      "diagon-knockturn": "locality-P-046c1c72bb9fc9"
+    },
     "P-c7788eabe9f16a": {
       "diagon-knockturn": "da-leaky"
+    },
+    "P-dbdb26cb4f253a": {
+      "diagon-knockturn": "locality-P-dbdb26cb4f253a"
     },
     "P-4cb1d44097aaf0": {
       "diagon-knockturn": "da-gringotts"
@@ -389,14 +566,29 @@
     "P-2b888eaec42438": {
       "diagon-knockturn": "da-stationery"
     },
+    "P-95cdaf84841bcd": {
+      "diagon-knockturn": "locality-P-95cdaf84841bcd"
+    },
     "P-06a1ce678f15be": {
       "diagon-knockturn": "da-homes"
+    },
+    "P-71db87f76e608b": {
+      "diagon-knockturn": "locality-P-71db87f76e608b"
     },
     "P-b08a347b7ef127": {
       "diagon-knockturn": "ka-borgin"
     },
+    "P-5d33c248682e4b": {
+      "diagon-knockturn": "locality-P-5d33c248682e4b"
+    },
+    "P-5c5b87e483e862": {
+      "diagon-knockturn": "locality-P-5c5b87e483e862"
+    },
     "P-0fe532e3c7b3e8": {
       "diagon-knockturn": "ka-homes"
+    },
+    "P-d85dbd8c19bb3b": {
+      "diagon-knockturn": "locality-P-d85dbd8c19bb3b"
     },
     "P-10ca277b3be7f2": {
       "ministry2": "department-1"

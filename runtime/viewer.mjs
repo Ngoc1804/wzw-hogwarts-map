@@ -1,3 +1,4 @@
+import {mountTemplateLocalities} from './template-localities.mjs';
 // Runtime for one-way Preview rendering; no persistence.
 for(const [id,source]of Object.entries(JSON.parse(document.querySelector('#qa-assets')?.textContent||'{}')))sceneAssetCache.set(id,source);
 let templateSpatial=JSON.parse(document.querySelector('#qa-spatial')?.textContent||'{"templates":{}}');
@@ -70,14 +71,17 @@ function anchor(place,buildingId){
  // Display anchors may use artwork bounds; they never define a walkable floor.
  const faces=[...node.querySelectorAll('[data-shade-surface="wall"],rect:not(.spot-hit)')].filter(n=>{
   const b=n.getBBox(),fill=n.getAttribute('fill');return !n.closest('defs')&&fill&&fill!=='none'&&fill!=='transparent'&&b.width>25&&b.height>25;
- }).sort((a,b)=>{const x=a.getBBox(),y=b.getBBox();return y.width*y.height-x.width*x.height});
+ }).sort((a,b)=>{const x=a.getBBox(),y=b.getBBox();return Number(b.matches('[data-shade-surface="wall"]'))-Number(a.matches('[data-shade-surface="wall"]'))||y.width*y.height-x.width*x.height});
  let wall={x:(left+right)/2,y:bottom-(bottom-top)*.18};
  if(faces.length){const n=faces[0],b=n.getBBox(),m=svg.getScreenCTM().inverse().multiply(n.getScreenCTM());wall=new DOMPoint(b.x+b.width/2,b.y+b.height*.65).matrixTransform(m);}
  if(roofNodes.length){
   const pts=roofNodes.flatMap(n=>{const b=n.getBBox(),m=svg.getScreenCTM().inverse().multiply(n.getScreenCTM());return [[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]].map(([x,y])=>new DOMPoint(x,y).matrixTransform(m))});
   roof={x:(Math.min(...pts.map(p=>p.x))+Math.max(...pts.map(p=>p.x)))/2,y:Math.min(...pts.map(p=>p.y))};
  }
- return {x:(left+right)/2,y:EXTERIOR_TEMPLATES.has(select.value)?top+(bottom-top)*.3:(top+bottom)/2,left,right,top,bottom,roof,wall};
+ const context=node.dataset.localityContext?JSON.parse(node.dataset.localityContext):null;
+ const surface=place.atlasRef?.startsWith('locality-')?node.querySelector('[data-surface="floor"]'):null;
+ let floorAnchor=null;if(surface){const b=surface.getBBox(),m=svg.getScreenCTM().inverse().multiply(surface.getScreenCTM());floorAnchor=new DOMPoint(b.x+b.width/2,b.y+b.height/2).matrixTransform(m);}
+ return {x:floorAnchor?.x??(left+right)/2,y:floorAnchor?.y??(EXTERIOR_TEMPLATES.has(select.value)?top+(bottom-top)*.3:(top+bottom)/2),left:context?.[0]??left,right:context?.[2]??right,top:context?.[1]??top,bottom:context?.[3]??bottom,roof,wall};
 }
 let labels=[];
 function update(){
@@ -151,6 +155,7 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
  }
  const feetDefs=document.createElementNS(NSVG,'defs');feetDefs.innerHTML=shoeDefs;svg.prepend(feetDefs);
  q('#mapmount').replaceChildren(svg);const overlay=el('div');overlay.className='qa-tags';q('#mapmount').append(overlay);box=[...base];
+ if(plan.mode==='template'){const bounds=mountTemplateLocalities(svg,data.places,registry.templates[id],base);if(bounds){base=bounds;box=[...base];}}
  const floors=collectFloorSurfaces(svg);
  for(const a of data.actors)if(!geometry&&a.position&&!(exterior&&a.environment==='inside')&&(!floors.contains(a.position)&&!surfaceAllowed(a.position,spatial)||pointInRegions(a.position,spatial?.blockedRegions)))throw Error('Actor '+a.id+': position is outside floor or inside blocked area');
  const points=new Map(data.places.filter(p=>data.visibility.visiblePlaceIds.includes(p.id)).map(p=>[p.id,anchor(p)]));

@@ -22,10 +22,14 @@
 - Browser kiểm vật liệu, asset outdoor, thứ tự lớp, nhãn tường, roof indicator opacity 30%, rerender cleanup, 15 NPC / 10 nhãn + PC, bố cục ổn định, desktop/mobile, loader và HTML offline.
 - Đây là kiểm source/candidate; không phải nghiệm thu Google AI Studio bằng RP thật.
 
-## Chưa hoàn thành — không tính là đã xử lý
+## Trạng thái coverage và phát hành
 
-- 64 địa điểm thuộc template chưa có binding hình học xác minh: xem `docs/DEMO3_REMAINING_BINDINGS.md`. Không thể đánh đồng source giao cho template với việc artwork đã có vị trí riêng của từng nơi. Đặc biệt các tên sân/cầu H2 chưa có đối chiếu và các cảnh chỉ được nêu trong danh mục cần hoàn thiện artwork/region đúng nguồn.
+- 64 mục cũ đã có geometry bổ sung và browser kiểm chỗ đứng: xem `docs/DEMO3_LOCALITY_SURFACES.md`. Phân loại riêng `template-supplement`; không tuyên bố những vùng mới này có sẵn trong SVG hoặc có tọa độ canon chính xác.
 - 29 mục Bộ 1–7 là phạm vi được người dùng loại trừ; 1 mục Bộ chưa rõ tầng giữ chờ xác nhận.
-- Chưa phát hành/re-pin bundle production, chưa test RP thật trong AI Studio. Chỉ phát hành sau khi giải quyết acceptance còn thiếu; không dùng fixture như RP thật.
+- Phiên đồng thời đã ghim bundle nguồn trước đợt 64. Đợt 64 mới chưa được ghim vào loader production; chưa test RP thật trong AI Studio. Không dùng fixture như RP thật.
 
 Kết quả local cuối: 73/73 Node tests đạt; Chromium suite đầy đủ đạt với candidate build và kiểm console của loader. Python atlas/inventory/scenery và kiểm compiler/registry/coverage chạy riêng. Không coi kết quả local là CI xanh hay nghiệm thu AI Studio.
+
+Đợt 64: bổ sung runtime/template-localities.json và renderer sàn theo mốc cha, deck riêng trên hồ, inset có sàn/tường cho phòng chưa vẽ. Giữ artwork gốc; dữ liệu mới ghi precision illustrative-local-region. Đối chiếu hình H2 và nguồn canon theo yêu cầu người dùng, có ghi giới hạn suy luận.
+
+Kiểm chứng đợt 64: 74/74 Node tests; Chromium render từng ID, kiểm chân nằm trong chính sàn của vùng, crop=false cho inset, mở offline mới và regression suite. Coverage không còn missing-fixed-binding; 64 vùng mới được phân loại template-supplement, tách khỏi geometry gốc.
