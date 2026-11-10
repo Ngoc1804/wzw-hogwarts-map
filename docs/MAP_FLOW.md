@@ -1,34 +1,47 @@
-# /MAP — Preview một chiều
+# Demo 2 — /MAP
 
-/MAP → Gemini xuất MAP_DATA + HTML loader → chọn template theo atlas hoặc dựng phòng bằng element → ghép nội thất/decor theo yêu cầu → đặt NPC → Preview. Hướng dẫn tùy biến: [INDOOR_PREVIEW.md](INDOOR_PREVIEW.md).
+Gemini đọc RP → xuất dữ liệu cảnh công khai → loader tải bundle ghim commit → engine chọn template hoặc dựng indoor → ghép nội thất → đặt nhân vật → UI. Preview một chiều, không backend/seed/lưu layout, không thay đổi RP khi click. Ngày giờ lấy từ RP.
 
-Gemini xác định thời gian RP, vị trí thật PC, NPC/nhóm hiện diện, hoạt động và hint đúng pack tháng. Lọc quyền biết trước khi xuất JSON; không gửi bí mật xuống browser rồi dựa vào fog để bảo vệ. Giữ cap PC + 10 tag NPC/nhóm và 6 hint. Khi đang di chuyển, stance=walk và thanh hành động ghi “Đang đi”; diễn biến RP quyết định việc di chuyển.
+## Một hợp đồng
 
-Tra maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json (726 địa điểm từ 747 mục nguồn) bằng ID chuẩn hoặc sourceIds trong runtime/atlas-index.json. Binding được xác minh nằm trong runtime/atlas-index.json và đối chiếu runtime/templates.json. templateCandidates là đề xuất của file atlas duyệt, không phải xác nhận mặt bằng đã có. Cùng tên trong hai ngôi nhà không tự gộp. Trường hợp chưa rõ cần recipe theo công dụng, hình dạng, furnishings, connections được xác lập trong RP/atlas; không suy kết nối canon từ tọa độ artwork.
+Nguồn duy nhất: `runtime/map-data.schema.json` (3.0.0). Chỉ bắt buộc `meta`, `places`, `actors`. Không gửi focus, visiblePlaceIds, questPolicy, presenceBasis hoặc các ID campaign/snapshot cũ. Engine lấy PC từ actor có isPC=true và xem mọi place được gửi là công khai. Dữ liệu cũ 2.0 được từ chối rõ, không có renderer song song.
 
-Crop tập trung khung vào tập địa điểm được gửi, không giới hạn cứng quanh PC. view.crop=false cho toàn cảnh. Fog dùng visibility.fogRegionIds và fogRegions có polygon tọa độ SVG; không có geometry phải báo lỗi. Mask là kỹ thuật che theo hình dạng; không có luật bắt buộc mask riêng quanh PC.
+```json
+{"meta":{"date":"1992-09-11","time":"10:25","areaName":"Phòng học"},"places":[{"id":"scene-room","name":"Phòng học","kind":"room","generation":{"function":"classroom"}}],"actors":[{"id":"pc","name":"BẠN","isPC":true,"placeId":"scene-room","tagType":"gryffindor"}]}
+```
 
-Không có seed, layout state, backend persistence hay ghi ngược GitHub. Mỗi Preview dựng từ dữ liệu được gửi, bố cục giữa các Preview có thể khác. Template giữ artwork cố định của nó.
+Đây là dữ liệu giả lập kiểm thử, không phải lượt RP thật. Không nhúng fixture vào production bundle.
 
-UI dùng ui/shell.html, tokens và actor ribbons; không có ribbon địa điểm. Tên trong inspector và signage thuộc artwork vẫn được giữ.
+`id`, `name`, `kind` là tối thiểu cho place; `id`, `name`, `placeId` là tối thiểu cho actor. Đúng một actor phải có isPC=true. Nhận diện mặc định unknown; entityType mặc định person; stance mặc định idle chỉ là hiển thị, không ghi state RP. Đang đi thì gửi stance=walk. Inspector có thể bỏ hoặc chỉ gửi một trong overhear/observation; phần còn lại là chuỗi rỗng. Không ép dữ liệu sai kiểu thành dữ liệu đúng.
 
+## Chọn map và đặt nhân vật
 
-## Atlas canonical & scope build policy (2026-11-10)
+Tra `maps/ai-lookup.json` khi tạo dữ liệu (nạp vào ngữ cảnh Gemini một lần; URL không tự cấp kiến thức cho model). Runtime dùng atlas-index/templates đã đóng gói để tra ID chuẩn/alias. `view.templateId` và preferredMode chỉ cần khi muốn chỉ định template hay chọn dựng phòng. Không fuzzy-match tên. ID cảnh tự đặt chỉ dùng cho indoor được mô tả rõ, không đổi ID địa điểm bị khóa để né policy.
 
-Authoritative atlas: `maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json` (747 source IDs → 726 physical places, 21 aliases in `sourceIds`). Runtime index: `runtime/atlas-index.json`; `runtime/atlas-scene.mjs` resolves old IDs to canonical IDs and verified technical SVG bindings, never fuzzy-matches names. Missing bindings fall back to current-scene Stage 2 generated indoor layout only where generation is allowed.
+Một cảnh một tầng; một phòng không tự tạo hành lang. Chọn auto khi không có yêu cầu riêng. Template cố định và ngoài trời không dựng lại bằng indoor. Chỉ mở CCC 07.18 phòng chính, Nhà PC London và Liad’s Attic trong AU. 90 mục giữ khóa. 84 mục thiếu binding/surface giữ nguyên, xem COVERAGE_REVIEW.md.
 
-Generated corridor layout comes from the current floor/cluster's flexible `corridorPreset`. An explicit `view.indoor` layout takes precedence. A single room is allowed to fill the entire preview without a fabricated corridor or stair; short one-floor scenes are flexible. Never build a complete Hogwarts floor or multiple wings. No added corridor preset for Ministry or exterior/courtyard maps already covered by H1/H2 or other fixed templates.
+Template ngoài trời cần actor.environment=inside hoặc outside. Inside hiện nhãn trên công trình, không giả dấu chân ngoài nhà; nhóm nhiều nhà cần buildingId. Outside có position thì kiểm sàn; bỏ position thì tìm điểm minh họa trên sàn đã xác minh gần anchor, cách tối đa 160 đơn vị SVG. Không tìm được thì báo thiếu sàn. Đây không phải tọa độ canon hoặc thao tác di chuyển PC. Template indoor chưa có vùng sàn phù hợp chỉ hiện nhãn khi environment=inside, không giả điểm đứng. Muốn dấu chân ở đó phải bổ sung geometry thật. Vị trí gửi rõ nhưng sai sàn luôn báo lỗi.
 
-AU gate: build **only CCC 07.18 main room**, **Nhà PC · London**, **Liad’s Attic**. Five other AU maps remain indexed as archival lookup data but are **blocked from Preview rendering/generation**; CCC subsidiary rooms remain indexed but not buildable. This is a runtime policy, not just documentation.
+## Nội thất
 
-Mọi element có semantic floor tự cho đứng được; dữ liệu mặt đất cũ hoặc view.spatial là fallback cho template chưa có semantic. Nhãn trên mái và độ mờ 50% dùng chung controller. Bbox chỉ phục vụ hiển thị, không tạo sàn. This release does not claim complete walkable polygons for every H1/H2/village/Diagon artwork. Always exclude secret places before MAP_DATA is sent to Preview; fog is not a security boundary.
+Gemini mô tả công dụng và đồ đặc thù; JavaScript tự chọn asset và xếp đồ theo polygon phòng, cửa, vật cản và mặt bàn. Không cần dựng sẵn mọi layout. Bỏ generation.furnishings hoặc gửi [] → mặc định; danh sách không rỗng → thay thế; furnishingsMode=add → bổ sung/ghi đè theo id; replace + [] → phòng trống. count=0 xóa đồ trong add mode.
 
-## MAP_DATA 2.0 gọn, tương thích dữ liệu đầy đủ
+Recipe: bedroom/residential, classroom/class, office/administration, library, practice, group, potions, kitchen, bathroom, hospital/healing/infirmary, shop/commerce, pub, storage/store, common/lounge, study. Office/practice/group được chuyển chọn lọc từ bố trí Stage 1, dùng bộ kiểm va chạm hiện tại. Không chép tọa độ cố định vào phòng có hình khác.
 
-Schema `runtime/map-data.schema.json` là nguồn duy nhất. `normalizeMapData()` áp dụng `default` khai báo trong schema trên bản sao; validator, resolver và viewer dùng cùng quy tắc. Trường lạ hoặc giá trị sai vẫn báo lỗi, không dùng default để che dữ liệu sai.
+Đồ thông thường dùng role: desk/table/chair/bed/shelf/cabinet/rug/lamp/book/plant/portrait/blackboard/cauldron; có thể chỉ định assetId từ catalog hoặc custom.shapes theo schema. Kích thước là đơn vị SVG. `on` tham chiếu id bàn/kệ có surface thật; `near` đặt gần đồ có id. Không đủ chỗ hoặc thiếu asset/surface thì báo món bị lỗi, không âm thầm bỏ.
 
-Bắt buộc: `schemaVersion`, `meta.date/time/areaName`, `focus.pcActorId/actualPlaceId`, `places`, `actors`, `visibility.visiblePlaceIds`. Quyền hiển thị phải gửi rõ, không suy từ danh sách địa điểm.
+## Hint và giới hạn
 
-Có thể bỏ campaign/world/snapshot/atlasVersion nếu không cần tracking. Có thể bỏ `view` (auto, templateId=null, route rỗng, crop=true), `connections`, `hints` (mảng rỗng), quote (chuỗi rỗng), selectedId và metadata place rỗng. Inspector mặc định rỗng; actor có role=null, onPatrol=false, activity rỗng, priority=0, positionMode=normal, positionReason=null. Không suy ngày giờ, stance, identity/tagType, vị trí hoặc sự hiện diện NPC.
+PC + tối đa 10 tag NPC/nhóm. Tối đa 5 hint: 2 side, 1 hint, 2 pool/life cộng lại. Hint chỉ cần id, placeId, type và title; inspector tùy chọn. Không đổi H thành main. Không gửi pack/questPolicy cho renderer. AI chịu trách nhiệm lọc nguồn tháng/carryover theo campaign, không tự tạo nội dung để đủ quota. Chỉ truyền thông tin PC được phép biết; fog không bảo mật payload.
 
-Có hint thì **bắt buộc questPolicy**, tháng RP, packId và quota. Không tự chọn pack/quest hoặc quota. Có thể bỏ questPolicy khi không có hint; nếu gửi thì vẫn kiểm tra. Giới hạn 10 tag NPC ngoài PC và 6 hint giữ nguyên. Không thay bằng một hợp đồng 8 nhóm khác.
+## Các trường chỉ dùng khi cần
+
+`connections`: from, to và state bắt buộc; kind mặc định doorway, id tùy chọn. state=open/restricted/blocked. Chỉ gửi kết nối được xác lập. Bố cục minh họa không chứng minh canon adjacency, đường đi thông suốt hoặc pathfinding.
+
+`view`: preferredMode, templateId, crop, routePlaceIds, selectedId; indoor để chỉ định hình học hỗ trợ; spatial chỉ khi có geometry đã kiểm chứng. `visibility` chỉ chứa fogRegionIds/fogRegions, không khai lại place. Không thêm hidden state.
+
+## Build và kiểm tra
+
+`python tools/build_runtime.py --out /tmp/wzw-test --data tools/fixtures/scene.json --embed-atlas --debug` tạo bản QA, không phải loader RP. Bỏ --debug để xuất production. `python tools/prepare_experiment.py` tạo các cảnh giả lập offline ngoài repo. Các test browser dùng Playwright + Chromium, kiểm desktop/mobile, lỗi đầu vào, nội thất, template, xuất HTML/offline. CI chạy suite Node, Python, gallery và browser. Kết quả hiện hành nằm tại validation.json; không coi test giả lập là nghiệm thu Playground thật.
+
+Khi phát hành: build bundle với ref asset đầy đủ đã tồn tại → commit bundle → ghim commit chứa bundle trong ui/preview.html và MAP_PROMPT.md → kiểm jsDelivr khớp SHA-256. Một bundle và một loader. Prompt chép từ MAP_PROMPT.md, không dùng các prompt cũ.

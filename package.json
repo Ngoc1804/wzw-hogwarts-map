@@ -1,0 +1,1 @@
+{"name":"wzw-demo-2","version":"3.0.0","private":true,"scripts":{"test":"node --test tools/test_*.mjs","test:browser":"node tools/run_browser_tests.cjs"},"devDependencies":{"playwright":"1.62.1"}}

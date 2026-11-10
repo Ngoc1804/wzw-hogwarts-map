@@ -6,11 +6,11 @@ import registry from '../runtime/templates.json' with {type:'json'};
 import {canonicalPlaceId,isKnownAtlasPlace,verifiedAtlasBinding,assertAllowedScene,assertGeneratedScene,selectScenePreset,generatedSceneOptions} from '../runtime/atlas-scene.mjs';
 import {resolveMap} from '../runtime/resolve-map.mjs';
 const atlas=JSON.parse(fs.readFileSync(new URL('../maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json',import.meta.url)));
-const sample=()=>JSON.parse(fs.readFileSync(new URL('contract-fixture.json',import.meta.url)));
+const sample=()=>JSON.parse(fs.readFileSync(new URL('fixtures/scene.json',import.meta.url)));
 const withPlace=(id,kind='room')=>{
  const d=sample();d.places[0]={...d.places[0],id,name:id,atlasRef:null,kind,generation:null};
- d.focus.actualPlaceId=id;d.view.centerPlaceId=id;d.view.routePlaceIds=[id];
- d.visibility.visiblePlaceIds=[id];d.actors[0].placeId=id;d.hints[0].placeId=id;
+ d.view.routePlaceIds=[id];
+ d.actors[0].placeId=id;d.hints[0].placeId=id;
  return d;
 };
 test('canonical atlas covers all 747 source IDs with no dangling reference',()=>{

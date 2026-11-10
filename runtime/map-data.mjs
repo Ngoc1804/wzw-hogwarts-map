@@ -45,7 +45,7 @@ export function validateMapData(data) {
   data=normalizeMapData(data);
   const errors=[];check(data,schema,'MAP_DATA',errors);if(errors.length)return {ok:false,errors};
   const ids=new Set();for(const row of [...data.places,...data.connections,...data.actors,...data.hints]){
-    if(ids.has(row.id))errors.push('Duplicate public entity ID');ids.add(row.id);
+    if(row.id!==undefined){if(ids.has(row.id))errors.push('Duplicate public entity ID');ids.add(row.id);}
   }
   for(const place of data.places)for(const item of place.generation?.furnishings||[]){
     if(item.custom){
@@ -58,39 +58,29 @@ export function validateMapData(data) {
       if(s&&(!s.width||!s.height||s.x+s.width>item.custom.width||s.y+s.height>item.custom.height))errors.push('Custom support surface outside asset');
     }
   }
-  const places=new Set(data.places.map(p=>p.id)),visible=new Set(data.visibility.visiblePlaceIds);
+  const places=new Set(data.places.map(p=>p.id));
   const requirePlace=(id,label)=>{if(!places.has(id))errors.push(`${label}: unknown place`)};
-  requirePlace(data.focus.actualPlaceId,'PC');if(data.view.centerPlaceId!==undefined)requirePlace(data.view.centerPlaceId,'view center');
-  data.view.routePlaceIds.forEach(id=>requirePlace(id,'route'));data.visibility.visiblePlaceIds.forEach(id=>requirePlace(id,'visibility'));
-  if(data.focus.selectedId!==null&&!ids.has(data.focus.selectedId))errors.push('Unknown selected entity');
-  if(!visible.has(data.focus.actualPlaceId))errors.push('PC place must be visible');
   const pcs=data.actors.filter(a=>a.isPC);
-  if(pcs.length!==1||pcs[0]?.id!==data.focus.pcActorId||pcs[0]?.placeId!==data.focus.actualPlaceId)errors.push('Exactly one matching PC required');
+  if(pcs.length!==1)errors.push('Exactly one PC required');
   if(data.actors.filter(a=>!a.isPC).length>10)errors.push('At most 10 NPC/group/community tags');
+  const selected=data.view.selectedId;
+  if(selected!==null&&!ids.has(selected))errors.push('Unknown selected entity');
   for(const a of data.actors){
-    requirePlace(a.placeId,'actor');if(!visible.has(a.placeId))errors.push('Actor in nonvisible place');
+    requirePlace(a.placeId,'actor');
     if(a.positionMode!=='normal'&&!a.positionReason)errors.push('Special actor position needs a reason');
     if(a.tagType==='patrol'&&!a.onPatrol)errors.push('Patrol tag requires onPatrol');
     if(a.onPatrol&&!['prefect','patrol','caretaker'].includes(a.role))errors.push('Patrol duty requires an eligible role');
   }
+  data.view.routePlaceIds.forEach(id=>requirePlace(id,'route'));
   const date=new Date(data.meta.date+'T00:00:00Z');
   if(!Number.isFinite(date.valueOf())||date.toISOString().slice(0,10)!==data.meta.date)errors.push('Invalid RP date');
-  if(data.hints.length&&!data.questPolicy)errors.push('MAP_DATA.questPolicy: required when hints are present');
-  if(data.questPolicy){
-    if(data.questPolicy.month!==data.meta.date.slice(0,7))errors.push('Quest month must match RP month');
-    if(Object.values(data.questPolicy.limits).reduce((a,b)=>a+b,0)>6)errors.push('Quest limits total exceeds 6');
-    const counts={main:0,side:0,pool:0,life:0},questIds=new Set();
-    for(const h of data.hints){
-      requirePlace(h.placeId,'hint');if(!visible.has(h.placeId))errors.push('Hint in nonvisible place');
-      if(h.packId!==data.questPolicy.packId)errors.push('Hint from another monthly pack');
-      const key=h.packId+'/'+h.sourceQuestId;if(questIds.has(key))errors.push('Duplicate quest source');questIds.add(key);
-      if(++counts[h.type]>data.questPolicy.limits[h.type])errors.push('Hint type quota exceeded');
-    }
-  }
+  const counts={side:0,hint:0,pool:0,life:0};
+  for(const h of data.hints){requirePlace(h.placeId,'hint');counts[h.type]++;}
+  if(counts.side>2||counts.hint>1||counts.pool+counts.life>2)errors.push('Hint display limit: 2 side, 1 hint, 2 pool/life');
   const graph=new Map(data.places.map(p=>[p.id,[]]));
   for(const c of data.connections){requirePlace(c.from,'connection');requirePlace(c.to,'connection');if(c.from===c.to)errors.push('Self connection');graph.get(c.from)?.push(c.to);graph.get(c.to)?.push(c.from);}
   for(let i=1;i<data.view.routePlaceIds.length;i++)if(!graph.get(data.view.routePlaceIds[i-1])?.includes(data.view.routePlaceIds[i]))errors.push('Route has an unlinked step');
-  if(data.view.routePlaceIds.length&&data.view.routePlaceIds[0]!==data.focus.actualPlaceId)errors.push('Route must begin at PC');
+  if(data.view.routePlaceIds.length&&data.view.routePlaceIds[0]!==pcs[0]?.placeId)errors.push('Route must begin at PC');
   // Geometry is explicitly sourced from the current scene: no inferred ground from roof/shape bounds.
   const spatial=data.view.spatial;
   if(spatial){
@@ -106,3 +96,15 @@ export function validateMapData(data) {
 export function assertMapData(data){const result=validateMapData(data);if(!result.ok)throw new Error(result.errors.join('; '));return normalizeMapData(data)}
 // Safe JSON for a non-executable application/json script element. Viewer uses textContent.
 export function serializeMapData(data){assertMapData(data);return JSON.stringify(data).replace(/[<>&\u2028\u2029]/g,c=>'\\u'+c.charCodeAt(0).toString(16).padStart(4,'0'))}
+
+// Derived render-only state, never requested from Gemini or exported as input.
+export function mapSceneData(input){
+ const data=assertMapData(input),pc=data.actors.find(a=>a.isPC);
+ return {...data,focus:{pcActorId:pc.id,actualPlaceId:pc.placeId,selectedId:data.view.selectedId},
+  visibility:{...data.visibility,visiblePlaceIds:data.places.map(p=>p.id)}};
+}
+export function mapPublicData(scene){
+ const {focus,...data}=scene;
+ const {visiblePlaceIds,...visibility}=data.visibility;
+ return {...data,visibility};
+}

@@ -7,10 +7,10 @@ p=argparse.ArgumentParser();p.add_argument('--out',default='/tmp/wizamap-experim
 out=Path(a.out).resolve()
 if out==ROOT or ROOT in out.parents:p.error('Keep generated test HTML outside the repository')
 out.mkdir(parents=True,exist_ok=True)
-base=json.loads((ROOT/'tools/contract-fixture.json').read_text())
+base=json.loads((ROOT/'tools/fixtures/scene.json').read_text())
 scenes=[]
 for key,title,fn,shape in [('library','Thư viện có đồ trên bàn','library','U'),('bedroom','Phòng ngủ','residential','L'),('classroom','Lớp học','classroom','rectangle'),('potions','Phòng Độc dược','potions','round')]:
- d=copy.deepcopy(base);d['view'].update(preferredMode='generated',spaceKind='interior',scopeId='experiment',templateId=None)
+ d=copy.deepcopy(base);d['view'].update(preferredMode='generated',templateId=None)
  d['meta']['areaName']='Cảnh kiểm thử';d['places'][0]['name']=title
  d['places'][0]['generation']={'function':fn,'shape':shape,'width':420,'depth':360,'floorMaterial':'wood' if key=='bedroom' else 'tile' if key=='potions' else 'stone','furnishings':[]}
  d['hints']=[];scenes.append((key,title,d))

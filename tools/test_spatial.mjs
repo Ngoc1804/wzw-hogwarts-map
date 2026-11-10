@@ -11,14 +11,14 @@ test('occluder catalog has no duplicate semantic bindings',()=>{for(const names 
 import {validateMapData} from '../runtime/map-data.mjs';
 import fs from 'node:fs';
 test('MAP_DATA optional spatial geometry and explicit blocked polygon validate',()=>{
- const d=JSON.parse(fs.readFileSync(new URL('contract-fixture.json',import.meta.url)));
+ const d=JSON.parse(fs.readFileSync(new URL('fixtures/scene.json',import.meta.url)));
  d.view.spatial={walkableRegions:[region('ground')],blockedRegions:[region('roof',40,40,20,20)],occlusionRegions:[{...region('behind-house'),targetId:'hagrid'}]};
  assert.equal(validateMapData(d).ok,true);
  d.view.spatial.walkableRegions.push(region('ground'));assert.equal(validateMapData(d).ok,false);
 });
 
 test('occlusion may pin one exact artwork ID without guessing from grouped bindings',()=>{
- const d=JSON.parse(fs.readFileSync(new URL('contract-fixture.json',import.meta.url)));
+ const d=JSON.parse(fs.readFileSync(new URL('fixtures/scene.json',import.meta.url)));
  d.view.spatial={walkableRegions:[region('ground')],blockedRegions:[],occlusionRegions:[{...region('roof'),targetId:'hogsmeade-homes',interactiveId:'v-home-6'}]};
  assert.equal(validateMapData(d).ok,true);
  d.view.spatial.occlusionRegions[0].interactiveId='';

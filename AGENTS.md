@@ -1,4 +1,4 @@
-# WIZAMAP: nguồn phát triển fix/map-flow-review
+# WIZAMAP: nguồn phát triển demo-2
 
 ## Bắt đầu
 
@@ -38,7 +38,7 @@ Hybrid: mặt bằng cho phòng/tường/lối đi; nội thất/decor dùng top
 
 Atlas canon đang do phiên khác làm: không sửa maps/*, docs/ATLAS.md hoặc docs/research/* trong tác vụ dọn file nếu chưa có yêu cầu mới. Luôn fetch head mới trước khi push; không force-push.
 
-Cơ chế /MAP chuẩn: docs/MAP_FLOW.md và runtime/map-data.schema.json. Không tạo hợp đồng khác trong README/HTML mẫu. Giữ cap 10 tag NPC ngoài PC, 6 hint đúng tháng RP, crop/fog theo cảnh RP, không giới hạn cứng quanh PC. Resolver trả plan cho viewer; renderer/browser đã có. Không tuyên bố nghiệm thu AI Studio nếu chưa chạy phiên Playground thật.
+Cơ chế /MAP chuẩn: docs/MAP_FLOW.md và runtime/map-data.schema.json. Không tạo hợp đồng khác trong README/HTML mẫu. Giữ cap 10 tag NPC ngoài PC, 5 hint (2 side, 1 hint, 2 pool/life) đúng nguồn RP, crop/fog theo cảnh RP, không giới hạn cứng quanh PC. Resolver trả plan cho viewer; renderer/browser đã có. Không tuyên bố nghiệm thu AI Studio nếu chưa chạy phiên Playground thật.
 
 ## Yêu cầu đã duyệt mới
-MAP_DATA 2.0.0, Preview một chiều, không seed/storage; không khôi phục hai file ví dụ. Khi stance=walk, thanh hành động phải ghi Đang đi; RP quyết định chuyển động. Bảng tra mới: maps/decision-atlas.json.
+MAP_DATA 3.0.0, Preview một chiều, không seed/storage; không khôi phục hai file ví dụ. Khi stance=walk, thanh hành động phải ghi Đang đi; RP quyết định chuyển động. Bảng tra cho Gemini: maps/ai-lookup.json. Flow duy nhất: docs/MAP_FLOW.md. Chỉ meta/places/actors bắt buộc; không tái thêm focus/questPolicy hoặc visiblePlaceIds vào hợp đồng.

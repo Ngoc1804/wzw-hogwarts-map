@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import index from '../runtime/atlas-index.json' with {type:'json'};
 import {resolveMap} from '../runtime/resolve-map.mjs';
 import {buildGeometry} from '../runtime/geometry.mjs';
-const fixture=JSON.parse(fs.readFileSync(new URL('contract-fixture.json',import.meta.url)));
+const fixture=JSON.parse(fs.readFileSync(new URL('fixtures/scene.json',import.meta.url)));
 export function auditCoverage(){
  const entries=index.knownPlaceIds.map(id=>{
   const row={id,name:index.canonicalNameById[id]};
@@ -12,7 +12,7 @@ export function auditCoverage(){
   if(index.noGeneratePlaceIds.includes(id))return {...row,status:'missing-fixed-binding'};
   if(index.placeFunctionById[id]==='outdoor')return {...row,status:'missing-outdoor-surface'};
   const d=structuredClone(fixture);d.places=[{...d.places[0],id,name:row.name,atlasRef:null,kind:index.corridorPlaceIds.includes(id)?'corridor':'room',generation:null}];
-  d.view={...d.view,preferredMode:'generated',templateId:null,centerPlaceId:id,routePlaceIds:[id]};d.focus.actualPlaceId=id;d.actors.forEach(a=>a.placeId=id);d.hints.forEach(h=>h.placeId=id);d.visibility.visiblePlaceIds=[id];
+  d.view={...d.view,preferredMode:'generated',templateId:null,routePlaceIds:[id]};d.actors.forEach(a=>a.placeId=id);d.hints.forEach(h=>h.placeId=id);
   try{const plan=resolveMap(d);const geometry=buildGeometry(plan,plan.indoor);if(!geometry.suggestedAnchors[id]?.length)throw Error('No actor anchor');return {...row,status:'generated-indoor'};}
   catch(e){return {...row,status:'generation-error',reason:e.message};}
  });

@@ -9,10 +9,10 @@ const root=path.resolve(__dirname,'..'),review=JSON.parse(fs.readFileSync(root+'
   const rel=route.request().url().split(/@[a-f0-9]{40}\//)[1];return route.fulfill({body:fs.readFileSync(path.join(root,rel)),contentType:rel.endsWith('.svg')?'image/svg+xml':rel.endsWith('.json')?'application/json':'text/html'});
  });
  await p.setContent(fs.readFileSync(process.argv[2]||'/tmp/wzw-test/preview.html','utf8'));await p.waitForFunction(()=>window.WIZAMAP_TEST);
- const sample=JSON.parse(fs.readFileSync(root+'/tools/contract-fixture.json'));
+ const sample=JSON.parse(fs.readFileSync(root+'/tools/fixtures/scene.json'));
  for(const row of review.entries.filter(e=>e.disposition.startsWith('resolved-'))){
   const d=structuredClone(sample),id=row.id;d.places=[{...d.places[0],id,name:row.name,atlasRef:null,generation:null}];d.actors=[{...d.actors[0],placeId:id}];d.hints=[];
-  d.focus.actualPlaceId=id;d.view.centerPlaceId=id;d.view.routePlaceIds=[];delete d.view.scopeId;d.visibility.visiblePlaceIds=[id];
+  d.view.routePlaceIds=[];delete d.view.scopeId;
   if(row.disposition==='resolved-binding'){
    d.view.preferredMode='template';d.view.templateId=row.templateId;
    if(row.templateId==='h2'){

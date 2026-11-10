@@ -16,3 +16,18 @@ export function collectFloorSurfaces(svg){
  const blocked=[...svg.querySelectorAll('[data-surface="blocked"],[data-obstacle="true"]')];
  return {nodes:unique,contains:p=>!!p&&unique.some(n=>contains(n,p))&&!blocked.some(n=>contains(n,p))};
 }
+
+// Select a display point on confirmed floor near the actual place anchor.
+// SVG bounds guide the search only; the contains predicate proves walkability.
+export function nearestFloorPoint({origin,contains,occupied=[],maxDistance=160}){
+ const valid=p=>contains(p)&&!occupied.some(q=>Math.hypot(q.x-p.x,q.y-p.y)<12);
+ if(valid(origin))return {...origin};
+ for(let radius=8;radius<=maxDistance;radius+=8){
+  const count=Math.max(16,Math.ceil(radius/3));
+  for(let i=0;i<count;i++){
+   const angle=2*Math.PI*i/count,p={x:origin.x+radius*Math.cos(angle),y:origin.y+radius*Math.sin(angle)};
+   if(valid(p))return p;
+  }
+ }
+ return null;
+}

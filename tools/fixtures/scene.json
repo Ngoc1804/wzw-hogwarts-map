@@ -1,9 +1,5 @@
 {
-  "schemaVersion": "2.0.0",
-  "campaignId": "demo-au",
-  "worldId": "demo-world",
-  "snapshotId": "turn-001",
-  "atlasVersion": "atlas-optimized-1.0",
+  "schemaVersion": "3.0.0",
   "meta": {
     "date": "1992-09-11",
     "time": "10:25",
@@ -11,20 +7,12 @@
     "quote": "Lạc có kế hoạch vẫn được tính là khám phá."
   },
   "view": {
-    "scopeId": "hogwarts-grounds",
-    "spaceKind": "grounds",
     "preferredMode": "auto",
     "templateId": null,
-    "centerPlaceId": "local-greenhouses",
     "routePlaceIds": [
       "local-greenhouses"
     ],
     "crop": true
-  },
-  "focus": {
-    "pcActorId": "pc",
-    "actualPlaceId": "local-greenhouses",
-    "selectedId": null
   },
   "places": [
     {
@@ -55,10 +43,8 @@
       "onPatrol": false,
       "stance": "idle",
       "activity": "Đang quan sát",
-      "priority": 100,
       "positionMode": "normal",
       "positionReason": null,
-      "presenceBasis": "status",
       "inspector": {
         "overhear": "Bạn đang quan sát.",
         "observation": "Khu nhà kính ở ngay cạnh."
@@ -69,12 +55,9 @@
   "hints": [
     {
       "id": "hint-pots",
-      "packId": "pack-1992-09",
-      "sourceQuestId": "help-pots",
       "placeId": "local-greenhouses",
       "type": "life",
       "title": "Chuyển chậu cần thêm một tay?",
-      "priority": 50,
       "inspector": {
         "overhear": "Nhóm học sinh đang tìm người phụ.",
         "observation": "Một xe chậu đang chờ."
@@ -82,19 +65,6 @@
     }
   ],
   "visibility": {
-    "visiblePlaceIds": [
-      "local-greenhouses"
-    ],
     "fogRegionIds": []
-  },
-  "questPolicy": {
-    "month": "1992-09",
-    "packId": "pack-1992-09",
-    "limits": {
-      "main": 0,
-      "side": 0,
-      "pool": 0,
-      "life": 6
-    }
   }
 }

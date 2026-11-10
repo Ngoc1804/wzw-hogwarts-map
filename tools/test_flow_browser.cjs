@@ -1,6 +1,6 @@
 // End-to-end /MAP checks. Uses local assets; never calls an RP service.
 const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),sample=JSON.parse(fs.readFileSync(root+'/tools/contract-fixture.json'));
+const root=path.resolve(__dirname,'..'),sample=JSON.parse(fs.readFileSync(root+'/tools/fixtures/scene.json'));
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
  const p=await browser.newPage({viewport:{width:1360,height:900},acceptDownloads:true}),errors=[],requests=[];

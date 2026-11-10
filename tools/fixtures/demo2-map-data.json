@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "date": "1992-09-11",
+    "time": "10:25",
+    "areaName": "Cảnh giả lập Demo 2"
+  },
+  "places": [
+    {
+      "id": "room-0",
+      "name": "classroom",
+      "kind": "room",
+      "generation": {
+        "function": "classroom"
+      }
+    },
+    {
+      "id": "room-1",
+      "name": "office",
+      "kind": "room",
+      "generation": {
+        "function": "office"
+      }
+    },
+    {
+      "id": "room-2",
+      "name": "store",
+      "kind": "room",
+      "generation": {
+        "function": "store"
+      }
+    },
+    {
+      "id": "room-3",
+      "name": "practice",
+      "kind": "room",
+      "generation": {
+        "function": "practice"
+      }
+    },
+    {
+      "id": "room-4",
+      "name": "group",
+      "kind": "room",
+      "generation": {
+        "function": "group"
+      }
+    }
+  ],
+  "actors": [
+    {
+      "id": "pc",
+      "name": "PC giả lập",
+      "placeId": "room-0",
+      "isPC": true,
+      "tagType": "gryffindor"
+    },
+    {
+      "id": "npc-1",
+      "name": "NPC giả lập 1",
+      "placeId": "room-1",
+      "isPC": false,
+      "tagType": "teacher"
+    },
+    {
+      "id": "npc-2",
+      "name": "NPC giả lập 2",
+      "placeId": "room-2",
+      "isPC": false,
+      "tagType": "teacher"
+    },
+    {
+      "id": "npc-3",
+      "name": "NPC giả lập 3",
+      "placeId": "room-3",
+      "isPC": false,
+      "tagType": "teacher"
+    },
+    {
+      "id": "npc-4",
+      "name": "NPC giả lập 4",
+      "placeId": "room-4",
+      "isPC": false,
+      "tagType": "teacher"
+    }
+  ],
+  "hints": [
+    {
+      "id": "h0",
+      "type": "side",
+      "placeId": "room-0",
+      "title": "Mục giả lập 0"
+    },
+    {
+      "id": "h1",
+      "type": "side",
+      "placeId": "room-1",
+      "title": "Mục giả lập 1"
+    },
+    {
+      "id": "h2",
+      "type": "hint",
+      "placeId": "room-2",
+      "title": "Mục giả lập 2"
+    },
+    {
+      "id": "h3",
+      "type": "pool",
+      "placeId": "room-3",
+      "title": "Mục giả lập 3"
+    },
+    {
+      "id": "h4",
+      "type": "life",
+      "placeId": "room-4",
+      "title": "Mục giả lập 4"
+    }
+  ]
+}

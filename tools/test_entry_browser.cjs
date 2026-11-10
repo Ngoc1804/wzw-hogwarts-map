@@ -10,9 +10,9 @@ const root=require('path').resolve(__dirname,'..');
   return route.fulfill({body:fs.readFileSync(root+'/'+rel),contentType:rel.endsWith('.json')?'application/json':'image/svg+xml'});
  });
  const bundle=fs.readFileSync(process.argv[2]||'/tmp/wzw-test/bundle.js','utf8');
- const source=JSON.parse(fs.readFileSync(root+'/tools/contract-fixture.json'));
+ const source=JSON.parse(fs.readFileSync(root+'/tools/fixtures/scene.json'));
  const d=structuredClone(source);for(const k of ['campaignId','worldId','snapshotId','atlasVersion','view','connections','questPolicy'])delete d[k];
- d.hints=[];delete d.focus.selectedId;delete d.meta.quote;delete d.visibility.fogRegionIds;
+ d.hints=[];delete d.meta.quote;delete d.visibility.fogRegionIds;
  d.places[0].generation={function:'study',shape:'rectangle',furnishings:[]};delete d.places[0].atlasRef;
  const html=(input,debug=false,windowEntry=false)=>'<!doctype html><html><head><meta charset="utf-8"></head><body>'+
  (windowEntry?'<script>window.MAP_DATA='+JSON.stringify(input).replace(/</g,'\\u003c')+'</script>':'<script type="application/json" id="MAP_DATA">'+(typeof input==='string'?input:JSON.stringify(input).replace(/</g,'\\u003c'))+'</script>')+
@@ -38,7 +38,7 @@ const root=require('path').resolve(__dirname,'..');
  hidden.connections=[{id:'connection',from:hidden.places[0].id,to:'public-but-not-displayed',kind:'doorway',state:'open'}];
  await page.evaluate(d=>WIZAMAP_TEST.render(d),hidden);
  const exported=await page.evaluate(()=>WIZAMAP_TEST.data);
- assert.equal(exported.places.length,1);assert.equal(exported.connections.length,0);
+ assert.equal(exported.places.length,2);assert.equal(exported.connections.length,1);
  assert.deepEqual(errors,[]);console.log('PASS compact JSON/window entry, production controls, malformed JSON, fail-closed render/recovery, scene-only export');
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exit(1)});

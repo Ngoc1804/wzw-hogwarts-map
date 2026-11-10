@@ -7,6 +7,10 @@ const item=(id,assetId,width,depth,placement='auto',extra={})=>({id,role:id,asse
 export function roomRecipe(place){
  const f=place.generation?.function||place.kind||'other';
  const decor=[item('lamp','extra.sconce',18,14,'wall-north'),item('plant','plant.pot-top',24,24,'wall-east')];
+ // Stage-1 purposes adapted to the current collision-aware placement engine.
+ if(/^(office|administration)$|văn phòng/i.test(f))return [item('desk','table.desk',65,40,'wall-north'),item('chair','seat.armchair',28,28,'wall-east',{count:2}),item('shelf','storage.bookcase-top',65,22,'wall-west'),item('fireplace','fixture.fireplace-top',45,25,'wall-south'),item('rug','object.rug-round',70,70,'center'),...decor];
+ if(/^(practice|practical)$|thực hành/i.test(f))return [item('bench','table.prep',48,30,'rows',{count:3}),item('stool','seat.stool',18,18,'auto',{count:3,near:'bench',nearOffset:{x:0,y:34}}),item('shelf','storage.bookcase-top',55,22,'wall-north'),...decor];
+ if(/^(group|group-study)$|học nhóm/i.test(f))return [item('table','table.round',42,42,'rows',{count:2}),item('chair','seat.dining',18,18,'auto',{count:4,near:'table',nearOffset:{x:0,y:34}}),item('shelf','storage.bookcase-top',50,22,'wall-north'),item('rug','object.rug',90,60,'center'),...decor];
  if(/bed|dorm|sleep|residential|ngủ|ký túc/i.test(f))return [item('bed','bed.single',50,84,'wall-west'),item('wardrobe','storage.cabinet',48,28,'wall-north'),item('desk','table.desk',55,36,'wall-east'),item('rug','object.rug',65,45,'center'),...decor];
  if(/potions|alchemy|độc dược/i.test(f))return [item('bench','table.prep',76,38,'wall-north'),item('cauldron','wizard.cauldron',36,36),item('cabinet','wizard.potions-cabinet',48,28,'wall-west'),item('bottle','accessory.bottle',10,15,'auto',{on:'bench'}),...decor];
  if(/library|archive|thư viện/i.test(f))return [item('shelf','storage.bookcase',70,26,'wall-north',{count:2}),item('table','table.study',65,45),item('chair','seat.dining',24,24),item('book','accessory.book-open',18,14,'auto',{on:'table'}),...decor];
@@ -16,7 +20,7 @@ export function roomRecipe(place){
  if(/hospital|ward|infirm|healing|bệnh/i.test(f))return [item('bed','bed.single',40,65,'rows',{count:2}),item('cabinet','storage.cabinet',45,28,'wall-north'),item('lamp','extra.sconce',18,14,'wall-east')];
  if(/shop|commerce|tiệm|cửa hàng/i.test(f))return [item('counter','object.counter',80,30,'wall-north'),item('display','storage.display',55,28,'wall-west'),item('crate','object.crate',28,28,'wall-east'),...decor];
  if(/pub|tavern|dining|ăn|quán/i.test(f))return [item('table','table.round',50,50,'rows',{count:2}),item('seat','seat.stool',22,22,'rows',{count:4}),item('bar','object.counter',70,28,'wall-north'),...decor];
- if(/storage|kho/i.test(f))return [item('shelf','storage.open',65,28,'wall-north'),item('crate','object.crate',32,32,'rows',{count:3}),item('barrel','object.barrel',30,30,'wall-west'),item('lamp','extra.sconce',18,14,'wall-east')];
+ if(/storage|^store$|kho/i.test(f))return [item('shelf','storage.open',65,28,'wall-north'),item('crate','object.crate',32,32,'rows',{count:3}),item('barrel','object.barrel',30,30,'wall-west'),item('lamp','extra.sconce',18,14,'wall-east')];
  if(/common|lounge|phòng chung/i.test(f))return [item('sofa','seat.sofa',80,38,'wall-north'),item('table','table.coffee',55,35),item('rug','object.rug',60,42,'center'),...decor];
  if(place.kind==='corridor'||/circulation|service/i.test(f))return [item('portrait','decor.portrait',35,18,'wall-north'),item('lamp','extra.sconce',18,14,'wall-east')];
  return [item('desk','table.desk',60,38,'wall-north'),item('chair','seat.dining',24,24),item('shelf','storage.bookcase',55,25,'wall-west'),item('book','accessory.book-open',18,14,'auto',{on:'desk'}),...decor];

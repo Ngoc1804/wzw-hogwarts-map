@@ -5,7 +5,7 @@ import {buildGeometry,indoorActorPoint} from '../runtime/geometry.mjs';
 import {insidePolygon} from '../runtime/architecture/walls.mjs';
 import {resolveMap} from '../runtime/resolve-map.mjs';
 import {validateMapData} from '../runtime/map-data.mjs';
-const source=()=>JSON.parse(fs.readFileSync(new URL('contract-fixture.json',import.meta.url)));
+const source=()=>JSON.parse(fs.readFileSync(new URL('fixtures/scene.json',import.meta.url)));
 const place=(i,shape='rectangle')=>({id:'room-'+i,name:'Phòng '+i,kind:'room',floor:'F1',generation:{function:'study',shape,furnishings:[]}});
 const plan=(n,shapes=[])=>({mode:'generated',places:Array.from({length:n},(_,i)=>place(i,shapes[i]||'rectangle')),connections:[]});
 const inRegion=(pt,region)=>insidePolygon(pt.x,pt.y,region.points.map(p=>[p.x,p.y]));

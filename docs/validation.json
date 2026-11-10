@@ -1,152 +1,68 @@
 {
-  "date": "2026-11-09",
-  "assetBaselineCommit": "9b1562a",
-  "assetCount": 259,
-  "houseMasters": 18,
-  "treeMasters": 12,
-  "specialTrees": 2,
-  "assetFilesUnchanged": true,
-  "assetOrphans": 0,
-  "atlasOwnedByOtherSession": "untouched",
-  "atlasHtmlUnchanged": true,
+  "date": "2026-11-10",
+  "branch": "demo-2",
+  "baseCommit": "c2aa907ccdcdb904e6ed0e52ee42ab287300f28e",
+  "contract": "3.0.0",
   "checks": {
-    "atlasStructure": "13 maps, references valid",
-    "atlasTests": 5,
-    "ministryTests": 2,
-    "inventoryTests": 3,
-    "sceneryTests": 3,
-    "uiTests": 3,
-    "gallery": "passed"
-  },
-  "browser": "not rerun: no changes to HTML, CSS, SVG, palettes, or viewer scripts; visual baseline remains 9b1562a",
-  "cleanup": {
-    "removedFiles": [
-      "tools/asset-review.html",
-      "tools/report_asset_review.py",
-      "tools/audit_assets.py",
-      "elements/docs/functional-review.json",
-      "elements/docs/FUNCTIONAL_REVIEW.md",
-      "elements/docs/asset-audit.json",
-      "elements/docs/scenery-consolidation.json",
-      "elements/scripts/svgkit.py",
-      "elements/requirements.txt",
-      "docs/STEPS_1_3.md"
-    ],
-    "removedBytes": 2093199,
-    "closedPrs": [
-      1,
-      2
-    ],
-    "deletedObsoleteBranches": 5,
-    "defaultBranchChange": "blocked: GitHub API 403 Resource not accessible by integration",
-    "remainingBranches": "demo-1 and main, synchronized by fast-forward; main remains default until settings changed"
-  },
-  "mapDataMechanism": {
-    "date": "2026-11-09",
-    "schemaVersion": "1.0.0",
-    "contractTests": 15,
-    "uiTests": 3,
-    "inventoryTests": 3,
-    "browser": "Chromium: JSON modules, both examples, template selection, generated plan, Web Crypto seed passed; no page errors",
-    "approvedArtworkAndUiUnchanged": true,
-    "atlasFilesUnchanged": true,
-    "implementation": "schema, validation, planning and persistence adapter; no complete geometry renderer or AI Studio integration"
-  },
-  "indoorLayoutRebuild": {
-    "date": "2026-11-09",
-    "status": "rejected demo and geometry removed; replacement not implemented; development plan not approved",
-    "reference": "WIZAMAP_QA_V2_Interactive (1).html",
-    "referenceSha256": "26d6073fbcc9c3fb5957e56f8925dfc8db8530e4f16268114966c57d48c9ca33",
-    "removedGeometryFiles": [
-      "runtime/corridors.mjs",
-      "tools/test_corridors.mjs"
-    ],
-    "removedEarlier": [
-      "tools/corridor-demo.html",
-      "tools/build_corridor_demo.py"
-    ],
-    "checks": {
-      "mapDataTests": 15,
-      "atlasTests": 5,
-      "atlasValidation": "13 maps, references valid",
-      "diffCheck": "passed",
-      "browser": "not rerun: no rendering changes; replacement renderer not implemented"
-    }
-  },
-  "runtimeV2": {
-    "schemaVersion": "2.0.0",
-    "status": "implemented baseline; detailed limitations in docs/DEVELOPMENT_STATUS.md",
-    "nodeTests": 14,
-    "atlasTests": 5,
-    "inventoryTests": 3,
-    "sceneryTests": 3,
-    "gallery": "259 passed",
-    "chromium": "13 templates mounted; no page errors; generated, fog and walking status verified",
-    "aiStudio": "not tested in authenticated Preview this session",
-    "mobileHardware": "not tested",
-    "offline": "Exported HTML reload via setContent with network blocked passed; file:// navigation blocked by managed Chrome policy",
-    "decisionAtlasPlaces": 762,
-    "mergedReferences": 66,
-    "ornamentPathsRemoved": {
-      "library": 29,
-      "embeddedAtlas": 5
+    "node": {
+      "passed": 60,
+      "failed": 0,
+      "command": "npm test"
     },
-    "auLocations": "Fictional AU addresses and floor plans, explicitly authorized by user for publication to this repository."
+    "python": {
+      "atlas": 5,
+      "inventory": 3,
+      "scenery": 3,
+      "ministry": 2
+    },
+    "gallery": "catalog/frame equality, pagination, search, neutral view, SVG download passed",
+    "browser": {
+      "suites": [
+        "entry",
+        "flow/furnishings",
+        "coverage bindings",
+        "13 templates + 4 exterior coordinates",
+        "Demo 2 five-room simulated MAP_DATA",
+        "exact production loader",
+        "6 offline experiments"
+      ],
+      "viewports": [
+        "1360x900",
+        "390x700",
+        "390x520",
+        "390x420"
+      ],
+      "freshOfflineExport": true,
+      "fiveRoomOmittedFurnishings": true,
+      "hintLimits": "2 side + 1 hint + 2 pool/life",
+      "authenticatedPlayground": false
+    },
+    "simulatedInput": "tools/fixtures/demo2-map-data.json"
   },
-  "spatialActorCropFog": {
-    "date": "2026-11-10",
-    "status": "code and unit tests implemented, CI checked; no authenticated AI Studio or hardware validation",
-    "sceneGeometry": "per-/map optional view.spatial; explicitly verified polygon surfaces required for exterior actors",
-    "occlusion": "verified candidate binding + explicit polygon + interactiveId for grouped targets; hover/selection opacity 0.7",
-    "crop": "fit scene visible targets, route and actor positions; not PC radius",
-    "fog": "polygon hides actor ribbon, footsteps, hint and blocks place inspector interactions; RP secrets must be excluded upstream",
-    "atlas": "atlas-optimized-1.0, 747 source references, 733 unique places, 14 merges",
-    "releaseBundleSha": "d79eed97db61f877983803d3da9f53ac88fe6ef6",
-    "ci": "Node spatial tests, runtime compilation, atlas and inventory validations; browser and AI Studio not rerun"
+  "assetCount": 259,
+  "maps": 13,
+  "coverage": {
+    "generated-indoor": 440,
+    "locked-by-policy": 90,
+    "missing-fixed-binding": 62,
+    "missing-outdoor-surface": 22,
+    "template": 112
   },
-  "indoorStage2": {
-    "status": "implemented source; CI and pinned bundle; browser/AI Studio pending",
-    "date": "2026-11-10",
-    "bundleSha": "308705107c240dff20decb1d4bf08c7337186217",
-    "generated": "scene-only Stage 2 ten formulas, no 3-column or A-star",
-    "output": [
-      "floorPolygons",
-      "actorZones",
-      "exclusionZones",
-      "suggestedAnchors"
-    ],
-    "constraints": [
-      "one scene floor",
-      "no stored layout",
-      "no fake corridor-only room",
-      "no multiwing assembly",
-      "no movement simulation"
-    ],
-    "browser": "not reverified on authenticated AI Studio Preview",
-    "mobileHardware": "not tested",
-    "crop": "Generated scene keeps full room/hallway geometry in view, not actor-only anchors"
+  "bundle": {
+    "staticAssetRef": "c2aa907ccdcdb904e6ed0e52ee42ab287300f28e",
+    "sha256": "273016160ff26f7c223d9e9a56f8ace660b4b0a5a62a3b9f976f1476f489c9dc",
+    "bytes": 320005
   },
-  "atlasCorridorRelease": {
-    "date": "2026-11-10",
-    "status": "implemented, CI subject to final check, authenticated AI Studio and real hardware not yet tested",
-    "sourceEntries": 747,
-    "canonicalPlaces": 726,
-    "mergedOccurrences": 21,
-    "aliases": 21,
-    "verifiedSvgPlaceBindings": 101,
-    "castlePresets": 44,
-    "towerPresets": 27,
-    "enabledAuPresets": 7,
-    "stMungoPresets": 6,
-    "lockedAuMaps": 5,
-    "buildableAu": [
-      "CCC 07.18 main room",
-      "Nhà PC London",
-      "Liad's Attic"
-    ],
-    "singleRoomFullFloor": true,
-    "courtyardExteriorMinistryGenerated": false,
-    "outdoorWalkableCoverage": "not verified for all templates",
-    "bundleSha": "01caed13f1aa0a6761b5ff7442a43a833b5d99a7"
+  "limitations": [
+    "84 canonical places still need exact metadata/geometry",
+    "90 locked AU/CCC places are not opened",
+    "Template regions without confirmed floor show inside labels only",
+    "Geometry is illustrative; no pathfinding or persistent layout",
+    "Authenticated Google AI Studio and physical mobile acceptance remains user testing"
+  ],
+  "assetMetadata": {
+    "occupancy": 218,
+    "supportSurface": 15,
+    "note": "Coverage metadata is not a claim that every asset supports navigation or on-table placement."
   }
 }
