@@ -47,7 +47,7 @@ export function resolveMap(input,templates=registry.templates){
    return p;
   });
   return {mode:'generated',sceneType:'custom',customScene:data.customScene,
-   scopeId:data.customScene.id,atlasVersion,places,
+   scopeId:data.customScene.id,atlasVersion:atlasVersion(),places,
    connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
  }
  if(!known)throw Error('Unknown Atlas PC location: provide a user-created customScene with a short structural description');
@@ -65,7 +65,7 @@ export function resolveMap(input,templates=registry.templates){
  if(selected){
   const places=listed.filter(p=>technical(p,selected,templates))
    .map(p=>({...p,atlasRef:technical(p,selected,templates)}));
-  return {mode:'template',templateId:selected,scopeId:'template:'+selected,atlasVersion,
+  return {mode:'template',templateId:selected,scopeId:'template:'+selected,atlasVersion:atlasVersion(),
    places,targets:places.map(p=>({placeId:p.id,interactiveIds:templates[selected].targets[p.atlasRef]}))};
  }
  if(data.view.preferredMode==='template')throw Error('PC location has no verified fixed template');
@@ -84,7 +84,7 @@ export function resolveMap(input,templates=registry.templates){
   return placeWithGeneration(room);
  }).filter(Boolean);
  if(!places.some(p=>p.id===pcId))throw Error('PC location cannot be rendered by its Atlas scope');
- return {mode:'generated',sceneType:'atlas',scopeId:group.key,atlasVersion,
+ return {mode:'generated',sceneType:'atlas',scopeId:group.key,atlasVersion:atlasVersion(),
   places,connections:data.connections.filter(c=>ids.has(canonicalPlaceId(c.from))&&ids.has(canonicalPlaceId(c.to))),
   indoor:generatedSceneOptions(data,{places})};
 }
