@@ -16,3 +16,6 @@ body.motion-off #mapmount *{animation-play-state:paused!important}#mapmount .tre
 .mapmount{touch-action:none;min-height:0}.qa-error:empty{display:none}
 
 #actor-action{display:block;font-size:12px;color:var(--paper);margin-inline-start:auto}
+
+/* Actor names always sit above artwork; hidden RP actors never enter this layer. */
+.qa-tags{z-index:4}.qa-tags .ribbon{max-width:min(210px,90vw)}

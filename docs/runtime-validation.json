@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-10",
+  "baseCommit": "6d99d1486ace2fa186b3827702c23629f78fa62a",
+  "scope": "Indoor furnishings and simplified Preview flow",
+  "checks": {
+    "node": {
+      "passed": 54,
+      "failed": 0,
+      "command": "node --test --test-isolation=none tools/test_*.mjs"
+    },
+    "python": {
+      "atlas": 5,
+      "inventory": 3,
+      "scenery": 3,
+      "ministry": 2
+    },
+    "gallery": "npm ci and npm test passed; original 259 asset files unchanged",
+    "atlasStructure": "13 maps, references valid; index.html unchanged",
+    "browser": {
+      "templatesOpened": 13,
+      "exteriorTemplates": 4,
+      "floorMaterials": 4,
+      "mobileRoofLabels": 11,
+      "offlineExperiments": 6,
+      "checks": [
+        "furnishing asset loading",
+        "custom vector rendering",
+        "on-table placement",
+        "exact floor coordinates through zoom/mobile",
+        "roof labels",
+        "50% hover/focus/tap controller",
+        "offline HTML export/reopen",
+        "no unexpected external requests in offline experiments"
+      ]
+    }
+  },
+  "bundle": {
+    "bytes": 316766,
+    "previousBytes": 533471,
+    "sha256": "5fd317751eba115fafd928bb3ecd0e4cb2beb513870ccae2883fa27208674bb0",
+    "staticAssetRef": "6d99d1486ace2fa186b3827702c23629f78fa62a"
+  },
+  "notYetAccepted": [
+    "Authenticated Google AI Studio Preview",
+    "Physical mobile device"
+  ],
+  "outsideScope": [
+    "98 existing missing map/binding entries",
+    "Unopened AU maps",
+    "Arbitrary room polygons beyond six supported shapes"
+  ]
+}

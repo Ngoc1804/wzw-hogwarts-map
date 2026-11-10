@@ -77,3 +77,7 @@ Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phi�
 
 ## Runtime mới
 Xem [runtime/README.md](runtime/README.md), [quyết định atlas](docs/ATLAS_DECISIONS.md) và [luồng hiện hành](docs/MAP_FLOW.md). MAP_DATA 2.0.0 thay thế hợp đồng cũ có storage/locality.
+
+## Indoor tùy biến và test thực nghiệm
+
+Flow /MAP → MAP_DATA → template/atlas hoặc phòng dựng → nội thất/decor → Preview đã ghép trong runtime. Dùng asset có sẵn hoặc custom vector theo từng yêu cầu. Xem [hướng dẫn](docs/INDOOR_PREVIEW.md); tạo sáu cảnh offline bằng `python tools/prepare_experiment.py`.

@@ -48,12 +48,13 @@ export function occlusionController(candidates){
  function refresh(){
   const active=new Set([...held.values()].flat());
   for(const [target,old] of originals){
-   if(active.has(target))target.style.setProperty('opacity','0.7');
+   if(active.has(target))target.style.setProperty('opacity','0.5');
    else if(old.value)target.style.setProperty('opacity',old.value,old.priority);
    else target.style.removeProperty('opacity');
   }
  }
  return {
+  setTargets(key,targets){held.set(key,targets);refresh()},
   set(key,point){held.set(key,candidates.filter(c=>c.contains(point)).map(c=>c.target));refresh()},
   clear(key){held.delete(key);refresh()},
   dispose(){held.clear();refresh()}

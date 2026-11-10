@@ -2,6 +2,7 @@
 // No storage, pathfinding, mult-wing assembly or hidden-floor generation.
 import {buildIndoorLayout,rectangle,ppath} from './architecture/recipes.mjs';
 import {buildIndoorWalls,insidePolygon} from './architecture/walls.mjs';
+import {placeFurnishings} from './furnishings.mjs';
 
 const shapeFor=(p)=>{
  const shape=p.generation?.shape||'rectangle';
@@ -37,7 +38,7 @@ function positions(id,polygon,exclusions,margin=13){
    if(valid){
     if(!run)run=[x-half,y-half,x+half,y+half];
     else run[2]=x+half;
-    if(anchors.length<4&&(!anchors.length||Math.hypot(x-anchors.at(-1).x,y-anchors.at(-1).y)>65))anchors.push(point(x,y));
+    if(anchors.length<11&&anchors.every(a=>Math.hypot(x-a.x,y-a.y)>34))anchors.push(point(x,y));
    }else if(run){runs.push(run);run=null}
   }
   if(run)runs.push(run);
@@ -91,6 +92,17 @@ export function buildGeometry(plan,indoor={}){
   ...model.thresholds.map((v,i)=>asRegion('threshold-floor:'+i,v.poly))
  ];
  const exclusionZones=exclusions.map(z=>({...asRegion(z.id,z.poly),kind:z.kind}));
+ const furnishingInstances=[];
+ for(const r of model.rooms){
+  const place=places.find(p=>p.id===r.id),room=rooms[r.id];
+  room.floorMaterial=place.generation?.floorMaterial||'stone';room.floorColor=place.generation?.floorColor;
+  const instances=placeFurnishings(place,room,exclusionZones);
+  furnishingInstances.push(...instances.map(i=>({...i,placeId:r.id})));
+  for(const i of instances)if(i.blocking&&!i.on){
+   exclusions.push({id:'furniture:'+r.id+':'+i.instanceId,kind:'furniture',poly:i.poly});
+   exclusionZones.push({...asRegion('furniture:'+r.id+':'+i.instanceId,i.poly),kind:'furniture'});
+  }
+ }
  const actorZones=[],suggestedAnchors={},safeAreas={};
  for(const r of model.rooms){
   const v=positions(r.id,rooms[r.id].poly,exclusions,12);
@@ -115,13 +127,13 @@ export function buildGeometry(plan,indoor={}){
   floorPolygons.push(asRegion('corridor-place:'+p.id,area.floor));
  });
  for(const p of places)if(!suggestedAnchors[p.id]?.length)throw Error('Missing safe indoor anchor for '+p.id);
- return {rooms,model,walls,bounds:model.bounds,floorPolygons,actorZones,exclusionZones,suggestedAnchors,corridorAnchors,corridorPlaceIds:corridorPlaces.map(p=>p.id),safeAreas,routes:[]};
+ return {rooms,model,walls,furnishingInstances,bounds:model.bounds,floorPolygons,actorZones,exclusionZones,suggestedAnchors,corridorAnchors,corridorPlaceIds:corridorPlaces.map(p=>p.id),safeAreas,routes:[]};
 }
 export function indoorActorPoint(geometry,placeId,position){
  const zones=geometry.safeAreas[placeId];
  if(!zones)throw Error('Actor references room outside generated scene: '+placeId);
  if(position){
-  if(!zones.some(r=>insidePolygon(position.x,position.y,r.points.map(p=>[p.x,p.y]))))
+  if(!geometry.floorPolygons.some(r=>(r.id==='room:'+placeId||r.id==='corridor-place:'+placeId)&&insidePolygon(position.x,position.y,r.points.map(p=>[p.x,p.y])))||geometry.exclusionZones.some(r=>insidePolygon(position.x,position.y,r.points.map(p=>[p.x,p.y]))))
    throw Error('Indoor actor position outside verified safe floor: '+placeId);
   return position;
  }

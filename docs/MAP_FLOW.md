@@ -1,6 +1,6 @@
 # /MAP — Preview một chiều
 
-Context RP → Gemini xuất MAP_DATA 2.0.0 + HTML loader → loader fetch bundle qua một URL jsDelivr ghim commit → kiểm dữ liệu → chọn template hoặc dựng → Preview.
+/MAP → Gemini xuất MAP_DATA + HTML loader → chọn template theo atlas hoặc dựng phòng bằng element → ghép nội thất/decor theo yêu cầu → đặt NPC → Preview. Hướng dẫn tùy biến: [INDOOR_PREVIEW.md](INDOOR_PREVIEW.md).
 
 Gemini xác định thời gian RP, vị trí thật PC, NPC/nhóm hiện diện, hoạt động và hint đúng pack tháng. Lọc quyền biết trước khi xuất JSON; không gửi bí mật xuống browser rồi dựa vào fog để bảo vệ. Giữ cap PC + 10 tag NPC/nhóm và 6 hint. Khi đang di chuyển, stance=walk và thanh hành động ghi “Đang đi”; diễn biến RP quyết định việc di chuyển.
 
@@ -21,4 +21,4 @@ Generated corridor layout comes from the current floor/cluster's flexible `corri
 
 AU gate: build **only CCC 07.18 main room**, **Nhà PC · London**, **Liad’s Attic**. Five other AU maps remain indexed as archival lookup data but are **blocked from Preview rendering/generation**; CCC subsidiary rooms remain indexed but not buildable. This is a runtime policy, not just documentation.
 
-Exterior actor position/occlusion still require verified `view.spatial` polygons per scene. This release does not claim complete walkable polygons for every H1/H2/village/Diagon artwork. Always exclude secret places before MAP_DATA is sent to Preview; fog is not a security boundary.
+Mọi element có semantic floor tự cho đứng được; dữ liệu mặt đất cũ hoặc view.spatial là fallback cho template chưa có semantic. Nhãn trên mái và độ mờ 50% dùng chung controller. Bbox chỉ phục vụ hiển thị, không tạo sàn. This release does not claim complete walkable polygons for every H1/H2/village/Diagon artwork. Always exclude secret places before MAP_DATA is sent to Preview; fog is not a security boundary.
