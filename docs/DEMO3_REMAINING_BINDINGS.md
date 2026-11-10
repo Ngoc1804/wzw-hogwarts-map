@@ -2,7 +2,7 @@
 
 Nguồn: atlas-approved-2.0; đây là danh sách mới, không phải 84 case cũ.
 
-Có **0 địa điểm** thuộc template nhưng chưa có binding hình học được xác minh. Không gán vào template khác, không dùng mái/bbox làm sàn, không tính đã hoàn thành. Các vùng tạo mới cần nằm đúng artwork đã chốt; tên sân/cầu chưa đối chiếu không được đoán thành Wyvern/Mistletoe.
+Có **0 địa điểm** ở trạng thái `missing-fixed-binding`. **64 vùng bổ sung** được phân loại riêng `template-supplement`: đã kiểm hình học/chỗ đứng, nhưng vị trí minh họa không phải tọa độ canon đã xác minh. Xem [danh sách và giới hạn suy luận](DEMO3_LOCALITY_SURFACES.md). Không gán sang owner khác, không dùng mái/bbox làm sàn, không đổi Wyvern/Mistletoe thành alias sân canon.
 
 | Template | Còn thiếu |
 |---|---:|

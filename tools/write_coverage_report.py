@@ -5,7 +5,8 @@ from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 a={p['id']:p for p in json.loads((R/'maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json').read_text())['places']}
 r=json.loads((R/'docs/atlas-coverage.json').read_text());pending=[e for e in r['entries'] if e['status']=='missing-fixed-binding'];counts=collections.Counter(a[e['id']]['scopeId'] for e in pending)
-lines=['# Demo 3 — các binding template còn thiếu','','Nguồn: atlas-approved-2.0; đây là danh sách mới, không phải 84 case cũ.','',f'Có **{len(pending)} địa điểm** thuộc template nhưng chưa có binding hình học được xác minh. Không gán vào template khác, không dùng mái/bbox làm sàn, không tính đã hoàn thành. Các vùng tạo mới cần nằm đúng artwork đã chốt; tên sân/cầu chưa đối chiếu không được đoán thành Wyvern/Mistletoe.','','| Template | Còn thiếu |','|---|---:|']
+supplements=sum(e['status']=='template-supplement' for e in r['entries'])
+lines=['# Demo 3 — các binding template còn thiếu','','Nguồn: atlas-approved-2.0; đây là danh sách mới, không phải 84 case cũ.','',f'Có **{len(pending)} địa điểm** ở trạng thái `missing-fixed-binding`. **{supplements} vùng bổ sung** được phân loại riêng `template-supplement`: đã kiểm hình học/chỗ đứng, nhưng vị trí minh họa không phải tọa độ canon đã xác minh. Xem [danh sách và giới hạn suy luận](DEMO3_LOCALITY_SURFACES.md). Không gán sang owner khác, không dùng mái/bbox làm sàn, không đổi Wyvern/Mistletoe thành alias sân canon.','','| Template | Còn thiếu |','|---|---:|']
 for k,n in sorted(counts.items()):lines.append(f'| {k[9:]} | {n} |')
 lines+=['','Các binding cấp nhà/container đã có chỉ định vị đúng công trình, không khẳng định đã vẽ sàn riêng cho mọi phòng bên trong.','','| ID | Địa điểm | Template | Dòng nguồn |','|---|---|---|---:|']
 for e in pending:
