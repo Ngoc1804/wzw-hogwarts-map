@@ -46,7 +46,7 @@ function update(){
   const inFog=pointInFog(point,activeData.visibility);node.hidden=inFog;if(feet)feet.style.display=inFog?'none':'';
   const p=svg.createSVGPoint();p.x=point.x;p.y=point.y;const s=p.matrixTransform(ctm);s.x+=dx;s.y+=dy;
   node.style.left=(s.x-r.left)+'px';node.style.top=(s.y-r.top)+'px';
-  if(feet){const m=ctm.inverse().translate(s.x,s.y+12).rotate(90).scale(.35);feet.setAttribute('transform',`matrix(${m.a} ${m.b} ${m.c} ${m.d} ${m.e} ${m.f})`)}
+  if(feet){const ground=svg.createSVGPoint();ground.x=point.x;ground.y=point.y;const screen=ground.matrixTransform(ctm);const m=ctm.inverse().translate(screen.x,screen.y).rotate(90).scale(.35);feet.setAttribute('transform',`matrix(${m.a} ${m.b} ${m.c} ${m.d} ${m.e} ${m.f})`)}
  }
 }
 function zoom(f){if(!box)return;box=[box[0]+box[2]*(1-f)/2,box[1]+box[3]*(1-f)/2,box[2]*f,box[3]*f];update()}
@@ -60,7 +60,9 @@ async function render(data){assertMapData(data);plan=resolveMap(data);
   view:{...data.view,centerPlaceId:canonicalPlaceId(data.view.centerPlaceId),routePlaceIds:data.view.routePlaceIds.map(canonicalPlaceId)}
  };
  const id=plan.templateId;
- const spatial=data.view.spatial||null,exterior=EXTERIOR_TEMPLATES.has(id);
+ const exterior=EXTERIOR_TEMPLATES.has(id);
+ const spatial=data.view.spatial||(exterior?templateSpatial.templates[id]:null);
+ if(exterior&&spatial){const {walkableRegions,blockedRegions,occlusionRegions}=spatial;data={...data,view:{...data.view,spatial:{walkableRegions,blockedRegions,occlusionRegions}}};}
  if(exterior){for(const a of data.actors){if(a.environment==='outside'&&(!a.position||!surfaceAllowed(a.position,spatial)))throw Error('Actor '+a.id+': outside position requires explicit verified walkable polygon and must avoid blocked regions');}}
 
 
@@ -100,16 +102,21 @@ async function render(data){assertMapData(data);plan=resolveMap(data);
   return {id:region.id,target,contains:p=>pointInPolygon(p,region.points)};
  }):[];
  for(const p of data.places){if(geometry||!points.has(p.id))continue;const ids=registry.templates[id].targets[p.atlasRef];for(const n of svg.querySelectorAll('[data-id]'))if(ids.includes(n.dataset.id)){n.setAttribute('tabindex','0');n.setAttribute('role','button');n.setAttribute('aria-label',p.name);const choose=()=>{if(!pointInFog(points.get(p.id),data.visibility))inspect(p,p.id)};n.onclick=()=>{if(!moved)choose()};n.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose()}}}}
+ const coverController=occlusionController(occluders);stops.push(()=>coverController.dispose());
  const offsets=new Map();for(const a of visibleActors){
- const point=geometry?indoorActorPoint(geometry,a.placeId,a.position):points.get(a.placeId),n=actorTag(a),i=offsets.get(a.placeId)||0;offsets.set(a.placeId,i+1);
+ const point=geometry?indoorActorPoint(geometry,a.placeId,a.position):actorGroundPoint(a,points.get(a.placeId)),n=actorTag(a),i=offsets.get(a.placeId)||0;offsets.set(a.placeId,i+1);
  // Additional actors occupy rows below the same ground anchor, never climb
  // upwards into the artwork. Offsets and footprints remain readable on zoom.
  const count=visibleActors.filter(other=>other.placeId===a.placeId).length,columns=Math.min(count,3);
  const dx=((i%3)-(columns-1)/2)*110,dy=(EXTERIOR_TEMPLATES.has(id)?38:0)+Math.floor(i/3)*55;
- const occluded=a.environment==='outside'&&a.position?selectOccluder(a.position,occluders):null;
- const cover=occluded?.target||null;
- const fade=on=>{if(!cover)return;if(on)cover.style.opacity='.7';else if(![...overlay.querySelectorAll('.selected')].some(tag=>tag!==n&&tag.dataset.coverId===occluded.id))cover.style.removeProperty('opacity')};
- if(occluded)n.dataset.coverId=occluded.id;n.onmouseenter=()=>fade(true);n.onmouseleave=()=>{if(!n.classList.contains('selected'))fade(false)};n.onclick=()=>{for(const b of overlay.querySelectorAll('.selected')){b.classList.remove('selected');b.dispatchEvent(new Event('mouseleave'))}n.classList.add('selected');fade(true);inspect(a,a.placeId)};overlay.append(n);
+ const coverPoint=a.environment==='outside'?point:null;
+ const hoverKey='hover:'+a.id,selectedKey='selected:'+a.id;
+ n.onmouseenter=()=>{if(coverPoint)coverController.set(hoverKey,coverPoint)};
+ n.onmouseleave=()=>coverController.clear(hoverKey);
+ n.onfocus=n.onmouseenter;n.onblur=n.onmouseleave;
+ n.onclick=()=>{for(const b of overlay.querySelectorAll('.selected')){b.classList.remove('selected');coverController.clear('selected:'+b.dataset.actorId)}n.classList.add('selected');if(coverPoint)coverController.set(selectedKey,coverPoint);inspect(a,a.placeId)};
+ n.dataset.actorId=a.id;
+ overlay.append(n);
  const feet=document.createElementNS(NSVG,'g');feet.dataset.actorFeet=a.id;feet.setAttribute('fill','#8c2939');feet.style.pointerEvents='none';svg.append(feet);
  if(a.environment==='inside'&&EXTERIOR_TEMPLATES.has(id)){feet.remove();labels.push({node:n,point,dx,dy:0})}else{if(EXTERIOR_TEMPLATES.has(id)&&!a.position)throw Error('Ngoài trời cần position đã xác minh trên đất/sàn: '+a.id);labels.push({node:n,point:geometry?point:a.position||point,dx,dy,feet});stops.push(mountFeet(feet,a.stance));}
  }

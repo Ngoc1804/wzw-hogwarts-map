@@ -8,7 +8,7 @@ Generated corridor layout comes from the current floor/cluster's flexible `corri
 
 AU gate: build **only CCC 07.18 main room**, **Nhà PC · London**, **Liad’s Attic**. Five other AU maps remain indexed as archival lookup data but are **blocked from Preview rendering/generation**; CCC subsidiary rooms remain indexed but not buildable. This is a runtime policy, not just documentation.
 
-Exterior actor position/occlusion still require verified `view.spatial` polygons per scene. This release does not claim complete walkable polygons for every H1/H2/village/Diagon artwork. Always exclude secret places before MAP_DATA is sent to Preview; fog is not a security boundary.
+Exterior actor positions can use the checked-in conservative visible-ground registry for four templates. Occluded ground and building occlusion still require verified `view.spatial` polygons per scene. This release does not claim complete walkable polygons for every H1/H2/village/Diagon artwork. Always exclude secret places before MAP_DATA is sent to Preview; fog is not a security boundary.
 
 
 Gemini đọc diễn biến RP/correction, ngày giờ RP, vị trí PC, NPC và quest pack đúng tháng. Tra ID địa điểm trong atlas đã cấp trong context; dùng binding template thực có hoặc cung cấp generation recipe. Không tự vẽ lại CSS/SVG mỗi lượt.

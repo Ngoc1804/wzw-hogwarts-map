@@ -48,3 +48,6 @@ export function assertGeneratedScene(placeIds){
   throw Error('Existing fixed map/template required; no generated courtyard, exterior or Ministry: '+canonicalPlaceId(id));
 }
 export function listSceneAtlasGroups(){return sceneAtlas.groups}
+
+export function canonicalPlaceFunction(id){return sceneAtlas.placeFunctionById[canonicalPlaceId(id)]||null}
+export function isCanonicalCorridor(id){return sceneAtlas.corridorPlaceIds.includes(canonicalPlaceId(id))}

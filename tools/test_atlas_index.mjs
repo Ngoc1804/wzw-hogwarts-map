@@ -67,3 +67,15 @@ test('castle, tower and only three approved AU have flexible presets',()=>{
  assert.equal(generatedSceneOptions(d,{places:[{id:g.placeIds[0],kind:'room'}]}).layout,'horizontal');
  assert.equal(generatedSceneOptions({...d,view:{...d.view,indoor:{layout:'ell'}}},{places:[{id:g.placeIds[0],kind:'room'}]}).layout,'ell');
 });
+
+import {auditCoverage} from './audit_coverage.mjs';
+test('every canonical atlas entry has an explicit rendering outcome and all indoor fallbacks build safe surfaces',()=>{
+ const report=auditCoverage();assert.equal(report.total,726);assert.equal(report.counts['generation-error']||0,0);
+ assert.equal(new Set(report.entries.map(p=>p.id)).size,726);
+ for(const p of report.entries)assert.ok(p.name&&p.status,p.id);
+ assert.ok(report.counts['generated-indoor']>400);
+});
+test('outdoor atlas records must never silently become indoor rectangles',()=>{
+ const p=sceneIndex.knownPlaceIds.find(id=>sceneIndex.placeFunctionById[id]==='outdoor'&&!sceneIndex.bindings[id]&&!sceneIndex.noGeneratePlaceIds.includes(id)&&!sceneIndex.lockedPlaceIds.includes(id));
+ assert.throws(()=>resolveMap(withPlace(p)),/Outdoor place|CCC/);
+});

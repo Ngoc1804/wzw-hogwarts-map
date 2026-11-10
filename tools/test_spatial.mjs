@@ -24,3 +24,27 @@ test('occlusion may pin one exact artwork ID without guessing from grouped bindi
  d.view.spatial.occlusionRegions[0].interactiveId='';
  assert.equal(validateMapData(d).ok,false);
 });
+
+import {actorGroundPoint,occlusionController} from '../runtime/spatial.mjs';
+test('explicit actor position wins over building label anchor',()=>{
+ const position={x:10,y:20};assert.equal(actorGroundPoint({position},{x:800,y:900}),position);
+});
+test('overlapping covers retain selection and restore original opacity',()=>{
+ const target=initial=>({style:{value:initial,getPropertyValue(){return this.value},getPropertyPriority(){return 'important'},setProperty(k,v,p){this.value=v;this.priority=p},removeProperty(){this.value=''}}});
+ const a=target('.5'),b=target('');const covers=occlusionController([{target:a,contains:p=>p.x>0},{target:b,contains:p=>p.y>0}]);
+ covers.set('selected',{x:1,y:1});assert.equal(a.style.value,'0.7');assert.equal(b.style.value,'0.7');
+ covers.set('hover',{x:1,y:0});covers.clear('selected');assert.equal(a.style.value,'0.7');assert.equal(b.style.value,'');
+ covers.clear('hover');assert.equal(a.style.value,'.5');assert.equal(a.style.priority,'important');
+ covers.dispose();
+});
+
+import crypto from 'node:crypto';
+const surfaces=JSON.parse(fs.readFileSync(new URL('../runtime/template-spatial.json',import.meta.url)));
+test('default ground registry matches current artwork and contains usable finite polygons',()=>{
+ const source=fs.readFileSync(new URL('../index.html',import.meta.url));assert.equal(surfaces.sourceSha256,crypto.createHash('sha256').update(source).digest('hex'));
+ assert.deepEqual(Object.keys(surfaces.templates).sort(),['diagon-knockturn','h1','h2','village-static']);
+ for(const [id,s] of Object.entries(surfaces.templates)){
+  assert.ok(s.sourceGroundShapes>0&&s.walkableRegions.length>0,id);
+  const ids=new Set();for(const r of s.walkableRegions){assert.ok(!ids.has(r.id));ids.add(r.id);assert.equal(r.points.length,4);assert.ok(r.points.every(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)));const [a,c]=[r.points[0],r.points[2]];assert.ok(surfaceAllowed({x:(a.x+c.x)/2,y:(a.y+c.y)/2},s));}
+ }
+});

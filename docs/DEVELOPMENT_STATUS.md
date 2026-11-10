@@ -1,11 +1,26 @@
-# WIZAMAP — Trạng thái triển khai (2026-11-10)
+# WIZAMAP — trạng thái sau kiểm tra toàn atlas
 
-**Atlas:** 747 nguồn → **726** địa điểm vật lý, gộp 21 tham chiếu trùng; mã cũ giữ ở `sourceIds`. 44 preset Hogwarts (11 tầng × 4 khu), 27 preset tháp, 7 preset thuộc ba AU cho phép, 6 preset St Mungo. Không thêm hành lang Bộ Pháp thuật hoặc ngoài trời/sân trong H1/H2. Tất cả chỉ là công thức minh họa linh hoạt, không phải adjacency canon.
+## Vùng đứng ngoài trời
 
-**Runtime:** có adapter ID atlas → một nhóm target SVG đối chiếu thủ công, fallback Stage 2 chỉ cho cảnh trong nhà hợp lệ. Khóa 5 AU chưa xây; CCC chỉ dựng phòng chính; nhà PC và Liad's Attic được phép. Cảnh một phòng/full tầng không tạo hành lang hoặc thang giả. Không dựng trước tầng, không lưu layout, không pathfinding.
+`runtime/template-spatial.json` cung cấp vùng đứng bảo thủ cho H1, H2, Hogsmeade và Diagon/Knockturn. Sinh từ lớp đường/mặt đất SVG thật, trừ mọi artwork vật cản và mép chống răng cưa; không suy sàn từ bbox. H1/làng/Diagon chỉ cho đứng trên phần đường nhìn thấy; H2 có nền đất nhìn thấy, loại hồ, công trình, cây và khe vực. Metadata ghim SHA-256 của index.html; sửa artwork phải dựng lại bằng `node tools/build_spatial.cjs` và duyệt trực quan.
 
-**Spatial:** indoor floorPolygons, actorZones, exclusionZones và suggestedAnchors tạo theo scene. Ngoại thất vẫn cần `view.spatial` là polygon đã xác minh, không suy từ bbox artwork. Fade vật che theo binding chính xác, không hoàn tất đánh dấu tọa độ walkable cho mọi template.
+MAP_DATA có thể cung cấp `view.spatial` riêng để mô tả vùng mặt đất bị công trình che. **Chưa có mặt bằng vật lý phía sau từng công trình được duyệt**; registry bảo thủ không tự cho đứng trong silhouette mái/nhà.
 
-**Kiểm thử:** Node atlas index/scene/formulas/contract, Python atlas + inventory, asset gallery và syntax bundle chạy trong CI. Preview authenticated Google AI Studio và mobile thật **chưa nghiệm thu**. Không merge `main` nếu chưa duyệt.
+Dấu chân giữ đúng tọa độ SVG khi zoom/đổi viewport; chỉ nhãn được tách hàng. Kiểm thử Chromium: 13 template mở được; bốn template ngoài trời kiểm tọa độ dấu chân desktop/mobile, zoom, serialize và render lại.
 
-**Bản phát hành:** bundle `308705107c240dff20decb1d4bf08c7337186217`. Các tài liệu cũ là lịch sử, không được dùng làm schema mới.
+## Công trình che nhân vật
+
+Các polygon occlusion trong MAP_DATA có binding chính xác tới SVG. Hover/focus/selection làm mờ tất cả công trình che cùng điểm xuống 0.7, giữ trạng thái chọn khi hover actor khác, khôi phục opacity/priority gốc khi bỏ chọn hoặc đổi cảnh. Chưa tuyên bố có polygon vật lý occlusion đầy đủ cho mọi công trình trong bốn bản đồ.
+
+## Độ phủ atlas
+
+Báo cáo máy đọc: `docs/atlas-coverage.json`; tái kiểm: `node tools/audit_coverage.mjs`.
+
+- 726 địa điểm: 106 có binding template, 432 dựng được cảnh trong nhà với vùng đứng an toàn.
+- 90 địa điểm bị khóa theo policy AU/CCC đã duyệt.
+- 67 còn thiếu binding mặt bằng cố định; 31 còn thiếu mặt bằng ngoài trời.
+- Tên chuẩn hiện có đủ cho mọi ID. Fallback lấy function/corridor từ atlas, không biến địa điểm ngoài trời thành phòng hình chữ nhật.
+
+**Chưa hoàn tất toàn bộ ba hạng mục.** 98 địa điểm thiếu mặt bằng/binding và vùng đất bị nhà che cần được thiết kế/đối chiếu tiếp; không thay bằng liên kết đại khái tới cả tầng hay cả khu.
+
+Không lưu layout, không pathfinding, không tự mở các AU đang khóa. Không merge main. AI Studio có đăng nhập và điện thoại thật chưa nghiệm thu.

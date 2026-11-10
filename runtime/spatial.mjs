@@ -40,3 +40,24 @@ export function selectOccluder(point,candidates){
  for(const candidate of candidates)if(candidate.contains(point))result=candidate;
  return result;
 }
+
+// A building may have multiple regions. Paint order belongs to the SVG, not JSON order.
+export function occlusionController(candidates){
+ const originals=new Map(),held=new Map();
+ for(const {target} of candidates)if(!originals.has(target))originals.set(target,{value:target.style.getPropertyValue('opacity'),priority:target.style.getPropertyPriority('opacity')});
+ function refresh(){
+  const active=new Set([...held.values()].flat());
+  for(const [target,old] of originals){
+   if(active.has(target))target.style.setProperty('opacity','0.7');
+   else if(old.value)target.style.setProperty('opacity',old.value,old.priority);
+   else target.style.removeProperty('opacity');
+  }
+ }
+ return {
+  set(key,point){held.set(key,candidates.filter(c=>c.contains(point)).map(c=>c.target));refresh()},
+  clear(key){held.delete(key);refresh()},
+  dispose(){held.clear();refresh()}
+ };
+}
+// No visual offset is allowed to change the ground position of an actor.
+export function actorGroundPoint(actor,placePoint){return actor.position||placePoint;}

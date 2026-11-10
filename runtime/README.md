@@ -8,6 +8,6 @@ RP context → Gemini produces filtered MAP_DATA and loader HTML → jsDelivr fe
 
 **Scope:** Hogwarts scene/zone and tower presets; St Mungo floor presets; the fixed H1/H2/Ministry/outdoor/courtyard maps are not redrawn by the indoor generator. AU generation is only open for CCC 07.18 main room, the London PC house and Liad's Attic. Other five AU maps are preserved but locked for later.
 
-**Exterior actors:** require caller-supplied verified walkable/blocked polygons, optional building occluder polygons, with opacity 0.70 on selected obstruction. The full polygon registry for all exterior artwork is not yet verified.
+**Exterior actors:** use conservative checked-in visible-ground patches for four exterior templates, or caller-supplied verified spatial geometry. Feet stay on exact SVG coordinates through zoom. Occlusion uses explicit polygons and fades every overlapping building while restoring original styles. Ground behind building silhouettes still requires scene polygons. See `docs/DEVELOPMENT_STATUS.md` and `docs/atlas-coverage.json` for remaining gaps.
 
 Build bundle with `python tools/build_runtime.py --out /tmp/wizamap --ref <full commit SHA>`; after committing bundle pin its exact commit in `ui/preview.html` and `docs/RUNTIME_USAGE.md`. Run CI (Node contract/atlas/geometry, bundle syntax, Python atlas and gallery). Browser/AI Studio live tests remain separate from CI.

@@ -1,6 +1,6 @@
 import registry from './templates.json' with {type:'json'};
 import {assertMapData} from './map-data.mjs';
-import {assertAllowedScene,assertGeneratedScene,canonicalPlaceId,isKnownAtlasPlace,verifiedAtlasBinding,generatedSceneOptions} from './atlas-scene.mjs';
+import {assertAllowedScene,assertGeneratedScene,canonicalPlaceId,isKnownAtlasPlace,verifiedAtlasBinding,generatedSceneOptions,canonicalPlaceFunction,isCanonicalCorridor} from './atlas-scene.mjs';
 export function resolveMap(data,templates=registry.templates){
  assertMapData(data);
  const places=data.places.filter(p=>data.visibility.visiblePlaceIds.includes(p.id));
@@ -18,9 +18,11 @@ export function resolveMap(data,templates=registry.templates){
  if(data.view.preferredMode==='template')throw Error('Requested template cannot cover visible places');
  assertGeneratedScene(places.map(p=>p.id));
  const resolved=places.map(p=>{
+  if(canonicalPlaceFunction(p.id)==='outdoor'||['grounds','street','region'].includes(p.kind))throw Error('Outdoor place requires an actual template or verified exterior surface: '+p.id);
   if(p.generation)return {...p,id:canonicalPlaceId(p.id)};
   if(!isKnownAtlasPlace(p.id))throw Error('Missing recipe for '+p.id);
-  return {...p,id:canonicalPlaceId(p.id),generation:{function:p.kind||'room',shape:p.kind==='corridor'?'straight':'rectangle',furnishings:[]}};
+  const kind=isCanonicalCorridor(p.id)?'corridor':p.kind;
+  return {...p,kind,id:canonicalPlaceId(p.id),generation:{function:canonicalPlaceFunction(p.id)||kind||'room',shape:kind==='corridor'?'straight':'rectangle',furnishings:[]}};
  });
  const seen=new Set();
  for(const p of resolved){if(seen.has(p.id))throw Error('Duplicate canonical place in current scene: '+p.id);seen.add(p.id)}
