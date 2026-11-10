@@ -26,9 +26,9 @@
 
 - 64 mục cũ đã có geometry bổ sung và browser kiểm chỗ đứng: xem `docs/DEMO3_LOCALITY_SURFACES.md`. Phân loại riêng `template-supplement`; không tuyên bố những vùng mới này có sẵn trong SVG hoặc có tọa độ canon chính xác.
 - 29 mục Bộ 1–7 là phạm vi được người dùng loại trừ; 1 mục Bộ chưa rõ tầng giữ chờ xác nhận.
-- Phiên đồng thời đã ghim bundle nguồn trước đợt 64. Đợt 64 mới chưa được ghim vào loader production; chưa test RP thật trong AI Studio. Không dùng fixture như RP thật.
+- Bundle đợt 64 đã được publish tại `9223b72ef0938c8dd3ddbf2a839d171cfbd8d9bf`, nguồn `aa78612107779f8356c626b1dd49160ddbc054d0`; loader/prompt ghim cùng commit bất biến. CI nguồn `627dabb` đạt đầy đủ. Chưa test RP thật trong AI Studio; không dùng fixture như RP thật.
 
-Kết quả local cuối: 73/73 Node tests đạt; Chromium suite đầy đủ đạt với candidate build và kiểm console của loader. Python atlas/inventory/scenery và kiểm compiler/registry/coverage chạy riêng. Không coi kết quả local là CI xanh hay nghiệm thu AI Studio.
+Kết quả baseline trước đợt 64: 73/73 Node tests đạt; Chromium suite đầy đủ đạt với candidate build và kiểm console của loader. Python atlas/inventory/scenery và kiểm compiler/registry/coverage chạy riêng. Không coi kết quả local là CI xanh hay nghiệm thu AI Studio.
 
 Đợt 64: bổ sung runtime/template-localities.json và renderer sàn theo mốc cha, deck riêng trên hồ, inset có sàn/tường cho phòng chưa vẽ. Giữ artwork gốc; dữ liệu mới ghi precision illustrative-local-region. Đối chiếu hình H2 và nguồn canon theo yêu cầu người dùng, có ghi giới hạn suy luận.
 

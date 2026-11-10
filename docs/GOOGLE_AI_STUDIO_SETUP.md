@@ -2,9 +2,9 @@
 
 ## Authoritative release
 - Branch: `demo-3`; NOT `main`.
-- **Bundle published commit (immutable):** `67d0daa0242225a47ef0950df74d4ef32a55886b`
-- **Bundle source/asset commit:** `5748fbc50fbc32f725aeda43e0329fa4152f8a1e` (recorded in bundle as `BUNDLE_REF`).
-- **Bundle URL:** https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@67d0daa0242225a47ef0950df74d4ef32a55886b/runtime/bundle.js
+- **Bundle published commit (immutable):** `9223b72ef0938c8dd3ddbf2a839d171cfbd8d9bf`
+- **Bundle source/asset commit:** `aa78612107779f8356c626b1dd49160ddbc054d0` (recorded in bundle as `BUNDLE_REF`).
+- **Bundle URL:** https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@9223b72ef0938c8dd3ddbf2a839d171cfbd8d9bf/runtime/bundle.js
 - **HTML loader:** [ui/preview.html](../ui/preview.html), identical pinned URL. Do NOT substitute `@demo-3`/`@main`.
 - **AI MAP_DATA contract:** [docs/MAP_PROMPT.md](MAP_PROMPT.md), schema 3.2.0 (legacy 3.0/3.1 accepted by engine).
 - **Atlas AI context:** [docs/AI_ATLAS_CONTEXT.json](AI_ATLAS_CONTEXT.json), `atlas-approved-2.0`. Engine contains full canonical index, but Gemini cannot access the URL contents unless this text is actually supplied to its context.

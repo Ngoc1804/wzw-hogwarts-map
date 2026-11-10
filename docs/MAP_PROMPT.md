@@ -1,6 +1,6 @@
 # WIZAMAP — Google AI Studio /map production contract (Demo 3)
 
-Version: `MAP_DATA 3.2.0`; public Atlas context: `atlas-approved-2.0`; pinned production bundle commit: `67d0daa0242225a47ef0950df74d4ef32a55886b`.
+Version: `MAP_DATA 3.2.0`; public Atlas context: `atlas-approved-2.0`; pinned production bundle commit: `9223b72ef0938c8dd3ddbf2a839d171cfbd8d9bf`.
 
 ## Role split
 - Gemini/WzW Runtime **reads only accepted current RP**. No time advance, teleports, NPC/quest invention, GM secrets, future cards, private thoughts or automatic PC decisions. /map is read-only.
@@ -81,7 +81,7 @@ iframe{display:block;width:100%;flex:1;min-height:280px;border:0}
   const data=JSON.parse(raw);
   if(!data||typeof data!=='object'||!Array.isArray(data.places)||!Array.isArray(data.actors))
    throw Error('Thiếu MAP_DATA.places hoặc MAP_DATA.actors');
-  const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@67d0daa0242225a47ef0950df74d4ef32a55886b/runtime/bundle.js');
+  const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@9223b72ef0938c8dd3ddbf2a839d171cfbd8d9bf/runtime/bundle.js');
   if(!response.ok)throw Error('Runtime HTTP '+response.status);
   const code=await response.text();
   if(!code.includes('BUNDLE_REF'))throw Error('Bundle production không hợp lệ');
