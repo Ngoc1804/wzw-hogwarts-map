@@ -1,6 +1,6 @@
 // Reproducible local/CI browser suite; generated artifacts remain outside source.
 const cp=require('node:child_process'),path=require('node:path'),fs=require('node:fs');
-const temp=fs.mkdtempSync('/tmp/wzw-demo2-'),env={...process.env,CHROMIUM_PATH:process.env.CHROMIUM_PATH||(fs.existsSync('/usr/bin/chromium')?'/usr/bin/chromium':require('playwright').chromium.executablePath())};
+const temp=fs.mkdtempSync('/tmp/wzw-demo2-'),env={...process.env,CHROMIUM_PATH:process.env.CHROMIUM_PATH||require('playwright').chromium.executablePath()};
 const run=(cmd,args)=>cp.execFileSync(cmd,args,{cwd:path.resolve(__dirname,'..'),env,stdio:'inherit',timeout:120000});
 run('python',['tools/build_runtime.py','--out',temp,'--data','tools/fixtures/scene.json','--embed-atlas','--debug']);
 // Chromium can exhaust shared CI resources after a sequence of artwork browsers.
