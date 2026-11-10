@@ -1,64 +1,101 @@
-```text
-### R14.7 — /MAP · WIZAMAP DEMO 3 (DATA CONTRACT 3.1)
+# WIZAMAP — Google AI Studio /map production contract (Demo 3)
 
-Khi người chơi gửi /map, WzW Runtime chỉ đọc RP tại thời điểm lệnh; không tiến thời gian, đổi vị trí, tạo nhiệm vụ/NPC, thực hiện hành động hay diễn giải bí mật thành sự thật. Trả DUY NHẤT một code block html đầy đủ theo loader ở cuối. Không trả JSON riêng, OOC hay status/metadata khác HTML.
+Version: `MAP_DATA 3.2.0`; public Atlas context: `atlas-approved-2.0`; pinned production bundle commit: `67d0daa0242225a47ef0950df74d4ef32a55886b`.
 
-**Phân nhiệm rõ ràng:**
-- GEMINI quyết định sự thật RP công khai: PC đang ở đâu, có ai ở từng phòng/hành lang, hành động đang diễn ra, bối cảnh và sự kiện PC có thể biết. Dùng Atlas đã được cung cấp làm **context** để định danh phòng/cụm (đối chiếu docs/AI_ATLAS_CONTEXT.json), KHÔNG đoán ID nếu chưa có thông tin. Không gọi GitHub API từ prompt.
-- GITHUB chỉ dựng theo canonical Atlas + fixed template + flexible engine + custom AU; tự lấy toàn cụm quanh PC; không tạo NPC/quest, diễn biến, thông tin bí mật hoặc thay đổi RP.
-- Vì Gemini không thể tự biết nội dung repo nếu nó chưa được đưa vào phiên WzW Runtime, AI_ATLAS_CONTEXT.json cần được cấu hình làm tài nguyên ngữ cảnh một lần ở Runtime. Nếu không có, gửi tên địa điểm chuẩn đã xác lập trong RP để engine tra exact-name duy nhất; không tự khẳng định đã đọc Atlas.
+## Role split
+- Gemini/WzW Runtime **reads only accepted current RP**. No time advance, teleports, NPC/quest invention, GM secrets, future cards, private thoughts or automatic PC decisions. /map is read-only.
+- Gemini may use `docs/AI_ATLAS_CONTEXT.json` **only if actually supplied in the AI Studio context**. Never claim to read GitHub by a URL alone. Prefer verified canonical IDs, otherwise exact unambiguous names; unknown/ambiguous canonical places should not be guessed.
+- GitHub resolves PC's location: verified fixed template → approved Atlas locality → user-created custom procedural scene. It generates SVG layout, corridors, interior, assets, NPC/markers UI; it **does not invent RP data**.
+- Source of truth for allowed visibility: PC actual perception/knowledge (R3.2/R4.2). Do not transmit hidden facts to browser, even in a commented field or HTML. Fog is not secrecy. `visibility.revealedPlaceIds` only for places actually permitted to be named.
 
-**Gắn UI cố định (nội dung thay theo địa điểm được chọn):**
-- Quote dưới chữ WIZAMAP: meta.quote = một câu hóm hỉnh/bí ẩn, gợi hành động hoặc side/hidden đang *được phép ám chỉ*, không spoil và không giả sự kiện.
-- VỊ TRÍ: name của place PC/địa điểm chọn.
-- NGHE HÓNG: place.inspector.overhear = **một câu hành động/sự việc đang diễn ra ở đó**, ví dụ “Draco đang đọc sách cạnh cửa sổ.” Không ép đây là lời nghe trộm.
-- QUAN SÁT: place.inspector.observation = **mô tả ngắn cảnh vật/cảm giác tại đó**, không kể chuyện mới.
-- AI ĐÓ: actors đang ở đúng placeId, có entityType/tagType/stance/activity nếu RP có.
-- HÓNG HỚT TÁM PHƯƠNG: hints type=event|side|hint|pool|life, mô tả việc đang diễn ra trên map mà PC được phép biết; tối đa 5 mục tổng, tối đa 2 side + 1 hint + 2 pool/life. type=event là sự kiện thông thường, KHÔNG tự biến thành quest.
-
-**MAP_DATA 3.1:**
+## Required MAP_DATA
+```json
 {
- "schemaVersion":"3.1.0",
- "meta":{"date":"YYYY-MM-DD","time":"HH:MM","areaName":"tên khu","quote":"một câu gợi ý công khai"},
- "view":{"preferredMode":"auto"},
- "places":[{"id":"canonical-ID-hoặc-local-ID","name":"Tên phòng hoặc hành lang","kind":"room","inspector":{"overhear":"Một hành động ở đây.","observation":"Khung cảnh ngắn."}}],
- "actors":[{"id":"pc","name":"PC","isPC":true,"placeId":"canonical-ID-hoặc-local-ID","stance":"idle"}],
- "hints":[],
- "visibility":{}
+  "schemaVersion": "3.2.0",
+  "meta": {"date": "1992-09-11", "time": "16:20", "areaName": "Tên khu RP hiện tại", "quote": "Một câu dẫn dắt vui/bí ẩn không spoil"},
+  "view": {"preferredMode": "auto"},
+  "places": [{
+    "id": "CANONICAL_OR_USER_CREATED_ID",
+    "name": "Tên địa điểm đã xác lập",
+    "kind": "room",
+    "inspector": {
+      "overhear": "Một câu mô tả hành động/sự việc đang xảy ra ngay tại đây.",
+      "observation": "Mô tả ngắn khung cảnh/cảm giác ở đây."
+    }
+  }],
+  "actors": [{"id": "pc", "name": "Tên PC thực tế", "isPC": true, "placeId": "CANONICAL_OR_USER_CREATED_ID"}],
+  "hints": [],
+  "visibility": {}
 }
-Đây là KHUNG, không phải dữ liệu mẫu để nhét vào game. Trước khi xuất phải thay toàn bộ dữ kiện bằng RP thật. Chỉ cần gửi PC place và các place mà NPC/hint cần tham chiếu, KHÔNG cần liệt kê mọi phòng của khu. Mọi actors/hints.placeId phải xuất hiện trong places. Nếu không có ai/sự kiện, actors chỉ có PC, hints=[]; không bịa cho đủ quota.
+```
+**Above is STRUCTURE ONLY. Never output example names, dates, actions or placeholder IDs in a real /map.** Replace all content from accepted RP. If no NPC/hints, keep only PC and `hints:[]`. If a field's fact is unknown, omit its optional content instead of inventing.
 
-kind hợp lệ: room|corridor|hall|tower|house|shop|pub|greenhouse|grounds|street|region|train|special. Ví dụ Phòng Độc dược: kind="room", generation.function="potions" (không kind="potions"). generation cho phòng do AI mô tả nếu engine không biết: {"function":"classroom|office|library|practice|group|bedroom|potions|kitchen|bathroom|hospital|shop|pub|storage|common|study|circulation","shape":"rectangle|L|T|U|cross|round|straight"}; thực tế chỉ chọn MỘT giá trị phù hợp, không dùng chuỗi liệt kê. Nếu không có nhu cầu đặc biệt, không cần gửi generation/furnishings: engine tự furnish. Vật đặc thù RP chỉ thêm khi RP đã xác lập.
+## Fixed UI bindings
+- Under WIZAMAP: `meta.quote` = one witty/mysterious *PC-safe* line or harmless action suggestion, not a forced quest.
+- VỊ TRÍ: selected `places[].name`.
+- NGHE HÓNG: `places[].inspector.overhear` = one **actual ongoing action or observable event** (not a generic rumor).
+- QUAN SÁT: `places[].inspector.observation` = brief local scenery, senses and ambience.
+- AI ĐÓ: `actors[]` at same `placeId`, actual known/observable participants and optional `activity`.
+- HÓNG HỚT TÁM PHƯƠNG: up to 5 `hints[]` public-safe map events; `type=event|side|hint|pool|life`, no hidden objectives. Maximum: side≤2, hint≤1, pool+life≤2; do not fill quotas.
+- On selection of another room, use that **room's** data, not PC's inspector for all rooms.
 
-actors: 1 PC chính xác, tối đa 50 bản ghi actor công khai; GitHub render tối đa 10 nhãn NPC/nhóm ngoài PC. Đúng tên/vị trí/hành động, không tạo nhóm giả để tiết kiệm nhãn. field tùy chọn: entityType=person|group|community|creature; tagType=gryffindor|slytherin|ravenclaw|hufflepuff|beauxbatons|durmstrang|teacher|adult|patrol|animal|monster|ghost|unknown|crowd; stance=idle|walk; activity="hành động ngắn"; priority=0..100 cho ưu tiên nhãn; groupId chỉ khi nhóm được RP xác lập. Đối với fixed template ngoài trời, environment=inside|outside. Không đoán tọa độ SVG; không dịch chuyển NPC do nhấn/click. Tuần tra chỉ onPatrol=true với role=prefect|patrol|caretaker nếu có bằng chứng RP.
+## References, geometry and gates
+- `places` lists PC place + any referenced NPC/hint locations; the engine expands allowed static architecture. Never send full 694-place Atlas or compute SVG coordinates.
+- `actors`: exactly one `isPC:true`, at most 50 additional *public* records; engine shows at most 10 NPC/group labels + PC. `groupId` only if actual group; `stance=walk` only if currently moving. `environment=inside|outside` for 2.5D exterior templates; no roof/bbox as ground.
+- `connections` only if known through W/RP; unknown corridors visually illustrative, not canon navigation.
+- `kind` uses schema enum `room|corridor|hall|tower|house|shop|pub|greenhouse|grounds|street|region|train|special`. Function of a Potions classroom is `kind:room`, optionally `generation.function:potions` (never `kind:potions`).
+- Optional `generation` in 3.2: wallMaterial=wood|brick|stone, floorMaterial=wood|brick|stone|tile, floorColor/wallColor/materialStroke as valid hex color, materialScale between 0.5 and 3. Omit for engine auto-design.
+- `customScene` **only** for genuinely outside Atlas user-created AU, with `id,name,source:"user-created",kind:"building|interior|outdoor|village",description` and optional surroundings, terrain; describe actual known buildings/rooms/roads in short text. No canonical override, no unlocking other five barred AU maps.
+- On unresolved canonical binding/locked/private info/unknown position: return specific OOC error without data substitution, not fake map or nonliteral route.
+- Check schema required fields, enums, unique IDs, actor/hint place references, month/time, PC membership, gate/hint quotas; do not expose hidden quest metadata via id/title.
 
-Hints: mỗi mục {id,placeId,type,title,description?,inspector?}; type event mô tả sự kiện đang diễn ra chứ không nhất thiết là quest. AI tự lọc visibility. Sự kiện không thể biết thì không gửi. Sự kiện phải có placeId đúng phòng/hành lang, tránh đổ tất cả về phòng PC.
+## Output contract
+On `/map`, emit exactly **one full ```html code block** with the following loader, replacing only the token `__LIVE_MAP_DATA_JSON__` with current MAP_DATA serialized as valid JSON (escape literal `<` as `\\u003c`). Do not modify URL, bundle code, styles, template SVG or iframe sandbox. No STATUS/BODY/META, invented fiction or outside prose. After output, RP state is unchanged; a Preview failure is not a completed /map.
 
-**Custom fallback chỉ khi địa điểm THỰC SỰ ngoài Atlas, do user tự tạo:** thêm customScene={id,name,source:"user-created",kind:"building"|"interior"|"outdoor"|"village",description:"mô tả kiến trúc ngắn và các thành phần xung quanh",surroundings?,terrain?}. Khai báo các place mới (room/corridor/grounds...) và connections chỉ khi RP đã xác lập. GitHub tự thiết kế SVG/địa hình/nội thất; AI không gửi SVG/CSS/hình học. KHÔNG dùng customScene để né địa điểm canon thiếu binding hoặc mở 90 địa điểm AU/CCC đang bị khóa.
-
-**Information Gate:** AI chỉ gửi tên, phòng, NPC, hành động, hint, quote và inspector mà PC được phép nhìn/biết. Không gửi hidden facts rồi che bằng fog; fog chỉ là minh họa. Atlas room tự bổ sung có thể hiển thị tên trung tính “Chưa khám phá”; visibility.revealedPlaceIds chỉ chứa ID phòng được RP cho phép công khai. Không tiết lộ hidden NPC/secret trong HTML, export hay thông qua mã debug. GitHub không tự đưa thêm thông tin RP.
-
-Kết nối: connections=[{from,to,state,kind?}] chỉ khi quan hệ đã được xác lập; state=open|restricted|blocked; không biến bố cục minh họa thành canon adjacency. Không gửi focus, visiblePlaceIds, questPolicy, campaign/snapshot ID hay enum cũ. Xác thực JSON, 1 PC, ID/enum/links, nguồn quote/inspector/visibility, tối đa 5 hints; nếu thiếu dữ kiện thiết yếu hãy xuất HTML lỗi rõ, không dùng dữ liệu giả.
-
-Thay __LIVE_MAP_DATA_JSON__ bằng JSON của lượt hiện tại, không comment/placeholder. Escape < trong JSON nhúng thành \u003c. Giữ nguyên URL bundle và script nội tuyến dưới đây; không thay bằng thẻ script src, link web hay đoạn mã rút gọn. Đầu ra là một code block html chứa:
-
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><style>html,body{margin:0;height:100%;background:#eee4d1}#status{margin:0;padding:8px;font:14px Georgia}iframe{display:block;width:100%;height:calc(100dvh - 36px);border:0}</style></head><body>
-<p id="status" role="status">Đang tải bản đồ…</p><iframe title="Bản đồ RP" sandbox="allow-scripts allow-downloads"></iframe>
+## Pinned production HTML shell
+```html
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WIZAMAP · Demo 3 Production</title>
+<style>
+html,body{margin:0;min-height:100%;background:#eee4d1}
+body{height:100dvh;display:flex;flex-direction:column}
+#status{margin:0;padding:8px 12px;font:14px Georgia,serif;color:#604839}
+iframe{display:block;width:100%;flex:1;min-height:280px;border:0}
+</style>
+</head>
+<body>
+<p id="status" role="status" aria-live="polite">Đang tải WIZAMAP…</p>
+<iframe title="Bản đồ RP" sandbox="allow-scripts allow-downloads" referrerpolicy="no-referrer"></iframe>
 <script type="application/json" id="rp-map-data">__LIVE_MAP_DATA_JSON__</script>
 <script>
-(async()=>{const status=document.getElementById('status');try{
-const data=JSON.parse(document.getElementById('rp-map-data').textContent);
-const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@a86a360d523cfa4045bb212141ba46970371e786/runtime/bundle.js');
-if(!response.ok)throw Error('Runtime HTTP '+response.status);
-const code=await response.text(),end='</scr'+'ipt>';
-document.querySelector('iframe').srcdoc='<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+JSON.stringify(data).replace(/</g,'\\u003c')+end+'<script>'+code.replace(/<\/script/gi,'<\\/script')+end+'</body></html>';
-status.textContent='Engine đã tải; bản đồ hoặc lỗi dữ liệu nằm trong khung.';
-}catch(e){status.textContent='Không mở được bản đồ: '+e.message;}})();
-</script></body></html>
+(async()=>{
+ const status=document.getElementById('status');
+ const error=(e)=>{status.textContent='Không mở được WIZAMAP: '+(e&&e.message||String(e));};
+ try{
+  const raw=document.getElementById('rp-map-data').textContent;
+  if(!raw||raw.trim()==='__LIVE_MAP_DATA_JSON__')throw Error('MAP_DATA chưa được thay bằng JSON thật của phiên RP');
+  const data=JSON.parse(raw);
+  if(!data||typeof data!=='object'||!Array.isArray(data.places)||!Array.isArray(data.actors))
+   throw Error('Thiếu MAP_DATA.places hoặc MAP_DATA.actors');
+  const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@67d0daa0242225a47ef0950df74d4ef32a55886b/runtime/bundle.js');
+  if(!response.ok)throw Error('Runtime HTTP '+response.status);
+  const code=await response.text();
+  if(!code.includes('BUNDLE_REF'))throw Error('Bundle production không hợp lệ');
+  const end='</scr'+'ipt>';
+  const json=JSON.stringify(data).replace(/</g,'\\u003c');
+  const safeCode=code.replace(/<\/script/gi,'<\\/script');
+  document.querySelector('iframe').srcdoc='<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>'+
+  '<script type="application/json" id="MAP_DATA">'+json+end+'<script>'+safeCode+end+'</body></html>';
+  status.textContent='Runtime đã tải; trạng thái bản đồ hoặc lỗi dữ liệu hiển thị trong khung.';
+ }catch(e){error(e);}
+})();
+</script>
+</body>
+</html>
 ```
 
-
-### Demo 3 — bản atlas thay thế và vật liệu
-Dùng `docs/AI_ATLAS_CONTEXT.json` phiên bản `atlas-approved-2.0` khi cần tra địa điểm. Các con số 726/90 và yêu cầu CCC chỉ phòng chính trong tài liệu cũ đã hết hiệu lực. Chỉ gửi dữ kiện RP công khai; không gửi toàn bộ atlas. Họ hành lang theo khu/tầng đã khóa nên không gửi `view.indoor.layout` khác họ đó.
-
-Có thể gửi `schemaVersion: "3.2.0"` để chọn vật liệu bằng `generation.wallMaterial` (wood/brick/stone), `generation.floorMaterial` (wood/brick/stone/tile), `wallColor`, `floorColor`, `materialStroke` (#RRGGBB), `materialScale` (0.5–3). Các field này tùy chọn; engine tự thiết kế khi không có. Với 4 template 2.5D, tiếp tục xác định actor `environment: inside|outside`; không dùng tọa độ mái làm vị trí đứng.
+Note: AI Studio must have the canonical Atlas context supplied separately; a GitHub link alone does not inject it into Gemini.
