@@ -13,9 +13,28 @@ export function drawIndoor(svg,geometry,onRoomClick){
  for(const v of model.voids){
   path(floor,ppath(v.poly),{fill:'#c5c6a4',stroke:'#a3a37b','stroke-width':1,'data-void':'true','pointer-events':'none'});
  }
+ if(geometry.exterior){
+  const palettes={
+   grass:['#cad0aa','#adbb87'],forest:['#aab896','#738e70'],stone:['#c9baa2','#a99a83'],
+   sand:['#e2d4b3','#c5b38f'],snow:['#e6e6df','#c0c8c5']
+  };
+  const [fill,accent]=palettes[geometry.exterior.terrain]||palettes.grass;
+  for(const polygon of model.floors){
+   path(floor,ppath(polygon),{fill,stroke:'#998b71','stroke-width':3,'data-exterior-ground':'true','data-surface':'floor'});
+   // Sparse surface hatch; vegetation is schematic and never a canon landmark.
+   const pts=polygon,xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);
+   const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+   const isNature=['grass','forest','snow'].includes(geometry.exterior.terrain);
+   if(isNature)for(let k=0;k<24;k++){
+    const x=x0+32+((k*79)%(Math.max(1,x1-x0-64))),y=y0+30+((k*113)%(Math.max(1,y1-y0-60)));
+    if(model.rooms.some(r=>x>r.x-35&&x<r.x+r.w+35&&y>r.y-35&&y<r.bottom+35))continue;
+    el('ellipse',{cx:x,cy:y,rx:8+(k%3)*3,ry:5+(k%2)*3,fill:accent,opacity:'.4','data-landscape':'true','pointer-events':'none'},floor);
+   }
+  }
+ }
  for(const [i,poly] of model.floors.entries()){
   const corridorId=geometry.corridorPlaceIds?.[i%Math.max(1,geometry.corridorPlaceIds.length)];
-  const segment=path(floor,ppath(poly),{fill:'url(#hall-floor)','fill-rule':'nonzero','data-corridor-floor':'true','data-surface':'floor'});
+  const segment=path(floor,ppath(poly),{fill:geometry.exterior?'transparent':'url(#hall-floor)','fill-rule':'nonzero','data-corridor-floor':'true','data-surface':'floor'});
   if(corridorId){
    segment.setAttribute('data-corridor',corridorId);
    segment.setAttribute('tabindex','0');segment.setAttribute('role','button');
