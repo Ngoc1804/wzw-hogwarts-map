@@ -1,47 +1,51 @@
-# Demo 2 — /MAP
+# WIZAMAP DEMO 3 — /MAP FLOW
 
-Gemini đọc RP → xuất dữ liệu cảnh công khai → loader nội tuyến tải bundle ghim commit → engine chọn template hoặc dựng indoor → ghép nội thất → đặt nhân vật → UI. Preview một chiều, không backend/seed/lưu layout, không thay đổi RP khi click. Ngày giờ lấy từ RP.
+## Kiến trúc cố định, không backend/API RP
 
-## Một hợp đồng
+`USER /map` → **Gemini WzW Runtime đọc RP + Atlas context đã cung cấp** → JSON `MAP_DATA 3.1` trong HTML shell → jsDelivr tải JS/SVG từ GitHub đã ghim commit → `validate` → `resolveMap` → `buildGeometry/draw` hoặc fixed template → NPC/hints/Inspector → WIZAMAP Preview.
 
-Nguồn duy nhất: `runtime/map-data.schema.json` (3.0.0). Chỉ bắt buộc `meta`, `places`, `actors`. Không gửi focus, visiblePlaceIds, questPolicy, presenceBasis hoặc các ID campaign/snapshot cũ. Engine lấy PC từ actor có isPC=true và xem mọi place được gửi là công khai. Dữ liệu cũ 2.0 được từ chối rõ, không có renderer song song.
+- **AI quyết định sự thật RP**: ngày giờ, vị trí PC, ai ở đâu, hành động, sự kiện, điều PC có thể biết; không tạo facts để lấp quota. GitHub không tạo NPC, nhiệm vụ, lịch trình, lời thoại hay thêm sự kiện.
+- **GitHub chỉ render**: exact atlas name/ID, bản đồ có sẵn, phòng/hành lang/cảnh AU mới do người chơi mô tả, SVG/nội thất, đặt nhãn, animation, tương tác.
+- `docs/AI_ATLAS_CONTEXT.json` là bản **rút gọn cho WzW Runtime**, không tự gửi tới Gemini nếu chưa cấu hình nó trong ngữ cảnh AI Studio. Có thể dùng exact canonical name đã có trong RP, nhưng tên trùng/không rõ phải được xác định trước khi sinh map.
 
-```json
-{"meta":{"date":"1992-09-11","time":"10:25","areaName":"Phòng học"},"places":[{"id":"scene-room","name":"Phòng học","kind":"room","generation":{"function":"classroom"}}],"actors":[{"id":"pc","name":"BẠN","isPC":true,"placeId":"scene-room","tagType":"gryffindor"}]}
-```
+## Ba cấp chọn bản đồ — luôn dựa trên PC
 
-Đây là dữ liệu giả lập kiểm thử, không phải lượt RP thật. Không nhúng fixture vào production bundle.
+1. **Fixed template**: PC nằm trên binding đã xác minh → chọn template cụ thể nhất (nhà chung/Đại Sảnh/Bộ/Quidditch/Hogsmeade, H2 trước H1 khi hợp lệ). `places` khác trong input không được tước template của PC.
+2. **Atlas full locality**: PC không có fixed template nhưng nằm trong nhóm Atlas được mở → lấy tất cả phòng/hành lang thuộc **đúng scopeId và tầng/hướng**, không gộp Bắc/Đông/Nam/Tây. Gemini chỉ cần gửi PC place và nơi có NPC/sự kiện. Room chưa được RP cho phép reveal hiện tên trung tính “Chưa khám phá”.
+3. **Custom scene**: PC thực sự ngoài Atlas hoặc AU do user tự dựng → Gemini gửi `customScene` (id, name, source=user-created, kind, description ngắn, terrain/surroundings nếu có) + các `places` mới đã xác lập. Github dựng geometry/nội thất/cảnh ngoài trời minh họa. Không được dùng để né bản đồ canon thiếu binding, AU/CCC khóa.
 
-`id`, `name`, `kind` là tối thiểu cho place; `id`, `name`, `placeId` là tối thiểu cho actor. Đúng một actor phải có isPC=true. Nhận diện mặc định unknown; entityType mặc định person; stance mặc định idle chỉ là hiển thị, không ghi state RP. Đang đi thì gửi stance=walk. Inspector có thể bỏ hoặc chỉ gửi một trong overhear/observation; phần còn lại là chuỗi rỗng. Không ép dữ liệu sai kiểu thành dữ liệu đúng.
+**Công thức hành lang:** 10 grammar `horizontal,vertical,ell,tee,cross,court,cloister,windows,curved,tower`. Tham số phòng/hành lang thay đổi ổn định theo `scopeId+atlasVersion`; cùng khu khác NPC/time không đổi hình học. Hành lang minh họa không chứng minh đường đi canon, cổng khóa hay chức năng nav/pathfinding. Công trình đơn lẻ user-created `kind=building` có vùng đất xung quanh thay vì một phòng nổi giữa khoảng trống; phòng trong lâu đài không được bịa ngoại cảnh.
 
-## Chọn map và đặt nhân vật
+## MAP_DATA 3.1
 
-Không yêu cầu Gemini nạp lookup/catalog. Gemini gửi ID cục bộ và tên địa điểm thật từ RP; runtime đối chiếu tên chuẩn duy nhất (chuẩn hóa Unicode, hoa/thường) với atlas-index/templates đã đóng gói và cập nhật mọi tham chiếu. Tên không khớp hoặc trùng không được fuzzy-match; cảnh indoor cục bộ phải có generation.function, còn template cố định thiếu mapping thì báo rõ. ID chuẩn/alias vẫn nhận trực tiếp nếu đã biết. `view.templateId` và preferredMode chỉ cần khi muốn chỉ định template hay chọn dựng phòng. Không fuzzy-match tên. ID cảnh tự đặt chỉ dùng cho indoor được mô tả rõ, không đổi ID địa điểm bị khóa để né policy.
+Schema duy nhất `runtime/map-data.schema.json`, validator `runtime/map-data.mjs`. Hỗ trợ dữ liệu 3.0 đã có để tránh gãy loader; dữ liệu mới mặc định 3.1. Bắt buộc `meta`, `places`, `actors` (đúng 1 `isPC=true`); tuỳ chọn `view`, `connections`, `hints`, `visibility`, `customScene`.
 
-Một cảnh một tầng; một phòng không tự tạo hành lang. Chọn auto khi không có yêu cầu riêng. Template cố định và ngoài trời không dựng lại bằng indoor. Chỉ mở CCC 07.18 phòng chính, Nhà PC London và Liad’s Attic trong AU. 90 mục giữ khóa. 84 mục thiếu binding/surface giữ nguyên, xem COVERAGE_REVIEW.md.
+| Trường | Chỉ từ AI RP | Engine thể hiện |
+|---|---|---|
+| `meta.date/time/areaName/quote` | Ngày giờ, khu và câu gợi ý vui/bí ẩn, không spoil | Header + quote bên dưới WIZAMAP |
+| `places[].id/name/kind` | Vị trí PC/NPC/sự kiện được biết, ID canon hoặc cục bộ | VỊ TRÍ, binding Atlas/template |
+| `places[].inspector.overhear` | **Một câu hành động/sự việc ở đây** | NGHE HÓNG |
+| `places[].inspector.observation` | **Mô tả cảnh vật, không khí, cảm giác** | QUAN SÁT |
+| `actors[]` | NPC/nhóm thực sự có mặt, placeId, activity, stance, priority, groupId | AI ĐÓ, markers, footprints, Inspector |
+| `hints[]` | Các sự kiện/hint/side/pool/life PC đã biết, đúng placeId | HÓNG HỚT TÁM PHƯƠNG + map markers |
+| `visibility` | Danh sách nơi được reveal, fog minh họa | Che room chưa khám phá, không lộ hidden RP |
+| `customScene` | Mô tả ngắn một nơi user-created ngoài Atlas | Dựng SVG procedurally, nội thất/terrain |
 
-Template ngoài trời cần actor.environment=inside hoặc outside. Inside hiện nhãn trên công trình, không giả dấu chân ngoài nhà; nhóm nhiều nhà cần buildingId. Outside có position thì kiểm sàn; bỏ position thì tìm điểm minh họa trên sàn đã xác minh gần anchor, cách tối đa 160 đơn vị SVG. Không tìm được thì báo thiếu sàn. Đây không phải tọa độ canon hoặc thao tác di chuyển PC. Template indoor chưa có vùng sàn phù hợp chỉ hiện nhãn khi environment=inside, không giả điểm đứng. Muốn dấu chân ở đó phải bổ sung geometry thật. Vị trí gửi rõ nhưng sai sàn luôn báo lỗi.
+`kind` hợp lệ: room,corridor,hall,tower,house,shop,pub,greenhouse,grounds,street,region,train,special. Ví dụ: phòng Độc dược là `kind=room`, `generation.function=potions`, **không** `kind=potions`.
 
-## Nội thất
+**NPC**: tối đa 50 actor record công khai trong payload để có thể mô tả đầy đủ các người đang ở cùng khu; hiển thị **PC + tối đa 10 nhãn NPC/nhóm**, không nhân đôi groupId/tên cùng phòng. Engine không tự đổi location/activity, actor đứng trên mặt sàn phù hợp; thiếu sàn thật phải báo rõ. Actor public bị cắt khỏi map nếu ngoài scope PC hiện tại; không tự dịch chuyển sang phòng PC.
 
-Gemini mô tả công dụng và đồ đặc thù; JavaScript tự chọn asset và xếp đồ theo polygon phòng, cửa, vật cản và mặt bàn. Không cần dựng sẵn mọi layout. Bỏ generation.furnishings hoặc gửi [] → mặc định; danh sách không rỗng → thay thế; furnishingsMode=add → bổ sung/ghi đè theo id; replace + [] → phòng trống. count=0 xóa đồ trong add mode.
+**Hints/sự kiện**: type `event|side|hint|pool|life`; tổng 5 mục hiển thị trở xuống, với side ≤2, hint ≤1, pool+life ≤2. Event thông thường không phải quest; không tự sinh quest/hidden/rumor để đủ quota. Mọi actor/hint tham chiếu phải có `placeId` trong `places` AI gửi.
 
-Recipe: bedroom/residential, classroom/class, office/administration, library, practice, group, potions, kitchen, bathroom, hospital/healing/infirmary, shop/commerce, pub, storage/store, common/lounge, study. Office/practice/group được chuyển chọn lọc từ bố trí Stage 1, dùng bộ kiểm va chạm hiện tại. Không chép tọa độ cố định vào phòng có hình khác.
+**Information Gate**: Gemini phải loại dữ liệu bí mật RP khỏi HTML payload trước khi render. Engine chỉ mở tên phòng chưa được liệt kê khi `visibility.revealedPlaceIds` được AI cho phép và còn phải tuân chính sách AU/CCC; click/hover/marker/Inspector/download không được hiển thị hidden RP. Fog chỉ là hiệu ứng hình học, **không bảo mật dữ liệu đã nhúng** trong bundle/HTML. Atlas tĩnh public không phải nơi lưu bí mật chiến dịch riêng tư.
 
-Đồ thông thường dùng role: desk/table/chair/bed/shelf/cabinet/rug/lamp/book/plant/portrait/blackboard/cauldron; có thể chỉ định assetId từ catalog hoặc custom.shapes theo schema. Kích thước là đơn vị SVG. `on` tham chiếu id bàn/kệ có surface thật; `near` đặt gần đồ có id. Không đủ chỗ hoặc thiếu asset/surface thì báo món bị lỗi, không âm thầm bỏ.
+## UI cố định & tương tác
 
-## Hint và giới hạn
+Giữ nguyên chữ WIZAMAP, màu giấy cổ, dấu chân burgundy, các heading/icon `VỊ TRÍ / NGHE HÓNG / QUAN SÁT / AI ĐÓ / HÓNG HỚT TÁM PHƯƠNG`. Chọn địa điểm hoặc actor chỉ đổi Inspector, không đổi RP. Zoom, pan, animation toggle, tải HTML offline. Desktop sidebar bên phải kể cả iframe thấp; mobile viewport hẹp mới dùng drawer.
 
-PC + tối đa 10 tag NPC/nhóm. Tối đa 5 hint: 2 side, 1 hint, 2 pool/life cộng lại. Hint chỉ cần id, placeId, type và title; inspector tùy chọn. Không đổi H thành main. Không gửi pack/questPolicy cho renderer. AI chịu trách nhiệm lọc nguồn tháng/carryover theo campaign, không tự tạo nội dung để đủ quota. Chỉ truyền thông tin PC được phép biết; fog không bảo mật payload.
+## Triển khai & kiểm thử
 
-## Các trường chỉ dùng khi cần
-
-`connections`: from, to và state bắt buộc; kind mặc định doorway, id tùy chọn. state=open/restricted/blocked. Chỉ gửi kết nối được xác lập. Bố cục minh họa không chứng minh canon adjacency, đường đi thông suốt hoặc pathfinding.
-
-`view`: preferredMode, templateId, crop, routePlaceIds, selectedId; indoor để chỉ định hình học hỗ trợ; spatial chỉ khi có geometry đã kiểm chứng. `visibility` chỉ chứa fogRegionIds/fogRegions, không khai lại place. Không thêm hidden state.
-
-## Build và kiểm tra
-
-`python tools/build_runtime.py --out /tmp/wzw-test --data tools/fixtures/scene.json --embed-atlas --debug` tạo bản QA, không phải loader RP. Bỏ --debug để xuất production. `python tools/prepare_experiment.py` tạo các cảnh giả lập offline ngoài repo. Các test browser dùng Playwright + Chromium, kiểm desktop/mobile, lỗi đầu vào, nội thất, template, xuất HTML/offline. CI chạy suite Node, Python, gallery và browser. Kết quả hiện hành nằm tại validation.json; không coi test giả lập là nghiệm thu Playground thật.
-
-Khi phát hành: build bundle với ref asset đầy đủ đã tồn tại → commit bundle → ghim commit chứa bundle trong ui/preview.html và MAP_PROMPT.md → kiểm jsDelivr khớp SHA-256. Một bundle và một loader. Prompt chép từ MAP_PROMPT.md, không dùng các prompt cũ.
+- 13 fixed templates và 259 asset SVG giữ nguyên artwork khi không cần.
+- Unit test schema/locality/template, 44 cụm lâu đài + 27 cụm tháp, 15 NPC nhưng chỉ 10 nhãn, custom AU house/outdoor, hidden room name.
+- Browser test interactive Desktop 1360×900/520, Mobile 390×700, template, NPC/hint, home/floor, offline export.
+- Production chỉ **một bundle**, `ui/preview.html` và `docs/MAP_PROMPT.md` ghim commit có bundle; test checksum và Preview thực tế tại Google AI Studio cần user đăng nhập. Không đưa fixture giả vào hệ thống RP.
