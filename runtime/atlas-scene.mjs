@@ -51,3 +51,23 @@ export function listSceneAtlasGroups(){return sceneAtlas.groups}
 
 export function canonicalPlaceFunction(id){return sceneAtlas.placeFunctionById[canonicalPlaceId(id)]||null}
 export function isCanonicalCorridor(id){return sceneAtlas.corridorPlaceIds.includes(canonicalPlaceId(id))}
+
+/**
+ * Resolve static locality by PC, not by how many rooms Gemini included.
+ * No cardinal direction merging and no inference of canon doors.
+ */
+export function resolveAtlasLocality(pcId,scopeId=null){
+ const id=canonicalPlaceId(pcId);
+ const groups=sceneAtlas.groups.filter(g=>g.buildEnabled!==false&&g.placeIds.includes(id));
+ if(scopeId){
+  const requested=groups.find(g=>g.key===scopeId);
+  if(!requested)throw Error('PC does not belong to requested Atlas scope: '+scopeId);
+  return requested;
+ }
+ return groups.sort((a,b)=>a.placeIds.length-b.placeIds.length||a.key.localeCompare(b.key))[0]||null;
+}
+export function atlasPlaceName(id){return sceneAtlas.canonicalNameById[canonicalPlaceId(id)]||null}
+export function atlasPlaceKind(id){return isCanonicalCorridor(id)?'corridor':'room'}
+export function isLockedAtlasPlace(id){return locked.has(canonicalPlaceId(id))||cccNonRoom.has(canonicalPlaceId(id))}
+export function listVerifiedTemplateBindings(id){return sceneAtlas.bindings[canonicalPlaceId(id)]||{}}
+export function atlasVersion(){return sceneAtlas.atlasVersion}
