@@ -75,8 +75,23 @@ export function buildGeometry(plan,indoor={}){
  // The current MAP_DATA place list defines the scene. Ignore any external roomCount.
  delete request.roomCount;
  const model=buildIndoorLayout(request);
+  if(custom){
+    // Present the complete building/parcel, not a room floating in blank parchment.
+    // Illustrative exterior ground is not proof of a canonical position or public road.
+    const xs=model.rooms.flatMap(r=>[r.x,r.x+r.w]),ys=model.rooms.flatMap(r=>[r.y,r.bottom]);
+    const minX=xs.length?Math.min(...xs):0,minY=ys.length?Math.min(...ys):0;
+    const maxX=xs.length?Math.max(...xs):420,maxY=ys.length?Math.max(...ys):300;
+    const margin=plan.customScene.kind==='village'?250:190;
+    if(exterior||(!model.rooms.length)){
+      model.floors=[rectangle(minX-margin,minY-margin,maxX-minX+2*margin,maxY-minY+2*margin)];
+    }
+    model.stair=null;model.entrance=null;
+    const floorPoints=model.floors.flat();
+    const xx=[...xs,...floorPoints.map(p=>p[0])], yy=[...ys,...floorPoints.map(p=>p[1])];
+    model.bounds=[Math.min(...xx)-55,Math.min(...yy)-80,Math.max(...xx)-Math.min(...xx)+110,Math.max(...yy)-Math.min(...yy)+160];
+  }
  // One-room scenes occupy the whole scene without fabricating hallways or stairs.
- if(roomPlaces.length===1&&!corridorPlaces.length){
+ if(!custom&&roomPlaces.length===1&&!corridorPlaces.length){
    model.floors=[];model.voids=[];model.thresholds=[];model.stair=null;
    model.entrance=null;model.facades=[];model.windows=[];
    const r=model.rooms[0],poly=r.poly||rectangle(r.x,r.y,r.w,r.bottom-r.y);
@@ -96,7 +111,7 @@ export function buildGeometry(plan,indoor={}){
  for(const r of model.rooms){
   const place=places.find(p=>p.id===r.id),room=rooms[r.id];
   room.floorMaterial=place.generation?.floorMaterial||'stone';room.floorColor=place.generation?.floorColor;
-  const instances=placeFurnishings(place,room,exclusionZones);
+  const instances=custom&&outdoorKinds.has(place.kind)?[]:placeFurnishings(place,room,exclusionZones);
   furnishingInstances.push(...instances.map(i=>({...i,placeId:r.id})));
   for(const i of instances)if(i.blocking&&!i.on){
    exclusions.push({id:'furniture:'+r.id+':'+i.instanceId,kind:'furniture',poly:i.poly});
@@ -120,14 +135,14 @@ export function buildGeometry(plan,indoor={}){
   }
  }
  actorZones.push(...corridorZones);
- if(corridorPlaces.length&&!corridorAreas.length)throw Error('No safe corridor surface for current scene');
+ if(corridorPlaces.length&&!corridorAreas.length)throw Error('No safe corridor/exterior surface for current scene');
  corridorPlaces.forEach((p,i)=>{
   const area=corridorAreas[i%corridorAreas.length];
   suggestedAnchors[p.id]=area.anchors;safeAreas[p.id]=area.regions;
   floorPolygons.push(asRegion('corridor-place:'+p.id,area.floor));
  });
  for(const p of places)if(!suggestedAnchors[p.id]?.length)throw Error('Missing safe indoor anchor for '+p.id);
- return {rooms,model,walls,furnishingInstances,bounds:model.bounds,floorPolygons,actorZones,exclusionZones,suggestedAnchors,corridorAnchors,corridorPlaceIds:corridorPlaces.map(p=>p.id),safeAreas,routes:[]};
+ return {rooms,model,walls,furnishingInstances,exterior:exterior?{terrain:plan.customScene.terrain||'grass',description:plan.customScene.surroundings||''}:null,bounds:model.bounds,floorPolygons,actorZones,exclusionZones,suggestedAnchors,corridorAnchors,corridorPlaceIds:corridorPlaces.map(p=>p.id),safeAreas,routes:[]};
 }
 export function indoorActorPoint(geometry,placeId,position){
  const zones=geometry.safeAreas[placeId];
