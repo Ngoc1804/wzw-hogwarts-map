@@ -51,5 +51,21 @@
     "98 existing missing map/binding entries",
     "Unopened AU maps",
     "Arbitrary room polygons beyond six supported shapes"
-  ]
+  ],
+  "mapFlowReview": {
+    "commit": "677595190cd1959cffedafb8968754afe0cf9fb5",
+    "nodeTests": 65,
+    "pythonTests": 13,
+    "assetsValidated": 259,
+    "changes": [
+      "seven indoor classifications",
+      "decision atlas",
+      "NPC capacity error instead of overlapping auto-placement"
+    ],
+    "remaining": [
+      "91 canonical binding/surface gaps require exact scene metadata",
+      "arbitrary outdoor generation not implemented",
+      "authenticated Playground acceptance not performed"
+    ]
+  }
 }
