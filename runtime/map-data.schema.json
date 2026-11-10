@@ -1,13 +1,16 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:wizawi:wizamap:map-data:3.0.0",
-  "title": "WIZAMAP MAP_DATA 3.0.0",
+  "$id": "urn:wizawi:wizamap:map-data:3.1.0",
+  "title": "WIZAMAP MAP_DATA 3.1.0",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "schemaVersion": {
-      "const": "3.0.0",
-      "default": "3.0.0"
+      "type": "string",
+      "enum": [
+        "3.1.0"
+      ],
+      "default": "3.1.0"
     },
     "meta": {
       "type": "object",
@@ -154,7 +157,7 @@
         "$ref": "#/$defs/actor"
       },
       "minItems": 1,
-      "maxItems": 11
+      "maxItems": 51
     },
     "hints": {
       "type": "array",
@@ -200,10 +203,77 @@
               "points"
             ]
           }
+        },
+        "revealedPlaceIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          },
+          "default": []
         }
       },
       "required": [],
       "default": {}
+    },
+    "customScene": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "user-created"
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "building",
+            "interior",
+            "outdoor",
+            "village"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "surroundings": {
+          "type": "string",
+          "maxLength": 360,
+          "default": ""
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "grass",
+            "stone",
+            "forest",
+            "sand",
+            "snow"
+          ],
+          "default": "grass"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "source",
+        "kind",
+        "description"
+      ]
     }
   },
   "required": [
@@ -577,6 +647,12 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 128
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "default": 0
         }
       },
       "required": [
@@ -603,7 +679,8 @@
             "side",
             "hint",
             "pool",
-            "life"
+            "life",
+            "event"
           ]
         },
         "title": {
@@ -631,6 +708,11 @@
             "overhear": "",
             "observation": ""
           }
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 400,
+          "default": ""
         }
       },
       "required": [
