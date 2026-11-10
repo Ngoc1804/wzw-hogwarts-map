@@ -3,6 +3,7 @@ import sceneAtlas from './atlas-index.json' with {type:'json'};
 
 // Exact public labels are resolved here so Gemini needs no external lookup pack.
 const atlasKnownIds=new Set(sceneAtlas.knownPlaceIds);
+const atlasLockedIds=new Set([...sceneAtlas.lockedPlaceIds,...sceneAtlas.cccNonRoomPlaceIds]);
 const exactPlaceNames=new Map();
 const nameKey=value=>typeof value==='string'?value.normalize('NFC').trim().toLocaleLowerCase('vi'):'';
 for(const [id,name] of Object.entries(sceneAtlas.canonicalNameById)){
@@ -92,8 +93,20 @@ export function validateMapData(data) {
   const places=new Set(data.places.map(p=>p.id));
   const requirePlace=(id,label)=>{if(!places.has(id))errors.push(`${label}: unknown place`)};
   const pcs=data.actors.filter(a=>a.isPC);
+  if(data.customScene){
+    const pcId=pcs[0]?.placeId;
+    if(pcId&&atlasKnownIds.has(sceneAtlas.aliases[pcId]||pcId))errors.push('customScene is only for user-created locations outside the canonical atlas');
+    if(data.view.templateId)errors.push('customScene cannot request a fixed template');
+    for(const p of data.places){
+      const id=sceneAtlas.aliases[p.id]||p.id;
+      if(atlasKnownIds.has(id))errors.push('customScene cannot replace an atlas place: '+p.id);
+      const matches=exactPlaceNames.get(nameKey(p.name))||[];
+      if(matches.length===1&&atlasKnownIds.has(matches[0]))errors.push('customScene name matches a canonical atlas place: '+p.name);
+    }
+  }
+  for(const p of data.places)if(atlasLockedIds.has(sceneAtlas.aliases[p.id]||p.id))errors.push('Atlas location is locked: '+p.id);
   if(pcs.length!==1)errors.push('Exactly one PC required');
-  if(data.actors.filter(a=>!a.isPC).length>10)errors.push('At most 10 NPC/group/community tags');
+  if(data.actors.filter(a=>!a.isPC).length>50)errors.push('At most 50 public actor records; only 10 NPC labels are rendered');
   const selected=data.view.selectedId;
   if(selected!==null&&!ids.has(selected))errors.push('Unknown selected entity');
   for(const a of data.actors){
@@ -105,9 +118,9 @@ export function validateMapData(data) {
   data.view.routePlaceIds.forEach(id=>requirePlace(id,'route'));
   const date=new Date(data.meta.date+'T00:00:00Z');
   if(!Number.isFinite(date.valueOf())||date.toISOString().slice(0,10)!==data.meta.date)errors.push('Invalid RP date');
-  const counts={side:0,hint:0,pool:0,life:0};
+  const counts={side:0,hint:0,pool:0,life:0,event:0};
   for(const h of data.hints){requirePlace(h.placeId,'hint');counts[h.type]++;}
-  if(counts.side>2||counts.hint>1||counts.pool+counts.life>2)errors.push('Hint display limit: 2 side, 1 hint, 2 pool/life');
+  if(counts.side>2||counts.hint>1||counts.pool+counts.life>2||data.hints.length>5)errors.push('Map event/hint display limit: 5 total, with 2 side, 1 hint, 2 pool/life');
   const graph=new Map(data.places.map(p=>[p.id,[]]));
   for(const c of data.connections){requirePlace(c.from,'connection');requirePlace(c.to,'connection');if(c.from===c.to)errors.push('Self connection');graph.get(c.from)?.push(c.to);graph.get(c.to)?.push(c.from);}
   for(let i=1;i<data.view.routePlaceIds.length;i++)if(!graph.get(data.view.routePlaceIds[i-1])?.includes(data.view.routePlaceIds[i]))errors.push('Route has an unlinked step');
@@ -120,6 +133,7 @@ export function validateMapData(data) {
       for(const region of regions)if(!region.points.every(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)))errors.push('Invalid '+label+' polygon');
     }
   }
+  for(const id of data.visibility.revealedPlaceIds||[])if(atlasLockedIds.has(sceneAtlas.aliases[id]||id))errors.push('Cannot reveal locked atlas location: '+id);
   const regions=new Set((data.visibility.fogRegions||[]).map(r=>r.id));
   for(const id of data.visibility.fogRegionIds)if(!regions.has(id))errors.push('Fog region needs explicit geometry: '+id);
   return {ok:errors.length===0,errors};
