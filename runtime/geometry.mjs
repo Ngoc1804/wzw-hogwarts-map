@@ -98,7 +98,7 @@ export function buildGeometry(plan,indoor={}){
    const xs=poly.map(p=>p[0]),ys=poly.map(p=>p[1]);
    model.bounds=[Math.min(...xs)-55,Math.min(...ys)-85,Math.max(...xs)-Math.min(...xs)+110,Math.max(...ys)-Math.min(...ys)+150];
  }
- const walls=buildIndoorWalls(model);
+ const walls=buildIndoorWalls(exterior?{...model,floors:[]}:model);
  const exclusions=exclusionsFor(model);
  const rooms=Object.fromEntries(model.rooms.map(r=>[r.id,{...r,h:r.bottom-r.y,shape:r.shape,poly:r.poly||rectangle(r.x,r.y,r.w,r.bottom-r.y)}]));
  const floorPolygons=[
