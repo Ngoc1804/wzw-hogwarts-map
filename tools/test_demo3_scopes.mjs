@@ -17,7 +17,7 @@ test('Demo 3: all 44 castle and 27 tower localities generate a full structural s
   };
   try{
    const p=resolveMap(data),g=buildGeometry(p,p.indoor);
-   assert.equal(p.scopeId,group.key);assert.equal(p.places.length,group.placeIds.length);
+   assert.equal(p.scopeId,group.key);assert.equal(p.places.length,group.placeIds.filter(x=>!atlas.lockedPlaceIds.includes(x)&&!atlas.cccNonRoomPlaceIds.includes(x)).length);
    assert.ok(g.suggestedAnchors[id]?.length);assert.ok(g.floorPolygons.length);
   }catch(e){failures.push(group.key+' '+e.message);}
  }
