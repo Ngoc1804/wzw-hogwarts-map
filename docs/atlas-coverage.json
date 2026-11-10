@@ -6,8 +6,8 @@
     "generated-exterior": 101,
     "generated-indoor": 280,
     "locked-by-policy": 86,
-    "missing-fixed-binding": 65,
-    "template": 132
+    "missing-fixed-binding": 64,
+    "template": 133
   },
   "entries": [
     {
@@ -1188,7 +1188,10 @@
     {
       "id": "P-1b93d2a168cc1a",
       "name": "Tiệm đồ cũ",
-      "status": "missing-fixed-binding"
+      "status": "template",
+      "bindings": {
+        "diagon-knockturn": "da-goods"
+      }
     },
     {
       "id": "P-9253053d400539",

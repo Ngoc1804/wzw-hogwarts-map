@@ -10,7 +10,7 @@
 - Outdoor schematic từ assets cây/nhà hiện có, nền/đường, vùng nước khi có ngữ cảnh, chừa vùng đứng và phần công trình. Nhà độc lập dùng cùng indoor engine và thêm nền xung quanh; không dựng renderer nhà nhỏ riêng. Cảnh procedural không là bằng chứng adjacency canon.
 - Footstep/tag trên nội thất. Tránh bàn, tường, nước và vật cản lớn; ghế/sofa không cần exclusion riêng cho actor.
 - H1/H2/Diagon/Hogsmeade: nhãn inside gắn mặt tường, không lên nóc và không có dấu chân giả ngoài nhà. Actor bị che có ký hiệu mái ◆; hover/click/tap làm công trình còn opacity 30%, có giữ mở/đóng lại và cleanup khi đổi scene. Quyền hiển thị/fog vẫn áp dụng.
-- Bổ sung 34 binding vào các ID artwork đã có (gồm region/aggregate và định vị cấp nhà/container có ghi độ chính xác). Giữ nguyên 13 SVG; không vẽ lại hoặc đổi bố cục.
+- Bổ sung 35 binding vào các ID artwork đã có (gồm region/aggregate và định vị cấp nhà/container có ghi độ chính xác). Giữ nguyên 13 SVG; không vẽ lại hoặc đổi bố cục.
 - Nhận đúng paving Slytherin, ellipse sân Quidditch, sàn phòng Bộ 8–10; tránh bàn Đại Sảnh và đài phun nước. Sửa lỗi SVG đường viền nhãn thiếu dấu cách gây console error.
 - Đồng bộ prompt, flow, AI atlas context, CI và báo cáo coverage mới. Báo cáo 84 cũ chỉ là lịch sử, vẫn kiểm chứng cứ artwork cũ.
 
@@ -24,7 +24,7 @@
 
 ## Chưa hoàn thành — không tính là đã xử lý
 
-- 65 địa điểm thuộc template chưa có binding hình học xác minh: xem `docs/DEMO3_REMAINING_BINDINGS.md`. Không thể đánh đồng source giao cho template với việc artwork đã có vị trí riêng của từng nơi. Đặc biệt các tên sân/cầu H2 chưa có đối chiếu và các cảnh chỉ được nêu trong danh mục cần hoàn thiện artwork/region đúng nguồn.
+- 64 địa điểm thuộc template chưa có binding hình học xác minh: xem `docs/DEMO3_REMAINING_BINDINGS.md`. Không thể đánh đồng source giao cho template với việc artwork đã có vị trí riêng của từng nơi. Đặc biệt các tên sân/cầu H2 chưa có đối chiếu và các cảnh chỉ được nêu trong danh mục cần hoàn thiện artwork/region đúng nguồn.
 - 29 mục Bộ 1–7 là phạm vi được người dùng loại trừ; 1 mục Bộ chưa rõ tầng giữ chờ xác nhận.
 - Chưa phát hành/re-pin bundle production, chưa test RP thật trong AI Studio. Chỉ phát hành sau khi giải quyết acceptance còn thiếu; không dùng fixture như RP thật.
 

@@ -2,11 +2,11 @@
 
 Nguồn: atlas-approved-2.0; đây là danh sách mới, không phải 84 case cũ.
 
-Có **65 địa điểm** thuộc template nhưng chưa có binding hình học được xác minh. Không gán vào template khác, không dùng mái/bbox làm sàn, không tính đã hoàn thành. Các vùng tạo mới cần nằm đúng artwork đã chốt; tên sân/cầu chưa đối chiếu không được đoán thành Wyvern/Mistletoe.
+Có **64 địa điểm** thuộc template nhưng chưa có binding hình học được xác minh. Không gán vào template khác, không dùng mái/bbox làm sàn, không tính đã hoàn thành. Các vùng tạo mới cần nằm đúng artwork đã chốt; tên sân/cầu chưa đối chiếu không được đoán thành Wyvern/Mistletoe.
 
 | Template | Còn thiếu |
 |---|---:|
-| diagon-knockturn | 8 |
+| diagon-knockturn | 7 |
 | express | 2 |
 | gryffindor-common | 1 |
 | h1 | 32 |
@@ -78,7 +78,6 @@ Các binding cấp nhà/container đã có chỉ định vị đúng công trìn
 | `P-00020cadb6235e` | Đầu máy Hogwarts Express | express | 39 |
 | `P-046c1c72bb9fc9` | Hẻm Xéo | diagon-knockturn | 42 |
 | `P-dbdb26cb4f253a` | Sân sau Cái Vạc Lủng | diagon-knockturn | 42 |
-| `P-1b93d2a168cc1a` | Tiệm đồ cũ | diagon-knockturn | 42 |
 | `P-95cdaf84841bcd` | Các tiệm, xưởng, quán trong bản đồ Diagon | diagon-knockturn | 42 |
 | `P-71db87f76e608b` | Hẻm Knockturn | diagon-knockturn | 43 |
 | `P-5d33c248682e4b` | Tiệm cổ vật / cầm đồ tại Knockturn | diagon-knockturn | 43 |

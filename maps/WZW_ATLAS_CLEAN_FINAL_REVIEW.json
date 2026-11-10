@@ -2986,7 +2986,13 @@
       "templateCandidates": [
         "diagon-knockturn"
       ],
-      "sourceIds": []
+      "sourceIds": [],
+      "templateBinding": {
+        "templateId": "diagon-knockturn",
+        "atlasRef": "da-goods",
+        "precision": "artwork-region"
+      },
+      "bindingEvidence": "Existing SVG da-goods is explicitly titled SECOND-HAND GOODS, matching Tiệm đồ cũ"
     },
     {
       "id": "P-9253053d400539",

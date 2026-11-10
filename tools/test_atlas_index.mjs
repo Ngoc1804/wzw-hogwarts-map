@@ -34,6 +34,7 @@ test('template bindings use only the approved owner; source location cannot be r
   assert.ok(index.templateOwnerById[id].includes(t));assert.ok(registry.templates[t].targets[ref]?.length);
  }
  const hall=resolveMap(payload('P-5e20349a56bd1b'));assert.equal(hall.templateId,'hall');
+ assert.equal(resolveMap(payload('P-1b93d2a168cc1a')).places[0].atlasRef,'da-goods');
  const lake=payload('P-30cf89999f5e15');lake.view={templateId:'h2'};assert.throws(()=>resolveMap(lake),/verified PC binding/);
  assert.equal(resolveMap(payload('P-30cf89999f5e15')).templateId,'h1');
 });
