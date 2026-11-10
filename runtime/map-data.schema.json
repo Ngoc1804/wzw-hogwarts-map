@@ -653,6 +653,10 @@
           "minimum": 0,
           "maximum": 100,
           "default": 0
+        },
+        "groupId": {
+          "type": "string",
+          "maxLength": 128
         }
       },
       "required": [
