@@ -63,8 +63,10 @@ export function buildGeometry(plan,indoor={}){
  const places=plan.places;
  if(!places.length)throw Error('Indoor scene requires at least one visible room');
  if(new Set(places.map(p=>p.floor||'')).size>1)throw Error('Only the current indoor floor/scene may be built; provide one floor per /map');
- const corridorPlaces=places.filter(p=>p.kind==='corridor');
- const roomPlaces=places.filter(p=>p.kind!=='corridor');
+ const custom=plan.sceneType==='custom',outdoorKinds=new Set(['grounds','street','region']);
+ const exterior=custom&&['outdoor','village','building'].includes(plan.customScene?.kind);
+ const corridorPlaces=places.filter(p=>p.kind==='corridor'||(exterior&&outdoorKinds.has(p.kind)));
+ const roomPlaces=places.filter(p=>!corridorPlaces.includes(p));
  if(!roomPlaces.length&&indoor.layout==='tower')throw Error('Tower recipe requires an actual room');
  const records=roomPlaces.map(p=>({
   id:p.id,name:p.name,shape:shapeFor(p),
