@@ -25,6 +25,9 @@ function resolveName(value,scopeId){
  if(typeof value!=='string')return null;
  const direct=sceneAtlas.aliases[value]||value;
  if(atlasKnownIds.has(direct))return direct;
+ // Generic room labels have no unique owner across RP houses/castles.
+ // Never promote a locally described bedroom, kitchen or corridor to a canonical AU room.
+ if(/^(phong (ngu|khach|tam|hoc|chinh)|thu vien|bep|kho|hanh lang|san trong|vuon)$/.test(nameKey(value)))return null;
  const matches=exactPlaceNames.get(nameKey(value))||[];
  if(matches.length===1)return matches[0];
  if(scopeId){const local=matches.filter(id=>sceneAtlas.scopeById[id]===scopeId);if(local.length===1)return local[0];}
