@@ -1,3 +1,4 @@
+```text
 ### R14.6 — /MAP
 
 /MAP chỉ xem cảnh RP đã chấp nhận tại vị trí lệnh, theo R0/R2/R3–R8; không đổi giờ, nơi, actor, vật, quest hoặc lựa chọn PC. IC sau lệnh vẫn xử lý đúng thứ tự. Riêng /MAP xuất một code block HTML hoàn chỉnh theo loader bên dưới, không thêm STATUS/BODY/META, blockquote hay diễn biến. Không dùng dữ liệu demo hoặc tự nhận đã test thành công.
@@ -31,5 +32,6 @@ Thay __LIVE_MAP_DATA_JSON__ bằng JSON thật, không comment/placeholder. Esca
 <!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><body>
 <p id="status" role="status">Đang tải bản đồ…</p>
 <script type="application/json" id="MAP_DATA">__LIVE_MAP_DATA_JSON__</script>
-<script src="https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@c2aa907ccdcdb904e6ed0e52ee42ab287300f28e/runtime/bundle.js" onerror="document.getElementById('status').textContent='Không tải được engine bản đồ. Hãy kiểm tra kết nối hoặc URL phát hành.'"></script>
+<script src="https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@35687ba484a6834ceb0b1d692e54f80ac435b6d3/runtime/bundle.js" onerror="document.getElementById('status').textContent='Không tải được engine bản đồ. Hãy kiểm tra kết nối hoặc URL phát hành.'"></script>
 </body></html>
+```
