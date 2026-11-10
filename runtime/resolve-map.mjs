@@ -50,14 +50,19 @@ export function resolveMap(input,templates=registry.templates){
    scopeId:data.customScene.id,atlasVersion:atlasVersion(),places,
    connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
  }
- if(!known)throw Error('Unknown Atlas PC location: provide a user-created customScene with a short structural description');
-
  // PC-controlled template selection: actors elsewhere must not defeat fixed artwork.
  const pcPlace=listed.find(p=>p.id===pcId);
  if(!pcPlace)throw Error('The PC place must appear in MAP_DATA.places');
+ // Legacy locally described indoor rooms remain supported. Unknown outdoor/AU
+ // parcels require an explicit, short customScene description.
+ const localIndoor=!known&&listed.every(p=>p.generation&&['room','corridor','hall','tower','house','shop','pub','greenhouse','special'].includes(p.kind));
+ if(!known&&!localIndoor&&!pcPlace.atlasRef)
+  throw Error('Unknown Atlas PC location: provide a user-created customScene with a short structural description');
  const preferred=data.view.templateId;
  const candidates=Object.keys(listVerifiedTemplateBindings(pcId)).filter(id=>technical(pcPlace,id,templates));
  const eligible=candidates.length?candidates:Object.keys(templates).filter(id=>technical(pcPlace,id,templates));
+ // A local Atlas reference is display-only: it may target existing public
+ // artwork but cannot grant entry to protected canonical places.
  eligible.sort((a,b)=>(TEMPLATE_SPECIFICITY[b]||70)-(TEMPLATE_SPECIFICITY[a]||70)||a.localeCompare(b));
  if(preferred&&data.view.preferredMode!=='generated'&&!eligible.includes(preferred))
   throw Error('Requested template has no verified PC binding: '+preferred);
@@ -70,6 +75,12 @@ export function resolveMap(input,templates=registry.templates){
  }
  if(data.view.preferredMode==='template')throw Error('PC location has no verified fixed template');
  assertGeneratedScene([pcId]);
+ if(!known){
+  if(!localIndoor)throw Error('Unknown Atlas location requires an explicit customScene structural description and valid generation');
+  const places=listed.map(placeWithGeneration);
+  return {mode:'generated',sceneType:'local',scopeId:data.view.scopeId||'local:'+pcId,atlasVersion:atlasVersion(),places,
+   connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor.layout||'auto'}};
+ }
  const group=resolveAtlasLocality(pcId,data.view.scopeId);
  if(!group)throw Error('Atlas PC location has no approved generated scope or fixed template: '+pcId);
  const ids=new Set(group.placeIds);
