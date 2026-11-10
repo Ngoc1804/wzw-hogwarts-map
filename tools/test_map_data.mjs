@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import {validateMapData,serializeMapData} from '../runtime/map-data.mjs';
 import {resolveMap,layoutSeed} from '../runtime/resolve-map.mjs';
 import {prepareMap} from '../runtime/prepare-map.mjs';
+import {pickStandingPoint} from '../runtime/standing.mjs';
 const read=f=>JSON.parse(fs.readFileSync(new URL('../runtime/examples/'+f,import.meta.url)));
 const sample=()=>read('local-template.json'),generated=()=>read('local-generated.json');
 const invalid=(mutate,match)=>{const d=sample();mutate(d);const result=validateMapData(d);assert.equal(result.ok,false);if(match)assert.match(result.errors.join(';'),match)};
@@ -67,4 +68,26 @@ test('template bindings match current technical index and never invent targets',
  const registry=JSON.parse(fs.readFileSync(new URL('../runtime/templates.json',import.meta.url)));
  const index=JSON.parse(fs.readFileSync(new URL('../maps/interaction-index.json',import.meta.url)));
  for(const [id,t] of Object.entries(registry.templates))for(const [atlasRef,targets] of Object.entries(t.targets))for(const target of targets)assert.equal(index.maps[id][target],atlasRef);
+});
+
+test('template positions are floor-based and exclude roof/scenery, no binding zone required',()=>{
+ const p=resolveMap(sample());assert.equal(p.standing.length,1);
+ const s=p.standing[0];assert.equal(s.mode,'template');assert.equal(s.surface,'floor');
+ assert.deepEqual(s.avoid,['roof','scenery']);assert.ok(s.anchorIds.includes('region:extra:0'));
+ const floor={x:0,y:0,width:140,height:140};
+ const block={x:35,y:35,width:70,height:70}; // house/roof silhouette
+ const point=pickStandingPoint({floors:[floor],blockers:[block],origin:{x:70,y:70}});
+ assert.ok(point);assert.ok(point.x>=0&&point.y>=0&&point.x<=140&&point.y<=140);
+ assert.ok(!(point.x>=35&&point.x<=105&&point.y>=35&&point.y<=105));
+});
+test('generated actors stand on generated floor without template/binding anchors',()=>{
+ const p=resolveMap(generated());assert.equal(p.standing[0].mode,'generated');
+ assert.deepEqual(p.standing[0].anchorIds,[]);assert.deepEqual(p.standing[0].avoid,[]);
+ const floor=[[0,0],[80,0],[80,30],[30,30],[30,80],[0,80]];
+ const point=pickStandingPoint({floors:[floor],origin:{x:65,y:65}});
+ assert.ok(point);assert.ok(point.x<=30||point.y<=30);
+});
+test('standing never fabricates a position when floor is missing or fully blocked',()=>{
+ assert.equal(pickStandingPoint({floors:[]}),null);
+ assert.equal(pickStandingPoint({floors:[{x:0,y:0,width:20,height:20}],blockers:[{x:0,y:0,width:20,height:20}],origin:{x:10,y:10}}),null);
 });
