@@ -67,5 +67,30 @@
       "arbitrary outdoor generation not implemented",
       "authenticated Playground acceptance not performed"
     ]
+  },
+  "parts1to3": {
+    "baseCommit": "23359d6a10f9f3f22cf23ff4c5e4e097e7b6fd7a",
+    "scope": "Single working source, compact compatible MAP_DATA 2.0, production entry and UI",
+    "nodeTestExecutions": 69,
+    "pythonTests": 13,
+    "atlasMaps": 13,
+    "browser": [
+      "compact JSON and window.MAP_DATA entry",
+      "production has no editor, template menu or test hook",
+      "malformed JSON reports an error",
+      "failed render clears scene/inspector and can recover",
+      "scene-only export drops unused connections",
+      "generated furnishings, custom vector, semantic floors",
+      "11 mobile roof labels",
+      "offline HTML download and reopen"
+    ],
+    "bundleSha256": "7dfc24f229997f88999625d4dc58400863116c3e2efc7377788ea6555d493022",
+    "staticAssetRef": "23359d6a10f9f3f22cf23ff4c5e4e097e7b6fd7a",
+    "remaining": [
+      "91 binding/surface metadata gaps unchanged",
+      "authenticated Playground acceptance not performed",
+      "physical mobile acceptance not performed",
+      "repository-wide cleanup not in parts 1–3"
+    ]
   }
 }

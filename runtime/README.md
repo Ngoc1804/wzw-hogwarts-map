@@ -11,3 +11,7 @@ RP context → Gemini produces filtered MAP_DATA and loader HTML → jsDelivr fe
 **Exterior actors:** use conservative checked-in visible-ground patches for four exterior templates, or caller-supplied verified spatial geometry. Feet stay on exact SVG coordinates through zoom. Semantic floor elements are automatically walkable. Names for inside actors sit above the roof; hover/tap fades covering artwork to 50% and restores original styles. Ground coordinates stay separate from label placement. Ground behind building silhouettes still requires scene polygons. See `docs/DEVELOPMENT_STATUS.md` and `docs/atlas-coverage.json` for remaining gaps.
 
 Build bundle with `python tools/build_runtime.py --out /tmp/wizamap --ref <full commit SHA>`; after committing bundle pin its exact commit in `ui/preview.html` and `docs/RUNTIME_USAGE.md`. Run CI (Node contract/atlas/geometry, bundle syntax, Python atlas and gallery). Browser/AI Studio live tests remain separate from CI.
+
+Optional fields and defaults: see ../docs/MAP_FLOW.md; the schema is authoritative. assertMapData returns a normalized copy; callers must use that return value. No visibility or RP facts are inferred.
+
+Production viewer accepts application/json#MAP_DATA (preferred safe embedding) or window.MAP_DATA. MAP_DATA editor and WIZAMAP_TEST only exist in explicit data-debug=true builds. Build browser fixtures with --debug; omit it for RP output.

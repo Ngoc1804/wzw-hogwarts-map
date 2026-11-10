@@ -20,7 +20,7 @@ for i in range(4):d['actors'].append({**copy.deepcopy(d['actors'][0]),'id':'npc-
 scenes.append(('roof','NPC trong nhà, bảng tên trên mái',d))
 for key,title,d in scenes:
  folder=out/key;folder.mkdir(exist_ok=True);data=folder/'input.json';data.write_text(json.dumps(d,ensure_ascii=False,indent=2))
- subprocess.run(['python',str(ROOT/'tools/build_runtime.py'),'--out',str(folder),'--data',str(data),'--offline'],check=True,cwd=ROOT)
+ subprocess.run(['python',str(ROOT/'tools/build_runtime.py'),'--out',str(folder),'--data',str(data),'--offline','--debug'],check=True,cwd=ROOT)
 links=''.join('<li><a href="'+key+'/preview.html">'+html.escape(title)+'</a></li>' for key,title,_ in scenes)
 (out/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>WIZAMAP · Test thực nghiệm</title><style>body{font:18px Georgia;background:#eee4d1;color:#49362b;margin:40px}li{margin:18px}</style><h1>WIZAMAP · Test thực nghiệm</h1><p>Chọn cảnh. Thử zoom, bảng tên, tải HTML và mở lại khi offline. MAP_DATA cho phép sửa yêu cầu ngay trong Preview.</p><ul>'+links+'</ul>')
 print(out/'index.html')

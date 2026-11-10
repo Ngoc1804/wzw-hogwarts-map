@@ -26,3 +26,11 @@ Bundle và asset ghim commit. Chỉ tải atlas khi dùng template và chỉ t�
 ## Test thực nghiệm
 
 `python tools/prepare_experiment.py` tạo sáu cảnh độc lập tại `/tmp/wizamap-experiments/index.html`. Xem tiêu chí nghiệm thu trong [INDOOR_PREVIEW.md](INDOOR_PREVIEW.md). AI Studio đăng nhập và điện thoại thật chưa nghiệm thu.
+
+## Entry và QA
+
+JSON `#MAP_DATA` là entry ưu tiên; `window.MAP_DATA` cũng được nhận trước khi mount UI. JSON sai hiển thị lỗi trong khung, không để trang trắng. Render lỗi xóa cảnh và inspector cũ. Thanh hành động mặc định phản ánh PC; `focus.selectedId` chỉ mở inspector của mục hiện công khai.
+
+Production chỉ có zoom, vừa khung cảnh, motion và tải HTML. Không có menu atlas hoặc editor JSON. Dùng `python tools/build_runtime.py --out /tmp/wzw-test --data tools/contract-fixture.json --embed-atlas --debug` cho test browser; cờ debug không dành cho loader RP.
+
+Các default và trường có thể bỏ được mô tả tại MAP_FLOW.md, lấy chính xác từ schema. Không gửi questPolicy khi không có hint cũng hợp lệ.

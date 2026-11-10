@@ -34,3 +34,9 @@ Bundle: 677595190cd1959cffedafb8968754afe0cf9fb5 (asset/atlas giữ SHA nguồn 
 ## Rà lại cơ chế /MAP
 
 Bảng quyết định: `maps/decision-atlas.json`; hướng dẫn Gemini: `docs/GEMINI_QUICKSTART.md`. Số mục thiếu binding/surface là thiếu metadata vị trí đã xác minh, không phải số map phải dựng sẵn. Template bắt buộc giữ artwork; Gemini cung cấp atlasRef kỹ thuật đúng khi chưa có binding canonical. Cảnh ngoài trời tự do vẫn cần geometry phù hợp; renderer indoor không thay thế địa hình ngoài trời.
+
+## Phần 1–3: hợp đồng và entry production
+
+Nguồn phát triển là fix/map-flow-review, nền 23359d6. MAP_DATA 2.0 hỗ trợ bỏ trường trình bày theo default trong schema; quyền hiển thị và dữ kiện RP vẫn gửi rõ. Có hint thì cần questPolicy. Production không có editor JSON/menu template/test hook; QA bật --debug. JSON lỗi và render lỗi hiện thông báo, xóa cảnh/inspector cũ. Cả JSON #MAP_DATA và window.MAP_DATA đều được hỗ trợ.
+
+Kiểm tra mới ghi tại parts1to3 trong runtime-validation.json; các số liệu cũ là lịch sử, không phải nghiệm thu Playground. 91 mục thiếu binding/surface, phạm vi AU và phần dọn toàn repo không thay đổi.

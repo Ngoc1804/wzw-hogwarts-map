@@ -3,7 +3,7 @@
 import argparse,json,re,subprocess
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--ref');p.add_argument('--data',help='Explicit test/RP JSON file; never bundled by default');p.add_argument('--embed-atlas',action='store_true');p.add_argument('--offline',action='store_true',help='Embed only the atlas/assets required by --data');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--ref');p.add_argument('--debug',action='store_true',help='Enable MAP_DATA editor and browser test hooks');p.add_argument('--data',help='Explicit test/RP JSON file; never bundled by default');p.add_argument('--embed-atlas',action='store_true');p.add_argument('--offline',action='store_true',help='Embed only the atlas/assets required by --data');a=p.parse_args()
 out=Path(a.out);out.mkdir(parents=True,exist_ok=True)
 ref=a.ref or subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip()
 if not re.fullmatch('[0-9a-f]{40}',ref):p.error('--ref must be a full commit SHA')
@@ -31,6 +31,6 @@ if a.embed_atlas or needs_atlas:
  import atlas
  _,data=atlas.load(R/'index.html');payload+='<script type="application/json" id="qa-atlas">'+json.dumps(data,ensure_ascii=False).replace('<','\\u003c')+'</script>'
 if a.data:payload+='<script type="application/json" id="MAP_DATA">'+json.dumps(json.loads(Path(a.data).read_text()),ensure_ascii=False).replace('<','\\u003c')+'</script>'
-html='<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP · Test template</title><body>'+payload+'<script>'+bundle.replace('</script','<\\/script')+'</script></body></html>'
+html='<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP · Test template</title><body>'+payload+('<script data-debug="true">' if a.debug else '<script>')+bundle.replace('</script','<\\/script')+'</script></body></html>'
 (out/'preview.html').write_text(html)
 print(out/'preview.html')

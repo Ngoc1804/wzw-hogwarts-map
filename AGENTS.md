@@ -1,4 +1,4 @@
-# WIZAMAP: hướng dẫn làm việc trong demo-1
+# WIZAMAP: nguồn phát triển fix/map-flow-review
 
 ## Bắt đầu
 
@@ -32,13 +32,13 @@ Không commit `.atlas-work/`, node_modules, file cache, ZIP, HTML dự phòng, �
 
 ## UI và atlas hiện hành
 
-UI chuẩn được trích từ lịch sử demo-1 tại 9e54f6a, không lấy main làm thiết kế. `ui/` giữ shell, palette và footsteps tái sử dụng. Không có nhãn địa điểm dạng ribbon; chỉ nhãn PC/NPC/nhóm. Chữ kiến trúc/signage nằm trong template không phải actor tag. Prefect chỉ dùng màu tuần tra khi onPatrol=true; reduced motion dùng hai chân đứng đổi opacity chậm, không dịch chuyển. `maps/world-atlas.json` chỉ liệt kê khu vực/tầng → phòng, công trình và địa điểm đáng kể; `maps/interaction-index.json` giữ ID kỹ thuật riêng. Không đưa từng tường/cửa/đồ nội thất vào atlas. Đây chưa là graph canon đầy đủ.
+UI chuẩn được trích từ lịch sử demo-1 tại 9e54f6a, không lấy main làm thiết kế. `ui/` giữ shell, palette và footsteps tái sử dụng. Không có nhãn địa điểm dạng ribbon; chỉ nhãn PC/NPC/nhóm. Chữ kiến trúc/signage nằm trong template không phải actor tag. Prefect chỉ dùng màu tuần tra khi onPatrol=true; reduced motion dùng hai chân đứng đổi opacity chậm, không dịch chuyển. `maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json` là atlas canonical hiện hành; `maps/interaction-index.json` giữ ID kỹ thuật riêng. Không đưa từng tường/cửa/đồ nội thất vào atlas. Đây chưa là graph canon đầy đủ.
 
 Hybrid: mặt bằng cho phòng/tường/lối đi; nội thất/decor dùng top/front/2.5D phù hợp. Không tự tạo bản top cho mọi đồ. Bộ hiện hành được người dùng chốt: 259 asset; 18 base nhà, 12 cây và 2 cây đặc biệt; màu tách riêng. Không tự gộp thêm vì chỉ cùng chức năng. Không phục hồi importer V3/generator hoặc HTML duyệt cũ.
 
 Atlas canon đang do phiên khác làm: không sửa maps/*, docs/ATLAS.md hoặc docs/research/* trong tác vụ dọn file nếu chưa có yêu cầu mới. Luôn fetch head mới trước khi push; không force-push.
 
-Cơ chế /MAP chuẩn: docs/MAP_FLOW.md và runtime/map-data.schema.json. Không tạo hợp đồng khác trong README/HTML mẫu. Giữ cap 10 tag NPC ngoài PC, 6 hint đúng tháng RP, crop/fog theo cảnh RP, không giới hạn cứng quanh PC. Resolver hiện chỉ trả plan; không tuyên bố engine đã render hoặc đã nối AI Studio.
+Cơ chế /MAP chuẩn: docs/MAP_FLOW.md và runtime/map-data.schema.json. Không tạo hợp đồng khác trong README/HTML mẫu. Giữ cap 10 tag NPC ngoài PC, 6 hint đúng tháng RP, crop/fog theo cảnh RP, không giới hạn cứng quanh PC. Resolver trả plan cho viewer; renderer/browser đã có. Không tuyên bố nghiệm thu AI Studio nếu chưa chạy phiên Playground thật.
 
 ## Yêu cầu đã duyệt mới
 MAP_DATA 2.0.0, Preview một chiều, không seed/storage; không khôi phục hai file ví dụ. Khi stance=walk, thanh hành động phải ghi Đang đi; RP quyết định chuyển động. Bảng tra mới: maps/decision-atlas.json.

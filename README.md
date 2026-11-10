@@ -1,6 +1,12 @@
-# WIZAMAP · demo-1
+# WIZAMAP
 
-**Bản đã chốt:** atlas hiện tại nằm duy nhất ở **[index.html](index.html)**: 13 map, H1 có animation và shading địa hình/kiến trúc. Mở trực tiếp file HTML; không cần server hay CDN. Dùng nút **Tải HTML** để lưu bản đầy đủ.
+Nguồn phát triển `/map`: **fix/map-flow-review**, bắt đầu phần 1–3 từ `23359d6a10f9f3f22cf23ff4c5e4e097e7b6fd7a`. `main` và `demo-1` là các mốc cũ; không lấy chúng làm runtime hiện hành. Chưa merge hoặc đổi nhánh mặc định.
+
+- [Cơ chế hiện hành](docs/MAP_FLOW.md): Preview một chiều, MAP_DATA 2.0, không seed/storage/backend.
+- [Hợp đồng duy nhất](runtime/map-data.schema.json), [hướng dẫn xuất dữ liệu](docs/GEMINI_QUICKSTART.md), [HTML loader](docs/RUNTIME_USAGE.md).
+- `index.html` là atlas artwork độc lập gồm 13 map, không phải entry `/map`. Runtime dùng artwork này theo dữ liệu cảnh; không thiết kế lại SVG.
+- [Trạng thái và giới hạn](docs/DEVELOPMENT_STATUS.md). 91 mục thiếu binding/surface, policy AU và nghiệm thu Playground vẫn giữ nguyên phạm vi.
+- UI production không có editor MAP_DATA, menu template hoặc test hook. Công cụ QA chỉ bật qua `tools/build_runtime.py --debug`.
 
 ## Tìm nhanh
 
@@ -63,7 +69,7 @@ Chọn Bộ Pháp thuật · Tầng 8–10 trong menu. Atrium, Bảo mật và X
 - UI/nhãn/footsteps nằm trong `ui/`, được nối qua runtime/viewer.mjs.
 - Phần atlas canon do phiên khác phụ trách; không lấy danh mục template hiện tại làm giới hạn toàn thế giới.
 
-Sau khi nhận atlas: chốt schema MAP_DATA và bridge engine → ghép UI cố định → renderer template/hybrid trong Preview một chiều → actor/hint/fog → kiểm thử HTML shell trong Google AI Studio qua jsDelivr ghim commit. Không đưa NPC/quest/state RP vào GitHub.
+Runtime đã có bridge, UI và renderer template/indoor trong Preview một chiều; nghiệm thu trực tiếp Google AI Studio vẫn cần thực hiện. Không đưa NPC/quest/state RP vào GitHub.
 
 Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phiên bản; bản cũ tra trong lịch sử Git.
 
@@ -76,7 +82,7 @@ Xem [trạng thái dọn repo](docs/CLEANUP.md). Không lưu thêm HTML/ZIP phi�
 - Kiểm tra: `node --test tools/test_map_data.mjs`. Runtime Preview hiện hành và giới hạn được ghi trong docs/DEVELOPMENT_STATUS.md.
 
 ## Runtime mới
-Xem [runtime/README.md](runtime/README.md), [quyết định atlas](docs/ATLAS_DECISIONS.md) và [luồng hiện hành](docs/MAP_FLOW.md). MAP_DATA 2.0.0 thay thế hợp đồng cũ có storage/locality.
+Xem [runtime/README.md](runtime/README.md), [quyết định atlas](maps/decision-atlas.json) và [luồng hiện hành](docs/MAP_FLOW.md). MAP_DATA 2.0.0 thay thế hợp đồng cũ có storage/locality.
 
 ## Indoor tùy biến và test thực nghiệm
 
