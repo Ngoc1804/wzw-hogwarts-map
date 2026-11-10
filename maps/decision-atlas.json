@@ -1,0 +1,7182 @@
+{
+  "description": "Template membership is not an exact standing coordinate. Required templates retain artwork; Gemini supplies scene data and verified actor positions.",
+  "places": [
+    {
+      "id": "HOG-HMNGC-E-04",
+      "name": "Hành lang Slytherin dưới hồ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-E-05",
+      "name": "Phòng học nhóm Slytherin",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-N-01",
+      "name": "Phòng học Độc dược",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-N-02",
+      "name": "Văn phòng Snape",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-N-03",
+      "name": "Kho nguyên liệu Độc dược",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-N-04",
+      "name": "Phòng chuẩn bị bài thực hành",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-N-05",
+      "name": "Phòng rửa vạc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-S-01",
+      "name": "Phòng tiệc Tử nhật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-S-02",
+      "name": "Kho vật tư lau dọn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-S-03",
+      "name": "Hành lang vận chuyển thực phẩm",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-S-04",
+      "name": "Phòng trực gia tinh",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-S-05",
+      "name": "Phòng kỹ thuật lò sưởi",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-W-01",
+      "name": "Hành lang hầm Tháp Thiên văn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-W-02",
+      "name": "Phòng phân loại mẫu khoáng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-W-03",
+      "name": "Phòng học trống HN-01",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-W-04",
+      "name": "Kho nồi vạc cũ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGC-W-05",
+      "name": "Phòng lưu mẫu độc dược",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-E-01",
+      "name": "Đường ống xuống Phòng Chứa Bí mật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-E-02",
+      "name": "Phòng Chứa Bí mật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-E-03",
+      "name": "Gian cửa chắn hầm cổ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-E-04",
+      "name": "Hành lang dẫn đến hầm bị niêm phong",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-N-01",
+      "name": "Hành lang đá dưới Tháp Thiên văn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-N-02",
+      "name": "Phòng Giả kim",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-N-03",
+      "name": "Kho than và nhiên liệu",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-N-04",
+      "name": "Phòng kiểm tra móng tháp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-S-01",
+      "name": "Gian Dây Sa-tăng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-S-02",
+      "name": "Gian chìa khóa bay",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-S-03",
+      "name": "Gian bàn cờ phù thủy",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-S-04",
+      "name": "Gian thử thách Độc dược",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-S-05",
+      "name": "Gian cuối bảo vệ Hòn đá",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-W-01",
+      "name": "Map Chamber",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-W-02",
+      "name": "Undercroft",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-W-03",
+      "name": "Kho dụng cụ khảo cổ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-HMNGM-W-04",
+      "name": "Phòng lập bản vẽ công trình",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-E-01",
+      "name": "Sảnh Trung tâm (Central Hall)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-E-02",
+      "name": "Sảnh lối vào Cầu cạn (Viaduct Entrance)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-E-03",
+      "name": "Hành lang nối khu nhà kính",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-E-04",
+      "name": "Phòng tiếp học sinh mới",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-E-05",
+      "name": "Kho dụng cụ sảnh Trung tâm",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-E-06",
+      "name": "Phòng học trống Đ-01",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-N-01",
+      "name": "Sảnh phía Bắc (North Hall)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-N-02",
+      "name": "Sảnh chân Tháp Chuông",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-N-03",
+      "name": "Hành lang tới cửa Bắc Hogwarts",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-N-04",
+      "name": "Phòng trực cửa Bắc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-N-05",
+      "name": "Kho đồ dùng sân tập",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-N-06",
+      "name": "Phòng học trống B-01",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-S-01",
+      "name": "Tiền sảnh (Entrance Hall)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {
+        "hall": "entrance-hall"
+      },
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-S-02",
+      "name": "Đại Sảnh (Great Hall)",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-S-03",
+      "name": "Phòng chờ trước Phân loại",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "common",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-S-05",
+      "name": "Phòng giáo viên (Staff Room)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {
+        "hall": "staff-room"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-S-06",
+      "name": "Văn phòng Filch",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {
+        "hall": "filch-office"
+      },
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-S-07",
+      "name": "Phòng tiếp khách nhà trường",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-W-02",
+      "name": "Kho chổi (Broom Cupboard)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {
+        "hall": "broom-cupboard"
+      },
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-W-03",
+      "name": "Hành lang vào sân Biến hình",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-W-04",
+      "name": "Hành lang hướng sân Tứ giác",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-W-05",
+      "name": "Phòng gửi áo choàng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG1-W-06",
+      "name": "Kho dụng cụ Biến hình",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-E-01",
+      "name": "Phòng học Phòng chống Nghệ thuật Hắc ám",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-E-02",
+      "name": "Hành lang Tháp DADA tầng thấp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-E-03",
+      "name": "Phòng học phụ Tháp DADA",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-E-04",
+      "name": "Phòng thực hành phòng vệ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-E-05",
+      "name": "Kho đạo cụ DADA",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-E-06",
+      "name": "Phòng học trống Đ-02",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-N-01",
+      "name": "Phòng Lịch sử Pháp thuật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-N-02",
+      "name": "Văn phòng McGonagall",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-N-03",
+      "name": "Phòng học Biến hình",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-N-04",
+      "name": "Phòng chuẩn bị Biến hình",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-N-05",
+      "name": "Kho sách Lịch sử Pháp thuật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-N-06",
+      "name": "Phòng học trống B-02",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-S-01",
+      "name": "Bệnh xá Hogwarts",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-S-02",
+      "name": "Văn phòng bà Pomfrey",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-S-03",
+      "name": "Hành lang vào Tháp Giáo viên",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-S-04",
+      "name": "Phòng thay băng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-S-05",
+      "name": "Kho vật tư y tế",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-S-06",
+      "name": "Phòng chờ bệnh xá",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "common",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-W-01",
+      "name": "Phòng học Muggle học",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-W-02",
+      "name": "Phòng Chữ tượng hình (Hieroglyphics)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-W-03",
+      "name": "Hành lang tầng trên North Hall",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-W-04",
+      "name": "Phòng lưu mô hình lịch sử",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-W-05",
+      "name": "Kho bản đồ giảng dạy",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG2-W-06",
+      "name": "Phòng học trống T-02",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-E-01",
+      "name": "Văn phòng giáo sư DADA (Lockhart 1992)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-E-02",
+      "name": "Hành lang tới văn phòng DADA",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-E-03",
+      "name": "Phòng tiếp phụ huynh của khoa DADA",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-E-04",
+      "name": "Phòng lưu giáo án",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-E-05",
+      "name": "Phòng học trống Đ-03",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-N-01",
+      "name": "Nhà vệ sinh Myrtle",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-N-02",
+      "name": "Hành lang tầng hai cạnh nhà vệ sinh Myrtle",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-N-03",
+      "name": "Nhà vệ sinh nam tầng này",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-N-04",
+      "name": "Kho bảo trì đường nước",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-N-05",
+      "name": "Phòng trực hành lang B-03",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-S-01",
+      "name": "Phòng luyện đũa phép cơ bản",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-S-02",
+      "name": "Phòng học trống N-03",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-S-03",
+      "name": "Kho thiết bị học tập",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-S-04",
+      "name": "Phòng làm việc trợ giảng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-S-05",
+      "name": "Phòng sinh hoạt học sinh nhỏ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-W-01",
+      "name": "Cầu thang tắt sau thảm treo",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-W-02",
+      "name": "Hành lang tranh bản đồ Argyllshire",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-W-03",
+      "name": "Phòng kiểm tra an toàn cầu thang",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-W-04",
+      "name": "Phòng học trống T-03",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG3-W-05",
+      "name": "Kho ghế bàn học",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-E-01",
+      "name": "Phòng học Bùa chú",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-E-02",
+      "name": "Hành lang Bùa chú",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-E-03",
+      "name": "Hành lang cấm tầng ba năm 1991",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-E-04",
+      "name": "Gian cửa sập của Fluffy (1991)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-E-05",
+      "name": "Phòng thực hành Bùa chú",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-E-06",
+      "name": "Kho đồ dùng Bùa chú",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-N-01",
+      "name": "Phòng Trưng bày Chiến tích",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "exhibition",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-N-02",
+      "name": "Hành lang áo giáp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-N-03",
+      "name": "Phòng Âm nhạc (Music Room)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-N-04",
+      "name": "Kho bảo quản cúp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-N-05",
+      "name": "Phòng tập hòa tấu",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-N-06",
+      "name": "Phòng học trống B-04",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-S-01",
+      "name": "Phòng tập Đấu tay đôi dự phòng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-S-02",
+      "name": "Phòng chuẩn bị câu lạc bộ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-S-03",
+      "name": "Phòng tập diễn thuyết",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-S-04",
+      "name": "Phòng họp học sinh",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-S-05",
+      "name": "Phòng học trống N-04",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-W-01",
+      "name": "Hành lang tầng trên Sảnh Bắc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-W-02",
+      "name": "Phòng trưng bày cổ vật giáo dục",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "exhibition",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-W-03",
+      "name": "Phòng học trống T-04",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-W-04",
+      "name": "Kho trang phục biểu diễn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG4-W-05",
+      "name": "Phòng phục hồi hiện vật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-E-01",
+      "name": "Hành lang Dài (Long Gallery)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-E-02",
+      "name": "Phòng học Số học (Arithmancy)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-E-03",
+      "name": "Phòng bản đồ và địa lý pháp thuật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-E-04",
+      "name": "Phòng giải mã mật thư",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-E-05",
+      "name": "Phòng học trống Đ-05",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-N-01",
+      "name": "Thư viện Hogwarts",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-N-02",
+      "name": "Khu Sách Cấm (Restricted Section)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-N-03",
+      "name": "Phòng làm việc thủ thư",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-N-04",
+      "name": "Phòng đọc nghiên cứu",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-N-05",
+      "name": "Phòng tra cứu mục lục",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-N-06",
+      "name": "Kho sách ít dùng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-S-01",
+      "name": "Phòng trống từng chứa Gương Ảo ảnh năm 1991",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-S-02",
+      "name": "Hành lang gương thông lối bí mật cũ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-S-03",
+      "name": "Phòng lưu hồ sơ thư viện",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-S-04",
+      "name": "Phòng học trống N-05",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-S-05",
+      "name": "Kho vật dụng sảnh đọc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-W-01",
+      "name": "Phòng học Cổ ngữ Runes",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-W-02",
+      "name": "Phòng dịch cổ ngữ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-W-03",
+      "name": "Phòng học chuyên đề lịch sử",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-W-04",
+      "name": "Phòng nghiên cứu tư liệu",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG5-W-05",
+      "name": "Phòng học trống T-05",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-E-01",
+      "name": "Phòng nghiên cứu Số học",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-E-02",
+      "name": "Hành lang cánh Đông tầng năm",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-E-03",
+      "name": "Phòng mỹ thuật pháp thuật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-E-04",
+      "name": "Kho bài tập và bảng phép",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-E-05",
+      "name": "Phòng học trống Đ-06",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-N-01",
+      "name": "Phòng tắm Huynh trưởng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-N-02",
+      "name": "Hành lang trước Phòng tắm Huynh trưởng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-N-03",
+      "name": "Hành lang Tháp Giáo viên tầng trên",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-N-04",
+      "name": "Phòng nghỉ huynh trưởng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-N-05",
+      "name": "Kho khăn và đồng phục",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-N-06",
+      "name": "Phòng học trống B-06",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-S-01",
+      "name": "Hành lang Tháp Đồng hồ tầng cao",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-S-02",
+      "name": "Phòng bảo trì cơ cấu đồng hồ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-S-03",
+      "name": "Phòng câu lạc bộ học thuật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-S-04",
+      "name": "Phòng làm báo học sinh",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-S-05",
+      "name": "Kho thiết bị triển lãm",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-W-01",
+      "name": "Hành lang cửa sổ phía Tây tầng năm",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-W-02",
+      "name": "Phòng tập nhạc nhóm nhỏ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-W-03",
+      "name": "Phòng đọc yên tĩnh",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-W-04",
+      "name": "Phòng học trống T-06",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG6-W-05",
+      "name": "Kho đồ thủ công",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-E-01",
+      "name": "Nhà vệ sinh nam tầng sáu",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-E-02",
+      "name": "Phòng học chuyên đề Phép thuật nâng cao",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-E-03",
+      "name": "Phòng hội thảo nhỏ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-E-04",
+      "name": "Phòng thí nghiệm an toàn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-E-05",
+      "name": "Phòng học trống Đ-07",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-N-01",
+      "name": "Phòng lưu bảng thành tích học thuật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-N-02",
+      "name": "Phòng lưu sổ kết quả học tập",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-N-03",
+      "name": "Kho thiết bị tiết học nâng cao",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-N-04",
+      "name": "Phòng học trống B-07",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-N-05",
+      "name": "Hành lang cầu thang phía Bắc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-S-01",
+      "name": "Hành lang phía trên Tháp Giáo viên",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-S-02",
+      "name": "Phòng lưu biên bản giáo viên",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-S-03",
+      "name": "Phòng xem lịch học",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-S-04",
+      "name": "Kho sách tham khảo",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-S-05",
+      "name": "Phòng học trống N-07",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-W-01",
+      "name": "Phòng Gobstones",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-W-02",
+      "name": "Phòng câu lạc bộ cờ phù thủy",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "common",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-W-03",
+      "name": "Phòng làm dự án học sinh",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-W-04",
+      "name": "Phòng học trống T-07",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG7-W-05",
+      "name": "Hành lang kính tầng cao",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-E-01",
+      "name": "Hành lang tầng bảy trước Phòng Yêu cầu",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-E-02",
+      "name": "Phòng Yêu cầu (Room of Requirement)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-E-03",
+      "name": "Phòng học trống Đ-08",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-E-04",
+      "name": "Phòng nghi lễ học thuật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-E-05",
+      "name": "Phòng bảo quản tranh phép",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-N-01",
+      "name": "Hành lang dẫn lên văn phòng Hiệu trưởng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-N-02",
+      "name": "Sảnh vào văn phòng Hiệu trưởng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-N-03",
+      "name": "Sảnh tầng cao Cầu thang Lớn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-N-04",
+      "name": "Phòng học trống B-08",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-N-05",
+      "name": "Kho giấy tờ giáo vụ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-S-01",
+      "name": "Lối chân dung Bà Béo",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-S-03",
+      "name": "Lối cầu thang ký túc Gryffindor",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-S-04",
+      "name": "Phòng học nhóm tầng bảy",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-S-05",
+      "name": "Hành lang tranh tầng bảy",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-W-01",
+      "name": "CCC 07.18",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-W-02",
+      "name": "Tiền phòng CCC",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-W-03",
+      "name": "Phòng thư liên nhà CCC",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-W-04",
+      "name": "Phòng viết CCC",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-W-05",
+      "name": "Kho hồ sơ CCC",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-W-06",
+      "name": "Phòng họp liên nhà",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNG8-W-07",
+      "name": "Phòng học trống T-08",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-E-04",
+      "name": "Hành lang Hufflepuff",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-E-05",
+      "name": "Phòng học nhóm Hufflepuff",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-N-01",
+      "name": "Bếp Hogwarts",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-N-02",
+      "name": "Kho thực phẩm khô",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-N-03",
+      "name": "Phòng chuẩn bị suất ăn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-N-04",
+      "name": "Phòng rửa dụng cụ nhà bếp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-N-05",
+      "name": "Hành lang hậu cần bếp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-S-01",
+      "name": "Phòng giặt là",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-S-02",
+      "name": "Phòng đồ vải",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-S-03",
+      "name": "Kho khăn trải bàn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-S-04",
+      "name": "Phòng bảo trì dụng cụ giặt",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-S-05",
+      "name": "Hành lang kho phía Nam",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-W-01",
+      "name": "Phòng nghỉ gia tinh",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-W-02",
+      "name": "Kho rau củ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-W-03",
+      "name": "Kho thảo mộc nhà bếp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-W-04",
+      "name": "Kho dụng cụ dự phòng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "HOG-TNGBP-W-05",
+      "name": "Hành lang kết nối hầm phía Tây",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-00020cadb6235e",
+      "name": "Đầu máy Hogwarts Express",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0006dd26862fbe",
+      "name": "Lối vào Rừng Cấm",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-000814ab7a3200",
+      "name": "Số 10 Downing Street / văn phòng Thủ tướng Muggle",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0286a54346e7d7",
+      "name": "Bãi neo tàu Durmstrang",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-04180946d36a33",
+      "name": "Ollivanders",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-ollivanders"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-046c1c72bb9fc9",
+      "name": "Hẻm Xéo",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-04c058ca77c028",
+      "name": "Phòng áp mái",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-052c1a401bbcfe",
+      "name": "Phòng ăn",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-056435e23f0696",
+      "name": "Studio ảnh",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-05c90391d35da8",
+      "name": "Quản lý Chổi bay",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-05cf8a6d391ae0",
+      "name": "Laundry",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-05d77e52709869",
+      "name": "Nhà Bathilda Bagshot",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-065a853b8d7608",
+      "name": "Florean Fortescue’s",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-fortescue"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-06a1ce678f15be",
+      "name": "Các nhà dân trên phố trong bản đồ Diagon",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-07666cff74b9d9",
+      "name": "Hồ ngầm trong hang biển",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0880e4fe3da124",
+      "name": "Sảnh tiếp cận Đại Sảnh",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-09b9d228df78c4",
+      "name": "Khu bình luận / phòng bình luận",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {
+        "pitch-static": "commentary"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0a1ff4c2777f64",
+      "name": "Cầu gỗ và các cầu nối thuộc khối lâu đài",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-0a94eb38a5cf40",
+      "name": "Trang viên Malfoy",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0afb8b38025951",
+      "name": "Bếp gia đình",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0b1c0c88e006f3",
+      "name": "Durmstrang Institute (vị trí bí mật, chưa chốt nước)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0b2a64c33ccc84",
+      "name": "Phòng áp mái Liad",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0bdde710277c5f",
+      "name": "Hang Sóc / Nhà Weasley",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0cf87e2f9d3027",
+      "name": "Phòng làm việc",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0d712868c509cf",
+      "name": "Bãi cỏ và đồng cỏ quanh Hogwarts",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-0d84f863a32ec4",
+      "name": "Sảnh nhà Black",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0ebb356a309e42",
+      "name": "Phòng ngủ Ron",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0f0f21af1613e3",
+      "name": "Sảnh tiếp tân",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-0fe532e3c7b3e8",
+      "name": "Nhà dân và ngõ ở Knockturn",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-10483afb50657b",
+      "name": "Phòng làm việc Xenophilius",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-10ca277b3be7f2",
+      "name": "Tầng 1 – Văn phòng Bộ trưởng",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {
+        "ministry2": "department-1"
+      },
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1174317bcb3096",
+      "name": "Vườn bí Hagrid",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h2": "pumpkin-garden"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-120f81b5d30c37",
+      "name": "Phòng khách ngủ",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1257864e10b184",
+      "name": "Quán The Hanged Man",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-12d570650689e2",
+      "name": "Phòng thay đồ đội B",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {
+        "pitch-static": "pitch-room-1"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1388a8951a3c11",
+      "name": "Nhà Gaunt",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-13ae06fd76adc5",
+      "name": "Các bãi cỏ ngoài sân trong và ngoài khu cầu/cổng H2",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-13cff25cacf38f",
+      "name": "Ga Paddington",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-13dfea8fe4bf27",
+      "name": "Văn phòng Cấp phép Độn thổ",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-143a2447e31c2c",
+      "name": "Lều Hagrid và các phòng bên trong",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "hagrid",
+        "h2": "hagrid"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-14c5870146b747",
+      "name": "Gian chứa chổi / kho chổi",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {
+        "hall": "broom-cupboard"
+      },
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-16ec3a57420b99",
+      "name": "Bờ biển gần Shell Cottage",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-176df525d65b31",
+      "name": "Hiên sau",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1795bc600c2b41",
+      "name": "Phòng sinh hoạt chung Hufflepuff",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hufflepuff-common"
+      ],
+      "verifiedBindings": {
+        "hufflepuff-common": "hufflepuff-common-room"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-17b225b47b5160",
+      "name": "Bếp",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-17db50485e2b83",
+      "name": "Bãi cỏ ven hồ",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-1802311f93c216",
+      "name": "Sân trong",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1809b6a4970166",
+      "name": "Nhà Barty Crouch Sr.",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-18305f9ea8f94d",
+      "name": "Khu học nhóm bên trong khu Hufflepuff",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hufflepuff-common"
+      ],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-18b19a8c7825cf",
+      "name": "Studio nhà kính",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-18feb9f615073d",
+      "name": "Bếp nhà Dursley",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1901b8ad031d44",
+      "name": "Sảnh tiếp đón Bộ Pháp thuật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-197b2052678b9d",
+      "name": "Nhà dân trong template làng",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-homes"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1af0a04a59056b",
+      "name": "Khu điều trị tai nạn đồ tạo tác",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1b93d2a168cc1a",
+      "name": "Tiệm đồ cũ",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1ba2a8427cd9a8",
+      "name": "Phòng ngủ Regulus Black",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1bd95d9a21aa0e",
+      "name": "Tầng 9 – Bộ Bảo mật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-1c6f7973221157",
+      "name": "Phòng Luna Lovegood",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1cbafaf3eaef87",
+      "name": "Hành lang chung Slytherin dưới hồ",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "slytherin-common"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1d43d774de1087",
+      "name": "Phòng ăn",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1db46d6df4495f",
+      "name": "Kho tiền Lestrange",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-1ecd945e2b86b7",
+      "name": "Hai sân trong lâu đài",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-209dc8c61fa3bb",
+      "name": "Shell Cottage / nhà Bill và Fleur",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2236da8489dfad",
+      "name": "Quán cà phê Tottenham Court Road",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-223c9a29e759d3",
+      "name": "Nhà Fawcett",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-226721c1fff80c",
+      "name": "Mọi buồng hành khách trong các toa",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-239cfed7a31957",
+      "name": "Phòng ngủ phía đông",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-23a728f27029ae",
+      "name": "Tottenham Court Road",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-240c66e1c2ad19",
+      "name": "Beauxbatons Academy of Magic",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-241e2fa15a09f1",
+      "name": "Phòng hỗ trợ xử án",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-office"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-25a2f0dc7c7eba",
+      "name": "Vườn Shell Cottage",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-26295c3fd155a4",
+      "name": "Phòng ăn",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-27cbd65e002cd1",
+      "name": "Lối nối giữa các toa",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-28dd4f052c2855",
+      "name": "Quán trà Madam Puddifoot",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-shop-8"
+      },
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-28f1e32ca3f09f",
+      "name": "Biệt thự Grayhaven",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-292e4cf5737a49",
+      "name": "Làng Tinworth",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2943e215e1b645",
+      "name": "Studio sáng tạo",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-297d369b484bc3",
+      "name": "Cánh đồng World Cup Quidditch",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-29bc58039f5eae",
+      "name": "Vườn cây gần nhà kính",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-2a51f7e8e278a7",
+      "name": "Nhà thờ Godric’s Hollow",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2ae3745c48f04a",
+      "name": "Kho gia đình",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2b888eaec42438",
+      "name": "Tiệm bút lông và giấy da",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-stationery"
+      },
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2be38007d6f246",
+      "name": "Apothecary tại Hogsmeade trong template",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2c9c4c00c1d80b",
+      "name": "Phòng Tình yêu / phòng khóa kín",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-love"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2cda580d14d444",
+      "name": "Spinner’s End",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2df6c97ce86355",
+      "name": "Bộ phận Sinh vật có tri giác",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-2e483807e1273e",
+      "name": "Phòng trưng bày",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2e8e6fd50795cc",
+      "name": "Bếp Hang Sóc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2e95be7ac27f5e",
+      "name": "Study Amethyst",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-2fdedba88577ad",
+      "name": "Công viên Little Whinging",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-30cf89999f5e15",
+      "name": "Hồ Đen",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "lake",
+        "h2": "lake"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-30e83b523e3592",
+      "name": "Nhà Slughorn ở tạm tại Budleigh Babberton",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-31f204a8e0e490",
+      "name": "Đường giữa các nhà kính",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-328fae86b7c01c",
+      "name": "Phòng ngủ Fred & George",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-337a20429f7b9d",
+      "name": "Khu sinh hoạt và học nhóm bên trong khu Gryffindor",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "gryffindor-common"
+      ],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-33d82440a9be50",
+      "name": "Sân giữa các cánh lâu đài",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-35150c109c52c8",
+      "name": "Phòng viết nội dung",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-35450f7ad71727",
+      "name": "Nhà khách",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-36a9268e0e2288",
+      "name": "Phòng vườn",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-36df14fc8355e4",
+      "name": "Lăng mộ Dumbledore",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-3733c32c66774d",
+      "name": "Magnolia Crescent",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-37846d42ec845c",
+      "name": "Khuôn viên Malfoy Manor",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-385234641b8727",
+      "name": "Đường dạo ngoài trời quanh Hogwarts",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-38988e75264a65",
+      "name": "Toa mẫu Gryffindor",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "express-coach-0"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-38afa9168985ae",
+      "name": "Phòng kính",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-38bf6be09df746",
+      "name": "Sân Bell Tower (Tháp Chuông)",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-399f2c035627f1",
+      "name": "Sân trước lâu đài trong khu cổng",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {
+        "h2": "forecourt"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-39e69af2a5fc7c",
+      "name": "Upper Flagley",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-3a8e137752a294",
+      "name": "Khu cắm trại Beauxbatons",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-3a9add588aa69a",
+      "name": "Sân ga 9¾",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "kings-cross"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-3af65a0ca62879",
+      "name": "Biệt thự Riddle",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-3be97f06839afa",
+      "name": "Các lăng mộ Ai Cập mà Bill phá giải lời nguyền",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-3bf90655eabf0a",
+      "name": "Thư viện",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-3c919f6f95c429",
+      "name": "Phòng áo khoác",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-3d600b63857ca0",
+      "name": "Tầng 5 – Hợp tác Pháp thuật Quốc tế",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {
+        "ministry2": "department-5"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-3e401191d71800",
+      "name": "Văn phòng Bằng sáng chế Lố bịch",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-4091d06b78b915",
+      "name": "Nhà Granger (địa chỉ không xác định)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4232fc85ff42c4",
+      "name": "Vườn nhà Dursley",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4247829f4f87d7",
+      "name": "Tầng 6 – Giao thông Pháp thuật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {
+        "ministry2": "department-6"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-424cf93d589f58",
+      "name": "Magnolia Road",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-42ca1a78fc7d46",
+      "name": "Uagadou School of Magic",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-439400ea5f0cd4",
+      "name": "Ký túc nam Ravenclaw",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "ravenclaw-common"
+      ],
+      "verifiedBindings": {
+        "ravenclaw-common": "ravenclaw-dormitories"
+      },
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-43ffcc1098a3aa",
+      "name": "Privet Drive",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-441745282e9e54",
+      "name": "Phòng sinh hoạt chung Gryffindor",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "gryffindor-common"
+      ],
+      "verifiedBindings": {
+        "gryffindor-common": "gryffindor-common-room"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4427f295c86374",
+      "name": "Nurmengard",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-442f7275b6c832",
+      "name": "Sân Mistletoe",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {
+        "h2": "mistletoe-court"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-444469fe1666f1",
+      "name": "Văn phòng Lạm dụng Đồ tạo tác Muggle",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-44a4a4856bc09b",
+      "name": "Sảnh tròn xoay",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-rotunda"
+      },
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-45ca006de2e29d",
+      "name": "Sân thượng",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-468097e3d74bf1",
+      "name": "Ký túc nữ Gryffindor",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "gryffindor-common"
+      ],
+      "verifiedBindings": {
+        "gryffindor-common": "gryffindor-dormitories"
+      },
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-47576b791ebc5b",
+      "name": "Nhà ga Hogsmeade",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "hogsmeade-station"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-47e13519fc6e78",
+      "name": "Kho mẫu",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4890242d6f09e8",
+      "name": "Các phòng ngủ khác Hang Sóc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4ba45d2ca765ad",
+      "name": "Đấu trường thử thách rồng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4bde45f1a1cb07",
+      "name": "Phòng sinh hoạt chung Ravenclaw",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "ravenclaw-common"
+      ],
+      "verifiedBindings": {
+        "ravenclaw-common": "ravenclaw-common-room"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4cb1d44097aaf0",
+      "name": "Gringotts và hệ thống hầm / kho tiền",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-gringotts"
+      },
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4ccd67d1317f71",
+      "name": "Phòng khách ngủ",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4d4b012a451ee2",
+      "name": "Tầng 4 – Điều hòa và Kiểm soát Sinh vật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {
+        "ministry2": "department-4"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4df8571e5dea2e",
+      "name": "Các đường dạo và bãi đất trống ngoài trời quanh trường chưa thuộc template khác",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-4e78486f8e5d5c",
+      "name": "Phòng khách Hang Sóc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4f2d8576d24f18",
+      "name": "Số 13 Grimmauld Place",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4f6ef384d93fb3",
+      "name": "Rừng Dean",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4f927c3f8e69d3",
+      "name": "Phòng khách",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-4fee03ab76bb30",
+      "name": "Tầng 10 – Khu xử án",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-501145c3fc9c8d",
+      "name": "Bếp nhà Black",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-501e057d5be6b1",
+      "name": "Sân Quad",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-51deeb2c56d244",
+      "name": "Phòng khách ngủ",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-52b6fe3a29d440",
+      "name": "Khu nhân mã trong Rừng Cấm",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-52ea7749d9b897",
+      "name": "Nhà cô Muriel",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-54d36cdd92de52",
+      "name": "Nhà Alastor Moody",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-558513338bec03",
+      "name": "Phòng Liad",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-55b6096c51b788",
+      "name": "Nhà gia đình Dumbledore",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-561ef194a3cfad",
+      "name": "Ba Cây Chổi và các phòng của quán",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-shop-5"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-561f5bd89f1fb7",
+      "name": "Văn phòng quản lý trại trẻ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-56dbab3b62a960",
+      "name": "Phòng làm việc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-572439c7221fb9",
+      "name": "Phòng tắm",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-579062ef9135bd",
+      "name": "Kho giấy",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-57a63e2aaa9159",
+      "name": "Scribbulus",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-scribbulus"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-57ffd05e36562d",
+      "name": "Phòng ngủ Vernon/Petunia",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-585c0776dc54a3",
+      "name": "Sân Wyvern",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {
+        "h2": "wyvern-court"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5889d83ab64879",
+      "name": "Toa thường",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "standard-coach"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-58ba0981b28173",
+      "name": "Văn phòng Mạng Floo",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-58bb45e6da0252",
+      "name": "Twilfitt & Tatting’s",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-twilfitt"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5965034df92b27",
+      "name": "Cokeworth",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-59e90d8a9ccc63",
+      "name": "Bờ Hồ Đen",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-5a0ec074efb106",
+      "name": "Weasleys’ Wizard Wheezes (nếu tồn tại theo thời kỳ)",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-weasleys"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5a4fefc72d7d57",
+      "name": "Các khán đài Quidditch",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {
+        "pitch-static": "stands"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5b000833260ab3",
+      "name": "Tầng 8 – Atrium",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-fountain"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5bc4accf8f9cfb",
+      "name": "Phòng ăn nhà Dursley",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5bfdb63dbfad77",
+      "name": "Nhà Gregorovitch (địa chỉ không xác định)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5c5b87e483e862",
+      "name": "Các cơ sở Knockturn khác trong template",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5cd173a0de0b12",
+      "name": "Little Whinging",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5d33c248682e4b",
+      "name": "Tiệm cổ vật / cầm đồ tại Knockturn",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5d4b08c68c7c51",
+      "name": "Nhà Potter / Potter Cottage",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5daf783e1e1f28",
+      "name": "Sân vào lâu đài trong khu cổng",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-5ddef138f591ee",
+      "name": "Nghĩa địa Godric’s Hollow",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5e1f1cc14a2adb",
+      "name": "Phố chính Hogsmeade",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5e88541888baad",
+      "name": "Kho",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5eb3bde9176879",
+      "name": "Cầu đá nối các cánh lâu đài",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-5fc25ea9745ef9",
+      "name": "Phòng học số 11",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {
+        "hall": "classroom-11"
+      },
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-5fc3c5a0bcb0d1",
+      "name": "Bộ phận Quái thú",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-60ff93fb1c4473",
+      "name": "Phòng khách Shell Cottage",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6101b5e9235dbd",
+      "name": "Kho",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-62939be1327ef1",
+      "name": "Phòng D&D",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-632d1664ab4804",
+      "name": "MACUSA Headquarters",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-633d0bcb4ab87e",
+      "name": "Zonko’s",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-shop-1"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-638d3d8f890b97",
+      "name": "Phòng thay đồ đội A",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {
+        "pitch-static": "pitch-room-0"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-63aa8852e10090",
+      "name": "Đường mòn Rừng Cấm",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-64d0087ee0c1b2",
+      "name": "Nhà Lovegood",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6575df3a62913f",
+      "name": "Mặt sân thi đấu",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {
+        "pitch-static": "quidditch-pitch"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-65ac0b29ed7007",
+      "name": "Hang Sirius trú ở vùng núi gần làng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-660382eb5d124f",
+      "name": "Tiền sảnh",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6622d43a61e262",
+      "name": "Biệt thự Whitecap",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6748bf2a512b32",
+      "name": "Phòng tiện ích",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-695c706560e4fb",
+      "name": "Phòng ngủ Arthur & Molly",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6a9cb408f9f168",
+      "name": "Cầu thang trong khu Gryffindor",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "gryffindor-common"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6ac732451f03d7",
+      "name": "Đường đi ngoài các tường bao lâu đài",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-6acb59a2cd0cf1",
+      "name": "Vườn sau",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6b050b321ff558",
+      "name": "Ký túc nam Slytherin",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "slytherin-common"
+      ],
+      "verifiedBindings": {
+        "slytherin-common": "slytherin-dormitories"
+      },
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6c6fc8c763f6b7",
+      "name": "Quảng trường Godric’s Hollow",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6d6cfd0e60241f",
+      "name": "Sân Transfiguration (Biến hình)",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-6e4b06065f0997",
+      "name": "Gian chờ trước Phân loại",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {
+        "hall": "sorting-waiting"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6eac4eb0234cb3",
+      "name": "Phòng ngủ Ginny",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6f010e23dbcf13",
+      "name": "Bến Whitecap",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6f37aeb5ab1ff0",
+      "name": "Khu nuôi/bảo tồn rồng Romania – nơi Charlie làm việc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-6f640309d1ece1",
+      "name": "Đội Đảo ngược Tai nạn Pháp thuật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-6fca659549629d",
+      "name": "Bến ga / bến thuyền Hogsmeade ngoài khu nhà ga",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "station-dock"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-704560d7aaa0f1",
+      "name": "Tiền sảnh",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-712dcf0d542fa9",
+      "name": "Nhà bà Figg",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7146cc78e7b6bb",
+      "name": "Phòng thay đồ",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-71db87f76e608b",
+      "name": "Hẻm Knockturn",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7210700596d5ae",
+      "name": "Phòng ăn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-76e93cc0236521",
+      "name": "Văn phòng Liên lạc Yêu tinh",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-78ec748eb7b9ce",
+      "name": "Bếp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7904b8045f6614",
+      "name": "Bìa Rừng Cấm",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "forest"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-79710fe4d4bcfa",
+      "name": "Lều Hú và các phòng bên trong",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "shrieking-shack"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-79d20dbdcafbc7",
+      "name": "Thư viện",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7a95ade5b09943",
+      "name": "Phòng BẠN",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7abe41594af2ff",
+      "name": "Sân Quidditch",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {
+        "pitch-static": "quidditch-pitch",
+        "h1": "quidditch-pitch",
+        "h2": "quidditch-pitch"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7b1adb6069d328",
+      "name": "Phòng khách Dursley",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7c0776422fe490",
+      "name": "Nhà của Amos Diggory (nếu tách khỏi Ottery St Catchpole)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7c862bcde92bda",
+      "name": "Phòng ngủ Shell Cottage",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7ceaf0fcb836c1",
+      "name": "Đại sảnh Malfoy Manor",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7d130cc86d97eb",
+      "name": "Ký túc nữ Ravenclaw",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "ravenclaw-common"
+      ],
+      "verifiedBindings": {
+        "ravenclaw-common": "ravenclaw-dormitories"
+      },
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7debd31a87a61e",
+      "name": "Đường tới lều Hagrid",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "hagrid",
+        "h2": "hagrid"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7f18ace1f8b2d7",
+      "name": "Bến thuyền Hogwarts",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "boathouse"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-7fab1a6c46fde1",
+      "name": "Phòng ngủ",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-80b97fa352d930",
+      "name": "Khu hành chính Wizengamot",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-80ce1ea13c2632",
+      "name": "Phòng sinh hoạt chung Slytherin",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "slytherin-common"
+      ],
+      "verifiedBindings": {
+        "slytherin-common": "slytherin-common-room"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8153c1a6e4e7dc",
+      "name": "Sân cỏ cạnh lâu đài",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-819514c84e1a30",
+      "name": "Phòng kính",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-81a969eb658163",
+      "name": "Đầu Heo và các phòng của quán",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-shop-7"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-81c7ab0cff5ac4",
+      "name": "Khu nhà dân Hogsmeade",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-homes"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-81e49b0d4bd6c3",
+      "name": "Phòng ngủ khác nhà Black",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-836c31b9c17543",
+      "name": "Kho lưu trữ bản in",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8372c04e802fdc",
+      "name": "Tầng 3 – Tai nạn và Thảm họa Pháp thuật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {
+        "ministry2": "department-3"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-838b8e1603bb66",
+      "name": "Phòng ngủ gia đình",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-83b46b70fcdcc6",
+      "name": "Eeylops Owl Emporium",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-eeylops"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-83c52658df2171",
+      "name": "Các toa Hogwarts Express",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-84e3b35dd330b5",
+      "name": "Phòng tiện ích",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-851acac2ec7f8b",
+      "name": "Purge and Dowse (mặt tiền St Mungo)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8547e7b53ee0e6",
+      "name": "Phòng sinh hoạt hướng vườn",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-85d4eac574abfb",
+      "name": "Phòng thay đồ",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-866203855d3998",
+      "name": "Phòng tắm",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-86cd9a8defbb03",
+      "name": "Phòng Thời gian",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-time"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-86e7455d5f7d47",
+      "name": "Phòng giáo viên",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {
+        "hall": "staff-room"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-86f19e61932103",
+      "name": "Phòng tiếp khách",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-873b198808d71f",
+      "name": "Văn phòng Tư vấn Sinh vật gây hại",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-88aadc4a38ae9c",
+      "name": "Phòng ngủ Harry",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8957dd0847f167",
+      "name": "Các dãy phòng giam Azkaban",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-89ce1f70269693",
+      "name": "Số 2 Magnolia Crescent (địa chỉ được nhắc)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8bd319c866a655",
+      "name": "Gladrags",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-shop-2"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8c15e0bfc2d11d",
+      "name": "Khu ổ nhện Aragog",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-8d8c423e13cb3d",
+      "name": "Xe Buýt Hiệp Sĩ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8de3a27d58bad8",
+      "name": "Dervish & Banges",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-shop-6"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8f34772df41a97",
+      "name": "Phòng khách",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8f6fe8ad4cc0c0",
+      "name": "Phòng Tom Riddle ở trại trẻ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8f7588d4e8a5bc",
+      "name": "Mặt hồ và khu vực trên thuyền",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-8f8a0811461a67",
+      "name": "Tầng 7 – Trò chơi và Thể thao Pháp thuật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {
+        "ministry2": "department-7"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8fd2ba76f6cef8",
+      "name": "Sảnh trong khu Ravenclaw",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "ravenclaw-common"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-8fd3daca88a6f1",
+      "name": "Khoảng rừng sâu",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-8ffce1da3d07cd",
+      "name": "Nhà Tonks (địa chỉ không xác định)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-90f19984c65a90",
+      "name": "Nhà Snape",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-911d23f3180589",
+      "name": "Số 4 Privet Drive / nhà Dursley",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-91e1d4b9d90ce6",
+      "name": "Hồ bơi",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-91ec4108625f7b",
+      "name": "Câu lạc bộ Gobstones chính thức",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-9253053d400539",
+      "name": "Tiệm áo chùng cũ",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-robe-used"
+      },
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9301236b54857d",
+      "name": "Ủy ban Biện minh với Muggle",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-936cbb9c617eca",
+      "name": "Dãy phòng phụ của sân",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-94a7036730f10e",
+      "name": "Ga Hogsmeade",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "hogsmeade-station",
+        "h1": "hogsmeade-station"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-951dc2baa9a710",
+      "name": "Bộ phận Xóa trí nhớ",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-95936a141ed516",
+      "name": "Phòng sau bàn giáo viên",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-95cdaf84841bcd",
+      "name": "Các tiệm, xưởng, quán trong bản đồ Diagon",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-95f33b1a222e12",
+      "name": "Làng Little Hangleton",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-96d14a7a982d4e",
+      "name": "Các nhà kính Hogwarts và các phòng bên trong",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "greenhouses",
+        "h2": "greenhouses"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9805ab2f38804f",
+      "name": "Phòng xử án số 10",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-court"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-98946e3d409a8a",
+      "name": "Phòng trà khách thăm",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9b80548a6b0f27",
+      "name": "Phòng của Ủy ban Đăng ký Phù thủy gốc Muggle",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9b9d65883bc0bb",
+      "name": "Phòng khách nhà Black",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9bf6e71ff3108b",
+      "name": "Nhà thuyền Hogwarts",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "boathouse"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9c19f623bbb1e3",
+      "name": "Vùng sát sân Quidditch ngoài ranh sân",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-9c45a4f54ea1ee",
+      "name": "Đường dạo ven hồ",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-9ce0d6987c6167",
+      "name": "Phòng ngủ phía tây",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9d66d64ae1eced",
+      "name": "Phòng sở thích",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9d882410cbff44",
+      "name": "Khu điều trị bệnh và nhiễm trùng pháp thuật",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9ebcfc85eb0c36",
+      "name": "Sân vận động World Cup",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9f4eba8cbc0134",
+      "name": "Khu điều trị ngộ độc độc dược và thực vật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9f810bb6686c6d",
+      "name": "Cây cổ thụ ven hồ",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "ancient-tree",
+        "h2": "ancient-tree"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-9fffb1aaa57eea",
+      "name": "Liễu Roi và bãi đất quanh cây",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "willow",
+        "h2": "willow"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a04785690fe84b",
+      "name": "Hành lang toa",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a19b8a7eea3f66",
+      "name": "Khu lều World Cup",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a3d0329c5db5e2",
+      "name": "Văn phòng Liên lạc Pháp thuật Quốc tế",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-a3e9554f74bb7f",
+      "name": "Sảnh tiếp nhận St Mungo",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a40a9139e15cdf",
+      "name": "Phòng khách",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a56cde3ee35e1c",
+      "name": "Railview Hotel",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a575b46f2ae1a8",
+      "name": "Khu thử thách Hồ Đen",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a62b074fca27d7",
+      "name": "Khu điều trị thương tổn do bùa chú",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a6360747d2eff6",
+      "name": "Bãi cắm trại trong Rừng Dean",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a63fc4014d765b",
+      "name": "Ký túc nam Gryffindor",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "gryffindor-common"
+      ],
+      "verifiedBindings": {
+        "gryffindor-common": "gryffindor-dormitories"
+      },
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a6425ebd843fab",
+      "name": "Ký túc nữ Slytherin",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "slytherin-common"
+      ],
+      "verifiedBindings": {
+        "slytherin-common": "slytherin-dormitories"
+      },
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a69db007365fe0",
+      "name": "Rừng Albania – nơi Voldemort trú ẩn",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a8f847e818afa1",
+      "name": "King’s Cross",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "kings-cross"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-a91d33c0729151",
+      "name": "Charing Cross Road",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-aa74a45869a845",
+      "name": "Phòng khách trên xe Buýt Hiệp Sĩ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-aab0be0508401d",
+      "name": "Toa mẫu Ravenclaw",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "express-coach-1"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-aabefd99376d5b",
+      "name": "Nhà Hepzibah Smith",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-aae0e4c8ac4172",
+      "name": "Terrace",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-aae6653add136e",
+      "name": "Nhà khách",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-aafb6b5cc0a4c6",
+      "name": "Kho dưới mái",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ac442939b95160",
+      "name": "Nhà gia đình Longbottom (địa chỉ không xác định)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ad08891d59bb8b",
+      "name": "Phòng sửa đồ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ad5ac899e9989d",
+      "name": "Study Valerian",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ad6b222c1cf8e4",
+      "name": "Văn phòng Sử dụng Pháp thuật Sai trái",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-adc8756e94687f",
+      "name": "Tầng 2 – Thi hành Luật Pháp thuật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {
+        "ministry2": "department-2"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ae87f1280dad9c",
+      "name": "Cổng chính Hogwarts",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-aec6a126a04246",
+      "name": "Khu điều trị thương tích do sinh vật",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-af6716662de8c8",
+      "name": "Trụ sở Thần Sáng",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-aff4fe8ba8b10c",
+      "name": "Phòng khách & bếp",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b063050bb041b4",
+      "name": "Khu đọc và học nhóm bên trong khu Slytherin",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "slytherin-common"
+      ],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b08a347b7ef127",
+      "name": "Borgin & Burkes",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "ka-borgin"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b1a5bbf296daf9",
+      "name": "Ilvermorny School of Witchcraft and Wizardry",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b1b448f37c4d1e",
+      "name": "Bếp Shell Cottage",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b2554d6b1381cd",
+      "name": "Tiền sảnh",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b4314de4234c88",
+      "name": "Ký túc nữ Hufflepuff",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hufflepuff-common"
+      ],
+      "verifiedBindings": {
+        "hufflepuff-common": "hufflepuff-dormitories"
+      },
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b4e7452b5bd988",
+      "name": "Budleigh Babberton",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b61993cdbfa4f0",
+      "name": "Phòng duyệt bản in",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b64b4fd825a7ea",
+      "name": "Phòng giặt",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b652531fad15ad",
+      "name": "Flourish & Blotts",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-flourish"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b73feb15c40870",
+      "name": "Phòng ngủ Sirius Black",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b830cb70ee02f6",
+      "name": "Vườn nhà Hagrid",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-b86cbfbdc07271",
+      "name": "Hang biển của Voldemort",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-b879bbed8fdc49",
+      "name": "Sân ga Hogsmeade (khu tàu)",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "hogsmeade-station"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ba63b94f595caf",
+      "name": "Sân trong gắn với map hall",
+      "mode": "template-required",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {
+        "hall": "courtyard"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-bb3906692ce0a3",
+      "name": "Lối đi và bãi đất ven hồ",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-bbfe47f234c957",
+      "name": "Phòng khách Malfoy Manor",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-bca1f1945d52e9",
+      "name": "Sân Viaduct",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-bd4a42764da881",
+      "name": "Phòng Tử thần",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-death"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-bdd56dfa509b7c",
+      "name": "Potage’s Cauldrons",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-potage"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-bf3c24a146fb6a",
+      "name": "Phòng chờ xét xử",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-waiting"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c061b81bba5c42",
+      "name": "Đường tới sân Quidditch",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-c089c78b883a86",
+      "name": "Sảnh Tiên tri",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-prophecy"
+      },
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c11e875f2e672c",
+      "name": "Gác mái Hang Sóc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c12015ea2dc205",
+      "name": "Đảo đá trong hồ hang biển",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c22fddd973f9ed",
+      "name": "Số 11 Grimmauld Place",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c2473d02e0de42",
+      "name": "Magical Menagerie",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-menagerie"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c251f1aa2096c0",
+      "name": "Khu tiếp nhận khách Bộ Pháp thuật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-c2ae860eb1abb4",
+      "name": "Phòng sinh hoạt",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c2b0b9eb3b7897",
+      "name": "Phòng sở thích",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c342fdc0ef620b",
+      "name": "Madam Malkin’s",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-malkin"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c3f56557f43009",
+      "name": "Vườn Hang Sóc",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c48031b40aa4a6",
+      "name": "Phòng thiết bị",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c4b0eda051d309",
+      "name": "Mê cung Tam Pháp thuật ở sân Quidditch",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c6d06746fedb75",
+      "name": "Phòng biên tập",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c7580930f2caac",
+      "name": "Phòng bệnh dài hạn Janus Thickey",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c7788eabe9f16a",
+      "name": "Cái Vạc Lủng và các phòng trọ",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-leaky"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c7df9592a50155",
+      "name": "Số 12 Grimmauld Place / nhà Black",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c8e6b9a47ac0b8",
+      "name": "Các cửa hàng hiện trong làng",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c901ae9bd25828",
+      "name": "Toa mẫu Slytherin",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "express-coach-3"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c97880d2883d88",
+      "name": "Quality Quidditch Supplies",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-quidditch"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-c986bd14a65aff",
+      "name": "Bếp",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ca5dbc8d9268d5",
+      "name": "Hiên ngoài",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cabb450c67c344",
+      "name": "Hành lang chung trong khu Hufflepuff",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hufflepuff-common"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cad4970480cc75",
+      "name": "Phòng đọc",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cadd273181369d",
+      "name": "Phòng ngủ chính",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cbf1bbfe09504a",
+      "name": "Phòng tiếp khách",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cc0a4d9d894357",
+      "name": "Kho tiền 713",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cc5bcc4d694457",
+      "name": "Lối lên Nhà cú",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-cc6eda155ffa84",
+      "name": "Phòng họp",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cd916ab4eeb2b0",
+      "name": "Kho dưới mái",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cdc1a91748b387",
+      "name": "Hầm giam Malfoy Manor",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ce57067fcd107f",
+      "name": "Phòng nhỏ cạnh Đại Sảnh",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {
+        "hall": "hall-antechamber"
+      },
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ce64687addd09a",
+      "name": "Honeydukes và tầng hầm",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-shop-0"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ceed22a8b82bc0",
+      "name": "Phòng mẫu",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cf6e6f0ff253af",
+      "name": "Nghĩa địa Little Hangleton",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-cf86b4537874ba",
+      "name": "Kho chổi tại sân",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-d1e5c9e5641c72",
+      "name": "Sảnh chung",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-d216ce626788ed",
+      "name": "Lối lên Cầu thang Lớn tại Tiền sảnh",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hall"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-d2a51c4e5a9cd6",
+      "name": "Quảng trường Hogsmeade",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "village-square"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-d311ceb6407c3e",
+      "name": "Phòng ngủ Dudley",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-d45c30dace5abc",
+      "name": "Nhà tù Azkaban",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-d5c52789ba1582",
+      "name": "Sảnh",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-d62f3f91b273a7",
+      "name": "Phòng khách & bếp",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-d76cff03ee7601",
+      "name": "Đường mòn giữa Hogwarts và Hogsmeade",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-d85dbd8c19bb3b",
+      "name": "Các ngõ phố nối Hẻm Xéo và Knockturn",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-da0766f575a2ce",
+      "name": "Cơ quan Khóa Cảng",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-da0da47f74a252",
+      "name": "Khu đọc và học nhóm bên trong khu Ravenclaw",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "ravenclaw-common"
+      ],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-dadcf596a0437f",
+      "name": "Khu an ninh Bộ Pháp thuật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-dafe46b4834d00",
+      "name": "Khu chờ lên tàu tại King’s Cross",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-dbdb26cb4f253a",
+      "name": "Sân sau Cái Vạc Lủng",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-dc6e4d25cb717b",
+      "name": "Castelobruxo School of Magic",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-de97c63af46b5c",
+      "name": "Sân Clock Tower (Đồng hồ)",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-dec21f949ed798",
+      "name": "Làng Godric’s Hollow",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-df07d01094f11f",
+      "name": "Túp lều ngoài biển trong tập một",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-df6db152b7d063",
+      "name": "Gầm cầu thang nhà Dursley",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-df6ec24bb2876c",
+      "name": "Khu giao thông Floo Bộ Pháp thuật",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-dfec655aa06ffb",
+      "name": "Vườn",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-dfec82bd2d4f53",
+      "name": "Khu thương mại / luật quốc tế",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-e10f1f2455074a",
+      "name": "Nhà Diggle (địa chỉ không xác định)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e1641c684d1741",
+      "name": "Toa mẫu Hufflepuff",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {
+        "express": "express-coach-2"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e1b58685e41178",
+      "name": "Nhà Diggory",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e207e1cad9aa75",
+      "name": "Mahoutokoro School of Magic",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e27a6e6c098632",
+      "name": "Phòng thay đồ các đội",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e320c112ea6a38",
+      "name": "Ban công",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e3c60767666046",
+      "name": "Vườn nhà Lovegood",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e51ad92343c8de",
+      "name": "Master suite",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e57b3aa8509cf4",
+      "name": "Làng Great Hangleton",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e68bc933cbfc46",
+      "name": "Làng Ottery St Catchpole",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e7944584d870f6",
+      "name": "Studio sáng tạo",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-e7ebf6e1f0fcb9",
+      "name": "Bãi học bay",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "flying-lawn"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ea0d1c088bb35d",
+      "name": "Hogwarts Express",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "express"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-eb0e081c67cc39",
+      "name": "Phòng sinh hoạt nhà Lovegood",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-eb74631b825f74",
+      "name": "Scrivenshaft’s",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-shop-3"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ebceb992eb9255",
+      "name": "Ký túc nam Hufflepuff",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "hufflepuff-common"
+      ],
+      "verifiedBindings": {
+        "hufflepuff-common": "hufflepuff-dormitories"
+      },
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ecc27e85264a4a",
+      "name": "Nhà Kingsley Shacklebolt (địa chỉ không xác định)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ece8b34b0783e7",
+      "name": "Apothecary",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-apothecary"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ee2064eb7e377a",
+      "name": "Trại trẻ mồ côi của Tom Riddle",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-eeb5352311e7c0",
+      "name": "Sân tập nhỏ trong quần thể Quidditch",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-eeef4f392301fb",
+      "name": "Phòng tạo kiểu",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-efe5e3b54c110c",
+      "name": "Số 7 Privet Drive",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-effd8342cc396c",
+      "name": "Bãi cỏ học tập quanh trường",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-f012e9d745204b",
+      "name": "Khu bảo vệ Hòn đá Phù thủy dưới Hogwarts",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f11d32df681cb8",
+      "name": "Thư viện ấn phẩm",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f1273cfbd8dcc9",
+      "name": "Phòng giao nhận",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f257da4f8369a2",
+      "name": "Phòng khách",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f29f8a2656ded8",
+      "name": "Bưu điện Hogsmeade",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {
+        "village-static": "hogsmeade-shop-4"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f2d3a414a25b76",
+      "name": "Vườn Thảo dược",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h2": "herb-garden"
+      },
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f30d790b24b65a",
+      "name": "Các ngõ ở Hogsmeade",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "village-static"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f322d7e98b6a02",
+      "name": "Nhà cú và khu vực bên trong Nhà cú",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {
+        "h1": "owlery",
+        "h2": "owlery"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f4ef10f0794466",
+      "name": "Gambol & Japes",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {
+        "diagon-knockturn": "da-gambol"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f52be73f7dd9ce",
+      "name": "Bộ phận Linh hồn",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-f5b0d79a9fcc91",
+      "name": "Sân hồ bơi",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f6319cb5ddb159",
+      "name": "Sân chân tháp trong khối lâu đài",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-f63320e3ce02f8",
+      "name": "Pantry",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f66347f72f87d0",
+      "name": "Trụ sở Liên đoàn Quidditch Anh–Ireland",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-f67fdab0b798c6",
+      "name": "Phòng khách ngủ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "residential",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f6ff23e797445d",
+      "name": "Phòng Không gian",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-space"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f76c14a8f564e2",
+      "name": "Bếp nhỏ",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "service",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f79a562f43d99a",
+      "name": "Cầu cạn Viaduct",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-f8ed3dbe20d357",
+      "name": "Ngoại thất khối lâu đài Hogwarts",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h2"
+      ],
+      "verifiedBindings": {
+        "h1": "castle"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-f9359f86975e71",
+      "name": "Lối đi và sân trong ranh khu Quidditch",
+      "mode": "template-required",
+      "templateCandidates": [
+        "pitch-static"
+      ],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-f9c67c9c540345",
+      "name": "Văn phòng Thứ trưởng / trợ lý Bộ trưởng",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry2"
+      ],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": true
+    },
+    {
+      "id": "P-fafa275e3442de",
+      "name": "Chuồng gia cầm",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-fb05960b29389c",
+      "name": "Bãi biển Whitecap",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-fb55d3d6b976e4",
+      "name": "Phòng gia đình",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-fbcb3e25adb914",
+      "name": "Vườn",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-fc634b366552e4",
+      "name": "Cửa hàng bệnh viện",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-fd24a44f33135c",
+      "name": "Phòng Não",
+      "mode": "template-required",
+      "templateCandidates": [
+        "ministry-8-10"
+      ],
+      "verifiedBindings": {
+        "ministry-8-10": "ministry-brain"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-fd29682932d8c0",
+      "name": "Tiền sảnh",
+      "mode": "locked",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-fde802b26605cc",
+      "name": "Kho tiền gia đình Potter",
+      "mode": "template-or-generated",
+      "templateCandidates": [
+        "diagon-knockturn"
+      ],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ff60dc5c801cf1",
+      "name": "Bãi chơi Quidditch sau nhà",
+      "mode": "ai-scene-required",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "outdoor",
+      "needsExactBinding": false
+    },
+    {
+      "id": "P-ff62bf19892de9",
+      "name": "Đường tới nhà ga Hogsmeade",
+      "mode": "template-required",
+      "templateCandidates": [
+        "h1"
+      ],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": true
+    },
+    {
+      "id": "TWR-01-01-02",
+      "name": "Lối thang ký túc nam",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-01-01-03",
+      "name": "Lối thang ký túc nữ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-01-02-03",
+      "name": "Phòng sinh hoạt học sinh cuối hành lang",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-02-01-02",
+      "name": "Sảnh vào Ravenclaw",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-02-01-03",
+      "name": "Phòng đọc học thuật Ravenclaw",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-02-02-03",
+      "name": "Phòng học nhóm Ravenclaw",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-03-01-01",
+      "name": "Cầu thang xoắn lên Tháp Bắc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-03-01-02",
+      "name": "Phòng lưu bản đồ sao Tiên tri",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-03-02-01",
+      "name": "Phòng học Tiên tri",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-03-02-02",
+      "name": "Kho dụng cụ bói toán",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-04-01-01",
+      "name": "Hành lang chân Tháp Thiên văn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-04-01-02",
+      "name": "Phòng bảo trì kính thiên văn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-04-02-01",
+      "name": "Phòng chuẩn bị quan sát",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-04-02-02",
+      "name": "Kho bản đồ sao",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-04-03-01",
+      "name": "Phòng học Thiên văn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-04-03-02",
+      "name": "Đài quan sát Thiên văn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "commerce",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-05-01-01",
+      "name": "Cầu thang xoắn sau tượng đá",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-05-01-02",
+      "name": "Phòng chờ văn phòng Hiệu trưởng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-05-02-01",
+      "name": "Văn phòng Hiệu trưởng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-05-02-02",
+      "name": "Phòng lưu dụng cụ hiệu trưởng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-05-02-03",
+      "name": "Kho tài liệu Hiệu trưởng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-06-01-01",
+      "name": "Sảnh Tháp Đồng hồ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-06-01-02",
+      "name": "Phòng trực giờ giấc",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-06-02-01",
+      "name": "Gian cơ cấu bánh răng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-06-02-02",
+      "name": "Phòng bảo trì đồng hồ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-06-03-01",
+      "name": "Buồng quả lắc lớn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-06-03-02",
+      "name": "Buồng kiểm tra chuông giờ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-07-01-02",
+      "name": "Phòng giữ dụng cụ chuông",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-07-02-01",
+      "name": "Đài treo chuông",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-07-02-02",
+      "name": "Phòng vận hành chuông",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-08-01-01",
+      "name": "Lối vào Faculty Tower",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-08-01-02",
+      "name": "Phòng trực nhân viên",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-08-02-01",
+      "name": "Hành lang các phòng giáo viên",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-08-02-02",
+      "name": "Phòng nghỉ giáo viên",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-08-03-01",
+      "name": "Hành lang nối bệnh xá",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-08-03-02",
+      "name": "Phòng họp giảng viên kín",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-09-01-01",
+      "name": "Sảnh chân Tháp DADA",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-09-01-02",
+      "name": "Kho đạo cụ phòng vệ",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-09-02-01",
+      "name": "Phòng học Phòng chống Nghệ thuật Hắc ám — cửa tháp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "study",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-09-02-02",
+      "name": "Phòng tập đũa phép tại tháp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-09-03-01",
+      "name": "Hành lang Tháp DADA tầng cao",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-09-03-02",
+      "name": "Phòng làm việc bổ trợ DADA",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "administration",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-10-01-01",
+      "name": "Cầu thang Lớn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-10-01-02",
+      "name": "Buồng kiểm tra cầu thang",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-10-02-01",
+      "name": "Hành lang tranh nối Cầu thang Lớn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-10-02-02",
+      "name": "Phòng trực hành lang giữa tầng",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-10-03-01",
+      "name": "Sảnh cao Cầu thang Lớn",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-10-03-02",
+      "name": "Kho bảng hướng dẫn lớp",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-11-01-01",
+      "name": "Cầu thang Nhà cú",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "circulation",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-11-01-02",
+      "name": "Kho thức ăn cho cú",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "storage",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-11-02-01",
+      "name": "Nhà cú (Owlery)",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {
+        "h1": "owlery",
+        "h2": "owlery"
+      },
+      "function": "other",
+      "needsExactBinding": false
+    },
+    {
+      "id": "TWR-11-02-02",
+      "name": "Phòng chăm sóc cú bị thương",
+      "mode": "generated",
+      "templateCandidates": [],
+      "verifiedBindings": {},
+      "function": "other",
+      "needsExactBinding": false
+    }
+  ]
+}

@@ -79,3 +79,12 @@ test('outdoor atlas records must never silently become indoor rectangles',()=>{
  const p=sceneIndex.knownPlaceIds.find(id=>sceneIndex.placeFunctionById[id]==='outdoor'&&!sceneIndex.bindings[id]&&!sceneIndex.noGeneratePlaceIds.includes(id)&&!sceneIndex.lockedPlaceIds.includes(id));
  assert.throws(()=>resolveMap(withPlace(p)),/Outdoor place|CCC/);
 });
+
+test('seven unbound Hogwarts interior rooms generate while fixed template policy remains enforced',()=>{
+ for(const id of ['HOG-TNG7-W-02','HOG-TNG6-S-03','HOG-TNG2-S-06','HOG-TNG1-S-03','HOG-HMNGC-N-04','HOG-TNG4-N-01','HOG-TNG4-W-02']){
+  const d=withPlace(id);d.view.preferredMode='generated';
+  assert.equal(resolveMap(d).mode,'generated');
+  assert.equal(sceneIndex.noGeneratePlaceIds.includes(id),false);
+ }
+ for(const id of sceneIndex.noGeneratePlaceIds)assert.throws(()=>assertGeneratedScene([id]));
+});

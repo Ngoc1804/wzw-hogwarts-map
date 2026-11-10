@@ -25,7 +25,7 @@
     },
     "outdoor": {
       "name": "Ngoài trời",
-      "count": 90
+      "count": 83
     },
     "residential": {
       "name": "Cư trú · ký túc",
@@ -41,7 +41,15 @@
     },
     "study": {
       "name": "Học tập · nghiên cứu",
-      "count": 57
+      "count": 59
+    },
+    "common": {
+      "name": "Sinh hoạt chung",
+      "count": 3
+    },
+    "exhibition": {
+      "name": "Trưng bày",
+      "count": 2
     }
   },
   "places": [
@@ -3149,22 +3157,22 @@
     {
       "id": "HOG-TNG7-W-02",
       "name": "Phòng câu lạc bộ cờ phù thủy",
-      "function": "outdoor"
+      "function": "common"
     },
     {
       "id": "HOG-TNG6-S-03",
       "name": "Phòng câu lạc bộ học thuật",
-      "function": "outdoor"
+      "function": "study"
     },
     {
       "id": "HOG-TNG2-S-06",
       "name": "Phòng chờ bệnh xá",
-      "function": "outdoor"
+      "function": "common"
     },
     {
       "id": "HOG-TNG1-S-03",
       "name": "Phòng chờ trước Phân loại",
-      "function": "outdoor"
+      "function": "common"
     },
     {
       "id": "P-bf3c24a146fb6a",
@@ -3177,7 +3185,7 @@
     {
       "id": "HOG-HMNGC-N-04",
       "name": "Phòng chuẩn bị bài thực hành",
-      "function": "outdoor"
+      "function": "study"
     },
     {
       "id": "P-241e2fa15a09f1",
@@ -3200,12 +3208,12 @@
     {
       "id": "HOG-TNG4-N-01",
       "name": "Phòng Trưng bày Chiến tích",
-      "function": "outdoor"
+      "function": "exhibition"
     },
     {
       "id": "HOG-TNG4-W-02",
       "name": "Phòng trưng bày cổ vật giáo dục",
-      "function": "outdoor"
+      "function": "exhibition"
     },
     {
       "id": "P-36a9268e0e2288",

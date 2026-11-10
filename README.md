@@ -81,3 +81,7 @@ Xem [runtime/README.md](runtime/README.md), [quyết định atlas](docs/ATLAS_D
 ## Indoor tùy biến và test thực nghiệm
 
 Flow /MAP → MAP_DATA → template/atlas hoặc phòng dựng → nội thất/decor → Preview đã ghép trong runtime. Dùng asset có sẵn hoặc custom vector theo từng yêu cầu. Xem [hướng dẫn](docs/INDOOR_PREVIEW.md); tạo sáu cảnh offline bằng `python tools/prepare_experiment.py`.
+
+## Bắt đầu với Gemini
+
+Đọc [luồng /map ngắn gọn](docs/GEMINI_QUICKSTART.md) và [bảng chọn cảnh](maps/decision-atlas.json).

@@ -117,7 +117,8 @@ async function render(data){assertMapData(data);plan=resolveMap(data);
   const i=actorCounts.get(a.placeId)||0;actorCounts.set(a.placeId,i+1);
   const suggested=geometry?.suggestedAnchors[a.placeId];
   if(exterior&&a.environment==='inside')actorRoofs.set(a.id,anchor(data.places.find(p=>p.id===a.placeId),a.buildingId));
-  actorPositions.set(a.id,geometry?indoorActorPoint(geometry,a.placeId,a.position||suggested[i%suggested.length]):actorGroundPoint(a,actorRoofs.get(a.id)||points.get(a.placeId)));
+  if(geometry&&!a.position&&i>=suggested.length)throw Error('Không đủ chỗ đứng NPC trong '+a.placeId+'; tăng diện tích hoặc giảm nội thất');
+  actorPositions.set(a.id,geometry?indoorActorPoint(geometry,a.placeId,a.position||suggested[i]):actorGroundPoint(a,actorRoofs.get(a.id)||points.get(a.placeId)));
  }
  // Do not expose fogged actors/hints through ribbons, navigation or inspector.
  visibleActors=data.actors.filter(a=>!pointInFog(actorPositions.get(a.id),data.visibility));

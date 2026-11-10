@@ -1,10 +1,10 @@
 {
   "total": 726,
   "counts": {
-    "generated-indoor": 432,
+    "generated-indoor": 439,
     "locked-by-policy": 90,
     "missing-fixed-binding": 67,
-    "missing-outdoor-surface": 31,
+    "missing-outdoor-surface": 24,
     "template": 106
   },
   "entries": [
@@ -36,7 +36,7 @@
     {
       "id": "HOG-HMNGC-N-04",
       "name": "Phòng chuẩn bị bài thực hành",
-      "status": "missing-outdoor-surface"
+      "status": "generated-indoor"
     },
     {
       "id": "HOG-HMNGC-N-05",
@@ -254,7 +254,7 @@
     {
       "id": "HOG-TNG1-S-03",
       "name": "Phòng chờ trước Phân loại",
-      "status": "missing-outdoor-surface"
+      "status": "generated-indoor"
     },
     {
       "id": "HOG-TNG1-S-05",
@@ -393,7 +393,7 @@
     {
       "id": "HOG-TNG2-S-06",
       "name": "Phòng chờ bệnh xá",
-      "status": "missing-outdoor-surface"
+      "status": "generated-indoor"
     },
     {
       "id": "HOG-TNG2-W-01",
@@ -558,7 +558,7 @@
     {
       "id": "HOG-TNG4-N-01",
       "name": "Phòng Trưng bày Chiến tích",
-      "status": "missing-outdoor-surface"
+      "status": "generated-indoor"
     },
     {
       "id": "HOG-TNG4-N-02",
@@ -618,7 +618,7 @@
     {
       "id": "HOG-TNG4-W-02",
       "name": "Phòng trưng bày cổ vật giáo dục",
-      "status": "missing-outdoor-surface"
+      "status": "generated-indoor"
     },
     {
       "id": "HOG-TNG4-W-03",
@@ -808,7 +808,7 @@
     {
       "id": "HOG-TNG6-S-03",
       "name": "Phòng câu lạc bộ học thuật",
-      "status": "missing-outdoor-surface"
+      "status": "generated-indoor"
     },
     {
       "id": "HOG-TNG6-S-04",
@@ -928,7 +928,7 @@
     {
       "id": "HOG-TNG7-W-02",
       "name": "Phòng câu lạc bộ cờ phù thủy",
-      "status": "missing-outdoor-surface"
+      "status": "generated-indoor"
     },
     {
       "id": "HOG-TNG7-W-03",
