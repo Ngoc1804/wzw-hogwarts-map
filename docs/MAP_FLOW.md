@@ -2,11 +2,11 @@
 
 ## Kiến trúc cố định, không backend/API RP
 
-`USER /map` → **Gemini WzW Runtime đọc RP + Atlas context đã cung cấp** → JSON `MAP_DATA 3.1` trong HTML shell → jsDelivr tải JS/SVG từ GitHub đã ghim commit → `validate` → `resolveMap` → `buildGeometry/draw` hoặc fixed template → NPC/hints/Inspector → WIZAMAP Preview.
+`USER /map` → **Gemini WzW Runtime đọc RP + Atlas Markdown đã dán vào Master Prompt** → JSON `MAP_DATA 3.2.0` trong HTML shell → jsDelivr tải JS/SVG từ GitHub đã ghim commit → `validate` → `resolveMap` → `buildGeometry/draw` hoặc fixed template → NPC/hints/Inspector → WIZAMAP Preview.
 
 - **AI quyết định sự thật RP**: ngày giờ, vị trí PC, ai ở đâu, hành động, sự kiện, điều PC có thể biết; không tạo facts để lấp quota. GitHub không tạo NPC, nhiệm vụ, lịch trình, lời thoại hay thêm sự kiện.
 - **GitHub chỉ render**: exact atlas name/ID, bản đồ có sẵn, phòng/hành lang/cảnh AU mới do người chơi mô tả, SVG/nội thất, đặt nhãn, animation, tương tác.
-- `docs/AI_ATLAS_CONTEXT.json` là bản **rút gọn cho WzW Runtime**, không tự gửi tới Gemini nếu chưa cấu hình nó trong ngữ cảnh AI Studio. Có thể dùng exact canonical name đã có trong RP, nhưng tên trùng/không rõ phải được xác định trước khi sinh map.
+- Đưa nội dung `maps/WZW_ATLAS_APPROVED.md` trực tiếp vào Master Prompt cho Gemini đọc theo vị trí RP. Không cần tải `docs/AI_ATLAS_CONTEXT.json`. Engine tự đối chiếu ID/alias, scope và spot; tên trùng/không rõ không được đoán tùy tiện.
 
 ## Ba cấp chọn bản đồ — luôn dựa trên PC
 
@@ -16,7 +16,7 @@
 
 **Công thức hành lang:** 10 grammar `horizontal,vertical,ell,tee,cross,court,cloister,windows,curved,tower`. Tham số phòng/hành lang thay đổi ổn định theo `scopeId+atlasVersion`; cùng khu khác NPC/time không đổi hình học. Hành lang minh họa không chứng minh đường đi canon, cổng khóa hay chức năng nav/pathfinding. Công trình đơn lẻ user-created `kind=building` có vùng đất xung quanh thay vì một phòng nổi giữa khoảng trống; phòng trong lâu đài không được bịa ngoại cảnh.
 
-## MAP_DATA 3.1
+## MAP_DATA 3.2.0
 
 Schema duy nhất `runtime/map-data.schema.json`, validator `runtime/map-data.mjs`. Hỗ trợ dữ liệu 3.0 đã có để tránh gãy loader; dữ liệu mới mặc định 3.1. Bắt buộc `meta`, `places`, `actors` (đúng 1 `isPC=true`); tuỳ chọn `view`, `connections`, `hints`, `visibility`, `customScene`.
 

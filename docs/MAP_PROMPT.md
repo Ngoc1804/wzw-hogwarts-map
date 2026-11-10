@@ -1,58 +1,29 @@
-# WIZAMAP — Google AI Studio /map production contract (Demo 3)
+# R14.6 — /MAP · WIZAMAP Demo 3 flexible location
 
-Version: `MAP_DATA 3.2.0`; public Atlas context: `atlas-approved-2.0`; pinned production bundle commit: `9223b72ef0938c8dd3ddbf2a839d171cfbd8d9bf`.
+Version: MAP_DATA 3.2.0 · Atlas: atlas-approved-2.0 · Published bundle: `2aeba6e6b7b47244ad2615a4d61798920ab37116`.
 
-## Role split
-- Gemini/WzW Runtime **reads only accepted current RP**. No time advance, teleports, NPC/quest invention, GM secrets, future cards, private thoughts or automatic PC decisions. /map is read-only.
-- Gemini may use `docs/AI_ATLAS_CONTEXT.json` **only if actually supplied in the AI Studio context**. Never claim to read GitHub by a URL alone. Prefer verified canonical IDs, otherwise exact unambiguous names; unknown/ambiguous canonical places should not be guessed.
-- GitHub resolves PC's location: verified fixed template → approved Atlas locality → user-created custom procedural scene. It generates SVG layout, corridors, interior, assets, NPC/markers UI; it **does not invent RP data**.
-- Source of truth for allowed visibility: PC actual perception/knowledge (R3.2/R4.2). Do not transmit hidden facts to browser, even in a commented field or HTML. Fog is not secrecy. `visibility.revealedPlaceIds` only for places actually permitted to be named.
+## Core contract
+- **READ ONLY:** At /map, observe the exact accepted RP snapshot. Never advance date/time, move PC/NPC, invent actions/events/rooms, change game state or reveal private information. After the output, RP remains unchanged.
+- **Atlas is already supplied:** The user pastes the full approved `maps/WZW_ATLAS_APPROVED.md` into the Master Prompt. Do not request `AI_ATLAS_CONTEXT.json`, re-fetch an Atlas URL, or generate IDs from guessed room names. Gemini identifies a *known zone and relative spot*; GitHub contains the canonical Atlas index and all template geometry.
+- **Information Gate:** Only PC-received/visible facts under R3.2/R4.2 enter MAP_DATA. No secret plans, future events, unknown NPCs, private thoughts, hidden facts, or restricted AU rooms even in invisible attributes/IDs. A room name publicly existing in the Atlas does not override the PC's access rules.
+- **Scene selection:** Verified fixed template → verified Atlas scope by actual PC place/nearPlace → genuine user-created location with customScene. Never merge directions or different floors; H1/H2 have separate ownership.
+- **Relative spot:** Separate area/cluster from PC's point of standing. For a corridor, threshold or small RP alcove, use `view:{spotType:"corridor"|"threshold"|"adhoc",nearPlace:"Verified nearby room name"}`; add a unique local `places[]` record with `kind:"corridor"`, referenced by PC/NPC. The engine renders the surrounding approved scope and places actors on an existing safe corridor, not inside nearPlace. `view.scopeId` may be supplied only if *verified*, e.g. `hogwarts/f1/0`; it need not be guessed. For an ordinary room, reference that actual room and use `spotType:"inside_room"` or omit it. Outdoors use the real approved H1/H2 location and, optionally, `spotType:"outdoor"`.
+- **No geometry invention:** Small transition spots are interactive marks, not extra canon rooms. Generated corridors and interior decoration are illustrative, not confirmed travel routes or plot facts. A user-created house/inn outside Atlas requires an explicit, short `customScene` and only rooms truly established in RP.
 
-## Required MAP_DATA
-```json
-{
-  "schemaVersion": "3.2.0",
-  "meta": {"date": "1992-09-11", "time": "16:20", "areaName": "Tên khu RP hiện tại", "quote": "Một câu dẫn dắt vui/bí ẩn không spoil"},
-  "view": {"preferredMode": "auto"},
-  "places": [{
-    "id": "CANONICAL_OR_USER_CREATED_ID",
-    "name": "Tên địa điểm đã xác lập",
-    "kind": "room",
-    "inspector": {
-      "overhear": "Một câu mô tả hành động/sự việc đang xảy ra ngay tại đây.",
-      "observation": "Mô tả ngắn khung cảnh/cảm giác ở đây."
-    }
-  }],
-  "actors": [{"id": "pc", "name": "Tên PC thực tế", "isPC": true, "placeId": "CANONICAL_OR_USER_CREATED_ID"}],
-  "hints": [],
-  "visibility": {}
-}
-```
-**Above is STRUCTURE ONLY. Never output example names, dates, actions or placeholder IDs in a real /map.** Replace all content from accepted RP. If no NPC/hints, keep only PC and `hints:[]`. If a field's fact is unknown, omit its optional content instead of inventing.
+## MAP_DATA (only current RP, no fixtures)
+Required: `schemaVersion:"3.2.0"`, `meta:{date:"YYYY-MM-DD",time:"HH:MM",areaName}`, `places:[{id,name,kind}]`, `actors:[{id,name,isPC:true,placeId}]`. Exactly one PC; all actor/hint placeIds must refer to an included place. Optional `view:{preferredMode:"auto",scopeId?,spotType?,nearPlace?}`, `connections:[]`, `hints:[]`, `visibility:{}`, `customScene` for verified user-created locations. No `focus`, `questPolicy`, `visiblePlaceIds`, template SVG, room lists, or invented positions.
+- Use simple, unique local IDs (`pc`, `draco_malfoy`, `rp-corridor`). Exact canonical IDs are optional: the engine normalizes unique canonical English/Vietnamese names before validation. Do not use a similar but nonmatching name as proof of a room.
+- Place `kind` is one of `room|corridor|hall|tower|house|shop|pub|greenhouse|grounds|street|region|train|special`. Furnishings, polygon coordinates and wall geometry are not required from Gemini.
+- `meta.quote`: one short PC-safe witty/atmospheric line, or omit. `places[].inspector.overhear`: short *observed ongoing action* at that place. `observation`: local environment and senses. Do not fill with speculation.
+- `actors[]`: only PCs/NPCs actually present and visible or correctly known at their own placeId. Separate rooms require separate references. Engine limits rendered NPC labels; do not change RP to fill slots.
+- `hints[]`: only verified, PC-safe events at proper places, max five total; `side<=2`, `hint<=1`, `pool+life<=2`. An event is not automatically a quest.
+- `visibility.revealedPlaceIds` reveals only names actually permitted for this PC; never put undisclosed RP in HTML. Fog is visual only.
+- `connections[]` only for RP-established paths, not speculative geometry. AU, CCC and room access locks still apply.
+- Unknown or contradictory zone, privacy block or impossible geometry: report a specific narrow OOC blocker instead of silently teleporting characters, unlocking locations, or inventing a map.
 
-## Fixed UI bindings
-- Under WIZAMAP: `meta.quote` = one witty/mysterious *PC-safe* line or harmless action suggestion, not a forced quest.
-- VỊ TRÍ: selected `places[].name`.
-- NGHE HÓNG: `places[].inspector.overhear` = one **actual ongoing action or observable event** (not a generic rumor).
-- QUAN SÁT: `places[].inspector.observation` = brief local scenery, senses and ambience.
-- AI ĐÓ: `actors[]` at same `placeId`, actual known/observable participants and optional `activity`.
-- HÓNG HỚT TÁM PHƯƠNG: up to 5 `hints[]` public-safe map events; `type=event|side|hint|pool|life`, no hidden objectives. Maximum: side≤2, hint≤1, pool+life≤2; do not fill quotas.
-- On selection of another room, use that **room's** data, not PC's inspector for all rooms.
+## /map output
+Return **exactly ONE complete ```html code block**, replacing the token `__LIVE_MAP_DATA_JSON__` in the fixed loader below with JSON from the *current accepted RP*. Escape literal `<` inside JSON as `\\u003c`. No STATUS/BODY/META or other prose. Keep the bundle SHA unchanged. AI Studio Preview must actually render before claiming success.
 
-## References, geometry and gates
-- `places` lists PC place + any referenced NPC/hint locations; the engine expands allowed static architecture. Never send full 694-place Atlas or compute SVG coordinates.
-- `actors`: exactly one `isPC:true`, at most 50 additional *public* records; engine shows at most 10 NPC/group labels + PC. `groupId` only if actual group; `stance=walk` only if currently moving. `environment=inside|outside` for 2.5D exterior templates; no roof/bbox as ground.
-- `connections` only if known through W/RP; unknown corridors visually illustrative, not canon navigation.
-- `kind` uses schema enum `room|corridor|hall|tower|house|shop|pub|greenhouse|grounds|street|region|train|special`. Function of a Potions classroom is `kind:room`, optionally `generation.function:potions` (never `kind:potions`).
-- Optional `generation` in 3.2: wallMaterial=wood|brick|stone, floorMaterial=wood|brick|stone|tile, floorColor/wallColor/materialStroke as valid hex color, materialScale between 0.5 and 3. Omit for engine auto-design.
-- `customScene` **only** for genuinely outside Atlas user-created AU, with `id,name,source:"user-created",kind:"building|interior|outdoor|village",description` and optional surroundings, terrain; describe actual known buildings/rooms/roads in short text. No canonical override, no unlocking other five barred AU maps.
-- On unresolved canonical binding/locked/private info/unknown position: return specific OOC error without data substitution, not fake map or nonliteral route.
-- Check schema required fields, enums, unique IDs, actor/hint place references, month/time, PC membership, gate/hint quotas; do not expose hidden quest metadata via id/title.
-
-## Output contract
-On `/map`, emit exactly **one full ```html code block** with the following loader, replacing only the token `__LIVE_MAP_DATA_JSON__` with current MAP_DATA serialized as valid JSON (escape literal `<` as `\\u003c`). Do not modify URL, bundle code, styles, template SVG or iframe sandbox. No STATUS/BODY/META, invented fiction or outside prose. After output, RP state is unchanged; a Preview failure is not a completed /map.
-
-## Pinned production HTML shell
 ```html
 <!doctype html>
 <html lang="vi">
@@ -81,7 +52,7 @@ iframe{display:block;width:100%;flex:1;min-height:280px;border:0}
   const data=JSON.parse(raw);
   if(!data||typeof data!=='object'||!Array.isArray(data.places)||!Array.isArray(data.actors))
    throw Error('Thiếu MAP_DATA.places hoặc MAP_DATA.actors');
-  const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@9223b72ef0938c8dd3ddbf2a839d171cfbd8d9bf/runtime/bundle.js');
+  const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@2aeba6e6b7b47244ad2615a4d61798920ab37116/runtime/bundle.js');
   if(!response.ok)throw Error('Runtime HTTP '+response.status);
   const code=await response.text();
   if(!code.includes('BUNDLE_REF'))throw Error('Bundle production không hợp lệ');
@@ -98,4 +69,4 @@ iframe{display:block;width:100%;flex:1;min-height:280px;border:0}
 </html>
 ```
 
-Note: AI Studio must have the canonical Atlas context supplied separately; a GitHub link alone does not inject it into Gemini.
+Keep R14.7 (/INVENTORY) and all other system sections unchanged.

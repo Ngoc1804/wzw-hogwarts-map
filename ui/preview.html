@@ -25,7 +25,7 @@ iframe{display:block;width:100%;flex:1;min-height:280px;border:0}
   const data=JSON.parse(raw);
   if(!data||typeof data!=='object'||!Array.isArray(data.places)||!Array.isArray(data.actors))
    throw Error('Thiếu MAP_DATA.places hoặc MAP_DATA.actors');
-  const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@9223b72ef0938c8dd3ddbf2a839d171cfbd8d9bf/runtime/bundle.js');
+  const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@2aeba6e6b7b47244ad2615a4d61798920ab37116/runtime/bundle.js');
   if(!response.ok)throw Error('Runtime HTTP '+response.status);
   const code=await response.text();
   if(!code.includes('BUNDLE_REF'))throw Error('Bundle production không hợp lệ');
