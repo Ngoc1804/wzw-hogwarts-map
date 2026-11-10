@@ -39,10 +39,18 @@ function inspect(row,placeId){
  action.textContent=row.stance==='walk'?'Đang đi':row.activity||'';
  q('#place-title').textContent=title;q('#drawer-name').textContent=title;
  q('#place-area').textContent=activeData.meta.areaName;
- // NGHE HÓNG: a factual one-sentence activity here, not an overheard quest.
- q('#activity').textContent=place?.inspector?.overhear||row.inspector?.overhear||row.activity||at.find(a=>a.activity)?.activity||'';
- // QUAN SÁT: what this location looks and feels like.
- q('#observation').textContent=place?.inspector?.observation||row.inspector?.observation||'';
+ // NGHE HÓNG: one actual action/event at the selected location.
+ // Selecting a map event shows its public event description without changing
+ // that event into a quest or overwriting the place's environmental observation.
+ const isEvent=['event','side','hint','pool','life'].includes(row.type);
+ const isActor=typeof row.isPC==='boolean'||row.entityType!==undefined||row.activity!==undefined;
+ q('#activity').textContent=isEvent
+  ? (row.description||row.inspector?.overhear||place?.inspector?.overhear||'')
+  : isActor
+   ? (row.activity||place?.inspector?.overhear||at.find(a=>a.activity)?.activity||'')
+   : (place?.inspector?.overhear||at.find(a=>a.activity)?.activity||'');
+ // QUAN SÁT: static visual/sensory description, never an inferred quest.
+ q('#observation').textContent=place?.inspector?.observation||row.inspector?.observation||activeData.customScene?.surroundings||activeData.customScene?.description||'';
  q('#actors').replaceChildren(...at.map(a=>{const n=actorTag(a,true);n.onclick=()=>inspect(a,a.placeId);return n}));
 }
 const EXTERIOR_TEMPLATES=new Set(['h1','h2','village-static','diagon-knockturn']);
