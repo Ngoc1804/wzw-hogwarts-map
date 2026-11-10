@@ -31,7 +31,20 @@ button('+',()=>zoom(.8));button('−',()=>zoom(1.25));button('Vừa khung',()=>{
 button('Chuyển động',()=>{motion=!motion;document.body.classList.toggle('motion-off',!motion);q('#mapmount').style.setProperty('--qa-motion',motion?'running':'paused')});
 button('Tải HTML',async()=>{if(!activeData)return;try{if(!bundleSource&&bundleURL){const r=await fetch(bundleURL);if(!r.ok)throw Error('Bundle HTTP '+r.status);bundleSource=await r.text();}const copy=document.documentElement.cloneNode(true);copy.querySelector('body').replaceChildren();copy.querySelectorAll('style').forEach(n=>n.remove());const payload=el('script');payload.type='application/json';payload.id='qa-atlas';payload.textContent=JSON.stringify(atlas||null).replace(/</g,'\\u003c');if(atlas)copy.querySelector('body').append(payload);const spatialPayload=el('script');spatialPayload.type='application/json';spatialPayload.id='qa-spatial';spatialPayload.textContent=JSON.stringify(templateSpatial).replace(/</g,'\\u003c');copy.querySelector('body').append(spatialPayload);const assets=el('script');assets.type='application/json';assets.id='qa-assets';assets.textContent=JSON.stringify(Object.fromEntries(sceneAssetCache)).replace(/</g,'\\u003c');copy.querySelector('body').append(assets);const data=el('script');data.type='application/json';data.id='MAP_DATA';data.textContent=serializeMapData(mapPublicData(activeData));copy.querySelector('body').append(data);const script=el('script');script.textContent=bundleSource;copy.querySelector('body').append(script);const url=URL.createObjectURL(new Blob(['<!doctype html>'+copy.outerHTML],{type:'text/html'}));const a=el('a');a.href=url;a.download='wizamap.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000)}catch(e){error.textContent='Không tải được HTML: '+e.message}});
 q('#drawer-toggle').onclick=()=>{const layout=q('.layout');layout.classList.toggle('drawer-open');q('#drawer-toggle').setAttribute('aria-expanded',String(layout.classList.contains('drawer-open')))};
-function inspect(row,placeId){let action=q('#actor-action');if(!action){action=el('div');action.id='actor-action';action.className='review-status';bar.append(action)}action.textContent=row.stance==='walk'?'Đang đi':row.activity||'';q('#place-title').textContent=row.name||row.title;q('#drawer-name').textContent=row.name||row.title;q('#place-area').textContent=activeData.meta.areaName;q('#activity').textContent=row.inspector?.overhear||'';q('#observation').textContent=row.inspector?.observation||'';q('#actors').replaceChildren(...visibleActors.filter(a=>a.placeId===placeId).map(a=>{const n=actorTag(a,true);n.onclick=()=>inspect(a,a.placeId);return n}))}
+function inspect(row,placeId){
+ const place=activeData.places.find(p=>p.id===placeId);
+ const at=visibleActors.filter(a=>a.placeId===placeId);
+ const title=place?.name||row.name||row.title||'Vị trí';
+ let action=q('#actor-action');if(!action){action=el('div');action.id='actor-action';action.className='review-status';bar.append(action)}
+ action.textContent=row.stance==='walk'?'Đang đi':row.activity||'';
+ q('#place-title').textContent=title;q('#drawer-name').textContent=title;
+ q('#place-area').textContent=activeData.meta.areaName;
+ // NGHE HÓNG: a factual one-sentence activity here, not an overheard quest.
+ q('#activity').textContent=place?.inspector?.overhear||row.inspector?.overhear||row.activity||at.find(a=>a.activity)?.activity||'';
+ // QUAN SÁT: what this location looks and feels like.
+ q('#observation').textContent=place?.inspector?.observation||row.inspector?.observation||'';
+ q('#actors').replaceChildren(...at.map(a=>{const n=actorTag(a,true);n.onclick=()=>inspect(a,a.placeId);return n}));
+}
 const EXTERIOR_TEMPLATES=new Set(['h1','h2','village-static','diagon-knockturn']);
 function anchor(place,buildingId){
  if(geometry){const p=geometry.suggestedAnchors[place.id]?.[0];if(!p)throw Error('No indoor actor anchor for '+place.id);return p}
@@ -85,11 +98,15 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
   actors:data.actors.map(a=>({...a,placeId:canonicalPlaceId(a.placeId)})),
   hints:data.hints.map(h=>({...h,placeId:canonicalPlaceId(h.placeId)})),
   focus:{...data.focus,actualPlaceId:canonicalPlaceId(data.focus.actualPlaceId)},
-  visibility:{...data.visibility,visiblePlaceIds:data.visibility.visiblePlaceIds.map(canonicalPlaceId)},
+  visibility:{...data.visibility,visiblePlaceIds:plan.places.map(p=>p.id)},
   view:{...data.view,routePlaceIds:data.view.routePlaceIds.map(canonicalPlaceId)}
  };
  // Export exactly the public rendered scene, including canonical references.
  const sceneIds=new Set(data.places.map(p=>p.id));
+  // The map shows the PC's selected locality, not unrelated actor/event records.
+  data.actors=data.actors.filter(a=>sceneIds.has(a.placeId));
+  data.hints=data.hints.filter(h=>sceneIds.has(h.placeId));
+  if(!data.actors.some(a=>a.isPC))throw Error('PC not in resolved map locality');
  data.connections=data.connections.filter(c=>sceneIds.has(canonicalPlaceId(c.from))&&sceneIds.has(canonicalPlaceId(c.to))).map(c=>({...c,from:canonicalPlaceId(c.from),to:canonicalPlaceId(c.to)}));
  data.view.routePlaceIds=data.view.routePlaceIds.filter(id=>sceneIds.has(id));
  if(data.focus.selectedId)data.focus.selectedId=canonicalPlaceId(data.focus.selectedId);
@@ -128,9 +145,9 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
   const i=actorCounts.get(a.placeId)||0;actorCounts.set(a.placeId,i+1);
   const suggested=geometry?.suggestedAnchors[a.placeId];
   if(exterior&&a.environment==='inside')actorRoofs.set(a.id,anchor(data.places.find(p=>p.id===a.placeId),a.buildingId));
-  if(geometry&&!a.position&&i>=suggested.length)throw Error('Không đủ chỗ đứng NPC trong '+a.placeId+'; tăng diện tích hoặc giảm nội thất');
+  if(geometry&&!a.position&&!suggested?.length)throw Error('No safe actor position in '+a.placeId);
   let point;
-  if(geometry)point=indoorActorPoint(geometry,a.placeId,a.position||suggested[i]);
+  if(geometry)point=indoorActorPoint(geometry,a.placeId,a.position||suggested[i%suggested.length]);
   else if(exterior&&a.environment==='inside')point=actorGroundPoint(a,actorRoofs.get(a.id));
   else {
    if(exterior&&!['inside','outside'].includes(a.environment))throw Error('Actor '+a.id+': environment must be inside or outside for exterior template');
@@ -144,6 +161,17 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
  visibleActors=data.actors.filter(a=>!pointInFog(actorPositions.get(a.id),data.visibility));
  if(!visibleActors.some(a=>a.isPC))throw Error('PC position is inside fog; scene visibility is inconsistent');
  const visibleHints=data.hints.filter(h=>!pointInFog(points.get(h.placeId),data.visibility));
+  // Group/individual identity is supplied by AI; GitHub never invents a group.
+  const actualGroups=new Set(visibleActors.filter(a=>a.entityType==='group'&&a.groupId).map(a=>a.groupId));
+  const marked=new Set(),labelActors=[...visibleActors.filter(a=>a.isPC)];
+  const ranked=visibleActors.filter(a=>!a.isPC).sort((a,b)=>(b.priority||0)-(a.priority||0)||a.id.localeCompare(b.id));
+  for(const a of ranked){
+    if(labelActors.length>=11)break;
+    if(a.groupId&&a.entityType!=='group'&&actualGroups.has(a.groupId))continue;
+    const key=(a.groupId&&a.entityType==='group'?'group:'+a.groupId:'name:'+a.name.trim().toLocaleLowerCase('vi')+':'+a.placeId);
+    if(marked.has(key))continue;
+    marked.add(key);labelActors.push(a);
+  }
  const occluders=exterior?(spatial?.occlusionRegions||[]).map(region=>{
   const allowed=EXTERIOR_OCCLUDERS[id]||[];
   if(!allowed.includes(region.targetId))throw Error('Occlusion target not approved for template: '+region.targetId);
@@ -173,11 +201,11 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
   c.target.addEventListener('click',tap);c.target.addEventListener('mouseenter',enter);c.target.addEventListener('mouseleave',leave);c.target.addEventListener('focus',enter);c.target.addEventListener('blur',leave);
   stops.push(()=>{c.target.removeEventListener('click',tap);c.target.removeEventListener('mouseenter',enter);c.target.removeEventListener('mouseleave',leave);c.target.removeEventListener('focus',enter);c.target.removeEventListener('blur',leave)});
  }
- const offsets=new Map();for(const a of visibleActors){
+ const offsets=new Map();for(const a of labelActors){
  const point=actorPositions.get(a.id),n=actorTag(a),i=offsets.get(a.placeId)||0;offsets.set(a.placeId,i+1);
  // Additional actors occupy rows below the same ground anchor, never climb
  // upwards into the artwork. Offsets and footprints remain readable on zoom.
- const count=visibleActors.filter(other=>other.placeId===a.placeId).length,columns=Math.min(count,3);
+ const count=labelActors.filter(other=>other.placeId===a.placeId).length,columns=Math.min(count,3);
  const rowColumns=Math.min(columns,Math.max(1,Math.floor(q('#mapmount').clientWidth/130)));
  const dx=((i%rowColumns)-(rowColumns-1)/2)*110,dy=-(Math.floor(i/rowColumns)*34)-10;
  const insideBuilding=exterior&&a.environment==='inside';
@@ -190,10 +218,10 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
  n.onclick=()=>{if(n.classList.contains('selected')){n.classList.remove('selected');coverController.clear(selectedKey);return;}for(const b of overlay.querySelectorAll('.selected')){b.classList.remove('selected');coverController.clear('selected:'+b.dataset.actorId)}n.classList.add('selected');if(coverPoint)coverController.set(selectedKey,coverPoint);inspect(a,a.placeId)};
  n.dataset.actorId=a.id;
  overlay.append(n);
- const feet=document.createElementNS(NSVG,'g');feet.dataset.actorFeet=a.id;feet.setAttribute('fill','#C33C49');feet.setAttribute('stroke','#FFF0D4');feet.setAttribute('stroke-width','.9');feet.setAttribute('paint-order','stroke fill');feet.style.pointerEvents='none';svg.append(feet);
+ const feet=document.createElementNS(NSVG,'g');feet.dataset.actorFeet=a.id;feet.setAttribute('fill','#8C2939');feet.setAttribute('stroke','#FFF0D4');feet.setAttribute('stroke-width','.9');feet.setAttribute('paint-order','stroke fill');feet.style.pointerEvents='none';svg.append(feet);
  if(labelOnlyActors.has(a.id)||(a.environment==='inside'&&EXTERIOR_TEMPLATES.has(id))){feet.remove();labels.push({node:n,point,labelPoint,dx,dy})}else{labels.push({node:n,point,dx,dy,feet});stops.push(mountFeet(feet,a.stance));}
  }
- q('#quests').replaceChildren(...visibleHints.map(h=>{const p=data.places.find(p=>p.id===h.placeId),n=el('button',h.title+' · '+p.name);n.className='quest';n.onclick=()=>inspect(h,h.placeId);const marker=el('button','?');marker.className='hint-marker';marker.setAttribute('aria-label',h.title);marker.onclick=n.onclick;overlay.append(marker);labels.push({node:marker,point:points.get(h.placeId),dx:65,dy:EXTERIOR_TEMPLATES.has(id)?38:0});return n}));q('#hintcount').textContent=visibleHints.length+'/5';q('.quote').textContent=data.meta.quote;q('#zone').textContent=data.meta.areaName;q('.clock').textContent=data.meta.time;q('.date').textContent=data.meta.date;inspect(visibleActors.find(a=>a.isPC),data.focus.actualPlaceId);
+ q('#quests').replaceChildren(...visibleHints.map(h=>{const p=data.places.find(p=>p.id===h.placeId),n=el('button',h.title+' · '+p.name);n.className='quest';n.onclick=()=>inspect(h,h.placeId);const marker=el('button','?');marker.className='hint-marker';marker.setAttribute('aria-label',h.title);marker.onclick=n.onclick;overlay.append(marker);labels.push({node:marker,point:points.get(h.placeId),dx:65,dy:EXTERIOR_TEMPLATES.has(id)?38:0});return n}));q('#hintcount').textContent=visibleHints.length+'/5';q('.quote').textContent=data.meta.quote||'';q('#zone').textContent=data.meta.areaName;q('.clock').textContent=data.meta.time;q('.date').textContent=data.meta.date;inspect(visibleActors.find(a=>a.isPC),data.focus.actualPlaceId);
  const selected=[...data.places.filter(p=>!pointInFog(points.get(p.id),data.visibility)),...visibleActors,...visibleHints].find(row=>row.id===data.focus.selectedId);
  if(selected)inspect(selected,selected.placeId||selected.id);
  if(data.view.crop!==false&&points.size){const viewport=q('#mapmount').getBoundingClientRect();const extent=geometry?(()=>{const [x,y,w,h]=geometry.bounds;return [{left:x,top:y,right:x+w,bottom:y+h}]})():[...points.values(),...visibleActors.map(a=>a.position||points.get(a.placeId)),...data.view.routePlaceIds.filter(id=>points.has(id)).map(id=>points.get(id))];box=fitSceneBounds(base,extent,{width:viewport.width,height:viewport.height},geometry?0:55);}
