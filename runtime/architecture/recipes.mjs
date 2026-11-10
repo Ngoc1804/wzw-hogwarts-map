@@ -41,9 +41,8 @@ function makeRoom(record,slot,offset,frontage,depth){
 }
 export function buildIndoorLayout(request={}){
  const selection=selectIndoorFormula(request),id=selection.id;
- if(id==='tower'&&(request.rooms?.length??request.roomCount??8)<2)throw Error('Công thức tháp cần ít nhất 2 phòng trong cảnh');
  if(request.rooms&&!Array.isArray(request.rooms))throw Error('rooms phải là danh sách');
- const N=request.rooms?request.rooms.length:(request.roomCount??8);finite(N,request.allowEmptyRooms?0:1,32,'Số phòng');if(!Number.isInteger(N))throw Error('Số phòng phải là số nguyên');
+ const N=request.rooms?request.rooms.length:(request.roomCount??8);finite(N,request.allowEmptyRooms?0:1,60,'Số phòng');if(!Number.isInteger(N))throw Error('Số phòng phải là số nguyên');
  const F=finite(request.roomWidth??300,180,560,'Mặt tiền phòng'),D=finite(request.roomDepth??260,180,520,'Chiều sâu phòng'),C=finite(request.corridorWidth??160,100,240,'Bề rộng hành lang');
  const records=request.rooms?request.rooms.map((r,i)=>({...r,id:r.id||'room-'+(i+1),name:r.name||'Phòng '+(i+1)})):Array.from({length:N},(_,i)=>({id:'room-'+(i+1),name:'Phòng '+String(i+1).padStart(2,'0'),shape:request.roomShape||'rectangle'}));
  if(new Set(records.map(r=>r.id)).size!==N)throw Error('ID phòng trùng');

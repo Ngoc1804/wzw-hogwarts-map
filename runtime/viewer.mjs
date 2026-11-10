@@ -67,17 +67,23 @@ function anchor(place,buildingId){
  const left=Math.min(...corners.map(p=>p.x)),right=Math.max(...corners.map(p=>p.x)),top=Math.min(...corners.map(p=>p.y)),bottom=Math.max(...corners.map(p=>p.y));
  const roofNodes=[...node.querySelectorAll('[data-shade-surface="roof"],[data-layer="roof"]')];
  let roof={x:(left+right)/2,y:top};
+ // Display anchors may use artwork bounds; they never define a walkable floor.
+ const faces=[...node.querySelectorAll('[data-shade-surface="wall"],rect:not(.spot-hit)')].filter(n=>{
+  const b=n.getBBox(),fill=n.getAttribute('fill');return !n.closest('defs')&&fill&&fill!=='none'&&fill!=='transparent'&&b.width>25&&b.height>25;
+ }).sort((a,b)=>{const x=a.getBBox(),y=b.getBBox();return y.width*y.height-x.width*x.height});
+ let wall={x:(left+right)/2,y:bottom-(bottom-top)*.18};
+ if(faces.length){const n=faces[0],b=n.getBBox(),m=svg.getScreenCTM().inverse().multiply(n.getScreenCTM());wall=new DOMPoint(b.x+b.width/2,b.y+b.height*.65).matrixTransform(m);}
  if(roofNodes.length){
   const pts=roofNodes.flatMap(n=>{const b=n.getBBox(),m=svg.getScreenCTM().inverse().multiply(n.getScreenCTM());return [[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]].map(([x,y])=>new DOMPoint(x,y).matrixTransform(m))});
   roof={x:(Math.min(...pts.map(p=>p.x))+Math.max(...pts.map(p=>p.x)))/2,y:Math.min(...pts.map(p=>p.y))};
  }
- return {x:(left+right)/2,y:EXTERIOR_TEMPLATES.has(select.value)?top+(bottom-top)*.3:(top+bottom)/2,left,right,top,bottom,roof};
+ return {x:(left+right)/2,y:EXTERIOR_TEMPLATES.has(select.value)?top+(bottom-top)*.3:(top+bottom)/2,left,right,top,bottom,roof,wall};
 }
 let labels=[];
 function update(){
  if(!svg)return;svg.setAttribute('viewBox',box.join(' '));const r=q('#mapmount').getBoundingClientRect(),ctm=svg.getScreenCTM(),occupied=[];
- for(const {node,point,labelPoint=point,dx=0,dy=0,feet} of labels){
-  const inFog=pointInFog(point,activeData.visibility);node.hidden=inFog;if(feet)feet.style.display=inFog?'none':'';
+ for(const {node,point,labelPoint=point,dx=0,dy=0,feet,cover,controller} of labels){
+  const inFog=pointInFog(point,activeData.visibility);node.hidden=inFog;const obscured=cover&&!controller.isActive(cover.target);node.style.visibility=obscured?'hidden':'';if(feet)feet.style.display=inFog||obscured?'none':'';
   const p=svg.createSVGPoint();p.x=labelPoint.x;p.y=labelPoint.y;const s=p.matrixTransform(ctm);s.x+=dx;s.y+=dy;
   const size=node.getBoundingClientRect(),half=Math.min(size.width/2,r.width/2),height=size.height;
   let x=Math.max(half,Math.min(r.width-half,s.x-r.left)),y=Math.max(height+4,Math.min(r.height-4,s.y-r.top));
@@ -189,18 +195,19 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
   if(!targets.includes(interactiveId))throw Error('Occlusion interactiveId not in approved building: '+interactiveId);
   const target=[...svg.querySelectorAll('[data-id]')].find(n=>n.dataset.id===interactiveId);
   if(!target)throw Error('Occlusion target absent from SVG: '+region.targetId);
-  return {id:region.id,target,contains:p=>pointInPolygon(p,region.points)};
+  return {id:region.id,target,explicit:true,contains:p=>pointInPolygon(p,region.points)};
  }):[];
  for(const p of data.places){if(geometry||!points.has(p.id))continue;const ids=registry.templates[id].targets[p.atlasRef];for(const n of svg.querySelectorAll('[data-id]'))if(ids.includes(n.dataset.id)){n.setAttribute('tabindex','0');n.setAttribute('role','button');n.setAttribute('aria-label',p.name);const choose=()=>{if(!pointInFog(points.get(p.id),data.visibility))inspect(p,p.id)};n.onclick=()=>{if(!moved)choose()};n.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose()}}}}
  // Bind each building once. Bbox is used only for label/occlusion display, never walkability.
- for(const p of data.places){
-  if(!exterior)continue;
-  const targets=registry.templates[id].targets[p.atlasRef]||[];
+ for(const semantic of (exterior?EXTERIOR_OCCLUDERS[id]||[]:[])){
+  const targets=registry.templates[id].targets[semantic]||[];
   for(const target of svg.querySelectorAll('[data-id]'))if(targets.includes(target.dataset.id)&&!occluders.some(c=>c.target===target)){
    const b=target.getBBox(),m=svg.getScreenCTM().inverse().multiply(target.getScreenCTM());
    const inverse=m.inverse();occluders.push({id:target.dataset.id,target,contains:pt=>{const q=new DOMPoint(pt.x,pt.y).matrixTransform(inverse);return q.x>=b.x&&q.x<=b.x+b.width&&q.y>=b.y&&q.y<=b.y+b.height}});
   }
  }
+ // Declared occlusion polygons take precedence over coarse display-only bounds.
+ occluders.sort((a,b)=>Number(Boolean(a.explicit))-Number(Boolean(b.explicit)));
  const coverController=occlusionController(occluders);stops.push(()=>coverController.dispose());
  for(const c of occluders){
   const key='building:'+c.id;
@@ -217,7 +224,9 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
  const rowColumns=Math.min(columns,Math.max(1,Math.floor(q('#mapmount').clientWidth/130)));
  const dx=((i%rowColumns)-(rowColumns-1)/2)*110,dy=-(Math.floor(i/rowColumns)*34)-10;
  const insideBuilding=exterior&&a.environment==='inside';
- const labelPoint=insideBuilding?actorRoofs.get(a.id).roof:point;
+ const labelPoint=insideBuilding?actorRoofs.get(a.id).wall:point;
+ if(insideBuilding)n.dataset.labelSurface='wall';
+ const cover=a.environment==='outside'?selectOccluder(point,occluders):null;
  const coverPoint=a.environment==='outside'?point:null;
  const hoverKey='hover:'+a.id,selectedKey='selected:'+a.id;
  n.onmouseenter=()=>{if(coverPoint)coverController.set(hoverKey,coverPoint)};
@@ -227,8 +236,22 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
  n.dataset.actorId=a.id;
  overlay.append(n);
  const feet=document.createElementNS(NSVG,'g');feet.dataset.actorFeet=a.id;feet.setAttribute('fill','#8C2939');feet.setAttribute('stroke','#FFF0D4');feet.setAttribute('stroke-width','.9');feet.setAttribute('paint-order','stroke fill');feet.style.pointerEvents='none';svg.append(feet);
- if(labelOnlyActors.has(a.id)||(a.environment==='inside'&&EXTERIOR_TEMPLATES.has(id))){feet.remove();labels.push({node:n,point,labelPoint,dx,dy})}else{labels.push({node:n,point,dx,dy,feet});stops.push(mountFeet(feet,a.stance));}
+ if(labelOnlyActors.has(a.id)||(a.environment==='inside'&&EXTERIOR_TEMPLATES.has(id))){feet.remove();labels.push({node:n,point,labelPoint,dx:insideBuilding?0:dx,dy:insideBuilding?0:dy})}else{labels.push({node:n,point,dx,dy,feet,cover,controller:coverController});stops.push(mountFeet(feet,a.stance));}
  }
+ const coveredBuildings=new Map();
+ for(const a of labelActors){if(a.environment!=='outside')continue;const point=actorPositions.get(a.id),cover=selectOccluder(point,occluders);if(!cover)continue;
+  if(!coveredBuildings.has(cover.target))coveredBuildings.set(cover.target,{cover,point,count:0});coveredBuildings.get(cover.target).count++;
+ }
+ for(const {cover,point,count} of coveredBuildings.values()){
+  const marker=el('button','◆');marker.className='occlusion-marker';marker.setAttribute('aria-label',count+' nhân vật phía sau công trình');marker.dataset.occlusionTarget=cover.id;
+  const b=cover.target.getBBox(),m=svg.getScreenCTM().inverse().multiply(cover.target.getScreenCTM()),roof=new DOMPoint(b.x+b.width/2,b.y).matrixTransform(m),key='indicator:'+cover.id;
+  let pinned=false;
+  marker.onmouseenter=marker.onfocus=()=>coverController.setTargets(key,[cover.target]);
+  marker.onmouseleave=marker.onblur=()=>{if(!pinned)coverController.clear(key)};
+  marker.onclick=e=>{e.stopPropagation();pinned=!pinned;if(pinned)coverController.setTargets(key,[cover.target]);else coverController.clear(key);marker.setAttribute('aria-pressed',String(pinned))};
+  marker.setAttribute('aria-pressed','false');overlay.append(marker);labels.push({node:marker,point,labelPoint:roof});
+ }
+ stops.push(coverController.subscribe(update));
  q('#quests').replaceChildren(...visibleHints.map(h=>{const p=data.places.find(p=>p.id===h.placeId),n=el('button',h.title+' · '+p.name);n.className='quest';n.onclick=()=>inspect(h,h.placeId);const marker=el('button','?');marker.className='hint-marker';marker.setAttribute('aria-label',h.title);marker.onclick=n.onclick;overlay.append(marker);labels.push({node:marker,point:points.get(h.placeId),dx:65,dy:EXTERIOR_TEMPLATES.has(id)?38:0});return n}));q('#hintcount').textContent=visibleHints.length+'/5';q('.quote').textContent=data.meta.quote||'';q('#zone').textContent=data.meta.areaName;q('.clock').textContent=data.meta.time;q('.date').textContent=data.meta.date;inspect(visibleActors.find(a=>a.isPC),data.focus.actualPlaceId);
  const selected=[...data.places.filter(p=>!pointInFog(points.get(p.id),data.visibility)),...visibleActors,...visibleHints].find(row=>row.id===data.focus.selectedId);
  if(selected)inspect(selected,selected.placeId||selected.id);

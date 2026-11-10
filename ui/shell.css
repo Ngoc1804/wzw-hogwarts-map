@@ -19,3 +19,5 @@ body.motion-off #mapmount *{animation-play-state:paused!important}#mapmount .tre
 
 /* Actor names always sit above artwork; hidden RP actors never enter this layer. */
 .qa-tags{z-index:4}.qa-tags .ribbon{max-width:min(210px,90vw)}
+
+.occlusion-marker{border:1px solid #8c2939;border-radius:4px;background:#eee4d1;color:#8c2939;min-width:26px;min-height:26px;padding:2px 5px;z-index:2}.occlusion-marker[aria-pressed="true"]{background:#8c2939;color:#fff0d4}

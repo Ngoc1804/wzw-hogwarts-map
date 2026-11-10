@@ -13,7 +13,7 @@ jobs:
           python-version: '3.12'
       - run: node --test tools/test_*.mjs
       - run: python tools/build_runtime.py --out /tmp/wizamap-test --ref $(git rev-parse HEAD) && node --check /tmp/wizamap-test/bundle.js && node --check runtime/bundle.js
-      - run: python tools/atlas.py validate && python tools/test_atlas.py && python tools/test_inventory.py && python tools/test_scenery.py && python tools/review_coverage.py --check
+      - run: python tools/build_atlas_index.py --check && node tools/audit_coverage.mjs && python tools/write_coverage_report.py --check && python tools/check_template_geometry.py && python tools/atlas.py validate && python tools/test_atlas.py && python tools/test_inventory.py && python tools/test_scenery.py && python tools/review_coverage.py --check
       - run: npm ci --prefix elements && npm --prefix elements test
       - run: npm ci
       - run: npx playwright install --with-deps chromium

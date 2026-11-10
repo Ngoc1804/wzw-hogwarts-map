@@ -1,6 +1,7 @@
 import sceneAtlas from './atlas-index.json' with {type:'json'};
 // Stable place IDs, explicit template bindings and scene-local corridor choices only.
 // No fuzzy names, no inferred canon adjacency and no layout persistence.
+const retired=new Set(sceneAtlas.retiredPlaceIds||[]),unassigned=new Set(sceneAtlas.groups.filter(g=>g.kind==='unassigned').flatMap(g=>g.placeIds));
 const known=new Set(sceneAtlas.knownPlaceIds),locked=new Set(sceneAtlas.lockedPlaceIds),
       cccNonRoom=new Set(sceneAtlas.cccNonRoomPlaceIds),noGenerate=new Set(sceneAtlas.noGeneratePlaceIds);
 export function canonicalPlaceId(id){return sceneAtlas.aliases[id]||id}
@@ -9,6 +10,8 @@ export function verifiedAtlasBinding(id,templateId){return sceneAtlas.bindings[c
 export function assertAllowedScene(placeIds){
  for(const id of placeIds){
   const canonical=canonicalPlaceId(id);
+  if(retired.has(id))throw Error('Retired Atlas reference: '+id+'; use a place from the approved atlas');
+  if(unassigned.has(canonical))throw Error('Atlas location awaits confirmed floor/template: '+canonical);
   if(locked.has(canonical))throw Error('AU map locked until approved: '+canonical);
   if(cccNonRoom.has(canonical))throw Error('CCC 07.18: only the main room may be generated: '+canonical);
  }
@@ -33,6 +36,11 @@ export function selectScenePreset(data,places){
 export function generatedSceneOptions(data,plan){
  const group=selectScenePreset(data,plan.places);
  const options={...(group?.preset?{layout:group.preset.layout}:{}),...data.view.indoor};
+ const lockedFamily=group?.preset?.lockedFamily&&group.preset.layout!=='auto';
+ if(lockedFamily){
+  if(data.view.indoor?.layout&&data.view.indoor.layout!=='auto'&&data.view.indoor.layout!==group.preset.layout)throw Error('Indoor layout conflicts with approved corridor family for '+group.key);
+  options.layout=group.preset.layout;
+ }
  const count=plan.places.filter(p=>p.kind!=='corridor').length;
  // A formula is a grammar, not a fixed room arrangement: deterministic local
  // proportions vary by scope, never by NPC/quest/time, and explicit RP overrides win.
@@ -45,10 +53,10 @@ export function generatedSceneOptions(data,plan){
  }
  // A small scene is never forced into an oversized predefined hallway;
  // explicit user-specified layout is still honored where geometrically possible.
- if(count<=1&&!data.view.indoor?.layout&&!data.view.indoor?.knownStructure){
+ if(!lockedFamily&&count<=1&&!data.view.indoor?.layout&&!data.view.indoor?.knownStructure){
    options.layout='horizontal';
  }
- if(options.layout==='tower'&&count<2&&!data.view.indoor?.knownStructure)options.layout='horizontal';
+ if(!lockedFamily&&options.layout==='tower'&&count<2&&!data.view.indoor?.knownStructure)options.layout='horizontal';
  return options;
 }
 export function assertGeneratedScene(placeIds){
@@ -76,7 +84,7 @@ export function resolveAtlasLocality(pcId,scopeId=null){
  return groups.sort((a,b)=>a.placeIds.length-b.placeIds.length||a.key.localeCompare(b.key))[0]||null;
 }
 export function atlasPlaceName(id){return sceneAtlas.canonicalNameById[canonicalPlaceId(id)]||null}
-export function atlasPlaceKind(id){return isCanonicalCorridor(id)?'corridor':'room'}
+export function atlasPlaceKind(id){return sceneAtlas.placeKindById?.[canonicalPlaceId(id)]||(isCanonicalCorridor(id)?'corridor':'room')}
 export function isLockedAtlasPlace(id){return locked.has(canonicalPlaceId(id))||cccNonRoom.has(canonicalPlaceId(id))}
 export function listVerifiedTemplateBindings(id){return sceneAtlas.bindings[canonicalPlaceId(id)]||{}}
 export function atlasVersion(){return sceneAtlas.atlasVersion}

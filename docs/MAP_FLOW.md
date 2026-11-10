@@ -49,3 +49,16 @@ Giữ nguyên chữ WIZAMAP, màu giấy cổ, dấu chân burgundy, các headin
 - Unit test schema/locality/template, 44 cụm lâu đài + 27 cụm tháp, 15 NPC nhưng chỉ 10 nhãn, custom AU house/outdoor, hidden room name.
 - Browser test interactive Desktop 1360×900/520, Mobile 390×700, template, NPC/hint, home/floor, offline export.
 - Production chỉ **một bundle**, `ui/preview.html` và `docs/MAP_PROMPT.md` ghim commit có bundle; test checksum và Preview thực tế tại Google AI Studio cần user đăng nhập. Không đưa fixture giả vào hệ thống RP.
+
+
+## Demo 3 — atlas mới và generated design
+
+Nguồn chuẩn là `maps/WZW_ATLAS_APPROVED.md`; JSON canonical và runtime index được kiểm bằng `python tools/build_atlas_index.py --check`. Mỗi nơi có một chủ quản TEMPLATE / ATLAS / AU. Mũi tên chỉ điều hướng; không tạo phòng trùng. 5 map AU vẫn khóa; toàn bộ 5 phòng CCC, Nhà PC và Liad’s Attic được dùng. ID không còn trong nguồn mới báo retired thay vì tự dựng lại.
+
+Khu/tầng/tháp khóa họ hành lang đã duyệt. Kích thước từng phòng và nội thất tự tính theo công dụng/ID, hoặc theo generation override; không phụ thuộc NPC/thời gian. Nhà nhỏ dùng cùng engine indoor. Ngoại cảnh ngoài template dùng assets và mặt đất schematic, không khẳng định adjacency canon.
+
+MAP_DATA 3.2.0 bổ sung các field tùy chọn trong `places[].generation`: `wallMaterial: wood|brick|stone`, `floorMaterial: stone|wood|tile|brick`, `wallColor`, `floorColor`, `materialStroke` (màu hex sáu chữ số), `materialScale` (0.5–3). 3.0/3.1 vẫn được chấp nhận và default 3.1 giữ tương thích.
+
+Trong H1/H2/Diagon/Hogsmeade, NPC inside gắn nhãn lên mặt tường, không lên nóc và không có dấu chân ngoài nhà. NPC outside bị công trình che có ký hiệu ◆ trên mái; hover hoặc click/tap làm công trình còn opacity 30%. Nhãn/footstep vẫn trên nội thất, và obey fog/quyền công khai. Ministry 1–7 không thuộc đợt sửa sàn/che khuất này.
+
+`docs/atlas-coverage.json` là inventory mới; `docs/coverage-review.json` và báo cáo 84 cũ chỉ là lịch sử. Một binding cấp nhà/container không có nghĩa là đã vẽ sàn riêng cho từng phòng. Thiếu đối chiếu hình học phải được ghi rõ, không đổi sang template khác hoặc dựng indoor giả.

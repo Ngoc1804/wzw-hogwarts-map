@@ -6,8 +6,11 @@ const atlasKnownIds=new Set(sceneAtlas.knownPlaceIds);
 const atlasLockedIds=new Set([...sceneAtlas.lockedPlaceIds,...sceneAtlas.cccNonRoomPlaceIds]);
 const exactPlaceNames=new Map();
 const nameKey=value=>typeof value==='string'?value.normalize('NFC').trim().toLocaleLowerCase('vi'):'';
-for(const [id,name] of Object.entries(sceneAtlas.canonicalNameById)){
- const key=nameKey(name);if(!exactPlaceNames.has(key))exactPlaceNames.set(key,[]);exactPlaceNames.get(key).push(id);
+for(const [id,canonicalName] of Object.entries(sceneAtlas.canonicalNameById)){
+ for(const name of sceneAtlas.placeNamesById?.[id]||[canonicalName]){
+  const key=nameKey(name);if(!exactPlaceNames.has(key))exactPlaceNames.set(key,[]);
+  if(!exactPlaceNames.get(key).includes(id))exactPlaceNames.get(key).push(id);
+ }
 }
 function resolvePublicPlaceNames(data){
  if(!Array.isArray(data.places))return data;
@@ -76,6 +79,7 @@ function check(value, rule, path, errors) {
 export function validateMapData(data) {
   data=normalizeMapData(data);
   const errors=[];check(data,schema,'MAP_DATA',errors);if(errors.length)return {ok:false,errors};
+  for(const p of data.places)if(sceneAtlas.retiredPlaceIds?.includes(p.id))errors.push('Retired Atlas reference: '+p.id);
   const ids=new Set();for(const row of [...data.places,...data.connections,...data.actors,...data.hints]){
     if(row.id!==undefined){if(ids.has(row.id))errors.push('Duplicate public entity ID');ids.add(row.id);}
   }

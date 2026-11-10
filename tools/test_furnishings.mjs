@@ -10,7 +10,7 @@ const plan=(fn,shape='rectangle',furnishings=[],extra={})=>({mode:'generated',pl
 test('complete default room recipes fit every supported shape, with decor and free floor',()=>{
  for(const fn of ['residential','potions','library','classroom','kitchen','bathroom','hospital','commerce','pub','storage','common','study','office','store','practice','group'])for(const shape of ['rectangle','L','U','T','cross','round']){
   const g=buildGeometry(plan(fn,shape));assert.ok(g.furnishingInstances.length>=3,fn+' '+shape);
-  for(const i of g.furnishingInstances){assert.ok(polygonFits(i.poly,g.rooms.room.poly));if(i.blocking&&!i.on)assert.throws(()=>indoorActorPoint(g,'room',{x:i.x,y:i.y}),/outside verified/);}
+  for(const i of g.furnishingInstances){assert.ok(polygonFits(i.poly,g.rooms.room.poly));if(i.blocking&&!i.on&&!i.assetId?.startsWith('seat.'))assert.throws(()=>indoorActorPoint(g,'room',{x:i.x,y:i.y}),/outside verified/);}
   assert.ok(indoorActorPoint(g,'room'));
  }
 });

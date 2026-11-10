@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,'..');
 (async()=>{
  const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
  try{
- const p=await b.newPage({acceptDownloads:true}),errors=[];p.on('pageerror',e=>{errors.push(e.message);console.error('iframe pageerror:',e.message)});p.on('console',m=>{if(m.type()==='error')console.error('iframe console:',m.text())});let bundles=0;
+ const p=await b.newPage({acceptDownloads:true}),errors=[];p.on('pageerror',e=>{errors.push(e.message);console.error('iframe pageerror:',e.message)});p.on('console',m=>{if(m.type()==='error'){errors.push('console: '+m.text());console.error('iframe console:',m.text())}});let bundles=0;
  await p.route('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@**/*',route=>{
   const rel=route.request().url().split(/@[a-f0-9]{40}\//)[1];if(rel==='runtime/bundle.js')bundles++;
   return route.fulfill({headers:{'access-control-allow-origin':'*'},body:fs.readFileSync(rel==='runtime/bundle.js'&&process.argv[2]?process.argv[2]:path.join(root,rel)),contentType:rel.endsWith('.js')?'application/javascript':rel.endsWith('.json')?'application/json':rel.endsWith('.svg')?'image/svg+xml':'text/html'});

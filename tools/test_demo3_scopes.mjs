@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import atlas from '../runtime/atlas-index.json' with {type:'json'};
 import {resolveMap} from '../runtime/resolve-map.mjs';
 import {buildGeometry} from '../runtime/geometry.mjs';
-test('Demo 3: all 44 castle and 27 tower localities generate a full structural scope',()=>{
+test('Demo 3: all owned castle/tower localities in the approved atlas generate a full structural scope',()=>{
  const failures=[],groups=atlas.groups.filter(g=>['castle','tower'].includes(g.kind));
- assert.equal(groups.length,71);
+ assert.equal(groups.filter(g=>g.kind==='castle').length,44);assert.equal(groups.filter(g=>g.kind==='tower').length,24);
  for(const group of groups){
   const id=group.placeIds.find(p=>!atlas.lockedPlaceIds.includes(p)&&!atlas.cccNonRoomPlaceIds.includes(p));
   if(!id)continue;

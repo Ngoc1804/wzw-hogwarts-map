@@ -200,6 +200,29 @@
         ],
         "stands": [
           "h2-place-70"
+        ],
+        "castle-exterior": [
+          "h2-place-6",
+          "h2-place-7",
+          "h2-place-8",
+          "h2-place-9",
+          "h2-place-10",
+          "h2-place-11",
+          "h2-place-12",
+          "h2-place-13",
+          "h2-place-14",
+          "h2-place-15",
+          "h2-place-18",
+          "h2-place-19",
+          "h2-place-24",
+          "h2-place-25",
+          "h2-place-28",
+          "h2-place-29",
+          "h2-place-30",
+          "h2-place-31",
+          "h2-place-34",
+          "h2-place-35",
+          "h2-place-36"
         ]
       },
       "policy": "local-crop-required"
@@ -230,6 +253,19 @@
         ],
         "broom-cupboard": [
           "gf-broom"
+        ],
+        "great-hall": [
+          "gf-table-0",
+          "gf-table-1",
+          "gf-table-2",
+          "gf-table-3",
+          "gf-dais"
+        ],
+        "teacher-dais": [
+          "gf-dais"
+        ],
+        "main-stairs": [
+          "gf-main-stairs"
         ]
       },
       "policy": "local-crop-required"
@@ -300,6 +336,23 @@
         ],
         "standard-coach": [
           "ex-standard"
+        ],
+        "train": [
+          "ex-coach-0",
+          "ex-coach-1",
+          "ex-coach-2"
+        ],
+        "corridors": [
+          "coach-0-corridor",
+          "coach-1-corridor",
+          "coach-2-corridor",
+          "coach-3-corridor"
+        ],
+        "vestibules": [
+          "coach-0-vestibule",
+          "coach-1-vestibule",
+          "coach-2-vestibule",
+          "coach-3-vestibule"
         ]
       },
       "policy": "local-crop-required"
@@ -313,6 +366,19 @@
         "gryffindor-dormitories": [
           "gryffindor-sleep-0",
           "gryffindor-sleep-1"
+        ],
+        "entry": [
+          "gryff-entry"
+        ],
+        "stairs-male": [
+          "gryff-stairs-0"
+        ],
+        "stairs-female": [
+          "gryff-stairs-1"
+        ],
+        "dorm-stairs": [
+          "gryff-stairs-0",
+          "gryff-stairs-1"
         ]
       },
       "policy": "local-crop-required"
@@ -326,6 +392,9 @@
         "ravenclaw-dormitories": [
           "ravenclaw-sleep-0",
           "ravenclaw-sleep-1"
+        ],
+        "entry": [
+          "raven-entry"
         ]
       },
       "policy": "local-crop-required"
@@ -358,6 +427,12 @@
           "slytherin-bed-2",
           "slytherin-bed-3",
           "slytherin-bed-4"
+        ],
+        "study": [
+          "sly-study"
+        ],
+        "entry": [
+          "sly-door"
         ]
       },
       "policy": "local-crop-required"
@@ -452,6 +527,18 @@
         ],
         "pitch-room-2": [
           "q-building-2"
+        ],
+        "support-rooms": [
+          "q-building-0",
+          "q-building-1",
+          "q-building-2"
+        ],
+        "campus": [
+          "q-campus"
+        ],
+        "changing-rooms": [
+          "q-building-0",
+          "q-building-1"
         ]
       },
       "policy": "local-crop-required"
@@ -665,6 +752,20 @@
           "mm-waiting"
         ],
         "ministry-office": [
+          "mm-office"
+        ],
+        "department-9": [
+          "mm-rotunda",
+          "mm-time",
+          "mm-prophecy",
+          "mm-death",
+          "mm-brain",
+          "mm-space",
+          "mm-love"
+        ],
+        "department-10": [
+          "mm-court",
+          "mm-waiting",
           "mm-office"
         ]
       },

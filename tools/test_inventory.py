@@ -21,9 +21,9 @@ class Inventory(unittest.TestCase):
         expected={f"{m['id']}/{ident}" for m in atlas.metadata(payload) for ident in m['interactiveIds']}
         self.assertEqual(expected,{mid+'/'+ident for mid,items in index['maps'].items() for ident in items})
         canonical=json.loads((ROOT/'maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json').read_text())
-        self.assertEqual(canonical['schemaVersion'],'atlas-optimized-1.0')
-        self.assertEqual(canonical['statistics']['places'],726)
-        self.assertEqual(len(canonical['places']),726)
+        self.assertEqual(canonical['schemaVersion'],'atlas-approved-2.0')
+        self.assertEqual(canonical['statistics']['places'],len(canonical['places']))
+        self.assertEqual(len({p['id'] for p in canonical['places']}),len(canonical['places']))
         self.assertEqual(len(index['maps']),13)
     def test_catalog_is_the_only_asset_inventory(self):
         catalog=json.loads((ROOT/'elements/catalog.json').read_text())

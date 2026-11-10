@@ -15,22 +15,12 @@ test('generated scene uses the approved indoor formula and never invents movemen
  assert.equal(g.routes.length,0);
  assert.ok(g.floorPolygons.length>0&&g.actorZones.length>0);
 });
-test('optimized user atlas preserves 747 references / 726 places and valid nested placeIds',()=>{
+test('runtime uses the replacement atlas and keeps all 13 artworks',()=>{
  const a=JSON.parse(fs.readFileSync('maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json'));
- assert.equal(a.schemaVersion,'atlas-optimized-1.0');
- assert.deepEqual(a.statistics,{sourceEntries:747,places:726,mergedOccurrences:21});
- assert.equal(a.places.length,726);
- const ids=new Set(a.places.map(p=>p.id));assert.equal(ids.size,726);
- assert.equal(a.places.reduce((n,p)=>n+(p.sourceIds||[]).length,0),21);
- let refs=0;const check=rows=>{for(const id of rows){assert.ok(ids.has(id),'unknown placeId: '+id);refs++}};
- for(const template of a.templates)check(template.placeIds);
- for(const area of a.world.areas)check(area.placeIds);
- for(const map of a.world.au_maps)for(const floor of map.floors)check(floor.placeIds);
- for(const floor of a.hogwarts_castle.floors)for(const cluster of floor.clusters)check(cluster.placeIds);
- for(const tower of a.hogwarts_castle.towers)for(const level of tower.levels)check(level.placeIds);
- assert.equal(refs,747);
- const registry=JSON.parse(fs.readFileSync('runtime/templates.json'));
- assert.equal(Object.keys(registry.templates).length,13);
+ assert.equal(a.schemaVersion,'atlas-approved-2.0');
+ const ids=new Set(a.places.map(p=>p.id));assert.equal(ids.size,a.places.length);
+ for(const g of a.groups)for(const id of g.placeIds)assert.ok(ids.has(id));
+ assert.equal(Object.keys(JSON.parse(fs.readFileSync('runtime/templates.json')).templates).length,13);
 });
 test('new indoor generator rejects layout across multiple floors rather than prebuilding floors',()=>{
  const places=Array.from({length:5},(_,i)=>({id:'r'+i,name:'Room '+i,floor:i===4?'F2':'F1',kind:'room',generation:{shape:'rectangle'}}));

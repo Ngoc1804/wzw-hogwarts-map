@@ -2,7 +2,11 @@
 export function collectFloorSurfaces(svg){
  const floorNodes=[...svg.querySelectorAll('[data-surface="floor"],[data-room-floor],[data-corridor-floor],[data-element-id^="architecture.floor-"]')];
  // Legacy SVG templates used named floor fills before data-surface existed.
- for(const n of svg.querySelectorAll('path,rect,circle,ellipse,polygon,use'))if(/url\(#[^)]*floor[^)]*\)/i.test(n.getAttribute('fill')||''))floorNodes.push(n);
+ for(const n of svg.querySelectorAll('path,rect,circle,ellipse,polygon,use'))if(/url\(#[^)]*(?:floor|paving|pavers)[^)]*\)/i.test(n.getAttribute('fill')||''))floorNodes.push(n);
+ // Verified painted Quidditch playing field, rather than its rectangular hit target.
+ if(svg.getAttribute('aria-label')?.startsWith('Quidditch Grounds'))floorNodes.push(...svg.querySelectorAll('ellipse[cx="780"][cy="620"][rx="360"][ry="425"]'));
+ // Ministry 8–10 has colored room floors rather than a '*floor' pattern.
+ floorNodes.push(...svg.querySelectorAll('[data-id^="mm-"]>rect[stroke="#776c56"],rect[fill="url(#mm-stone)"]'));
  const unique=[...new Set(floorNodes)].filter(n=>!n.closest('defs'));
  const contains=(node,p)=>{
   const shapes=node instanceof SVGGeometryElement?[node]:[...node.querySelectorAll('path,rect,circle,ellipse,polygon')];
@@ -13,7 +17,7 @@ export function collectFloorSurfaces(svg){
    return shape.isPointInFill(local);
   });
  };
- const blocked=[...svg.querySelectorAll('[data-surface="blocked"],[data-obstacle="true"]')];
+ const blocked=[...svg.querySelectorAll('[data-surface="blocked"],[data-obstacle="true"],[data-id^="gf-table-"],[data-id="mm-fountain"],[data-element-id^="table."]')];
  return {nodes:unique,contains:p=>!!p&&unique.some(n=>contains(n,p))&&!blocked.some(n=>contains(n,p))};
 }
 

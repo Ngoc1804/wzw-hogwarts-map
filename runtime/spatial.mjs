@@ -43,21 +43,24 @@ export function selectOccluder(point,candidates){
 
 // A building may have multiple regions. Paint order belongs to the SVG, not JSON order.
 export function occlusionController(candidates){
- const originals=new Map(),held=new Map();
+ const originals=new Map(),held=new Map(),listeners=new Set();
  for(const {target} of candidates)if(!originals.has(target))originals.set(target,{value:target.style.getPropertyValue('opacity'),priority:target.style.getPropertyPriority('opacity')});
  function refresh(){
   const active=new Set([...held.values()].flat());
   for(const [target,old] of originals){
-   if(active.has(target))target.style.setProperty('opacity','0.5');
+   if(active.has(target))target.style.setProperty('opacity','0.3');
    else if(old.value)target.style.setProperty('opacity',old.value,old.priority);
    else target.style.removeProperty('opacity');
   }
+  for(const listener of listeners)listener();
  }
  return {
+  isActive(target){return [...held.values()].some(targets=>targets.includes(target))},
+  subscribe(fn){listeners.add(fn);return ()=>listeners.delete(fn)},
   setTargets(key,targets){held.set(key,targets);refresh()},
   set(key,point){held.set(key,candidates.filter(c=>c.contains(point)).map(c=>c.target));refresh()},
   clear(key){held.delete(key);refresh()},
-  dispose(){held.clear();refresh()}
+  dispose(){held.clear();refresh();listeners.clear()}
  };
 }
 // No visual offset is allowed to change the ground position of an actor.

@@ -6,7 +6,7 @@ run('python',['tools/build_runtime.py','--out',temp,'--data','tools/fixtures/sce
 // Chromium can exhaust shared CI resources after a sequence of artwork browsers.
 // Verify the exact production bootstrap against the new candidate first.
 run('node',['tools/test_loader_browser.cjs',temp+'/bundle.js']);
-for(const test of ['test_entry_browser.cjs','test_flow_browser.cjs','test_coverage_browser.cjs','test_exterior_browser.cjs','test_demo2_browser.cjs','test_demo3_browser.cjs','test_generated_baseline_browser.cjs'])run('node',['tools/'+test,temp+'/'+(test==='test_entry_browser.cjs'?'bundle.js':'preview.html')]);
+for(const test of ['test_entry_browser.cjs','test_flow_browser.cjs','test_coverage_browser.cjs','test_exterior_browser.cjs','test_demo2_browser.cjs','test_demo3_browser.cjs','test_generated_baseline_browser.cjs','test_demo3_design_browser.cjs'])run('node',['tools/'+test,temp+'/'+(test==='test_entry_browser.cjs'?'bundle.js':'preview.html')]);
 
 const experiments=temp+'-experiments';run('python',['tools/prepare_experiment.py','--out',experiments]);run('node',['tools/test_experiments.cjs',experiments]);
 console.log('PASS Demo 3 browser suites; artifacts:',temp);

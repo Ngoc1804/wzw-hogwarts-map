@@ -1,3 +1,5 @@
+import {canonicalPlaceFunction} from './atlas-scene.mjs';
+import {landscapeInstances} from './outdoor.mjs';
 // Transient MAP_DATA scene geometry using the approved indoor Stage 2 formulas.
 // No storage, pathfinding, mult-wing assembly or hidden-floor generation.
 import {buildIndoorLayout,rectangle,ppath} from './architecture/recipes.mjs';
@@ -38,7 +40,7 @@ function positions(id,polygon,exclusions,margin=13){
    if(valid){
     if(!run)run=[x-half,y-half,x+half,y+half];
     else run[2]=x+half;
-    if(anchors.length<11&&anchors.every(a=>Math.hypot(x-a.x,y-a.y)>34))anchors.push(point(x,y));
+    if(anchors.length<512&&anchors.every(a=>Math.hypot(x-a.x,y-a.y)>34))anchors.push(point(x,y));
    }else if(run){runs.push(run);run=null}
   }
   if(run)runs.push(run);
@@ -61,20 +63,24 @@ function exclusionsFor(model){
 export function buildGeometry(plan,indoor=plan.indoor||{}){
  if(plan.mode!=='generated')throw Error('Indoor build requires generated scene');
  const places=plan.places;
- const custom=Boolean(plan.customScene);
+ const sceneContext=plan.customScene||plan.exteriorContext;
+ const custom=Boolean(sceneContext);
  const outdoorKinds=new Set(['grounds','street','region']);
  const exterior=custom;
- const outdoorOnly=custom&&plan.customScene.kind==='outdoor';
+ const outdoorOnly=custom&&sceneContext.kind==='outdoor';
  if(!places.length)throw Error('Indoor scene requires at least one visible room');
  if(new Set(places.map(p=>p.floor||'')).size>1)throw Error('Only the current indoor floor/scene may be built; provide one floor per /map');
  const corridorPlaces=places.filter(p=>p.kind==='corridor'||(custom&&outdoorKinds.has(p.kind)));
  const roomPlaces=places.filter(p=>!corridorPlaces.includes(p));
  if(!roomPlaces.length&&indoor.layout==='tower')throw Error('Tower recipe requires an actual room');
- const records=roomPlaces.map(p=>({
-  id:p.id,name:p.name,shape:shapeFor(p),
-  ...(p.generation?.width?{width:p.generation.width}:{}),
-  ...(p.generation?.depth?{depth:p.generation.depth}:{})
- }));
+ const records=roomPlaces.map(p=>{
+  const fn=canonicalPlaceFunction(p.id)||p.generation?.function||p.kind;
+  let hash=0;for(const c of p.id)hash=(Math.imul(hash,31)+c.charCodeAt(0))>>>0;
+  const ratio=/potions|class|library|common|hall/.test(fn)?1.12:/storage|store|bath/.test(fn)?.9:1;
+  const width=p.generation?.width||Math.max(220,Math.min(540,Math.round((indoor.roomWidth||300)*ratio)+(hash%3)*12));
+  const depth=p.generation?.depth||Math.max(220,Math.min(500,Math.round((indoor.roomDepth||260)*ratio)+((hash>>>4)%3)*12));
+  return {id:p.id,name:p.name,shape:shapeFor(p),width,depth};
+ });
  const request={...indoor,rooms:records,allowEmptyRooms:!records.length};
  // The current MAP_DATA place list defines the scene. Ignore any external roomCount.
  delete request.roomCount;
@@ -85,7 +91,7 @@ export function buildGeometry(plan,indoor=plan.indoor||{}){
     const xs=model.rooms.flatMap(r=>[r.x,r.x+r.w]),ys=model.rooms.flatMap(r=>[r.y,r.bottom]);
     const minX=xs.length?Math.min(...xs):0,minY=ys.length?Math.min(...ys):0;
     const maxX=xs.length?Math.max(...xs):420,maxY=ys.length?Math.max(...ys):300;
-    const margin=plan.customScene.kind==='village'?250:190;
+    const margin=sceneContext.kind==='village'?250:190;
     if(exterior||(!model.rooms.length)){
       model.floors=[rectangle(minX-margin,minY-margin,maxX-minX+2*margin,maxY-minY+2*margin)];
     }
@@ -102,8 +108,13 @@ export function buildGeometry(plan,indoor=plan.indoor||{}){
    const xs=poly.map(p=>p[0]),ys=poly.map(p=>p[1]);
    model.bounds=[Math.min(...xs)-55,Math.min(...ys)-85,Math.max(...xs)-Math.min(...xs)+110,Math.max(...ys)-Math.min(...ys)+150];
  }
+ if(custom&&sceneContext.water){
+  const [x,y,w,h]=model.bounds;
+  model.water=rectangle(x+w-145,y+80,90,h-160);
+ }
  const walls=buildIndoorWalls(outdoorOnly?{...model,floors:[]}:model);
  const exclusions=exclusionsFor(model);
+ if(model.water)exclusions.push({id:'water',kind:'water',poly:model.water});
  const rooms=Object.fromEntries(model.rooms.map(r=>[r.id,{...r,h:r.bottom-r.y,shape:r.shape,poly:r.poly||rectangle(r.x,r.y,r.w,r.bottom-r.y)}]));
  const floorPolygons=[
   ...model.rooms.map(r=>asRegion('room:'+r.id,rooms[r.id].poly)),
@@ -111,13 +122,21 @@ export function buildGeometry(plan,indoor=plan.indoor||{}){
   ...model.thresholds.map((v,i)=>asRegion('threshold-floor:'+i,v.poly))
  ];
  const exclusionZones=exclusions.map(z=>({...asRegion(z.id,z.poly),kind:z.kind}));
- const furnishingInstances=[];
+ const furnishingInstances=custom?landscapeInstances(model,sceneContext.terrain,places[0].id,sceneContext.kind):[];
+ for(const i of furnishingInstances){
+  exclusions.push({id:i.instanceId,kind:'vegetation',poly:i.poly});
+  exclusionZones.push({...asRegion(i.instanceId,i.poly),kind:'vegetation'});
+ }
  for(const r of model.rooms){
   const place=places.find(p=>p.id===r.id),room=rooms[r.id];
-  room.floorMaterial=place.generation?.floorMaterial||'stone';room.floorColor=place.generation?.floorColor;
+  const functionName=canonicalPlaceFunction(place.id)||place.generation?.function||place.kind;
+  const timber=/residential|bed|pub|common|library|shop|commerce/.test(functionName);
+  room.floorMaterial=place.generation?.floorMaterial||(timber?'wood':'stone');room.floorColor=place.generation?.floorColor;
+  room.wallMaterial=place.generation?.wallMaterial||(timber?'wood':/storage|store/.test(functionName)?'brick':'stone');room.wallColor=place.generation?.wallColor;
+  room.materialStroke=place.generation?.materialStroke;room.materialScale=place.generation?.materialScale||1;
   const instances=custom&&outdoorKinds.has(place.kind)?[]:placeFurnishings(place,room,exclusionZones);
   furnishingInstances.push(...instances.map(i=>({...i,placeId:r.id})));
-  for(const i of instances)if(i.blocking&&!i.on){
+  for(const i of instances)if(i.blocking&&!i.on&&!i.assetId?.startsWith('seat.')){
    exclusions.push({id:'furniture:'+r.id+':'+i.instanceId,kind:'furniture',poly:i.poly});
    exclusionZones.push({...asRegion('furniture:'+r.id+':'+i.instanceId,i.poly),kind:'furniture'});
   }
@@ -142,11 +161,12 @@ export function buildGeometry(plan,indoor=plan.indoor||{}){
  if(corridorPlaces.length&&!corridorAreas.length)throw Error('No safe corridor/exterior surface for current scene');
  corridorPlaces.forEach((p,i)=>{
   const area=corridorAreas[i%corridorAreas.length];
-  suggestedAnchors[p.id]=area.anchors;safeAreas[p.id]=area.regions;
+  const cx=area.floor.reduce((n,v)=>n+v[0],0)/area.floor.length,cy=area.floor.reduce((n,v)=>n+v[1],0)/area.floor.length;
+  suggestedAnchors[p.id]=[...area.anchors].sort((a,b)=>Math.hypot(a.x-cx,a.y-cy)-Math.hypot(b.x-cx,b.y-cy));safeAreas[p.id]=area.regions;
   floorPolygons.push(asRegion('corridor-place:'+p.id,area.floor));
  });
  for(const p of places)if(!suggestedAnchors[p.id]?.length)throw Error('Missing safe indoor anchor for '+p.id);
- return {rooms,model,walls,furnishingInstances,exterior:exterior?{terrain:plan.customScene.terrain||'grass',description:plan.customScene.surroundings||''}:null,bounds:model.bounds,floorPolygons,actorZones,exclusionZones,suggestedAnchors,corridorAnchors,corridorPlaceIds:corridorPlaces.map(p=>p.id),safeAreas,routes:[]};
+ return {rooms,model,walls,furnishingInstances,exterior:exterior?{terrain:sceneContext.terrain||'grass',description:sceneContext.surroundings||''}:null,bounds:model.bounds,floorPolygons,actorZones,exclusionZones,suggestedAnchors,corridorAnchors,corridorPlaceIds:corridorPlaces.map(p=>p.id),safeAreas,routes:[]};
 }
 export function indoorActorPoint(geometry,placeId,position){
  const zones=geometry.safeAreas[placeId];

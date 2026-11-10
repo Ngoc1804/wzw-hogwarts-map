@@ -1,48 +1,31 @@
-# Demo 3 — implementation checkpoints
+# Demo 3 — tiến độ sau khi thay atlas và generated design
 
-## Approved source and scope
+## Đã triển khai trong source trên demo-3
 
-The user's replacement atlas is preserved verbatim in `maps/WZW_ATLAS_APPROVED.md`.
-It supersedes the old atlas as the specification. **The runtime index has not yet
-been migrated.** Do not claim the old 726-place/90-lock figures are the new target.
+- Thay atlas cũ bằng atlas-approved-2.0, từ nguyên văn `maps/WZW_ATLAS_APPROVED.md`: 694 bản ghi, mỗi nơi một chủ quản TEMPLATE / ATLAS / AU. JSON canonical mới thay toàn bộ bản cũ; runtime index được compile và kiểm hash nguồn. Giữ mã phòng, tầng/hướng, alias cùng địa điểm, tham chiếu không tạo phòng trùng. ID cũ không còn trong nguồn được ghi retired rõ ràng.
+- 226 bản ghi TEMPLATE, 359 ATLAS, 109 AU. CCC dùng đủ 5 phòng liệt kê; Nhà PC và Liad’s Attic dùng được. 5 map AU còn lại khóa (86 bản ghi theo nguồn mới).
+- Selector dùng vị trí PC và đúng template chủ quản; NPC nơi khác không đổi template. Không cho atlasRef đổi một địa điểm canon sang map khác. Locality chỉ mở cấu trúc cùng khu/tầng; các nhóm chỉ tham chiếu template không có bản sao room.
+- Khóa đúng họ hành lang từng khu/tầng/tháp theo nguồn mới. Một indoor engine dùng cho nhà/phòng nhỏ và công trình nhiều phòng; kích thước tự biến thiên theo công dụng/ID hoặc override. Giữ đủ 40 phòng trong test; giới hạn scene 60 phù hợp schema, không cắt bỏ phòng.
+- Tường/sàn wood, brick, stone bằng SVG pattern nhẹ, đổi màu/nét/tỷ lệ; tile giữ tương thích. MAP_DATA 3.2.0 thêm field tùy chọn, vẫn nhận 3.0/3.1 và default 3.1.
+- Outdoor schematic từ assets cây/nhà hiện có, nền/đường, vùng nước khi có ngữ cảnh, chừa vùng đứng và phần công trình. Nhà độc lập dùng cùng indoor engine và thêm nền xung quanh; không dựng renderer nhà nhỏ riêng. Cảnh procedural không là bằng chứng adjacency canon.
+- Footstep/tag trên nội thất. Tránh bàn, tường, nước và vật cản lớn; ghế/sofa không cần exclusion riêng cho actor.
+- H1/H2/Diagon/Hogsmeade: nhãn inside gắn mặt tường, không lên nóc và không có dấu chân giả ngoài nhà. Actor bị che có ký hiệu mái ◆; hover/click/tap làm công trình còn opacity 30%, có giữ mở/đóng lại và cleanup khi đổi scene. Quyền hiển thị/fog vẫn áp dụng.
+- Bổ sung 34 binding vào các ID artwork đã có (gồm region/aggregate và định vị cấp nhà/container có ghi độ chính xác). Giữ nguyên 13 SVG; không vẽ lại hoặc đổi bố cục.
+- Nhận đúng paving Slytherin, ellipse sân Quidditch, sàn phòng Bộ 8–10; tránh bàn Đại Sảnh và đài phun nước. Sửa lỗi SVG đường viền nhãn thiếu dấu cách gây console error.
+- Đồng bộ prompt, flow, AI atlas context, CI và báo cáo coverage mới. Báo cáo 84 cũ chỉ là lịch sử, vẫn kiểm chứng cứ artwork cũ.
 
-All implementation stays on `demo-3`; no new branch or merge to main.
+## Kiểm chứng
 
-Approved remaining order:
-1. Compile the replacement atlas with one owner per real place (TEMPLATE / ATLAS / AU), preserve room codes and directional scopes, migrate technical bindings. Enable all listed CCC rooms, PC house and Liad's Attic; keep five other AU maps locked.
-2. PC-driven selector/locality using the new ownership. Fixed templates stay fixed.
-3. One indoor engine for every generated interior, including small rooms/houses. Assigned corridor family is fixed; room dimensions/design/placement and furnishings are flexible. Required atlas/RP rooms cannot be dropped. Add three light wood/brick/stone material presets.
-4. Outdoor generation from existing element assets, without applying indoor corridor families.
-5. Furnishings and paint order: floor, furniture, footsteps, actor tags. Simplify obstacles to meaningful blocked regions; seats/sofas do not need detailed exclusion.
-6. Template placement: exclude Ministry 1–7 cutaway from this positioning/occlusion pass. For H1/H2/Diagon/Hogsmeade verify walkable surfaces, place indoor labels on walls rather than roofs, show roof indicators for actors hidden behind buildings, hover/tap reduces the occluding building to opacity 0.3. Flat maps need simple sensible placement.
-7. Recompute coverage from the new atlas; old 84 is historical, not the new completion target. Synchronize MAP_DATA/prompt/visibility; regression tests and candidate build.
-8. Only after acceptance, rebuild/re-pin the production bundle and verify real RP in AI Studio. No AI Studio acceptance has occurred.
+- Kiểm mọi ID chỉ có một owner, alias/parent/mũi tên không dangling, mã phòng và họ hành lang khớp nguồn.
+- 381 địa điểm generated có hình học và vùng đứng hợp lệ; không có generation-error trong audit.
+- 13 artwork / 183 semantic binding trỏ ID SVG thật. Browser kiểm 4 template 2.5D và 8 template còn lại có sàn thật; Ministry 1–7 được loại khỏi đợt sửa này.
+- Browser kiểm vật liệu, asset outdoor, thứ tự lớp, nhãn tường, roof indicator opacity 30%, rerender cleanup, 15 NPC / 10 nhãn + PC, bố cục ổn định, desktop/mobile, loader và HTML offline.
+- Đây là kiểm source/candidate; không phải nghiệm thu Google AI Studio bằng RP thật.
 
-## Checkpoint 0 — fix inherited blockers before atlas migration
+## Chưa hoàn thành — không tính là đã xử lý
 
-Changes:
-- Retain upstream custom/exterior declaration repair; custom buildings now retain their walls, and outdoor-only places remain ground rather than indoor rooms.
-- Honor the resolved indoor plan when buildGeometry is called without an override.
-- Restore standalone canonical-interior fallback while retaining missing-template and outdoor-surface errors. Template ownership metadata prevents silent indoor fallback for unbound template locations.
-- Tower formula no longer converts a supplied room into a cramped staircase; all supplied room IDs remain furnished rooms.
-- Retain upstream multiline-import bundler repair and verify candidate syntax.
-- Include every Node test and the new Demo 3 browser regressions in CI. Retain upstream schema 3.1/50-NPC record-limit tests and duplicate-ID rejection.
-- Run loader regression against the freshly built candidate rather than the stale production artifact. This does not certify or update the checked-in production bundle.
+- 65 địa điểm thuộc template chưa có binding hình học xác minh: xem `docs/DEMO3_REMAINING_BINDINGS.md`. Không thể đánh đồng source giao cho template với việc artwork đã có vị trí riêng của từng nơi. Đặc biệt các tên sân/cầu H2 chưa có đối chiếu và các cảnh chỉ được nêu trong danh mục cần hoàn thiện artwork/region đúng nguồn.
+- 29 mục Bộ 1–7 là phạm vi được người dùng loại trừ; 1 mục Bộ chưa rõ tầng giữ chờ xác nhận.
+- Chưa phát hành/re-pin bundle production, chưa test RP thật trong AI Studio. Chỉ phát hành sau khi giải quyết acceptance còn thiếu; không dùng fixture như RP thật.
 
-Local verification:
-- 71/71 Node tests PASS after synchronizing upstream, including all 44 castle + 27 tower scopes.
-- Candidate build and `node --check` PASS.
-- Artwork validation: 13 maps, 2718 shared vectors, references valid.
-- Python atlas (5), inventory (3), scenery (3) tests PASS.
-- Existing coverage-review consistency check PASS against its historical 91 records.
-- Chromium source regressions: locality expands to 5 rooms; layout stable with 15 NPC records; at most 10 NPC tags plus PC; custom one-room parcel; mobile; no unexpected page errors.
-
-This checkpoint does **not** complete atlas replacement, new material presets,
-full procedural outdoor generation, wall labels/30% opacity, or the template
-coverage audit. Existing opacity/roof-label tests still verify the old behavior.
-
-Concurrent updates: synchronized demo-3@3459f18 before publication; retained upstream prompt/context, minimal undisclosed-room furnishings and all-71-scope tests. The new atlas source is archived exactly as received, with no old runtime ownership migration claimed.
-
-Final merged local result: full candidate Chromium suite PASS (entry, flow, historical coverage bindings, four exterior templates, Demo 2, Demo 3, exact loader with CDN-equivalent CORS headers, fresh offline reopen and six offline experiments). Remote Actions status is not asserted by these local results.
-
-Second concurrent sync: retain e799491's new cross-feature Chromium acceptance suite unchanged, and keep this checkpoint's complementary stable-layout/parcel checks as test_generated_baseline_browser.cjs. Both browser checks PASS locally.
+Kết quả local cuối: 73/73 Node tests đạt; Chromium suite đầy đủ đạt với candidate build và kiểm console của loader. Python atlas/inventory/scenery và kiểm compiler/registry/coverage chạy riêng. Không coi kết quả local là CI xanh hay nghiệm thu AI Studio.

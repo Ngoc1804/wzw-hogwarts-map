@@ -40,15 +40,15 @@ const root=path.resolve(__dirname,'..'),sample=JSON.parse(fs.readFileSync(root+'
  const surfaces=JSON.parse(fs.readFileSync(root+'/runtime/template-spatial.json'));const ext=structuredClone(sample);ext.view.preferredMode='template';ext.view.templateId='h1';ext.places[0].atlasRef='hagrid';ext.actors[0].environment='inside';
  await p.evaluate(d=>window.WIZAMAP_TEST.render(d),ext);
  assert.equal(await p.locator('[data-actor-feet]').count(),0);
- const roof=await p.evaluate(()=>{const n=document.querySelector('[data-id="region:extra:5"] [data-layer="roof"]'),s=document.querySelector('#mapmount>svg'),b=n.getBBox(),m=s.getScreenCTM().inverse().multiply(n.getScreenCTM());const top=new DOMPoint(b.x+b.width/2,b.y).matrixTransform(m).matrixTransform(s.getScreenCTM());const tag=document.querySelector('.qa-tags .ribbon').getBoundingClientRect();return {top:top.y,bottom:tag.bottom};});await p.screenshot({path:'/tmp/wizamap-roof.png'});assert.ok(roof.bottom<=roof.top+1);
- const house=p.locator('[data-id="region:extra:5"]');await house.dispatchEvent('mouseenter');assert.equal(await house.evaluate(n=>n.style.opacity),'0.5');await house.dispatchEvent('mouseleave');assert.notEqual(await house.evaluate(n=>n.style.opacity),'0.5');
+ const roof=await p.evaluate(()=>{const n=document.querySelector('[data-id="region:extra:5"] [data-layer="roof"]'),s=document.querySelector('#mapmount>svg'),b=n.getBBox(),m=s.getScreenCTM().inverse().multiply(n.getScreenCTM());const top=new DOMPoint(b.x+b.width/2,b.y).matrixTransform(m).matrixTransform(s.getScreenCTM());const tag=document.querySelector('.qa-tags .ribbon').getBoundingClientRect();return {top:top.y,bottom:tag.bottom};});await p.screenshot({path:'/tmp/wizamap-roof.png'});assert.ok(roof.bottom>roof.top+8,'indoor name must be below roof top');assert.equal(await p.locator('.qa-tags .ribbon').getAttribute('data-label-surface'),'wall');
+ const house=p.locator('[data-id="region:extra:5"]');await house.dispatchEvent('mouseenter');assert.equal(await house.evaluate(n=>n.style.opacity),'0.3');await house.dispatchEvent('mouseleave');assert.notEqual(await house.evaluate(n=>n.style.opacity),'0.3');
  const patch=surfaces.templates.h1.walkableRegions[20].points;ext.actors[0].environment='outside';ext.actors[0].position={x:(patch[0].x+patch[2].x)/2,y:(patch[0].y+patch[2].y)/2};await p.evaluate(d=>window.WIZAMAP_TEST.render(d),ext);
- const tag=p.locator('.qa-tags .ribbon');await tag.dispatchEvent('mouseenter');await tag.click();await tag.dispatchEvent('mouseleave');await tag.click();
+ const tag=p.locator('.qa-tags .ribbon');if(!await tag.isVisible())await p.locator('.occlusion-marker').first().dispatchEvent('mouseenter');await tag.dispatchEvent('mouseenter');await tag.click();await tag.dispatchEvent('mouseleave');await tag.click();
  const crowded=structuredClone(ext);crowded.actors[0].environment='inside';delete crowded.actors[0].position;
  for(let i=0;i<10;i++)crowded.actors.push({...crowded.actors[0],id:'guest-'+i,isPC:false,name:'Khách có tên dài '+(i+1)});
  await p.evaluate(d=>window.WIZAMAP_TEST.render(d),crowded);await p.setViewportSize({width:390,height:520});await p.waitForTimeout(80);
  const rects=await p.locator('.qa-tags .ribbon').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom}}));
  for(let i=0;i<rects.length;i++)for(let j=0;j<i;j++){const a=rects[i],b=rects[j];assert.ok(!(a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top),'mobile names overlap');}
- console.log('PASS 11 readable roof labels on mobile');
- assert.deepEqual(errors,[]);console.log('PASS custom drawing + offline download + roof name + 50% building hover + mobile');await browser.close();
+ console.log('PASS 11 readable wall labels on mobile');
+ assert.deepEqual(errors,[]);console.log('PASS custom drawing + offline download + wall name + 70% building fade + mobile');await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

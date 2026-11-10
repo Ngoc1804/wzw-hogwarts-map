@@ -56,3 +56,9 @@ status.textContent='Engine đã tải; bản đồ hoặc lỗi dữ liệu nằ
 }catch(e){status.textContent='Không mở được bản đồ: '+e.message;}})();
 </script></body></html>
 ```
+
+
+### Demo 3 — bản atlas thay thế và vật liệu
+Dùng `docs/AI_ATLAS_CONTEXT.json` phiên bản `atlas-approved-2.0` khi cần tra địa điểm. Các con số 726/90 và yêu cầu CCC chỉ phòng chính trong tài liệu cũ đã hết hiệu lực. Chỉ gửi dữ kiện RP công khai; không gửi toàn bộ atlas. Họ hành lang theo khu/tầng đã khóa nên không gửi `view.indoor.layout` khác họ đó.
+
+Có thể gửi `schemaVersion: "3.2.0"` để chọn vật liệu bằng `generation.wallMaterial` (wood/brick/stone), `generation.floorMaterial` (wood/brick/stone/tile), `wallColor`, `floorColor`, `materialStroke` (#RRGGBB), `materialScale` (0.5–3). Các field này tùy chọn; engine tự thiết kế khi không có. Với 4 template 2.5D, tiếp tục xác định actor `environment: inside|outside`; không dùng tọa độ mái làm vị trí đứng.

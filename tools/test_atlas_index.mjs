@@ -1,113 +1,59 @@
-import test from 'node:test';
-import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import sceneIndex from '../runtime/atlas-index.json' with {type:'json'};
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';
+import atlas from '../maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json' with {type:'json'};
+import index from '../runtime/atlas-index.json' with {type:'json'};
 import registry from '../runtime/templates.json' with {type:'json'};
-import {canonicalPlaceId,isKnownAtlasPlace,verifiedAtlasBinding,assertAllowedScene,assertGeneratedScene,selectScenePreset,generatedSceneOptions} from '../runtime/atlas-scene.mjs';
 import {resolveMap} from '../runtime/resolve-map.mjs';
-const atlas=JSON.parse(fs.readFileSync(new URL('../maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json',import.meta.url)));
-const sample=()=>JSON.parse(fs.readFileSync(new URL('fixtures/scene.json',import.meta.url)));
-const withPlace=(id,kind='room')=>{
- const d=sample();d.places[0]={...d.places[0],id,name:id,atlasRef:null,kind,generation:null};
- d.view.routePlaceIds=[id];
- d.actors[0].placeId=id;d.hints[0].placeId=id;
- return d;
-};
-test('canonical atlas covers all 747 source IDs with no dangling reference',()=>{
- assert.deepEqual(sceneIndex.statistics,{sourceEntries:747,places:726,mergedOccurrences:21});
- assert.equal(atlas.places.length,726);
- assert.equal(sceneIndex.knownPlaceIds.length,726);
- assert.equal(Object.keys(sceneIndex.aliases).length,21);
- const ids=new Set(atlas.places.map(p=>p.id));
- for(const place of atlas.places)for(const old of place.sourceIds||[])assert.equal(canonicalPlaceId(old),place.id);
- for(const g of sceneIndex.groups)for(const id of g.placeIds)assert.ok(ids.has(id),g.key+': '+id);
- for(const id of [...sceneIndex.lockedPlaceIds,...sceneIndex.cccNonRoomPlaceIds,...sceneIndex.noGeneratePlaceIds])assert.ok(ids.has(id));
+import {canonicalPlaceId,assertAllowedScene,generatedSceneOptions} from '../runtime/atlas-scene.mjs';
+const payload=id=>({meta:{date:'1992-09-11',time:'16:20',areaName:'Test'},places:[{id,name:index.canonicalNameById[canonicalPlaceId(id)]||id,kind:'room'}],actors:[{id:'pc',name:'PC',isPC:true,placeId:id}]});
+test('approved source replaces old counts and every real record has exactly one owner',()=>{
+ assert.equal(atlas.schemaVersion,'atlas-approved-2.0');assert.equal(index.atlasVersion,atlas.schemaVersion);
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync(atlas.source)).digest('hex'),atlas.sourceSha256);
+ assert.equal(atlas.places.length,694);assert.equal(new Set(atlas.places.map(p=>p.id)).size,694);
+ assert.deepEqual(index.knownPlaceIds,atlas.places.map(p=>p.id));
+ const occurrences=new Map();for(const g of atlas.groups)for(const id of g.placeIds){occurrences.set(id,(occurrences.get(id)||0)+1);assert.equal(index.scopeById[id],g.key);}
+ for(const p of atlas.places){assert.equal(occurrences.get(p.id),1,p.id);assert.ok(['TEMPLATE','ATLAS','AU'].includes(p.owner));}
+ for(const r of atlas.references)assert.ok(r.targetPlaceId?index.knownPlaceIds.includes(r.targetPlaceId):atlas.groups.some(g=>g.key===r.targetScopeId));
 });
-test('template bindings are explicit and all target IDs exist in approved artworks',()=>{
- for(const [id,templates] of Object.entries(sceneIndex.bindings)){
-  assert.ok(isKnownAtlasPlace(id));
-  for(const [templateId,targetId] of Object.entries(templates)){
-   assert.ok(registry.templates[templateId]?.targets[targetId],id+'/'+templateId+'/'+targetId);
-   assert.equal(verifiedAtlasBinding(id,templateId),targetId);
-  }
- }
- assert.equal(verifiedAtlasBinding('P-7dbd9dfca98ac3','hall'),null);
+test('aliases merge identical sites while distinct AU entrance halls retain their own owner',()=>{
+ assert.equal(canonicalPlaceId('TWR-11-02-01'),'P-f322d7e98b6a02');
  assert.equal(canonicalPlaceId('P-5e20349a56bd1b'),'HOG-TNG1-S-06');
+ const halls=atlas.places.filter(p=>p.name==='Tiền sảnh');assert.equal(halls.length,4);
+ assert.equal(new Set(halls.map(p=>p.id)).size,4);assert.equal(halls.filter(p=>p.owner==='AU').length,3);
+ assert.equal(index.scopeById['P-65ac0b29ed7007'].startsWith('world/'),true);
 });
-test('legacy alias resolves into the real Great Hall region without fuzzy guessing',()=>{
- const d=withPlace('P-5e20349a56bd1b');d.view.preferredMode='template';d.view.templateId='hall';
- const plan=resolveMap(d);
- assert.equal(plan.mode,'template');assert.equal(plan.places[0].id,'HOG-TNG1-S-06');
- assert.equal(plan.places[0].atlasRef,'filch-office');
- assert.equal(plan.targets[0].interactiveIds.length>0,true);
-});
-test('all five unbuilt AU maps are locked; CCC builds main room only',()=>{
- for(const id of sceneIndex.lockedPlaceIds)assert.throws(()=>assertAllowedScene([id]),/AU map locked/);
- for(const id of sceneIndex.cccNonRoomPlaceIds)assert.throws(()=>assertAllowedScene([id]),/CCC 07.18/);
- assert.doesNotThrow(()=>assertAllowedScene(['HOG-TNG8-W-01']));
- assert.doesNotThrow(()=>assertAllowedScene(['P-a63fc4014d765b']));
- assert.doesNotThrow(()=>assertAllowedScene(['P-7dbd9dfca98ac3']));
- for(const id of [sceneIndex.lockedPlaceIds[0],sceneIndex.cccNonRoomPlaceIds[0]]){
-  assert.throws(()=>resolveMap(withPlace(id)),/locked|only the main room/);
- }
-});
-test('Ministry and existing H1/H2 exteriors do not generate duplicate maps',()=>{
- for(const id of sceneIndex.noGeneratePlaceIds)assert.throws(()=>assertGeneratedScene([id]),/Existing fixed map|AU map locked/);
- assert.throws(()=>resolveMap({...withPlace('P-30cf89999f5e15'),view:{...withPlace('P-30cf89999f5e15').view,preferredMode:'generated'}}),/Existing fixed map/);
-});
-test('castle, tower and only three approved AU have flexible presets',()=>{
- const castle=sceneIndex.groups.filter(g=>g.kind==='castle'),tower=sceneIndex.groups.filter(g=>g.kind==='tower'),au=sceneIndex.groups.filter(g=>g.kind==='au');
- assert.equal(castle.length,44);assert.equal(tower.length,27);
- assert.equal(au.filter(g=>g.buildEnabled===false).length>0,true);
+test('all listed CCC rooms are enabled; exactly five other AU maps stay locked',()=>{
+ assert.deepEqual(index.cccNonRoomPlaceIds,[]);
+ const au=index.groups.filter(g=>g.kind==='au');assert.equal(new Set(au.filter(g=>!g.buildEnabled).map(g=>g.key.split('/')[1])).size,5);
  assert.equal(new Set(au.filter(g=>g.buildEnabled).map(g=>g.key.split('/')[1])).size,3);
- assert.ok([...castle,...tower,...au.filter(g=>g.buildEnabled)].every(g=>g.preset?.flexible===true));
- const g=castle.find(x=>x.key==='hogwarts/f4/1');
- const d={view:{scopeId:g.key,indoor:{}},focus:{actualPlaceId:g.placeIds[0]}};
- assert.equal(selectScenePreset(d,[{id:g.placeIds[0]}]).key,g.key);
- assert.equal(generatedSceneOptions(d,{places:[{id:g.placeIds[0],kind:'room'}]}).layout,'horizontal');
- assert.equal(generatedSceneOptions({...d,view:{...d.view,indoor:{layout:'ell'}}},{places:[{id:g.placeIds[0],kind:'room'}]}).layout,'ell');
+ const ccc=au.find(g=>g.key==='au/6/0');assert.equal(ccc.placeIds.length,5);
+ for(const id of ccc.placeIds){assert.doesNotThrow(()=>assertAllowedScene([id]));assert.equal(resolveMap(payload(id)).places.length,5);}
+ for(const id of index.lockedPlaceIds)assert.throws(()=>assertAllowedScene([id]),/locked/);
 });
-
-import {auditCoverage} from './audit_coverage.mjs';
-test('coverage audit lists all 726 canonical entries; 71 full castle/tower scopes are tested separately',()=>{
- const report=auditCoverage();assert.equal(report.total,726);assert.equal(Object.values(report.counts).reduce((n,c)=>n+c,0),726);
- assert.equal(new Set(report.entries.map(p=>p.id)).size,726);
- for(const p of report.entries)assert.ok(p.name&&p.status,p.id);
- assert.ok(report.counts['generated-indoor']>0);
-});
-test('outdoor atlas records must never silently become indoor rectangles',()=>{
- const p=sceneIndex.knownPlaceIds.find(id=>sceneIndex.placeFunctionById[id]==='outdoor'&&!sceneIndex.bindings[id]&&!sceneIndex.noGeneratePlaceIds.includes(id)&&!sceneIndex.lockedPlaceIds.includes(id));
- assert.throws(()=>resolveMap(withPlace(p)),/Outdoor place|CCC|no approved generated scope/);
-});
-
-test('seven unbound Hogwarts interior rooms generate while fixed template policy remains enforced',()=>{
- for(const id of ['HOG-TNG7-W-02','HOG-TNG6-S-03','HOG-TNG2-S-06','HOG-TNG1-S-03','HOG-HMNGC-N-04','HOG-TNG4-N-01','HOG-TNG4-W-02']){
-  const d=withPlace(id);d.view.preferredMode='generated';
-  assert.equal(resolveMap(d).mode,'generated');
-  assert.equal(sceneIndex.noGeneratePlaceIds.includes(id),false);
+test('template bindings use only the approved owner; source location cannot be redirected to another map',()=>{
+ for(const [id,bindings] of Object.entries(index.bindings))for(const [t,ref] of Object.entries(bindings)){
+  assert.ok(index.templateOwnerById[id].includes(t));assert.ok(registry.templates[t].targets[ref]?.length);
  }
- for(const id of sceneIndex.noGeneratePlaceIds)assert.throws(()=>assertGeneratedScene([id]));
+ const hall=resolveMap(payload('P-5e20349a56bd1b'));assert.equal(hall.templateId,'hall');
+ const lake=payload('P-30cf89999f5e15');lake.view={templateId:'h2'};assert.throws(()=>resolveMap(lake),/verified PC binding/);
+ assert.equal(resolveMap(payload('P-30cf89999f5e15')).templateId,'h1');
+});
+test('source corridor families are locked while room dimensions remain flexible',()=>{
+ const d={view:{scopeId:'hogwarts/f1/0',indoor:{roomWidth:420}},focus:{actualPlaceId:'HOG-HMNGC-N-01'}};
+ const plan={places:[{id:'HOG-HMNGC-N-01',kind:'room'}]};
+ const opt=generatedSceneOptions(d,plan);assert.equal(opt.layout,'cross');assert.equal(opt.roomWidth,420);
+ assert.throws(()=>generatedSceneOptions({...d,view:{...d.view,indoor:{layout:'horizontal'}}},plan),/approved corridor/);
+});
+test('retired records and unconfirmed Ministry floor fail explicitly',()=>{
+ assert.throws(()=>resolveMap(payload('P-a69db007365fe0')),/Retired Atlas/);
+ assert.throws(()=>resolveMap(payload('P-9b80548a6b0f27')),/awaits confirmed/);
 });
 
-test('part 4 review preserves policy and resolves only six proven bindings plus St Mungo classification',()=>{
- const review=JSON.parse(fs.readFileSync('docs/coverage-review.json'));
- assert.equal(review.entries.length,91);
- for(const row of review.entries){
-  assert.ok(!sceneIndex.lockedPlaceIds.includes(row.id)&&!sceneIndex.cccNonRoomPlaceIds.includes(row.id));
-  if(row.disposition==='resolved-binding'){
-   const d=withPlace(row.id);d.view.preferredMode='template';d.view.templateId=row.templateId;
-   const p=resolveMap(d);assert.equal(p.mode,'template');assert.equal(p.places[0].atlasRef,row.atlasRef);
-   assert.deepEqual(p.targets[0].interactiveIds,row.evidence.map(e=>e.interactiveId));
-  }else if(row.disposition==='resolved-classification'){
-   const p=resolveMap(withPlace(row.id));assert.equal(p.mode,'generated');
-   assert.equal(p.places[0].generation.function,'healing');
-  }else{
-   assert.equal(sceneIndex.bindings[row.id],undefined);
-   // Unbound items are not silently reclassified into a different fixed
-   // template. A legitimate generated Atlas scope is also a valid outcome.
-   try{const p=resolveMap(withPlace(row.id));assert.notEqual(p.mode,'template');}
-   catch(e){assert.match(e.message,/Existing fixed map|Outdoor place|no approved generated scope|locked/);}
-
-  }
+test('every approved empty-classroom code and assigned corridor family survives compilation',()=>{
+ const source=fs.readFileSync(atlas.source,'utf8');
+ for(const name of source.match(/Phòng học trống [A-ZĐ]+-\d+/g)||[])assert.ok(atlas.places.some(p=>p.name===name),name);
+ const lines=source.split('\n');
+ for(const g of atlas.groups.filter(g=>g.preset?.lockedFamily&&['castle','tower'].includes(g.kind))){
+  const family=lines[g.sourceLine-1].match(/Layout: (\w+)/)?.[1];assert.equal(g.preset.layout,family,g.key);
  }
+ const apothecaries=atlas.places.filter(p=>p.name.toLowerCase().includes('apothecary'));assert.equal(apothecaries.length,2);assert.equal(new Set(apothecaries.map(p=>p.scopeId)).size,2);
 });

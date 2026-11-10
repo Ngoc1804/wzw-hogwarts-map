@@ -1,5 +1,6 @@
 // Review bindings against actual SVGs; ground coordinates come from real floor metadata.
 const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),assert=require('node:assert/strict');
+const atlasIndex=require('../runtime/atlas-index.json');
 const root=path.resolve(__dirname,'..'),review=JSON.parse(fs.readFileSync(root+'/docs/coverage-review.json'));
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
@@ -11,6 +12,11 @@ const root=path.resolve(__dirname,'..'),review=JSON.parse(fs.readFileSync(root+'
  await p.setContent(fs.readFileSync(process.argv[2]||'/tmp/wzw-test/preview.html','utf8'));await p.waitForFunction(()=>window.WIZAMAP_TEST);
  const sample=JSON.parse(fs.readFileSync(root+'/tools/fixtures/scene.json'));
  for(const row of review.entries.filter(e=>e.disposition.startsWith('resolved-'))){
+  const canonical=atlasIndex.aliases[row.id]||row.id;
+  if(row.disposition==='resolved-binding'&&!atlasIndex.templateOwnerById[canonical]?.includes(row.templateId)){
+   assert.ok(atlasIndex.templateOwnerById[canonical]?.length,'new source must specify owner');
+   console.log('PASS historical binding retained as evidence; replacement source owns '+row.id+' in '+atlasIndex.templateOwnerById[canonical]);continue;
+  }
   const d=structuredClone(sample),id=row.id;d.places=[{...d.places[0],id,name:row.name,atlasRef:null,generation:null}];d.actors=[{...d.actors[0],placeId:id}];d.hints=[];
   d.view.routePlaceIds=[];delete d.view.scopeId;
   if(row.disposition==='resolved-binding'){

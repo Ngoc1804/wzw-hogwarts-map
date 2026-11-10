@@ -8,12 +8,13 @@ export function auditCoverage(){
  const entries=index.knownPlaceIds.map(id=>{
   const row={id,name:index.canonicalNameById[id]};
   if(index.lockedPlaceIds.includes(id)||index.cccNonRoomPlaceIds.includes(id))return {...row,status:'locked-by-policy'};
+  if(index.templateOwnerById[id]?.includes('ministry2'))return {...row,status:'excluded-cutaway',bindings:index.bindings[id]||null};
+  if(index.groups.some(g=>g.kind==='unassigned'&&g.placeIds.includes(id)))return {...row,status:'awaiting-location'};
   if(index.bindings[id])return {...row,status:'template',bindings:index.bindings[id]};
   if(index.noGeneratePlaceIds.includes(id)||index.templateOwnerById?.[id])return {...row,status:'missing-fixed-binding'};
-  if(index.placeFunctionById[id]==='outdoor')return {...row,status:'missing-outdoor-surface'};
   const d=structuredClone(fixture);d.places=[{...d.places[0],id,name:row.name,atlasRef:null,kind:index.corridorPlaceIds.includes(id)?'corridor':'room',generation:null}];
   d.view={...d.view,preferredMode:'generated',templateId:null,routePlaceIds:[id]};d.actors.forEach(a=>a.placeId=id);d.hints.forEach(h=>h.placeId=id);
-  try{const plan=resolveMap(d);const geometry=buildGeometry(plan,plan.indoor);if(!geometry.suggestedAnchors[id]?.length)throw Error('No actor anchor');return {...row,status:'generated-indoor'};}
+  try{const plan=resolveMap(d);const geometry=buildGeometry(plan,plan.indoor);if(!geometry.suggestedAnchors[id]?.length)throw Error('No actor anchor');return {...row,status:geometry.exterior?'generated-exterior':'generated-indoor'};}
   catch(e){return {...row,status:'generation-error',reason:e.message};}
  });
  return {total:entries.length,counts:Object.fromEntries([...new Set(entries.map(e=>e.status))].sort().map(s=>[s,entries.filter(e=>e.status===s).length])),entries};
