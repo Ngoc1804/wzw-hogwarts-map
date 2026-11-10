@@ -51,7 +51,8 @@
   "bundle": {
     "staticAssetRef": "c4566668d00a5b4f3ce38f53b894f2691fe40259",
     "sha256": "06a14f7de08b0f0a729696f860c9fd4ac88852f780ec2e339b569f750463b44b",
-    "bytes": 321886
+    "bytes": 321886,
+    "commit": "a86a360d523cfa4045bb212141ba46970371e786"
   },
   "limitations": [
     "84 canonical places still need exact metadata/geometry",
