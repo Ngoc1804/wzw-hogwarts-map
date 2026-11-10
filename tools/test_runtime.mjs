@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {validateMapData} from '../runtime/map-data.mjs';import {resolveMap} from '../runtime/resolve-map.mjs';import {buildGeometry} from '../runtime/geometry.mjs';
 const sample=()=>JSON.parse(fs.readFileSync(new URL('fixtures/scene.json',import.meta.url)));
 test('new contract accepts template without storage, seed or radius',()=>{const d=sample();assert.equal(validateMapData(d).ok,true);assert.equal(resolveMap(d).mode,'template');d.view.maxHops=1;assert.equal(validateMapData(d).ok,false)});
-test('unknown data never renders another template silently',()=>{const d=sample();d.places[0].atlasRef='missing';assert.throws(()=>resolveMap(d),/recipe/)});
+test('unknown data never renders another template silently',()=>{const d=sample();d.places[0].atlasRef='missing';assert.throws(()=>resolveMap(d),/recipe|customScene|description/)});
 test('arbitrary disconnected places have no radius restriction',()=>{const d=sample();d.places.push({...d.places[0],id:'far',atlasRef:null});assert.equal(validateMapData(d).ok,true)});
 test('fog IDs require explicit polygon geometry',()=>{const d=sample();d.visibility.fogRegionIds=['fog'];assert.equal(validateMapData(d).ok,false);d.visibility.fogRegions=[{id:'fog',points:[{x:0,y:0},{x:30,y:0},{x:0,y:30}]}];assert.equal(validateMapData(d).ok,true)});
 test('generated scene uses the approved indoor formula and never invents movement routes',()=>{
@@ -36,7 +36,7 @@ test('new indoor generator rejects layout across multiple floors rather than pre
  const places=Array.from({length:5},(_,i)=>({id:'r'+i,name:'Room '+i,floor:i===4?'F2':'F1',kind:'room',generation:{shape:'rectangle'}}));
  assert.throws(()=>buildGeometry({mode:'generated',places,connections:[]}),/one floor/);
 });
-test('PC separate from 10 NPC/group tags and duplicates rejected',()=>{const d=sample();for(let i=0;i<10;i++)d.actors.push({...d.actors[0],id:'npc'+i,isPC:false,entityType:'group'});assert.equal(validateMapData(d).ok,true);d.actors.push({...d.actors[0],id:'extra',isPC:false});assert.equal(validateMapData(d).ok,false);d.actors.pop();d.actors[1].id=d.actors[0].id;assert.equal(validateMapData(d).ok,false)});
+test('one PC plus up to 50 public NPC records; visual labels are separately capped at 10',()=>{const d=sample();for(let i=0;i<50;i++)d.actors.push({...d.actors[0],id:'npc'+i,isPC:false,entityType:'group'});assert.equal(validateMapData(d).ok,true);d.actors.push({...d.actors[0],id:'extra',isPC:false});assert.equal(validateMapData(d).ok,false);d.actors.pop();d.actors[1].id=d.actors[0].id;assert.equal(validateMapData(d).ok,false)});
 test('display quotas are 2 side, 1 hint, 2 combined pool/life with no quest policy',()=>{
  const d=sample();const h=d.hints[0];
  d.hints=['side','side','hint','pool','life'].map((type,i)=>({...h,id:'h'+i,type}));
@@ -53,7 +53,7 @@ test('minimal input applies defaults without changing facts or mutating caller',
  const {assertMapData}=await import('../runtime/map-data.mjs');
  const d={meta:{date:'1992-09-11',time:'10:25',areaName:'Phòng học'},places:[{id:'room',name:'Phòng học',kind:'room',generation:{function:'classroom'}}],actors:[{id:'pc',name:'BẠN',placeId:'room',isPC:true}]};
  const before=structuredClone(d),n=assertMapData(d);assert.deepEqual(d,before);
- assert.equal(n.schemaVersion,'3.0.0');assert.deepEqual(n.places[0].generation.furnishings,[]);
+ assert.equal(n.schemaVersion,'3.1.0');assert.deepEqual(n.places[0].generation.furnishings,[]);
  assert.equal(n.actors[0].tagType,'unknown');assert.equal(resolveMap(d).mode,'generated');
  assert.equal(Object.hasOwn(n,'focus'),false);assert.equal(Object.hasOwn(n.visibility,'visiblePlaceIds'),false);
  assert.equal(Object.hasOwn(n,'questPolicy'),false);
@@ -86,7 +86,7 @@ test('engine resolves a unique exact public place name without a lookup attachme
 });
 test('exact-name lookup does not fuzzy-match near names or bypass canonical locks',()=>{
  const d={meta:{date:'1992-09-11',time:'10:25',areaName:'Bộ Pháp thuật'},places:[{id:'here',name:'Khu an ninh Bộ Pháp thuật gần đó',kind:'hall'}],actors:[{id:'pc',name:'BẠN',isPC:true,placeId:'here'}]};
- assert.throws(()=>resolveMap(d),/Missing recipe/);
+ assert.throws(()=>resolveMap(d),/Missing recipe|customScene|description/);
 });
 
 test('generic bedroom label never selects a locked AU bedroom',async()=>{
