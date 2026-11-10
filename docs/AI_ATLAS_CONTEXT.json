@@ -1,0 +1,3410 @@
+{
+ "$schema": "WIZAMAP-AI-ATLAS-CONTEXT-1",
+ "atlasVersion": "atlas-optimized-1.0",
+ "usage": "Reference only for Gemini WzW Runtime: choose existing place IDs for actors/events when grounded by RP; do not invent NPC/quest, do not treat group membership as current RP presence. GitHub runtime independently resolves all scope geometry. Hidden/locked places are omitted.",
+ "groups": [
+  {
+   "scopeId": "hogwarts/f0/0",
+   "name": "HẦM NGẦM · Bắc · Đường dẫn hầm kỹ thuật",
+   "places": [
+    [
+     "HOG-HMNGM-N-01",
+     "Hành lang đá dưới Tháp Thiên văn"
+    ],
+    [
+     "HOG-HMNGM-N-02",
+     "Phòng Giả kim"
+    ],
+    [
+     "HOG-HMNGM-N-03",
+     "Kho than và nhiên liệu"
+    ],
+    [
+     "HOG-HMNGM-N-04",
+     "Phòng kiểm tra móng tháp"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f0/1",
+   "name": "HẦM NGẦM · Đông · Hầm di tích và cửa sâu",
+   "places": [
+    [
+     "HOG-HMNGM-E-01",
+     "Đường ống xuống Phòng Chứa Bí mật"
+    ],
+    [
+     "HOG-HMNGM-E-02",
+     "Phòng Chứa Bí mật"
+    ],
+    [
+     "HOG-HMNGM-E-03",
+     "Gian cửa chắn hầm cổ"
+    ],
+    [
+     "HOG-HMNGM-E-04",
+     "Hành lang dẫn đến hầm bị niêm phong"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f0/2",
+   "name": "HẦM NGẦM · Nam · Cụm hầm đá bảo vệ cũ",
+   "places": [
+    [
+     "HOG-HMNGM-S-01",
+     "Gian Dây Sa-tăng"
+    ],
+    [
+     "HOG-HMNGM-S-02",
+     "Gian chìa khóa bay"
+    ],
+    [
+     "HOG-HMNGM-S-03",
+     "Gian bàn cờ phù thủy"
+    ],
+    [
+     "HOG-HMNGM-S-04",
+     "Gian thử thách Độc dược"
+    ],
+    [
+     "HOG-HMNGM-S-05",
+     "Gian cuối bảo vệ Hòn đá"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f0/3",
+   "name": "HẦM NGẦM · Tây · Hầm đá xưa và phòng nghiên cứu",
+   "places": [
+    [
+     "HOG-HMNGM-W-01",
+     "Map Chamber"
+    ],
+    [
+     "HOG-HMNGM-W-02",
+     "Undercroft"
+    ],
+    [
+     "HOG-HMNGM-W-03",
+     "Kho dụng cụ khảo cổ"
+    ],
+    [
+     "HOG-HMNGM-W-04",
+     "Phòng lập bản vẽ công trình"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f1/0",
+   "name": "HẦM NGỤC · Bắc · Cụm Độc dược và gian chuẩn bị",
+   "places": [
+    [
+     "HOG-HMNGC-N-01",
+     "Phòng học Độc dược"
+    ],
+    [
+     "HOG-HMNGC-N-02",
+     "Văn phòng Snape"
+    ],
+    [
+     "HOG-HMNGC-N-03",
+     "Kho nguyên liệu Độc dược"
+    ],
+    [
+     "HOG-HMNGC-N-04",
+     "Phòng chuẩn bị bài thực hành"
+    ],
+    [
+     "HOG-HMNGC-N-05",
+     "Phòng rửa vạc"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f1/1",
+   "name": "HẦM NGỤC · Đông · Lối Slytherin dưới mặt hồ",
+   "places": [
+    [
+     "P-80ce1ea13c2632",
+     "Phòng sinh hoạt chung Slytherin"
+    ],
+    [
+     "P-6b050b321ff558",
+     "Ký túc nam Slytherin"
+    ],
+    [
+     "P-a6425ebd843fab",
+     "Ký túc nữ Slytherin"
+    ],
+    [
+     "HOG-HMNGC-E-04",
+     "Hành lang Slytherin dưới hồ"
+    ],
+    [
+     "HOG-HMNGC-E-05",
+     "Phòng học nhóm Slytherin"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f1/2",
+   "name": "HẦM NGỤC · Nam · Kho và tuyến phục vụ dưới Đại Sảnh",
+   "places": [
+    [
+     "HOG-HMNGC-S-01",
+     "Phòng tiệc Tử nhật"
+    ],
+    [
+     "HOG-HMNGC-S-02",
+     "Kho vật tư lau dọn"
+    ],
+    [
+     "HOG-HMNGC-S-03",
+     "Hành lang vận chuyển thực phẩm"
+    ],
+    [
+     "HOG-HMNGC-S-04",
+     "Phòng trực gia tinh"
+    ],
+    [
+     "HOG-HMNGC-S-05",
+     "Phòng kỹ thuật lò sưởi"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f1/3",
+   "name": "HẦM NGỤC · Tây · Cụm lớp học ngầm và hầm cũ",
+   "places": [
+    [
+     "HOG-HMNGC-W-01",
+     "Hành lang hầm Tháp Thiên văn"
+    ],
+    [
+     "HOG-HMNGC-W-02",
+     "Phòng phân loại mẫu khoáng"
+    ],
+    [
+     "HOG-HMNGC-W-03",
+     "Phòng học trống HN-01"
+    ],
+    [
+     "HOG-HMNGC-W-04",
+     "Kho nồi vạc cũ"
+    ],
+    [
+     "HOG-HMNGC-W-05",
+     "Phòng lưu mẫu độc dược"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f2/0",
+   "name": "TẦNG BẾP · Bắc · Bếp và lối phục vụ",
+   "places": [
+    [
+     "HOG-TNGBP-N-01",
+     "Bếp Hogwarts"
+    ],
+    [
+     "HOG-TNGBP-N-02",
+     "Kho thực phẩm khô"
+    ],
+    [
+     "HOG-TNGBP-N-03",
+     "Phòng chuẩn bị suất ăn"
+    ],
+    [
+     "HOG-TNGBP-N-04",
+     "Phòng rửa dụng cụ nhà bếp"
+    ],
+    [
+     "HOG-TNGBP-N-05",
+     "Hành lang hậu cần bếp"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f2/1",
+   "name": "TẦNG BẾP · Đông · Cụm Hufflepuff",
+   "places": [
+    [
+     "P-1795bc600c2b41",
+     "Phòng sinh hoạt chung Hufflepuff"
+    ],
+    [
+     "P-ebceb992eb9255",
+     "Ký túc nam Hufflepuff"
+    ],
+    [
+     "P-b4314de4234c88",
+     "Ký túc nữ Hufflepuff"
+    ],
+    [
+     "HOG-TNGBP-E-04",
+     "Hành lang Hufflepuff"
+    ],
+    [
+     "HOG-TNGBP-E-05",
+     "Phòng học nhóm Hufflepuff"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f2/2",
+   "name": "TẦNG BẾP · Nam · Giặt là và kho phục vụ",
+   "places": [
+    [
+     "HOG-TNGBP-S-01",
+     "Phòng giặt là"
+    ],
+    [
+     "HOG-TNGBP-S-02",
+     "Phòng đồ vải"
+    ],
+    [
+     "HOG-TNGBP-S-03",
+     "Kho khăn trải bàn"
+    ],
+    [
+     "HOG-TNGBP-S-04",
+     "Phòng bảo trì dụng cụ giặt"
+    ],
+    [
+     "HOG-TNGBP-S-05",
+     "Hành lang kho phía Nam"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f2/3",
+   "name": "TẦNG BẾP · Tây · Khu công vụ và hầm thực phẩm",
+   "places": [
+    [
+     "HOG-TNGBP-W-01",
+     "Phòng nghỉ gia tinh"
+    ],
+    [
+     "HOG-TNGBP-W-02",
+     "Kho rau củ"
+    ],
+    [
+     "HOG-TNGBP-W-03",
+     "Kho thảo mộc nhà bếp"
+    ],
+    [
+     "HOG-TNGBP-W-04",
+     "Kho dụng cụ dự phòng"
+    ],
+    [
+     "HOG-TNGBP-W-05",
+     "Hành lang kết nối hầm phía Tây"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f3/0",
+   "name": "TẦNG 1 · Bắc · North Hall – Bell Tower",
+   "places": [
+    [
+     "HOG-TNG1-N-01",
+     "Sảnh phía Bắc (North Hall)"
+    ],
+    [
+     "HOG-TNG1-N-02",
+     "Sảnh chân Tháp Chuông"
+    ],
+    [
+     "HOG-TNG1-N-03",
+     "Hành lang tới cửa Bắc Hogwarts"
+    ],
+    [
+     "HOG-TNG1-N-04",
+     "Phòng trực cửa Bắc"
+    ],
+    [
+     "HOG-TNG1-N-05",
+     "Kho đồ dùng sân tập"
+    ],
+    [
+     "HOG-TNG1-N-06",
+     "Phòng học trống B-01"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f3/1",
+   "name": "TẦNG 1 · Đông · Library Annex – Viaduct",
+   "places": [
+    [
+     "HOG-TNG1-E-01",
+     "Sảnh Trung tâm (Central Hall)"
+    ],
+    [
+     "HOG-TNG1-E-02",
+     "Sảnh lối vào Cầu cạn (Viaduct Entrance)"
+    ],
+    [
+     "HOG-TNG1-E-03",
+     "Hành lang nối khu nhà kính"
+    ],
+    [
+     "HOG-TNG1-E-04",
+     "Phòng tiếp học sinh mới"
+    ],
+    [
+     "HOG-TNG1-E-05",
+     "Kho dụng cụ sảnh Trung tâm"
+    ],
+    [
+     "HOG-TNG1-E-06",
+     "Phòng học trống Đ-01"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f3/2",
+   "name": "TẦNG 1 · Nam · Entrance Hall – Great Hall",
+   "places": [
+    [
+     "HOG-TNG1-S-01",
+     "Tiền sảnh (Entrance Hall)"
+    ],
+    [
+     "HOG-TNG1-S-02",
+     "Đại Sảnh (Great Hall)"
+    ],
+    [
+     "HOG-TNG1-S-03",
+     "Phòng chờ trước Phân loại"
+    ],
+    [
+     "P-ce57067fcd107f",
+     "Phòng nhỏ cạnh Đại Sảnh"
+    ],
+    [
+     "HOG-TNG1-S-05",
+     "Phòng giáo viên (Staff Room)"
+    ],
+    [
+     "HOG-TNG1-S-06",
+     "Văn phòng Filch"
+    ],
+    [
+     "HOG-TNG1-S-07",
+     "Phòng tiếp khách nhà trường"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f3/3",
+   "name": "TẦNG 1 · Tây · Transfiguration Courtyard approach",
+   "places": [
+    [
+     "P-5fc25ea9745ef9",
+     "Phòng học số 11"
+    ],
+    [
+     "HOG-TNG1-W-02",
+     "Kho chổi (Broom Cupboard)"
+    ],
+    [
+     "HOG-TNG1-W-03",
+     "Hành lang vào sân Biến hình"
+    ],
+    [
+     "HOG-TNG1-W-04",
+     "Hành lang hướng sân Tứ giác"
+    ],
+    [
+     "HOG-TNG1-W-05",
+     "Phòng gửi áo choàng"
+    ],
+    [
+     "HOG-TNG1-W-06",
+     "Kho dụng cụ Biến hình"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f4/0",
+   "name": "TẦNG 2 · Bắc · History & Transfiguration corridor",
+   "places": [
+    [
+     "HOG-TNG2-N-01",
+     "Phòng Lịch sử Pháp thuật"
+    ],
+    [
+     "HOG-TNG2-N-02",
+     "Văn phòng McGonagall"
+    ],
+    [
+     "HOG-TNG2-N-03",
+     "Phòng học Biến hình"
+    ],
+    [
+     "HOG-TNG2-N-04",
+     "Phòng chuẩn bị Biến hình"
+    ],
+    [
+     "HOG-TNG2-N-05",
+     "Kho sách Lịch sử Pháp thuật"
+    ],
+    [
+     "HOG-TNG2-N-06",
+     "Phòng học trống B-02"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f4/1",
+   "name": "TẦNG 2 · Đông · Scholars / North Hall upper walk",
+   "places": [
+    [
+     "HOG-TNG2-W-01",
+     "Phòng học Muggle học"
+    ],
+    [
+     "HOG-TNG2-W-02",
+     "Phòng Chữ tượng hình (Hieroglyphics)"
+    ],
+    [
+     "HOG-TNG2-W-03",
+     "Hành lang tầng trên North Hall"
+    ],
+    [
+     "HOG-TNG2-W-04",
+     "Phòng lưu mô hình lịch sử"
+    ],
+    [
+     "HOG-TNG2-W-05",
+     "Kho bản đồ giảng dạy"
+    ],
+    [
+     "HOG-TNG2-W-06",
+     "Phòng học trống T-02"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f4/2",
+   "name": "TẦNG 2 · Nam · Hospital & Faculty Tower access",
+   "places": [
+    [
+     "HOG-TNG2-S-01",
+     "Bệnh xá Hogwarts"
+    ],
+    [
+     "HOG-TNG2-S-02",
+     "Văn phòng bà Pomfrey"
+    ],
+    [
+     "HOG-TNG2-S-03",
+     "Hành lang vào Tháp Giáo viên"
+    ],
+    [
+     "HOG-TNG2-S-04",
+     "Phòng thay băng"
+    ],
+    [
+     "HOG-TNG2-S-05",
+     "Kho vật tư y tế"
+    ],
+    [
+     "HOG-TNG2-S-06",
+     "Phòng chờ bệnh xá"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f4/3",
+   "name": "TẦNG 2 · Tây · DADA teaching cluster",
+   "places": [
+    [
+     "HOG-TNG2-E-01",
+     "Phòng học Phòng chống Nghệ thuật Hắc ám"
+    ],
+    [
+     "HOG-TNG2-E-02",
+     "Hành lang Tháp DADA tầng thấp"
+    ],
+    [
+     "HOG-TNG2-E-03",
+     "Phòng học phụ Tháp DADA"
+    ],
+    [
+     "HOG-TNG2-E-04",
+     "Phòng thực hành phòng vệ"
+    ],
+    [
+     "HOG-TNG2-E-05",
+     "Kho đạo cụ DADA"
+    ],
+    [
+     "HOG-TNG2-E-06",
+     "Phòng học trống Đ-02"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f5/0",
+   "name": "TẦNG 3 · Bắc · Phòng vệ sinh Myrtle và dãy hành lang",
+   "places": [
+    [
+     "HOG-TNG3-N-01",
+     "Nhà vệ sinh Myrtle"
+    ],
+    [
+     "HOG-TNG3-N-02",
+     "Hành lang tầng hai cạnh nhà vệ sinh Myrtle"
+    ],
+    [
+     "HOG-TNG3-N-03",
+     "Nhà vệ sinh nam tầng này"
+    ],
+    [
+     "HOG-TNG3-N-04",
+     "Kho bảo trì đường nước"
+    ],
+    [
+     "HOG-TNG3-N-05",
+     "Phòng trực hành lang B-03"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f5/1",
+   "name": "TẦNG 3 · Đông · Cầu thang tắt và hành lang lâu đài",
+   "places": [
+    [
+     "HOG-TNG3-W-02",
+     "Hành lang tranh bản đồ Argyllshire"
+    ],
+    [
+     "HOG-TNG3-W-03",
+     "Phòng kiểm tra an toàn cầu thang"
+    ],
+    [
+     "HOG-TNG3-W-04",
+     "Phòng học trống T-03"
+    ],
+    [
+     "HOG-TNG3-W-05",
+     "Kho ghế bàn học"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f5/2",
+   "name": "TẦNG 3 · Nam · Phòng học bổ trợ",
+   "places": [
+    [
+     "HOG-TNG3-S-01",
+     "Phòng luyện đũa phép cơ bản"
+    ],
+    [
+     "HOG-TNG3-S-02",
+     "Phòng học trống N-03"
+    ],
+    [
+     "HOG-TNG3-S-03",
+     "Kho thiết bị học tập"
+    ],
+    [
+     "HOG-TNG3-S-04",
+     "Phòng làm việc trợ giảng"
+    ],
+    [
+     "HOG-TNG3-S-05",
+     "Phòng sinh hoạt học sinh nhỏ"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f5/3",
+   "name": "TẦNG 3 · Tây · Văn phòng DADA – lối kín",
+   "places": [
+    [
+     "HOG-TNG3-E-01",
+     "Văn phòng giáo sư DADA (Lockhart 1992)"
+    ],
+    [
+     "HOG-TNG3-E-02",
+     "Hành lang tới văn phòng DADA"
+    ],
+    [
+     "HOG-TNG3-E-03",
+     "Phòng tiếp phụ huynh của khoa DADA"
+    ],
+    [
+     "HOG-TNG3-E-04",
+     "Phòng lưu giáo án"
+    ],
+    [
+     "HOG-TNG3-E-05",
+     "Phòng học trống Đ-03"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f6/0",
+   "name": "TẦNG 4 · Bắc · Trophy – Armour Gallery",
+   "places": [
+    [
+     "HOG-TNG4-N-01",
+     "Phòng Trưng bày Chiến tích"
+    ],
+    [
+     "HOG-TNG4-N-02",
+     "Hành lang áo giáp"
+    ],
+    [
+     "HOG-TNG4-N-03",
+     "Phòng Âm nhạc (Music Room)"
+    ],
+    [
+     "HOG-TNG4-N-04",
+     "Kho bảo quản cúp"
+    ],
+    [
+     "HOG-TNG4-N-05",
+     "Phòng tập hòa tấu"
+    ],
+    [
+     "HOG-TNG4-N-06",
+     "Phòng học trống B-04"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f6/1",
+   "name": "TẦNG 4 · Đông · Gallery – North Hall upper route",
+   "places": [
+    [
+     "HOG-TNG4-W-01",
+     "Hành lang tầng trên Sảnh Bắc"
+    ],
+    [
+     "HOG-TNG4-W-02",
+     "Phòng trưng bày cổ vật giáo dục"
+    ],
+    [
+     "HOG-TNG4-W-03",
+     "Phòng học trống T-04"
+    ],
+    [
+     "HOG-TNG4-W-04",
+     "Kho trang phục biểu diễn"
+    ],
+    [
+     "HOG-TNG4-W-05",
+     "Phòng phục hồi hiện vật"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f6/2",
+   "name": "TẦNG 4 · Nam · Câu lạc bộ và hoạt động nhóm",
+   "places": [
+    [
+     "HOG-TNG4-S-01",
+     "Phòng tập Đấu tay đôi dự phòng"
+    ],
+    [
+     "HOG-TNG4-S-02",
+     "Phòng chuẩn bị câu lạc bộ"
+    ],
+    [
+     "HOG-TNG4-S-03",
+     "Phòng tập diễn thuyết"
+    ],
+    [
+     "HOG-TNG4-S-04",
+     "Phòng họp học sinh"
+    ],
+    [
+     "HOG-TNG4-S-05",
+     "Phòng học trống N-04"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f6/3",
+   "name": "TẦNG 4 · Tây · Charms – hành lang cấm cũ",
+   "places": [
+    [
+     "HOG-TNG4-E-01",
+     "Phòng học Bùa chú"
+    ],
+    [
+     "HOG-TNG4-E-02",
+     "Hành lang Bùa chú"
+    ],
+    [
+     "HOG-TNG4-E-03",
+     "Hành lang cấm tầng ba năm 1991"
+    ],
+    [
+     "HOG-TNG4-E-04",
+     "Gian cửa sập của Fluffy (1991)"
+    ],
+    [
+     "HOG-TNG4-E-05",
+     "Phòng thực hành Bùa chú"
+    ],
+    [
+     "HOG-TNG4-E-06",
+     "Kho đồ dùng Bùa chú"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f7/0",
+   "name": "TẦNG 5 · Bắc · Library – Restricted Section",
+   "places": [
+    [
+     "HOG-TNG5-N-01",
+     "Thư viện Hogwarts"
+    ],
+    [
+     "HOG-TNG5-N-02",
+     "Khu Sách Cấm (Restricted Section)"
+    ],
+    [
+     "HOG-TNG5-N-03",
+     "Phòng làm việc thủ thư"
+    ],
+    [
+     "HOG-TNG5-N-04",
+     "Phòng đọc nghiên cứu"
+    ],
+    [
+     "HOG-TNG5-N-05",
+     "Phòng tra cứu mục lục"
+    ],
+    [
+     "HOG-TNG5-N-06",
+     "Kho sách ít dùng"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f7/1",
+   "name": "TẦNG 5 · Đông · Long Gallery – chuyên môn",
+   "places": [
+    [
+     "HOG-TNG5-E-01",
+     "Hành lang Dài (Long Gallery)"
+    ],
+    [
+     "HOG-TNG5-E-02",
+     "Phòng học Số học (Arithmancy)"
+    ],
+    [
+     "HOG-TNG5-E-03",
+     "Phòng bản đồ và địa lý pháp thuật"
+    ],
+    [
+     "HOG-TNG5-E-04",
+     "Phòng giải mã mật thư"
+    ],
+    [
+     "HOG-TNG5-E-05",
+     "Phòng học trống Đ-05"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f7/2",
+   "name": "TẦNG 5 · Nam · Lối đi tầng bốn và gian trống",
+   "places": [
+    [
+     "HOG-TNG5-S-01",
+     "Phòng trống từng chứa Gương Ảo ảnh năm 1991"
+    ],
+    [
+     "HOG-TNG5-S-02",
+     "Hành lang gương thông lối bí mật cũ"
+    ],
+    [
+     "HOG-TNG5-S-03",
+     "Phòng lưu hồ sơ thư viện"
+    ],
+    [
+     "HOG-TNG5-S-04",
+     "Phòng học trống N-05"
+    ],
+    [
+     "HOG-TNG5-S-05",
+     "Kho vật dụng sảnh đọc"
+    ],
+    [
+     "HOG-TNG3-W-01",
+     "Cầu thang tắt sau thảm treo"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f7/3",
+   "name": "TẦNG 5 · Tây · Cổ ngữ – học thuật",
+   "places": [
+    [
+     "HOG-TNG5-W-01",
+     "Phòng học Cổ ngữ Runes"
+    ],
+    [
+     "HOG-TNG5-W-02",
+     "Phòng dịch cổ ngữ"
+    ],
+    [
+     "HOG-TNG5-W-03",
+     "Phòng học chuyên đề lịch sử"
+    ],
+    [
+     "HOG-TNG5-W-04",
+     "Phòng nghiên cứu tư liệu"
+    ],
+    [
+     "HOG-TNG5-W-05",
+     "Phòng học trống T-05"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f8/0",
+   "name": "TẦNG 6 · Bắc · Prefects corridor – Faculty route",
+   "places": [
+    [
+     "HOG-TNG6-N-01",
+     "Phòng tắm Huynh trưởng"
+    ],
+    [
+     "HOG-TNG6-N-02",
+     "Hành lang trước Phòng tắm Huynh trưởng"
+    ],
+    [
+     "HOG-TNG6-N-03",
+     "Hành lang Tháp Giáo viên tầng trên"
+    ],
+    [
+     "HOG-TNG6-N-04",
+     "Phòng nghỉ huynh trưởng"
+    ],
+    [
+     "HOG-TNG6-N-05",
+     "Kho khăn và đồng phục"
+    ],
+    [
+     "HOG-TNG6-N-06",
+     "Phòng học trống B-06"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f8/1",
+   "name": "TẦNG 6 · Đông · Phòng học trung cấp",
+   "places": [
+    [
+     "HOG-TNG6-E-01",
+     "Phòng nghiên cứu Số học"
+    ],
+    [
+     "HOG-TNG6-E-02",
+     "Hành lang cánh Đông tầng năm"
+    ],
+    [
+     "HOG-TNG6-E-03",
+     "Phòng mỹ thuật pháp thuật"
+    ],
+    [
+     "HOG-TNG6-E-04",
+     "Kho bài tập và bảng phép"
+    ],
+    [
+     "HOG-TNG6-E-05",
+     "Phòng học trống Đ-06"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f8/2",
+   "name": "TẦNG 6 · Nam · Lối lên Tháp Đồng hồ",
+   "places": [
+    [
+     "HOG-TNG6-S-01",
+     "Hành lang Tháp Đồng hồ tầng cao"
+    ],
+    [
+     "HOG-TNG6-S-02",
+     "Phòng bảo trì cơ cấu đồng hồ"
+    ],
+    [
+     "HOG-TNG6-S-03",
+     "Phòng câu lạc bộ học thuật"
+    ],
+    [
+     "HOG-TNG6-S-04",
+     "Phòng làm báo học sinh"
+    ],
+    [
+     "HOG-TNG6-S-05",
+     "Kho thiết bị triển lãm"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f8/3",
+   "name": "TẦNG 6 · Tây · Hành lang cửa sổ cao",
+   "places": [
+    [
+     "HOG-TNG6-W-01",
+     "Hành lang cửa sổ phía Tây tầng năm"
+    ],
+    [
+     "HOG-TNG6-W-02",
+     "Phòng tập nhạc nhóm nhỏ"
+    ],
+    [
+     "HOG-TNG6-W-03",
+     "Phòng đọc yên tĩnh"
+    ],
+    [
+     "HOG-TNG6-W-04",
+     "Phòng học trống T-06"
+    ],
+    [
+     "HOG-TNG6-W-05",
+     "Kho đồ thủ công"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f9/0",
+   "name": "TẦNG 7 · Bắc · Upper stair – tower access",
+   "places": [
+    [
+     "HOG-TNG7-N-01",
+     "Phòng lưu bảng thành tích học thuật"
+    ],
+    [
+     "HOG-TNG7-N-02",
+     "Phòng lưu sổ kết quả học tập"
+    ],
+    [
+     "HOG-TNG7-N-03",
+     "Kho thiết bị tiết học nâng cao"
+    ],
+    [
+     "HOG-TNG7-N-04",
+     "Phòng học trống B-07"
+    ],
+    [
+     "HOG-TNG7-N-05",
+     "Hành lang cầu thang phía Bắc"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f9/1",
+   "name": "TẦNG 7 · Đông · Seminar & advanced teaching",
+   "places": [
+    [
+     "HOG-TNG7-E-01",
+     "Nhà vệ sinh nam tầng sáu"
+    ],
+    [
+     "HOG-TNG7-E-02",
+     "Phòng học chuyên đề Phép thuật nâng cao"
+    ],
+    [
+     "HOG-TNG7-E-03",
+     "Phòng hội thảo nhỏ"
+    ],
+    [
+     "HOG-TNG7-E-04",
+     "Phòng thí nghiệm an toàn"
+    ],
+    [
+     "HOG-TNG7-E-05",
+     "Phòng học trống Đ-07"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f9/2",
+   "name": "TẦNG 7 · Nam · Đường nối Faculty/Clock tower",
+   "places": [
+    [
+     "HOG-TNG7-S-01",
+     "Hành lang phía trên Tháp Giáo viên"
+    ],
+    [
+     "HOG-TNG7-S-02",
+     "Phòng lưu biên bản giáo viên"
+    ],
+    [
+     "HOG-TNG7-S-03",
+     "Phòng xem lịch học"
+    ],
+    [
+     "HOG-TNG7-S-04",
+     "Kho sách tham khảo"
+    ],
+    [
+     "HOG-TNG7-S-05",
+     "Phòng học trống N-07"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f9/3",
+   "name": "TẦNG 7 · Tây · Cụm sinh hoạt và trò chơi",
+   "places": [
+    [
+     "HOG-TNG7-W-01",
+     "Phòng Gobstones"
+    ],
+    [
+     "HOG-TNG7-W-02",
+     "Phòng câu lạc bộ cờ phù thủy"
+    ],
+    [
+     "HOG-TNG7-W-03",
+     "Phòng làm dự án học sinh"
+    ],
+    [
+     "HOG-TNG7-W-04",
+     "Phòng học trống T-07"
+    ],
+    [
+     "HOG-TNG7-W-05",
+     "Hành lang kính tầng cao"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f10/0",
+   "name": "TẦNG 8 · Bắc · Upper Grand Staircase / Headmaster",
+   "places": [
+    [
+     "HOG-TNG8-N-01",
+     "Hành lang dẫn lên văn phòng Hiệu trưởng"
+    ],
+    [
+     "HOG-TNG8-N-02",
+     "Sảnh vào văn phòng Hiệu trưởng"
+    ],
+    [
+     "HOG-TNG8-N-03",
+     "Sảnh tầng cao Cầu thang Lớn"
+    ],
+    [
+     "HOG-TNG8-N-04",
+     "Phòng học trống B-08"
+    ],
+    [
+     "HOG-TNG8-N-05",
+     "Kho giấy tờ giáo vụ"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f10/1",
+   "name": "TẦNG 8 · Đông · Room of Requirement",
+   "places": [
+    [
+     "HOG-TNG8-E-01",
+     "Hành lang tầng bảy trước Phòng Yêu cầu"
+    ],
+    [
+     "HOG-TNG8-E-02",
+     "Phòng Yêu cầu (Room of Requirement)"
+    ],
+    [
+     "HOG-TNG8-E-03",
+     "Phòng học trống Đ-08"
+    ],
+    [
+     "HOG-TNG8-E-04",
+     "Phòng nghi lễ học thuật"
+    ],
+    [
+     "HOG-TNG8-E-05",
+     "Phòng bảo quản tranh phép"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f10/2",
+   "name": "TẦNG 8 · Nam · Gryffindor entrance – common route",
+   "places": [
+    [
+     "HOG-TNG8-S-01",
+     "Lối chân dung Bà Béo"
+    ],
+    [
+     "P-441745282e9e54",
+     "Phòng sinh hoạt chung Gryffindor"
+    ],
+    [
+     "HOG-TNG8-S-03",
+     "Lối cầu thang ký túc Gryffindor"
+    ],
+    [
+     "HOG-TNG8-S-04",
+     "Phòng học nhóm tầng bảy"
+    ],
+    [
+     "HOG-TNG8-S-05",
+     "Hành lang tranh tầng bảy"
+    ]
+   ]
+  },
+  {
+   "scopeId": "hogwarts/f10/3",
+   "name": "TẦNG 8 · Tây · CCC / senior clubs (AU)",
+   "places": [
+    [
+     "HOG-TNG8-W-01",
+     "CCC 07.18"
+    ],
+    [
+     "HOG-TNG8-W-06",
+     "Phòng họp liên nhà"
+    ],
+    [
+     "HOG-TNG8-W-07",
+     "Phòng học trống T-08"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/0/0",
+   "name": "Tháp Gryffindor · Lối vào (Tầng 8)",
+   "places": [
+    [
+     "TWR-01-01-02",
+     "Lối thang ký túc nam"
+    ],
+    [
+     "TWR-01-01-03",
+     "Lối thang ký túc nữ"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/0/1",
+   "name": "Tháp Gryffindor · Tầng tháp trên",
+   "places": [
+    [
+     "P-a63fc4014d765b",
+     "Ký túc nam Gryffindor"
+    ],
+    [
+     "P-468097e3d74bf1",
+     "Ký túc nữ Gryffindor"
+    ],
+    [
+     "TWR-01-02-03",
+     "Phòng sinh hoạt học sinh cuối hành lang"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/1/0",
+   "name": "Tháp Ravenclaw · Lối vào tháp cao",
+   "places": [
+    [
+     "P-4bde45f1a1cb07",
+     "Phòng sinh hoạt chung Ravenclaw"
+    ],
+    [
+     "TWR-02-01-02",
+     "Sảnh vào Ravenclaw"
+    ],
+    [
+     "TWR-02-01-03",
+     "Phòng đọc học thuật Ravenclaw"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/1/1",
+   "name": "Tháp Ravenclaw · Khu phòng ngủ",
+   "places": [
+    [
+     "P-439400ea5f0cd4",
+     "Ký túc nam Ravenclaw"
+    ],
+    [
+     "P-7d130cc86d97eb",
+     "Ký túc nữ Ravenclaw"
+    ],
+    [
+     "TWR-02-02-03",
+     "Phòng học nhóm Ravenclaw"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/2/0",
+   "name": "Tháp Bắc (Tiên tri) · Tầng tiếp cận",
+   "places": [
+    [
+     "TWR-03-01-01",
+     "Cầu thang xoắn lên Tháp Bắc"
+    ],
+    [
+     "TWR-03-01-02",
+     "Phòng lưu bản đồ sao Tiên tri"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/2/1",
+   "name": "Tháp Bắc (Tiên tri) · Đỉnh tháp",
+   "places": [
+    [
+     "TWR-03-02-01",
+     "Phòng học Tiên tri"
+    ],
+    [
+     "TWR-03-02-02",
+     "Kho dụng cụ bói toán"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/3/0",
+   "name": "Tháp Thiên văn · Tầng chân tháp",
+   "places": [
+    [
+     "TWR-04-01-01",
+     "Hành lang chân Tháp Thiên văn"
+    ],
+    [
+     "TWR-04-01-02",
+     "Phòng bảo trì kính thiên văn"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/3/1",
+   "name": "Tháp Thiên văn · Tầng giữa",
+   "places": [
+    [
+     "TWR-04-02-01",
+     "Phòng chuẩn bị quan sát"
+    ],
+    [
+     "TWR-04-02-02",
+     "Kho bản đồ sao"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/3/2",
+   "name": "Tháp Thiên văn · Đỉnh tháp",
+   "places": [
+    [
+     "TWR-04-03-01",
+     "Phòng học Thiên văn"
+    ],
+    [
+     "TWR-04-03-02",
+     "Đài quan sát Thiên văn"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/4/0",
+   "name": "Tháp Hiệu trưởng · Tầng cửa vào",
+   "places": [
+    [
+     "TWR-05-01-01",
+     "Cầu thang xoắn sau tượng đá"
+    ],
+    [
+     "TWR-05-01-02",
+     "Phòng chờ văn phòng Hiệu trưởng"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/4/1",
+   "name": "Tháp Hiệu trưởng · Đỉnh tháp",
+   "places": [
+    [
+     "TWR-05-02-01",
+     "Văn phòng Hiệu trưởng"
+    ],
+    [
+     "TWR-05-02-02",
+     "Phòng lưu dụng cụ hiệu trưởng"
+    ],
+    [
+     "TWR-05-02-03",
+     "Kho tài liệu Hiệu trưởng"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/5/0",
+   "name": "Tháp Đồng hồ · Chân tháp",
+   "places": [
+    [
+     "TWR-06-01-01",
+     "Sảnh Tháp Đồng hồ"
+    ],
+    [
+     "TWR-06-01-02",
+     "Phòng trực giờ giấc"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/5/1",
+   "name": "Tháp Đồng hồ · Giữa tháp",
+   "places": [
+    [
+     "TWR-06-02-01",
+     "Gian cơ cấu bánh răng"
+    ],
+    [
+     "TWR-06-02-02",
+     "Phòng bảo trì đồng hồ"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/5/2",
+   "name": "Tháp Đồng hồ · Đỉnh tháp",
+   "places": [
+    [
+     "TWR-06-03-01",
+     "Buồng quả lắc lớn"
+    ],
+    [
+     "TWR-06-03-02",
+     "Buồng kiểm tra chuông giờ"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/6/0",
+   "name": "Tháp Chuông · Chân tháp",
+   "places": [
+    [
+     "TWR-07-01-02",
+     "Phòng giữ dụng cụ chuông"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/6/1",
+   "name": "Tháp Chuông · Đỉnh tháp",
+   "places": [
+    [
+     "TWR-07-02-01",
+     "Đài treo chuông"
+    ],
+    [
+     "TWR-07-02-02",
+     "Phòng vận hành chuông"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/7/0",
+   "name": "Tháp Giáo viên (Faculty Tower) · Tầng tiếp cận",
+   "places": [
+    [
+     "TWR-08-01-01",
+     "Lối vào Faculty Tower"
+    ],
+    [
+     "TWR-08-01-02",
+     "Phòng trực nhân viên"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/7/1",
+   "name": "Tháp Giáo viên (Faculty Tower) · Tầng giữa",
+   "places": [
+    [
+     "TWR-08-02-01",
+     "Hành lang các phòng giáo viên"
+    ],
+    [
+     "TWR-08-02-02",
+     "Phòng nghỉ giáo viên"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/7/2",
+   "name": "Tháp Giáo viên (Faculty Tower) · Tầng trên",
+   "places": [
+    [
+     "TWR-08-03-01",
+     "Hành lang nối bệnh xá"
+    ],
+    [
+     "TWR-08-03-02",
+     "Phòng họp giảng viên kín"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/8/0",
+   "name": "Tháp DADA · Chân tháp",
+   "places": [
+    [
+     "TWR-09-01-01",
+     "Sảnh chân Tháp DADA"
+    ],
+    [
+     "TWR-09-01-02",
+     "Kho đạo cụ phòng vệ"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/8/1",
+   "name": "Tháp DADA · Tầng giảng dạy",
+   "places": [
+    [
+     "TWR-09-02-01",
+     "Phòng học Phòng chống Nghệ thuật Hắc ám — cửa tháp"
+    ],
+    [
+     "TWR-09-02-02",
+     "Phòng tập đũa phép tại tháp"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/8/2",
+   "name": "Tháp DADA · Tầng trên",
+   "places": [
+    [
+     "TWR-09-03-01",
+     "Hành lang Tháp DADA tầng cao"
+    ],
+    [
+     "TWR-09-03-02",
+     "Phòng làm việc bổ trợ DADA"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/9/0",
+   "name": "Tháp Cầu thang Lớn · Chân tháp",
+   "places": [
+    [
+     "TWR-10-01-01",
+     "Cầu thang Lớn"
+    ],
+    [
+     "TWR-10-01-02",
+     "Buồng kiểm tra cầu thang"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/9/1",
+   "name": "Tháp Cầu thang Lớn · Lưng chừng",
+   "places": [
+    [
+     "TWR-10-02-01",
+     "Hành lang tranh nối Cầu thang Lớn"
+    ],
+    [
+     "TWR-10-02-02",
+     "Phòng trực hành lang giữa tầng"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/9/2",
+   "name": "Tháp Cầu thang Lớn · Đỉnh tháp",
+   "places": [
+    [
+     "TWR-10-03-01",
+     "Sảnh cao Cầu thang Lớn"
+    ],
+    [
+     "TWR-10-03-02",
+     "Kho bảng hướng dẫn lớp"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/10/0",
+   "name": "Tháp Tây (Nhà cú) · Lối lên",
+   "places": [
+    [
+     "TWR-11-01-01",
+     "Cầu thang Nhà cú"
+    ],
+    [
+     "TWR-11-01-02",
+     "Kho thức ăn cho cú"
+    ]
+   ]
+  },
+  {
+   "scopeId": "tower/10/1",
+   "name": "Tháp Tây (Nhà cú) · Tầng chuồng cú",
+   "places": [
+    [
+     "TWR-11-02-01",
+     "Nhà cú (Owlery)"
+    ],
+    [
+     "TWR-11-02-02",
+     "Phòng chăm sóc cú bị thương"
+    ]
+   ]
+  },
+  {
+   "scopeId": "au/5/0",
+   "name": "Nhà PC · London · Bán hầm",
+   "places": [
+    [
+     "P-84e3b35dd330b5",
+     "Phòng tiện ích"
+    ],
+    [
+     "P-b64b4fd825a7ea",
+     "Phòng giặt"
+    ],
+    [
+     "P-5e88541888baad",
+     "Kho"
+    ],
+    [
+     "P-ad08891d59bb8b",
+     "Phòng sửa đồ"
+    ]
+   ]
+  },
+  {
+   "scopeId": "au/5/1",
+   "name": "Nhà PC · London · Tầng 1 (trệt)",
+   "places": [
+    [
+     "P-b2554d6b1381cd",
+     "Tiền sảnh"
+    ],
+    [
+     "P-8f34772df41a97",
+     "Phòng khách"
+    ],
+    [
+     "P-7210700596d5ae",
+     "Phòng ăn"
+    ],
+    [
+     "P-78ec748eb7b9ce",
+     "Bếp"
+    ],
+    [
+     "P-176df525d65b31",
+     "Hiên sau"
+    ],
+    [
+     "P-6acb59a2cd0cf1",
+     "Vườn sau"
+    ]
+   ]
+  },
+  {
+   "scopeId": "au/5/2",
+   "name": "Nhà PC · London · Tầng 2",
+   "places": [
+    [
+     "P-cadd273181369d",
+     "Phòng ngủ chính"
+    ],
+    [
+     "P-56dbab3b62a960",
+     "Phòng làm việc"
+    ],
+    [
+     "P-866203855d3998",
+     "Phòng tắm"
+    ]
+   ]
+  },
+  {
+   "scopeId": "au/5/3",
+   "name": "Nhà PC · London · Tầng 3",
+   "places": [
+    [
+     "P-7a95ade5b09943",
+     "Phòng BẠN"
+    ],
+    [
+     "P-f67fdab0b798c6",
+     "Phòng khách ngủ"
+    ]
+   ]
+  },
+  {
+   "scopeId": "au/5/4",
+   "name": "Nhà PC · London · Áp mái",
+   "places": [
+    [
+     "P-9d66d64ae1eced",
+     "Phòng sở thích"
+    ],
+    [
+     "P-aafb6b5cc0a4c6",
+     "Kho dưới mái"
+    ]
+   ]
+  },
+  {
+   "scopeId": "au/6/0",
+   "name": "CCC 07.18 · Hogwarts · Tầng 8 · cánh Tây",
+   "places": [
+    [
+     "HOG-TNG8-W-01",
+     "CCC 07.18"
+    ]
+   ]
+  },
+  {
+   "scopeId": "au/7/0",
+   "name": "Liad’s Attic · Hogwarts · Áp mái",
+   "places": [
+    [
+     "P-0b2a64c33ccc84",
+     "Phòng áp mái Liad"
+    ]
+   ]
+  },
+  {
+   "scopeId": "world/7",
+   "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 1",
+   "places": [
+    [
+     "P-aec6a126a04246",
+     "Khu điều trị thương tích do sinh vật"
+    ]
+   ]
+  },
+  {
+   "scopeId": "world/8",
+   "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 2",
+   "places": [
+    [
+     "P-9d882410cbff44",
+     "Khu điều trị bệnh và nhiễm trùng pháp thuật"
+    ]
+   ]
+  },
+  {
+   "scopeId": "world/9",
+   "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 3",
+   "places": [
+    [
+     "P-9f4eba8cbc0134",
+     "Khu điều trị ngộ độc độc dược và thực vật"
+    ]
+   ]
+  },
+  {
+   "scopeId": "world/10",
+   "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 4",
+   "places": [
+    [
+     "P-a62b074fca27d7",
+     "Khu điều trị thương tổn do bùa chú"
+    ],
+    [
+     "P-c7580930f2caac",
+     "Phòng bệnh dài hạn Janus Thickey"
+    ]
+   ]
+  },
+  {
+   "scopeId": "world/11",
+   "name": "Britain / England / London / Bệnh viện St Mungo / Tầng 5",
+   "places": [
+    [
+     "P-fc634b366552e4",
+     "Cửa hàng bệnh viện"
+    ],
+    [
+     "P-98946e3d409a8a",
+     "Phòng trà khách thăm"
+    ]
+   ]
+  },
+  {
+   "scopeId": "world/12",
+   "name": "Britain / England / London / Bệnh viện St Mungo / Tầng trệt",
+   "places": [
+    [
+     "P-a3e9554f74bb7f",
+     "Sảnh tiếp nhận St Mungo"
+    ],
+    [
+     "P-1af0a04a59056b",
+     "Khu điều trị tai nạn đồ tạo tác"
+    ]
+   ]
+  }
+ ],
+ "otherPlaces": [
+  [
+   "P-00020cadb6235e",
+   "Đầu máy Hogwarts Express"
+  ],
+  [
+   "P-0006dd26862fbe",
+   "Lối vào Rừng Cấm"
+  ],
+  [
+   "P-000814ab7a3200",
+   "Số 10 Downing Street / văn phòng Thủ tướng Muggle"
+  ],
+  [
+   "P-0286a54346e7d7",
+   "Bãi neo tàu Durmstrang"
+  ],
+  [
+   "P-04180946d36a33",
+   "Ollivanders"
+  ],
+  [
+   "P-046c1c72bb9fc9",
+   "Hẻm Xéo"
+  ],
+  [
+   "P-05c90391d35da8",
+   "Quản lý Chổi bay"
+  ],
+  [
+   "P-05d77e52709869",
+   "Nhà Bathilda Bagshot"
+  ],
+  [
+   "P-065a853b8d7608",
+   "Florean Fortescue’s"
+  ],
+  [
+   "P-06a1ce678f15be",
+   "Các nhà dân trên phố trong bản đồ Diagon"
+  ],
+  [
+   "P-07666cff74b9d9",
+   "Hồ ngầm trong hang biển"
+  ],
+  [
+   "P-0880e4fe3da124",
+   "Sảnh tiếp cận Đại Sảnh"
+  ],
+  [
+   "P-09b9d228df78c4",
+   "Khu bình luận / phòng bình luận"
+  ],
+  [
+   "P-0a1ff4c2777f64",
+   "Cầu gỗ và các cầu nối thuộc khối lâu đài"
+  ],
+  [
+   "P-0a94eb38a5cf40",
+   "Trang viên Malfoy"
+  ],
+  [
+   "P-0b1c0c88e006f3",
+   "Durmstrang Institute (vị trí bí mật, chưa chốt nước)"
+  ],
+  [
+   "P-0bdde710277c5f",
+   "Hang Sóc / Nhà Weasley"
+  ],
+  [
+   "P-0d712868c509cf",
+   "Bãi cỏ và đồng cỏ quanh Hogwarts"
+  ],
+  [
+   "P-0d84f863a32ec4",
+   "Sảnh nhà Black"
+  ],
+  [
+   "P-0ebb356a309e42",
+   "Phòng ngủ Ron"
+  ],
+  [
+   "P-0fe532e3c7b3e8",
+   "Nhà dân và ngõ ở Knockturn"
+  ],
+  [
+   "P-10483afb50657b",
+   "Phòng làm việc Xenophilius"
+  ],
+  [
+   "P-10ca277b3be7f2",
+   "Tầng 1 – Văn phòng Bộ trưởng"
+  ],
+  [
+   "P-1174317bcb3096",
+   "Vườn bí Hagrid"
+  ],
+  [
+   "P-1257864e10b184",
+   "Quán The Hanged Man"
+  ],
+  [
+   "P-12d570650689e2",
+   "Phòng thay đồ đội B"
+  ],
+  [
+   "P-1388a8951a3c11",
+   "Nhà Gaunt"
+  ],
+  [
+   "P-13ae06fd76adc5",
+   "Các bãi cỏ ngoài sân trong và ngoài khu cầu/cổng H2"
+  ],
+  [
+   "P-13cff25cacf38f",
+   "Ga Paddington"
+  ],
+  [
+   "P-13dfea8fe4bf27",
+   "Văn phòng Cấp phép Độn thổ"
+  ],
+  [
+   "P-143a2447e31c2c",
+   "Lều Hagrid và các phòng bên trong"
+  ],
+  [
+   "P-14c5870146b747",
+   "Gian chứa chổi / kho chổi"
+  ],
+  [
+   "P-16ec3a57420b99",
+   "Bờ biển gần Shell Cottage"
+  ],
+  [
+   "P-17db50485e2b83",
+   "Bãi cỏ ven hồ"
+  ],
+  [
+   "P-1809b6a4970166",
+   "Nhà Barty Crouch Sr."
+  ],
+  [
+   "P-18305f9ea8f94d",
+   "Khu học nhóm bên trong khu Hufflepuff"
+  ],
+  [
+   "P-18feb9f615073d",
+   "Bếp nhà Dursley"
+  ],
+  [
+   "P-1901b8ad031d44",
+   "Sảnh tiếp đón Bộ Pháp thuật"
+  ],
+  [
+   "P-197b2052678b9d",
+   "Nhà dân trong template làng"
+  ],
+  [
+   "P-1b93d2a168cc1a",
+   "Tiệm đồ cũ"
+  ],
+  [
+   "P-1ba2a8427cd9a8",
+   "Phòng ngủ Regulus Black"
+  ],
+  [
+   "P-1bd95d9a21aa0e",
+   "Tầng 9 – Bộ Bảo mật"
+  ],
+  [
+   "P-1c6f7973221157",
+   "Phòng Luna Lovegood"
+  ],
+  [
+   "P-1cbafaf3eaef87",
+   "Hành lang chung Slytherin dưới hồ"
+  ],
+  [
+   "P-1db46d6df4495f",
+   "Kho tiền Lestrange"
+  ],
+  [
+   "P-1ecd945e2b86b7",
+   "Hai sân trong lâu đài"
+  ],
+  [
+   "P-209dc8c61fa3bb",
+   "Shell Cottage / nhà Bill và Fleur"
+  ],
+  [
+   "P-2236da8489dfad",
+   "Quán cà phê Tottenham Court Road"
+  ],
+  [
+   "P-223c9a29e759d3",
+   "Nhà Fawcett"
+  ],
+  [
+   "P-226721c1fff80c",
+   "Mọi buồng hành khách trong các toa"
+  ],
+  [
+   "P-23a728f27029ae",
+   "Tottenham Court Road"
+  ],
+  [
+   "P-240c66e1c2ad19",
+   "Beauxbatons Academy of Magic"
+  ],
+  [
+   "P-241e2fa15a09f1",
+   "Phòng hỗ trợ xử án"
+  ],
+  [
+   "P-25a2f0dc7c7eba",
+   "Vườn Shell Cottage"
+  ],
+  [
+   "P-27cbd65e002cd1",
+   "Lối nối giữa các toa"
+  ],
+  [
+   "P-28dd4f052c2855",
+   "Quán trà Madam Puddifoot"
+  ],
+  [
+   "P-292e4cf5737a49",
+   "Làng Tinworth"
+  ],
+  [
+   "P-297d369b484bc3",
+   "Cánh đồng World Cup Quidditch"
+  ],
+  [
+   "P-29bc58039f5eae",
+   "Vườn cây gần nhà kính"
+  ],
+  [
+   "P-2a51f7e8e278a7",
+   "Nhà thờ Godric’s Hollow"
+  ],
+  [
+   "P-2b888eaec42438",
+   "Tiệm bút lông và giấy da"
+  ],
+  [
+   "P-2be38007d6f246",
+   "Apothecary tại Hogsmeade trong template"
+  ],
+  [
+   "P-2c9c4c00c1d80b",
+   "Phòng Tình yêu / phòng khóa kín"
+  ],
+  [
+   "P-2cda580d14d444",
+   "Spinner’s End"
+  ],
+  [
+   "P-2df6c97ce86355",
+   "Bộ phận Sinh vật có tri giác"
+  ],
+  [
+   "P-2e8e6fd50795cc",
+   "Bếp Hang Sóc"
+  ],
+  [
+   "P-2fdedba88577ad",
+   "Công viên Little Whinging"
+  ],
+  [
+   "P-30cf89999f5e15",
+   "Hồ Đen"
+  ],
+  [
+   "P-30e83b523e3592",
+   "Nhà Slughorn ở tạm tại Budleigh Babberton"
+  ],
+  [
+   "P-31f204a8e0e490",
+   "Đường giữa các nhà kính"
+  ],
+  [
+   "P-328fae86b7c01c",
+   "Phòng ngủ Fred & George"
+  ],
+  [
+   "P-337a20429f7b9d",
+   "Khu sinh hoạt và học nhóm bên trong khu Gryffindor"
+  ],
+  [
+   "P-33d82440a9be50",
+   "Sân giữa các cánh lâu đài"
+  ],
+  [
+   "P-36df14fc8355e4",
+   "Lăng mộ Dumbledore"
+  ],
+  [
+   "P-3733c32c66774d",
+   "Magnolia Crescent"
+  ],
+  [
+   "P-37846d42ec845c",
+   "Khuôn viên Malfoy Manor"
+  ],
+  [
+   "P-385234641b8727",
+   "Đường dạo ngoài trời quanh Hogwarts"
+  ],
+  [
+   "P-38988e75264a65",
+   "Toa mẫu Gryffindor"
+  ],
+  [
+   "P-38bf6be09df746",
+   "Sân Bell Tower (Tháp Chuông)"
+  ],
+  [
+   "P-399f2c035627f1",
+   "Sân trước lâu đài trong khu cổng"
+  ],
+  [
+   "P-39e69af2a5fc7c",
+   "Upper Flagley"
+  ],
+  [
+   "P-3a8e137752a294",
+   "Khu cắm trại Beauxbatons"
+  ],
+  [
+   "P-3a9add588aa69a",
+   "Sân ga 9¾"
+  ],
+  [
+   "P-3af65a0ca62879",
+   "Biệt thự Riddle"
+  ],
+  [
+   "P-3be97f06839afa",
+   "Các lăng mộ Ai Cập mà Bill phá giải lời nguyền"
+  ],
+  [
+   "P-3d600b63857ca0",
+   "Tầng 5 – Hợp tác Pháp thuật Quốc tế"
+  ],
+  [
+   "P-3e401191d71800",
+   "Văn phòng Bằng sáng chế Lố bịch"
+  ],
+  [
+   "P-4091d06b78b915",
+   "Nhà Granger (địa chỉ không xác định)"
+  ],
+  [
+   "P-4232fc85ff42c4",
+   "Vườn nhà Dursley"
+  ],
+  [
+   "P-4247829f4f87d7",
+   "Tầng 6 – Giao thông Pháp thuật"
+  ],
+  [
+   "P-424cf93d589f58",
+   "Magnolia Road"
+  ],
+  [
+   "P-42ca1a78fc7d46",
+   "Uagadou School of Magic"
+  ],
+  [
+   "P-43ffcc1098a3aa",
+   "Privet Drive"
+  ],
+  [
+   "P-4427f295c86374",
+   "Nurmengard"
+  ],
+  [
+   "P-442f7275b6c832",
+   "Sân Mistletoe"
+  ],
+  [
+   "P-444469fe1666f1",
+   "Văn phòng Lạm dụng Đồ tạo tác Muggle"
+  ],
+  [
+   "P-44a4a4856bc09b",
+   "Sảnh tròn xoay"
+  ],
+  [
+   "P-47576b791ebc5b",
+   "Nhà ga Hogsmeade"
+  ],
+  [
+   "P-4890242d6f09e8",
+   "Các phòng ngủ khác Hang Sóc"
+  ],
+  [
+   "P-4ba45d2ca765ad",
+   "Đấu trường thử thách rồng"
+  ],
+  [
+   "P-4cb1d44097aaf0",
+   "Gringotts và hệ thống hầm / kho tiền"
+  ],
+  [
+   "P-4d4b012a451ee2",
+   "Tầng 4 – Điều hòa và Kiểm soát Sinh vật"
+  ],
+  [
+   "P-4df8571e5dea2e",
+   "Các đường dạo và bãi đất trống ngoài trời quanh trường chưa thuộc template khác"
+  ],
+  [
+   "P-4e78486f8e5d5c",
+   "Phòng khách Hang Sóc"
+  ],
+  [
+   "P-4f2d8576d24f18",
+   "Số 13 Grimmauld Place"
+  ],
+  [
+   "P-4f6ef384d93fb3",
+   "Rừng Dean"
+  ],
+  [
+   "P-4fee03ab76bb30",
+   "Tầng 10 – Khu xử án"
+  ],
+  [
+   "P-501145c3fc9c8d",
+   "Bếp nhà Black"
+  ],
+  [
+   "P-501e057d5be6b1",
+   "Sân Quad"
+  ],
+  [
+   "P-52b6fe3a29d440",
+   "Khu nhân mã trong Rừng Cấm"
+  ],
+  [
+   "P-52ea7749d9b897",
+   "Nhà cô Muriel"
+  ],
+  [
+   "P-54d36cdd92de52",
+   "Nhà Alastor Moody"
+  ],
+  [
+   "P-55b6096c51b788",
+   "Nhà gia đình Dumbledore"
+  ],
+  [
+   "P-561ef194a3cfad",
+   "Ba Cây Chổi và các phòng của quán"
+  ],
+  [
+   "P-561f5bd89f1fb7",
+   "Văn phòng quản lý trại trẻ"
+  ],
+  [
+   "P-57a63e2aaa9159",
+   "Scribbulus"
+  ],
+  [
+   "P-57ffd05e36562d",
+   "Phòng ngủ Vernon/Petunia"
+  ],
+  [
+   "P-585c0776dc54a3",
+   "Sân Wyvern"
+  ],
+  [
+   "P-5889d83ab64879",
+   "Toa thường"
+  ],
+  [
+   "P-58ba0981b28173",
+   "Văn phòng Mạng Floo"
+  ],
+  [
+   "P-58bb45e6da0252",
+   "Twilfitt & Tatting’s"
+  ],
+  [
+   "P-5965034df92b27",
+   "Cokeworth"
+  ],
+  [
+   "P-59e90d8a9ccc63",
+   "Bờ Hồ Đen"
+  ],
+  [
+   "P-5a0ec074efb106",
+   "Weasleys’ Wizard Wheezes (nếu tồn tại theo thời kỳ)"
+  ],
+  [
+   "P-5a4fefc72d7d57",
+   "Các khán đài Quidditch"
+  ],
+  [
+   "P-5b000833260ab3",
+   "Tầng 8 – Atrium"
+  ],
+  [
+   "P-5bc4accf8f9cfb",
+   "Phòng ăn nhà Dursley"
+  ],
+  [
+   "P-5bfdb63dbfad77",
+   "Nhà Gregorovitch (địa chỉ không xác định)"
+  ],
+  [
+   "P-5c5b87e483e862",
+   "Các cơ sở Knockturn khác trong template"
+  ],
+  [
+   "P-5cd173a0de0b12",
+   "Little Whinging"
+  ],
+  [
+   "P-5d33c248682e4b",
+   "Tiệm cổ vật / cầm đồ tại Knockturn"
+  ],
+  [
+   "P-5d4b08c68c7c51",
+   "Nhà Potter / Potter Cottage"
+  ],
+  [
+   "P-5daf783e1e1f28",
+   "Sân vào lâu đài trong khu cổng"
+  ],
+  [
+   "P-5ddef138f591ee",
+   "Nghĩa địa Godric’s Hollow"
+  ],
+  [
+   "P-5e1f1cc14a2adb",
+   "Phố chính Hogsmeade"
+  ],
+  [
+   "P-5eb3bde9176879",
+   "Cầu đá nối các cánh lâu đài"
+  ],
+  [
+   "P-5fc3c5a0bcb0d1",
+   "Bộ phận Quái thú"
+  ],
+  [
+   "P-60ff93fb1c4473",
+   "Phòng khách Shell Cottage"
+  ],
+  [
+   "P-632d1664ab4804",
+   "MACUSA Headquarters"
+  ],
+  [
+   "P-633d0bcb4ab87e",
+   "Zonko’s"
+  ],
+  [
+   "P-638d3d8f890b97",
+   "Phòng thay đồ đội A"
+  ],
+  [
+   "P-63aa8852e10090",
+   "Đường mòn Rừng Cấm"
+  ],
+  [
+   "P-64d0087ee0c1b2",
+   "Nhà Lovegood"
+  ],
+  [
+   "P-6575df3a62913f",
+   "Mặt sân thi đấu"
+  ],
+  [
+   "P-65ac0b29ed7007",
+   "Hang Sirius trú ở vùng núi gần làng"
+  ],
+  [
+   "P-660382eb5d124f",
+   "Tiền sảnh"
+  ],
+  [
+   "P-695c706560e4fb",
+   "Phòng ngủ Arthur & Molly"
+  ],
+  [
+   "P-6a9cb408f9f168",
+   "Cầu thang trong khu Gryffindor"
+  ],
+  [
+   "P-6ac732451f03d7",
+   "Đường đi ngoài các tường bao lâu đài"
+  ],
+  [
+   "P-6c6fc8c763f6b7",
+   "Quảng trường Godric’s Hollow"
+  ],
+  [
+   "P-6d6cfd0e60241f",
+   "Sân Transfiguration (Biến hình)"
+  ],
+  [
+   "P-6e4b06065f0997",
+   "Gian chờ trước Phân loại"
+  ],
+  [
+   "P-6eac4eb0234cb3",
+   "Phòng ngủ Ginny"
+  ],
+  [
+   "P-6f37aeb5ab1ff0",
+   "Khu nuôi/bảo tồn rồng Romania – nơi Charlie làm việc"
+  ],
+  [
+   "P-6f640309d1ece1",
+   "Đội Đảo ngược Tai nạn Pháp thuật"
+  ],
+  [
+   "P-6fca659549629d",
+   "Bến ga / bến thuyền Hogsmeade ngoài khu nhà ga"
+  ],
+  [
+   "P-712dcf0d542fa9",
+   "Nhà bà Figg"
+  ],
+  [
+   "P-71db87f76e608b",
+   "Hẻm Knockturn"
+  ],
+  [
+   "P-76e93cc0236521",
+   "Văn phòng Liên lạc Yêu tinh"
+  ],
+  [
+   "P-7904b8045f6614",
+   "Bìa Rừng Cấm"
+  ],
+  [
+   "P-79710fe4d4bcfa",
+   "Lều Hú và các phòng bên trong"
+  ],
+  [
+   "P-7abe41594af2ff",
+   "Sân Quidditch"
+  ],
+  [
+   "P-7b1adb6069d328",
+   "Phòng khách Dursley"
+  ],
+  [
+   "P-7c0776422fe490",
+   "Nhà của Amos Diggory (nếu tách khỏi Ottery St Catchpole)"
+  ],
+  [
+   "P-7c862bcde92bda",
+   "Phòng ngủ Shell Cottage"
+  ],
+  [
+   "P-7ceaf0fcb836c1",
+   "Đại sảnh Malfoy Manor"
+  ],
+  [
+   "P-7debd31a87a61e",
+   "Đường tới lều Hagrid"
+  ],
+  [
+   "P-7f18ace1f8b2d7",
+   "Bến thuyền Hogwarts"
+  ],
+  [
+   "P-80b97fa352d930",
+   "Khu hành chính Wizengamot"
+  ],
+  [
+   "P-8153c1a6e4e7dc",
+   "Sân cỏ cạnh lâu đài"
+  ],
+  [
+   "P-81a969eb658163",
+   "Đầu Heo và các phòng của quán"
+  ],
+  [
+   "P-81c7ab0cff5ac4",
+   "Khu nhà dân Hogsmeade"
+  ],
+  [
+   "P-81e49b0d4bd6c3",
+   "Phòng ngủ khác nhà Black"
+  ],
+  [
+   "P-8372c04e802fdc",
+   "Tầng 3 – Tai nạn và Thảm họa Pháp thuật"
+  ],
+  [
+   "P-83b46b70fcdcc6",
+   "Eeylops Owl Emporium"
+  ],
+  [
+   "P-83c52658df2171",
+   "Các toa Hogwarts Express"
+  ],
+  [
+   "P-851acac2ec7f8b",
+   "Purge and Dowse (mặt tiền St Mungo)"
+  ],
+  [
+   "P-86cd9a8defbb03",
+   "Phòng Thời gian"
+  ],
+  [
+   "P-86e7455d5f7d47",
+   "Phòng giáo viên"
+  ],
+  [
+   "P-873b198808d71f",
+   "Văn phòng Tư vấn Sinh vật gây hại"
+  ],
+  [
+   "P-88aadc4a38ae9c",
+   "Phòng ngủ Harry"
+  ],
+  [
+   "P-8957dd0847f167",
+   "Các dãy phòng giam Azkaban"
+  ],
+  [
+   "P-89ce1f70269693",
+   "Số 2 Magnolia Crescent (địa chỉ được nhắc)"
+  ],
+  [
+   "P-8bd319c866a655",
+   "Gladrags"
+  ],
+  [
+   "P-8c15e0bfc2d11d",
+   "Khu ổ nhện Aragog"
+  ],
+  [
+   "P-8d8c423e13cb3d",
+   "Xe Buýt Hiệp Sĩ"
+  ],
+  [
+   "P-8de3a27d58bad8",
+   "Dervish & Banges"
+  ],
+  [
+   "P-8f6fe8ad4cc0c0",
+   "Phòng Tom Riddle ở trại trẻ"
+  ],
+  [
+   "P-8f7588d4e8a5bc",
+   "Mặt hồ và khu vực trên thuyền"
+  ],
+  [
+   "P-8f8a0811461a67",
+   "Tầng 7 – Trò chơi và Thể thao Pháp thuật"
+  ],
+  [
+   "P-8fd2ba76f6cef8",
+   "Sảnh trong khu Ravenclaw"
+  ],
+  [
+   "P-8fd3daca88a6f1",
+   "Khoảng rừng sâu"
+  ],
+  [
+   "P-8ffce1da3d07cd",
+   "Nhà Tonks (địa chỉ không xác định)"
+  ],
+  [
+   "P-90f19984c65a90",
+   "Nhà Snape"
+  ],
+  [
+   "P-911d23f3180589",
+   "Số 4 Privet Drive / nhà Dursley"
+  ],
+  [
+   "P-91ec4108625f7b",
+   "Câu lạc bộ Gobstones chính thức"
+  ],
+  [
+   "P-9253053d400539",
+   "Tiệm áo chùng cũ"
+  ],
+  [
+   "P-9301236b54857d",
+   "Ủy ban Biện minh với Muggle"
+  ],
+  [
+   "P-936cbb9c617eca",
+   "Dãy phòng phụ của sân"
+  ],
+  [
+   "P-94a7036730f10e",
+   "Ga Hogsmeade"
+  ],
+  [
+   "P-951dc2baa9a710",
+   "Bộ phận Xóa trí nhớ"
+  ],
+  [
+   "P-95936a141ed516",
+   "Phòng sau bàn giáo viên"
+  ],
+  [
+   "P-95cdaf84841bcd",
+   "Các tiệm, xưởng, quán trong bản đồ Diagon"
+  ],
+  [
+   "P-95f33b1a222e12",
+   "Làng Little Hangleton"
+  ],
+  [
+   "P-96d14a7a982d4e",
+   "Các nhà kính Hogwarts và các phòng bên trong"
+  ],
+  [
+   "P-9805ab2f38804f",
+   "Phòng xử án số 10"
+  ],
+  [
+   "P-9b80548a6b0f27",
+   "Phòng của Ủy ban Đăng ký Phù thủy gốc Muggle"
+  ],
+  [
+   "P-9b9d65883bc0bb",
+   "Phòng khách nhà Black"
+  ],
+  [
+   "P-9bf6e71ff3108b",
+   "Nhà thuyền Hogwarts"
+  ],
+  [
+   "P-9c19f623bbb1e3",
+   "Vùng sát sân Quidditch ngoài ranh sân"
+  ],
+  [
+   "P-9c45a4f54ea1ee",
+   "Đường dạo ven hồ"
+  ],
+  [
+   "P-9ebcfc85eb0c36",
+   "Sân vận động World Cup"
+  ],
+  [
+   "P-9f810bb6686c6d",
+   "Cây cổ thụ ven hồ"
+  ],
+  [
+   "P-9fffb1aaa57eea",
+   "Liễu Roi và bãi đất quanh cây"
+  ],
+  [
+   "P-a04785690fe84b",
+   "Hành lang toa"
+  ],
+  [
+   "P-a19b8a7eea3f66",
+   "Khu lều World Cup"
+  ],
+  [
+   "P-a3d0329c5db5e2",
+   "Văn phòng Liên lạc Pháp thuật Quốc tế"
+  ],
+  [
+   "P-a56cde3ee35e1c",
+   "Railview Hotel"
+  ],
+  [
+   "P-a575b46f2ae1a8",
+   "Khu thử thách Hồ Đen"
+  ],
+  [
+   "P-a6360747d2eff6",
+   "Bãi cắm trại trong Rừng Dean"
+  ],
+  [
+   "P-a69db007365fe0",
+   "Rừng Albania – nơi Voldemort trú ẩn"
+  ],
+  [
+   "P-a8f847e818afa1",
+   "King’s Cross"
+  ],
+  [
+   "P-a91d33c0729151",
+   "Charing Cross Road"
+  ],
+  [
+   "P-aa74a45869a845",
+   "Phòng khách trên xe Buýt Hiệp Sĩ"
+  ],
+  [
+   "P-aab0be0508401d",
+   "Toa mẫu Ravenclaw"
+  ],
+  [
+   "P-aabefd99376d5b",
+   "Nhà Hepzibah Smith"
+  ],
+  [
+   "P-ac442939b95160",
+   "Nhà gia đình Longbottom (địa chỉ không xác định)"
+  ],
+  [
+   "P-ad6b222c1cf8e4",
+   "Văn phòng Sử dụng Pháp thuật Sai trái"
+  ],
+  [
+   "P-adc8756e94687f",
+   "Tầng 2 – Thi hành Luật Pháp thuật"
+  ],
+  [
+   "P-ae87f1280dad9c",
+   "Cổng chính Hogwarts"
+  ],
+  [
+   "P-af6716662de8c8",
+   "Trụ sở Thần Sáng"
+  ],
+  [
+   "P-b063050bb041b4",
+   "Khu đọc và học nhóm bên trong khu Slytherin"
+  ],
+  [
+   "P-b08a347b7ef127",
+   "Borgin & Burkes"
+  ],
+  [
+   "P-b1a5bbf296daf9",
+   "Ilvermorny School of Witchcraft and Wizardry"
+  ],
+  [
+   "P-b1b448f37c4d1e",
+   "Bếp Shell Cottage"
+  ],
+  [
+   "P-b4e7452b5bd988",
+   "Budleigh Babberton"
+  ],
+  [
+   "P-b652531fad15ad",
+   "Flourish & Blotts"
+  ],
+  [
+   "P-b73feb15c40870",
+   "Phòng ngủ Sirius Black"
+  ],
+  [
+   "P-b830cb70ee02f6",
+   "Vườn nhà Hagrid"
+  ],
+  [
+   "P-b86cbfbdc07271",
+   "Hang biển của Voldemort"
+  ],
+  [
+   "P-b879bbed8fdc49",
+   "Sân ga Hogsmeade (khu tàu)"
+  ],
+  [
+   "P-ba63b94f595caf",
+   "Sân trong gắn với map hall"
+  ],
+  [
+   "P-bb3906692ce0a3",
+   "Lối đi và bãi đất ven hồ"
+  ],
+  [
+   "P-bbfe47f234c957",
+   "Phòng khách Malfoy Manor"
+  ],
+  [
+   "P-bca1f1945d52e9",
+   "Sân Viaduct"
+  ],
+  [
+   "P-bd4a42764da881",
+   "Phòng Tử thần"
+  ],
+  [
+   "P-bdd56dfa509b7c",
+   "Potage’s Cauldrons"
+  ],
+  [
+   "P-bf3c24a146fb6a",
+   "Phòng chờ xét xử"
+  ],
+  [
+   "P-c061b81bba5c42",
+   "Đường tới sân Quidditch"
+  ],
+  [
+   "P-c089c78b883a86",
+   "Sảnh Tiên tri"
+  ],
+  [
+   "P-c11e875f2e672c",
+   "Gác mái Hang Sóc"
+  ],
+  [
+   "P-c12015ea2dc205",
+   "Đảo đá trong hồ hang biển"
+  ],
+  [
+   "P-c22fddd973f9ed",
+   "Số 11 Grimmauld Place"
+  ],
+  [
+   "P-c2473d02e0de42",
+   "Magical Menagerie"
+  ],
+  [
+   "P-c251f1aa2096c0",
+   "Khu tiếp nhận khách Bộ Pháp thuật"
+  ],
+  [
+   "P-c342fdc0ef620b",
+   "Madam Malkin’s"
+  ],
+  [
+   "P-c3f56557f43009",
+   "Vườn Hang Sóc"
+  ],
+  [
+   "P-c4b0eda051d309",
+   "Mê cung Tam Pháp thuật ở sân Quidditch"
+  ],
+  [
+   "P-c7788eabe9f16a",
+   "Cái Vạc Lủng và các phòng trọ"
+  ],
+  [
+   "P-c7df9592a50155",
+   "Số 12 Grimmauld Place / nhà Black"
+  ],
+  [
+   "P-c8e6b9a47ac0b8",
+   "Các cửa hàng hiện trong làng"
+  ],
+  [
+   "P-c901ae9bd25828",
+   "Toa mẫu Slytherin"
+  ],
+  [
+   "P-c97880d2883d88",
+   "Quality Quidditch Supplies"
+  ],
+  [
+   "P-cabb450c67c344",
+   "Hành lang chung trong khu Hufflepuff"
+  ],
+  [
+   "P-cc0a4d9d894357",
+   "Kho tiền 713"
+  ],
+  [
+   "P-cc5bcc4d694457",
+   "Lối lên Nhà cú"
+  ],
+  [
+   "P-cdc1a91748b387",
+   "Hầm giam Malfoy Manor"
+  ],
+  [
+   "P-ce64687addd09a",
+   "Honeydukes và tầng hầm"
+  ],
+  [
+   "P-cf6e6f0ff253af",
+   "Nghĩa địa Little Hangleton"
+  ],
+  [
+   "P-cf86b4537874ba",
+   "Kho chổi tại sân"
+  ],
+  [
+   "P-d216ce626788ed",
+   "Lối lên Cầu thang Lớn tại Tiền sảnh"
+  ],
+  [
+   "P-d2a51c4e5a9cd6",
+   "Quảng trường Hogsmeade"
+  ],
+  [
+   "P-d311ceb6407c3e",
+   "Phòng ngủ Dudley"
+  ],
+  [
+   "P-d45c30dace5abc",
+   "Nhà tù Azkaban"
+  ],
+  [
+   "P-d76cff03ee7601",
+   "Đường mòn giữa Hogwarts và Hogsmeade"
+  ],
+  [
+   "P-d85dbd8c19bb3b",
+   "Các ngõ phố nối Hẻm Xéo và Knockturn"
+  ],
+  [
+   "P-da0766f575a2ce",
+   "Cơ quan Khóa Cảng"
+  ],
+  [
+   "P-da0da47f74a252",
+   "Khu đọc và học nhóm bên trong khu Ravenclaw"
+  ],
+  [
+   "P-dadcf596a0437f",
+   "Khu an ninh Bộ Pháp thuật"
+  ],
+  [
+   "P-dafe46b4834d00",
+   "Khu chờ lên tàu tại King’s Cross"
+  ],
+  [
+   "P-dbdb26cb4f253a",
+   "Sân sau Cái Vạc Lủng"
+  ],
+  [
+   "P-dc6e4d25cb717b",
+   "Castelobruxo School of Magic"
+  ],
+  [
+   "P-de97c63af46b5c",
+   "Sân Clock Tower (Đồng hồ)"
+  ],
+  [
+   "P-dec21f949ed798",
+   "Làng Godric’s Hollow"
+  ],
+  [
+   "P-df07d01094f11f",
+   "Túp lều ngoài biển trong tập một"
+  ],
+  [
+   "P-df6db152b7d063",
+   "Gầm cầu thang nhà Dursley"
+  ],
+  [
+   "P-df6ec24bb2876c",
+   "Khu giao thông Floo Bộ Pháp thuật"
+  ],
+  [
+   "P-dfec82bd2d4f53",
+   "Khu thương mại / luật quốc tế"
+  ],
+  [
+   "P-e10f1f2455074a",
+   "Nhà Diggle (địa chỉ không xác định)"
+  ],
+  [
+   "P-e1641c684d1741",
+   "Toa mẫu Hufflepuff"
+  ],
+  [
+   "P-e1b58685e41178",
+   "Nhà Diggory"
+  ],
+  [
+   "P-e207e1cad9aa75",
+   "Mahoutokoro School of Magic"
+  ],
+  [
+   "P-e27a6e6c098632",
+   "Phòng thay đồ các đội"
+  ],
+  [
+   "P-e3c60767666046",
+   "Vườn nhà Lovegood"
+  ],
+  [
+   "P-e57b3aa8509cf4",
+   "Làng Great Hangleton"
+  ],
+  [
+   "P-e68bc933cbfc46",
+   "Làng Ottery St Catchpole"
+  ],
+  [
+   "P-e7ebf6e1f0fcb9",
+   "Bãi học bay"
+  ],
+  [
+   "P-ea0d1c088bb35d",
+   "Hogwarts Express"
+  ],
+  [
+   "P-eb0e081c67cc39",
+   "Phòng sinh hoạt nhà Lovegood"
+  ],
+  [
+   "P-eb74631b825f74",
+   "Scrivenshaft’s"
+  ],
+  [
+   "P-ecc27e85264a4a",
+   "Nhà Kingsley Shacklebolt (địa chỉ không xác định)"
+  ],
+  [
+   "P-ece8b34b0783e7",
+   "Apothecary"
+  ],
+  [
+   "P-ee2064eb7e377a",
+   "Trại trẻ mồ côi của Tom Riddle"
+  ],
+  [
+   "P-eeb5352311e7c0",
+   "Sân tập nhỏ trong quần thể Quidditch"
+  ],
+  [
+   "P-efe5e3b54c110c",
+   "Số 7 Privet Drive"
+  ],
+  [
+   "P-effd8342cc396c",
+   "Bãi cỏ học tập quanh trường"
+  ],
+  [
+   "P-f012e9d745204b",
+   "Khu bảo vệ Hòn đá Phù thủy dưới Hogwarts"
+  ],
+  [
+   "P-f29f8a2656ded8",
+   "Bưu điện Hogsmeade"
+  ],
+  [
+   "P-f2d3a414a25b76",
+   "Vườn Thảo dược"
+  ],
+  [
+   "P-f30d790b24b65a",
+   "Các ngõ ở Hogsmeade"
+  ],
+  [
+   "P-f322d7e98b6a02",
+   "Nhà cú và khu vực bên trong Nhà cú"
+  ],
+  [
+   "P-f4ef10f0794466",
+   "Gambol & Japes"
+  ],
+  [
+   "P-f52be73f7dd9ce",
+   "Bộ phận Linh hồn"
+  ],
+  [
+   "P-f6319cb5ddb159",
+   "Sân chân tháp trong khối lâu đài"
+  ],
+  [
+   "P-f66347f72f87d0",
+   "Trụ sở Liên đoàn Quidditch Anh–Ireland"
+  ],
+  [
+   "P-f6ff23e797445d",
+   "Phòng Không gian"
+  ],
+  [
+   "P-f79a562f43d99a",
+   "Cầu cạn Viaduct"
+  ],
+  [
+   "P-f8ed3dbe20d357",
+   "Ngoại thất khối lâu đài Hogwarts"
+  ],
+  [
+   "P-f9359f86975e71",
+   "Lối đi và sân trong ranh khu Quidditch"
+  ],
+  [
+   "P-f9c67c9c540345",
+   "Văn phòng Thứ trưởng / trợ lý Bộ trưởng"
+  ],
+  [
+   "P-fd24a44f33135c",
+   "Phòng Não"
+  ],
+  [
+   "P-fde802b26605cc",
+   "Kho tiền gia đình Potter"
+  ],
+  [
+   "P-ff60dc5c801cf1",
+   "Bãi chơi Quidditch sau nhà"
+  ],
+  [
+   "P-ff62bf19892de9",
+   "Đường tới nhà ga Hogsmeade"
+  ]
+ ],
+ "templateBindings": {
+  "HOG-TNG1-S-06": {
+   "hall": "filch-office"
+  },
+  "P-5fc25ea9745ef9": {
+   "hall": "classroom-11"
+  },
+  "HOG-TNG1-S-01": {
+   "hall": "entrance-hall"
+  },
+  "P-86e7455d5f7d47": {
+   "hall": "staff-room"
+  },
+  "HOG-TNG1-S-05": {
+   "hall": "staff-room"
+  },
+  "HOG-TNG1-W-02": {
+   "hall": "broom-cupboard"
+  },
+  "P-441745282e9e54": {
+   "gryffindor-common": "gryffindor-common-room"
+  },
+  "P-4bde45f1a1cb07": {
+   "ravenclaw-common": "ravenclaw-common-room"
+  },
+  "P-1795bc600c2b41": {
+   "hufflepuff-common": "hufflepuff-common-room"
+  },
+  "P-80ce1ea13c2632": {
+   "slytherin-common": "slytherin-common-room"
+  },
+  "P-a63fc4014d765b": {
+   "gryffindor-common": "gryffindor-dormitories"
+  },
+  "P-468097e3d74bf1": {
+   "gryffindor-common": "gryffindor-dormitories"
+  },
+  "P-439400ea5f0cd4": {
+   "ravenclaw-common": "ravenclaw-dormitories"
+  },
+  "P-7d130cc86d97eb": {
+   "ravenclaw-common": "ravenclaw-dormitories"
+  },
+  "P-ebceb992eb9255": {
+   "hufflepuff-common": "hufflepuff-dormitories"
+  },
+  "P-b4314de4234c88": {
+   "hufflepuff-common": "hufflepuff-dormitories"
+  },
+  "P-6b050b321ff558": {
+   "slytherin-common": "slytherin-dormitories"
+  },
+  "P-a6425ebd843fab": {
+   "slytherin-common": "slytherin-dormitories"
+  },
+  "P-30cf89999f5e15": {
+   "h1": "lake",
+   "h2": "lake"
+  },
+  "P-9fffb1aaa57eea": {
+   "h1": "willow",
+   "h2": "willow"
+  },
+  "P-9f810bb6686c6d": {
+   "h1": "ancient-tree",
+   "h2": "ancient-tree"
+  },
+  "P-e7ebf6e1f0fcb9": {
+   "h1": "flying-lawn"
+  },
+  "P-f322d7e98b6a02": {
+   "h1": "owlery",
+   "h2": "owlery"
+  },
+  "TWR-11-02-01": {
+   "h1": "owlery",
+   "h2": "owlery"
+  },
+  "P-94a7036730f10e": {
+   "express": "hogsmeade-station",
+   "h1": "hogsmeade-station"
+  },
+  "P-7abe41594af2ff": {
+   "pitch-static": "quidditch-pitch",
+   "h1": "quidditch-pitch",
+   "h2": "quidditch-pitch"
+  },
+  "P-143a2447e31c2c": {
+   "h1": "hagrid",
+   "h2": "hagrid"
+  },
+  "P-96d14a7a982d4e": {
+   "h1": "greenhouses",
+   "h2": "greenhouses"
+  },
+  "P-9bf6e71ff3108b": {
+   "h1": "boathouse"
+  },
+  "P-7f18ace1f8b2d7": {
+   "h1": "boathouse"
+  },
+  "P-7904b8045f6614": {
+   "h1": "forest"
+  },
+  "P-7debd31a87a61e": {
+   "h1": "hagrid",
+   "h2": "hagrid"
+  },
+  "P-585c0776dc54a3": {
+   "h2": "wyvern-court"
+  },
+  "P-442f7275b6c832": {
+   "h2": "mistletoe-court"
+  },
+  "P-399f2c035627f1": {
+   "h2": "forecourt"
+  },
+  "P-6e4b06065f0997": {
+   "hall": "sorting-waiting"
+  },
+  "P-14c5870146b747": {
+   "hall": "broom-cupboard"
+  },
+  "P-ba63b94f595caf": {
+   "hall": "courtyard"
+  },
+  "P-ce57067fcd107f": {
+   "hall": "hall-antechamber"
+  },
+  "P-d2a51c4e5a9cd6": {
+   "village-static": "village-square"
+  },
+  "P-81c7ab0cff5ac4": {
+   "village-static": "hogsmeade-homes"
+  },
+  "P-197b2052678b9d": {
+   "village-static": "hogsmeade-homes"
+  },
+  "P-ce64687addd09a": {
+   "village-static": "hogsmeade-shop-0"
+  },
+  "P-633d0bcb4ab87e": {
+   "village-static": "hogsmeade-shop-1"
+  },
+  "P-8bd319c866a655": {
+   "village-static": "hogsmeade-shop-2"
+  },
+  "P-eb74631b825f74": {
+   "village-static": "hogsmeade-shop-3"
+  },
+  "P-f29f8a2656ded8": {
+   "village-static": "hogsmeade-shop-4"
+  },
+  "P-561ef194a3cfad": {
+   "village-static": "hogsmeade-shop-5"
+  },
+  "P-8de3a27d58bad8": {
+   "village-static": "hogsmeade-shop-6"
+  },
+  "P-81a969eb658163": {
+   "village-static": "hogsmeade-shop-7"
+  },
+  "P-28dd4f052c2855": {
+   "village-static": "hogsmeade-shop-8"
+  },
+  "P-79710fe4d4bcfa": {
+   "village-static": "shrieking-shack"
+  },
+  "P-6575df3a62913f": {
+   "pitch-static": "quidditch-pitch"
+  },
+  "P-5a4fefc72d7d57": {
+   "pitch-static": "stands"
+  },
+  "P-09b9d228df78c4": {
+   "pitch-static": "commentary"
+  },
+  "P-638d3d8f890b97": {
+   "pitch-static": "pitch-room-0"
+  },
+  "P-12d570650689e2": {
+   "pitch-static": "pitch-room-1"
+  },
+  "P-a8f847e818afa1": {
+   "express": "kings-cross"
+  },
+  "P-3a9add588aa69a": {
+   "express": "kings-cross"
+  },
+  "P-47576b791ebc5b": {
+   "express": "hogsmeade-station"
+  },
+  "P-b879bbed8fdc49": {
+   "express": "hogsmeade-station"
+  },
+  "P-5889d83ab64879": {
+   "express": "standard-coach"
+  },
+  "P-38988e75264a65": {
+   "express": "express-coach-0"
+  },
+  "P-aab0be0508401d": {
+   "express": "express-coach-1"
+  },
+  "P-e1641c684d1741": {
+   "express": "express-coach-2"
+  },
+  "P-c901ae9bd25828": {
+   "express": "express-coach-3"
+  },
+  "P-c7788eabe9f16a": {
+   "diagon-knockturn": "da-leaky"
+  },
+  "P-4cb1d44097aaf0": {
+   "diagon-knockturn": "da-gringotts"
+  },
+  "P-04180946d36a33": {
+   "diagon-knockturn": "da-ollivanders"
+  },
+  "P-b652531fad15ad": {
+   "diagon-knockturn": "da-flourish"
+  },
+  "P-c342fdc0ef620b": {
+   "diagon-knockturn": "da-malkin"
+  },
+  "P-c97880d2883d88": {
+   "diagon-knockturn": "da-quidditch"
+  },
+  "P-83b46b70fcdcc6": {
+   "diagon-knockturn": "da-eeylops"
+  },
+  "P-c2473d02e0de42": {
+   "diagon-knockturn": "da-menagerie"
+  },
+  "P-bdd56dfa509b7c": {
+   "diagon-knockturn": "da-potage"
+  },
+  "P-065a853b8d7608": {
+   "diagon-knockturn": "da-fortescue"
+  },
+  "P-f4ef10f0794466": {
+   "diagon-knockturn": "da-gambol"
+  },
+  "P-5a0ec074efb106": {
+   "diagon-knockturn": "da-weasleys"
+  },
+  "P-58bb45e6da0252": {
+   "diagon-knockturn": "da-twilfitt"
+  },
+  "P-57a63e2aaa9159": {
+   "diagon-knockturn": "da-scribbulus"
+  },
+  "P-ece8b34b0783e7": {
+   "diagon-knockturn": "da-apothecary"
+  },
+  "P-9253053d400539": {
+   "diagon-knockturn": "da-robe-used"
+  },
+  "P-2b888eaec42438": {
+   "diagon-knockturn": "da-stationery"
+  },
+  "P-b08a347b7ef127": {
+   "diagon-knockturn": "ka-borgin"
+  },
+  "P-10ca277b3be7f2": {
+   "ministry2": "department-1"
+  },
+  "P-adc8756e94687f": {
+   "ministry2": "department-2"
+  },
+  "P-8372c04e802fdc": {
+   "ministry2": "department-3"
+  },
+  "P-4d4b012a451ee2": {
+   "ministry2": "department-4"
+  },
+  "P-3d600b63857ca0": {
+   "ministry2": "department-5"
+  },
+  "P-4247829f4f87d7": {
+   "ministry2": "department-6"
+  },
+  "P-8f8a0811461a67": {
+   "ministry2": "department-7"
+  },
+  "P-5b000833260ab3": {
+   "ministry-8-10": "ministry-fountain"
+  },
+  "P-44a4a4856bc09b": {
+   "ministry-8-10": "ministry-rotunda"
+  },
+  "P-86cd9a8defbb03": {
+   "ministry-8-10": "ministry-time"
+  },
+  "P-c089c78b883a86": {
+   "ministry-8-10": "ministry-prophecy"
+  },
+  "P-bd4a42764da881": {
+   "ministry-8-10": "ministry-death"
+  },
+  "P-fd24a44f33135c": {
+   "ministry-8-10": "ministry-brain"
+  },
+  "P-f6ff23e797445d": {
+   "ministry-8-10": "ministry-space"
+  },
+  "P-2c9c4c00c1d80b": {
+   "ministry-8-10": "ministry-love"
+  },
+  "P-9805ab2f38804f": {
+   "ministry-8-10": "ministry-court"
+  },
+  "P-bf3c24a146fb6a": {
+   "ministry-8-10": "ministry-waiting"
+  },
+  "P-1174317bcb3096": {
+   "h2": "pumpkin-garden"
+  },
+  "P-f2d3a414a25b76": {
+   "h2": "herb-garden"
+  },
+  "P-f8ed3dbe20d357": {
+   "h1": "castle"
+  },
+  "P-6fca659549629d": {
+   "h1": "station-dock"
+  },
+  "P-241e2fa15a09f1": {
+   "ministry-8-10": "ministry-office"
+  },
+  "P-06a1ce678f15be": {
+   "diagon-knockturn": "da-homes"
+  },
+  "P-ae87f1280dad9c": {
+   "h2": "main-gate"
+  },
+  "P-c251f1aa2096c0": {
+   "ministry-8-10": "ministry-visitor"
+  },
+  "P-cc5bcc4d694457": {
+   "h2": "owlery-path"
+  },
+  "P-dadcf596a0437f": {
+   "ministry-8-10": "ministry-security"
+  },
+  "P-df6ec24bb2876c": {
+   "ministry-8-10": "ministry-floo"
+  }
+ }
+}
