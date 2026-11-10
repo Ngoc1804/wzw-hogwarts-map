@@ -6,8 +6,8 @@
   "mapCount": 13,
   "files": {
     "index.html": {
-      "bytes": 953903,
-      "sha256": "d77907e228fb9a7bd089eb9bfed9c61073329421ca736db28017efdfb214ac53"
+      "bytes": 953819,
+      "sha256": "d3fa1e3a2d821ea0fccfa29632a02d8cc04dd524984a9a8d38a2350ecdc69cc1"
     },
     "maps/catalog.json": {
       "bytes": 13661,

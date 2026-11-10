@@ -1,9 +1,9 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "2.0.0",
   "campaignId": "demo-au",
   "worldId": "demo-world",
   "snapshotId": "turn-001",
-  "atlasVersion": "template-index-v2",
+  "atlasVersion": "atlas-optimized-1.0",
   "meta": {
     "date": "1992-09-11",
     "time": "10:25",
@@ -19,8 +19,7 @@
     "routePlaceIds": [
       "local-greenhouses"
     ],
-    "maxHops": 1,
-    "maxPlaces": 12
+    "crop": true
   },
   "focus": {
     "pcActorId": "pc",
@@ -63,7 +62,8 @@
       "inspector": {
         "overhear": "Bạn đang quan sát.",
         "observation": "Khu nhà kính ở ngay cạnh."
-      }
+      },
+      "environment": "inside"
     }
   ],
   "hints": [
@@ -96,10 +96,5 @@
       "pool": 0,
       "life": 6
     }
-  },
-  "layout": {
-    "scopeKey": "grounds-layout",
-    "version": 1,
-    "stateRef": null
   }
 }

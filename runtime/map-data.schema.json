@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:wizawi:wizamap:map-data:1.0.0",
-  "title": "WIZAMAP MAP_DATA 1.0.0",
+  "$id": "urn:wizawi:wizamap:map-data:2.0.0",
+  "title": "WIZAMAP MAP_DATA 2.0.0",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "schemaVersion": {
-      "const": "1.0.0"
+      "const": "2.0.0"
     },
     "campaignId": {
       "type": "string",
@@ -99,18 +99,16 @@
             "type": "string",
             "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
           },
-          "uniqueItems": true,
-          "maxItems": 20
+          "uniqueItems": true
         },
-        "maxHops": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 2
+        "crop": {
+          "type": "boolean"
         },
-        "maxPlaces": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 20
+        "spatial": {
+          "$ref": "#/$defs/spatial"
+        },
+        "indoor": {
+          "$ref": "#/$defs/indoor"
         }
       },
       "required": [
@@ -119,9 +117,7 @@
         "preferredMode",
         "templateId",
         "centerPlaceId",
-        "routePlaceIds",
-        "maxHops",
-        "maxPlaces"
+        "routePlaceIds"
       ]
     },
     "focus": {
@@ -155,8 +151,7 @@
       "items": {
         "$ref": "#/$defs/place"
       },
-      "minItems": 1,
-      "maxItems": 20
+      "minItems": 1
     },
     "connections": {
       "type": "array",
@@ -232,8 +227,7 @@
             "type": "string",
             "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
           },
-          "uniqueItems": true,
-          "maxItems": 20
+          "uniqueItems": true
         },
         "fogRegionIds": {
           "type": "array",
@@ -243,6 +237,29 @@
           },
           "uniqueItems": true,
           "maxItems": 30
+        },
+        "fogRegions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "points": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "$ref": "#/$defs/point"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "points"
+            ]
+          }
         }
       },
       "required": [
@@ -300,32 +317,6 @@
         "packId",
         "limits"
       ]
-    },
-    "layout": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "scopeKey": {
-          "type": "string",
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
-        },
-        "version": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "stateRef": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
-        }
-      },
-      "required": [
-        "scopeKey",
-        "version",
-        "stateRef"
-      ]
     }
   },
   "required": [
@@ -342,8 +333,7 @@
     "actors",
     "hints",
     "visibility",
-    "questPolicy",
-    "layout"
+    "questPolicy"
   ],
   "$defs": {
     "place": {
@@ -450,7 +440,8 @@
                 "round",
                 "polygon",
                 "straight",
-                "curved"
+                "curved",
+                "cross"
               ]
             },
             "furnishings": {
@@ -475,6 +466,16 @@
                 ]
               },
               "maxItems": 30
+            },
+            "width": {
+              "type": "number",
+              "minimum": 180,
+              "maximum": 560
+            },
+            "depth": {
+              "type": "number",
+              "minimum": 180,
+              "maximum": 520
             }
           },
           "required": [
@@ -611,6 +612,16 @@
             "overhear",
             "observation"
           ]
+        },
+        "environment": {
+          "type": "string",
+          "enum": [
+            "inside",
+            "outside"
+          ]
+        },
+        "position": {
+          "$ref": "#/$defs/point"
         }
       },
       "required": [
@@ -699,6 +710,216 @@
         "priority",
         "inspector"
       ]
+    },
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "spatial": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "walkableRegions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/region"
+          }
+        },
+        "blockedRegions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/region"
+          }
+        },
+        "occlusionRegions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "targetId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "points": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "$ref": "#/$defs/point"
+                }
+              },
+              "interactiveId": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "targetId",
+              "points"
+            ]
+          }
+        }
+      },
+      "required": [
+        "walkableRegions",
+        "blockedRegions",
+        "occlusionRegions"
+      ]
+    },
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "points": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "$ref": "#/$defs/point"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "points"
+      ]
+    },
+    "indoor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "layout": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "horizontal",
+            "vertical",
+            "ell",
+            "tee",
+            "cross",
+            "court",
+            "cloister",
+            "windows",
+            "curved",
+            "tower"
+          ]
+        },
+        "knownStructure": {
+          "type": "string",
+          "enum": [
+            "horizontal",
+            "vertical",
+            "ell",
+            "tee",
+            "cross",
+            "court",
+            "cloister",
+            "windows",
+            "curved",
+            "tower"
+          ]
+        },
+        "constraints": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "courtyard": {
+              "type": "string",
+              "enum": [
+                "open",
+                "closed"
+              ]
+            },
+            "windows": {
+              "type": "boolean"
+            },
+            "curved": {
+              "type": "boolean"
+            },
+            "tower": {
+              "type": "boolean"
+            },
+            "branches": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 4
+            },
+            "orientation": {
+              "type": "string",
+              "enum": [
+                "horizontal",
+                "vertical"
+              ]
+            }
+          }
+        },
+        "roomWidth": {
+          "type": "number",
+          "minimum": 180,
+          "maximum": 560
+        },
+        "roomDepth": {
+          "type": "number",
+          "minimum": 180,
+          "maximum": 520
+        },
+        "corridorWidth": {
+          "type": "number",
+          "minimum": 100,
+          "maximum": 240
+        },
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "horizontal",
+              "vertical",
+              "ell",
+              "tee",
+              "cross",
+              "court",
+              "cloister",
+              "windows",
+              "curved",
+              "tower"
+            ]
+          }
+        },
+        "strategy": {
+          "type": "string",
+          "enum": [
+            "constraints",
+            "random"
+          ]
+        },
+        "allowRandom": {
+          "type": "boolean"
+        }
+      }
     }
   }
 }

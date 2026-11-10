@@ -1,37 +1,13 @@
-# MAP_DATA 1.0.0 — cơ chế đã chốt
+# WIZAMAP Runtime · MAP_DATA 2.0
 
-**Trạng thái:** có schema, ví dụ, validator, bộ chọn template/recipe và adapter lưu layout có kiểm tính ổn định. Chưa có full rendering engine, chưa ghép UI vào index.html, chưa triển khai /map vận hành trong AI Studio. Không nhầm module trả render plan với bản đồ đã vẽ.
+RP context → Gemini produces filtered MAP_DATA and loader HTML → jsDelivr fetches commit-pinned bundle → Preview chooses an actual SVG template or draws only the active indoor scene. No seed/storage/backend and no fake NPC coordinates.
 
-Nguồn hợp đồng duy nhất: `map-data.schema.json`. Quy tắc và flow: `../docs/MAP_FLOW.md`. Hai JSON trong `examples/` chỉ là fixture minh họa, không phải NPC/quest thật hoặc bản đồ canon mới.
+**Data:** `runtime/map-data.schema.json`, `maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json` (747 source entries, 726 canonical places), `runtime/atlas-index.json` (21 old-ID aliases, explicitly verified bindings and scope rules).
 
-| File | Vai trò |
-|---|---|
-| map-data.schema.json | Hợp đồng đầy đủ, đóng trường lạ, giới hạn và loại dữ liệu |
-| map-data.mjs | Kiểm schema được dùng ở đây và các quan hệ ID, locality, cap, tháng/pack; serialize an toàn |
-| templates.json | Registry adapter từ index template hiện tại, không phải atlas canon |
-| resolve-map.mjs | Chọn template chính xác hoặc recipe; khóa layout + seed SHA-256 |
-| prepare-map.mjs | Gọi storage/geometry callbacks, không cho di chuyển phòng cũ hoặc đổi seed |
+**Generation:** 10 approved Stage 2 layout families, flexible floor/cluster presets, exact room polygons and insets, door/stair/void exclusion and NPC anchors. One-room scene uses the entire map without making hallways, stairs or extra rooms. No multi-floor assembly/pathfinding/furniture regeneration.
 
-```js
-import {prepareMap} from './prepare-map.mjs';
-const plan = await prepareMap(MAP_DATA, {
-  loadLayout, saveLayout, createLayout, extendLayout
-});
-// Render plan cục bộ bằng viewer/template crop hoặc hybrid renderer sau khi chúng được hoàn thiện.
-```
+**Scope:** Hogwarts scene/zone and tower presets; St Mungo floor presets; the fixed H1/H2/Ministry/outdoor/courtyard maps are not redrawn by the indoor generator. AU generation is only open for CCC 07.18 main room, the London PC house and Liad's Attic. Other five AU maps are preserved but locked for later.
 
-Các callback do host cung cấp; module không giả làm storage đã triển khai. Host phải lưu bền và khóa/serialize cập nhật theo layout key. LocalStorage chỉ là cache, không bảo đảm qua các Preview origin khác nhau. Thiếu state đã chỉ định phải báo lỗi, không tự dựng lại.
+**Exterior actors:** use conservative checked-in visible-ground patches for four exterior templates, or caller-supplied verified spatial geometry. Feet stay on exact SVG coordinates through zoom. Occlusion uses explicit polygons and fades every overlapping building while restoring original styles. Ground behind building silhouettes still requires scene polygons. See `docs/DEVELOPMENT_STATUS.md` and `docs/atlas-coverage.json` for remaining gaps.
 
-Validator không biết NPC card, bí mật, monthly pack hay chat. Nó chỉ kiểm tính nhất quán của dữ liệu khai báo. Gemini chịu trách nhiệm chọn đúng nội dung, gate và quest nguồn. Không fetch hoặc gửi toàn bộ prompt/pack vào GitHub.
-
-Template không khớp là fallback sang recipe (auto) hoặc lỗi rõ (template bắt buộc). Recipe còn thiếu thì yêu cầu bổ sung dữ liệu; không đoán theo tên. Chỉ được mount sau khi thực hiện crop/mask cục bộ; không mount toàn tầng rồi gọi đó là local map. Full SVG tĩnh không phải cơ chế bảo mật bí mật RP.
-
-Node 24+ dùng được các module này; trình duyệt hiện đại cần JSON modules và Web Crypto. Đóng gói thành browser bundle ghim commit và thử AI Studio vẫn là công việc tiếp theo.
-
-Kiểm tra: `node --test tools/test_map_data.mjs` từ root repo.
-
-Khi index atlas thay đổi, chạy `python tools/sync_template_registry.py` để cập nhật adapter; lệnh này không sửa maps/*.
-
-## Trạng thái hành lang
-
-Demo và bộ dựng hình hành lang cũ đã bị loại bỏ khỏi source hiện hành theo yêu cầu người dùng. Renderer thay thế chưa triển khai. Kế hoạch phát triển chưa được người dùng duyệt và phải được thảo luận trong chat trước khi đưa lên GitHub.
+Build bundle with `python tools/build_runtime.py --out /tmp/wizamap --ref <full commit SHA>`; after committing bundle pin its exact commit in `ui/preview.html` and `docs/RUNTIME_USAGE.md`. Run CI (Node contract/atlas/geometry, bundle syntax, Python atlas and gallery). Browser/AI Studio live tests remain separate from CI.

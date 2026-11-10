@@ -30,19 +30,11 @@ export function feetState(elapsed, stance='idle', reduced=false) {
   const t=((elapsed%5300)+5300)%5300, step=Math.floor(t/550);
   return Array.from({length:6},(_,i)=>t<3300&&i===step?1:0);
 }
-export function mountFeet(g, stance='idle') {
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let stopped=false,mode,frame;
-  const origin=performance.now();
-  function tick(now){
-    const next=reduced.matches?'idle':stance;
-    if(mode!==next){mode=next;g.dataset.motion=mode;setupFeet(g);}
-    const values=feetState(now-origin,stance,reduced.matches);
-    [...g.children].forEach((n,i)=>n.style.opacity=String(values[i]??0));
-    if(!stopped)frame=requestAnimationFrame(tick);
-  }
-  tick(origin);
-  return ()=>{stopped=true;cancelAnimationFrame(frame)};
+const feetJobs=new Set();let feetTimer;
+export function mountFeet(g,stance='idle'){
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');const job={g,stance,reduced,origin:performance.now(),mode:null};feetJobs.add(job);
+ if(!feetTimer)feetTimer=setInterval(()=>{if(document.hidden||document.body.classList.contains('motion-off'))return;const now=performance.now();for(const j of feetJobs){const next=j.reduced.matches?'idle':j.stance;if(next!==j.mode){j.mode=next;j.g.dataset.motion=next;setupFeet(j.g)}const values=feetState(now-j.origin,j.stance,j.reduced.matches);[...j.g.children].forEach((n,i)=>n.style.opacity=String(values[i]??0));}},100);
+ return ()=>{feetJobs.delete(job);if(!feetJobs.size){clearInterval(feetTimer);feetTimer=null}};
 }
 
 export const shoeDefs="<g xmlns=\"http://www.w3.org/2000/svg\" id=\"demo-shoe-l\"><path d=\"M-3,-8C-5.5,-8 -6.8,-4.8 -6.6,-.8 -6.4,2.2 -5.2,4.6 -4.2,6 -3,6.5 -.2,6.5 .8,6 1.7,4.4 2.4,1.6 2.2,-1.4 1.9,-5.2 -.2,-8 -3,-8Z\"/><path d=\"M-4.5,8.4C-3.2,8 -.4,8 .6,8.4L.3,12.6C.1,14.3 -1,14.9 -2.1,14.9 -3.2,14.9 -4.3,14.2 -4.5,12.6Z\"/></g><g xmlns=\"http://www.w3.org/2000/svg\" id=\"demo-shoe-r\"><path d=\"M3,-8C5.5,-8 6.8,-4.8 6.6,-.8 6.4,2.2 5.2,4.6 4.2,6 3,6.5 .2,6.5 -.8,6 -1.7,4.4 -2.4,1.6 -2.2,-1.4 -1.9,-5.2 .2,-8 3,-8Z\"/><path d=\"M4.5,8.4C3.2,8 .4,8 -.6,8.4L-.3,12.6C-.1,14.3 1,14.9 2.1,14.9 3.2,14.9 4.3,14.2 4.5,12.6Z\"/></g>";

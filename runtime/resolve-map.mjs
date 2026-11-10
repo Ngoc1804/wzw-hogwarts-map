@@ -1,17 +1,31 @@
 import registry from './templates.json' with {type:'json'};
 import {assertMapData} from './map-data.mjs';
-export const LAYOUT_ALGORITHM='hybrid-v1';
-export function layoutIdentity(data){return JSON.stringify([data.worldId,data.view.scopeId,data.layout.scopeKey,data.layout.version])}
-export async function layoutSeed(data){const bytes=new TextEncoder().encode(layoutIdentity(data));const hash=await crypto.subtle.digest('SHA-256',bytes);return [...new Uint8Array(hash)].map(v=>v.toString(16).padStart(2,'0')).join('')}
+import {assertAllowedScene,assertGeneratedScene,canonicalPlaceId,isKnownAtlasPlace,verifiedAtlasBinding,generatedSceneOptions,canonicalPlaceFunction,isCanonicalCorridor} from './atlas-scene.mjs';
 export function resolveMap(data,templates=registry.templates){
-  assertMapData(data);
-  const required=data.places.filter(p=>data.visibility.visiblePlaceIds.includes(p.id));
-  const candidates=Object.entries(templates).filter(([,t])=>required.every(p=>p.atlasRef&&t.targets[p.atlasRef]?.length));
-  let selected=data.view.templateId?candidates.find(([id])=>id===data.view.templateId):candidates[0];
-  if(data.view.preferredMode==='generated')selected=null;
-  if(data.view.preferredMode==='template'&&!selected)throw new Error('Requested template cannot cover the local places');
-  if(selected){const [id,t]=selected;return {mode:'template',templateId:id,mapId:t.mapId,requiresLocalCrop:true,targets:required.map(p=>({placeId:p.id,interactiveIds:t.targets[p.atlasRef]})),layoutKey:layoutIdentity(data)}}
-  for(const p of required)if(!p.generation)throw new Error('Generated place requires a recipe description or atlas adapter: '+p.id);
-  return {mode:'generated',scopeId:data.view.scopeId,places:required.map(p=>({id:p.id,recipe:p.generation})),connections:data.connections,layoutKey:layoutIdentity(data),algorithm:LAYOUT_ALGORITHM};
+ assertMapData(data);
+ const places=data.places.filter(p=>data.visibility.visiblePlaceIds.includes(p.id));
+ assertAllowedScene(places.map(p=>p.id));
+ const technical=(p,id)=>{
+  const candidate=verifiedAtlasBinding(p.id,id)||verifiedAtlasBinding(p.atlasRef||'',id)||p.atlasRef;
+  return candidate&&templates[id]?.targets[candidate]?.length?candidate:null;
+ };
+ const eligible=Object.keys(templates).filter(id=>places.every(p=>technical(p,id)));
+ const selected=data.view.templateId?eligible.find(id=>id===data.view.templateId):eligible[0];
+ if(data.view.preferredMode!=='generated'&&selected){
+  const resolved=places.map(p=>({...p,id:canonicalPlaceId(p.id),atlasRef:technical(p,selected)}));
+  return {mode:'template',templateId:selected,places:resolved,targets:resolved.map(p=>({placeId:p.id,interactiveIds:templates[selected].targets[p.atlasRef]}))};
+ }
+ if(data.view.preferredMode==='template')throw Error('Requested template cannot cover visible places');
+ assertGeneratedScene(places.map(p=>p.id));
+ const resolved=places.map(p=>{
+  if(canonicalPlaceFunction(p.id)==='outdoor'||['grounds','street','region'].includes(p.kind))throw Error('Outdoor place requires an actual template or verified exterior surface: '+p.id);
+  if(p.generation)return {...p,id:canonicalPlaceId(p.id)};
+  if(!isKnownAtlasPlace(p.id))throw Error('Missing recipe for '+p.id);
+  const kind=isCanonicalCorridor(p.id)?'corridor':p.kind;
+  return {...p,kind,id:canonicalPlaceId(p.id),generation:{function:canonicalPlaceFunction(p.id)||kind||'room',shape:kind==='corridor'?'straight':'rectangle',furnishings:[]}};
+ });
+ const seen=new Set();
+ for(const p of resolved){if(seen.has(p.id))throw Error('Duplicate canonical place in current scene: '+p.id);seen.add(p.id)}
+ const connections=data.connections.filter(c=>seen.has(canonicalPlaceId(c.from))&&seen.has(canonicalPlaceId(c.to))).map(c=>({...c,from:canonicalPlaceId(c.from),to:canonicalPlaceId(c.to)}));
+ return {mode:'generated',places:resolved,connections,indoor:generatedSceneOptions(data,{places:resolved})};
 }
-// This resolves a render plan only. It never mounts a full floor or regenerates stored geometry.
