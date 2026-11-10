@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0.0",
+  "campaignId": "hogwarts-rp-test",
+  "worldId": "hogwarts-1992",
+  "snapshotId": "ccc-room-scene-001",
+  "atlasVersion": "template-index-v2",
+  "meta": {
+    "date": "1992-09-11",
+    "time": "20:15",
+    "areaName": "CCC Room · Phòng riêng",
+    "quote": "Đèn bàn sáng, hai người đang xem lại bản ghi chép."
+  },
+  "view": {
+    "scopeId": "ccc-room",
+    "spaceKind": "interior",
+    "preferredMode": "generated",
+    "templateId": null,
+    "centerPlaceId": "ccc-main-room",
+    "routePlaceIds": [
+      "ccc-main-room"
+    ],
+    "maxHops": 0,
+    "maxPlaces": 1
+  },
+  "focus": {
+    "pcActorId": "pc",
+    "actualPlaceId": "ccc-main-room",
+    "selectedId": null
+  },
+  "places": [
+    {
+      "id": "ccc-main-room",
+      "name": "CCC Room",
+      "atlasRef": null,
+      "kind": "room",
+      "parentId": null,
+      "floor": "1",
+      "zone": "core",
+      "inspector": {
+        "overhear": "Tiếng lật giấy bên bàn đọc.",
+        "observation": "Một căn phòng chữ L với lối đi sàn trống; ghế và kệ nằm sát tường."
+      },
+      "generation": {
+        "function": "private-study",
+        "shape": "L",
+        "furnishings": [
+          {
+            "role": "study-desk",
+            "count": 1
+          },
+          {
+            "role": "armchair",
+            "count": 2
+          },
+          {
+            "role": "bookcase",
+            "count": 2
+          }
+        ]
+      }
+    }
+  ],
+  "connections": [],
+  "actors": [
+    {
+      "id": "pc",
+      "name": "BẠN",
+      "isPC": true,
+      "entityType": "person",
+      "placeId": "ccc-main-room",
+      "tagType": "gryffindor",
+      "role": null,
+      "onPatrol": false,
+      "stance": "idle",
+      "activity": "Đứng cạnh bàn đọc",
+      "priority": 100,
+      "positionMode": "normal",
+      "positionReason": null,
+      "presenceBasis": "status",
+      "inspector": {
+        "overhear": "Đang xem lại ghi chép.",
+        "observation": "Vị trí trên nền sàn phòng."
+      }
+    },
+    {
+      "id": "companion",
+      "name": "Bạn đồng hành",
+      "isPC": false,
+      "entityType": "person",
+      "placeId": "ccc-main-room",
+      "tagType": "adult",
+      "role": null,
+      "onPatrol": false,
+      "stance": "idle",
+      "activity": "Đang trao đổi với PC",
+      "priority": 60,
+      "positionMode": "normal",
+      "positionReason": null,
+      "presenceBasis": "scene",
+      "inspector": {
+        "overhear": "Một cuộc trò chuyện ngắn.",
+        "observation": "Đứng ở phần sàn trống, không trùng PC."
+      }
+    }
+  ],
+  "hints": [],
+  "visibility": {
+    "visiblePlaceIds": [
+      "ccc-main-room"
+    ],
+    "fogRegionIds": []
+  },
+  "questPolicy": {
+    "month": "1992-09",
+    "packId": "pack-1992-09",
+    "limits": {
+      "main": 0,
+      "side": 0,
+      "pool": 0,
+      "life": 6
+    }
+  },
+  "layout": {
+    "scopeKey": "ccc-room-layout",
+    "version": 1,
+    "stateRef": null
+  }
+}
