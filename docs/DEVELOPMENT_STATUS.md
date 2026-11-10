@@ -25,7 +25,7 @@ Báo cáo máy đọc: `docs/atlas-coverage.json`; tái kiểm: `node tools/audi
 
 Không lưu layout, không pathfinding, không tự mở các AU đang khóa. Không merge main. AI Studio có đăng nhập và điện thoại thật chưa nghiệm thu.
 
-Bundle: 3e6742725616f0d4e102c11ee0734641306c2933 (asset/atlas giữ SHA nguồn cũ vì artwork không đổi).
+Bundle: aabeb15e6e36bee21acd91ef81ee7e38b30573f4 (asset/atlas giữ SHA nguồn cũ vì artwork không đổi).
 
 ## Indoor và flow đơn giản hóa
 

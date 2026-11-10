@@ -38,7 +38,10 @@
     "bytes": 316766,
     "previousBytes": 533471,
     "sha256": "5fd317751eba115fafd928bb3ecd0e4cb2beb513870ccae2883fa27208674bb0",
-    "staticAssetRef": "6d99d1486ace2fa186b3827702c23629f78fa62a"
+    "staticAssetRef": "6d99d1486ace2fa186b3827702c23629f78fa62a",
+    "commit": "aabeb15e6e36bee21acd91ef81ee7e38b30573f4",
+    "cdnVerified": true,
+    "cdnSha256": "5fd317751eba115fafd928bb3ecd0e4cb2beb513870ccae2883fa27208674bb0"
   },
   "notYetAccepted": [
     "Authenticated Google AI Studio Preview",
