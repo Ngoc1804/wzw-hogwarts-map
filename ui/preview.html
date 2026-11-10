@@ -1,5 +1,13 @@
-<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><body>
-<p id="status" role="status">Đang tải bản đồ…</p>
-<script type="application/json" id="MAP_DATA">__LIVE_MAP_DATA_JSON__</script>
-<script src="https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@35687ba484a6834ceb0b1d692e54f80ac435b6d3/runtime/bundle.js" onerror="document.getElementById('status').textContent='Không tải được engine bản đồ. Hãy kiểm tra kết nối hoặc URL phát hành.'"></script>
-</body></html>
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><style>html,body{margin:0;height:100%;background:#eee4d1}#status{margin:0;padding:8px;font:14px Georgia}iframe{display:block;width:100%;height:calc(100dvh - 36px);border:0}</style></head><body>
+<p id="status" role="status">Đang tải bản đồ…</p><iframe title="Bản đồ RP" sandbox="allow-scripts allow-downloads"></iframe>
+<script type="application/json" id="rp-map-data">__LIVE_MAP_DATA_JSON__</script>
+<script>
+(async()=>{const status=document.getElementById('status');try{
+const data=JSON.parse(document.getElementById('rp-map-data').textContent);
+const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@35687ba484a6834ceb0b1d692e54f80ac435b6d3/runtime/bundle.js');
+if(!response.ok)throw Error('Runtime HTTP '+response.status);
+const code=await response.text(),end='</scr'+'ipt>';
+document.querySelector('iframe').srcdoc='<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+JSON.stringify(data).replace(/</g,'\\u003c')+end+'<script>'+code.replace(/<\/script/gi,'<\\/script')+end+'</body></html>';
+status.textContent='Engine đã tải; bản đồ hoặc lỗi dữ liệu nằm trong khung.';
+}catch(e){status.textContent='Không mở được bản đồ: '+e.message;}})();
+</script></body></html>

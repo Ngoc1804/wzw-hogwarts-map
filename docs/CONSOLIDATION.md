@@ -18,7 +18,7 @@ Nền: fix/map-flow-review@c2aa907ccdcdb904e6ed0e52ee42ab287300f28e. Nhánh phá
 - Bỏ bản scenery-review.html sinh lặp từ kho asset và builder chỉ phục vụ bản đó; gallery 259 SVG giữ lại.
 - Bỏ test_browser.cjs dạng mở tay và test_map_data.mjs chỉ import trùng test_runtime; thay bằng runner browser có assertion, gọi được trong CI.
 - Gộp CLEANUP/DEVELOPMENT_STATUS/GEMINI_QUICKSTART/RUNTIME_USAGE/INDOOR_PREVIEW vào MAP_FLOW; kết quả test chỉ ở validation.json. Báo cáo thiếu binding có bằng chứng vẫn giữ.
-- Runtime chỉ có một bundle, một schema 3.0 và loader tải script trực tiếp; bỏ iframe lồng thêm và không fetch lại bundle để bắt đầu render. Code bundle chỉ được fetch lại khi cần xuất HTML offline.
+- Runtime chỉ có một bundle, một schema 3.0 và loader dùng JavaScript nội tuyến tải bundle và dựng iframe sandbox. Không cần nạp file lookup bên ngoài prompt. Bundle tải một lần bởi bootstrap và được nhúng khi tải HTML offline.
 - Asset, atlas nguồn, artwork index.html và palette không bị sinh lại. Bản giả lập và ảnh sinh ngoài repo.
 
 ## Phạm vi còn thiếu

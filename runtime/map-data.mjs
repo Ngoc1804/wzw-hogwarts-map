@@ -1,4 +1,35 @@
 import schema from './map-data.schema.json' with {type:'json'};
+import sceneAtlas from './atlas-index.json' with {type:'json'};
+
+// Exact public labels are resolved here so Gemini needs no external lookup pack.
+const atlasKnownIds=new Set(sceneAtlas.knownPlaceIds);
+const exactPlaceNames=new Map();
+const nameKey=value=>typeof value==='string'?value.normalize('NFC').trim().toLocaleLowerCase('vi'):'';
+for(const [id,name] of Object.entries(sceneAtlas.canonicalNameById)){
+ const key=nameKey(name);if(!exactPlaceNames.has(key))exactPlaceNames.set(key,[]);exactPlaceNames.get(key).push(id);
+}
+function resolvePublicPlaceNames(data){
+ if(!Array.isArray(data.places))return data;
+ const aliases=new Map();
+ for(const p of data.places){
+  if(!p||typeof p!=='object'||typeof p.id!=='string')continue;
+  const canonical=sceneAtlas.aliases[p.id]||p.id;
+  if(atlasKnownIds.has(canonical)){aliases.set(p.id,canonical);continue;}
+  // Generic room labels cannot identify an AU house or another specific building.
+  if(/^(phòng (ngủ|khách|tắm|học|chính)|thư viện|bếp|kho|hành lang|sân trong|vườn)$/.test(nameKey(p.name)))continue;
+  const matches=exactPlaceNames.get(nameKey(p.name))||[];
+  if(matches.length===1)aliases.set(p.id,matches[0]);
+ }
+ const id=value=>aliases.get(value)||value;
+ const mapRows=(rows,fn)=>Array.isArray(rows)?rows.map(row=>row&&typeof row==='object'?fn(row):row):rows;
+ return {...data,places:mapRows(data.places,p=>({...p,id:id(p.id)})),
+  actors:mapRows(data.actors,a=>({...a,placeId:id(a.placeId)})),
+  hints:mapRows(data.hints,h=>({...h,placeId:id(h.placeId)})),
+  connections:mapRows(data.connections,c=>({...c,from:id(c.from),to:id(c.to)})),
+  ...(data.view&&typeof data.view==='object'&&!Array.isArray(data.view)?{view:{...data.view,
+   ...(data.view.selectedId!==undefined?{selectedId:id(data.view.selectedId)}:{}),
+   ...(Array.isArray(data.view.routePlaceIds)?{routePlaceIds:data.view.routePlaceIds.map(id)}:{})}}:{})};
+}
 
 // Apply only declared presentation defaults. Never infer RP facts or visibility.
 export function normalizeMapData(value, rule=schema) {
@@ -11,7 +42,7 @@ export function normalizeMapData(value, rule=schema) {
       const normalized=normalizeMapData(value[key],child);
       if(normalized!==undefined)out[key]=normalized;
     }
-    return out;
+    return rule===schema?resolvePublicPlaceNames(out):out;
   }
   return value;
 }

@@ -76,3 +76,21 @@ test('partial inspector text is optional and connection state cannot be invented
  assert.equal(assertMapData(d).actors[0].inspector.overhear,'');
  d.connections=[{from:d.places[0].id,to:d.places[0].id}];assert.equal(validateMapData(d).ok,false);
 });
+
+test('engine resolves a unique exact public place name without a lookup attachment',async()=>{
+ const {assertMapData}=await import('../runtime/map-data.mjs');
+ const d={meta:{date:'1992-09-11',time:'10:25',areaName:'Bộ Pháp thuật'},places:[{id:'here',name:'Khu an ninh Bộ Pháp thuật',kind:'hall'}],actors:[{id:'pc',name:'BẠN',isPC:true,placeId:'here',environment:'inside'}],hints:[{id:'h',placeId:'here',type:'life',title:'Ghi chú công khai'}]};
+ const before=structuredClone(d),n=assertMapData(d),p=resolveMap(d);
+ assert.deepEqual(d,before);assert.equal(p.mode,'template');assert.equal(n.actors[0].placeId,n.places[0].id);assert.equal(n.hints[0].placeId,n.places[0].id);
+ assert.equal(p.places[0].atlasRef,'ministry-security');
+});
+test('exact-name lookup does not fuzzy-match near names or bypass canonical locks',()=>{
+ const d={meta:{date:'1992-09-11',time:'10:25',areaName:'Bộ Pháp thuật'},places:[{id:'here',name:'Khu an ninh Bộ Pháp thuật gần đó',kind:'hall'}],actors:[{id:'pc',name:'BẠN',isPC:true,placeId:'here'}]};
+ assert.throws(()=>resolveMap(d),/Missing recipe/);
+});
+
+test('generic bedroom label never selects a locked AU bedroom',async()=>{
+ const {assertMapData}=await import('../runtime/map-data.mjs');
+ const d={meta:{date:'1992-09-11',time:'10:25',areaName:'Cảnh hiện tại'},places:[{id:'local-bedroom',name:'Phòng ngủ',kind:'room',generation:{function:'bedroom'}}],actors:[{id:'pc',name:'BẠN',placeId:'local-bedroom',isPC:true}]};
+ assert.equal(assertMapData(d).places[0].id,'local-bedroom');assert.equal(resolveMap(d).mode,'generated');
+});

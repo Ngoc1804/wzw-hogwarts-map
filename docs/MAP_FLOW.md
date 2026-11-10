@@ -1,6 +1,6 @@
 # Demo 2 — /MAP
 
-Gemini đọc RP → xuất dữ liệu cảnh công khai → loader tải bundle ghim commit → engine chọn template hoặc dựng indoor → ghép nội thất → đặt nhân vật → UI. Preview một chiều, không backend/seed/lưu layout, không thay đổi RP khi click. Ngày giờ lấy từ RP.
+Gemini đọc RP → xuất dữ liệu cảnh công khai → loader nội tuyến tải bundle ghim commit → engine chọn template hoặc dựng indoor → ghép nội thất → đặt nhân vật → UI. Preview một chiều, không backend/seed/lưu layout, không thay đổi RP khi click. Ngày giờ lấy từ RP.
 
 ## Một hợp đồng
 
@@ -16,7 +16,7 @@ Nguồn duy nhất: `runtime/map-data.schema.json` (3.0.0). Chỉ bắt buộc `
 
 ## Chọn map và đặt nhân vật
 
-Tra `maps/ai-lookup.json` khi tạo dữ liệu (nạp vào ngữ cảnh Gemini một lần; URL không tự cấp kiến thức cho model). Runtime dùng atlas-index/templates đã đóng gói để tra ID chuẩn/alias. `view.templateId` và preferredMode chỉ cần khi muốn chỉ định template hay chọn dựng phòng. Không fuzzy-match tên. ID cảnh tự đặt chỉ dùng cho indoor được mô tả rõ, không đổi ID địa điểm bị khóa để né policy.
+Không yêu cầu Gemini nạp lookup/catalog. Gemini gửi ID cục bộ và tên địa điểm thật từ RP; runtime đối chiếu tên chuẩn duy nhất (chuẩn hóa Unicode, hoa/thường) với atlas-index/templates đã đóng gói và cập nhật mọi tham chiếu. Tên không khớp hoặc trùng không được fuzzy-match; cảnh indoor cục bộ phải có generation.function, còn template cố định thiếu mapping thì báo rõ. ID chuẩn/alias vẫn nhận trực tiếp nếu đã biết. `view.templateId` và preferredMode chỉ cần khi muốn chỉ định template hay chọn dựng phòng. Không fuzzy-match tên. ID cảnh tự đặt chỉ dùng cho indoor được mô tả rõ, không đổi ID địa điểm bị khóa để né policy.
 
 Một cảnh một tầng; một phòng không tự tạo hành lang. Chọn auto khi không có yêu cầu riêng. Template cố định và ngoài trời không dựng lại bằng indoor. Chỉ mở CCC 07.18 phòng chính, Nhà PC London và Liad’s Attic trong AU. 90 mục giữ khóa. 84 mục thiếu binding/surface giữ nguyên, xem COVERAGE_REVIEW.md.
 

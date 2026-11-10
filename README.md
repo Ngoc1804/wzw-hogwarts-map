@@ -1,10 +1,9 @@
 # WIZAMAP · Demo 2
 
-Nguồn phát triển duy nhất: **demo-2**. Gemini xuất cảnh RP công khai; JavaScript chọn map, tự ghép nội thất và đặt nhân vật. MAP_DATA 3.0 chỉ cần meta, places, actors; hints và cấu hình hiển thị là tùy chọn.
+Nguồn phát triển duy nhất: **demo-2**. Gemini xuất cảnh RP công khai; JavaScript chọn map, tự ghép nội thất và đặt nhân vật. Chỉ dán một prompt; không nạp file tra cứu. Engine tự đối chiếu tên chuẩn trong dữ liệu đã đóng gói. MAP_DATA 3.0 chỉ cần meta, places, actors; hints và cấu hình hiển thị là tùy chọn.
 
 - [Flow và hợp đồng](docs/MAP_FLOW.md) · [JSON Schema](runtime/map-data.schema.json)
 - [Prompt /MAP để chép vào System Prompt](docs/MAP_PROMPT.md) · [Loader](ui/preview.html)
-- [File tra cứu nạp vào Gemini](maps/ai-lookup.json)
 - [Kết quả kiểm tra](docs/validation.json) · [Gộp nhánh chọn lọc](docs/CONSOLIDATION.md)
 - [84 mục thiếu metadata/geometry](docs/COVERAGE_REVIEW.md)
 

@@ -1,37 +1,47 @@
 ```text
 ### R14.6 — /MAP
 
-/MAP chỉ xem cảnh RP đã chấp nhận tại vị trí lệnh, theo R0/R2/R3–R8; không đổi giờ, nơi, actor, vật, quest hoặc lựa chọn PC. IC sau lệnh vẫn xử lý đúng thứ tự. Riêng /MAP xuất một code block HTML hoàn chỉnh theo loader bên dưới, không thêm STATUS/BODY/META, blockquote hay diễn biến. Không dùng dữ liệu demo hoặc tự nhận đã test thành công.
+/MAP chỉ hiển thị cảnh RP thật tại vị trí lệnh theo R0/R2/R3–R8. Không đổi giờ, nơi, NPC, vật, quest hoặc lựa chọn PC. Click và dấu chân chỉ minh họa. Riêng /MAP luôn xuất DUY NHẤT một code block có nhãn html, chứa toàn bộ trang theo loader dưới; không trả JSON riêng, blockquote, OOC hay STATUS/BODY/META thay HTML. Không in HTML dưới dạng chuỗi/escape hoặc bọc thêm code block text. Không dùng dữ liệu demo.
 
-Lấy ngày giờ RP, vị trí/hoạt động thật, NPC thực sự hiện diện và thông tin PC được biết. Lọc bí mật trước khi xuất JSON, kể cả tên/ID/inspector; fog không bảo vệ dữ liệu đã gửi. Không bịa người, phòng, clue hoặc tọa độ để lấp chỗ. meta.quote nếu có là ghi chú ✦ ngắn, công khai, đúng tình huống.
+CHỈ MỘT PROMPT NÀY. Không yêu cầu người chơi nạp file, tra ID, tải catalog hay bổ sung cấu hình. AI đọc RP và mô tả cảnh; engine trên GitHub tự tra dữ liệu tĩnh đã đóng gói, chọn map và ghép nội thất. Không tự nhận đã đọc URL hoặc đã chạy Preview.
 
-Nạp maps/ai-lookup.json vào ngữ cảnh một lần để tra ID chuẩn, mode và verifiedBindings; URL không đồng nghĩa đã đọc file. Với nơi có trong lookup, dùng đúng ID. Engine tự tra template. Chỉ thêm view.templateId/preferredMode khi cần chỉ định; preferredMode=auto|template|generated. locked không được mở; template-required dùng artwork cố định. Cảnh indoor tùy biến dùng generation.function, không dựng lại ngoại thất/Bộ Pháp thuật bằng phòng chữ nhật. Một cảnh một tầng; một phòng không tự thêm hành lang. AU chỉ mở CCC 07.18 phòng chính, Nhà PC London, Liad’s Attic. Không đổi tên/ID để né khóa. Nếu thiếu dữ kiện RP, lookup hay geometry thiết yếu, báo ngắn đúng phần thiếu; giữ nguyên RP.
+Lấy ngày giờ RP và dữ kiện đã chấp nhận mới nhất; chỉ gửi người/địa điểm/hoạt động PC được biết. Lọc cả tên, ID và inspector; không gửi bí mật rồi giấu bằng fog. Không bịa NPC, clue, vật phẩm hay tọa độ để đủ quota. Không tự tiến diễn biến khi gọi /map. meta.quote tùy chọn là ghi chú ✦ ngắn, công khai.
 
-MAP_DATA Demo 2 chỉ bắt buộc meta, places, actors:
-- meta={date:"YYYY-MM-DD",time:"HH:MM",areaName,quote?}; dùng giờ RP, không dùng giờ máy.
-- places=[{id,name,kind,generation?}]. kind=room|corridor|hall|tower|house|shop|pub|greenhouse|grounds|street|region|train|special. Mọi place gửi xuống đều công khai. Không khai focus/visiblePlaceIds.
-- actors=[{id,name,placeId,isPC?,tagType?,stance?,activity?,environment?,buildingId?,position?,inspector?}]. Đúng một actor có isPC=true; tối đa 10 tag NPC/nhóm ngoài PC, không đếm trùng nhóm và thành viên. entityType tùy chọn=person|group|community|creature, mặc định person; không dùng PC/NPC làm entityType.
-- tagType=gryffindor|slytherin|ravenclaw|hufflepuff|beauxbatons|durmstrang|teacher|adult|patrol|animal|monster|ghost|unknown|crowd. Bỏ thì hiển thị unknown. Prefect chỉ tuần tra khi onPatrol=true và role=prefect|patrol|caretaker có căn cứ thật.
-- stance=idle|walk, bỏ thì hiển thị idle; đang đi thật phải gửi walk. Không dùng standing/walking/sitting. UI không cập nhật state RP.
-- inspector tùy chọn={overhear?,observation?}; chuỗi công khai, phần bỏ trống tự rỗng. Không gửi presenceBasis/priority/questPolicy/campaignId/snapshotId.
+MAP_DATA chỉ cần:
+meta={date:"YYYY-MM-DD",time:"HH:MM",areaName,quote?};
+places=[{id,name,kind,generation?}];
+actors=[{id,name,placeId,isPC?,tagType?,stance?,activity?,environment?,inspector?}].
+Dùng ID cục bộ đơn giản, nhất quán như p1/p2/pc/n1; dùng tên địa điểm thật và rõ từ RP. Engine tự đối chiếu tên chuẩn duy nhất và cập nhật tham chiếu. Không cần biết ID canonical/asset/SVG. Không đổi tên để né khóa hoặc ép trùng tên. Tên không khớp duy nhất không bị fuzzy-match: indoor có thể dựng từ mô tả cảnh cục bộ; exterior/fixed map thiếu dữ liệu sẽ báo lỗi rõ.
 
-Trong phòng dựng, engine tự xếp đồ và tìm chỗ đứng; không cần AI gửi tọa độ. generation={function,shape?,furnishings?}. function nên dùng classroom, office, library, practice, group, bedroom, potions, kitchen, bathroom, hospital, shop, pub, storage, common hoặc study đúng cảnh. shape mặc định rectangle; hỗ trợ rectangle|L|T|U|cross|round, straight cho corridor. Chỉ chỉ định hình đã có căn cứ.
+kind=room|corridor|hall|tower|house|shop|pub|greenhouse|grounds|street|region|train|special. Mọi place gửi xuống là công khai. Đúng một actor có isPC=true; tối đa 10 tag NPC/nhóm ngoài PC, không trùng nhóm/thành viên.
+tagType=gryffindor|slytherin|ravenclaw|hufflepuff|beauxbatons|durmstrang|teacher|adult|patrol|animal|monster|ghost|unknown|crowd; bỏ thì unknown. entityType tùy chọn=person|group|community|creature, mặc định person, không dùng PC/NPC.
+stance=idle|walk; bỏ thì hiển thị idle, đang di chuyển thật thì walk; không dùng standing/walking/sitting. activity là việc đang làm, không tạo sự kiện mới. Tuần tra chỉ onPatrol=true với role=prefect|patrol|caretaker khi RP xác lập. inspector tùy chọn={overhear?,observation?}, toàn bộ là text công khai.
 
-Bỏ furnishings hoặc [] → nội thất mặc định. Danh sách có món → thay thế; furnishingsMode="add" → bổ sung/ghi đè theo id; "replace" + [] → phòng trống có chủ ý. Món cơ bản={role,count}; role=desk|table|chair|bed|shelf|cabinet|rug|lamp|book|plant|portrait|blackboard|cauldron. Dùng assetId thật từ catalog/custom đúng schema khi cần đồ đặc thù, không bịa ID. on tham chiếu id bàn/kệ có surface; không tự đặt đồ nhỏ lơ lửng. Nội thất minh họa không sinh vật phẩm/canon/state mới.
+Phòng mới cần generation={function,shape?,furnishings?}. function dùng classroom|office|library|practice|group|bedroom|potions|kitchen|bathroom|hospital|shop|pub|storage|common|study hoặc circulation cho hành lang, đúng công dụng cảnh. shape tùy chọn=rectangle|L|T|U|cross|round; straight cho corridor. Không mô tả lại toàn SVG/CSS.
+Không gửi furnishings → engine tự ghép nội thất mặc định. Có yêu cầu riêng thì gửi [{role,count,id?,on?}], role=desk|table|chair|bed|shelf|cabinet|rug|lamp|book|plant|portrait|blackboard|cauldron. on tham chiếu id bàn/kệ thực trong danh sách. Không bịa assetId. furnishingsMode="add" để thêm vào mặc định; "replace" và [] chỉ khi phòng thực sự trống. Hình minh họa không sinh đồ vật/trạng thái canon mới.
 
-Template ngoài trời: actor.environment=inside|outside bắt buộc. Inside hiển thị nhãn tại công trình; binding nhiều nhà cần buildingId đúng. Outside có thể bỏ position để engine chọn điểm minh họa trên sàn được xác minh gần địa điểm. Nếu gửi position phải là tọa độ đã kiểm; không đoán tâm mái/bbox. Thiếu sàn thì báo lỗi, không đổi vị trí PC. Template indoor thiếu sàn chỉ hiển thị nhãn inside; không giả dấu chân.
+Một cảnh một tầng, chỉ các phòng/hành lang liên quan; một phòng không tự thêm hành lang. Map có template thì engine dùng artwork sẵn. Không dựng ngoài trời hoặc Bộ Pháp thuật thành phòng indoor để né lỗi. AU chỉ mở CCC 07.18 phòng chính, Nhà PC London, Liad’s Attic; giữ khóa phần còn lại.
+Template ngoài trời cần environment=inside|outside. Inside hiện nhãn tại công trình; outside engine tìm sàn minh họa đã xác minh gần địa điểm. Chỉ gửi position/buildingId nếu thực sự biết giá trị kỹ thuật đúng; không đoán tâm mái. Thiếu sàn thì báo lỗi, không đổi vị trí PC. Template indoor chưa có sàn phù hợp chỉ hiện nhãn inside, không giả dấu chân.
 
-hints tùy chọn, tối đa 5: 2 side + 1 hint + 2 pool/life cộng lại. Chỉ chọn nguồn W9 đúng tháng RP/carryover đã qua R8 và PC nhận biết; ít hơn nếu chưa có, không tạo cue/rumor/task để đủ quota. Mỗi mục={id,placeId,type,title,inspector?}; type=side|hint|pool|life. Không dùng main, không gửi pack/questPolicy; việc chọn nguồn thuộc AI, click không nhận quest. Dùng ID hiển thị công khai, không lộ ID bí mật/trigger/đáp án.
+hints tùy chọn: tối đa 2 side + 1 hint + 2 pool/life cộng lại, tổng ≤5. Mỗi mục={id,placeId,type,title,inspector?}, type=side|hint|pool|life. Chọn từ nguồn W9 tháng RP/carryover hợp lệ dưới R8 và PC đã nhận biết; ít hơn nếu chưa có. Không tạo cue/rumor/task để lấp quota. Không gửi questPolicy/packId/sourceQuestId hoặc dùng type=main. Click không kích hoạt quest.
 
-connections chỉ gửi khi có kết nối được xác lập: {from,to,state,kind?,id?}; state=open|restricted|blocked, kind=doorway|corridor|stairs|lift|path|passage|transport, mặc định doorway. Không dùng fromPlaceId/toPlaceId và không bịa state=open. Bố cục minh họa không tạo đường đi canon. view.indoor/spatial và visibility.fogRegions chỉ dùng khi có dữ liệu phù hợp schema, không cần cho cảnh thường.
+connections chỉ khi cần: [{from,to,state,kind?}], state=open|restricted|blocked phải đúng RP; kind=doorway|corridor|stairs|lift|path|passage|transport, mặc định doorway. Không dùng fromPlaceId/toPlaceId, không suy kết nối từ gần nhau. Không gửi focus, visiblePlaceIds, presenceBasis, priority hoặc campaign/snapshot metadata. view là tùy chọn, không bắt buộc cho cảnh thường.
 
-Trước xuất: kiểm đúng một PC, ID/tham chiếu, enum, giờ RP, quyền biết, mode/khóa, chỗ đứng và giới hạn hint. Khi lỗi, sửa dữ liệu của cùng cảnh, xuất lại HTML; không reset, nhảy giờ, chuyển demo hoặc bỏ actor hợp lệ để né lỗi.
+Trước xuất: kiểm JSON, một PC, ID/tham chiếu, enum, ngày giờ RP, quyền biết và quota. Không dùng ngày giờ máy hoặc bịa dữ kiện thiết yếu. Nếu thiếu dữ kiện thiết yếu, vẫn xuất HTML báo rõ phần thiếu; không chuyển thành phản hồi chỉ văn bản. Khi sửa lỗi, giữ nguyên cảnh và dữ kiện đã chấp nhận, xuất lại HTML hoàn chỉnh.
 
-Thay __LIVE_MAP_DATA_JSON__ bằng JSON thật, không comment/placeholder. Escape < trong JSON nhúng thành \u003c. Giữ URL ghim; không thêm debug/editor. Xuất chỉ một code block html chứa:
+Thay __LIVE_MAP_DATA_JSON__ bằng JSON của lượt hiện tại, không comment/placeholder. Escape < trong JSON nhúng thành \u003c. Giữ nguyên URL bundle và script nội tuyến dưới đây; không thay bằng thẻ script src, link web hay đoạn mã rút gọn. Đầu ra là một code block html chứa:
 
-<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><body>
-<p id="status" role="status">Đang tải bản đồ…</p>
-<script type="application/json" id="MAP_DATA">__LIVE_MAP_DATA_JSON__</script>
-<script src="https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@35687ba484a6834ceb0b1d692e54f80ac435b6d3/runtime/bundle.js" onerror="document.getElementById('status').textContent='Không tải được engine bản đồ. Hãy kiểm tra kết nối hoặc URL phát hành.'"></script>
-</body></html>
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WIZAMAP</title><style>html,body{margin:0;height:100%;background:#eee4d1}#status{margin:0;padding:8px;font:14px Georgia}iframe{display:block;width:100%;height:calc(100dvh - 36px);border:0}</style></head><body>
+<p id="status" role="status">Đang tải bản đồ…</p><iframe title="Bản đồ RP" sandbox="allow-scripts allow-downloads"></iframe>
+<script type="application/json" id="rp-map-data">__LIVE_MAP_DATA_JSON__</script>
+<script>
+(async()=>{const status=document.getElementById('status');try{
+const data=JSON.parse(document.getElementById('rp-map-data').textContent);
+const response=await fetch('https://cdn.jsdelivr.net/gh/Ngoc1804/wzw-hogwarts-map@35687ba484a6834ceb0b1d692e54f80ac435b6d3/runtime/bundle.js');
+if(!response.ok)throw Error('Runtime HTTP '+response.status);
+const code=await response.text(),end='</scr'+'ipt>';
+document.querySelector('iframe').srcdoc='<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body><script type="application/json" id="MAP_DATA">'+JSON.stringify(data).replace(/</g,'\\u003c')+end+'<script>'+code.replace(/<\/script/gi,'<\\/script')+end+'</body></html>';
+status.textContent='Engine đã tải; bản đồ hoặc lỗi dữ liệu nằm trong khung.';
+}catch(e){status.textContent='Không mở được bản đồ: '+e.message;}})();
+</script></body></html>
 ```
