@@ -1,116 +1,66 @@
-import {exteriorContextFor} from './outdoor.mjs';
 import registry from './templates.json' with {type:'json'};
-import {mapSceneData} from './map-data.mjs';
-import {
- canonicalPlaceId,isKnownAtlasPlace,verifiedAtlasBinding,
- generatedSceneOptions,canonicalPlaceFunction,isCanonicalCorridor,
- assertAllowedScene,assertGeneratedScene,resolveAtlasLocality,
- atlasPlaceName,atlasPlaceKind,listVerifiedTemplateBindings,atlasVersion,isLockedAtlasPlace,sceneTemplateOwners,resolveRelativeSceneScope
-} from './atlas-scene.mjs';
+import {mapSceneData,placeNameKey} from './map-data.mjs';
+import {canonicalPlaceId,verifiedAtlasBinding,generatedSceneOptions,resolveAtlasLocality,atlasBackgroundPlaces,atlasVersion,sceneTemplateOwners,isKnownAtlasPlace,sceneAtlasReferences} from './atlas-scene.mjs';
 
-const TEMPLATE_SPECIFICITY={
- 'gryffindor-common':120,'ravenclaw-common':120,'hufflepuff-common':120,'slytherin-common':120,
- hall:115,'ministry-8-10':115,ministry2:110,express:110,'pitch-static':110,
- 'diagon-knockturn':108,'village-static':108,h2:45,h1:10
-};
-const technical=(p,id,templates)=>{
- const owners=sceneTemplateOwners[canonicalPlaceId(p.id)];
- if(isKnownAtlasPlace(p.id)&&(!owners||!owners.includes(id)))return null;
- const candidate=verifiedAtlasBinding(p.id,id)||verifiedAtlasBinding(p.atlasRef||'',id)||p.atlasRef;
- return candidate&&templates[id]?.targets[candidate]?.length?candidate:null;
-};
-const placeWithGeneration=(p)=>{
- const id=canonicalPlaceId(p.id);
- const kind=isKnownAtlasPlace(id)?atlasPlaceKind(id):p.kind;
- return {...p,id,kind,generation:p.generation||{
-  function:canonicalPlaceFunction(id)|| (kind==='corridor'?'circulation':'study'),
-  shape:kind==='corridor'?'straight':'rectangle'
- }};
-};
-
+const TEMPLATE_SPECIFICITY={'gryffindor-common':120,'ravenclaw-common':120,'hufflepuff-common':120,'slytherin-common':120,hall:115,'ministry-8-10':115,ministry2:110,express:110,'pitch-static':110,'diagon-knockturn':108,'village-static':108,h2:45,h1:10};
+function v4TemplateRef(place,templateId,templates){
+ const candidates=[verifiedAtlasBinding(place.id,templateId),place.atlasRef];
+ return candidates.find(ref=>typeof ref==='string'&&templates[templateId]?.targets?.[ref]?.length)||null;
+}
+function v4GeneratedPlace(place){
+ const generation=place.generation&&typeof place.generation==='object'?place.generation:{};
+ // Legacy renderer bridge only. The V4 builder consumes type/description/size/props.
+ const usable=new Set(['classroom','office','library','practice','group','bedroom','potions','kitchen','bathroom','hospital','shop','pub','storage','common','study','circulation','minimal']);
+ const aliases={administration:'office',residential:'bedroom',commerce:'shop',service:'minimal',other:'minimal',outdoor:'minimal'};
+ const requested=generation.function||place.type;
+ const fn=usable.has(requested)?requested:aliases[requested]||(place.kind==='corridor'?'circulation':'minimal');
+ return {...place,generation:{...generation,function:fn,shape:generation.shape||(place.kind==='corridor'?'straight':'rectangle')}};
+}
+function v4BlendPlaces(background,rp){
+ const result=background.map(p=>({...p})),byId=new Map(result.map((p,i)=>[p.id,i]));
+ for(const row of rp){
+  const id=canonicalPlaceId(row.id);
+  // Match canonical identity first. Name matching is restricted to a unique
+  // background entry, and never merges an explicitly different canonical ID.
+  let at=byId.get(id);
+  if(at===undefined&&!isKnownAtlasPlace(id)){
+   const matches=result.map((p,i)=>({p,i})).filter(({p})=>p.presentationSource==='atlas'&&placeNameKey(p.name)===placeNameKey(row.name));
+   if(matches.length===1)at=matches[0].i;
+  }
+  if(at===undefined){byId.set(id,result.length);result.push({...row,id,presentationSource:'rp'});}
+  else {const oldId=result[at].id;result[at]={...result[at],...row,id,presentationSource:'rp'};byId.delete(oldId);byId.set(id,at);}
+ }
+ return result;
+}
 export function resolveMap(input,templates=registry.templates){
- const data=mapSceneData(input);
- const pc=data.actors.find(a=>a.isPC);
- const pcId=canonicalPlaceId(pc.placeId);
- const listed=data.places.map(p=>({...p,id:canonicalPlaceId(p.id)}));
- if(new Set(listed.map(p=>p.id)).size!==listed.length)throw Error('Duplicate canonical place in current scene');
- assertAllowedScene(listed.map(p=>p.id));
- const known=isKnownAtlasPlace(pcId);
- const pcPlace=listed.find(p=>p.id===pcId);
- if(!pcPlace)throw Error('The PC place must appear in MAP_DATA.places');
- const relative=['corridor','threshold','adhoc'].includes(data.view.spotType)&&!known&&pcPlace.kind==='corridor'&&!data.customScene;
- const relativeGroup=relative?resolveRelativeSceneScope(data.view.scopeId,data.view.nearPlace):null;
- if(relative&&!relativeGroup)throw Error('Cannot verify corridor scope: provide a known nearby room or approved scopeId');
- if(data.customScene&&known)throw Error('Custom scene cannot override canonical Atlas location');
-
- // Explicit AU/user-made scenes must not shadow an Atlas item or locked map.
- if(data.customScene){
-  if(data.view.preferredMode==='template')throw Error('Custom scene cannot require a fixed template');
-  if(listed.some(p=>isKnownAtlasPlace(p.id)||isLockedAtlasPlace(p.id)))
-   throw Error('User-created scene must use its own place IDs, not Atlas place IDs');
-  const places=listed.map(p=>{
-   const kind=p.kind;
-   if(!p.generation&& !['grounds','street','region'].includes(kind))
-    return {...p,generation:{function:kind==='corridor'?'circulation':kind==='house'?'residential':kind==='shop'?'shop':'study'}};
-   return p;
-  });
-  return {mode:'generated',sceneType:'custom',customScene:data.customScene,
-   scopeId:data.customScene.id,atlasVersion:atlasVersion(),places,
-   connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
- }
- // PC-controlled template selection: actors elsewhere must not defeat fixed artwork.
- // Legacy locally described indoor rooms remain supported. Unknown outdoor/AU
- // parcels require an explicit, short customScene description.
- const localIndoor=!known&&listed.every(p=>p.generation&&['room','corridor','hall','tower','house','shop','pub','greenhouse','special'].includes(p.kind));
- if(!known&&!relativeGroup&&!localIndoor&&!pcPlace.atlasRef)
-  throw Error('Missing recipe or unknown Atlas PC location: provide a user-created customScene with a short structural description');
- const preferred=data.view.templateId;
- const candidates=relativeGroup?[]:Object.keys(listVerifiedTemplateBindings(pcId)).filter(id=>technical(pcPlace,id,templates));
- const eligible=candidates.length?candidates:Object.keys(templates).filter(id=>technical(pcPlace,id,templates));
- // A local Atlas reference is display-only: it may target existing public
- // artwork but cannot grant entry to protected canonical places.
+ const data=mapSceneData(input),pc=data.actors.find(a=>a.isPC);
+ const pcId=canonicalPlaceId(pc?.placeId||data.focus.actualPlaceId);
+ const anchor=data.atlasAnchor,custom=anchor.toLowerCase()==='custom'||Boolean(data.customScene);
+ const listed=data.places.map(p=>({...p,id:custom?p.id:canonicalPlaceId(p.id)}));
+ const pcPlace=listed.find(p=>p.id===pcId)||listed[0];
+ const group=custom?null:resolveAtlasLocality(pcId,anchor);
+ const routed=(group&&!group.placeIds.length)?(sceneAtlasReferences(group.key).find(r=>r.targetScopeId?.startsWith('template:'))?.targetScopeId.slice(9)):null;
+ const explicitTemplate=templates[anchor]?anchor:templates[data.view.templateId]?data.view.templateId:templates[routed]?routed:null;
+ const owners=sceneTemplateOwners[pcId]||[];
+ const eligible=Object.keys(templates).filter(id=>owners.includes(id)||v4TemplateRef(pcPlace,id,templates));
  eligible.sort((a,b)=>(TEMPLATE_SPECIFICITY[b]||70)-(TEMPLATE_SPECIFICITY[a]||70)||a.localeCompare(b));
- if(preferred&&data.view.preferredMode!=='generated'&&!eligible.includes(preferred))
-  throw Error('Requested template has no verified PC binding: '+preferred);
- const selected=data.view.preferredMode!=='generated'?(preferred||eligible[0]):null;
+ // Explicit semantic indoor/outdoor modes also request generated rendering.
+ const forceGenerated=custom||['indoor','outdoor'].includes(data.mapMode)||data.view.preferredMode==='generated';
+ const selected=forceGenerated?null:explicitTemplate||eligible[0];
+ const base={atlasVersion:atlasVersion(),actors:data.actors,events:data.events,diagnostics:[...data.diagnostics],connections:data.connections};
  if(selected){
-  const places=listed.filter(p=>technical(p,selected,templates))
-   .map(p=>({...p,atlasRef:technical(p,selected,templates)}));
-  return {mode:'template',templateId:selected,scopeId:'template:'+selected,atlasVersion:atlasVersion(),
-   places,targets:places.map(p=>({placeId:p.id,interactiveIds:templates[selected].targets[p.atlasRef]}))};
+  // Keep every RP place even when detailed artwork bindings are unavailable.
+  const places=listed.map(p=>{
+   const ref=v4TemplateRef(p,selected,templates);
+   return {...p,...(ref?{atlasRef:ref}:{}),anchorPrecision:ref?'source-binding':'illustrative-template'};
+  });
+  return {...base,mode:'template',mapMode:'template',templateId:selected,sceneType:'template',scopeId:'template:'+selected,places,targets:places.map(p=>({placeId:p.id,interactiveIds:templates[selected].targets[p.atlasRef]||[],precision:p.anchorPrecision}))};
  }
- if(data.view.preferredMode==='template')throw Error('PC location has no verified fixed template');
- assertGeneratedScene([pcId]);
- if(!known&&!relativeGroup){
-  if(!localIndoor)throw Error('Missing recipe: unknown Atlas location requires an explicit customScene structural description and valid generation');
-  const places=listed.map(placeWithGeneration);
-  return {mode:'generated',sceneType:'local',scopeId:data.view.scopeId||'local:'+pcId,atlasVersion:atlasVersion(),places,
-   connections:data.connections,indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
- }
- const group=relativeGroup||resolveAtlasLocality(pcId,data.view.scopeId);
- if(!group){
-  if(sceneTemplateOwners[pcId])throw Error('Existing fixed map/template required; missing verified binding: '+pcId);
-   // Canonical standalone interiors use the same engine, without inventing a scope.
-  const places=[placeWithGeneration(pcPlace)];
-  return {mode:'generated',sceneType:'atlas',scopeId:'place:'+pcId,atlasVersion:atlasVersion(),
-   places,exteriorContext:exteriorContextFor(places),connections:[],indoor:{...data.view.indoor,layout:data.view.indoor?.layout||'auto'}};
- }
- const scopeIds=group.expand===false?[pcId]:group.placeIds;
- const ids=new Set(scopeIds);
- const explicit=new Map(listed.filter(p=>ids.has(p.id)).map(p=>[p.id,p]));
- const revealed=new Set((data.visibility.revealedPlaceIds||[]).map(canonicalPlaceId));
- const places=scopeIds.map(id=>{
-  if(isLockedAtlasPlace(id))return null;
-  const p=explicit.get(id),name=atlasPlaceName(id)||id;
-  const visible=Boolean(p||revealed.has(id));
-  const room={...(p||{id,name:visible?name:'Chưa khám phá',kind:atlasPlaceKind(id),generation:{function:isCanonicalCorridor(id)?'circulation':'minimal'}})};
-  if(!visible){room.name='Chưa khám phá';room.inspector={overhear:'',observation:''};}
-  return placeWithGeneration(room);
- }).filter(Boolean);
- if(relativeGroup)places.push({...pcPlace,kind:'corridor',generation:{...pcPlace.generation,function:'circulation'}});
- if(!places.some(p=>p.id===pcId))throw Error('PC location cannot be rendered by its Atlas scope');
- return {mode:'generated',sceneType:'atlas',scopeId:group.key,atlasVersion:atlasVersion(),
-  places,exteriorContext:exteriorContextFor(places)||(group.kind==='world'&&group.expand===false?{kind:'building',terrain:'grass'}:null),connections:data.connections.filter(c=>ids.has(canonicalPlaceId(c.from))&&ids.has(canonicalPlaceId(c.to))),
-  indoor:generatedSceneOptions(data,{places}),
-  ...(relativeGroup?{spot:{placeId:pcId,nearPlaceId:group.placeIds.includes(canonicalPlaceId(data.view.nearPlace))?canonicalPlaceId(data.view.nearPlace):null,type:data.view.spotType}}:{})};
+ const background=group&&(Boolean(anchor)||group.expand!==false)?atlasBackgroundPlaces(group):[];
+ const places=v4BlendPlaces(background,listed).map(v4GeneratedPlace);
+ const outdoor=data.mapMode==='outdoor'||!data.mapMode&&(['outdoor','village'].includes(data.customScene?.kind)||places.some(p=>['grounds','street','region'].includes(p.kind)));
+ const fallback=data.diagnostics.length>0||Boolean(anchor&&!custom&&!group&&!explicitTemplate)||data.mapMode==='template';
+ if(group?.buildEnabled===false)base.diagnostics.push('Atlas scope is marked LOCKED/UNBUILT; only supplied RP places are illustrated.');
+ return {...base,mode:'generated',mapMode:outdoor?'outdoor':'indoor',sceneType:custom?'custom':group?'atlas':'local',scopeId:group?.key||data.customScene?.id||'local:'+pcId,places,indoor:generatedSceneOptions(data,{atlasGroup:group,places}),layoutType:generatedSceneOptions(data,{atlasGroup:group,places}).layout,
+  ...(data.customScene?{customScene:data.customScene}:{}),...(outdoor?{exteriorContext:{kind:'outdoor',terrain:data.customScene?.terrain||'grass'}}:{}),fallback,illustrative:true};
 }

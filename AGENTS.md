@@ -1,3 +1,15 @@
+# demo-5 — current V4 scope (overrides historical contract/gates below)
+
+User authorized PH0, PH2 and PH3; PH1 Entry/Preview is already accepted. Use MAP_DATA V4 schema + the single legacy adapter in runtime/map-data.mjs. Follow docs/MAP_FLOW.md and docs/V4_PHASE_0_3.md. Do not restore schema-veto gates, Custom/canon-name rejection, scope filtering of new RP places, fixed corridor-family vetoes or old input actor/hint quotas. Preserve ACTIVE/LOCKED metadata; locked scopes do not auto-expand. Gemini owns RP facts.
+
+Atlas owner records: maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json (atlas-approved-2.0), source inventory maps/WZW_ATLAS_APPROVED.md, original user W4 context maps/WZW_W4_CONTEXT.md. Generate runtime/atlas-index.json from that source using tools/build_atlas_index.py. Aliases live in source records, never a second ANCHOR_MAP. Keep canonical IDs/names/owners and approved artwork/UI/assets.
+
+PH4–PH11 are pending. Keep the old generated renderer only until V4 replaces it; do not remove Fixed helpers based on filename alone. Production bundle/loader/prompt remain previous release until their later phases. No merge or publication without a user instruction. User requested skipping tests for this delivery; compile/preservation checks are not an acceptance claim.
+
+# Historical artwork and repository guidance
+
+The sections below retain artwork/resource guidance. Their previous MAP_DATA versions, quotas and render permission gates are superseded by the V4 scope above.
+
 # WIZAMAP: nguồn phát triển demo-2
 
 ## Bắt đầu

@@ -1,17 +1,16 @@
-# WIZAMAP · Demo 3
+# WIZAMAP V4 · demo-5
 
-Nguồn phát triển: **demo-3**. Atlas đã thay bằng danh mục được duyệt trong `maps/WZW_ATLAS_APPROVED.md`; runtime dùng `atlas-approved-2.0`. Gemini xuất cảnh RP công khai; JavaScript chọn map, tự ghép nội thất và đặt nhân vật. Chỉ dán một prompt; không nạp file tra cứu. Engine tự đối chiếu tên chuẩn trong dữ liệu đã đóng gói. MAP_DATA 3.0 chỉ cần meta, places, actors; hints và cấu hình hiển thị là tùy chọn.
+Development branch for PH0, PH2 and PH3, based on demo-3 at `c6b44ebb`. PH1 Entry/Preview is accepted. V4 contract/resolver source is implemented; the new architectural engine and production bundle migration are later phases.
 
-- [Flow và hợp đồng](docs/MAP_FLOW.md) · [JSON Schema](runtime/map-data.schema.json)
-- [Prompt /MAP để chép vào System Prompt](docs/MAP_PROMPT.md) · [Loader](ui/preview.html)
-- [Kết quả kiểm tra](docs/validation.json) · [Gộp nhánh chọn lọc](docs/CONSOLIDATION.md)
-- [Tiến độ Demo 3](docs/DEMO3_PROGRESS.md) · [Binding còn thiếu theo atlas mới](docs/DEMO3_REMAINING_BINDINGS.md)
-- [Coverage cũ — chỉ lịch sử](docs/COVERAGE_REVIEW.md)
+- [Current Atlas: complete inventory](docs/V4_ATLAS_CURRENT.md)
+- [Original user W4.1 / W4.2 / W4.3](maps/WZW_W4_CONTEXT.md)
+- [Canonical owner records](maps/WZW_ATLAS_CLEAN_FINAL_REVIEW.json) · [Approved detailed inventory](maps/WZW_ATLAS_APPROVED.md)
+- [V4 data flow](docs/MAP_FLOW.md) · [Schema](runtime/map-data.schema.json)
+- [PH0–PH3 delivery and remaining work](docs/V4_PHASE_0_3.md) · [Baseline hashes](docs/V4_BASELINE.json)
+- [Artwork file guide](docs/PROJECT_MAP.md) · [Editing](docs/EDITING.md)
 
-`index.html` giữ 13 template artwork đã duyệt; `elements/index.html` là gallery 259 SVG. Hai file phục vụ hai mục đích, không phải phiên bản runtime cạnh tranh. Một bundle production tại runtime/bundle.js. Mọi bản HTML kiểm thử, cache, node_modules và ảnh kiểm tra sinh ngoài cây source hoặc bị gitignore.
+Atlas remains `atlas-approved-2.0`: 694 owner records, 141 groups, 13 routing references. W4 English aliases supplement existing records; no location IDs are renumbered. Atlas supports rendering; Gemini controls RP. No backend, world state, pathfinding or session writes.
 
-Tìm/chỉnh artwork qua [PROJECT_MAP](docs/PROJECT_MAP.md), [EDITING](docs/EDITING.md), maps/catalog.json và tools/atlas.py. Giữ ID, animation, giấy phép và attribution; không sinh lại SVG từ generator cũ. Bộ khung nhà có 18 mẫu, cây có 12 dạng và 2 mẫu đặc biệt.
+13 Fixed Templates in `index.html`, approved UI and 259 SVG assets are preserved. `runtime/bundle.js`, `ui/preview.html` and `docs/MAP_PROMPT.md` still belong to the previous published runtime; they are not a V4 release. Build a candidate outside the repo with `python tools/build_runtime.py --out /tmp/wizamap-v4 --ref <40-character-source-commit>`.
 
-Kiểm tra: `node --test tools/test_*.mjs`; `python tools/atlas.py validate`; `python tools/review_coverage.py --check`. Browser và gallery chạy theo .github/workflows/validate.yml.
-
-Compile/kiểm atlas: `python tools/build_atlas_index.py --check`. Audit mới: `node tools/audit_coverage.mjs`; các trạng thái thiếu binding/chờ vị trí/loại trừ không được tính hoàn thành. Một indoor engine dùng cho mọi nhà/phòng generated, vật liệu wood/brick/stone tùy biến; outdoor schematic dùng kho assets. Bundle production chỉ cập nhật sau nghiệm thu, source/candidate không phải RP thật.
+Regenerate the runtime Atlas with `python tools/build_atlas_index.py`. Do not edit the derived index by hand. No merge or release in PH0–PH3.

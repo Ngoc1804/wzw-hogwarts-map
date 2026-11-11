@@ -20,7 +20,7 @@ const bar=el('div');bar.className='reviewbar qa-controls';q('.layout').before(ba
 const select={value:''};
 function button(label,fn){const b=el('button',label);b.className='review-button';b.onclick=fn;bar.append(b);return b}
 const status=el('span','Đang tải bản đồ…');status.setAttribute('role','status');bar.append(status);
-const error=el('div');error.className='qa-error';error.setAttribute('role','alert');bar.append(error);
+const error=el('div');error.hidden=!debug;error.className='qa-error';error.setAttribute('role','alert');bar.append(error);
 if(debug){
 const panel=el('div');panel.className='qa-overlay';panel.hidden=true;
 const editor=el('textarea');editor.setAttribute('aria-label','MAP_DATA JSON');panel.append(el('strong','MAP_DATA — chỉ dữ liệu công khai cho test'),editor);
@@ -51,7 +51,7 @@ function inspect(row,placeId){
    ? (row.activity||place?.inspector?.overhear||at.find(a=>a.activity)?.activity||'')
    : (place?.inspector?.overhear||at.find(a=>a.activity)?.activity||'');
  // QUAN SÁT: static visual/sensory description, never an inferred quest.
- q('#observation').textContent=place?.inspector?.observation||row.inspector?.observation||activeData.customScene?.surroundings||activeData.customScene?.description||'';
+ q('#observation').textContent=row.inspector?.observation||place?.inspector?.observation||activeData.customScene?.surroundings||activeData.customScene?.description||'';
  q('#actors').replaceChildren(...at.map(a=>{const n=actorTag(a,true);n.onclick=()=>inspect(a,a.placeId);return n}));
 }
 const EXTERIOR_TEMPLATES=new Set(['h1','h2','village-static','diagon-knockturn']);
@@ -273,13 +273,29 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
  let pinch;svg.addEventListener('touchstart',e=>{if(e.touches.length===2){drag=null;pinch={distance:Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY),box:[...box]}}},{passive:true});svg.addEventListener('touchmove',e=>{if(pinch&&e.touches.length===2){e.preventDefault();const distance=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);const f=pinch.distance/Math.max(1,distance),b=pinch.box;box=[b[0]+b[2]*(1-f)/2,b[1]+b[3]*(1-f)/2,b[2]*f,b[3]*f];update()}},{passive:false});svg.addEventListener('touchend',()=>pinch=null);
  if(id==='h1')stops.push(mountH1Motion(svg,()=>motion&&!document.hidden&&!matchMedia('(prefers-reduced-motion: reduce)').matches));update();status.textContent=debug?(geometry?'Mặt bằng dựng trong Preview':'Template: '+id):'Bản đồ cảnh hiện tại';if(debug)window.WIZAMAP_TEST={render,canStand(p){return (collectFloorSurfaces(svg).contains(p)||surfaceAllowed(p,activeData.view.spatial))&&!pointInRegions(p,activeData.view.spatial?.blockedRegions)&&!geometry?.exclusionZones.some(r=>pointInPolygon(p,r.points))},get data(){return structuredClone(mapPublicData(activeData))},get template(){return select.value},get generatedGeometry(){return geometry?structuredClone({floorPolygons:geometry.floorPolygons,actorZones:geometry.actorZones,furnishingInstances:geometry.furnishingInstances,exclusionZones:geometry.exclusionZones,suggestedAnchors:geometry.suggestedAnchors}):null}};
 }
-async function render(data){
- try{return await renderScene(data)}catch(e){
-  stops.forEach(stop=>stop());stops=[];labels=[];visibleActors=[];svg=null;activeData=null;
-  q('#mapmount').replaceChildren();q('#actors').replaceChildren();q('#quests').replaceChildren();
-  for(const selector of ['#place-title','#place-area','#drawer-name','#activity','#observation','#hintcount','#zone','.quote','.clock','.date','#actor-action']){const n=q(selector);if(n)n.textContent='';}
-  error.textContent='Không mở được bản đồ: '+e.message;status.textContent='Lỗi';throw e;
+// Minimal fallback only; V4 architectural drawing is implemented in PH4–PH9.
+function renderDataFallback(input,cause){
+ stops.forEach(stop=>stop());stops=[];labels=[];visibleActors=[];geometry=null;
+ const data=mapSceneData(input);activeData=data;visibleActors=data.actors;
+ svg=document.createElementNS(NSVG,'svg');svg.setAttribute('viewBox','0 0 720 460');
+ const paper=document.createElementNS(NSVG,'rect');
+ for(const [k,v] of Object.entries({x:24,y:24,width:672,height:412,rx:12,fill:'#eee4d1',stroke:'#8c775b','stroke-width':3}))paper.setAttribute(k,v);
+ svg.append(paper);
+ const heading=document.createElementNS(NSVG,'text');heading.setAttribute('x','48');heading.setAttribute('y','65');heading.setAttribute('fill','#594831');heading.textContent=data.meta.areaName;svg.append(heading);
+ const subtitle=document.createElementNS(NSVG,'text');subtitle.setAttribute('x','48');subtitle.setAttribute('y','96');subtitle.setAttribute('fill','#7a674a');subtitle.setAttribute('font-size','13');subtitle.textContent=data.pcPlace?'Vị trí hiện tại: '+data.pcPlace:'Cảnh minh họa · vị trí chưa xác định';svg.append(subtitle);
+ const listed=data.places.slice(0,9);
+ for(const [i,p] of listed.entries()){
+  const label=document.createElementNS(NSVG,'text');label.setAttribute('x','54');label.setAttribute('y',String(135+i*30));label.setAttribute('fill','#594831');label.setAttribute('font-size','14');label.textContent=p.name;svg.append(label);
  }
+ q('#mapmount').replaceChildren(svg);box=[0,0,720,460];base=[...box];homeBox=[...box];
+ q('#zone').textContent=data.meta.areaName;q('.clock').textContent=data.meta.time;q('.date').textContent=data.meta.date;q('.quote').textContent=data.meta.quote;
+ const places=data.places.map(p=>{const n=el('button',p.name);n.className='quest';n.onclick=()=>inspect(p,p.id);return n});
+ q('#quests').replaceChildren(...places,...data.events.map(e=>{const n=el('button',e.title);n.className='quest';n.onclick=()=>inspect(e,e.placeId);return n}));q('#hintcount').textContent=String(data.events.length);
+ inspect(data.actors.find(a=>a.isPC)||data.places[0],data.focus.actualPlaceId);
+ status.textContent='Bản đồ cảnh hiện tại · minh họa';error.textContent=debug?String(cause?.message||cause||''):'';update();
+}
+async function render(data){
+ try{return await renderScene(data)}catch(e){renderDataFallback(data,e);}
 }
 // Capture embedded input before replacing the document body above.
 async function loadAtlas(){
@@ -291,8 +307,6 @@ async function loadAtlas(){
  atlas=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());
 }
 async function start(){try{
- if(inputError)throw Error('MAP_DATA JSON: '+inputError.message);
- if(!embeddedData)throw Error('Thiếu MAP_DATA. Hãy cung cấp dữ liệu RP.');
- await render(embeddedData);new ResizeObserver(update).observe(q('#mapmount'));
-}catch(e){error.textContent='Không mở được Preview: '+e.message;status.textContent='Lỗi'}}
+ if(inputError){renderDataFallback({},inputError);}else await render(embeddedData||{});new ResizeObserver(update).observe(q('#mapmount'));
+}catch(e){renderDataFallback(embeddedData||{},e);}}
 start();

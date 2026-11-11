@@ -1992,7 +1992,9 @@
       "scopeId": "template:slytherin-common",
       "function": "other",
       "sourceLine": 28,
-      "aliases": [],
+      "aliases": [
+        "Slytherin Common Room"
+      ],
       "sourceIds": [
         "HOG-HMNGC-E-01"
       ],
@@ -5642,9 +5644,12 @@
       "scopeId": "hogwarts/f0/0",
       "function": "circulation",
       "sourceLine": 102,
-      "aliases": [],
+      "aliases": [
+        "Stone Corridor under Astronomy Tower"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 42
     },
     {
       "id": "HOG-HMNGM-N-02",
@@ -5653,9 +5658,12 @@
       "scopeId": "hogwarts/f0/0",
       "function": "other",
       "sourceLine": 102,
-      "aliases": [],
+      "aliases": [
+        "Alchemy Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 42
     },
     {
       "id": "HOG-HMNGM-N-03",
@@ -5664,9 +5672,12 @@
       "scopeId": "hogwarts/f0/0",
       "function": "storage",
       "sourceLine": 102,
-      "aliases": [],
+      "aliases": [
+        "Coal/Fuel Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 42
     },
     {
       "id": "HOG-HMNGM-N-04",
@@ -5675,9 +5686,12 @@
       "scopeId": "hogwarts/f0/0",
       "function": "other",
       "sourceLine": 102,
-      "aliases": [],
+      "aliases": [
+        "Tower Foundation Check Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 42
     },
     {
       "id": "HOG-HMNGM-E-01",
@@ -5686,9 +5700,12 @@
       "scopeId": "hogwarts/f0/1",
       "function": "other",
       "sourceLine": 103,
-      "aliases": [],
+      "aliases": [
+        "Chamber of Secrets Pipe"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 43
     },
     {
       "id": "HOG-HMNGM-E-02",
@@ -5697,9 +5714,12 @@
       "scopeId": "hogwarts/f0/1",
       "function": "other",
       "sourceLine": 103,
-      "aliases": [],
+      "aliases": [
+        "Chamber of Secrets"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 43
     },
     {
       "id": "HOG-HMNGM-E-03",
@@ -5708,9 +5728,12 @@
       "scopeId": "hogwarts/f0/1",
       "function": "other",
       "sourceLine": 103,
-      "aliases": [],
+      "aliases": [
+        "Ancient Vault Gatehouse"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 43
     },
     {
       "id": "HOG-HMNGM-E-04",
@@ -5719,9 +5742,12 @@
       "scopeId": "hogwarts/f0/1",
       "function": "circulation",
       "sourceLine": 103,
-      "aliases": [],
+      "aliases": [
+        "Sealed Vault Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 43
     },
     {
       "id": "HOG-HMNGM-S-01",
@@ -5730,9 +5756,12 @@
       "scopeId": "hogwarts/f0/2",
       "function": "other",
       "sourceLine": 104,
-      "aliases": [],
+      "aliases": [
+        "Devil's Snare"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 44
     },
     {
       "id": "HOG-HMNGM-S-02",
@@ -5741,9 +5770,12 @@
       "scopeId": "hogwarts/f0/2",
       "function": "other",
       "sourceLine": 104,
-      "aliases": [],
+      "aliases": [
+        "Flying Keys"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 44
     },
     {
       "id": "HOG-HMNGM-S-03",
@@ -5752,9 +5784,12 @@
       "scopeId": "hogwarts/f0/2",
       "function": "other",
       "sourceLine": 104,
-      "aliases": [],
+      "aliases": [
+        "Wizard's Chess"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 44
     },
     {
       "id": "HOG-HMNGM-S-04",
@@ -5763,9 +5798,12 @@
       "scopeId": "hogwarts/f0/2",
       "function": "other",
       "sourceLine": 104,
-      "aliases": [],
+      "aliases": [
+        "Potions Trial"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 44
     },
     {
       "id": "HOG-HMNGM-S-05",
@@ -5774,9 +5812,12 @@
       "scopeId": "hogwarts/f0/2",
       "function": "other",
       "sourceLine": 104,
-      "aliases": [],
+      "aliases": [
+        "Final Mirror Chamber"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 44
     },
     {
       "id": "HOG-HMNGM-W-01",
@@ -5785,9 +5826,12 @@
       "scopeId": "hogwarts/f0/3",
       "function": "other",
       "sourceLine": 105,
-      "aliases": [],
+      "aliases": [
+        "Map Chamber"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 45
     },
     {
       "id": "HOG-HMNGM-W-02",
@@ -5796,9 +5840,12 @@
       "scopeId": "hogwarts/f0/3",
       "function": "other",
       "sourceLine": 105,
-      "aliases": [],
+      "aliases": [
+        "Undercroft"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 45
     },
     {
       "id": "HOG-HMNGM-W-03",
@@ -5807,9 +5854,12 @@
       "scopeId": "hogwarts/f0/3",
       "function": "storage",
       "sourceLine": 105,
-      "aliases": [],
+      "aliases": [
+        "Archaeological Tool Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 45
     },
     {
       "id": "HOG-HMNGM-W-04",
@@ -5818,9 +5868,12 @@
       "scopeId": "hogwarts/f0/3",
       "function": "circulation",
       "sourceLine": 105,
-      "aliases": [],
+      "aliases": [
+        "Blueprint Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 45
     },
     {
       "id": "HOG-HMNGC-N-01",
@@ -5829,9 +5882,12 @@
       "scopeId": "hogwarts/f1/0",
       "function": "study",
       "sourceLine": 107,
-      "aliases": [],
+      "aliases": [
+        "Potions Classroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 47
     },
     {
       "id": "HOG-HMNGC-N-02",
@@ -5840,9 +5896,12 @@
       "scopeId": "hogwarts/f1/0",
       "function": "administration",
       "sourceLine": 107,
-      "aliases": [],
+      "aliases": [
+        "Snape's Office"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 47
     },
     {
       "id": "HOG-HMNGC-N-03",
@@ -5851,9 +5910,13 @@
       "scopeId": "hogwarts/f1/0",
       "function": "storage",
       "sourceLine": 107,
-      "aliases": [],
+      "aliases": [
+        "Potions Ingredient Store",
+        "Ingredient Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 47
     },
     {
       "id": "HOG-HMNGC-N-04",
@@ -5862,9 +5925,13 @@
       "scopeId": "hogwarts/f1/0",
       "function": "study",
       "sourceLine": 107,
-      "aliases": [],
+      "aliases": [
+        "Practical Prep Room",
+        "Potions Prep Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 47
     },
     {
       "id": "HOG-HMNGC-N-05",
@@ -5873,9 +5940,12 @@
       "scopeId": "hogwarts/f1/0",
       "function": "other",
       "sourceLine": 107,
-      "aliases": [],
+      "aliases": [
+        "Cauldron Washroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 47
     },
     {
       "id": "HOG-HMNGC-S-01",
@@ -5884,9 +5954,12 @@
       "scopeId": "hogwarts/f1/2",
       "function": "other",
       "sourceLine": 109,
-      "aliases": [],
+      "aliases": [
+        "Deathday Party Chamber"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 49
     },
     {
       "id": "HOG-HMNGC-S-02",
@@ -5895,9 +5968,12 @@
       "scopeId": "hogwarts/f1/2",
       "function": "storage",
       "sourceLine": 109,
-      "aliases": [],
+      "aliases": [
+        "Cleaning Supply Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 49
     },
     {
       "id": "HOG-HMNGC-S-03",
@@ -5906,9 +5982,12 @@
       "scopeId": "hogwarts/f1/2",
       "function": "circulation",
       "sourceLine": 109,
-      "aliases": [],
+      "aliases": [
+        "Food Transit Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 49
     },
     {
       "id": "HOG-HMNGC-S-04",
@@ -5917,9 +5996,12 @@
       "scopeId": "hogwarts/f1/2",
       "function": "administration",
       "sourceLine": 109,
-      "aliases": [],
+      "aliases": [
+        "House-Elf Duty Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 49
     },
     {
       "id": "HOG-HMNGC-S-05",
@@ -5928,9 +6010,12 @@
       "scopeId": "hogwarts/f1/2",
       "function": "other",
       "sourceLine": 109,
-      "aliases": [],
+      "aliases": [
+        "Furnace Tech Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 49
     },
     {
       "id": "HOG-HMNGC-W-01",
@@ -5939,9 +6024,12 @@
       "scopeId": "hogwarts/f1/3",
       "function": "circulation",
       "sourceLine": 110,
-      "aliases": [],
+      "aliases": [
+        "Astronomy Dungeon Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 50
     },
     {
       "id": "HOG-HMNGC-W-02",
@@ -5950,9 +6038,12 @@
       "scopeId": "hogwarts/f1/3",
       "function": "other",
       "sourceLine": 110,
-      "aliases": [],
+      "aliases": [
+        "Mineral Sorting Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 50
     },
     {
       "id": "HOG-HMNGC-W-03",
@@ -5961,9 +6052,12 @@
       "scopeId": "hogwarts/f1/3",
       "function": "study",
       "sourceLine": 110,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom HN-01"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 50
     },
     {
       "id": "HOG-HMNGC-W-04",
@@ -5972,9 +6066,12 @@
       "scopeId": "hogwarts/f1/3",
       "function": "storage",
       "sourceLine": 110,
-      "aliases": [],
+      "aliases": [
+        "Old Cauldron Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 50
     },
     {
       "id": "HOG-HMNGC-W-05",
@@ -5983,9 +6080,12 @@
       "scopeId": "hogwarts/f1/3",
       "function": "storage",
       "sourceLine": 110,
-      "aliases": [],
+      "aliases": [
+        "Potion Sample Archive"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 50
     },
     {
       "id": "HOG-TNGBP-N-01",
@@ -5994,9 +6094,12 @@
       "scopeId": "hogwarts/f2/0",
       "function": "service",
       "sourceLine": 112,
-      "aliases": [],
+      "aliases": [
+        "Hogwarts Kitchens"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 52
     },
     {
       "id": "HOG-TNGBP-N-02",
@@ -6005,9 +6108,12 @@
       "scopeId": "hogwarts/f2/0",
       "function": "storage",
       "sourceLine": 112,
-      "aliases": [],
+      "aliases": [
+        "Dry Food Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 52
     },
     {
       "id": "HOG-TNGBP-N-03",
@@ -6016,9 +6122,12 @@
       "scopeId": "hogwarts/f2/0",
       "function": "other",
       "sourceLine": 112,
-      "aliases": [],
+      "aliases": [
+        "Meal Prep Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 52
     },
     {
       "id": "HOG-TNGBP-N-04",
@@ -6027,9 +6136,12 @@
       "scopeId": "hogwarts/f2/0",
       "function": "service",
       "sourceLine": 112,
-      "aliases": [],
+      "aliases": [
+        "Scullery/Dishwashing"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 52
     },
     {
       "id": "HOG-TNGBP-N-05",
@@ -6038,9 +6150,12 @@
       "scopeId": "hogwarts/f2/0",
       "function": "circulation",
       "sourceLine": 112,
-      "aliases": [],
+      "aliases": [
+        "Kitchen Logistics Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 52
     },
     {
       "id": "HOG-TNGBP-S-01",
@@ -6049,9 +6164,12 @@
       "scopeId": "hogwarts/f2/2",
       "function": "service",
       "sourceLine": 114,
-      "aliases": [],
+      "aliases": [
+        "Laundry Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 54
     },
     {
       "id": "HOG-TNGBP-S-02",
@@ -6060,9 +6178,12 @@
       "scopeId": "hogwarts/f2/2",
       "function": "other",
       "sourceLine": 114,
-      "aliases": [],
+      "aliases": [
+        "Linen Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 54
     },
     {
       "id": "HOG-TNGBP-S-03",
@@ -6071,9 +6192,12 @@
       "scopeId": "hogwarts/f2/2",
       "function": "storage",
       "sourceLine": 114,
-      "aliases": [],
+      "aliases": [
+        "Tablecloth Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 54
     },
     {
       "id": "HOG-TNGBP-S-04",
@@ -6082,9 +6206,12 @@
       "scopeId": "hogwarts/f2/2",
       "function": "service",
       "sourceLine": 114,
-      "aliases": [],
+      "aliases": [
+        "Laundry Maintenance"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 54
     },
     {
       "id": "HOG-TNGBP-S-05",
@@ -6093,9 +6220,12 @@
       "scopeId": "hogwarts/f2/2",
       "function": "circulation",
       "sourceLine": 114,
-      "aliases": [],
+      "aliases": [
+        "South Storage Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 54
     },
     {
       "id": "HOG-TNGBP-W-01",
@@ -6104,9 +6234,12 @@
       "scopeId": "hogwarts/f2/3",
       "function": "other",
       "sourceLine": 115,
-      "aliases": [],
+      "aliases": [
+        "House-Elf Quarters"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 55
     },
     {
       "id": "HOG-TNGBP-W-02",
@@ -6115,9 +6248,12 @@
       "scopeId": "hogwarts/f2/3",
       "function": "storage",
       "sourceLine": 115,
-      "aliases": [],
+      "aliases": [
+        "Vegetable Larder"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 55
     },
     {
       "id": "HOG-TNGBP-W-03",
@@ -6126,9 +6262,12 @@
       "scopeId": "hogwarts/f2/3",
       "function": "storage",
       "sourceLine": 115,
-      "aliases": [],
+      "aliases": [
+        "Kitchen Herb Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 55
     },
     {
       "id": "HOG-TNGBP-W-04",
@@ -6137,9 +6276,12 @@
       "scopeId": "hogwarts/f2/3",
       "function": "storage",
       "sourceLine": 115,
-      "aliases": [],
+      "aliases": [
+        "Spare Utensil Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 55
     },
     {
       "id": "HOG-TNGBP-W-05",
@@ -6148,9 +6290,12 @@
       "scopeId": "hogwarts/f2/3",
       "function": "circulation",
       "sourceLine": 115,
-      "aliases": [],
+      "aliases": [
+        "West Basement Link Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 55
     },
     {
       "id": "HOG-TNG1-N-01",
@@ -6159,9 +6304,12 @@
       "scopeId": "hogwarts/f3/0",
       "function": "circulation",
       "sourceLine": 117,
-      "aliases": [],
+      "aliases": [
+        "North Hall"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 57
     },
     {
       "id": "HOG-TNG1-N-02",
@@ -6170,9 +6318,12 @@
       "scopeId": "hogwarts/f3/0",
       "function": "circulation",
       "sourceLine": 117,
-      "aliases": [],
+      "aliases": [
+        "Bell Tower Foot Hall"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 57
     },
     {
       "id": "HOG-TNG1-N-03",
@@ -6181,9 +6332,12 @@
       "scopeId": "hogwarts/f3/0",
       "function": "circulation",
       "sourceLine": 117,
-      "aliases": [],
+      "aliases": [
+        "North Gate Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 57
     },
     {
       "id": "HOG-TNG1-N-04",
@@ -6192,9 +6346,12 @@
       "scopeId": "hogwarts/f3/0",
       "function": "administration",
       "sourceLine": 117,
-      "aliases": [],
+      "aliases": [
+        "North Gate Guardroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 57
     },
     {
       "id": "HOG-TNG1-N-05",
@@ -6203,9 +6360,12 @@
       "scopeId": "hogwarts/f3/0",
       "function": "storage",
       "sourceLine": 117,
-      "aliases": [],
+      "aliases": [
+        "Practice Gear Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 57
     },
     {
       "id": "HOG-TNG1-N-06",
@@ -6214,9 +6374,12 @@
       "scopeId": "hogwarts/f3/0",
       "function": "study",
       "sourceLine": 117,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom B-01"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 57
     },
     {
       "id": "HOG-TNG1-E-01",
@@ -6225,9 +6388,12 @@
       "scopeId": "hogwarts/f3/1",
       "function": "circulation",
       "sourceLine": 118,
-      "aliases": [],
+      "aliases": [
+        "Central Hall"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 58
     },
     {
       "id": "HOG-TNG1-E-02",
@@ -6236,9 +6402,12 @@
       "scopeId": "hogwarts/f3/1",
       "function": "circulation",
       "sourceLine": 118,
-      "aliases": [],
+      "aliases": [
+        "Viaduct Entrance Hall"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 58
     },
     {
       "id": "HOG-TNG1-E-03",
@@ -6247,9 +6416,12 @@
       "scopeId": "hogwarts/f3/1",
       "function": "circulation",
       "sourceLine": 118,
-      "aliases": [],
+      "aliases": [
+        "Greenhouse Link Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 58
     },
     {
       "id": "HOG-TNG1-E-04",
@@ -6258,9 +6430,12 @@
       "scopeId": "hogwarts/f3/1",
       "function": "other",
       "sourceLine": 118,
-      "aliases": [],
+      "aliases": [
+        "New Pupil Reception"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 58
     },
     {
       "id": "HOG-TNG1-E-05",
@@ -6269,9 +6444,12 @@
       "scopeId": "hogwarts/f3/1",
       "function": "circulation",
       "sourceLine": 118,
-      "aliases": [],
+      "aliases": [
+        "Central Hall Store"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 58
     },
     {
       "id": "HOG-TNG1-E-06",
@@ -6280,9 +6458,12 @@
       "scopeId": "hogwarts/f3/1",
       "function": "study",
       "sourceLine": 118,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom Đ-01"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 58
     },
     {
       "id": "HOG-TNG1-W-03",
@@ -6291,9 +6472,12 @@
       "scopeId": "hogwarts/f3/3",
       "function": "circulation",
       "sourceLine": 120,
-      "aliases": [],
+      "aliases": [
+        "Transfiguration Courtyard Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 60
     },
     {
       "id": "HOG-TNG1-W-04",
@@ -6302,9 +6486,12 @@
       "scopeId": "hogwarts/f3/3",
       "function": "circulation",
       "sourceLine": 120,
-      "aliases": [],
+      "aliases": [
+        "Quad Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 60
     },
     {
       "id": "HOG-TNG1-W-05",
@@ -6313,9 +6500,12 @@
       "scopeId": "hogwarts/f3/3",
       "function": "other",
       "sourceLine": 120,
-      "aliases": [],
+      "aliases": [
+        "Cloakroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 60
     },
     {
       "id": "HOG-TNG1-W-06",
@@ -6324,9 +6514,12 @@
       "scopeId": "hogwarts/f3/3",
       "function": "storage",
       "sourceLine": 120,
-      "aliases": [],
+      "aliases": [
+        "Transfiguration Supply Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 60
     },
     {
       "id": "HOG-TNG2-N-01",
@@ -6335,9 +6528,12 @@
       "scopeId": "hogwarts/f4/0",
       "function": "other",
       "sourceLine": 122,
-      "aliases": [],
+      "aliases": [
+        "History of Magic Classroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 62
     },
     {
       "id": "HOG-TNG2-N-02",
@@ -6346,9 +6542,12 @@
       "scopeId": "hogwarts/f4/0",
       "function": "administration",
       "sourceLine": 122,
-      "aliases": [],
+      "aliases": [
+        "McGonagall's Office"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 62
     },
     {
       "id": "HOG-TNG2-N-03",
@@ -6357,9 +6556,12 @@
       "scopeId": "hogwarts/f4/0",
       "function": "study",
       "sourceLine": 122,
-      "aliases": [],
+      "aliases": [
+        "Transfiguration Classroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 62
     },
     {
       "id": "HOG-TNG2-N-04",
@@ -6368,9 +6570,12 @@
       "scopeId": "hogwarts/f4/0",
       "function": "other",
       "sourceLine": 122,
-      "aliases": [],
+      "aliases": [
+        "Transfiguration Prep Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 62
     },
     {
       "id": "HOG-TNG2-N-05",
@@ -6379,9 +6584,12 @@
       "scopeId": "hogwarts/f4/0",
       "function": "storage",
       "sourceLine": 122,
-      "aliases": [],
+      "aliases": [
+        "History Book Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 62
     },
     {
       "id": "HOG-TNG2-N-06",
@@ -6390,9 +6598,12 @@
       "scopeId": "hogwarts/f4/0",
       "function": "study",
       "sourceLine": 122,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom B-02"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 62
     },
     {
       "id": "HOG-TNG2-W-01",
@@ -6401,9 +6612,12 @@
       "scopeId": "hogwarts/f4/1",
       "function": "study",
       "sourceLine": 123,
-      "aliases": [],
+      "aliases": [
+        "Muggle Studies Classroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 63
     },
     {
       "id": "HOG-TNG2-W-02",
@@ -6412,9 +6626,12 @@
       "scopeId": "hogwarts/f4/1",
       "function": "other",
       "sourceLine": 123,
-      "aliases": [],
+      "aliases": [
+        "Hieroglyphics Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 63
     },
     {
       "id": "HOG-TNG2-W-03",
@@ -6423,9 +6640,12 @@
       "scopeId": "hogwarts/f4/1",
       "function": "circulation",
       "sourceLine": 123,
-      "aliases": [],
+      "aliases": [
+        "North Hall Upper Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 63
     },
     {
       "id": "HOG-TNG2-W-04",
@@ -6434,9 +6654,12 @@
       "scopeId": "hogwarts/f4/1",
       "function": "other",
       "sourceLine": 123,
-      "aliases": [],
+      "aliases": [
+        "Historical Model Archive"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 63
     },
     {
       "id": "HOG-TNG2-W-05",
@@ -6445,9 +6668,12 @@
       "scopeId": "hogwarts/f4/1",
       "function": "storage",
       "sourceLine": 123,
-      "aliases": [],
+      "aliases": [
+        "Teaching Map Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 63
     },
     {
       "id": "HOG-TNG2-W-06",
@@ -6456,9 +6682,12 @@
       "scopeId": "hogwarts/f4/1",
       "function": "study",
       "sourceLine": 123,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom T-02"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 63
     },
     {
       "id": "HOG-TNG2-S-01",
@@ -6467,9 +6696,12 @@
       "scopeId": "hogwarts/f4/2",
       "function": "other",
       "sourceLine": 124,
-      "aliases": [],
+      "aliases": [
+        "Hospital Wing"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 64
     },
     {
       "id": "HOG-TNG2-S-02",
@@ -6478,9 +6710,12 @@
       "scopeId": "hogwarts/f4/2",
       "function": "administration",
       "sourceLine": 124,
-      "aliases": [],
+      "aliases": [
+        "Pomfrey's Office"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 64
     },
     {
       "id": "HOG-TNG2-S-03",
@@ -6489,9 +6724,12 @@
       "scopeId": "hogwarts/f4/2",
       "function": "circulation",
       "sourceLine": 124,
-      "aliases": [],
+      "aliases": [
+        "Faculty Tower Access Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 64
     },
     {
       "id": "HOG-TNG2-S-04",
@@ -6500,9 +6738,12 @@
       "scopeId": "hogwarts/f4/2",
       "function": "other",
       "sourceLine": 124,
-      "aliases": [],
+      "aliases": [
+        "Bandage/Dressing Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 64
     },
     {
       "id": "HOG-TNG2-S-05",
@@ -6511,9 +6752,12 @@
       "scopeId": "hogwarts/f4/2",
       "function": "storage",
       "sourceLine": 124,
-      "aliases": [],
+      "aliases": [
+        "Medical Supply Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 64
     },
     {
       "id": "HOG-TNG2-S-06",
@@ -6522,9 +6766,12 @@
       "scopeId": "hogwarts/f4/2",
       "function": "common",
       "sourceLine": 124,
-      "aliases": [],
+      "aliases": [
+        "Infirmary Waiting Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 64
     },
     {
       "id": "HOG-TNG2-E-01",
@@ -6535,12 +6782,14 @@
       "sourceLine": 125,
       "aliases": [
         "Phòng học Phòng chống Nghệ thuật Hắc ám",
-        "Phòng học Phòng chống Nghệ thuật Hắc ám — cửa tháp"
+        "Phòng học Phòng chống Nghệ thuật Hắc ám — cửa tháp",
+        "DADA Classroom (tower door)"
       ],
       "sourceIds": [
         "TWR-09-02-01"
       ],
-      "kind": "room"
+      "kind": "room",
+      "contextLine": 65
     },
     {
       "id": "HOG-TNG2-E-02",
@@ -6549,9 +6798,12 @@
       "scopeId": "hogwarts/f4/3",
       "function": "circulation",
       "sourceLine": 125,
-      "aliases": [],
+      "aliases": [
+        "Lower DADA Tower Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 65
     },
     {
       "id": "HOG-TNG2-E-03",
@@ -6560,9 +6812,12 @@
       "scopeId": "hogwarts/f4/3",
       "function": "study",
       "sourceLine": 125,
-      "aliases": [],
+      "aliases": [
+        "DADA Auxiliary Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 65
     },
     {
       "id": "HOG-TNG2-E-04",
@@ -6571,9 +6826,12 @@
       "scopeId": "hogwarts/f4/3",
       "function": "other",
       "sourceLine": 125,
-      "aliases": [],
+      "aliases": [
+        "Defence Practical Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 65
     },
     {
       "id": "HOG-TNG2-E-05",
@@ -6584,12 +6842,14 @@
       "sourceLine": 125,
       "aliases": [
         "Kho đạo cụ DADA",
-        "Kho đạo cụ phòng vệ"
+        "Kho đạo cụ phòng vệ",
+        "DADA Prop Store"
       ],
       "sourceIds": [
         "TWR-09-01-02"
       ],
-      "kind": "room"
+      "kind": "room",
+      "contextLine": 65
     },
     {
       "id": "HOG-TNG2-E-06",
@@ -6598,9 +6858,12 @@
       "scopeId": "hogwarts/f4/3",
       "function": "study",
       "sourceLine": 125,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom Đ-02"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 65
     },
     {
       "id": "HOG-TNG3-N-01",
@@ -6609,9 +6872,12 @@
       "scopeId": "hogwarts/f5/0",
       "function": "service",
       "sourceLine": 127,
-      "aliases": [],
+      "aliases": [
+        "Myrtle's Bathroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 67
     },
     {
       "id": "HOG-TNG3-N-02",
@@ -6620,9 +6886,12 @@
       "scopeId": "hogwarts/f5/0",
       "function": "circulation",
       "sourceLine": 127,
-      "aliases": [],
+      "aliases": [
+        "\"Second-Floor\" Corridor by Myrtle's Bathroom"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 67
     },
     {
       "id": "HOG-TNG3-N-03",
@@ -6631,9 +6900,12 @@
       "scopeId": "hogwarts/f5/0",
       "function": "service",
       "sourceLine": 127,
-      "aliases": [],
+      "aliases": [
+        "Boys' Bathroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 67
     },
     {
       "id": "HOG-TNG3-N-04",
@@ -6642,9 +6914,12 @@
       "scopeId": "hogwarts/f5/0",
       "function": "storage",
       "sourceLine": 127,
-      "aliases": [],
+      "aliases": [
+        "Plumbing Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 67
     },
     {
       "id": "HOG-TNG3-N-05",
@@ -6653,9 +6928,12 @@
       "scopeId": "hogwarts/f5/0",
       "function": "circulation",
       "sourceLine": 127,
-      "aliases": [],
+      "aliases": [
+        "Corridor Guardroom B-03"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 67
     },
     {
       "id": "HOG-TNG3-W-02",
@@ -6664,9 +6942,12 @@
       "scopeId": "hogwarts/f5/1",
       "function": "circulation",
       "sourceLine": 128,
-      "aliases": [],
+      "aliases": [
+        "Argyllshire Map Tapestry Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 68
     },
     {
       "id": "HOG-TNG3-W-03",
@@ -6675,9 +6956,12 @@
       "scopeId": "hogwarts/f5/1",
       "function": "circulation",
       "sourceLine": 128,
-      "aliases": [],
+      "aliases": [
+        "Stair Safety Check Room"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 68
     },
     {
       "id": "HOG-TNG3-W-04",
@@ -6686,9 +6970,12 @@
       "scopeId": "hogwarts/f5/1",
       "function": "study",
       "sourceLine": 128,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom T-03"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 68
     },
     {
       "id": "HOG-TNG3-W-05",
@@ -6697,9 +6984,12 @@
       "scopeId": "hogwarts/f5/1",
       "function": "storage",
       "sourceLine": 128,
-      "aliases": [],
+      "aliases": [
+        "Desk/Chair Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 68
     },
     {
       "id": "HOG-TNG3-S-01",
@@ -6708,9 +6998,12 @@
       "scopeId": "hogwarts/f5/2",
       "function": "other",
       "sourceLine": 129,
-      "aliases": [],
+      "aliases": [
+        "Basic Wand-Practice Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 69
     },
     {
       "id": "HOG-TNG3-S-02",
@@ -6719,9 +7012,12 @@
       "scopeId": "hogwarts/f5/2",
       "function": "study",
       "sourceLine": 129,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom N-03"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 69
     },
     {
       "id": "HOG-TNG3-S-03",
@@ -6730,9 +7026,12 @@
       "scopeId": "hogwarts/f5/2",
       "function": "storage",
       "sourceLine": 129,
-      "aliases": [],
+      "aliases": [
+        "Study Equipment Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 69
     },
     {
       "id": "HOG-TNG3-S-04",
@@ -6741,9 +7040,12 @@
       "scopeId": "hogwarts/f5/2",
       "function": "administration",
       "sourceLine": 129,
-      "aliases": [],
+      "aliases": [
+        "TA Office"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 69
     },
     {
       "id": "HOG-TNG3-S-05",
@@ -6752,9 +7054,12 @@
       "scopeId": "hogwarts/f5/2",
       "function": "other",
       "sourceLine": 129,
-      "aliases": [],
+      "aliases": [
+        "Small Student Lounge"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 69
     },
     {
       "id": "HOG-TNG3-E-01",
@@ -6763,9 +7068,12 @@
       "scopeId": "hogwarts/f5/3",
       "function": "administration",
       "sourceLine": 130,
-      "aliases": [],
+      "aliases": [
+        "DADA Professor's Office (Lockhart 1992)"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 70
     },
     {
       "id": "HOG-TNG3-E-02",
@@ -6774,9 +7082,12 @@
       "scopeId": "hogwarts/f5/3",
       "function": "circulation",
       "sourceLine": 130,
-      "aliases": [],
+      "aliases": [
+        "DADA Office Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 70
     },
     {
       "id": "HOG-TNG3-E-03",
@@ -6785,9 +7096,12 @@
       "scopeId": "hogwarts/f5/3",
       "function": "other",
       "sourceLine": 130,
-      "aliases": [],
+      "aliases": [
+        "DADA Parent Reception"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 70
     },
     {
       "id": "HOG-TNG3-E-04",
@@ -6796,9 +7110,12 @@
       "scopeId": "hogwarts/f5/3",
       "function": "other",
       "sourceLine": 130,
-      "aliases": [],
+      "aliases": [
+        "Lesson Plan Archive"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 70
     },
     {
       "id": "HOG-TNG3-E-05",
@@ -6807,9 +7124,12 @@
       "scopeId": "hogwarts/f5/3",
       "function": "study",
       "sourceLine": 130,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom Đ-03"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 70
     },
     {
       "id": "HOG-TNG4-N-01",
@@ -6818,9 +7138,12 @@
       "scopeId": "hogwarts/f6/0",
       "function": "exhibition",
       "sourceLine": 132,
-      "aliases": [],
+      "aliases": [
+        "Trophy Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 72
     },
     {
       "id": "HOG-TNG4-N-02",
@@ -6829,9 +7152,12 @@
       "scopeId": "hogwarts/f6/0",
       "function": "circulation",
       "sourceLine": 132,
-      "aliases": [],
+      "aliases": [
+        "Armour Gallery"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 72
     },
     {
       "id": "HOG-TNG4-N-03",
@@ -6840,9 +7166,12 @@
       "scopeId": "hogwarts/f6/0",
       "function": "other",
       "sourceLine": 132,
-      "aliases": [],
+      "aliases": [
+        "Music Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 72
     },
     {
       "id": "HOG-TNG4-N-04",
@@ -6851,9 +7180,12 @@
       "scopeId": "hogwarts/f6/0",
       "function": "storage",
       "sourceLine": 132,
-      "aliases": [],
+      "aliases": [
+        "Trophy Preservation Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 72
     },
     {
       "id": "HOG-TNG4-N-05",
@@ -6862,9 +7194,12 @@
       "scopeId": "hogwarts/f6/0",
       "function": "other",
       "sourceLine": 132,
-      "aliases": [],
+      "aliases": [
+        "Ensemble Practice Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 72
     },
     {
       "id": "HOG-TNG4-N-06",
@@ -6873,9 +7208,12 @@
       "scopeId": "hogwarts/f6/0",
       "function": "study",
       "sourceLine": 132,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom B-04"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 72
     },
     {
       "id": "HOG-TNG4-W-01",
@@ -6884,9 +7222,12 @@
       "scopeId": "hogwarts/f6/1",
       "function": "circulation",
       "sourceLine": 133,
-      "aliases": [],
+      "aliases": [
+        "North Hall Upper Gallery Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 73
     },
     {
       "id": "HOG-TNG4-W-02",
@@ -6895,9 +7236,12 @@
       "scopeId": "hogwarts/f6/1",
       "function": "exhibition",
       "sourceLine": 133,
-      "aliases": [],
+      "aliases": [
+        "Educational Artefact Display"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 73
     },
     {
       "id": "HOG-TNG4-W-03",
@@ -6906,9 +7250,12 @@
       "scopeId": "hogwarts/f6/1",
       "function": "study",
       "sourceLine": 133,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom T-04"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 73
     },
     {
       "id": "HOG-TNG4-W-04",
@@ -6917,9 +7264,12 @@
       "scopeId": "hogwarts/f6/1",
       "function": "storage",
       "sourceLine": 133,
-      "aliases": [],
+      "aliases": [
+        "Costume Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 73
     },
     {
       "id": "HOG-TNG4-W-05",
@@ -6928,9 +7278,12 @@
       "scopeId": "hogwarts/f6/1",
       "function": "other",
       "sourceLine": 133,
-      "aliases": [],
+      "aliases": [
+        "Artefact Restoration Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 73
     },
     {
       "id": "HOG-TNG4-S-01",
@@ -6939,9 +7292,12 @@
       "scopeId": "hogwarts/f6/2",
       "function": "other",
       "sourceLine": 134,
-      "aliases": [],
+      "aliases": [
+        "Backup Duelling Practice Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 74
     },
     {
       "id": "HOG-TNG4-S-02",
@@ -6950,9 +7306,12 @@
       "scopeId": "hogwarts/f6/2",
       "function": "other",
       "sourceLine": 134,
-      "aliases": [],
+      "aliases": [
+        "Club Prep Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 74
     },
     {
       "id": "HOG-TNG4-S-03",
@@ -6961,9 +7320,12 @@
       "scopeId": "hogwarts/f6/2",
       "function": "other",
       "sourceLine": 134,
-      "aliases": [],
+      "aliases": [
+        "Public Speaking Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 74
     },
     {
       "id": "HOG-TNG4-S-04",
@@ -6972,9 +7334,12 @@
       "scopeId": "hogwarts/f6/2",
       "function": "administration",
       "sourceLine": 134,
-      "aliases": [],
+      "aliases": [
+        "Student Meeting Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 74
     },
     {
       "id": "HOG-TNG4-S-05",
@@ -6983,9 +7348,12 @@
       "scopeId": "hogwarts/f6/2",
       "function": "study",
       "sourceLine": 134,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom N-04"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 74
     },
     {
       "id": "HOG-TNG4-E-01",
@@ -6994,9 +7362,12 @@
       "scopeId": "hogwarts/f6/3",
       "function": "study",
       "sourceLine": 135,
-      "aliases": [],
+      "aliases": [
+        "Charms Classroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 75
     },
     {
       "id": "HOG-TNG4-E-02",
@@ -7005,9 +7376,12 @@
       "scopeId": "hogwarts/f6/3",
       "function": "circulation",
       "sourceLine": 135,
-      "aliases": [],
+      "aliases": [
+        "Charms Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 75
     },
     {
       "id": "HOG-TNG4-E-03",
@@ -7016,9 +7390,12 @@
       "scopeId": "hogwarts/f6/3",
       "function": "circulation",
       "sourceLine": 135,
-      "aliases": [],
+      "aliases": [
+        "1991 \"Third-Floor\" Forbidden Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 75
     },
     {
       "id": "HOG-TNG4-E-04",
@@ -7027,9 +7404,12 @@
       "scopeId": "hogwarts/f6/3",
       "function": "other",
       "sourceLine": 135,
-      "aliases": [],
+      "aliases": [
+        "Fluffy's Trapdoor Chamber (1991)"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 75
     },
     {
       "id": "HOG-TNG4-E-05",
@@ -7038,9 +7418,12 @@
       "scopeId": "hogwarts/f6/3",
       "function": "other",
       "sourceLine": 135,
-      "aliases": [],
+      "aliases": [
+        "Charms Practical Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 75
     },
     {
       "id": "HOG-TNG4-E-06",
@@ -7049,9 +7432,12 @@
       "scopeId": "hogwarts/f6/3",
       "function": "storage",
       "sourceLine": 135,
-      "aliases": [],
+      "aliases": [
+        "Charms Supply Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 75
     },
     {
       "id": "HOG-TNG5-N-01",
@@ -7060,9 +7446,12 @@
       "scopeId": "hogwarts/f7/0",
       "function": "study",
       "sourceLine": 137,
-      "aliases": [],
+      "aliases": [
+        "Hogwarts Library"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 77
     },
     {
       "id": "HOG-TNG5-N-02",
@@ -7071,9 +7460,12 @@
       "scopeId": "hogwarts/f7/0",
       "function": "other",
       "sourceLine": 137,
-      "aliases": [],
+      "aliases": [
+        "Restricted Section"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 77
     },
     {
       "id": "HOG-TNG5-N-03",
@@ -7082,9 +7474,12 @@
       "scopeId": "hogwarts/f7/0",
       "function": "administration",
       "sourceLine": 137,
-      "aliases": [],
+      "aliases": [
+        "Pince's Office"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 77
     },
     {
       "id": "HOG-TNG5-N-04",
@@ -7093,9 +7488,12 @@
       "scopeId": "hogwarts/f7/0",
       "function": "study",
       "sourceLine": 137,
-      "aliases": [],
+      "aliases": [
+        "Research Reading Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 77
     },
     {
       "id": "HOG-TNG5-N-05",
@@ -7104,9 +7502,12 @@
       "scopeId": "hogwarts/f7/0",
       "function": "other",
       "sourceLine": 137,
-      "aliases": [],
+      "aliases": [
+        "Catalogue Index Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 77
     },
     {
       "id": "HOG-TNG5-N-06",
@@ -7115,9 +7516,12 @@
       "scopeId": "hogwarts/f7/0",
       "function": "storage",
       "sourceLine": 137,
-      "aliases": [],
+      "aliases": [
+        "Rare Book Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 77
     },
     {
       "id": "HOG-TNG5-E-01",
@@ -7126,9 +7530,12 @@
       "scopeId": "hogwarts/f7/1",
       "function": "circulation",
       "sourceLine": 138,
-      "aliases": [],
+      "aliases": [
+        "Long Gallery"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 78
     },
     {
       "id": "HOG-TNG5-E-02",
@@ -7137,9 +7544,12 @@
       "scopeId": "hogwarts/f7/1",
       "function": "study",
       "sourceLine": 138,
-      "aliases": [],
+      "aliases": [
+        "Arithmancy Classroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 78
     },
     {
       "id": "HOG-TNG5-E-03",
@@ -7148,9 +7558,12 @@
       "scopeId": "hogwarts/f7/1",
       "function": "other",
       "sourceLine": 138,
-      "aliases": [],
+      "aliases": [
+        "Magical Cartography Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 78
     },
     {
       "id": "HOG-TNG5-E-04",
@@ -7159,9 +7572,12 @@
       "scopeId": "hogwarts/f7/1",
       "function": "other",
       "sourceLine": 138,
-      "aliases": [],
+      "aliases": [
+        "Cipher/Cryptology Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 78
     },
     {
       "id": "HOG-TNG5-E-05",
@@ -7170,9 +7586,12 @@
       "scopeId": "hogwarts/f7/1",
       "function": "study",
       "sourceLine": 138,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom Đ-05"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 78
     },
     {
       "id": "HOG-TNG5-S-01",
@@ -7181,9 +7600,12 @@
       "scopeId": "hogwarts/f7/2",
       "function": "other",
       "sourceLine": 139,
-      "aliases": [],
+      "aliases": [
+        "Former 1991 Mirror of Erised Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 79
     },
     {
       "id": "HOG-TNG5-S-02",
@@ -7192,9 +7614,12 @@
       "scopeId": "hogwarts/f7/2",
       "function": "circulation",
       "sourceLine": 139,
-      "aliases": [],
+      "aliases": [
+        "Old Secret Mirror Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 79
     },
     {
       "id": "HOG-TNG5-S-03",
@@ -7203,9 +7628,12 @@
       "scopeId": "hogwarts/f7/2",
       "function": "storage",
       "sourceLine": 139,
-      "aliases": [],
+      "aliases": [
+        "Library Records Archive"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 79
     },
     {
       "id": "HOG-TNG5-S-04",
@@ -7214,9 +7642,12 @@
       "scopeId": "hogwarts/f7/2",
       "function": "study",
       "sourceLine": 139,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom N-05"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 79
     },
     {
       "id": "HOG-TNG5-S-05",
@@ -7225,9 +7656,12 @@
       "scopeId": "hogwarts/f7/2",
       "function": "circulation",
       "sourceLine": 139,
-      "aliases": [],
+      "aliases": [
+        "Reading Room Store"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 79
     },
     {
       "id": "HOG-TNG3-W-01",
@@ -7236,9 +7670,12 @@
       "scopeId": "hogwarts/f7/2",
       "function": "circulation",
       "sourceLine": 139,
-      "aliases": [],
+      "aliases": [
+        "Tapestry Shortcut Stair"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 79
     },
     {
       "id": "HOG-TNG5-W-01",
@@ -7247,9 +7684,12 @@
       "scopeId": "hogwarts/f7/3",
       "function": "study",
       "sourceLine": 140,
-      "aliases": [],
+      "aliases": [
+        "Ancient Runes Classroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 80
     },
     {
       "id": "HOG-TNG5-W-02",
@@ -7258,9 +7698,12 @@
       "scopeId": "hogwarts/f7/3",
       "function": "other",
       "sourceLine": 140,
-      "aliases": [],
+      "aliases": [
+        "Runes Translation Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 80
     },
     {
       "id": "HOG-TNG5-W-03",
@@ -7269,9 +7712,12 @@
       "scopeId": "hogwarts/f7/3",
       "function": "study",
       "sourceLine": 140,
-      "aliases": [],
+      "aliases": [
+        "History Seminar Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 80
     },
     {
       "id": "HOG-TNG5-W-04",
@@ -7280,9 +7726,12 @@
       "scopeId": "hogwarts/f7/3",
       "function": "other",
       "sourceLine": 140,
-      "aliases": [],
+      "aliases": [
+        "Source Research Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 80
     },
     {
       "id": "HOG-TNG5-W-05",
@@ -7291,9 +7740,12 @@
       "scopeId": "hogwarts/f7/3",
       "function": "study",
       "sourceLine": 140,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom T-05"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 80
     },
     {
       "id": "HOG-TNG6-N-01",
@@ -7302,9 +7754,12 @@
       "scopeId": "hogwarts/f8/0",
       "function": "service",
       "sourceLine": 142,
-      "aliases": [],
+      "aliases": [
+        "Prefects' Bathroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 82
     },
     {
       "id": "HOG-TNG6-N-02",
@@ -7313,9 +7768,12 @@
       "scopeId": "hogwarts/f8/0",
       "function": "circulation",
       "sourceLine": 142,
-      "aliases": [],
+      "aliases": [
+        "Prefects' Bathroom Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 82
     },
     {
       "id": "HOG-TNG6-N-03",
@@ -7324,9 +7782,12 @@
       "scopeId": "hogwarts/f8/0",
       "function": "circulation",
       "sourceLine": 142,
-      "aliases": [],
+      "aliases": [
+        "Upper Faculty Tower Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 82
     },
     {
       "id": "HOG-TNG6-N-04",
@@ -7335,9 +7796,12 @@
       "scopeId": "hogwarts/f8/0",
       "function": "other",
       "sourceLine": 142,
-      "aliases": [],
+      "aliases": [
+        "Prefects' Lounge"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 82
     },
     {
       "id": "HOG-TNG6-N-05",
@@ -7346,9 +7810,12 @@
       "scopeId": "hogwarts/f8/0",
       "function": "storage",
       "sourceLine": 142,
-      "aliases": [],
+      "aliases": [
+        "Towel/Uniform Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 82
     },
     {
       "id": "HOG-TNG6-N-06",
@@ -7357,9 +7824,12 @@
       "scopeId": "hogwarts/f8/0",
       "function": "study",
       "sourceLine": 142,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom B-06"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 82
     },
     {
       "id": "HOG-TNG6-E-01",
@@ -7368,9 +7838,12 @@
       "scopeId": "hogwarts/f8/1",
       "function": "other",
       "sourceLine": 143,
-      "aliases": [],
+      "aliases": [
+        "Arithmancy Research Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 83
     },
     {
       "id": "HOG-TNG6-E-02",
@@ -7379,9 +7852,12 @@
       "scopeId": "hogwarts/f8/1",
       "function": "circulation",
       "sourceLine": 143,
-      "aliases": [],
+      "aliases": [
+        "\"Fifth-Floor\" East Wing Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 83
     },
     {
       "id": "HOG-TNG6-E-03",
@@ -7390,9 +7866,12 @@
       "scopeId": "hogwarts/f8/1",
       "function": "other",
       "sourceLine": 143,
-      "aliases": [],
+      "aliases": [
+        "Magical Art Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 83
     },
     {
       "id": "HOG-TNG6-E-04",
@@ -7401,9 +7880,12 @@
       "scopeId": "hogwarts/f8/1",
       "function": "storage",
       "sourceLine": 143,
-      "aliases": [],
+      "aliases": [
+        "Assignment/Chart Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 83
     },
     {
       "id": "HOG-TNG6-E-05",
@@ -7412,9 +7894,12 @@
       "scopeId": "hogwarts/f8/1",
       "function": "study",
       "sourceLine": 143,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom Đ-06"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 83
     },
     {
       "id": "HOG-TNG6-S-01",
@@ -7423,9 +7908,12 @@
       "scopeId": "hogwarts/f8/2",
       "function": "circulation",
       "sourceLine": 144,
-      "aliases": [],
+      "aliases": [
+        "Upper Clock Tower Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 84
     },
     {
       "id": "HOG-TNG6-S-03",
@@ -7434,9 +7922,12 @@
       "scopeId": "hogwarts/f8/2",
       "function": "study",
       "sourceLine": 144,
-      "aliases": [],
+      "aliases": [
+        "Academic Club Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 84
     },
     {
       "id": "HOG-TNG6-S-04",
@@ -7445,9 +7936,12 @@
       "scopeId": "hogwarts/f8/2",
       "function": "other",
       "sourceLine": 144,
-      "aliases": [],
+      "aliases": [
+        "Student Newspaper Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 84
     },
     {
       "id": "HOG-TNG6-S-05",
@@ -7456,9 +7950,12 @@
       "scopeId": "hogwarts/f8/2",
       "function": "storage",
       "sourceLine": 144,
-      "aliases": [],
+      "aliases": [
+        "Exhibit Gear Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 84
     },
     {
       "id": "HOG-TNG6-W-01",
@@ -7467,9 +7964,12 @@
       "scopeId": "hogwarts/f8/3",
       "function": "circulation",
       "sourceLine": 145,
-      "aliases": [],
+      "aliases": [
+        "\"Fifth-Floor\" West Window Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 85
     },
     {
       "id": "HOG-TNG6-W-02",
@@ -7478,9 +7978,12 @@
       "scopeId": "hogwarts/f8/3",
       "function": "other",
       "sourceLine": 145,
-      "aliases": [],
+      "aliases": [
+        "Small Ensemble Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 85
     },
     {
       "id": "HOG-TNG6-W-03",
@@ -7489,9 +7992,12 @@
       "scopeId": "hogwarts/f8/3",
       "function": "study",
       "sourceLine": 145,
-      "aliases": [],
+      "aliases": [
+        "Quiet Reading Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 85
     },
     {
       "id": "HOG-TNG6-W-04",
@@ -7500,9 +8006,12 @@
       "scopeId": "hogwarts/f8/3",
       "function": "study",
       "sourceLine": 145,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom T-06"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 85
     },
     {
       "id": "HOG-TNG6-W-05",
@@ -7511,9 +8020,12 @@
       "scopeId": "hogwarts/f8/3",
       "function": "storage",
       "sourceLine": 145,
-      "aliases": [],
+      "aliases": [
+        "Craft Supply Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 85
     },
     {
       "id": "HOG-TNG7-N-01",
@@ -7522,9 +8034,12 @@
       "scopeId": "hogwarts/f9/0",
       "function": "other",
       "sourceLine": 147,
-      "aliases": [],
+      "aliases": [
+        "Academic Achievement Archive"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 87
     },
     {
       "id": "HOG-TNG7-N-02",
@@ -7533,9 +8048,12 @@
       "scopeId": "hogwarts/f9/0",
       "function": "other",
       "sourceLine": 147,
-      "aliases": [],
+      "aliases": [
+        "Grade Ledger Archive"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 87
     },
     {
       "id": "HOG-TNG7-N-03",
@@ -7544,9 +8062,12 @@
       "scopeId": "hogwarts/f9/0",
       "function": "storage",
       "sourceLine": 147,
-      "aliases": [],
+      "aliases": [
+        "Advanced Lesson Gear Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 87
     },
     {
       "id": "HOG-TNG7-N-04",
@@ -7555,9 +8076,12 @@
       "scopeId": "hogwarts/f9/0",
       "function": "study",
       "sourceLine": 147,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom B-07"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 87
     },
     {
       "id": "HOG-TNG7-N-05",
@@ -7566,9 +8090,12 @@
       "scopeId": "hogwarts/f9/0",
       "function": "circulation",
       "sourceLine": 147,
-      "aliases": [],
+      "aliases": [
+        "North Stair Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 87
     },
     {
       "id": "HOG-TNG7-E-01",
@@ -7577,9 +8104,12 @@
       "scopeId": "hogwarts/f9/1",
       "function": "service",
       "sourceLine": 148,
-      "aliases": [],
+      "aliases": [
+        "\"Sixth-Floor\" Boys' Bathroom"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 88
     },
     {
       "id": "HOG-TNG7-E-02",
@@ -7588,9 +8118,12 @@
       "scopeId": "hogwarts/f9/1",
       "function": "study",
       "sourceLine": 148,
-      "aliases": [],
+      "aliases": [
+        "Advanced Magic Seminar Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 88
     },
     {
       "id": "HOG-TNG7-E-03",
@@ -7599,9 +8132,12 @@
       "scopeId": "hogwarts/f9/1",
       "function": "other",
       "sourceLine": 148,
-      "aliases": [],
+      "aliases": [
+        "Small Colloquium Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 88
     },
     {
       "id": "HOG-TNG7-E-04",
@@ -7610,9 +8146,12 @@
       "scopeId": "hogwarts/f9/1",
       "function": "other",
       "sourceLine": 148,
-      "aliases": [],
+      "aliases": [
+        "Safe Lab"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 88
     },
     {
       "id": "HOG-TNG7-E-05",
@@ -7621,9 +8160,12 @@
       "scopeId": "hogwarts/f9/1",
       "function": "study",
       "sourceLine": 148,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom Đ-07"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 88
     },
     {
       "id": "HOG-TNG7-S-01",
@@ -7632,9 +8174,12 @@
       "scopeId": "hogwarts/f9/2",
       "function": "circulation",
       "sourceLine": 149,
-      "aliases": [],
+      "aliases": [
+        "Upper Faculty Tower Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 89
     },
     {
       "id": "HOG-TNG7-S-02",
@@ -7643,9 +8188,12 @@
       "scopeId": "hogwarts/f9/2",
       "function": "other",
       "sourceLine": 149,
-      "aliases": [],
+      "aliases": [
+        "Staff Minutes Archive"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 89
     },
     {
       "id": "HOG-TNG7-S-03",
@@ -7654,9 +8202,12 @@
       "scopeId": "hogwarts/f9/2",
       "function": "other",
       "sourceLine": 149,
-      "aliases": [],
+      "aliases": [
+        "Timetable Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 89
     },
     {
       "id": "HOG-TNG7-S-04",
@@ -7665,9 +8216,12 @@
       "scopeId": "hogwarts/f9/2",
       "function": "storage",
       "sourceLine": 149,
-      "aliases": [],
+      "aliases": [
+        "Reference Book Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 89
     },
     {
       "id": "HOG-TNG7-S-05",
@@ -7676,9 +8230,12 @@
       "scopeId": "hogwarts/f9/2",
       "function": "study",
       "sourceLine": 149,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom N-07"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 89
     },
     {
       "id": "HOG-TNG7-W-01",
@@ -7687,9 +8244,12 @@
       "scopeId": "hogwarts/f9/3",
       "function": "other",
       "sourceLine": 150,
-      "aliases": [],
+      "aliases": [
+        "Gobstones Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 90
     },
     {
       "id": "HOG-TNG7-W-02",
@@ -7698,9 +8258,12 @@
       "scopeId": "hogwarts/f9/3",
       "function": "common",
       "sourceLine": 150,
-      "aliases": [],
+      "aliases": [
+        "Wizard's Chess Club Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 90
     },
     {
       "id": "HOG-TNG7-W-03",
@@ -7709,9 +8272,12 @@
       "scopeId": "hogwarts/f9/3",
       "function": "other",
       "sourceLine": 150,
-      "aliases": [],
+      "aliases": [
+        "Student Project Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 90
     },
     {
       "id": "HOG-TNG7-W-04",
@@ -7720,9 +8286,12 @@
       "scopeId": "hogwarts/f9/3",
       "function": "study",
       "sourceLine": 150,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom T-07"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 90
     },
     {
       "id": "HOG-TNG7-W-05",
@@ -7731,9 +8300,12 @@
       "scopeId": "hogwarts/f9/3",
       "function": "circulation",
       "sourceLine": 150,
-      "aliases": [],
+      "aliases": [
+        "High Glass Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 90
     },
     {
       "id": "HOG-TNG8-N-01",
@@ -7742,9 +8314,12 @@
       "scopeId": "hogwarts/f10/0",
       "function": "circulation",
       "sourceLine": 152,
-      "aliases": [],
+      "aliases": [
+        "Headmaster's Office Approach Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 92
     },
     {
       "id": "HOG-TNG8-N-02",
@@ -7753,9 +8328,12 @@
       "scopeId": "hogwarts/f10/0",
       "function": "circulation",
       "sourceLine": 152,
-      "aliases": [],
+      "aliases": [
+        "Headmaster's Entrance Hall"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 92
     },
     {
       "id": "HOG-TNG8-N-03",
@@ -7766,12 +8344,14 @@
       "sourceLine": 152,
       "aliases": [
         "Sảnh tầng cao Cầu thang Lớn",
-        "Sảnh cao Cầu thang Lớn"
+        "Sảnh cao Cầu thang Lớn",
+        "Upper Grand Staircase Hall"
       ],
       "sourceIds": [
         "TWR-10-03-01"
       ],
-      "kind": "corridor"
+      "kind": "corridor",
+      "contextLine": 92
     },
     {
       "id": "HOG-TNG8-N-04",
@@ -7780,9 +8360,12 @@
       "scopeId": "hogwarts/f10/0",
       "function": "study",
       "sourceLine": 152,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom B-08"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 92
     },
     {
       "id": "HOG-TNG8-N-05",
@@ -7791,9 +8374,12 @@
       "scopeId": "hogwarts/f10/0",
       "function": "storage",
       "sourceLine": 152,
-      "aliases": [],
+      "aliases": [
+        "Academic Records Store"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 92
     },
     {
       "id": "HOG-TNG8-E-01",
@@ -7802,9 +8388,12 @@
       "scopeId": "hogwarts/f10/1",
       "function": "circulation",
       "sourceLine": 153,
-      "aliases": [],
+      "aliases": [
+        "\"Seventh-Floor\" Corridor outside RoR"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 93
     },
     {
       "id": "HOG-TNG8-E-02",
@@ -7813,9 +8402,12 @@
       "scopeId": "hogwarts/f10/1",
       "function": "other",
       "sourceLine": 153,
-      "aliases": [],
+      "aliases": [
+        "Room of Requirement"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 93
     },
     {
       "id": "HOG-TNG8-E-03",
@@ -7824,9 +8416,12 @@
       "scopeId": "hogwarts/f10/1",
       "function": "study",
       "sourceLine": 153,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom Đ-08"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 93
     },
     {
       "id": "HOG-TNG8-E-04",
@@ -7835,9 +8430,12 @@
       "scopeId": "hogwarts/f10/1",
       "function": "other",
       "sourceLine": 153,
-      "aliases": [],
+      "aliases": [
+        "Academic Ceremony Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 93
     },
     {
       "id": "HOG-TNG8-E-05",
@@ -7846,9 +8444,12 @@
       "scopeId": "hogwarts/f10/1",
       "function": "commerce",
       "sourceLine": 153,
-      "aliases": [],
+      "aliases": [
+        "Portrait Conservation Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 93
     },
     {
       "id": "HOG-TNG8-S-04",
@@ -7857,9 +8458,12 @@
       "scopeId": "hogwarts/f10/2",
       "function": "study",
       "sourceLine": 154,
-      "aliases": [],
+      "aliases": [
+        "\"Seventh-Floor\" Study Group Room"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 94
     },
     {
       "id": "HOG-TNG8-S-05",
@@ -7868,9 +8472,12 @@
       "scopeId": "hogwarts/f10/2",
       "function": "circulation",
       "sourceLine": 154,
-      "aliases": [],
+      "aliases": [
+        "\"Seventh-Floor\" Portrait Corridor"
+      ],
       "kind": "corridor",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 94
     },
     {
       "id": "HOG-TNG8-W-07",
@@ -7879,9 +8486,12 @@
       "scopeId": "hogwarts/f10/3",
       "function": "study",
       "sourceLine": 155,
-      "aliases": [],
+      "aliases": [
+        "Empty Classroom T-08"
+      ],
       "kind": "room",
-      "sourceIds": []
+      "sourceIds": [],
+      "contextLine": 95
     },
     {
       "id": "TWR-03-01-01",
@@ -10492,7 +11102,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 102
+      "sourceLine": 102,
+      "aliases": [
+        "Tech Tunnels",
+        "SUB-DUNGEONS (HẦM NGẦM) / N Tech Tunnels"
+      ],
+      "contextLine": 42
     },
     {
       "key": "hogwarts/f0/1",
@@ -10511,7 +11126,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 103
+      "sourceLine": 103,
+      "aliases": [
+        "Relic Vaults",
+        "SUB-DUNGEONS (HẦM NGẦM) / E Relic Vaults"
+      ],
+      "contextLine": 43
     },
     {
       "key": "hogwarts/f0/2",
@@ -10531,7 +11151,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 104
+      "sourceLine": 104,
+      "aliases": [
+        "Y1 Stone Chambers",
+        "SUB-DUNGEONS (HẦM NGẦM) / S Y1 Stone Chambers"
+      ],
+      "contextLine": 44
     },
     {
       "key": "hogwarts/f0/3",
@@ -10550,7 +11175,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 105
+      "sourceLine": 105,
+      "aliases": [
+        "Ancient Study",
+        "SUB-DUNGEONS (HẦM NGẦM) / W Ancient Study"
+      ],
+      "contextLine": 45
     },
     {
       "key": "hogwarts/f1/0",
@@ -10570,7 +11200,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 107
+      "sourceLine": 107,
+      "aliases": [
+        "Potions Cluster",
+        "DUNGEONS (HẦM NGỤC) / N Potions Cluster"
+      ],
+      "contextLine": 47
     },
     {
       "key": "hogwarts/f1/1",
@@ -10584,7 +11219,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 108
+      "sourceLine": 108,
+      "aliases": [
+        "Slytherin Approach",
+        "DUNGEONS (HẦM NGỤC) / E Slytherin Approach"
+      ],
+      "contextLine": 48
     },
     {
       "key": "hogwarts/f1/2",
@@ -10604,7 +11244,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 109
+      "sourceLine": 109,
+      "aliases": [
+        "Under-Hall Service",
+        "DUNGEONS (HẦM NGỤC) / S Under-Hall Service"
+      ],
+      "contextLine": 49
     },
     {
       "key": "hogwarts/f1/3",
@@ -10624,7 +11269,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 110
+      "sourceLine": 110,
+      "aliases": [
+        "Subterranean Classes",
+        "DUNGEONS (HẦM NGỤC) / W Subterranean Classes"
+      ],
+      "contextLine": 50
     },
     {
       "key": "hogwarts/f2/0",
@@ -10644,7 +11294,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 112
+      "sourceLine": 112,
+      "aliases": [
+        "Kitchens & Service",
+        "KITCHENS (TẦNG BẾP) / N Kitchens & Service"
+      ],
+      "contextLine": 52
     },
     {
       "key": "hogwarts/f2/1",
@@ -10658,7 +11313,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 113
+      "sourceLine": 113,
+      "aliases": [
+        "Hufflepuff Approach",
+        "KITCHENS (TẦNG BẾP) / E Hufflepuff Approach"
+      ],
+      "contextLine": 53
     },
     {
       "key": "hogwarts/f2/2",
@@ -10678,7 +11338,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 114
+      "sourceLine": 114,
+      "aliases": [
+        "Laundry & Linen",
+        "KITCHENS (TẦNG BẾP) / S Laundry & Linen"
+      ],
+      "contextLine": 54
     },
     {
       "key": "hogwarts/f2/3",
@@ -10698,7 +11363,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 115
+      "sourceLine": 115,
+      "aliases": [
+        "Elf Quarters & Larder",
+        "KITCHENS (TẦNG BẾP) / W Elf Quarters & Larder"
+      ],
+      "contextLine": 55
     },
     {
       "key": "hogwarts/f3/0",
@@ -10719,7 +11389,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 117
+      "sourceLine": 117,
+      "aliases": [
+        "North Hall–Bell Tower",
+        "F1 (GROUND / TẦNG 1) / N North Hall–Bell Tower"
+      ],
+      "contextLine": 57
     },
     {
       "key": "hogwarts/f3/1",
@@ -10740,7 +11415,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 118
+      "sourceLine": 118,
+      "aliases": [
+        "Library Annex–Viaduct",
+        "F1 (GROUND / TẦNG 1) / E Library Annex–Viaduct"
+      ],
+      "contextLine": 58
     },
     {
       "key": "hogwarts/f3/2",
@@ -10754,7 +11434,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 119
+      "sourceLine": 119,
+      "aliases": [
+        "Great Hall Approach",
+        "F1 (GROUND / TẦNG 1) / S Great Hall Approach"
+      ],
+      "contextLine": 59
     },
     {
       "key": "hogwarts/f3/3",
@@ -10773,7 +11458,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 120
+      "sourceLine": 120,
+      "aliases": [
+        "Transfig Courtyard Approach",
+        "F1 (GROUND / TẦNG 1) / W Transfig Courtyard Approach"
+      ],
+      "contextLine": 60
     },
     {
       "key": "hogwarts/f4/0",
@@ -10794,7 +11484,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 122
+      "sourceLine": 122,
+      "aliases": [
+        "History & Transfiguration",
+        "F2 (TẦNG 2) / N History & Transfiguration"
+      ],
+      "contextLine": 62
     },
     {
       "key": "hogwarts/f4/1",
@@ -10815,7 +11510,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 123
+      "sourceLine": 123,
+      "aliases": [
+        "Scholars Upper Walk",
+        "F2 (TẦNG 2) / E Scholars Upper Walk"
+      ],
+      "contextLine": 63
     },
     {
       "key": "hogwarts/f4/2",
@@ -10836,7 +11536,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 124
+      "sourceLine": 124,
+      "aliases": [
+        "Hospital & Faculty Access",
+        "F2 (TẦNG 2) / S Hospital & Faculty Access"
+      ],
+      "contextLine": 64
     },
     {
       "key": "hogwarts/f4/3",
@@ -10857,7 +11562,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 125
+      "sourceLine": 125,
+      "aliases": [
+        "DADA Teaching Cluster",
+        "F2 (TẦNG 2) / W DADA Teaching Cluster"
+      ],
+      "contextLine": 65
     },
     {
       "key": "hogwarts/f5/0",
@@ -10877,7 +11587,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 127
+      "sourceLine": 127,
+      "aliases": [
+        "Myrtle's Corridor",
+        "F3 (TẦNG 3) / N Myrtle's Corridor"
+      ],
+      "contextLine": 67
     },
     {
       "key": "hogwarts/f5/1",
@@ -10896,7 +11611,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 128
+      "sourceLine": 128,
+      "aliases": [
+        "Shortcut Stair Walk",
+        "F3 (TẦNG 3) / E Shortcut Stair Walk"
+      ],
+      "contextLine": 68
     },
     {
       "key": "hogwarts/f5/2",
@@ -10916,7 +11636,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 129
+      "sourceLine": 129,
+      "aliases": [
+        "Supplemental Classes",
+        "F3 (TẦNG 3) / S Supplemental Classes"
+      ],
+      "contextLine": 69
     },
     {
       "key": "hogwarts/f5/3",
@@ -10936,7 +11661,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 130
+      "sourceLine": 130,
+      "aliases": [
+        "DADA Office Route",
+        "F3 (TẦNG 3) / W DADA Office Route"
+      ],
+      "contextLine": 70
     },
     {
       "key": "hogwarts/f6/0",
@@ -10957,7 +11687,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 132
+      "sourceLine": 132,
+      "aliases": [
+        "Trophy–Armour Gallery",
+        "F4 (TẦNG 4) / N Trophy–Armour Gallery"
+      ],
+      "contextLine": 72
     },
     {
       "key": "hogwarts/f6/1",
@@ -10977,7 +11712,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 133
+      "sourceLine": 133,
+      "aliases": [
+        "Upper North Gallery",
+        "F4 (TẦNG 4) / E Upper North Gallery"
+      ],
+      "contextLine": 73
     },
     {
       "key": "hogwarts/f6/2",
@@ -10997,7 +11737,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 134
+      "sourceLine": 134,
+      "aliases": [
+        "Clubs & Group Work",
+        "F4 (TẦNG 4) / S Clubs & Group Work"
+      ],
+      "contextLine": 74
     },
     {
       "key": "hogwarts/f6/3",
@@ -11018,7 +11763,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 135
+      "sourceLine": 135,
+      "aliases": [
+        "Charms & Forbidden Route",
+        "F4 (TẦNG 4) / W Charms & Forbidden Route"
+      ],
+      "contextLine": 75
     },
     {
       "key": "hogwarts/f7/0",
@@ -11039,7 +11789,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 137
+      "sourceLine": 137,
+      "aliases": [
+        "Library & Restricted",
+        "F5 (TẦNG 5) / N Library & Restricted"
+      ],
+      "contextLine": 77
     },
     {
       "key": "hogwarts/f7/1",
@@ -11059,7 +11814,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 138
+      "sourceLine": 138,
+      "aliases": [
+        "Long Gallery",
+        "F5 (TẦNG 5) / E Long Gallery"
+      ],
+      "contextLine": 78
     },
     {
       "key": "hogwarts/f7/2",
@@ -11080,7 +11840,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 139
+      "sourceLine": 139,
+      "aliases": [
+        "Fourth-Floor Walk & Mirror",
+        "F5 (TẦNG 5) / S Fourth-Floor Walk & Mirror"
+      ],
+      "contextLine": 79
     },
     {
       "key": "hogwarts/f7/3",
@@ -11100,7 +11865,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 140
+      "sourceLine": 140,
+      "aliases": [
+        "Ancient Runes",
+        "F5 (TẦNG 5) / W Ancient Runes"
+      ],
+      "contextLine": 80
     },
     {
       "key": "hogwarts/f8/0",
@@ -11121,7 +11891,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 142
+      "sourceLine": 142,
+      "aliases": [
+        "Prefects–Faculty Route",
+        "F6 (TẦNG 6) / N Prefects–Faculty Route"
+      ],
+      "contextLine": 82
     },
     {
       "key": "hogwarts/f8/1",
@@ -11141,7 +11916,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 143
+      "sourceLine": 143,
+      "aliases": [
+        "Intermediate Classes",
+        "F6 (TẦNG 6) / E Intermediate Classes"
+      ],
+      "contextLine": 83
     },
     {
       "key": "hogwarts/f8/2",
@@ -11160,7 +11940,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 144
+      "sourceLine": 144,
+      "aliases": [
+        "Clock Tower Ascent",
+        "F6 (TẦNG 6) / S Clock Tower Ascent"
+      ],
+      "contextLine": 84
     },
     {
       "key": "hogwarts/f8/3",
@@ -11180,7 +11965,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 145
+      "sourceLine": 145,
+      "aliases": [
+        "West High Windows",
+        "F6 (TẦNG 6) / W West High Windows"
+      ],
+      "contextLine": 85
     },
     {
       "key": "hogwarts/f9/0",
@@ -11200,7 +11990,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 147
+      "sourceLine": 147,
+      "aliases": [
+        "Upper Stair Access",
+        "F7 (TẦNG 7) / N Upper Stair Access"
+      ],
+      "contextLine": 87
     },
     {
       "key": "hogwarts/f9/1",
@@ -11220,7 +12015,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 148
+      "sourceLine": 148,
+      "aliases": [
+        "Seminar & Labs",
+        "F7 (TẦNG 7) / E Seminar & Labs"
+      ],
+      "contextLine": 88
     },
     {
       "key": "hogwarts/f9/2",
@@ -11240,7 +12040,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 149
+      "sourceLine": 149,
+      "aliases": [
+        "Faculty/Clock Link",
+        "F7 (TẦNG 7) / S Faculty/Clock Link"
+      ],
+      "contextLine": 89
     },
     {
       "key": "hogwarts/f9/3",
@@ -11260,7 +12065,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 150
+      "sourceLine": 150,
+      "aliases": [
+        "Games & Projects",
+        "F7 (TẦNG 7) / W Games & Projects"
+      ],
+      "contextLine": 90
     },
     {
       "key": "hogwarts/f10/0",
@@ -11280,7 +12090,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 152
+      "sourceLine": 152,
+      "aliases": [
+        "Headmaster Approach",
+        "F8 (TẦNG 8) / N Headmaster Approach"
+      ],
+      "contextLine": 92
     },
     {
       "key": "hogwarts/f10/1",
@@ -11300,7 +12115,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 153
+      "sourceLine": 153,
+      "aliases": [
+        "Room of Requirement",
+        "F8 (TẦNG 8) / E Room of Requirement"
+      ],
+      "contextLine": 93
     },
     {
       "key": "hogwarts/f10/2",
@@ -11317,7 +12137,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 154
+      "sourceLine": 154,
+      "aliases": [
+        "Gryffindor Route",
+        "F8 (TẦNG 8) / S Gryffindor Route"
+      ],
+      "contextLine": 94
     },
     {
       "key": "hogwarts/f10/3",
@@ -11333,7 +12158,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 155
+      "sourceLine": 155,
+      "aliases": [
+        "Senior Clubs / CCC",
+        "F8 (TẦNG 8) / W Senior Clubs / CCC"
+      ],
+      "contextLine": 95
     },
     {
       "key": "tower/0/0",
@@ -12364,5 +13194,13 @@
       "AU": 109
     },
     "references": 13
+  },
+  "contextVersion": "W4.1",
+  "contextSource": "maps/WZW_W4_CONTEXT.md",
+  "contextSourceSha256": "b1fa33eeff57953ef4f4141e9e5f9ae6db31fba0696d0bfaaa907a2d26e6b605",
+  "contextAlignment": {
+    "hogwartsClusters": 44,
+    "roomAliases": 203,
+    "policy": "Verified matching ordered room lists and layout families; canonical IDs, ownership, directions and room labels unchanged. W4 travel/year rules are context only, not a simulation."
   }
 }

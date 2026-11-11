@@ -1,4 +1,92 @@
 {
+  "contextVersion": "W4.1",
+  "contextSource": "maps/WZW_W4_CONTEXT.md",
+  "contextSourceSha256": "b1fa33eeff57953ef4f4141e9e5f9ae6db31fba0696d0bfaaa907a2d26e6b605",
+  "references": [
+    {
+      "sourceScope": "hogwarts/f1/1",
+      "target": "slytherin-common",
+      "sourceLine": 108,
+      "targetScopeId": "template:slytherin-common"
+    },
+    {
+      "sourceScope": "hogwarts/f2/1",
+      "target": "hufflepuff-common",
+      "sourceLine": 113,
+      "targetScopeId": "template:hufflepuff-common"
+    },
+    {
+      "sourceScope": "hogwarts/f3/2",
+      "target": "hall",
+      "sourceLine": 119,
+      "targetScopeId": "template:hall"
+    },
+    {
+      "sourceScope": "hogwarts/f3/3",
+      "target": "hall",
+      "sourceLine": 120,
+      "targetScopeId": "template:hall"
+    },
+    {
+      "sourceScope": "hogwarts/f8/2",
+      "target": "Tháp Đồng hồ (bảo trì cơ cấu)",
+      "sourceLine": 144,
+      "targetPlaceId": "TWR-06-02-02"
+    },
+    {
+      "sourceScope": "hogwarts/f10/2",
+      "target": "gryffindor-common",
+      "sourceLine": 154,
+      "targetScopeId": "template:gryffindor-common"
+    },
+    {
+      "sourceScope": "hogwarts/f10/3",
+      "target": "AU › CCC 07.18",
+      "sourceLine": 155,
+      "targetScopeId": "au/6/0"
+    },
+    {
+      "sourceScope": "tower/0/0",
+      "target": "gryffindor-common",
+      "sourceLine": 158,
+      "targetScopeId": "template:gryffindor-common"
+    },
+    {
+      "sourceScope": "tower/1/0",
+      "target": "ravenclaw-common",
+      "sourceLine": 159,
+      "targetScopeId": "template:ravenclaw-common"
+    },
+    {
+      "sourceScope": "tower/8/0",
+      "target": "Tầng 2 · Tây (phòng học & kho đạo cụ)",
+      "sourceLine": 166,
+      "targetScopeId": "hogwarts/f4/3"
+    },
+    {
+      "sourceScope": "tower/8/1",
+      "target": "Tầng 2 · Tây",
+      "sourceLine": 166,
+      "targetScopeId": "hogwarts/f4/3"
+    },
+    {
+      "sourceScope": "tower/9/2",
+      "target": "Tầng 8 · Bắc (sảnh cao Cầu thang Lớn)",
+      "sourceLine": 167,
+      "targetScopeId": "hogwarts/f10/0"
+    },
+    {
+      "sourceScope": "tower/10/0",
+      "target": "h1 (không lập Nhà cú lần hai)",
+      "sourceLine": 168,
+      "targetScopeId": "template:h1"
+    }
+  ],
+  "contextAlignment": {
+    "hogwartsClusters": 44,
+    "roomAliases": 203,
+    "policy": "Verified matching ordered room lists and layout families; canonical IDs, ownership, directions and room labels unchanged. W4 travel/year rules are context only, not a simulation."
+  },
   "schemaVersion": "scene-atlas-index-2",
   "atlasVersion": "atlas-approved-2.0",
   "sourceSha256": "4d36111e0ad9b466061ab43463d41646f6fc74e111dcc942d82671eb071fcb90",
@@ -1630,7 +1718,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 102
+      "sourceLine": 102,
+      "aliases": [
+        "Tech Tunnels",
+        "SUB-DUNGEONS (HẦM NGẦM) / N Tech Tunnels"
+      ],
+      "contextLine": 42
     },
     {
       "key": "hogwarts/f0/1",
@@ -1649,7 +1742,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 103
+      "sourceLine": 103,
+      "aliases": [
+        "Relic Vaults",
+        "SUB-DUNGEONS (HẦM NGẦM) / E Relic Vaults"
+      ],
+      "contextLine": 43
     },
     {
       "key": "hogwarts/f0/2",
@@ -1669,7 +1767,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 104
+      "sourceLine": 104,
+      "aliases": [
+        "Y1 Stone Chambers",
+        "SUB-DUNGEONS (HẦM NGẦM) / S Y1 Stone Chambers"
+      ],
+      "contextLine": 44
     },
     {
       "key": "hogwarts/f0/3",
@@ -1688,7 +1791,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 105
+      "sourceLine": 105,
+      "aliases": [
+        "Ancient Study",
+        "SUB-DUNGEONS (HẦM NGẦM) / W Ancient Study"
+      ],
+      "contextLine": 45
     },
     {
       "key": "hogwarts/f1/0",
@@ -1708,7 +1816,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 107
+      "sourceLine": 107,
+      "aliases": [
+        "Potions Cluster",
+        "DUNGEONS (HẦM NGỤC) / N Potions Cluster"
+      ],
+      "contextLine": 47
     },
     {
       "key": "hogwarts/f1/1",
@@ -1722,7 +1835,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 108
+      "sourceLine": 108,
+      "aliases": [
+        "Slytherin Approach",
+        "DUNGEONS (HẦM NGỤC) / E Slytherin Approach"
+      ],
+      "contextLine": 48
     },
     {
       "key": "hogwarts/f1/2",
@@ -1742,7 +1860,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 109
+      "sourceLine": 109,
+      "aliases": [
+        "Under-Hall Service",
+        "DUNGEONS (HẦM NGỤC) / S Under-Hall Service"
+      ],
+      "contextLine": 49
     },
     {
       "key": "hogwarts/f1/3",
@@ -1762,7 +1885,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 110
+      "sourceLine": 110,
+      "aliases": [
+        "Subterranean Classes",
+        "DUNGEONS (HẦM NGỤC) / W Subterranean Classes"
+      ],
+      "contextLine": 50
     },
     {
       "key": "hogwarts/f2/0",
@@ -1782,7 +1910,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 112
+      "sourceLine": 112,
+      "aliases": [
+        "Kitchens & Service",
+        "KITCHENS (TẦNG BẾP) / N Kitchens & Service"
+      ],
+      "contextLine": 52
     },
     {
       "key": "hogwarts/f2/1",
@@ -1796,7 +1929,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 113
+      "sourceLine": 113,
+      "aliases": [
+        "Hufflepuff Approach",
+        "KITCHENS (TẦNG BẾP) / E Hufflepuff Approach"
+      ],
+      "contextLine": 53
     },
     {
       "key": "hogwarts/f2/2",
@@ -1816,7 +1954,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 114
+      "sourceLine": 114,
+      "aliases": [
+        "Laundry & Linen",
+        "KITCHENS (TẦNG BẾP) / S Laundry & Linen"
+      ],
+      "contextLine": 54
     },
     {
       "key": "hogwarts/f2/3",
@@ -1836,7 +1979,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 115
+      "sourceLine": 115,
+      "aliases": [
+        "Elf Quarters & Larder",
+        "KITCHENS (TẦNG BẾP) / W Elf Quarters & Larder"
+      ],
+      "contextLine": 55
     },
     {
       "key": "hogwarts/f3/0",
@@ -1857,7 +2005,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 117
+      "sourceLine": 117,
+      "aliases": [
+        "North Hall–Bell Tower",
+        "F1 (GROUND / TẦNG 1) / N North Hall–Bell Tower"
+      ],
+      "contextLine": 57
     },
     {
       "key": "hogwarts/f3/1",
@@ -1878,7 +2031,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 118
+      "sourceLine": 118,
+      "aliases": [
+        "Library Annex–Viaduct",
+        "F1 (GROUND / TẦNG 1) / E Library Annex–Viaduct"
+      ],
+      "contextLine": 58
     },
     {
       "key": "hogwarts/f3/2",
@@ -1892,7 +2050,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 119
+      "sourceLine": 119,
+      "aliases": [
+        "Great Hall Approach",
+        "F1 (GROUND / TẦNG 1) / S Great Hall Approach"
+      ],
+      "contextLine": 59
     },
     {
       "key": "hogwarts/f3/3",
@@ -1911,7 +2074,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 120
+      "sourceLine": 120,
+      "aliases": [
+        "Transfig Courtyard Approach",
+        "F1 (GROUND / TẦNG 1) / W Transfig Courtyard Approach"
+      ],
+      "contextLine": 60
     },
     {
       "key": "hogwarts/f4/0",
@@ -1932,7 +2100,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 122
+      "sourceLine": 122,
+      "aliases": [
+        "History & Transfiguration",
+        "F2 (TẦNG 2) / N History & Transfiguration"
+      ],
+      "contextLine": 62
     },
     {
       "key": "hogwarts/f4/1",
@@ -1953,7 +2126,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 123
+      "sourceLine": 123,
+      "aliases": [
+        "Scholars Upper Walk",
+        "F2 (TẦNG 2) / E Scholars Upper Walk"
+      ],
+      "contextLine": 63
     },
     {
       "key": "hogwarts/f4/2",
@@ -1974,7 +2152,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 124
+      "sourceLine": 124,
+      "aliases": [
+        "Hospital & Faculty Access",
+        "F2 (TẦNG 2) / S Hospital & Faculty Access"
+      ],
+      "contextLine": 64
     },
     {
       "key": "hogwarts/f4/3",
@@ -1995,7 +2178,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 125
+      "sourceLine": 125,
+      "aliases": [
+        "DADA Teaching Cluster",
+        "F2 (TẦNG 2) / W DADA Teaching Cluster"
+      ],
+      "contextLine": 65
     },
     {
       "key": "hogwarts/f5/0",
@@ -2015,7 +2203,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 127
+      "sourceLine": 127,
+      "aliases": [
+        "Myrtle's Corridor",
+        "F3 (TẦNG 3) / N Myrtle's Corridor"
+      ],
+      "contextLine": 67
     },
     {
       "key": "hogwarts/f5/1",
@@ -2034,7 +2227,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 128
+      "sourceLine": 128,
+      "aliases": [
+        "Shortcut Stair Walk",
+        "F3 (TẦNG 3) / E Shortcut Stair Walk"
+      ],
+      "contextLine": 68
     },
     {
       "key": "hogwarts/f5/2",
@@ -2054,7 +2252,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 129
+      "sourceLine": 129,
+      "aliases": [
+        "Supplemental Classes",
+        "F3 (TẦNG 3) / S Supplemental Classes"
+      ],
+      "contextLine": 69
     },
     {
       "key": "hogwarts/f5/3",
@@ -2074,7 +2277,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 130
+      "sourceLine": 130,
+      "aliases": [
+        "DADA Office Route",
+        "F3 (TẦNG 3) / W DADA Office Route"
+      ],
+      "contextLine": 70
     },
     {
       "key": "hogwarts/f6/0",
@@ -2095,7 +2303,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 132
+      "sourceLine": 132,
+      "aliases": [
+        "Trophy–Armour Gallery",
+        "F4 (TẦNG 4) / N Trophy–Armour Gallery"
+      ],
+      "contextLine": 72
     },
     {
       "key": "hogwarts/f6/1",
@@ -2115,7 +2328,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 133
+      "sourceLine": 133,
+      "aliases": [
+        "Upper North Gallery",
+        "F4 (TẦNG 4) / E Upper North Gallery"
+      ],
+      "contextLine": 73
     },
     {
       "key": "hogwarts/f6/2",
@@ -2135,7 +2353,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 134
+      "sourceLine": 134,
+      "aliases": [
+        "Clubs & Group Work",
+        "F4 (TẦNG 4) / S Clubs & Group Work"
+      ],
+      "contextLine": 74
     },
     {
       "key": "hogwarts/f6/3",
@@ -2156,7 +2379,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 135
+      "sourceLine": 135,
+      "aliases": [
+        "Charms & Forbidden Route",
+        "F4 (TẦNG 4) / W Charms & Forbidden Route"
+      ],
+      "contextLine": 75
     },
     {
       "key": "hogwarts/f7/0",
@@ -2177,7 +2405,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 137
+      "sourceLine": 137,
+      "aliases": [
+        "Library & Restricted",
+        "F5 (TẦNG 5) / N Library & Restricted"
+      ],
+      "contextLine": 77
     },
     {
       "key": "hogwarts/f7/1",
@@ -2197,7 +2430,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 138
+      "sourceLine": 138,
+      "aliases": [
+        "Long Gallery",
+        "F5 (TẦNG 5) / E Long Gallery"
+      ],
+      "contextLine": 78
     },
     {
       "key": "hogwarts/f7/2",
@@ -2218,7 +2456,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 139
+      "sourceLine": 139,
+      "aliases": [
+        "Fourth-Floor Walk & Mirror",
+        "F5 (TẦNG 5) / S Fourth-Floor Walk & Mirror"
+      ],
+      "contextLine": 79
     },
     {
       "key": "hogwarts/f7/3",
@@ -2238,7 +2481,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 140
+      "sourceLine": 140,
+      "aliases": [
+        "Ancient Runes",
+        "F5 (TẦNG 5) / W Ancient Runes"
+      ],
+      "contextLine": 80
     },
     {
       "key": "hogwarts/f8/0",
@@ -2259,7 +2507,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 142
+      "sourceLine": 142,
+      "aliases": [
+        "Prefects–Faculty Route",
+        "F6 (TẦNG 6) / N Prefects–Faculty Route"
+      ],
+      "contextLine": 82
     },
     {
       "key": "hogwarts/f8/1",
@@ -2279,7 +2532,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 143
+      "sourceLine": 143,
+      "aliases": [
+        "Intermediate Classes",
+        "F6 (TẦNG 6) / E Intermediate Classes"
+      ],
+      "contextLine": 83
     },
     {
       "key": "hogwarts/f8/2",
@@ -2298,7 +2556,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 144
+      "sourceLine": 144,
+      "aliases": [
+        "Clock Tower Ascent",
+        "F6 (TẦNG 6) / S Clock Tower Ascent"
+      ],
+      "contextLine": 84
     },
     {
       "key": "hogwarts/f8/3",
@@ -2318,7 +2581,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 145
+      "sourceLine": 145,
+      "aliases": [
+        "West High Windows",
+        "F6 (TẦNG 6) / W West High Windows"
+      ],
+      "contextLine": 85
     },
     {
       "key": "hogwarts/f9/0",
@@ -2338,7 +2606,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 147
+      "sourceLine": 147,
+      "aliases": [
+        "Upper Stair Access",
+        "F7 (TẦNG 7) / N Upper Stair Access"
+      ],
+      "contextLine": 87
     },
     {
       "key": "hogwarts/f9/1",
@@ -2358,7 +2631,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 148
+      "sourceLine": 148,
+      "aliases": [
+        "Seminar & Labs",
+        "F7 (TẦNG 7) / E Seminar & Labs"
+      ],
+      "contextLine": 88
     },
     {
       "key": "hogwarts/f9/2",
@@ -2378,7 +2656,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 149
+      "sourceLine": 149,
+      "aliases": [
+        "Faculty/Clock Link",
+        "F7 (TẦNG 7) / S Faculty/Clock Link"
+      ],
+      "contextLine": 89
     },
     {
       "key": "hogwarts/f9/3",
@@ -2398,7 +2681,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 150
+      "sourceLine": 150,
+      "aliases": [
+        "Games & Projects",
+        "F7 (TẦNG 7) / W Games & Projects"
+      ],
+      "contextLine": 90
     },
     {
       "key": "hogwarts/f10/0",
@@ -2418,7 +2706,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 152
+      "sourceLine": 152,
+      "aliases": [
+        "Headmaster Approach",
+        "F8 (TẦNG 8) / N Headmaster Approach"
+      ],
+      "contextLine": 92
     },
     {
       "key": "hogwarts/f10/1",
@@ -2438,7 +2731,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 153
+      "sourceLine": 153,
+      "aliases": [
+        "Room of Requirement",
+        "F8 (TẦNG 8) / E Room of Requirement"
+      ],
+      "contextLine": 93
     },
     {
       "key": "hogwarts/f10/2",
@@ -2455,7 +2753,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 154
+      "sourceLine": 154,
+      "aliases": [
+        "Gryffindor Route",
+        "F8 (TẦNG 8) / S Gryffindor Route"
+      ],
+      "contextLine": 94
     },
     {
       "key": "hogwarts/f10/3",
@@ -2471,7 +2774,12 @@
         "source": "user-approved",
         "lockedFamily": true
       },
-      "sourceLine": 155
+      "sourceLine": 155,
+      "aliases": [
+        "Senior Clubs / CCC",
+        "F8 (TẦNG 8) / W Senior Clubs / CCC"
+      ],
+      "contextLine": 95
     },
     {
       "key": "tower/0/0",
@@ -4975,6 +5283,10 @@
       "Phòng học nhóm Hufflepuff",
       "Khu học nhóm bên trong khu Hufflepuff"
     ],
+    "P-80ce1ea13c2632": [
+      "Phòng sinh hoạt chung Slytherin",
+      "Slytherin Common Room"
+    ],
     "P-1cbafaf3eaef87": [
       "Hành lang chung Slytherin dưới hồ",
       "Hành lang Slytherin dưới hồ"
@@ -5085,20 +5397,823 @@
       "Khu nuôi / bảo tồn rồng Romania – nơi Charlie làm việc",
       "Khu nuôi/bảo tồn rồng Romania – nơi Charlie làm việc"
     ],
+    "HOG-HMNGM-N-01": [
+      "Hành lang đá dưới Tháp Thiên văn",
+      "Stone Corridor under Astronomy Tower"
+    ],
+    "HOG-HMNGM-N-02": [
+      "Phòng Giả kim",
+      "Alchemy Room"
+    ],
+    "HOG-HMNGM-N-03": [
+      "Kho than và nhiên liệu",
+      "Coal/Fuel Store"
+    ],
+    "HOG-HMNGM-N-04": [
+      "Phòng kiểm tra móng tháp",
+      "Tower Foundation Check Room"
+    ],
+    "HOG-HMNGM-E-01": [
+      "Đường ống xuống Phòng Chứa Bí mật",
+      "Chamber of Secrets Pipe"
+    ],
+    "HOG-HMNGM-E-02": [
+      "Phòng Chứa Bí mật",
+      "Chamber of Secrets"
+    ],
+    "HOG-HMNGM-E-03": [
+      "Gian cửa chắn hầm cổ",
+      "Ancient Vault Gatehouse"
+    ],
+    "HOG-HMNGM-E-04": [
+      "Hành lang dẫn đến hầm bị niêm phong",
+      "Sealed Vault Corridor"
+    ],
+    "HOG-HMNGM-S-01": [
+      "Gian Dây Sa-tăng",
+      "Devil's Snare"
+    ],
+    "HOG-HMNGM-S-02": [
+      "Gian chìa khóa bay",
+      "Flying Keys"
+    ],
+    "HOG-HMNGM-S-03": [
+      "Gian bàn cờ phù thủy",
+      "Wizard's Chess"
+    ],
+    "HOG-HMNGM-S-04": [
+      "Gian thử thách Độc dược",
+      "Potions Trial"
+    ],
+    "HOG-HMNGM-S-05": [
+      "Gian cuối bảo vệ Hòn đá",
+      "Final Mirror Chamber"
+    ],
+    "HOG-HMNGM-W-01": [
+      "Map Chamber"
+    ],
+    "HOG-HMNGM-W-02": [
+      "Undercroft"
+    ],
+    "HOG-HMNGM-W-03": [
+      "Kho dụng cụ khảo cổ",
+      "Archaeological Tool Store"
+    ],
+    "HOG-HMNGM-W-04": [
+      "Phòng lập bản vẽ công trình",
+      "Blueprint Room"
+    ],
+    "HOG-HMNGC-N-01": [
+      "Phòng học Độc dược",
+      "Potions Classroom"
+    ],
+    "HOG-HMNGC-N-02": [
+      "Văn phòng Snape",
+      "Snape's Office"
+    ],
+    "HOG-HMNGC-N-03": [
+      "Kho nguyên liệu Độc dược",
+      "Potions Ingredient Store",
+      "Ingredient Store"
+    ],
+    "HOG-HMNGC-N-04": [
+      "Phòng chuẩn bị bài thực hành",
+      "Practical Prep Room",
+      "Potions Prep Room"
+    ],
+    "HOG-HMNGC-N-05": [
+      "Phòng rửa vạc",
+      "Cauldron Washroom"
+    ],
+    "HOG-HMNGC-S-01": [
+      "Phòng tiệc Tử nhật",
+      "Deathday Party Chamber"
+    ],
+    "HOG-HMNGC-S-02": [
+      "Kho vật tư lau dọn",
+      "Cleaning Supply Store"
+    ],
+    "HOG-HMNGC-S-03": [
+      "Hành lang vận chuyển thực phẩm",
+      "Food Transit Corridor"
+    ],
+    "HOG-HMNGC-S-04": [
+      "Phòng trực gia tinh",
+      "House-Elf Duty Room"
+    ],
+    "HOG-HMNGC-S-05": [
+      "Phòng kỹ thuật lò sưởi",
+      "Furnace Tech Room"
+    ],
+    "HOG-HMNGC-W-01": [
+      "Hành lang hầm Tháp Thiên văn",
+      "Astronomy Dungeon Corridor"
+    ],
+    "HOG-HMNGC-W-02": [
+      "Phòng phân loại mẫu khoáng",
+      "Mineral Sorting Room"
+    ],
+    "HOG-HMNGC-W-03": [
+      "Phòng học trống HN-01",
+      "Empty Classroom HN-01"
+    ],
+    "HOG-HMNGC-W-04": [
+      "Kho nồi vạc cũ",
+      "Old Cauldron Store"
+    ],
+    "HOG-HMNGC-W-05": [
+      "Phòng lưu mẫu độc dược",
+      "Potion Sample Archive"
+    ],
+    "HOG-TNGBP-N-01": [
+      "Bếp Hogwarts",
+      "Hogwarts Kitchens"
+    ],
+    "HOG-TNGBP-N-02": [
+      "Kho thực phẩm khô",
+      "Dry Food Store"
+    ],
+    "HOG-TNGBP-N-03": [
+      "Phòng chuẩn bị suất ăn",
+      "Meal Prep Room"
+    ],
+    "HOG-TNGBP-N-04": [
+      "Phòng rửa dụng cụ nhà bếp",
+      "Scullery/Dishwashing"
+    ],
+    "HOG-TNGBP-N-05": [
+      "Hành lang hậu cần bếp",
+      "Kitchen Logistics Corridor"
+    ],
+    "HOG-TNGBP-S-01": [
+      "Phòng giặt là",
+      "Laundry Room"
+    ],
+    "HOG-TNGBP-S-02": [
+      "Phòng đồ vải",
+      "Linen Room"
+    ],
+    "HOG-TNGBP-S-03": [
+      "Kho khăn trải bàn",
+      "Tablecloth Store"
+    ],
+    "HOG-TNGBP-S-04": [
+      "Phòng bảo trì dụng cụ giặt",
+      "Laundry Maintenance"
+    ],
+    "HOG-TNGBP-S-05": [
+      "Hành lang kho phía Nam",
+      "South Storage Corridor"
+    ],
+    "HOG-TNGBP-W-01": [
+      "Phòng nghỉ gia tinh",
+      "House-Elf Quarters"
+    ],
+    "HOG-TNGBP-W-02": [
+      "Kho rau củ",
+      "Vegetable Larder"
+    ],
+    "HOG-TNGBP-W-03": [
+      "Kho thảo mộc nhà bếp",
+      "Kitchen Herb Store"
+    ],
+    "HOG-TNGBP-W-04": [
+      "Kho dụng cụ dự phòng",
+      "Spare Utensil Store"
+    ],
+    "HOG-TNGBP-W-05": [
+      "Hành lang kết nối hầm phía Tây",
+      "West Basement Link Corridor"
+    ],
+    "HOG-TNG1-N-01": [
+      "Sảnh phía Bắc (North Hall)",
+      "North Hall"
+    ],
+    "HOG-TNG1-N-02": [
+      "Sảnh chân Tháp Chuông",
+      "Bell Tower Foot Hall"
+    ],
+    "HOG-TNG1-N-03": [
+      "Hành lang tới cửa Bắc Hogwarts",
+      "North Gate Corridor"
+    ],
+    "HOG-TNG1-N-04": [
+      "Phòng trực cửa Bắc",
+      "North Gate Guardroom"
+    ],
+    "HOG-TNG1-N-05": [
+      "Kho đồ dùng sân tập",
+      "Practice Gear Store"
+    ],
+    "HOG-TNG1-N-06": [
+      "Phòng học trống B-01",
+      "Empty Classroom B-01"
+    ],
+    "HOG-TNG1-E-01": [
+      "Sảnh Trung tâm (Central Hall)",
+      "Central Hall"
+    ],
+    "HOG-TNG1-E-02": [
+      "Sảnh lối vào Cầu cạn (Viaduct Entrance)",
+      "Viaduct Entrance Hall"
+    ],
+    "HOG-TNG1-E-03": [
+      "Hành lang nối khu nhà kính",
+      "Greenhouse Link Corridor"
+    ],
+    "HOG-TNG1-E-04": [
+      "Phòng tiếp học sinh mới",
+      "New Pupil Reception"
+    ],
+    "HOG-TNG1-E-05": [
+      "Kho dụng cụ sảnh Trung tâm",
+      "Central Hall Store"
+    ],
+    "HOG-TNG1-E-06": [
+      "Phòng học trống Đ-01",
+      "Empty Classroom Đ-01"
+    ],
+    "HOG-TNG1-W-03": [
+      "Hành lang vào sân Biến hình",
+      "Transfiguration Courtyard Corridor"
+    ],
+    "HOG-TNG1-W-04": [
+      "Hành lang hướng sân Tứ giác",
+      "Quad Corridor"
+    ],
+    "HOG-TNG1-W-05": [
+      "Phòng gửi áo choàng",
+      "Cloakroom"
+    ],
+    "HOG-TNG1-W-06": [
+      "Kho dụng cụ Biến hình",
+      "Transfiguration Supply Store"
+    ],
+    "HOG-TNG2-N-01": [
+      "Phòng Lịch sử Pháp thuật",
+      "History of Magic Classroom"
+    ],
+    "HOG-TNG2-N-02": [
+      "Văn phòng McGonagall",
+      "McGonagall's Office"
+    ],
+    "HOG-TNG2-N-03": [
+      "Phòng học Biến hình",
+      "Transfiguration Classroom"
+    ],
+    "HOG-TNG2-N-04": [
+      "Phòng chuẩn bị Biến hình",
+      "Transfiguration Prep Room"
+    ],
+    "HOG-TNG2-N-05": [
+      "Kho sách Lịch sử Pháp thuật",
+      "History Book Store"
+    ],
+    "HOG-TNG2-N-06": [
+      "Phòng học trống B-02",
+      "Empty Classroom B-02"
+    ],
+    "HOG-TNG2-W-01": [
+      "Phòng học Muggle học",
+      "Muggle Studies Classroom"
+    ],
+    "HOG-TNG2-W-02": [
+      "Phòng Chữ tượng hình (Hieroglyphics)",
+      "Hieroglyphics Room"
+    ],
+    "HOG-TNG2-W-03": [
+      "Hành lang tầng trên North Hall",
+      "North Hall Upper Corridor"
+    ],
+    "HOG-TNG2-W-04": [
+      "Phòng lưu mô hình lịch sử",
+      "Historical Model Archive"
+    ],
+    "HOG-TNG2-W-05": [
+      "Kho bản đồ giảng dạy",
+      "Teaching Map Store"
+    ],
+    "HOG-TNG2-W-06": [
+      "Phòng học trống T-02",
+      "Empty Classroom T-02"
+    ],
+    "HOG-TNG2-S-01": [
+      "Bệnh xá Hogwarts",
+      "Hospital Wing"
+    ],
+    "HOG-TNG2-S-02": [
+      "Văn phòng bà Pomfrey",
+      "Pomfrey's Office"
+    ],
+    "HOG-TNG2-S-03": [
+      "Hành lang vào Tháp Giáo viên",
+      "Faculty Tower Access Corridor"
+    ],
+    "HOG-TNG2-S-04": [
+      "Phòng thay băng",
+      "Bandage/Dressing Room"
+    ],
+    "HOG-TNG2-S-05": [
+      "Kho vật tư y tế",
+      "Medical Supply Store"
+    ],
+    "HOG-TNG2-S-06": [
+      "Phòng chờ bệnh xá",
+      "Infirmary Waiting Room"
+    ],
     "HOG-TNG2-E-01": [
       "Phòng học Phòng chống Nghệ thuật Hắc ám (cửa tháp)",
       "Phòng học Phòng chống Nghệ thuật Hắc ám",
-      "Phòng học Phòng chống Nghệ thuật Hắc ám — cửa tháp"
+      "Phòng học Phòng chống Nghệ thuật Hắc ám — cửa tháp",
+      "DADA Classroom (tower door)"
+    ],
+    "HOG-TNG2-E-02": [
+      "Hành lang Tháp DADA tầng thấp",
+      "Lower DADA Tower Corridor"
+    ],
+    "HOG-TNG2-E-03": [
+      "Phòng học phụ Tháp DADA",
+      "DADA Auxiliary Room"
+    ],
+    "HOG-TNG2-E-04": [
+      "Phòng thực hành phòng vệ",
+      "Defence Practical Room"
     ],
     "HOG-TNG2-E-05": [
       "Kho đạo cụ DADA (kho đạo cụ phòng vệ tại chân Tháp DADA)",
       "Kho đạo cụ DADA",
-      "Kho đạo cụ phòng vệ"
+      "Kho đạo cụ phòng vệ",
+      "DADA Prop Store"
+    ],
+    "HOG-TNG2-E-06": [
+      "Phòng học trống Đ-02",
+      "Empty Classroom Đ-02"
+    ],
+    "HOG-TNG3-N-01": [
+      "Nhà vệ sinh Myrtle",
+      "Myrtle's Bathroom"
+    ],
+    "HOG-TNG3-N-02": [
+      "Hành lang tầng hai cạnh nhà vệ sinh Myrtle",
+      "\"Second-Floor\" Corridor by Myrtle's Bathroom"
+    ],
+    "HOG-TNG3-N-03": [
+      "Nhà vệ sinh nam tầng này",
+      "Boys' Bathroom"
+    ],
+    "HOG-TNG3-N-04": [
+      "Kho bảo trì đường nước",
+      "Plumbing Store"
+    ],
+    "HOG-TNG3-N-05": [
+      "Phòng trực hành lang B-03",
+      "Corridor Guardroom B-03"
+    ],
+    "HOG-TNG3-W-02": [
+      "Hành lang tranh bản đồ Argyllshire",
+      "Argyllshire Map Tapestry Corridor"
+    ],
+    "HOG-TNG3-W-03": [
+      "Phòng kiểm tra an toàn cầu thang",
+      "Stair Safety Check Room"
+    ],
+    "HOG-TNG3-W-04": [
+      "Phòng học trống T-03",
+      "Empty Classroom T-03"
+    ],
+    "HOG-TNG3-W-05": [
+      "Kho ghế bàn học",
+      "Desk/Chair Store"
+    ],
+    "HOG-TNG3-S-01": [
+      "Phòng luyện đũa phép cơ bản",
+      "Basic Wand-Practice Room"
+    ],
+    "HOG-TNG3-S-02": [
+      "Phòng học trống N-03",
+      "Empty Classroom N-03"
+    ],
+    "HOG-TNG3-S-03": [
+      "Kho thiết bị học tập",
+      "Study Equipment Store"
+    ],
+    "HOG-TNG3-S-04": [
+      "Phòng làm việc trợ giảng",
+      "TA Office"
+    ],
+    "HOG-TNG3-S-05": [
+      "Phòng sinh hoạt học sinh nhỏ",
+      "Small Student Lounge"
+    ],
+    "HOG-TNG3-E-01": [
+      "Văn phòng giáo sư DADA (Lockhart 1992)",
+      "DADA Professor's Office (Lockhart 1992)"
+    ],
+    "HOG-TNG3-E-02": [
+      "Hành lang tới văn phòng DADA",
+      "DADA Office Corridor"
+    ],
+    "HOG-TNG3-E-03": [
+      "Phòng tiếp phụ huynh của khoa DADA",
+      "DADA Parent Reception"
+    ],
+    "HOG-TNG3-E-04": [
+      "Phòng lưu giáo án",
+      "Lesson Plan Archive"
+    ],
+    "HOG-TNG3-E-05": [
+      "Phòng học trống Đ-03",
+      "Empty Classroom Đ-03"
+    ],
+    "HOG-TNG4-N-01": [
+      "Phòng Trưng bày Chiến tích",
+      "Trophy Room"
+    ],
+    "HOG-TNG4-N-02": [
+      "Hành lang áo giáp",
+      "Armour Gallery"
+    ],
+    "HOG-TNG4-N-03": [
+      "Phòng Âm nhạc (Music Room)",
+      "Music Room"
+    ],
+    "HOG-TNG4-N-04": [
+      "Kho bảo quản cúp",
+      "Trophy Preservation Store"
+    ],
+    "HOG-TNG4-N-05": [
+      "Phòng tập hòa tấu",
+      "Ensemble Practice Room"
+    ],
+    "HOG-TNG4-N-06": [
+      "Phòng học trống B-04",
+      "Empty Classroom B-04"
+    ],
+    "HOG-TNG4-W-01": [
+      "Hành lang tầng trên Sảnh Bắc",
+      "North Hall Upper Gallery Corridor"
+    ],
+    "HOG-TNG4-W-02": [
+      "Phòng trưng bày cổ vật giáo dục",
+      "Educational Artefact Display"
+    ],
+    "HOG-TNG4-W-03": [
+      "Phòng học trống T-04",
+      "Empty Classroom T-04"
+    ],
+    "HOG-TNG4-W-04": [
+      "Kho trang phục biểu diễn",
+      "Costume Store"
+    ],
+    "HOG-TNG4-W-05": [
+      "Phòng phục hồi hiện vật",
+      "Artefact Restoration Room"
+    ],
+    "HOG-TNG4-S-01": [
+      "Phòng tập Đấu tay đôi dự phòng",
+      "Backup Duelling Practice Room"
+    ],
+    "HOG-TNG4-S-02": [
+      "Phòng chuẩn bị câu lạc bộ",
+      "Club Prep Room"
+    ],
+    "HOG-TNG4-S-03": [
+      "Phòng tập diễn thuyết",
+      "Public Speaking Room"
+    ],
+    "HOG-TNG4-S-04": [
+      "Phòng họp học sinh",
+      "Student Meeting Room"
+    ],
+    "HOG-TNG4-S-05": [
+      "Phòng học trống N-04",
+      "Empty Classroom N-04"
+    ],
+    "HOG-TNG4-E-01": [
+      "Phòng học Bùa chú",
+      "Charms Classroom"
+    ],
+    "HOG-TNG4-E-02": [
+      "Hành lang Bùa chú",
+      "Charms Corridor"
+    ],
+    "HOG-TNG4-E-03": [
+      "Hành lang cấm tầng ba năm 1991",
+      "1991 \"Third-Floor\" Forbidden Corridor"
+    ],
+    "HOG-TNG4-E-04": [
+      "Gian cửa sập của Fluffy (1991)",
+      "Fluffy's Trapdoor Chamber (1991)"
+    ],
+    "HOG-TNG4-E-05": [
+      "Phòng thực hành Bùa chú",
+      "Charms Practical Room"
+    ],
+    "HOG-TNG4-E-06": [
+      "Kho đồ dùng Bùa chú",
+      "Charms Supply Store"
+    ],
+    "HOG-TNG5-N-01": [
+      "Thư viện Hogwarts",
+      "Hogwarts Library"
+    ],
+    "HOG-TNG5-N-02": [
+      "Khu Sách Cấm (Restricted Section)",
+      "Restricted Section"
+    ],
+    "HOG-TNG5-N-03": [
+      "Phòng làm việc thủ thư",
+      "Pince's Office"
+    ],
+    "HOG-TNG5-N-04": [
+      "Phòng đọc nghiên cứu",
+      "Research Reading Room"
+    ],
+    "HOG-TNG5-N-05": [
+      "Phòng tra cứu mục lục",
+      "Catalogue Index Room"
+    ],
+    "HOG-TNG5-N-06": [
+      "Kho sách ít dùng",
+      "Rare Book Store"
+    ],
+    "HOG-TNG5-E-01": [
+      "Hành lang Dài (Long Gallery)",
+      "Long Gallery"
+    ],
+    "HOG-TNG5-E-02": [
+      "Phòng học Số học (Arithmancy)",
+      "Arithmancy Classroom"
+    ],
+    "HOG-TNG5-E-03": [
+      "Phòng bản đồ và địa lý pháp thuật",
+      "Magical Cartography Room"
+    ],
+    "HOG-TNG5-E-04": [
+      "Phòng giải mã mật thư",
+      "Cipher/Cryptology Room"
+    ],
+    "HOG-TNG5-E-05": [
+      "Phòng học trống Đ-05",
+      "Empty Classroom Đ-05"
+    ],
+    "HOG-TNG5-S-01": [
+      "Phòng trống từng chứa Gương Ảo ảnh năm 1991",
+      "Former 1991 Mirror of Erised Room"
+    ],
+    "HOG-TNG5-S-02": [
+      "Hành lang gương thông lối bí mật cũ",
+      "Old Secret Mirror Corridor"
+    ],
+    "HOG-TNG5-S-03": [
+      "Phòng lưu hồ sơ thư viện",
+      "Library Records Archive"
+    ],
+    "HOG-TNG5-S-04": [
+      "Phòng học trống N-05",
+      "Empty Classroom N-05"
+    ],
+    "HOG-TNG5-S-05": [
+      "Kho vật dụng sảnh đọc",
+      "Reading Room Store"
+    ],
+    "HOG-TNG3-W-01": [
+      "Cầu thang tắt sau thảm treo",
+      "Tapestry Shortcut Stair"
+    ],
+    "HOG-TNG5-W-01": [
+      "Phòng học Cổ ngữ Runes",
+      "Ancient Runes Classroom"
+    ],
+    "HOG-TNG5-W-02": [
+      "Phòng dịch cổ ngữ",
+      "Runes Translation Room"
+    ],
+    "HOG-TNG5-W-03": [
+      "Phòng học chuyên đề lịch sử",
+      "History Seminar Room"
+    ],
+    "HOG-TNG5-W-04": [
+      "Phòng nghiên cứu tư liệu",
+      "Source Research Room"
+    ],
+    "HOG-TNG5-W-05": [
+      "Phòng học trống T-05",
+      "Empty Classroom T-05"
+    ],
+    "HOG-TNG6-N-01": [
+      "Phòng tắm Huynh trưởng",
+      "Prefects' Bathroom"
+    ],
+    "HOG-TNG6-N-02": [
+      "Hành lang trước Phòng tắm Huynh trưởng",
+      "Prefects' Bathroom Corridor"
+    ],
+    "HOG-TNG6-N-03": [
+      "Hành lang Tháp Giáo viên tầng trên",
+      "Upper Faculty Tower Corridor"
+    ],
+    "HOG-TNG6-N-04": [
+      "Phòng nghỉ huynh trưởng",
+      "Prefects' Lounge"
+    ],
+    "HOG-TNG6-N-05": [
+      "Kho khăn và đồng phục",
+      "Towel/Uniform Store"
+    ],
+    "HOG-TNG6-N-06": [
+      "Phòng học trống B-06",
+      "Empty Classroom B-06"
+    ],
+    "HOG-TNG6-E-01": [
+      "Phòng nghiên cứu Số học",
+      "Arithmancy Research Room"
+    ],
+    "HOG-TNG6-E-02": [
+      "Hành lang cánh Đông tầng năm",
+      "\"Fifth-Floor\" East Wing Corridor"
+    ],
+    "HOG-TNG6-E-03": [
+      "Phòng mỹ thuật pháp thuật",
+      "Magical Art Room"
+    ],
+    "HOG-TNG6-E-04": [
+      "Kho bài tập và bảng phép",
+      "Assignment/Chart Store"
+    ],
+    "HOG-TNG6-E-05": [
+      "Phòng học trống Đ-06",
+      "Empty Classroom Đ-06"
+    ],
+    "HOG-TNG6-S-01": [
+      "Hành lang Tháp Đồng hồ tầng cao",
+      "Upper Clock Tower Corridor"
+    ],
+    "HOG-TNG6-S-03": [
+      "Phòng câu lạc bộ học thuật",
+      "Academic Club Room"
+    ],
+    "HOG-TNG6-S-04": [
+      "Phòng làm báo học sinh",
+      "Student Newspaper Room"
+    ],
+    "HOG-TNG6-S-05": [
+      "Kho thiết bị triển lãm",
+      "Exhibit Gear Store"
+    ],
+    "HOG-TNG6-W-01": [
+      "Hành lang cửa sổ phía Tây tầng năm",
+      "\"Fifth-Floor\" West Window Corridor"
+    ],
+    "HOG-TNG6-W-02": [
+      "Phòng tập nhạc nhóm nhỏ",
+      "Small Ensemble Room"
+    ],
+    "HOG-TNG6-W-03": [
+      "Phòng đọc yên tĩnh",
+      "Quiet Reading Room"
+    ],
+    "HOG-TNG6-W-04": [
+      "Phòng học trống T-06",
+      "Empty Classroom T-06"
+    ],
+    "HOG-TNG6-W-05": [
+      "Kho đồ thủ công",
+      "Craft Supply Store"
+    ],
+    "HOG-TNG7-N-01": [
+      "Phòng lưu bảng thành tích học thuật",
+      "Academic Achievement Archive"
+    ],
+    "HOG-TNG7-N-02": [
+      "Phòng lưu sổ kết quả học tập",
+      "Grade Ledger Archive"
+    ],
+    "HOG-TNG7-N-03": [
+      "Kho thiết bị tiết học nâng cao",
+      "Advanced Lesson Gear Store"
+    ],
+    "HOG-TNG7-N-04": [
+      "Phòng học trống B-07",
+      "Empty Classroom B-07"
+    ],
+    "HOG-TNG7-N-05": [
+      "Hành lang cầu thang phía Bắc",
+      "North Stair Corridor"
+    ],
+    "HOG-TNG7-E-01": [
+      "Nhà vệ sinh nam tầng sáu",
+      "\"Sixth-Floor\" Boys' Bathroom"
+    ],
+    "HOG-TNG7-E-02": [
+      "Phòng học chuyên đề Phép thuật nâng cao",
+      "Advanced Magic Seminar Room"
+    ],
+    "HOG-TNG7-E-03": [
+      "Phòng hội thảo nhỏ",
+      "Small Colloquium Room"
+    ],
+    "HOG-TNG7-E-04": [
+      "Phòng thí nghiệm an toàn",
+      "Safe Lab"
+    ],
+    "HOG-TNG7-E-05": [
+      "Phòng học trống Đ-07",
+      "Empty Classroom Đ-07"
+    ],
+    "HOG-TNG7-S-01": [
+      "Hành lang phía trên Tháp Giáo viên",
+      "Upper Faculty Tower Corridor"
+    ],
+    "HOG-TNG7-S-02": [
+      "Phòng lưu biên bản giáo viên",
+      "Staff Minutes Archive"
+    ],
+    "HOG-TNG7-S-03": [
+      "Phòng xem lịch học",
+      "Timetable Room"
+    ],
+    "HOG-TNG7-S-04": [
+      "Kho sách tham khảo",
+      "Reference Book Store"
+    ],
+    "HOG-TNG7-S-05": [
+      "Phòng học trống N-07",
+      "Empty Classroom N-07"
+    ],
+    "HOG-TNG7-W-01": [
+      "Phòng Gobstones",
+      "Gobstones Room"
+    ],
+    "HOG-TNG7-W-02": [
+      "Phòng câu lạc bộ cờ phù thủy",
+      "Wizard's Chess Club Room"
+    ],
+    "HOG-TNG7-W-03": [
+      "Phòng làm dự án học sinh",
+      "Student Project Room"
+    ],
+    "HOG-TNG7-W-04": [
+      "Phòng học trống T-07",
+      "Empty Classroom T-07"
+    ],
+    "HOG-TNG7-W-05": [
+      "Hành lang kính tầng cao",
+      "High Glass Corridor"
+    ],
+    "HOG-TNG8-N-01": [
+      "Hành lang dẫn lên văn phòng Hiệu trưởng",
+      "Headmaster's Office Approach Corridor"
+    ],
+    "HOG-TNG8-N-02": [
+      "Sảnh vào văn phòng Hiệu trưởng",
+      "Headmaster's Entrance Hall"
     ],
     "HOG-TNG8-N-03": [
       "Sảnh tầng cao Cầu thang Lớn (Sảnh cao Cầu thang Lớn)",
       "Sảnh tầng cao Cầu thang Lớn",
-      "Sảnh cao Cầu thang Lớn"
+      "Sảnh cao Cầu thang Lớn",
+      "Upper Grand Staircase Hall"
+    ],
+    "HOG-TNG8-N-04": [
+      "Phòng học trống B-08",
+      "Empty Classroom B-08"
+    ],
+    "HOG-TNG8-N-05": [
+      "Kho giấy tờ giáo vụ",
+      "Academic Records Store"
+    ],
+    "HOG-TNG8-E-01": [
+      "Hành lang tầng bảy trước Phòng Yêu cầu",
+      "\"Seventh-Floor\" Corridor outside RoR"
+    ],
+    "HOG-TNG8-E-02": [
+      "Phòng Yêu cầu (Room of Requirement)",
+      "Room of Requirement"
+    ],
+    "HOG-TNG8-E-03": [
+      "Phòng học trống Đ-08",
+      "Empty Classroom Đ-08"
+    ],
+    "HOG-TNG8-E-04": [
+      "Phòng nghi lễ học thuật",
+      "Academic Ceremony Room"
+    ],
+    "HOG-TNG8-E-05": [
+      "Phòng bảo quản tranh phép",
+      "Portrait Conservation Room"
+    ],
+    "HOG-TNG8-S-04": [
+      "Phòng học nhóm tầng bảy",
+      "\"Seventh-Floor\" Study Group Room"
+    ],
+    "HOG-TNG8-S-05": [
+      "Hành lang tranh tầng bảy",
+      "\"Seventh-Floor\" Portrait Corridor"
+    ],
+    "HOG-TNG8-W-07": [
+      "Phòng học trống T-08",
+      "Empty Classroom T-08"
     ],
     "TWR-06-02-02": [
       "Phòng bảo trì đồng hồ / cơ cấu đồng hồ",

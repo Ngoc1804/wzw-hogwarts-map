@@ -1,109 +1,48 @@
 import sceneAtlas from './atlas-index.json' with {type:'json'};
-// Stable place IDs, explicit template bindings and scene-local corridor choices only.
-// No fuzzy names, no inferred canon adjacency and no layout persistence.
-const retired=new Set(sceneAtlas.retiredPlaceIds||[]),unassigned=new Set(sceneAtlas.groups.filter(g=>g.kind==='unassigned').flatMap(g=>g.placeIds));
-const known=new Set(sceneAtlas.knownPlaceIds),locked=new Set(sceneAtlas.lockedPlaceIds),
-      cccNonRoom=new Set(sceneAtlas.cccNonRoomPlaceIds),noGenerate=new Set(sceneAtlas.noGeneratePlaceIds);
-export function canonicalPlaceId(id){return sceneAtlas.aliases[id]||id}
-export function isKnownAtlasPlace(id){return known.has(canonicalPlaceId(id))}
-export function verifiedAtlasBinding(id,templateId){return sceneAtlas.bindings[canonicalPlaceId(id)]?.[templateId]||null}
-export function assertAllowedScene(placeIds){
- for(const id of placeIds){
-  const canonical=canonicalPlaceId(id);
-  if(retired.has(id))throw Error('Retired Atlas reference: '+id+'; use a place from the approved atlas');
-  if(unassigned.has(canonical))throw Error('Atlas location awaits confirmed floor/template: '+canonical);
-  if(locked.has(canonical))throw Error('AU map locked until approved: '+canonical);
-  if(cccNonRoom.has(canonical))throw Error('CCC 07.18: only the main room may be generated: '+canonical);
- }
-}
-export function selectScenePreset(data,places){
- const ids=new Set(places.map(p=>canonicalPlaceId(p.id)));
- if(!ids.size)return null;
- const explicit=sceneAtlas.groups.find(g=>g.key===data.view.scopeId);
- if(explicit){
-  if(explicit.buildEnabled===false)throw Error('AU map locked until approved: '+explicit.name);
-  const spot=['corridor','threshold','adhoc'].includes(data.view.spotType)?data.focus.actualPlaceId:null;
-  if([...ids].some(id=>!explicit.placeIds.includes(id)&&id!==spot))throw Error('Scene includes places outside selected floor/area');
-  return explicit;
- }
- const candidates=sceneAtlas.groups.filter(g=>g.preset&&[...ids].every(id=>g.placeIds.includes(id)));
- const pc=canonicalPlaceId(data.focus.actualPlaceId);
- const eligible=candidates.filter(g=>g.placeIds.includes(pc));
- const pool=eligible.length?eligible:candidates;
- // Most specific group wins: AU metadata only when it is allowed.
- pool.sort((a,b)=>a.placeIds.length-b.placeIds.length||a.key.localeCompare(b.key));
- return pool[0]||null;
-}
-export function generatedSceneOptions(data,plan){
- const group=selectScenePreset(data,plan.places);
- const options={...(group?.preset?{layout:group.preset.layout}:{}),...data.view.indoor};
- const lockedFamily=group?.preset?.lockedFamily&&group.preset.layout!=='auto';
- if(lockedFamily){
-  if(data.view.indoor?.layout&&data.view.indoor.layout!=='auto'&&data.view.indoor.layout!==group.preset.layout)throw Error('Indoor layout conflicts with approved corridor family for '+group.key);
-  options.layout=group.preset.layout;
- }
- const count=plan.places.filter(p=>p.kind!=='corridor').length;
- // A formula is a grammar, not a fixed room arrangement: deterministic local
- // proportions vary by scope, never by NPC/quest/time, and explicit RP overrides win.
- if(group&&count>1){
-  let h=2166136261;
-  for(const ch of group.key+':'+sceneAtlas.atlasVersion)h=Math.imul(h^ch.charCodeAt(0),16777619)>>>0;
-  options.roomWidth??=240+(h%4)*20;
-  options.roomDepth??=210+((h>>>4)%4)*20;
-  options.corridorWidth??=125+((h>>>8)%4)*10;
- }
- // A small scene is never forced into an oversized predefined hallway;
- // explicit user-specified layout is still honored where geometrically possible.
- if(!lockedFamily&&count<=1&&!data.view.indoor?.layout&&!data.view.indoor?.knownStructure){
-   options.layout='horizontal';
- }
- if(!lockedFamily&&options.layout==='tower'&&count<2&&!data.view.indoor?.knownStructure)options.layout='horizontal';
- return options;
-}
-export function assertGeneratedScene(placeIds){
- assertAllowedScene(placeIds);
- for(const id of placeIds)if(noGenerate.has(canonicalPlaceId(id)))
-  throw Error('Existing fixed map/template required; no generated courtyard, exterior or Ministry: '+canonicalPlaceId(id));
-}
-export function listSceneAtlasGroups(){return sceneAtlas.groups}
+import {resolveAtlasName,resolveAtlasGroup,normalizeLayoutType} from './map-data.mjs';
 
-export function canonicalPlaceFunction(id){return sceneAtlas.placeFunctionById[canonicalPlaceId(id)]||null}
-export function isCanonicalCorridor(id){return sceneAtlas.corridorPlaceIds.includes(canonicalPlaceId(id))}
-
-/**
- * Resolve static locality by PC, not by how many rooms Gemini included.
- * No cardinal direction merging and no inference of canon doors.
- */
-export function resolveAtlasLocality(pcId,scopeId=null){
- const id=canonicalPlaceId(pcId);
- const groups=sceneAtlas.groups.filter(g=>g.buildEnabled!==false&&g.placeIds.includes(id));
- if(scopeId){
-  const requested=groups.find(g=>g.key===scopeId);
-  if(!requested)throw Error('PC does not belong to requested Atlas scope: '+scopeId);
-  return requested;
- }
- return groups.sort((a,b)=>a.placeIds.length-b.placeIds.length||a.key.localeCompare(b.key))[0]||null;
-}
-export function atlasPlaceName(id){return sceneAtlas.canonicalNameById[canonicalPlaceId(id)]||null}
-export function atlasPlaceKind(id){return sceneAtlas.placeKindById?.[canonicalPlaceId(id)]||(isCanonicalCorridor(id)?'corridor':'room')}
-export function isLockedAtlasPlace(id){return locked.has(canonicalPlaceId(id))||cccNonRoom.has(canonicalPlaceId(id))}
-export function listVerifiedTemplateBindings(id){return sceneAtlas.bindings[canonicalPlaceId(id)]||{}}
-export function atlasVersion(){return sceneAtlas.atlasVersion}
-
+// Atlas IDs/ownership/status stay source facts. They are not render permission gates.
+const known=new Set(sceneAtlas.knownPlaceIds);
+export function canonicalPlaceId(id){return sceneAtlas.aliases[id]||id;}
+export function isKnownAtlasPlace(id){return known.has(canonicalPlaceId(id));}
+export function verifiedAtlasBinding(id,templateId){return sceneAtlas.bindings[canonicalPlaceId(id)]?.[templateId]||null;}
+export function atlasPlaceName(id){return sceneAtlas.canonicalNameById[canonicalPlaceId(id)]||null;}
+export function atlasPlaceKind(id){return sceneAtlas.placeKindById?.[canonicalPlaceId(id)]||'room';}
+export function canonicalPlaceFunction(id){return sceneAtlas.placeFunctionById[canonicalPlaceId(id)]||null;}
+export function isCanonicalCorridor(id){return sceneAtlas.corridorPlaceIds.includes(canonicalPlaceId(id));}
+export function listVerifiedTemplateBindings(id){return sceneAtlas.bindings[canonicalPlaceId(id)]||{};}
+export function atlasVersion(){return sceneAtlas.atlasVersion;}
+export function listSceneAtlasGroups(){return sceneAtlas.groups;}
 export const sceneTemplateOwners=sceneAtlas.templateOwnerById||{};
+export function isLockedAtlasPlace(id){return (sceneAtlas.lockedPlaceIds||[]).includes(canonicalPlaceId(id));}
+// Kept for old imports. Status is queried separately; rendering is never refused.
+export function assertAllowedScene(){return true;}
+export function assertGeneratedScene(){return true;}
 
-// A transient RP corridor belongs to a verified scope, not a fabricated canon room.
-export function resolveRelativeSceneScope(scopeId,nearPlace){
- const near=canonicalPlaceId(nearPlace||'');
- if(known.has(near)){
-  const group=resolveAtlasLocality(near,scopeId||null);
-  if(group&&group.buildEnabled!==false&&['castle','tower'].includes(group.kind))return group;
-  if(scopeId)throw Error('Nearby Atlas room does not belong to requested scope: '+scopeId);
- }
- if(scopeId){
-  const group=sceneAtlas.groups.find(g=>g.key===scopeId);
-  if(group?.buildEnabled===false)throw Error('AU map locked until approved: '+scopeId);
-  if(group&&['castle','tower'].includes(group.kind)&&group.placeIds.length)return group;
- }
- return null;
+export function resolveAtlasLocality(pcId,scopeId=null){
+ const anchor=typeof scopeId==='string'?scopeId:'';
+ const exact=resolveAtlasGroup(anchor);
+ if(exact)return exact;
+ // An anchor can be an existing canonical place ID or an unambiguous source name.
+ const place=resolveAtlasName(anchor)||canonicalPlaceId(pcId);
+ const scope=sceneAtlas.scopeById?.[place];
+ return sceneAtlas.groups.find(g=>g.key===scope)||sceneAtlas.groups.find(g=>g.placeIds.includes(place))||null;
 }
+export function resolveRelativeSceneScope(scopeId,nearPlace){return resolveAtlasLocality(resolveAtlasName(nearPlace)||nearPlace,scopeId);}
+export function selectScenePreset(data){
+ return resolveAtlasLocality(data.focus?.actualPlaceId||data.actors?.find(a=>a.isPC)?.placeId,data.atlasAnchor||data.view?.scopeId);
+}
+export function generatedSceneOptions(data,plan={}){
+ const group=plan.atlasGroup||selectScenePreset(data),legacy=data.view?.indoor||{};
+ const layout=normalizeLayoutType(data.layoutType)||normalizeLayoutType(legacy.layout)||normalizeLayoutType(group?.preset?.layout)||'auto';
+ // Do not propagate legacy constraints/knownStructure as vetoes over Gemini.
+ const {knownStructure,constraints,candidates,strategy,allowRandom,...presentation}=legacy;
+ return {...presentation,layout};
+}
+export function atlasBackgroundPlaces(group){
+ // LOCKED/UNBUILT remains source metadata. Do not invent a background for it.
+ if(!group||group.buildEnabled===false)return [];
+ return group.placeIds.map(id=>({id,name:atlasPlaceName(id)||id,type:canonicalPlaceFunction(id)||atlasPlaceKind(id),kind:atlasPlaceKind(id),description:'',props:[],inspector:{overhear:'',observation:''},presentationSource:'atlas'}));
+}
+
+export function sceneAtlasReferences(scopeId){return (sceneAtlas.references||[]).filter(r=>r.sourceScope===scopeId);}
