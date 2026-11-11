@@ -34,15 +34,16 @@ function v4BlendPlaces(background,rp){
 }
 export function resolveMap(input,templates=registry.templates){
  const data=mapSceneData(input),pc=data.actors.find(a=>a.isPC);
- const pcId=canonicalPlaceId(pc?.placeId||data.focus.actualPlaceId);
+ const pcId=canonicalPlaceId(data.focus.actualPlaceId);
+ const displayPlaceId=pc?.placeId||data.places[0]?.id;
  const anchor=data.atlasAnchor,custom=anchor.toLowerCase()==='custom'||Boolean(data.customScene);
  const listed=data.places.map(p=>({...p,id:custom?p.id:canonicalPlaceId(p.id)}));
- const pcPlace=listed.find(p=>p.id===pcId)||listed[0];
+ const pcPlace=listed.find(p=>p.id===(pcId||displayPlaceId))||listed[0];
  const group=custom?null:resolveAtlasLocality(pcId,anchor);
  const routed=(group&&!group.placeIds.length)?(sceneAtlasReferences(group.key).find(r=>r.targetScopeId?.startsWith('template:'))?.targetScopeId.slice(9)):null;
  const explicitTemplate=templates[anchor]?anchor:templates[data.view.templateId]?data.view.templateId:templates[routed]?routed:null;
  const owners=sceneTemplateOwners[pcId]||[];
- const eligible=Object.keys(templates).filter(id=>owners.includes(id)||v4TemplateRef(pcPlace,id,templates));
+ const eligible=pcId?Object.keys(templates).filter(id=>owners.includes(id)||v4TemplateRef(pcPlace,id,templates)):[];
  eligible.sort((a,b)=>(TEMPLATE_SPECIFICITY[b]||70)-(TEMPLATE_SPECIFICITY[a]||70)||a.localeCompare(b));
  // Explicit semantic indoor/outdoor modes also request generated rendering.
  const forceGenerated=custom||['indoor','outdoor'].includes(data.mapMode)||data.view.preferredMode==='generated';

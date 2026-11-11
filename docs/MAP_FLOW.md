@@ -23,7 +23,7 @@ The target flow is `Gemini MAP_DATA → normalize → resolve / Atlas blend → 
 
 Missing/incorrect optional structures are normalized individually. A PC marker without a name is presentation-only when pcPlace was supplied. Without any PC location the fallback says the location is unknown; it does not invent a character or move NPCs to the PC. Ambiguous same-name rooms are kept unresolved rather than assigned to a random canonical room.
 
-Legacy meta/places/actors/view/hints/customScene input is adapted at this boundary: kind and generation.function supply type; placeId references are resolved; hints become events; view.indoor.layout supplies layoutType. Legacy generation, inspector, spatial and visibility data remain available internally. `mapSceneData` derives focus/visiblePlaceIds and the old viewer fields; these are not required from Gemini. `validateMapData` reports warnings without rejecting the scene. `serializeMapData` escapes JSON for HTML embedding.
+Legacy meta/places/actors/view/hints/customScene input is adapted at this boundary: kind and generation.function supply type; placeId references are resolved; hints become events; view.indoor.layout supplies layoutType. Legacy generation, inspector, connections, spatial and visibility data remain available and survive export. Actor placeId is retained to disambiguate repeated names. `mapSceneData` derives focus/visiblePlaceIds and the old viewer fields; these are not required from Gemini. `validateMapData` distinguishes clean input from normalized/fallback input using diagnostics; `renderable` remains true and warnings never reject the scene. `serializeMapData` escapes JSON for HTML embedding.
 
 ## Resolution
 
@@ -48,4 +48,4 @@ English aliases for 44 Hogwarts clusters and 203 room occurrences were aligned t
 
 ## Remaining integration
 
-Fixed safe-anchor placement, individual marker failures, label density, prefab drawing, Outdoor architecture and the final single V4 bundle are addressed in PH4–PH9. The minimal fallback prevents an old renderer failure from clearing the whole Preview during this transition. The existing production prompt still describes the old contract until PH10; do not call it the V4 prompt.
+Fixed display-only anchors now keep artwork when detailed bindings are missing. Remaining marker density, prefab drawing, Outdoor architecture and the final single V4 bundle are addressed in PH4–PH9. The minimal fallback prevents an old renderer failure from clearing the whole Preview during this transition. The existing production prompt still describes the old contract until PH10; do not call it the V4 prompt.

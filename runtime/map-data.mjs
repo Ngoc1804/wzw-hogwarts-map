@@ -25,8 +25,6 @@ export function resolveAtlasName(value,scopeId=''){
  const direct=sceneAtlas.aliases[mapV4Text(value)]||mapV4Text(value);
  if(mapV4Known.has(direct))return direct;
  const key=placeNameKey(value);
- // Generic room labels never identify a particular canonical building.
- if(/^(phong (ngu|khach|tam|hoc|chinh)|thu vien|bep|kho|hanh lang|san trong|vuon|bedroom|office|storage|corridor|library|kitchen|garden)$/.test(key))return null;
  const ids=mapV4Names.get(key)||[];
  const local=scopeId?ids.filter(id=>sceneAtlas.scopeById?.[id]===scopeId):[];
  return local.length===1?local[0]:ids.length===1?ids[0]:null;
@@ -54,6 +52,12 @@ function mapV4Regions(value){
 export function normalizeMapData(input){
  if(input&&typeof input==='object'&&mapV4Normalized.has(input))return input;
  const raw=mapV4Object(input),meta=mapV4Object(raw.meta),view=mapV4Object(raw.view),warnings=[];
+ for(const key of ['places','actors','events']){
+  if(raw[key]!==undefined&&!Array.isArray(raw[key]))warnings.push(key+': expected an array; using available scene data.');
+  else if(Array.isArray(raw[key])&&mapV4Rows(raw[key]).length!==raw[key].length)warnings.push(key+': ignored malformed records.');
+ }
+ if(raw.mapMode!==undefined&&raw.mapMode!==''&&!['template','indoor','outdoor'].includes(raw.mapMode))warnings.push('Unknown mapMode; using automatic presentation.');
+ if(raw.layoutType!==undefined&&raw.layoutType!==''&&!normalizeLayoutType(raw.layoutType))warnings.push('Unknown layoutType; using an illustrative layout.');
  if(raw!==input)warnings.push('MAP_DATA is not an object; using an illustrative scene.');
  const anchor=mapV4Text(raw.atlasAnchor)||mapV4Text(view.scopeId)||mapV4Text(view.templateId);
  const custom=anchor.toLowerCase()==='custom'||Boolean(raw.customScene);
@@ -95,19 +99,22 @@ export function normalizeMapData(input){
   return addPlace({...(id?{id}:{}),name:name||sceneAtlas.canonicalNameById[canonical]||id},true).id;
  };
  const pcRows=mapV4Rows(raw.actors),pcRow=pcRows.find(a=>a.isPC===true);
- let pcId=ref('',raw.pcPlace)||ref(pcRow?.placeId,pcRow?.placeName);
+ const actorPcId=pcRow?.unresolvedLocation?null:ref(pcRow?.placeId,pcRow?.placeName);
+ let pcId=mapV4Text(raw.pcPlace)&&byId.get(actorPcId)?.name!==mapV4Text(raw.pcPlace)?ref('',raw.pcPlace):actorPcId;
+ if(!pcId&&!pcRow)warnings.push('PC location is unspecified; no PC position is inferred.');
  if(!places.length){
   const anchorId=custom?null:resolveAtlasName(anchor,scope);
   addPlace({...(anchorId?{id:anchorId}:{}),name:sceneAtlas.canonicalNameById[anchorId]||mapV4Text(meta.areaName)||'Vị trí chưa xác định'},true);
   warnings.push('No places supplied; an illustrative fallback is required.');
  }
- if(!pcId&&pcRow)pcId=places[0].id;
+ if(!pcId&&pcRow)warnings.push('PC location is unspecified; no known room is assigned.');
  const actors=pcRows.map((row,i)=>{
   const isPC=row===pcRow;
-  const placeId=isPC&&pcId?pcId:ref(row.placeId,row.placeName);
+  const placeId=isPC?(pcId||null):ref(row.placeId,row.placeName);
+  if(!placeId&&!isPC)warnings.push('Actor location is unspecified: '+mapV4Text(row.name));
   const location=placeId||addPlace({id:'rp-unlocated',name:'Vị trí chưa xác định'},true).id;
   const house=mapV4Text(row.houseOrRole)||mapV4Text(row.tagType)||mapV4Text(row.role);
-  return {...row,id:mapV4Text(row.id)||'rp-actor-'+i,name:mapV4Text(row.name)||(isPC?'PC':'Chưa rõ'),isPC,placeId:location,placeName:byId.get(location).name,houseOrRole:house,tagType:mapV4Text(row.tagType)||house.toLowerCase()||'unknown',entityType:mapV4Text(row.entityType)||'person',stance:row.stance==='walk'?'walk':'idle',activity:mapV4Text(row.activity),observation:mapV4Text(row.observation)||mapV4Text(row.inspector?.observation),inspector:mapV4Inspector(row),positionMode:mapV4Text(row.positionMode)||'normal',onPatrol:row.onPatrol===true};
+  return {...row,id:mapV4Text(row.id)||'rp-actor-'+i,name:mapV4Text(row.name)||(isPC?'PC':'Chưa rõ'),isPC,placeId:location,placeName:byId.get(location).name,...(!placeId||row.unresolvedLocation?{unresolvedLocation:true}:{}),houseOrRole:house,tagType:mapV4Text(row.tagType)||house.toLowerCase()||'unknown',entityType:mapV4Text(row.entityType)||'person',stance:row.stance==='walk'?'walk':'idle',activity:mapV4Text(row.activity),observation:mapV4Text(row.observation)||mapV4Text(row.inspector?.observation),inspector:mapV4Inspector(row),positionMode:mapV4Text(row.positionMode)||'normal',onPatrol:row.onPatrol===true};
  });
  if(pcId&&!pcRow)actors.unshift({id:'rp-pc-marker',name:'PC',isPC:true,presentationOnly:true,placeId:pcId,placeName:byId.get(pcId).name,houseOrRole:'',tagType:'unknown',entityType:'person',stance:'idle',activity:'',observation:'',inspector:{overhear:'',observation:''},positionMode:'normal'});
  if(pcRows.filter(a=>a.isPC===true).length>1)warnings.push('Multiple PC flags; the first is used as the presentation focus.');
@@ -116,7 +123,7 @@ export function normalizeMapData(input){
   const placeId=ref(row.placeId,row.placeName)||addPlace({id:'rp-unlocated',name:'Vị trí chưa xác định'},true).id;
   return {...row,id:mapV4Text(row.id)||'rp-event-'+i,placeId,placeName:byId.get(placeId).name,title:mapV4Text(row.title),detail:mapV4Text(row.detail)||mapV4Text(row.description)||mapV4Text(row.inspector?.observation),type:mapV4Text(row.type)||'event',inspector:mapV4Inspector({...row,observation:row.detail||row.inspector?.observation||row.description})};
  });
- const connections=mapV4Rows(raw.connections).map(c=>({...c,from:ref(c.from,'',false),to:ref(c.to,'',false)})).filter(c=>c.from&&c.to);
+ const connections=mapV4Rows(raw.connections).map(c=>({...c,from:ref(c.from,'',false)||c.from,to:ref(c.to,'',false)||c.to}));
  const visibility=mapV4Object(raw.visibility),spatial=mapV4Object(view.spatial);
  const mode=['template','indoor','outdoor'].includes(raw.mapMode)?raw.mapMode:raw.customScene?.kind==='outdoor'||raw.customScene?.kind==='village'?'outdoor':view.preferredMode==='template'?'template':'';
  const normalized={schemaVersion:'4.0.0',meta:{date:mapV4Text(meta.date),time:mapV4Text(meta.time),areaName:mapV4Text(meta.areaName)||'Bản đồ cảnh hiện tại',quote:mapV4Text(meta.quote)},mapMode:mode,atlasAnchor:anchor||(custom?'custom':''),layoutType:normalizeLayoutType(raw.layoutType)||normalizeLayoutType(view.indoor?.layout),pcPlace:byId.get(pcId)?.name||'',places,actors,events,
@@ -125,16 +132,18 @@ export function normalizeMapData(input){
  mapV4Normalized.add(normalized);return normalized;
 }
 // Compatibility names remain callable, but no longer veto RP or throw on schema errors.
-export function validateMapData(input){const data=normalizeMapData(input);return {ok:true,errors:[],warnings:data.diagnostics};}
+export function validateMapData(input){const data=normalizeMapData(input);return {ok:data.diagnostics.length===0,renderable:true,errors:[],warnings:data.diagnostics};}
 export function assertMapData(input){return normalizeMapData(input);}
 export function mapSceneData(input){
  const data=normalizeMapData(input),pc=data.actors.find(a=>a.isPC);
- return {...data,focus:{pcActorId:pc?.id||null,actualPlaceId:pc?.placeId||data.places[0].id,selectedId:data.view.selectedId},visibility:{...data.visibility,visiblePlaceIds:data.places.map(p=>p.id)}};
+ return {...data,focus:{pcActorId:pc?.id||null,actualPlaceId:pc&&!pc.unresolvedLocation?pc.placeId:null,selectedId:data.view.selectedId},visibility:{...data.visibility,visiblePlaceIds:data.places.map(p=>p.id)}};
 }
 export function mapPublicData(scene){
  const data=normalizeMapData(scene);
- const places=data.places.map(p=>({id:p.id,name:p.name,type:p.type,description:p.description,...(p.size!==undefined?{size:p.size}:{}),...(p.props?.length?{props:p.props}:{})}));
- const actors=data.actors.filter(a=>!a.presentationOnly).map(a=>({id:a.id,name:a.name,isPC:a.isPC,placeName:a.placeName,houseOrRole:a.houseOrRole,activity:a.activity,observation:a.observation,...(a.inspector?.overhear?{inspector:{overhear:a.inspector.overhear}}:{}),...(a.environment?{environment:a.environment}:{}),...(a.onPatrol?{onPatrol:true,role:a.role}:{}),...(a.groupId?{groupId:a.groupId}:{}),...(a.entityType!=='person'?{entityType:a.entityType}:{}),...(a.stance==='walk'?{stance:'walk'}:{})}));
- return {schemaVersion:'4.0.0',meta:data.meta,...(data.mapMode?{mapMode:data.mapMode}:{}),...(data.atlasAnchor?{atlasAnchor:data.atlasAnchor}:{}),...(data.layoutType?{layoutType:data.layoutType}:{}),pcPlace:data.pcPlace,places,actors,events:data.events.map(e=>({title:e.title,placeName:e.placeName,detail:e.detail}))};
+ // Preserve optional legacy information on export; none is required for V4.
+ // Strip derived render state, not RP content or disambiguating references.
+ const places=data.places.map(({presentationSource,anchorPrecision,...place})=>place);
+ const actors=data.actors.filter(a=>!a.presentationOnly).map(({presentationOnly,...actor})=>actor);
+ return {schemaVersion:'4.0.0',meta:data.meta,...(data.mapMode?{mapMode:data.mapMode}:{}),...(data.atlasAnchor?{atlasAnchor:data.atlasAnchor}:{}),...(data.layoutType?{layoutType:data.layoutType}:{}),pcPlace:data.pcPlace,places,actors,events:data.events,connections:data.connections,view:data.view,visibility:data.visibility,...(data.customScene?{customScene:data.customScene}:{})};
 }
 export function serializeMapData(input){return JSON.stringify(mapPublicData(input)).replace(/[<>&\u2028\u2029]/g,c=>'\\u'+c.charCodeAt(0).toString(16).padStart(4,'0'));}

@@ -32,3 +32,12 @@ Atlas index regenerated from source. JavaScript syntax and candidate bundle comp
 ## Remaining phases
 
 PH4 sample architecture and aesthetic approval; PH5 Indoor builder; PH6 prefabs/themes; PH7 Outdoor; PH8 markers/UI; PH9 fixed integration and bundle migration; PH10 Gemini prompt; PH11 final cleanup. Current resolver plans for Outdoor/new custom scenes do not imply that the V4 visual engine is finished.
+
+## PH2–PH3 correction after review
+
+- Missing PC location remains unknown; neither normalizer nor focus/resolver selects the first known room as the PC's actual location.
+- Export retains actor placeId and optional legacy generation/inspector/connections/visibility/view/customScene data. These remain optional; they are not new V4 requirements.
+- Diagnostics distinguish clean input from recoverable input; rendering is never gated by a validator result.
+- Fixed places without bindings receive display-only anchors within the artwork, with no inferred walkable floor. Missing environment/floor uses labels instead of rejecting the map.
+- Removed the hardcoded generic-name blacklist; lookup uses existing exact names/aliases and scope uniqueness.
+- Production bundle remains unchanged for PH9; no additional game/RP constraints, quotas or required input fields were introduced.

@@ -57,10 +57,15 @@ function inspect(row,placeId){
 const EXTERIOR_TEMPLATES=new Set(['h1','h2','village-static','diagon-knockturn']);
 function anchor(place,buildingId){
  if(geometry){const p=geometry.suggestedAnchors[place.id]?.[0];if(!p)throw Error('No indoor actor anchor for '+place.id);return p}
- const targets=registry.templates[select.value].targets[place.atlasRef];
- if(buildingId&&!targets.includes(buildingId))throw Error('Building ID does not belong to '+place.id);
- const nodes=[...svg.querySelectorAll('[data-id]')].filter(n=>buildingId?n.dataset.id===buildingId:targets.includes(n.dataset.id));
- if(!nodes.length)throw Error('Không tìm thấy shape cho '+place.id);
+ const targets=registry.templates[select.value].targets[place.atlasRef]||[];
+ const targetBuilding=buildingId&&targets.includes(buildingId)?buildingId:null;
+ const nodes=[...svg.querySelectorAll('[data-id]')].filter(n=>targetBuilding?n.dataset.id===targetBuilding:targets.includes(n.dataset.id));
+ if(!nodes.length){
+  // Display-only anchor within the existing artwork, never a canon coordinate.
+  const [x,y,w,h]=base,index=Math.max(0,activeData.places.findIndex(p=>p.id===place.id));
+  const point={x:x+w*(.25+(index%3)*.25),y:y+h*(.3+(Math.floor(index/3)%3)*.2)};
+  return {...point,wall:point,roof:point,left:point.x,right:point.x,top:point.y,bottom:point.y,illustrative:true};
+ }
  // SVG shape bounds are artwork, not a walkable floor. Outdoor markers use
  // the lower edge; screen-space padding keeps feet below roofs at every zoom.
  const node=nodes[0],b=node.getBBox(),matrix=svg.getScreenCTM().inverse().multiply(node.getScreenCTM());
@@ -163,7 +168,6 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
  q('#mapmount').replaceChildren(svg);const overlay=el('div');overlay.className='qa-tags';q('#mapmount').append(overlay);box=[...base];
  if(plan.mode==='template'){const bounds=mountTemplateLocalities(svg,data.places,registry.templates[id],base);if(bounds){base=bounds;box=[...base];}}
  const floors=collectFloorSurfaces(svg);
- for(const a of data.actors)if(!geometry&&a.position&&!(exterior&&a.environment==='inside')&&(!floors.contains(a.position)&&!surfaceAllowed(a.position,spatial)||pointInRegions(a.position,spatial?.blockedRegions)))throw Error('Actor '+a.id+': position is outside floor or inside blocked area');
  const points=new Map(data.places.filter(p=>data.visibility.visiblePlaceIds.includes(p.id)).map(p=>[p.id,anchor(p)]));
  const actorPositions=new Map(),actorCounts=new Map(),actorRoofs=new Map(),labelOnlyActors=new Set();
  for(const a of data.actors){
@@ -172,19 +176,21 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
   if(exterior&&a.environment==='inside')actorRoofs.set(a.id,anchor(data.places.find(p=>p.id===a.placeId),a.buildingId));
   if(geometry&&!a.position&&!suggested?.length)throw Error('No safe actor position in '+a.placeId);
   let point;
-  if(geometry)point=indoorActorPoint(geometry,a.placeId,a.position||suggested[i%suggested.length]);
+  const displayAnchor=points.get(a.placeId);
+  if(!geometry&&(displayAnchor.illustrative||a.unresolvedLocation||exterior&&!['inside','outside'].includes(a.environment))){point=displayAnchor;labelOnlyActors.add(a.id);}
+  else if(geometry)point=indoorActorPoint(geometry,a.placeId,a.position||suggested[i%suggested.length]);
   else if(exterior&&a.environment==='inside')point=actorGroundPoint(a,actorRoofs.get(a.id));
   else {
-   if(exterior&&!['inside','outside'].includes(a.environment))throw Error('Actor '+a.id+': environment must be inside or outside for exterior template');
-   point=a.position||nearestFloorPoint({origin:points.get(a.placeId),occupied:[...actorPositions.values()],contains:p=>(floors.contains(p)||surfaceAllowed(p,spatial))&&!pointInRegions(p,spatial?.blockedRegions)});
+   const suppliedPoint=a.position&&(floors.contains(a.position)||surfaceAllowed(a.position,spatial))&&!pointInRegions(a.position,spatial?.blockedRegions)?a.position:null;
+   point=suppliedPoint||nearestFloorPoint({origin:points.get(a.placeId),occupied:[...actorPositions.values()],contains:p=>(floors.contains(p)||surfaceAllowed(p,spatial))&&!pointInRegions(p,spatial?.blockedRegions)});
    if(!point&&a.environment==='inside'){point=points.get(a.placeId);labelOnlyActors.add(a.id);}
-   if(!point)throw Error('Actor '+a.id+': no verified floor near '+a.placeId+'; provide scene spatial/position');
+   if(!point){point=displayAnchor;labelOnlyActors.add(a.id);}
   }
   actorPositions.set(a.id,point);
  }
  // Do not expose fogged actors/hints through ribbons, navigation or inspector.
  visibleActors=data.actors.filter(a=>!pointInFog(actorPositions.get(a.id),data.visibility));
- if(!visibleActors.some(a=>a.isPC))throw Error('PC position is inside fog; scene visibility is inconsistent');
+ // Supplied visibility affects display only; it never rejects the entire map.
  const visibleHints=data.hints.filter(h=>!pointInFog(points.get(h.placeId),data.visibility));
   // Group/individual identity is supplied by AI; GitHub never invents a group.
   const actualGroups=new Set(visibleActors.filter(a=>a.entityType==='group'&&a.groupId).map(a=>a.groupId));
@@ -208,7 +214,7 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
   if(!target)throw Error('Occlusion target absent from SVG: '+region.targetId);
   return {id:region.id,target,explicit:true,contains:p=>pointInPolygon(p,region.points)};
  }):[];
- for(const p of data.places){if(geometry||!points.has(p.id))continue;const ids=registry.templates[id].targets[p.atlasRef];for(const n of svg.querySelectorAll('[data-id]'))if(ids.includes(n.dataset.id)){n.setAttribute('tabindex','0');n.setAttribute('role','button');n.setAttribute('aria-label',p.name);const choose=()=>{if(!pointInFog(points.get(p.id),data.visibility))inspect(p,p.id)};n.onclick=()=>{if(!moved)choose()};n.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose()}}}}
+ for(const p of data.places){if(geometry||!points.has(p.id))continue;const ids=registry.templates[id].targets[p.atlasRef]||[];for(const n of svg.querySelectorAll('[data-id]'))if(ids.includes(n.dataset.id)){n.setAttribute('tabindex','0');n.setAttribute('role','button');n.setAttribute('aria-label',p.name);const choose=()=>{if(!pointInFog(points.get(p.id),data.visibility))inspect(p,p.id)};n.onclick=()=>{if(!moved)choose()};n.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose()}}}}
  // Bind each building once. Bbox is used only for label/occlusion display, never walkability.
  for(const semantic of (exterior?EXTERIOR_OCCLUDERS[id]||[]:[])){
   const targets=registry.templates[id].targets[semantic]||[];
@@ -263,7 +269,7 @@ async function renderScene(data){plan=resolveMap(data);data=mapSceneData(data);
   marker.setAttribute('aria-pressed','false');overlay.append(marker);labels.push({node:marker,point,labelPoint:roof});
  }
  stops.push(coverController.subscribe(update));
- q('#quests').replaceChildren(...visibleHints.map(h=>{const p=data.places.find(p=>p.id===h.placeId),n=el('button',h.title+' · '+p.name);n.className='quest';n.onclick=()=>inspect(h,h.placeId);const marker=el('button','?');marker.className='hint-marker';marker.setAttribute('aria-label',h.title);marker.onclick=n.onclick;overlay.append(marker);labels.push({node:marker,point:points.get(h.placeId),dx:65,dy:EXTERIOR_TEMPLATES.has(id)?38:0});return n}));q('#hintcount').textContent=visibleHints.length+'/5';q('.quote').textContent=data.meta.quote||'';q('#zone').textContent=data.meta.areaName;q('.clock').textContent=data.meta.time;q('.date').textContent=data.meta.date;inspect(visibleActors.find(a=>a.isPC),data.focus.actualPlaceId);
+ q('#quests').replaceChildren(...visibleHints.map(h=>{const p=data.places.find(p=>p.id===h.placeId),n=el('button',h.title+' · '+p.name);n.className='quest';n.onclick=()=>inspect(h,h.placeId);const marker=el('button','?');marker.className='hint-marker';marker.setAttribute('aria-label',h.title);marker.onclick=n.onclick;overlay.append(marker);labels.push({node:marker,point:points.get(h.placeId),dx:65,dy:EXTERIOR_TEMPLATES.has(id)?38:0});return n}));q('#hintcount').textContent=visibleHints.length+'/5';q('.quote').textContent=data.meta.quote||'';q('#zone').textContent=data.meta.areaName;q('.clock').textContent=data.meta.time;q('.date').textContent=data.meta.date;inspect(visibleActors.find(a=>a.isPC)||data.places[0],data.focus.actualPlaceId);
  const selected=[...data.places.filter(p=>!pointInFog(points.get(p.id),data.visibility)),...visibleActors,...visibleHints].find(row=>row.id===data.focus.selectedId);
  if(selected)inspect(selected,selected.placeId||selected.id);
  if(data.view.crop!==false&&points.size){const viewport=q('#mapmount').getBoundingClientRect();const extent=geometry?(()=>{const [x,y,w,h]=geometry.bounds;return [{left:x,top:y,right:x+w,bottom:y+h}]})():[...points.values(),...visibleActors.map(a=>a.position||points.get(a.placeId)),...data.view.routePlaceIds.filter(id=>points.has(id)).map(id=>points.get(id))];box=fitSceneBounds(base,extent,{width:viewport.width,height:viewport.height},geometry?0:55);}
