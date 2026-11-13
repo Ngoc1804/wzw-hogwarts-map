@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "p1-review-filter-v1",
+  "branch": "asset_1",
+  "source": "WIZAMAP_asset_review_FILTERED_STAGE1.html (390 designs)",
+  "sourceDesigns": 390,
+  "excludedDesigns": 97,
+  "reviewDesigns": 293,
+  "behavior": "Hide from standalone review gallery only; do not delete production SVG or references.",
+  "excludedCategoryCounts": {
+    "Kiến trúc · Cấu kiện": 24,
+    "Hành lang · Cửa": 4,
+    "Hành lang · Cửa sổ": 6,
+    "Hành lang · Tường": 9,
+    "Hành lang · Sàn": 10,
+    "Cảnh quan · Cây": 2,
+    "Cảnh quan · Thực vật": 12,
+    "Cảnh quan · Địa hình": 3,
+    "Cảnh quan · Hạ tầng": 23,
+    "Cảnh quan · Tiện ích": 4
+  },
+  "protectedCategories": {
+    "Phù thủy · Cụm trên bàn": 7,
+    "Cây · Đặc biệt": 2,
+    "Cây · Hình khối riêng": 12,
+    "Nhà · Nhà gỗ": 6,
+    "Nhà · Nhà tường": 6,
+    "Map · Biến thể đang dùng": 5
+  },
+  "note": "Do not migrate or rename asset IDs here. P2/P3 are separate. The offline review HTML is a user-delivered artifact, not a runtime release."
+}
