@@ -1,0 +1,433 @@
+designId,originalId,name,category,view,action,reason,liveRepo,bow,sameOriginalIdVariants,source
+wm.seat-dining.3f617b80,seat.dining,Ghế ăn,Nội thất · Ghế,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.seat-stool.246063ca,seat.stool,Ghế đẩu,Nội thất · Ghế,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.seat-armchair.35ce49b1,seat.armchair,Ghế bành,Nội thất · Ghế,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.seat-lounge.2a13bfb2,seat.lounge,Ghế thư giãn,Nội thất · Ghế,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.seat-bench.0ad3f37a,seat.bench,Ghế dài,Nội thất · Ghế,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.seat-sofa.ca58640d,seat.sofa,Sofa hai chỗ,Nội thất · Ghế,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.seat-corner.f380c59e,seat.corner,Sofa góc,Nội thất · Ghế,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.table-dining.c4c4ab97,table.dining,Bàn ăn,Nội thất · Bàn,top,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,2,C4
+wm.table-study.57520c4d,table.study,Bàn học,Nội thất · Bàn,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.table-desk.2e0b82ce,table.desk,Bàn làm việc,Nội thất · Bàn,top,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,2,C4
+wm.table-coffee.ab15b11b,table.coffee,Bàn trà,Nội thất · Bàn,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.table-bedside.524c3f83,table.bedside,Bàn đầu giường,Nội thất · Bàn,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.table-prep.ae96aeff,table.prep,Bàn sơ chế,Nội thất · Bàn,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.table-long.e650a6ec,table.long,Bàn dài ghép đoạn,Nội thất · Bàn,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.table-round.cc031d0b,table.round,Bàn tròn,Nội thất · Bàn,top,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,2,C4
+wm.table-oval.079a5f9f,table.oval,Bàn oval,Nội thất · Bàn,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.storage-bookcase.57129e87,storage.bookcase,Kệ sách,Nội thất · Tủ kệ,front,REWORK,CHECK_AGAINST_DETAILED_CABINETS,1,0,1,C4
+wm.storage-double.0d81a7d2,storage.double,Kệ sách hai mặt,Nội thất · Tủ kệ,front,REWORK,CHECK_AGAINST_DETAILED_CABINETS,1,0,1,C4
+wm.storage-cabinet.c623c11f,storage.cabinet,Tủ hai cánh,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,1,2,C4
+wm.storage-drawers.ad0e06a0,storage.drawers,Tủ ngăn kéo,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,0,1,C4
+wm.storage-files.6b5cf741,storage.files,Tủ hồ sơ,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,1,2,C4
+wm.storage-display.c0f9bfb4,storage.display,Tủ trưng bày kính,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,1,2,C4
+wm.storage-open.c6163880,storage.open,Kệ mở,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,0,1,C4
+wm.storage-wall.e4c488aa,storage.wall,Kệ treo tường,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,0,1,C4
+wm.storage-wine.4f8aaa4a,storage.wine,Giá chai,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,0,1,C4
+wm.bed-single.fc587be3,bed.single,Giường đơn,Nội thất · Phòng ngủ,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.bed-double.4aa30e0d,bed.double,Giường đôi,Nội thất · Phòng ngủ,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.bed-canopy.36e6338f,bed.canopy,Giường có màn,Nội thất · Phòng ngủ,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.bed-bunk.107a1783,bed.bunk,Giường tầng · mặt bên,Nội thất · Phòng ngủ,side,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.bed-screen.9fefc376,bed.screen,Bình phong,Nội thất · Phòng ngủ,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.fixture-fireplace.87088114,fixture.fireplace,Lò sưởi đá,Nội thất · Bếp & vệ sinh,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.fixture-stove.fa5629b9,fixture.stove,Bếp củi,Nội thất · Bếp & vệ sinh,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.fixture-sink.deda315d,fixture.sink,Chậu rửa,Nội thất · Bếp & vệ sinh,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.fixture-bathtub.4e3d0a0e,fixture.bathtub,Bồn tắm,Nội thất · Bếp & vệ sinh,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.fixture-toilet.d4ac5842,fixture.toilet,Toilet,Nội thất · Bếp & vệ sinh,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.fixture-range.0cd8f8dd,fixture.range,Bếp nấu,Nội thất · Bếp & vệ sinh,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.object-counter.d070b3ff,object.counter,Quầy bán hàng,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.object-counter-corner.bf81419d,object.counter-corner,Quầy góc,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.object-rug.c254ef7f,object.rug,Thảm chữ nhật,Nội thất · Đồ dùng,top,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,C4
+wm.object-rug-round.4058f4be,object.rug-round,Thảm tròn,Nội thất · Đồ dùng,top,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,C4
+wm.object-mirror.d967d03e,object.mirror,Gương đứng,Nội thất · Đồ dùng,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,C4
+wm.object-portrait.d39ef0c1,object.portrait,Khung tranh trống,Nội thất · Đồ dùng,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,C4
+wm.object-clock.2ed337a5,object.clock,Đồng hồ,Nội thất · Đồ dùng,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,C4
+wm.object-chest.0ff64b89,object.chest,Rương gỗ,Nội thất · Đồ dùng,top,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,C4
+wm.object-crate.68bff110,object.crate,Thùng gỗ,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.object-barrel.4311dcc5,object.barrel,Thùng tròn,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.object-cart.2a3a3f5a,object.cart,Xe đẩy hàng,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.object-sack.3204f1d4,object.sack,Bao tải,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.object-basket.4f120be7,object.basket,Giỏ đan,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-book.8f9202e2,accessory.book,Sách đóng,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-book-open.440843ca,accessory.book-open,Sách mở,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-scroll.ac88b3ec,accessory.scroll,Cuộn giấy,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-ink.a32af6fc,accessory.ink,Lọ mực & bút,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-mug.af18fd9d,accessory.mug,Cốc,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-plate.6b3321ed,accessory.plate,Đĩa,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-teapot.938a594e,accessory.teapot,Ấm trà,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-pot.274f5ea5,accessory.pot,Nồi,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-pan.b96c7365,accessory.pan,Chảo,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-bottle.85100483,accessory.bottle,Chai thủy tinh,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-candle.8557ac9a,accessory.candle,Nến,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-lamp.0cd17ccc,accessory.lamp,Đèn bàn,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.accessory-chandelier.43531d4a,accessory.chandelier,Đèn chùm,Nội thất · Phụ kiện,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.architecture-wall.b5610d97,architecture.wall,Tường đá thẳng,Kiến trúc · Cấu kiện,top,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-wall-corner.ff17c209,architecture.wall-corner,Góc tường,Kiến trúc · Cấu kiện,top,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-wall-t.558d7d71,architecture.wall-t,Tường nhánh T,Kiến trúc · Cấu kiện,top,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-wall-curve.1724f3f3,architecture.wall-curve,Tường cong,Kiến trúc · Cấu kiện,top,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-floor-stone.0e1939f1,architecture.floor-stone,Sàn lát đá,Kiến trúc · Cấu kiện,top,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-floor-wood.bf6d37cb,architecture.floor-wood,Sàn gỗ,Kiến trúc · Cấu kiện,top,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-door.e7f8e68a,architecture.door,Cửa gỗ đơn,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-door-double.f98c00ea,architecture.door-double,Cửa đôi,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-door-arch.6fabe4a3,architecture.door-arch,Cửa vòm,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-door-round.d4a93d04,architecture.door-round,Cửa tròn,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-door-iron.379427ce,architecture.door-iron,Cửa song sắt,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-hatch.f81c8c61,architecture.hatch,Cửa sập,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-window.6627c579,architecture.window,Cửa sổ ô nhỏ,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-window-arch.1d5f48ea,architecture.window-arch,Cửa sổ vòm cao,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-window-round.c2df538d,architecture.window-round,Cửa sổ tròn,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-window-shutters.7b773cd5,architecture.window-shutters,Cửa sổ có chớp,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-stairs.d45ea5cb,architecture.stairs,Cầu thang thẳng,Kiến trúc · Cấu kiện,top,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-stairs-l.31627251,architecture.stairs-l,Cầu thang chữ L,Kiến trúc · Cấu kiện,top,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-stairs-spiral.94ee7ec2,architecture.stairs-spiral,Cầu thang xoắn,Kiến trúc · Cấu kiện,top,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-ladder.1e9e3ee4,architecture.ladder,Thang gỗ,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-column-round.c84e00f2,architecture.column-round,Cột tròn,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-column-square.e16fed17,architecture.column-square,Trụ vuông,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-arch.8dd0edf8,architecture.arch,Vòm cuốn,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.architecture-balustrade.a14ff44e,architecture.balustrade,Lan can,Kiến trúc · Cấu kiện,front,KEEP,CORE_ARCHITECTURE_ONLY,1,0,1,C4
+wm.tree-ancient.b2b0f86d,tree.ancient,Cây cổ thụ,Cảnh quan · Cây,elevation,KEEP,PROTECTED_MAP_ART,1,0,2,C4
+wm.tree-willow.1813514e,tree.willow,Cây liễu rủ,Cảnh quan · Cây,elevation,KEEP,PROTECTED_MAP_ART,1,0,2,C4
+wm.plant-bush.ff2ea948,plant.bush,Bụi thấp,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-flower-bush.e66d53c4,plant.flower-bush,Bụi hoa,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-hedge.f6da4dd3,plant.hedge,Hàng rào cây,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-fern.54878535,plant.fern,Dương xỉ,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-reeds.c97132cf,plant.reeds,Lau sậy,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-grass.41db402d,plant.grass,Cỏ cao,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-stump.ab054ab6,plant.stump,Gốc cây,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-log.e31420fa,plant.log,Thân cây đổ,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-planter.72d30e4e,plant.planter,Chậu cây lá lớn,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-hanging.5fc8a723,plant.hanging,Giỏ cây treo,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.plant-vine.037ea24c,plant.vine,Dây leo,Cảnh quan · Thực vật,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.terrain-boulder.5073693b,terrain.boulder,Tảng đá,Cảnh quan · Địa hình,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.terrain-flat.461db6e9,terrain.flat,Đá bẹt,Cảnh quan · Địa hình,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.terrain-cliff.9c24f90b,terrain.cliff,Vách đá,Cảnh quan · Địa hình,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-pond.d92b4211,landscape.pond,Ao hồ,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-stream.69eaabf4,landscape.stream,Đoạn suối,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-waterfall.ee9077a9,landscape.waterfall,Thác nhỏ,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-path.7cfd967c,landscape.path,Đường đất,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-paving.189c87fe,landscape.paving,Sân lát,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-steps.3caa688f,landscape.steps,Bậc đá ngoài trời,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-bridge.57965d9e,landscape.bridge,Cầu gỗ,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-bridge-stone.f7ce6b29,landscape.bridge-stone,Cầu đá nhỏ,Cảnh quan · Hạ tầng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-fence.0ec0374d,landscape.fence,Hàng rào gỗ,Cảnh quan · Hạ tầng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-iron-fence.1a373663,landscape.iron-fence,Hàng rào sắt,Cảnh quan · Hạ tầng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-gate.692dab25,landscape.gate,Cổng vườn,Cảnh quan · Hạ tầng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-bed.e8f828df,landscape.bed,Luống trồng,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-trellis.8a73a9cf,landscape.trellis,Giàn leo,Cảnh quan · Hạ tầng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-well.241b0f92,landscape.well,Giếng,Cảnh quan · Hạ tầng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-fountain.b2a5e647,landscape.fountain,Đài phun,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-garden-bench.a082b3ee,landscape.garden-bench,Ghế vườn,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-picnic.ddb740eb,landscape.picnic,Bàn picnic,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-streetlamp.37478edb,landscape.streetlamp,Đèn đường,Cảnh quan · Hạ tầng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-dock.acd5aa4f,landscape.dock,Cầu tàu,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-boat.71b31c30,landscape.boat,Thuyền chèo,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-wheelbarrow.766009b0,landscape.wheelbarrow,Xe cút kít,Cảnh quan · Hạ tầng,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-gravestone.0d389a7c,landscape.gravestone,Bia đá,Cảnh quan · Hạ tầng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.landscape-tent.6b261ee3,landscape.tent,Lều,Cảnh quan · Hạ tầng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.house-cottage.e78a826e,house.cottage,Cottage đá,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-timber.f0ad13d5,house.timber,Cottage gỗ,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-townhouse.56b76ff5,house.townhouse,Nhà phố hẹp,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-farmhouse.7b938479,house.farmhouse,Nhà nông thôn,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-annex.7a37f7b2,house.annex,Nhà có chái,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-porch.5afb8e2b,house.porch,Nhà có hiên,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-shop.c9539f9e,house.shop,Cửa hàng cơ bản,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-corner-shop.616a8ff7,house.corner-shop,Cửa hàng góc,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-shed.e1fbfa3c,house.shed,Nhà kho,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-garden.7553c0a8,house.garden,Nhà vườn,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-glasshouse.2c14f841,house.glasshouse,Nhà kính nhỏ,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-inn.bf8b226d,house.inn,Quán trọ,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-station.541996c2,house.station,Nhà ga nhỏ,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.house-hall.beccc8ac,house.hall,Hội trường,Nhà cửa · Khối cơ bản,elevation,REMOVE,FLAT_FACADE_REJECTED,0,0,1,C4
+wm.building-part-roof-gable.ae0c81c8,building-part.roof-gable,Mái hai dốc,Nhà cửa · Phụ kiện,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.building-part-roof-hip.baae7543,building-part.roof-hip,Mái bốn dốc,Nhà cửa · Phụ kiện,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.building-part-roof-dome.02aafd43,building-part.roof-dome,Mái vòm,Nhà cửa · Phụ kiện,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.building-part-chimney.5efa14ab,building-part.chimney,Ống khói,Nhà cửa · Phụ kiện,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.building-part-awning.654d16cf,building-part.awning,Mái hiên,Nhà cửa · Phụ kiện,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.building-part-balcony.96d35e6a,building-part.balcony,Ban công,Nhà cửa · Phụ kiện,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.building-part-sign.569f045f,building-part.sign,Biển hiệu trống,Nhà cửa · Phụ kiện,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.building-part-dormer.279bb137,building-part.dormer,Cửa gác mái,Nhà cửa · Phụ kiện,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.building-part-planter-box.ccda5b8d,building-part.planter-box,Hộp cây cửa sổ,Nhà cửa · Phụ kiện,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.storage-bookcase-top.4e57c941,storage.bookcase-top,Kệ sách · mặt bằng,Nội thất · Tủ kệ,top,REWORK,CHECK_AGAINST_DETAILED_CABINETS,1,0,1,C4
+wm.fixture-fireplace-top.099348bc,fixture.fireplace-top,Lò sưởi · mặt bằng,Nội thất · Bếp & vệ sinh,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.plant-pot-top.babc0928,plant.pot-top,Chậu cây · mặt bằng,Cảnh quan · Thực vật,top,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.extra-curtain.7a980254,extra.curtain,Rèm cửa,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.extra-lamp-floor.5dd9b38d,extra.lamp-floor,Đèn đứng,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.extra-sconce.18ec0dcf,extra.sconce,Đèn tường,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.extra-torch.02835f3f,extra.torch,Đuốc,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.extra-globe.1f4b44ca,extra.globe,Quả địa cầu,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.extra-books-stack.cf53b823,extra.books-stack,Chồng sách,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.extra-blackboard.d8f3c0ad,extra.blackboard,Bảng viết,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,3,C4
+wm.extra-towel.c2d5d9b6,extra.towel,Giá khăn,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.extra-bucket.584f7722,extra.bucket,Xô nước,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.extra-rainbarrel.459b7a54,extra.rainbarrel,Thùng hứng mưa,Cảnh quan · Tiện ích,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.extra-compost.268dbd96,extra.compost,Ô ủ phân,Cảnh quan · Tiện ích,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.extra-woodpile.23710f85,extra.woodpile,Đống củi,Cảnh quan · Tiện ích,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.extra-flowerbed.2778e3c4,extra.flowerbed,Bồn hoa dài,Cảnh quan · Tiện ích,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.extra-shower.b76d662c,extra.shower,Vòi sen,Nội thất · Bổ sung,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.extra-safe.cb3f061a,extra.safe,Két sắt,Nội thất · Bổ sung,elevation,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-fireplace-stone.f8ead2bd,wizard.fireplace-stone,Lò sưởi đá lớn,Phù thủy · Lò sưởi,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-fireplace-carved.cb268268,wizard.fireplace-carved,Lò sưởi gỗ chạm,Phù thủy · Lò sưởi,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,1,C4
+wm.wizard-fireplace-gothic.dd9e9071,wizard.fireplace-gothic,Lò sưởi Gothic,Phù thủy · Lò sưởi,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-fireplace-floo.ff5d4db8,wizard.fireplace-floo,Lò Floo,Phù thủy · Lò sưởi,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-fireguard.d18c376c,wizard.fireguard,Chắn lò và giá củi,Phù thủy · Lò sưởi,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,2,C4
+wm.wizard-potions-cabinet.69ef5dcb,wizard.potions-cabinet,Tủ độc dược,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,1,2,C4
+wm.wizard-library-ladder.25acf899,wizard.library-ladder,Kệ sách cổ có thang,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,1,2,C4
+wm.wizard-library-curved.c239fb66,wizard.library-curved,Kệ sách cong theo tháp,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,0,1,C4
+wm.wizard-display.57e8c1fb,wizard.display,Tủ kính chạm cổ,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,1,2,C4
+wm.wizard-archive.8093f46d,wizard.archive,Tủ hồ sơ cổ,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,1,2,C4
+wm.wizard-broom-rack.8525ba96,wizard.broom-rack,Giá chổi bay đứng,Phù thủy · Thiết bị,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-broom-wall.00a8f1f4,wizard.broom-wall,Giá chổi bay treo,Phù thủy · Thiết bị,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-cauldron.cdc3bf66,wizard.cauldron,Vạc học sinh,Phù thủy · Độc dược,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-cauldron-large.f5964152,wizard.cauldron-large,Vạc lớn có bệ đun,Phù thủy · Độc dược,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-potions-bench.5e306a6f,wizard.potions-bench,Bàn thực hành có vạc,Phù thủy · Độc dược,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-telescope.66a9b4bf,wizard.telescope,Kính thiên văn đồng,Phù thủy · Thiết bị,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-orrery.ea0b75e7,wizard.orrery,Mô hình thiên thể,Phù thủy · Thiết bị,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-lectern.bdacbac9,wizard.lectern,Bục đọc và sách lớn,Phù thủy · Thiết bị,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.cluster-divination.1ceafe3d,cluster.divination,Cụm Tiên tri,Phù thủy · Cụm trên bàn,front,REWORK,REBUILD_FLAT_DESKTOP_COMPOSITION,1,1,1,C4
+wm.cluster-research.cf7d0295,cluster.research,Cụm nghiên cứu phép,Phù thủy · Cụm trên bàn,front,REWORK,REBUILD_FLAT_DESKTOP_COMPOSITION,1,0,1,C4
+wm.cluster-headmaster.781032a0,cluster.headmaster,Cụm bàn hiệu trưởng,Phù thủy · Cụm trên bàn,front,REWORK,REBUILD_FLAT_DESKTOP_COMPOSITION,1,0,1,C4
+wm.cluster-astronomy.c7eca591,cluster.astronomy,Cụm thiên văn,Phù thủy · Cụm trên bàn,front,REWORK,REBUILD_FLAT_DESKTOP_COMPOSITION,1,0,1,C4
+wm.cluster-books.fec14c30,cluster.books,Cụm sách và giấy da,Phù thủy · Cụm trên bàn,front,REWORK,REBUILD_FLAT_DESKTOP_COMPOSITION,1,0,1,C4
+wm.cluster-tea.f6494db8,cluster.tea,Cụm trà phòng sinh hoạt,Phù thủy · Cụm trên bàn,front,REWORK,REBUILD_FLAT_DESKTOP_COMPOSITION,1,0,1,C4
+wm.cluster-candelabrum.222469dd,cluster.candelabrum,Cụm chân nến nhiều nhánh,Phù thủy · Cụm trên bàn,front,REWORK,REBUILD_FLAT_DESKTOP_COMPOSITION,1,0,1,C4
+wm.decor-portrait.fe1a0860,decor.portrait,Chân dung phù thủy,Phù thủy · Trang trí,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,2,C4
+wm.decor-portrait-wall.36650866,decor.portrait-wall,Cụm tường chân dung,Phù thủy · Trang trí,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,1,C4
+wm.decor-landscape.9033bcfb,decor.landscape,Tranh lâu đài và hồ,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-armour.5af18138,decor.armour,Bộ giáp đứng,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-bust.423823f0,decor.bust,Tượng bán thân trên bệ,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-statue.a61ff396,decor.statue,Tượng phù thủy toàn thân,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-grandfather-clock.7dcb1274,decor.grandfather-clock,Đồng hồ đứng cổ,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-mirror.a92be64a,decor.mirror,Gương lớn chạm cổ,Phù thủy · Trang trí,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,1,C4
+wm.decor-noticeboard.8f577131,decor.noticeboard,Bảng thông báo lớn,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-planter-floor.1443f921,decor.planter-floor,Chậu sàn lớn,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-curtain-tall.7a0db48d,decor.curtain-tall,Rèm cửa sổ cao,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-curtain-partition.2fb7b29a,decor.curtain-partition,Rèm phân khu,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-curtain-bed.36124950,decor.curtain-bed,Rèm giường,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.unique-pensieve.150009e4,unique.pensieve,Pensieve,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,1,2,C4
+wm.unique-memory-cabinet.0cf7f8cb,unique.memory-cabinet,Tủ ký ức,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,1,2,C4
+wm.unique-sorting-hat.24d3c75f,unique.sorting-hat,Sorting Hat trên đôn,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,0,1,C4
+wm.unique-goblet-fire.91afa675,unique.goblet-fire,Goblet of Fire,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,0,1,C4
+wm.unique-triwizard-cup.535c35d6,unique.triwizard-cup,Triwizard Cup,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,0,1,C4
+wm.unique-weasley-clock.261a8cd7,unique.weasley-clock,Đồng hồ gia đình Weasley,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,0,1,C4
+wm.unique-vanishing-cabinet.1026d95f,unique.vanishing-cabinet,Tủ Biến mất,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,1,2,C4
+wm.wizard-astronomy-cabinet.06141e71,wizard.astronomy-cabinet,Tủ dụng cụ thiên văn,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,1,2,C4
+wm.wizard-storage-top.0d6488d3,wizard.storage-top,Tủ cổ · mặt bằng,Nội thất · Mặt bằng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.wizard-display-top.5faa029a,wizard.display-top,Tủ kính · mặt bằng,Nội thất · Mặt bằng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-rug-runner.580113d7,decor.rug-runner,Thảm dài cổ,Phù thủy · Trang trí,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.decor-chandelier.4bfd0fa4,decor.chandelier,Đèn chùm nến lớn,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,1,C4
+wm.module-house-body-stone.57c4919e,module.house-body-stone,Thân nhà · đổi vật liệu,Nhà cửa · Module ghép,front,KEEP,ARCHITECTURE_GEOMETRY_SOURCE,1,0,1,C4
+wm.crest-gryffindor.5744ea37,crest.gryffindor,Huy hiệu Gryffindor,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.crest-ravenclaw.8205c96c,crest.ravenclaw,Huy hiệu Ravenclaw,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.crest-hufflepuff.478d6fdd,crest.hufflepuff,Huy hiệu Hufflepuff,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.crest-slytherin.1ba20813,crest.slytherin,Huy hiệu Slytherin,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.crest-beauxbatons.cf450fd3,crest.beauxbatons,Huy hiệu Beauxbatons,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.crest-durmstrang.56683dd8,crest.durmstrang,Huy hiệu Durmstrang,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.banner-vertical.4566fec8,banner.vertical,Cờ treo dọc,Cờ · Khung dùng chung,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.banner-forked.50f2be8e,banner.forked,Cờ đuôi chẻ,Cờ · Khung dùng chung,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.banner-pole.de776a5a,banner.pole,Cờ trên cán,Cờ · Khung dùng chung,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.banner-plaque.b55453e3,banner.plaque,Tấm huy hiệu treo tường,Cờ · Khung dùng chung,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.banner-tapestry.ed00633f,banner.tapestry,Thảm treo mang huy hiệu,Cờ · Khung dùng chung,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,C4
+wm.flag-gryffindor.e357dba5,flag.gryffindor,Cờ thêu Gryffindor,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.flag-ravenclaw.eeff4bec,flag.ravenclaw,Cờ thêu Ravenclaw,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.flag-hufflepuff.113cff95,flag.hufflepuff,Cờ thêu Hufflepuff,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.flag-slytherin.c33c4169,flag.slytherin,Cờ thêu Slytherin,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.flag-beauxbatons.d895b31e,flag.beauxbatons,Cờ thêu Beauxbatons,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.flag-durmstrang.229e4ba7,flag.durmstrang,Cờ thêu Durmstrang,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,C4
+wm.table-dining.949c1ff8,table.dining,Bàn ăn,Nội thất · Bàn,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,2,259
+wm.table-desk.d5305eab,table.desk,Bàn làm việc,Nội thất · Bàn,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,2,259
+wm.table-round.128cf032,table.round,Bàn tròn,Nội thất · Bàn,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,2,259
+wm.storage-cabinet.304b607b,storage.cabinet,Tủ hai cánh,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,0,2,259
+wm.storage-files.39d04521,storage.files,Tủ hồ sơ,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,0,2,259
+wm.storage-display.5da96f30,storage.display,Tủ trưng bày kính,Nội thất · Tủ kệ,front,REPLACE,SIMPLE_FLAT_CABINET_USE_DETAILED_REFERENCE,1,0,2,259
+wm.object-rug.16319a32,object.rug,Thảm chữ nhật,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,3,259
+wm.object-rug-round.4bea05a8,object.rug-round,Thảm tròn,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,3,259
+wm.object-mirror.24141915,object.mirror,Gương đứng,Nội thất · Đồ dùng,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,3,259
+wm.object-portrait.4051b50b,object.portrait,Khung tranh trống,Nội thất · Đồ dùng,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,3,259
+wm.object-clock.cc1f6e05,object.clock,Đồng hồ,Nội thất · Đồ dùng,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,3,259
+wm.object-chest.7b19221d,object.chest,Rương gỗ,Nội thất · Đồ dùng,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,3,259
+wm.wizard-fireguard.d2b68ea0,wizard.fireguard,Chắn lò và giá củi,Phù thủy · Lò sưởi,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,2,259
+wm.wizard-potions-cabinet.609441c6,wizard.potions-cabinet,Tủ độc dược,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,0,2,259
+wm.wizard-library-ladder.f5d5b212,wizard.library-ladder,Kệ sách cổ có thang,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,0,2,259
+wm.wizard-display.2d042094,wizard.display,Tủ kính chạm cổ,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,0,2,259
+wm.wizard-archive.c2e86bd1,wizard.archive,Tủ hồ sơ cổ,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,0,2,259
+wm.decor-portrait.3622d3f7,decor.portrait,Chân dung phù thủy,Phù thủy · Trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,2,259
+wm.unique-pensieve.922da428,unique.pensieve,Pensieve,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,0,2,259
+wm.unique-memory-cabinet.cf078a57,unique.memory-cabinet,Tủ ký ức,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,0,2,259
+wm.unique-vanishing-cabinet.3027b8a8,unique.vanishing-cabinet,Tủ Biến mất,Độc bản · Đã chọn,front,KEEP,APPROVED_OR_PROTECTED,1,0,2,259
+wm.wizard-astronomy-cabinet.a4161892,wizard.astronomy-cabinet,Tủ dụng cụ thiên văn,Phù thủy · Tủ kệ,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,1,0,2,259
+wm.architecture-owl-tower.0fb8d128,architecture.owl-tower,Kiến trúc · Tháp cú,Kiến trúc · Đặc biệt,unknown,KEEP,PROTECTED_MAP_ART,1,0,1,259
+wm.architecture-boathouse.b0668925,architecture.boathouse,Kiến trúc · Nhà thuyền,Kiến trúc · Đặc biệt,unknown,KEEP,PROTECTED_MAP_ART,1,0,1,259
+wm.map-h1-flying-lawn.c5b1cc74,map.h1.flying-lawn,h1.flying-lawn,Map · Biến thể đang dùng,unknown,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.architecture-greenhouses.0f6c04ab,architecture.greenhouses,Kiến trúc · Nhà kính,Kiến trúc · Đặc biệt,unknown,KEEP,PROTECTED_MAP_ART,1,0,1,259
+wm.map-r2-pitch.3c0b2bcf,map.r2-pitch,r2-pitch,Map · Biến thể đang dùng,unknown,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.map-r2-dock.b9ec3ae9,map.r2-dock,r2-dock,Map · Biến thể đang dùng,unknown,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.architecture-castle.4393729d,architecture.castle,Kiến trúc · Lâu đài,Kiến trúc · Đặc biệt,unknown,KEEP,PROTECTED_MAP_ART,1,0,1,259
+wm.map-r2-lake.27435dd0,map.r2-lake,r2-lake,Map · Biến thể đang dùng,unknown,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.tree-ancient.44fd9b11,tree.ancient,Cây · Cổ thụ đặc biệt,Cây · Đặc biệt,unknown,KEEP,APPROVED_OR_PROTECTED,1,0,2,259
+wm.map-hogwarts-wooden-bridge.14202921,map.hogwarts-wooden-bridge,hogwarts-wooden-bridge,Map · Biến thể đang dùng,unknown,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.tree-willow.73cadf0c,tree.willow,Cây · Liễu Roi đặc biệt,Cây · Đặc biệt,unknown,KEEP,APPROVED_OR_PROTECTED,1,0,2,259
+wm.house-wood-gable.ab6b565f,house.wood.gable,Nhà gỗ · Mái dốc,Nhà · Nhà gỗ,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-wood-hip.7925847a,house.wood.hip,Nhà gỗ · Mái chóp,Nhà · Nhà gỗ,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-wood-wide.6ed44df0,house.wood.wide,Nhà gỗ · Khối rộng,Nhà · Nhà gỗ,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-wood-barn.c63274f6,house.wood.barn,Nhà gỗ · Mái gãy / nhà kho,Nhà · Nhà gỗ,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-wood-l.d1dd5725,house.wood.l,Nhà gỗ · Khối chữ L,Nhà · Nhà gỗ,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-wood-double.e2e2a04b,house.wood.double,Nhà gỗ · Hai đầu hồi,Nhà · Nhà gỗ,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-brick-low.42c9b412,house.brick.low,Nhà tường · Một tầng mái lệch,Nhà · Nhà tường,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-brick-tall.9a94368a,house.brick.tall,Nhà tường · Nhà phố cao,Nhà · Nhà tường,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-brick-wide.fa260215,house.brick.wide,Nhà tường · Khối rộng,Nhà · Nhà tường,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-brick-mansard.71b5c7eb,house.brick.mansard,Nhà tường · Mái mansard,Nhà · Nhà tường,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-brick-l.5ff7c771,house.brick.l,Nhà tường · Khối chữ L,Nhà · Nhà tường,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-brick-arcade.8c27d78c,house.brick.arcade,Nhà tường · Dãy vòm,Nhà · Nhà tường,elevation,KEEP,APPROVED_OR_PROTECTED,1,0,1,259
+wm.house-basic-rectangle.652a72e1,house.basic.rectangle,Khung basic · Chữ nhật,Nhà · Khung basic,elevation,KEEP,GEOMETRY_ONLY_NO_GALLERY,1,0,1,259
+wm.house-basic-tall.ae283dfb,house.basic.tall,Khung basic · Nhà phố cao,Nhà · Khung basic,elevation,KEEP,GEOMETRY_ONLY_NO_GALLERY,1,0,1,259
+wm.house-basic-hex.64e421b8,house.basic.hex,Khung basic · Lục giác,Nhà · Khung basic,elevation,KEEP,GEOMETRY_ONLY_NO_GALLERY,1,0,1,259
+wm.house-basic-l.33e7a6f1,house.basic.l,Khung basic · Khối chữ L,Nhà · Khung basic,elevation,KEEP,GEOMETRY_ONLY_NO_GALLERY,1,0,1,259
+wm.house-basic-u.65845b1e,house.basic.u,Khung basic · Chữ U,Nhà · Khung basic,elevation,KEEP,GEOMETRY_ONLY_NO_GALLERY,1,0,1,259
+wm.house-basic-round.7f283617,house.basic.round,Khung basic · Khối tròn,Nhà · Khung basic,elevation,KEEP,GEOMETRY_ONLY_NO_GALLERY,1,0,1,259
+wm.tree-oak.4595a4d3,tree.oak,Cây · Tán sồi nhiều nhánh,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-beech.afd8458e,tree.beech,Cây · Tán bầu dục cao,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-birch.33c31da8,tree.birch,Cây · Bạch dương ba thân,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-pine.8b1af022,tree.pine,Cây · Thông tán dù,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-spruce.d22e24fe,tree.spruce,Cây · Lá kim hình tháp,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-alder.d544f1db,tree.alder,Cây · Nhiều thân tán thấp,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-rowan.08832739,tree.rowan,Cây · Tán chùm quả,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-spreading.8c65c4b7,tree.spreading,Cây · Nghiêng theo gió,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-slender.0448a23a,tree.slender,Cây · Tán cột hẹp,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-weeping.2a15a03c,tree.weeping,Cây · Tán rủ,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-bare.79622059,tree.bare,Cây · Cành trụi,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.tree-fruit.401cc5dc,tree.fruit,Cây · Cây ăn quả thấp,Cây · Hình khối riêng,elevation,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,1,259
+wm.object-rug.55bd645c,object.rug,Thảm chữ nhật,Nội thất · Đồ dùng,top,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,runtime-catalog
+wm.object-rug-round.ca19bc1e,object.rug-round,Thảm tròn,Nội thất · Đồ dùng,top,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,runtime-catalog
+wm.object-mirror.98067620,object.mirror,Gương đứng,Nội thất · Đồ dùng,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,runtime-catalog
+wm.object-portrait.ba64ef98,object.portrait,Khung tranh trống,Nội thất · Đồ dùng,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,runtime-catalog
+wm.object-clock.cc3dd273,object.clock,Đồng hồ,Nội thất · Đồ dùng,front,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,runtime-catalog
+wm.object-chest.21d96a58,object.chest,Rương gỗ,Nội thất · Đồ dùng,top,REWORK,REMOVE_REPEATED_BOW_ORNAMENT,1,1,3,runtime-catalog
+wm.extra-blackboard.cc84b6d9,extra.blackboard,Bảng đen dài · chuẩn,Nội thất · Bổ sung,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,3,repo-catalog
+wm.crest-gryffindor.e892e3e8,crest.gryffindor,Huy hiệu Gryffindor,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.crest-ravenclaw.9bdec52d,crest.ravenclaw,Huy hiệu Ravenclaw,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.crest-hufflepuff.a8253cc1,crest.hufflepuff,Huy hiệu Hufflepuff,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.crest-slytherin.8b9a5272,crest.slytherin,Huy hiệu Slytherin,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.crest-beauxbatons.bcddcaaf,crest.beauxbatons,Huy hiệu Beauxbatons,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.crest-durmstrang.99b8b8be,crest.durmstrang,Huy hiệu Durmstrang,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.flag-gryffindor.810f9dc6,flag.gryffindor,Cờ thêu Gryffindor,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.flag-ravenclaw.ac8185ab,flag.ravenclaw,Cờ thêu Ravenclaw,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.flag-hufflepuff.d908a4d3,flag.hufflepuff,Cờ thêu Hufflepuff,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.flag-slytherin.948b50a1,flag.slytherin,Cờ thêu Slytherin,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.flag-beauxbatons.645b1de0,flag.beauxbatons,Cờ thêu Beauxbatons,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.flag-durmstrang.af391de9,flag.durmstrang,Cờ thêu Durmstrang,Cờ · Huy hiệu,front,KEEP,RETAIN_SOURCE_CHECK_USAGE,1,0,2,runtime-catalog
+wm.atelier-decor-portrait.c61a6df5,atelier.decor.portrait,Tranh chân dung,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-gallery.6eb71620,atelier.decor.gallery,Cụm ba tranh,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-candle.c78cbe8d,atelier.decor.candle,Nến / đèn tường,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-armor.53a89af1,atelier.decor.armor,Bộ giáp,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-curtain.b359ea7d,atelier.decor.curtain,Màn nhung,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-banner.fc646836,atelier.decor.banner,Cờ treo,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-crest.d7ad0920,atelier.decor.crest,Khiên huy hiệu,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-bench.a05f9059,atelier.decor.bench,Ghế băng hẹp,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-console.814b0915,atelier.decor.console,Bàn console,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-vase.06941cf2,atelier.decor.vase,Bình cổ,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-decor-niche.c4ac05b2,atelier.decor.niche,Hốc trưng bày,Hành lang · Đồ trang trí,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.atelier-wall-stone.b492be90,atelier.wall.stone,Đá sa thạch,Hành lang · Tường,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-wall-timber.e5bec86b,atelier.wall.timber,Gỗ ốp cao,Hành lang · Tường,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-wall-wainscot.16205564,atelier.wall.wainscot,Gỗ ốp thấp,Hành lang · Tường,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-wall-plaster.b5996838,atelier.wall.plaster,Vữa & chỉ,Hành lang · Tường,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-wall-brick.876386dd,atelier.wall.brick,Gạch cổ,Hành lang · Tường,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-wall-ashlar.6736cb29,atelier.wall.ashlar,Đá khối lớn,Hành lang · Tường,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-wall-panel.49a66861,atelier.wall.panel,Gỗ ô nổi,Hành lang · Tường,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-wall-limestone.ade8b19c,atelier.wall.limestone,Đá vôi & chỉ,Hành lang · Tường,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-wall-rubble.8ffb5474,atelier.wall.rubble,Đá xây thô,Hành lang · Tường,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-tile.4f6133d2,atelier.floor.tile,Đá nhạt,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-wood.7c40fe09,atelier.floor.wood,Ván gỗ,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-mosaic.49fcbd58,atelier.floor.mosaic,Đá caro,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-octagon.97c7de0c,atelier.floor.octagon,Đá bát giác,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-herringbone.f70a1455,atelier.floor.herringbone,Gỗ xương cá,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-diamond.85ea0f10,atelier.floor.diamond,Đá chéo,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-cobble.e06876e0,atelier.floor.cobble,Đá cuội,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-slate.3a1257c9,atelier.floor.slate,Đá lớn,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-brick.453622e8,atelier.floor.brick,Gạch nhỏ,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-floor-runner.45170421,atelier.floor.runner,Đá & thảm đỏ,Hành lang · Sàn,top,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-door-oak-room.aee2679d,atelier.door.oak.room,Gỗ sồi · Cửa phòng,Hành lang · Cửa,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-door-oak-main.0a5fb395,atelier.door.oak.main,Gỗ sồi · Cửa chính,Hành lang · Cửa,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-door-arch-room.9e6979b1,atelier.door.arch.room,Vòm Gothic · Cửa phòng,Hành lang · Cửa,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-door-arch-main.a46598b7,atelier.door.arch.main,Vòm Gothic · Cửa chính,Hành lang · Cửa,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-window-leaded-h.fda7eb52,atelier.window.leaded.H,Kính chì · Tường ngang,Hành lang · Cửa sổ,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-window-leaded-v.93fe375d,atelier.window.leaded.V,Kính chì · Tường dọc,Hành lang · Cửa sổ,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-window-clear-h.3f0a46d1,atelier.window.clear.H,Kính sáng · Tường ngang,Hành lang · Cửa sổ,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-window-clear-v.d367b13e,atelier.window.clear.V,Kính sáng · Tường dọc,Hành lang · Cửa sổ,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-window-gothic-h.2d077287,atelier.window.gothic.H,Kính Gothic · Tường ngang,Hành lang · Cửa sổ,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.atelier-window-gothic-v.4f737bbe,atelier.window.gothic.V,Kính Gothic · Tường dọc,Hành lang · Cửa sổ,front,KEEP,CORE_ARCHITECTURE_ONLY,0,0,1,runtime-catalog
+wm.new-cup-0.8b310d51,new.cup-0,Cúp cổ · kiểu 1,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,2,repo-catalog
+wm.new-cup-1.38acf0ca,new.cup-1,Cúp cổ · kiểu 2,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-cup-2.bfa27c05,new.cup-2,Cúp cổ · kiểu 3,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-cup-3.246c1781,new.cup-3,Cúp cổ · kiểu 4,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,2,repo-catalog
+wm.new-portrait-0.4cbab0e3,new.portrait-0,Chân dung cổ · khung 1,Decor · Tranh & huy hiệu,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,2,repo-catalog
+wm.architecture-owlery.6e5c25d3,architecture.owlery,architecture.owlery,,unknown,REWORK,SOURCE_VIEW_NEEDS_REVIEW,0,0,1,repo-outdoor-extract
+wm.architecture-cottage.f18e7b94,architecture.cottage,architecture.cottage,,unknown,REWORK,SOURCE_VIEW_NEEDS_REVIEW,0,0,1,repo-outdoor-extract
+wm.architecture-shop.b1cc1a87,architecture.shop,architecture.shop,,unknown,REWORK,SOURCE_VIEW_NEEDS_REVIEW,0,0,1,repo-outdoor-extract
+wm.architecture-inn.dff7e9fe,architecture.inn,architecture.inn,,unknown,REWORK,SOURCE_VIEW_NEEDS_REVIEW,0,0,1,repo-outdoor-extract
+wm.architecture-tree.5a1f5ed1,architecture.tree,architecture.tree,,unknown,REWORK,SOURCE_VIEW_NEEDS_REVIEW,0,0,1,repo-outdoor-extract
+wm.extra-blackboard.d9e2fb50,extra.blackboard,Bảng đen dài · chuẩn,Nội thất · Bổ sung,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,1,0,3,runtime-catalog
+wm.new-cup-0.7bd00b4f,new.cup-0,Cúp cổ · kiểu 1,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,2,runtime-catalog
+wm.new-cup-3.b8cfcc90,new.cup-3,Cúp cổ · kiểu 4,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,2,runtime-catalog
+wm.new-portrait-0.b56c7bb0,new.portrait-0,Chân dung cổ · khung 1,Decor · Tranh & huy hiệu,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,2,runtime-catalog
+wm.new-desk-carved.fdf37809,new.desk-carved,Bàn Hiệu trưởng · gỗ chạm,Nội thất · SVG mới,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-headmaster-chair.993f292b,new.headmaster-chair,Ghế Hiệu trưởng · lưng chạm,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-bookcase.ec62dd4c,new.bookcase,Kệ sách ba tầng · nhiều màu bìa,Nội thất · SVG mới,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,0,0,1,runtime-catalog
+wm.new-bookcase-glass.c107fa2a,new.bookcase-glass,Kệ sách kính chạm cổ,Nội thất · SVG mới,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,0,0,1,runtime-catalog
+wm.new-display-gothic.fdf287b8,new.display-gothic,Tủ kính Gothic · cúp cổ,Nội thất · SVG mới,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,0,0,1,runtime-catalog
+wm.new-display-island.947afaf8,new.display-island,Tủ kính trưng bày thấp,Nội thất · SVG mới,top,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,0,0,1,runtime-catalog
+wm.new-memory-vials.9f981326,new.memory-vials,Tủ ký ức · lọ và nhãn riêng,Nội thất · SVG mới,front,REWORK,DETAILED_CABINET_REFERENCE_FLAT_STYLE,0,0,1,runtime-catalog
+wm.new-silver-device.30eaed7e,new.silver-device,Thiết bị bạc · vòng xoay / kính,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-medals.4b685803,new.medals,Tủ huy chương · ba dải vải,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-award-shield.38e62c1f,new.award-shield,Khiên thành tích,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-planter.8d4b3b96,new.planter,Chậu cây lá sage,Decor · Cây nội thất,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-cushion.e6d7da27,new.cushion,Đệm nhung · hoa văn cổ,Nội thất · SVG mới,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-crystal-ball.a9e0337f,new.crystal-ball,Quả cầu pha lê · đế đồng,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-harp.5c054739,new.harp,Đàn harp · gỗ chạm / dây đồng,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-grand-piano.e45262c4,new.grand-piano,Đại dương cầm · phím ngà,Nội thất · SVG mới,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-music-stand.e3a85605,new.music-stand,Giá nhạc · bản nhạc,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-cello.c11a4085,new.cello,Đàn cello cổ,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-telescope.d51be8f8,new.telescope,Kính thiên văn đồng · khớp chỉnh,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-star-chart.fe4db3d3,new.star-chart,Bản đồ sao · vòng chia độ,Nội thất · SVG mới,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-prefects-pool.e708813e,new.prefects-pool,Bể tắm xây · bậc đá / nước,Nội thất · SVG mới,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-brass-tap.bc865ba4,new.brass-tap,Vòi bồn tắm · brass,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-mermaid-window.362e0b2c,new.mermaid-window,Tranh kính nàng tiên cá,Decor · Kính màu,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-changing-screen.0e5e81d9,new.changing-screen,Vách thay đồ · ba cánh,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-clock-gear.11d93c3b,new.clock-gear,Bánh răng đồng · sáu nan,Nội thất · SVG mới,top,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-tower-bell.3501761c,new.tower-bell,Chuông đồng · gông gỗ,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-pendulum.3e22c087,new.pendulum,Quả lắc đồng,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-serpent-column.0c9e36d3,new.serpent-column,Cột rắn chạm đá,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-slytherin-statue.5e67420a,new.slytherin-statue,Tượng Slytherin · mặt đá / râu chạm,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-serpent-gate.aafa14cd,new.serpent-gate,Cửa rắn · bảy đường chạm,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-ice-centrepiece.d650f319,new.ice-centrepiece,Tượng băng trang trí Yule Ball,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-practice-dummy.2ac78179,new.practice-dummy,Hình nộm tập phép,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-wand-rack.2702b036,new.wand-rack,Giá đũa phép · năm ngăn,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-tool-board.589d04a8,new.tool-board,Bảng dụng cụ · gỗ / kim loại,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-pipe-valve.ab9e548c,new.pipe-valve,Cụm ống đồng và van,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.new-boiler.5cb516d5,new.boiler,Lò kỹ thuật · kim loại,Nội thất · SVG mới,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-lamp-green.839adc6f,decor.lamp-green,Đèn đọc chụp xanh,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-candle-pair.24668a56,decor.candle-pair,Chân nến đôi,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-files.b37de024,decor.files,Hộp hồ sơ và giấy cuộn,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-ladder.b3f8f836,decor.ladder,Thang kệ sách,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-chess.e6dbcb7f,decor.chess,Bàn cờ phù thủy,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-curtain.95e38671,decor.curtain,Rèm riêng tư,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-food.2d3974bb,decor.food,"Bánh mì, rau và nguyên liệu",Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-basket-linen.1d203f91,decor.basket-linen,Sọt vải và khăn,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-herbs.b8f97e50,decor.herbs,Thảo mộc treo,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-oven.785603f4,decor.oven,Lò gạch cổ,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-perch.08bb96ab,decor.perch,Giá đậu chim,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-pensieve.33cd1fba,decor.pensieve,Chậu Tưởng Ký · bệ đá,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-vault-door.32545703,decor.vault-door,Cửa hầm khóa cơ khí,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-worktools.19be3585,decor.worktools,Dụng cụ chế tác,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.decor-flower.dad779b8,decor.flower,Bình hoa nhỏ,Nội thất · Decor Atelier,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-coat-stand.e76391cb,detail.coat-stand,Giá áo và mũ,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-locker.bfb628d3,detail.locker,Tủ áo có chân,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-boots.936c5b72,detail.boots,Giá giày,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-drafting.b289446a,detail.drafting,Bàn vẽ bản đồ,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-easel.7d797594,detail.easel,Giá vẽ và tranh,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-scroll-rack.d327b0bb,detail.scroll-rack,Giá cuộn bản đồ,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-games-table.55397087,detail.games-table,Bàn chơi cờ có ngăn quân,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-gobstones.4712eb0d,detail.gobstones,Sân Gobstones thu nhỏ,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-directory.11d7711b,detail.directory,Bảng chỉ dẫn sảnh,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-medicine-cart.cc40e064,detail.medicine-cart,Xe thuốc và chai lọ,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-specimen.8d7dbb04,detail.specimen,Khay mẫu khoáng vật,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
+wm.detail-violin-case.87a80939,detail.violin-case,Violon trong hộp,Nội thất · Detail V3,front,REWORK,FLAT_INTERIOR_STYLE_REVIEW,0,0,1,runtime-catalog
