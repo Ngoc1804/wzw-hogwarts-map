@@ -1,0 +1,260 @@
+assetId,sourceFile,view,category,directCodeReferences,count,dependencyPolicy
+seat.dining,assets/seat.dining.svg,top,"Nội thất · Ghế","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+seat.stool,assets/seat.stool.svg,top,"Nội thất · Ghế","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+seat.armchair,assets/seat.armchair.svg,top,"Nội thất · Ghế","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+seat.lounge,assets/seat.lounge.svg,top,"Nội thất · Ghế","",0,RETAIN_UNTIL_MIGRATED
+seat.bench,assets/seat.bench.svg,top,"Nội thất · Ghế","",0,RETAIN_UNTIL_MIGRATED
+seat.sofa,assets/seat.sofa.svg,top,"Nội thất · Ghế","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+seat.corner,assets/seat.corner.svg,top,"Nội thất · Ghế","",0,RETAIN_UNTIL_MIGRATED
+table.dining,assets/table.dining.svg,top,"Nội thất · Bàn","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+table.study,assets/table.study.svg,top,"Nội thất · Bàn","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+table.desk,assets/table.desk.svg,top,"Nội thất · Bàn","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+table.coffee,assets/table.coffee.svg,top,"Nội thất · Bàn","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+table.bedside,assets/table.bedside.svg,top,"Nội thất · Bàn","",0,RETAIN_UNTIL_MIGRATED
+table.prep,assets/table.prep.svg,top,"Nội thất · Bàn","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+table.long,assets/table.long.svg,top,"Nội thất · Bàn","",0,RETAIN_UNTIL_MIGRATED
+table.round,assets/table.round.svg,top,"Nội thất · Bàn","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+table.oval,assets/table.oval.svg,top,"Nội thất · Bàn","",0,RETAIN_UNTIL_MIGRATED
+storage.bookcase,assets/storage.bookcase.svg,front,"Nội thất · Tủ kệ","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+storage.double,assets/storage.double.svg,front,"Nội thất · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+storage.cabinet,assets/storage.cabinet.svg,front,"Nội thất · Tủ kệ","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+storage.drawers,assets/storage.drawers.svg,front,"Nội thất · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+storage.files,assets/storage.files.svg,front,"Nội thất · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+storage.display,assets/storage.display.svg,front,"Nội thất · Tủ kệ","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+storage.open,assets/storage.open.svg,front,"Nội thất · Tủ kệ","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+storage.wall,assets/storage.wall.svg,front,"Nội thất · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+storage.wine,assets/storage.wine.svg,front,"Nội thất · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+bed.single,assets/bed.single.svg,top,"Nội thất · Phòng ngủ","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+bed.double,assets/bed.double.svg,top,"Nội thất · Phòng ngủ","",0,RETAIN_UNTIL_MIGRATED
+bed.canopy,assets/bed.canopy.svg,top,"Nội thất · Phòng ngủ","",0,RETAIN_UNTIL_MIGRATED
+bed.bunk,assets/bed.bunk.svg,side,"Nội thất · Phòng ngủ","",0,RETAIN_UNTIL_MIGRATED
+bed.screen,assets/bed.screen.svg,front,"Nội thất · Phòng ngủ","",0,RETAIN_UNTIL_MIGRATED
+fixture.fireplace,assets/fixture.fireplace.svg,front,"Nội thất · Bếp & vệ sinh","",0,RETAIN_UNTIL_MIGRATED
+fixture.stove,assets/fixture.stove.svg,front,"Nội thất · Bếp & vệ sinh","",0,RETAIN_UNTIL_MIGRATED
+fixture.sink,assets/fixture.sink.svg,top,"Nội thất · Bếp & vệ sinh","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+fixture.bathtub,assets/fixture.bathtub.svg,top,"Nội thất · Bếp & vệ sinh","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+fixture.toilet,assets/fixture.toilet.svg,top,"Nội thất · Bếp & vệ sinh","",0,RETAIN_UNTIL_MIGRATED
+fixture.range,assets/fixture.range.svg,top,"Nội thất · Bếp & vệ sinh","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+object.counter,assets/object.counter.svg,top,"Nội thất · Đồ dùng","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+object.counter-corner,assets/object.counter-corner.svg,top,"Nội thất · Đồ dùng","",0,RETAIN_UNTIL_MIGRATED
+object.rug,assets/object.rug.svg,top,"Nội thất · Đồ dùng","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+object.rug-round,assets/object.rug-round.svg,top,"Nội thất · Đồ dùng","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+object.mirror,assets/object.mirror.svg,front,"Nội thất · Đồ dùng","",0,RETAIN_UNTIL_MIGRATED
+object.portrait,assets/object.portrait.svg,front,"Nội thất · Đồ dùng","",0,RETAIN_UNTIL_MIGRATED
+object.clock,assets/object.clock.svg,front,"Nội thất · Đồ dùng","",0,RETAIN_UNTIL_MIGRATED
+object.chest,assets/object.chest.svg,top,"Nội thất · Đồ dùng","",0,RETAIN_UNTIL_MIGRATED
+object.crate,assets/object.crate.svg,top,"Nội thất · Đồ dùng","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+object.barrel,assets/object.barrel.svg,top,"Nội thất · Đồ dùng","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+object.cart,assets/object.cart.svg,top,"Nội thất · Đồ dùng","",0,RETAIN_UNTIL_MIGRATED
+object.sack,assets/object.sack.svg,top,"Nội thất · Đồ dùng","",0,RETAIN_UNTIL_MIGRATED
+object.basket,assets/object.basket.svg,top,"Nội thất · Đồ dùng","",0,RETAIN_UNTIL_MIGRATED
+accessory.book,assets/accessory.book.svg,top,"Nội thất · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+accessory.book-open,assets/accessory.book-open.svg,top,"Nội thất · Phụ kiện","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+accessory.scroll,assets/accessory.scroll.svg,top,"Nội thất · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+accessory.ink,assets/accessory.ink.svg,top,"Nội thất · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+accessory.mug,assets/accessory.mug.svg,top,"Nội thất · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+accessory.plate,assets/accessory.plate.svg,top,"Nội thất · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+accessory.teapot,assets/accessory.teapot.svg,top,"Nội thất · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+accessory.pot,assets/accessory.pot.svg,top,"Nội thất · Phụ kiện","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+accessory.pan,assets/accessory.pan.svg,top,"Nội thất · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+accessory.bottle,assets/accessory.bottle.svg,top,"Nội thất · Phụ kiện","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+accessory.candle,assets/accessory.candle.svg,top,"Nội thất · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+accessory.lamp,assets/accessory.lamp.svg,top,"Nội thất · Phụ kiện","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+accessory.chandelier,assets/accessory.chandelier.svg,top,"Nội thất · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.wall,assets/architecture.wall.svg,top,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.wall-corner,assets/architecture.wall-corner.svg,top,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.wall-t,assets/architecture.wall-t.svg,top,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.wall-curve,assets/architecture.wall-curve.svg,top,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.floor-stone,assets/architecture.floor-stone.svg,top,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.floor-wood,assets/architecture.floor-wood.svg,top,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.door,assets/architecture.door.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.door-double,assets/architecture.door-double.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.door-arch,assets/architecture.door-arch.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.door-round,assets/architecture.door-round.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.door-iron,assets/architecture.door-iron.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.hatch,assets/architecture.hatch.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.window,assets/architecture.window.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.window-arch,assets/architecture.window-arch.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.window-round,assets/architecture.window-round.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.window-shutters,assets/architecture.window-shutters.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.stairs,assets/architecture.stairs.svg,top,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.stairs-l,assets/architecture.stairs-l.svg,top,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.stairs-spiral,assets/architecture.stairs-spiral.svg,top,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.ladder,assets/architecture.ladder.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.column-round,assets/architecture.column-round.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.column-square,assets/architecture.column-square.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.arch,assets/architecture.arch.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+architecture.balustrade,assets/architecture.balustrade.svg,front,"Kiến trúc · Cấu kiện","",0,RETAIN_UNTIL_MIGRATED
+plant.bush,assets/plant.bush.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.flower-bush,assets/plant.flower-bush.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.hedge,assets/plant.hedge.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.fern,assets/plant.fern.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.reeds,assets/plant.reeds.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.grass,assets/plant.grass.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.stump,assets/plant.stump.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.log,assets/plant.log.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.planter,assets/plant.planter.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.hanging,assets/plant.hanging.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+plant.vine,assets/plant.vine.svg,elevation,"Cảnh quan · Thực vật","",0,RETAIN_UNTIL_MIGRATED
+terrain.boulder,assets/terrain.boulder.svg,elevation,"Cảnh quan · Địa hình","",0,RETAIN_UNTIL_MIGRATED
+terrain.flat,assets/terrain.flat.svg,elevation,"Cảnh quan · Địa hình","",0,RETAIN_UNTIL_MIGRATED
+terrain.cliff,assets/terrain.cliff.svg,elevation,"Cảnh quan · Địa hình","",0,RETAIN_UNTIL_MIGRATED
+landscape.pond,assets/landscape.pond.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.stream,assets/landscape.stream.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.waterfall,assets/landscape.waterfall.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.path,assets/landscape.path.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.paving,assets/landscape.paving.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.steps,assets/landscape.steps.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.bridge,assets/landscape.bridge.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.bridge-stone,assets/landscape.bridge-stone.svg,elevation,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.fence,assets/landscape.fence.svg,elevation,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.iron-fence,assets/landscape.iron-fence.svg,elevation,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.gate,assets/landscape.gate.svg,elevation,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.bed,assets/landscape.bed.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.trellis,assets/landscape.trellis.svg,elevation,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.well,assets/landscape.well.svg,elevation,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.fountain,assets/landscape.fountain.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.garden-bench,assets/landscape.garden-bench.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.picnic,assets/landscape.picnic.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.streetlamp,assets/landscape.streetlamp.svg,elevation,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.dock,assets/landscape.dock.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.boat,assets/landscape.boat.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.wheelbarrow,assets/landscape.wheelbarrow.svg,top,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.gravestone,assets/landscape.gravestone.svg,elevation,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+landscape.tent,assets/landscape.tent.svg,elevation,"Cảnh quan · Hạ tầng","",0,RETAIN_UNTIL_MIGRATED
+building-part.roof-gable,assets/building-part.roof-gable.svg,elevation,"Nhà cửa · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+building-part.roof-hip,assets/building-part.roof-hip.svg,elevation,"Nhà cửa · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+building-part.roof-dome,assets/building-part.roof-dome.svg,elevation,"Nhà cửa · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+building-part.chimney,assets/building-part.chimney.svg,elevation,"Nhà cửa · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+building-part.awning,assets/building-part.awning.svg,elevation,"Nhà cửa · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+building-part.balcony,assets/building-part.balcony.svg,elevation,"Nhà cửa · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+building-part.sign,assets/building-part.sign.svg,elevation,"Nhà cửa · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+building-part.dormer,assets/building-part.dormer.svg,elevation,"Nhà cửa · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+building-part.planter-box,assets/building-part.planter-box.svg,elevation,"Nhà cửa · Phụ kiện","",0,RETAIN_UNTIL_MIGRATED
+storage.bookcase-top,assets/storage.bookcase-top.svg,top,"Nội thất · Tủ kệ","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+fixture.fireplace-top,assets/fixture.fireplace-top.svg,top,"Nội thất · Bếp & vệ sinh","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+plant.pot-top,assets/plant.pot-top.svg,top,"Cảnh quan · Thực vật","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+extra.curtain,assets/extra.curtain.svg,elevation,"Nội thất · Bổ sung","",0,RETAIN_UNTIL_MIGRATED
+extra.lamp-floor,assets/extra.lamp-floor.svg,elevation,"Nội thất · Bổ sung","",0,RETAIN_UNTIL_MIGRATED
+extra.sconce,assets/extra.sconce.svg,elevation,"Nội thất · Bổ sung","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+extra.torch,assets/extra.torch.svg,elevation,"Nội thất · Bổ sung","",0,RETAIN_UNTIL_MIGRATED
+extra.globe,assets/extra.globe.svg,elevation,"Nội thất · Bổ sung","",0,RETAIN_UNTIL_MIGRATED
+extra.books-stack,assets/extra.books-stack.svg,elevation,"Nội thất · Bổ sung","",0,RETAIN_UNTIL_MIGRATED
+extra.blackboard,assets/extra.blackboard.svg,elevation,"Nội thất · Bổ sung","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+extra.towel,assets/extra.towel.svg,elevation,"Nội thất · Bổ sung","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+extra.bucket,assets/extra.bucket.svg,elevation,"Nội thất · Bổ sung","",0,RETAIN_UNTIL_MIGRATED
+extra.rainbarrel,assets/extra.rainbarrel.svg,elevation,"Cảnh quan · Tiện ích","",0,RETAIN_UNTIL_MIGRATED
+extra.compost,assets/extra.compost.svg,elevation,"Cảnh quan · Tiện ích","",0,RETAIN_UNTIL_MIGRATED
+extra.woodpile,assets/extra.woodpile.svg,elevation,"Cảnh quan · Tiện ích","",0,RETAIN_UNTIL_MIGRATED
+extra.flowerbed,assets/extra.flowerbed.svg,elevation,"Cảnh quan · Tiện ích","",0,RETAIN_UNTIL_MIGRATED
+extra.shower,assets/extra.shower.svg,top,"Nội thất · Bổ sung","",0,RETAIN_UNTIL_MIGRATED
+extra.safe,assets/extra.safe.svg,elevation,"Nội thất · Bổ sung","",0,RETAIN_UNTIL_MIGRATED
+wizard.fireplace-stone,assets/wizard.fireplace-stone.svg,front,"Phù thủy · Lò sưởi","",0,RETAIN_UNTIL_MIGRATED
+wizard.fireplace-carved,assets/wizard.fireplace-carved.svg,front,"Phù thủy · Lò sưởi","",0,RETAIN_UNTIL_MIGRATED
+wizard.fireplace-gothic,assets/wizard.fireplace-gothic.svg,front,"Phù thủy · Lò sưởi","",0,RETAIN_UNTIL_MIGRATED
+wizard.fireplace-floo,assets/wizard.fireplace-floo.svg,front,"Phù thủy · Lò sưởi","",0,RETAIN_UNTIL_MIGRATED
+wizard.fireguard,assets/wizard.fireguard.svg,front,"Phù thủy · Lò sưởi","",0,RETAIN_UNTIL_MIGRATED
+wizard.potions-cabinet,assets/wizard.potions-cabinet.svg,front,"Phù thủy · Tủ kệ","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+wizard.library-ladder,assets/wizard.library-ladder.svg,front,"Phù thủy · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+wizard.library-curved,assets/wizard.library-curved.svg,front,"Phù thủy · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+wizard.display,assets/wizard.display.svg,front,"Phù thủy · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+wizard.archive,assets/wizard.archive.svg,front,"Phù thủy · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+wizard.broom-rack,assets/wizard.broom-rack.svg,front,"Phù thủy · Thiết bị","",0,RETAIN_UNTIL_MIGRATED
+wizard.broom-wall,assets/wizard.broom-wall.svg,front,"Phù thủy · Thiết bị","",0,RETAIN_UNTIL_MIGRATED
+wizard.cauldron,assets/wizard.cauldron.svg,front,"Phù thủy · Độc dược","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+wizard.cauldron-large,assets/wizard.cauldron-large.svg,front,"Phù thủy · Độc dược","",0,RETAIN_UNTIL_MIGRATED
+wizard.potions-bench,assets/wizard.potions-bench.svg,front,"Phù thủy · Độc dược","",0,RETAIN_UNTIL_MIGRATED
+wizard.telescope,assets/wizard.telescope.svg,front,"Phù thủy · Thiết bị","",0,RETAIN_UNTIL_MIGRATED
+wizard.orrery,assets/wizard.orrery.svg,front,"Phù thủy · Thiết bị","",0,RETAIN_UNTIL_MIGRATED
+wizard.lectern,assets/wizard.lectern.svg,front,"Phù thủy · Thiết bị","",0,RETAIN_UNTIL_MIGRATED
+cluster.divination,assets/cluster.divination.svg,front,"Phù thủy · Cụm trên bàn","",0,RETAIN_UNTIL_MIGRATED
+cluster.research,assets/cluster.research.svg,front,"Phù thủy · Cụm trên bàn","",0,RETAIN_UNTIL_MIGRATED
+cluster.headmaster,assets/cluster.headmaster.svg,front,"Phù thủy · Cụm trên bàn","",0,RETAIN_UNTIL_MIGRATED
+cluster.astronomy,assets/cluster.astronomy.svg,front,"Phù thủy · Cụm trên bàn","",0,RETAIN_UNTIL_MIGRATED
+cluster.books,assets/cluster.books.svg,front,"Phù thủy · Cụm trên bàn","",0,RETAIN_UNTIL_MIGRATED
+cluster.tea,assets/cluster.tea.svg,front,"Phù thủy · Cụm trên bàn","",0,RETAIN_UNTIL_MIGRATED
+cluster.candelabrum,assets/cluster.candelabrum.svg,front,"Phù thủy · Cụm trên bàn","",0,RETAIN_UNTIL_MIGRATED
+decor.portrait,assets/decor.portrait.svg,front,"Phù thủy · Trang trí","runtime/furnishings.mjs",1,RETAIN_UNTIL_MIGRATED
+decor.portrait-wall,assets/decor.portrait-wall.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.landscape,assets/decor.landscape.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.armour,assets/decor.armour.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.bust,assets/decor.bust.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.statue,assets/decor.statue.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.grandfather-clock,assets/decor.grandfather-clock.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.mirror,assets/decor.mirror.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.noticeboard,assets/decor.noticeboard.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.planter-floor,assets/decor.planter-floor.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.curtain-tall,assets/decor.curtain-tall.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.curtain-partition,assets/decor.curtain-partition.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.curtain-bed,assets/decor.curtain-bed.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+unique.pensieve,assets/unique.pensieve.svg,front,"Độc bản · Đã chọn","",0,RETAIN_UNTIL_MIGRATED
+unique.memory-cabinet,assets/unique.memory-cabinet.svg,front,"Độc bản · Đã chọn","",0,RETAIN_UNTIL_MIGRATED
+unique.sorting-hat,assets/unique.sorting-hat.svg,front,"Độc bản · Đã chọn","",0,RETAIN_UNTIL_MIGRATED
+unique.goblet-fire,assets/unique.goblet-fire.svg,front,"Độc bản · Đã chọn","",0,RETAIN_UNTIL_MIGRATED
+unique.triwizard-cup,assets/unique.triwizard-cup.svg,front,"Độc bản · Đã chọn","",0,RETAIN_UNTIL_MIGRATED
+unique.weasley-clock,assets/unique.weasley-clock.svg,front,"Độc bản · Đã chọn","",0,RETAIN_UNTIL_MIGRATED
+unique.vanishing-cabinet,assets/unique.vanishing-cabinet.svg,front,"Độc bản · Đã chọn","",0,RETAIN_UNTIL_MIGRATED
+wizard.astronomy-cabinet,assets/wizard.astronomy-cabinet.svg,front,"Phù thủy · Tủ kệ","",0,RETAIN_UNTIL_MIGRATED
+wizard.storage-top,assets/wizard.storage-top.svg,top,"Nội thất · Mặt bằng","",0,RETAIN_UNTIL_MIGRATED
+wizard.display-top,assets/wizard.display-top.svg,top,"Nội thất · Mặt bằng","",0,RETAIN_UNTIL_MIGRATED
+decor.rug-runner,assets/decor.rug-runner.svg,top,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+decor.chandelier,assets/decor.chandelier.svg,front,"Phù thủy · Trang trí","",0,RETAIN_UNTIL_MIGRATED
+module.house-body-stone,assets/module.house-body-stone.svg,front,"Nhà cửa · Module ghép","",0,RETAIN_UNTIL_MIGRATED
+crest.gryffindor,assets/crest.gryffindor.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+crest.ravenclaw,assets/crest.ravenclaw.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+crest.hufflepuff,assets/crest.hufflepuff.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+crest.slytherin,assets/crest.slytherin.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+crest.beauxbatons,assets/crest.beauxbatons.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+crest.durmstrang,assets/crest.durmstrang.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+banner.vertical,assets/banner.vertical.svg,front,"Cờ · Khung dùng chung","",0,RETAIN_UNTIL_MIGRATED
+banner.forked,assets/banner.forked.svg,front,"Cờ · Khung dùng chung","",0,RETAIN_UNTIL_MIGRATED
+banner.pole,assets/banner.pole.svg,front,"Cờ · Khung dùng chung","",0,RETAIN_UNTIL_MIGRATED
+banner.plaque,assets/banner.plaque.svg,front,"Cờ · Khung dùng chung","",0,RETAIN_UNTIL_MIGRATED
+banner.tapestry,assets/banner.tapestry.svg,front,"Cờ · Khung dùng chung","",0,RETAIN_UNTIL_MIGRATED
+flag.gryffindor,assets/flag.gryffindor.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+flag.ravenclaw,assets/flag.ravenclaw.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+flag.hufflepuff,assets/flag.hufflepuff.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+flag.slytherin,assets/flag.slytherin.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+flag.beauxbatons,assets/flag.beauxbatons.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+flag.durmstrang,assets/flag.durmstrang.svg,front,"Cờ · Huy hiệu","",0,RETAIN_UNTIL_MIGRATED
+architecture.owl-tower,assets/architecture.owl-tower.svg,,"Kiến trúc · Đặc biệt","",0,RETAIN_UNTIL_MIGRATED
+architecture.boathouse,assets/architecture.boathouse.svg,,"Kiến trúc · Đặc biệt","",0,RETAIN_UNTIL_MIGRATED
+map.h1.flying-lawn,assets/map.h1.flying-lawn.svg,,"Map · Biến thể đang dùng","",0,RETAIN_UNTIL_MIGRATED
+architecture.greenhouses,assets/architecture.greenhouses.svg,,"Kiến trúc · Đặc biệt","",0,RETAIN_UNTIL_MIGRATED
+map.r2-pitch,assets/map.r2-pitch.svg,,"Map · Biến thể đang dùng","",0,RETAIN_UNTIL_MIGRATED
+map.r2-dock,assets/map.r2-dock.svg,,"Map · Biến thể đang dùng","",0,RETAIN_UNTIL_MIGRATED
+architecture.castle,assets/architecture.castle.svg,,"Kiến trúc · Đặc biệt","",0,RETAIN_UNTIL_MIGRATED
+map.r2-lake,assets/map.r2-lake.svg,,"Map · Biến thể đang dùng","",0,RETAIN_UNTIL_MIGRATED
+tree.ancient,assets/map.r3-ancient-tree.svg,,"Cây · Đặc biệt","elements/presets.json",1,RETAIN_UNTIL_MIGRATED
+map.hogwarts-wooden-bridge,assets/map.hogwarts-wooden-bridge.svg,,"Map · Biến thể đang dùng","",0,RETAIN_UNTIL_MIGRATED
+tree.willow,assets/map.willow-redesign.svg,,"Cây · Đặc biệt","elements/presets.json",1,RETAIN_UNTIL_MIGRATED
+house.wood.gable,assets/house.wood.gable.svg,elevation,"Nhà · Nhà gỗ","runtime/outdoor.mjs;elements/presets.json",2,RETAIN_UNTIL_MIGRATED
+house.wood.hip,assets/house.wood.hip.svg,elevation,"Nhà · Nhà gỗ","",0,RETAIN_UNTIL_MIGRATED
+house.wood.wide,assets/house.wood.wide.svg,elevation,"Nhà · Nhà gỗ","",0,RETAIN_UNTIL_MIGRATED
+house.wood.barn,assets/house.wood.barn.svg,elevation,"Nhà · Nhà gỗ","",0,RETAIN_UNTIL_MIGRATED
+house.wood.l,assets/house.wood.l.svg,elevation,"Nhà · Nhà gỗ","",0,RETAIN_UNTIL_MIGRATED
+house.wood.double,assets/house.wood.double.svg,elevation,"Nhà · Nhà gỗ","",0,RETAIN_UNTIL_MIGRATED
+house.brick.low,assets/house.brick.low.svg,elevation,"Nhà · Nhà tường","runtime/outdoor.mjs",1,RETAIN_UNTIL_MIGRATED
+house.brick.tall,assets/house.brick.tall.svg,elevation,"Nhà · Nhà tường","elements/presets.json",1,RETAIN_UNTIL_MIGRATED
+house.brick.wide,assets/house.brick.wide.svg,elevation,"Nhà · Nhà tường","",0,RETAIN_UNTIL_MIGRATED
+house.brick.mansard,assets/house.brick.mansard.svg,elevation,"Nhà · Nhà tường","",0,RETAIN_UNTIL_MIGRATED
+house.brick.l,assets/house.brick.l.svg,elevation,"Nhà · Nhà tường","",0,RETAIN_UNTIL_MIGRATED
+house.brick.arcade,assets/house.brick.arcade.svg,elevation,"Nhà · Nhà tường","",0,RETAIN_UNTIL_MIGRATED
+house.basic.rectangle,assets/house.basic.rectangle.svg,elevation,"Nhà · Khung basic","elements/presets.json",1,RETAIN_UNTIL_MIGRATED
+house.basic.tall,assets/house.basic.tall.svg,elevation,"Nhà · Khung basic","",0,RETAIN_UNTIL_MIGRATED
+house.basic.hex,assets/house.basic.hex.svg,elevation,"Nhà · Khung basic","",0,RETAIN_UNTIL_MIGRATED
+house.basic.l,assets/house.basic.l.svg,elevation,"Nhà · Khung basic","",0,RETAIN_UNTIL_MIGRATED
+house.basic.u,assets/house.basic.u.svg,elevation,"Nhà · Khung basic","",0,RETAIN_UNTIL_MIGRATED
+house.basic.round,assets/house.basic.round.svg,elevation,"Nhà · Khung basic","",0,RETAIN_UNTIL_MIGRATED
+tree.oak,assets/tree.oak.svg,elevation,"Cây · Hình khối riêng","runtime/outdoor.mjs;elements/presets.json",2,RETAIN_UNTIL_MIGRATED
+tree.beech,assets/tree.beech.svg,elevation,"Cây · Hình khối riêng","",0,RETAIN_UNTIL_MIGRATED
+tree.birch,assets/tree.birch.svg,elevation,"Cây · Hình khối riêng","runtime/outdoor.mjs",1,RETAIN_UNTIL_MIGRATED
+tree.pine,assets/tree.pine.svg,elevation,"Cây · Hình khối riêng","runtime/outdoor.mjs;elements/presets.json",2,RETAIN_UNTIL_MIGRATED
+tree.spruce,assets/tree.spruce.svg,elevation,"Cây · Hình khối riêng","elements/presets.json",1,RETAIN_UNTIL_MIGRATED
+tree.alder,assets/tree.alder.svg,elevation,"Cây · Hình khối riêng","",0,RETAIN_UNTIL_MIGRATED
+tree.rowan,assets/tree.rowan.svg,elevation,"Cây · Hình khối riêng","runtime/outdoor.mjs",1,RETAIN_UNTIL_MIGRATED
+tree.spreading,assets/tree.spreading.svg,elevation,"Cây · Hình khối riêng","",0,RETAIN_UNTIL_MIGRATED
+tree.slender,assets/tree.slender.svg,elevation,"Cây · Hình khối riêng","",0,RETAIN_UNTIL_MIGRATED
+tree.weeping,assets/tree.weeping.svg,elevation,"Cây · Hình khối riêng","",0,RETAIN_UNTIL_MIGRATED
+tree.bare,assets/tree.bare.svg,elevation,"Cây · Hình khối riêng","elements/presets.json",1,RETAIN_UNTIL_MIGRATED
+tree.fruit,assets/tree.fruit.svg,elevation,"Cây · Hình khối riêng","runtime/outdoor.mjs;elements/presets.json",2,RETAIN_UNTIL_MIGRATED
