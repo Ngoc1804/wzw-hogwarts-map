@@ -72,5 +72,18 @@
       "diffCheck": "passed",
       "browser": "not rerun: no rendering changes; replacement renderer not implemented"
     }
+  },
+  "shopLocalization": {
+    "date": "2026-11-14",
+    "sourceRows": 53,
+    "localizedExistingLocations": 29,
+    "atlasSha256": "f2a0d4481cc1f35e1cb0e0c95e8141b88e5c824f14c950abf6d30f9986384344",
+    "checks": {
+      "atlasTests": 5,
+      "atlasStructure": "13 maps, references valid",
+      "invariants": "All geometry and interaction IDs preserved; other 11 maps unchanged",
+      "browser": "Chromium: HTML loaded without page errors; both standalone maps inspected at full view and zoom"
+    },
+    "scope": "Existing identified locations only. Remaining 24 rows unassigned; station is an off-map route."
   }
 }

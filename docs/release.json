@@ -6,12 +6,12 @@
   "mapCount": 13,
   "files": {
     "index.html": {
-      "bytes": 953903,
-      "sha256": "d77907e228fb9a7bd089eb9bfed9c61073329421ca736db28017efdfb214ac53"
+      "bytes": 959387,
+      "sha256": "f2a0d4481cc1f35e1cb0e0c95e8141b88e5c824f14c950abf6d30f9986384344"
     },
     "maps/catalog.json": {
       "bytes": 13661,
-      "sha256": "e99b2088ddef8388c508a69f8988f9f4983b420f94e6452094d0d959aa2323b3"
+      "sha256": "871a7bfb14c59cca3c802255f236000b0d0073dd8494decbb26c563d08e4d8b7"
     },
     "templates/h1/shading.svg": {
       "bytes": 26018,
